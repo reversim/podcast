@@ -1,0 +1,25 @@
+---
+title: "Summit 2016: The way to unified CI/CD using Ansible / Hadar Davidovich"
+date: 2017-07-29T11:29:00.000Z
+tags:
+  - summit
+audio_url: http://m2.reversim.com/summit2016_HADAR_DAVIDOVICH.mp3
+legacy_url: https://www.reversim.com/2017/07/summit-2016-way-to-unified-cicd-using.html
+legacy_path: /2017/07/summit-2016-way-to-unified-cicd-using
+---
+
+<div class="post-body">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+At Ravello Systems we were relying heavily on CI/CD since the very early days. During the first 4 years of the company, our CI/CD framework changed and evolved to the point it went out of control and we decided to take all the experience from these years into a new and improved CI/CD. This session will share the lessons that we learned when we used multiple different tools as part of our DevOps work and why we choose to move to Ansible for provision environment on demand, setup vm, deploy code and orchestration of our tests flows.<br>
+<br>
+We would discuss the process of re-doing the CI/CD from the beginning in small steps over more than a year while a large always developing group continue to push changes to production on daily basis.<br>
+<br>
+To support the move we added new Ansible provisioning module that create environments in Ravello and new inventory for those environments. Since our backend is deployed in AWS directly and our tests runs on top of Ravello we added abstraction layer that allow us to write roles and playbooks that works on both environments without change. We will describe the technical aspects of this move including Jenkins integration, deployment module we developed and how we build and install client product we develop on multiple OSs.</div>
+<br>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AT1M_MDDJKo?ecver=1" frameborder="0" allowfullscreen=""></iframe><br>
+<br>
+<a href="http://m2.reversim.com/summit2016_HADAR_DAVIDOVICH.mp3">MP3</a>
+</div>
+<div style="clear: both;"></div>
+</div>

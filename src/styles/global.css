@@ -1,0 +1,334 @@
+:root {
+	color-scheme: light;
+	--bg: #f6f0e8;
+	--bg-accent: #efe3d5;
+	--surface: #fffaf4;
+	--ink: #1a1512;
+	--muted: #5b5147;
+	--accent: #156f5c;
+	--accent-strong: #0b4d3f;
+	--highlight: #d2a679;
+	--shadow: 0 18px 50px rgba(23, 18, 14, 0.18);
+	--radius: 22px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Assistant', system-ui, sans-serif;
+	background: var(--bg);
+	color: var(--ink);
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: radial-gradient(circle at top right, #fff 0%, var(--bg) 48%, var(--bg-accent) 100%);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+	color: var(--accent-strong);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.skip-link {
+	position: absolute;
+	left: -999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.skip-link:focus {
+	left: 1rem;
+	top: 1rem;
+	width: auto;
+	height: auto;
+	background: #fff;
+	padding: 0.6rem 1rem;
+	border-radius: 999px;
+	box-shadow: var(--shadow);
+}
+
+.site-header {
+	padding: 2.5rem 6vw 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.brand-title {
+	font-family: 'Frank Ruhl Libre', serif;
+	font-size: clamp(1.8rem, 2vw + 1.4rem, 3rem);
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	color: var(--accent-strong);
+}
+
+.brand-subtitle {
+	margin: 0.4rem 0 0;
+	font-size: 1rem;
+	color: var(--muted);
+}
+
+.nav {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	font-weight: 600;
+}
+
+.nav-link {
+	padding: 0.4rem 0.9rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(26, 21, 18, 0.08);
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+	background: var(--accent);
+	color: #fff;
+}
+
+.site-main {
+	padding: 0 6vw 4rem;
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 2rem;
+	align-items: center;
+	margin-bottom: 2.5rem;
+	background: var(--surface);
+	padding: 2.5rem;
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+}
+
+.hero h1 {
+	margin: 0 0 1rem;
+	font-family: 'Frank Ruhl Libre', serif;
+	font-size: clamp(2rem, 2vw + 1.6rem, 3.4rem);
+	line-height: 1.1;
+}
+
+.hero p {
+	margin: 0;
+	font-size: 1.1rem;
+	color: var(--muted);
+}
+
+.hero .cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.6rem 1.2rem;
+	border-radius: 999px;
+	background: var(--accent);
+	color: #fff;
+	font-weight: 600;
+	margin-top: 1.4rem;
+}
+
+.section-title {
+	margin: 2.5rem 0 1.5rem;
+	font-family: 'Frank Ruhl Libre', serif;
+	font-size: 1.6rem;
+	color: var(--accent-strong);
+}
+
+.posts-grid {
+	display: grid;
+	gap: 1.6rem;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.post-card {
+	background: var(--surface);
+	border-radius: var(--radius);
+	padding: 1.4rem;
+	box-shadow: 0 16px 40px rgba(26, 21, 18, 0.12);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.post-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 24px 60px rgba(26, 21, 18, 0.16);
+}
+
+.post-card h3 {
+	margin: 0;
+	font-size: 1.2rem;
+	line-height: 1.4;
+}
+
+.post-meta {
+	font-size: 0.9rem;
+	color: var(--muted);
+	display: flex;
+	gap: 0.6rem;
+	flex-wrap: wrap;
+}
+
+.post-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.post-tag {
+	font-size: 0.8rem;
+	background: rgba(21, 111, 92, 0.12);
+	color: var(--accent-strong);
+	padding: 0.2rem 0.6rem;
+	border-radius: 999px;
+}
+
+.article {
+	background: var(--surface);
+	padding: 2.5rem;
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	margin-bottom: 2rem;
+}
+
+.article h1 {
+	margin-top: 0;
+	font-family: 'Frank Ruhl Libre', serif;
+	font-size: clamp(2rem, 2vw + 1.4rem, 3rem);
+}
+
+.article .content {
+	line-height: 1.75;
+	font-size: 1.05rem;
+	color: var(--ink);
+	direction: auto;
+	text-align: start;
+}
+
+.article .content a {
+	color: var(--accent-strong);
+	text-decoration: underline;
+	text-decoration-color: rgba(21, 111, 92, 0.3);
+}
+
+.article .content code,
+.article .content pre {
+	direction: ltr;
+	text-align: left;
+	font-family: 'Courier New', monospace;
+}
+
+.article .content pre {
+	background: #1d1b1a;
+	color: #f5efe6;
+	padding: 1rem;
+	border-radius: 14px;
+	overflow: auto;
+}
+
+.article .content ul,
+.article .content ol {
+	padding-inline-start: 1.5rem;
+}
+
+.article .content blockquote {
+	margin: 1.5rem 0;
+	padding: 0.6rem 1.2rem;
+	border-right: 4px solid var(--highlight);
+	background: rgba(210, 166, 121, 0.12);
+	border-radius: 12px;
+	color: var(--muted);
+}
+
+.audio-player {
+	margin-top: 1.6rem;
+	padding: 1rem 1.4rem;
+	border-radius: 16px;
+	background: rgba(21, 111, 92, 0.08);
+	border: 1px solid rgba(21, 111, 92, 0.2);
+}
+
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.pagination a {
+	padding: 0.5rem 1.2rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(26, 21, 18, 0.1);
+}
+
+.archive-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem;
+	display: grid;
+	gap: 0.5rem;
+}
+
+.archive-list a {
+	display: inline-flex;
+	gap: 0.6rem;
+	align-items: center;
+	padding: 0.4rem 0.8rem;
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.65);
+	border: 1px solid rgba(26, 21, 18, 0.08);
+}
+
+.site-footer {
+	padding: 2rem 6vw 3rem;
+	border-top: 1px solid rgba(26, 21, 18, 0.08);
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+	color: var(--muted);
+}
+
+.footer-links {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+@media (max-width: 720px) {
+	.site-header {
+		padding: 2rem 6vw 1.5rem;
+	}
+
+	.hero {
+		padding: 1.8rem;
+	}
+
+	.article {
+		padding: 1.6rem;
+	}
+}

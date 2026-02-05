@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { getAllPosts, getPostPermalink } from '../lib/posts';
+
+const posts = await getAllPosts();
+const [latest] = posts;
+const latestLink = latest ? getPostPermalink(latest) : '#';
+---
+
+<BaseLayout title="רברס עם פלטפורמה" description="פודקאסט על תוכנה, מוצר, ותשתיות — בעברית.">
+	<section class="hero">
+		<div>
+			<h1>בית לפודקאסטים, שיחות ועומק טכנולוגי בעברית.</h1>
+			<p>
+				כאן מתאספים כל הפרקים של רברס עם פלטפורמה — עם סיכומים, קישורים וכל מה שצריך כדי
+				להעמיק.
+			</p>
+			{latest && (
+				<a class="cta" href={latestLink}>
+					האזנה לפרק האחרון
+				</a>
+			)}
+		</div>
+		<div>
+			<p class="section-title">הפרק האחרון</p>
+			{latest && (
+				<PostCard post={latest} />
+			)}
+		</div>
+	</section>
+
+	<section>
+		<h2 class="section-title">פרקים אחרונים</h2>
+		<div class="posts-grid">
+			{posts.slice(1, 10).map((post) => (
+				<PostCard post={post} />
+			))}
+		</div>
+	</section>
+</BaseLayout>

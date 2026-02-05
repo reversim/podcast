@@ -1,0 +1,23 @@
+---
+const nav = [
+	{ href: '/', label: 'בית' },
+	{ href: '/archive.html', label: 'ארכיון' },
+	{ href: '/episodes.html', label: 'פרקים' },
+	{ href: '/about.html', label: 'אודות' },
+];
+---
+
+<header class="site-header">
+	<a class="skip-link" href="#content">דילוג לתוכן</a>
+	<div class="brand">
+		<a href="/" class="brand-title">רברס עם פלטפורמה</a>
+		<p class="brand-subtitle">פודקאסט על תוכנה, מוצר, ותשתיות — בעברית.</p>
+	</div>
+	<nav class="nav" aria-label="ניווט">
+		{nav.map((item) => (
+			<a class="nav-link" href={item.href}>
+				{item.label}
+			</a>
+		))}
+	</nav>
+</header>

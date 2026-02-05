@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllPosts, getPostPermalink } from '../lib/posts';
+
+const posts = await getAllPosts();
+const byYear = new Map();
+
+for (const post of posts) {
+	const year = post.data.date.getFullYear();
+	if (!byYear.has(year)) {
+		byYear.set(year, []);
+	}
+	byYear.get(year).push(post);
+}
+---
+
+<BaseLayout title="ארכיון | רברס עם פלטפורמה">
+	<h1 class="section-title">ארכיון</h1>
+	{Array.from(byYear.entries()).map(([year, yearPosts]) => (
+		<section>
+			<h2 class="section-title">{year}</h2>
+			<ul class="archive-list">
+				{yearPosts.map((post) => (
+					<li>
+						<a href={getPostPermalink(post)}>{post.data.title}</a>
+					</li>
+				))}
+			</ul>
+		</section>
+	))}
+</BaseLayout>

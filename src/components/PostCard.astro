@@ -1,0 +1,28 @@
+---
+import { getPostPermalink } from '../lib/posts';
+import type { PostEntry } from '../lib/posts';
+
+const { post } = Astro.props as { post: PostEntry };
+const permalink = getPostPermalink(post);
+const dateLabel = post.data.date.toLocaleDateString('he-IL', {
+	year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+});
+---
+
+<article class="post-card">
+	<div class="post-meta">
+		<span>{dateLabel}</span>
+		{post.data.episode && <span>פרק {post.data.episode}</span>}
+	</div>
+	<h3><a href={permalink}>{post.data.title}</a></h3>
+	{post.data.summary && <p>{post.data.summary}</p>}
+	{post.data.tags && post.data.tags.length > 0 && (
+		<div class="post-tags">
+			{post.data.tags.slice(0, 4).map((tag) => (
+				<span class="post-tag">{tag}</span>
+			))}
+		</div>
+	)}
+</article>

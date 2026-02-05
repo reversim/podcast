@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: reversim/podcast
+  branch: main
+  base_url: https://YOUR-OAUTH-SERVER.example.com
+  auth_endpoint: /auth
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "פוסטים"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "{{year}}/{{month}}/{{slug}}.html"
+    fields:
+      - { label: "כותרת", name: "title", widget: "string" }
+      - { label: "תאריך", name: "date", widget: "datetime" }
+      - { label: "מספר פרק", name: "episode", widget: "number", required: false }
+      - { label: "קובץ אודיו (URL)", name: "audio_url", widget: "string", required: false }
+      - { label: "תגיות", name: "tags", widget: "list", required: false }
+      - { label: "תקציר", name: "summary", widget: "text", required: false }
+      - { label: "תמונת קאבר", name: "cover_image", widget: "image", required: false }
+      - { label: "Legacy URL", name: "legacy_url", widget: "hidden", required: false }
+      - { label: "Legacy Path", name: "legacy_path", widget: "hidden", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", required: false }
+      - { label: "תוכן", name: "body", widget: "markdown" }

@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getPostPath, getPostPermalink } from '../../../lib/posts';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('posts', ({ data }) => !data.draft);
+	return posts.map((post) => {
+		const path = getPostPath(post).replace(/^\//, '');
+		const [year, month, slug] = path.split('/');
+		return {
+			params: { year, month, slug },
+			props: { post },
+		};
+	});
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const dateLabel = post.data.date.toLocaleDateString('he-IL', {
+	year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+});
+const permalink = getPostPermalink(post);
+---
+
+<BaseLayout title={`${post.data.title} | רברס עם פלטפורמה`}>
+	<article class="article">
+		<div class="post-meta">
+			<span>{dateLabel}</span>
+			{post.data.episode && <span>פרק {post.data.episode}</span>}
+			{post.data.tags && post.data.tags.length > 0 && (
+				<span>{post.data.tags.join(' • ')}</span>
+			)}
+		</div>
+		<h1>{post.data.title}</h1>
+		{post.data.audio_url && (
+			<div class="audio-player">
+				<audio controls preload="none" src={post.data.audio_url}></audio>
+			</div>
+		)}
+		<div class="content">
+			<Content />
+		</div>
+		{post.data.legacy_url && (
+			<p class="post-meta">
+				<a href={post.data.legacy_url}>קישור היסטורי</a>
+				<span>•</span>
+				<a href={permalink}>קישור קבוע</a>
+			</p>
+		)}
+	</article>
+</BaseLayout>

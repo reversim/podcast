@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import Pagination from '../../components/Pagination.astro';
+import { getAllPosts } from '../../lib/posts';
+
+export async function getStaticPaths({ paginate }) {
+	const posts = await getAllPosts();
+	return paginate(posts, { pageSize: 12 });
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title={`עמוד ${page.currentPage} | רברס עם פלטפורמה`}>
+	<h2 class="section-title">עוד פרקים</h2>
+	<div class="posts-grid">
+		{page.data.map((post) => (
+			<PostCard post={post} />
+		))}
+	</div>
+	<Pagination page={page} />
+</BaseLayout>

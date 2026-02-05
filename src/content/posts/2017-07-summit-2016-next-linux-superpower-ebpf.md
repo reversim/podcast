@@ -1,0 +1,21 @@
+---
+title: "Summit 2016: The Next Linux Superpower: eBPF Primer / Sasha Goldshtein"
+date: 2017-07-17T17:33:00.000Z
+tags:
+  - summit
+audio_url: http://m2.reversim.com/summit2016_SASHA_GOLDSHTEIN.mp3
+legacy_url: https://www.reversim.com/2017/07/summit-2016-next-linux-superpower-ebpf.html
+legacy_path: /2017/07/summit-2016-next-linux-superpower-ebpf
+---
+
+<div class="post-body">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<span style="background-color: white; color: #333333; font-family: &quot;YouTube Noto&quot;, Roboto, arial, sans-serif; font-size: 13px;">Imagine you're tackling one of these evasive performance issues in the field, and your go-to monitoring checklist doesn't seem to cut it. There are plenty of suspects, but they are moving around rapidly and you need more logs, more data, more in-depth information to make a diagnosis. Maybe you've heard about DTrace, or even used it, and are yearning for a similar toolkit, which can plug dynamic tracing into a system that wasn't prepared or instrumented in any way.</span><br style="background-color: white; color: #333333; font-family: &quot;YouTube Noto&quot;, Roboto, arial, sans-serif; font-size: 13px;"><span style="background-color: white; color: #333333; font-family: &quot;YouTube Noto&quot;, Roboto, arial, sans-serif; font-size: 13px;">Hopefully, you won't have to yearn for a lot longer. eBPF (extended Berkeley Packet Filters) is a kernel technology that enables a plethora of diagnostic scenarios by introducing dynamic, safe, low-overhead, efficient programs that run in the context of your live kernel. Sure, BPF programs can attach to sockets; but more interestingly, they can attach to kprobes and uprobes, static kernel tracepoints, and even user-mode static probes. And modern BPF programs have access to a wide set of instructions and data structures, which means you can collect valuable information and analyze it on-the-fly, without spilling it to huge files and reading them from user space.</span><br style="background-color: white; color: #333333; font-family: &quot;YouTube Noto&quot;, Roboto, arial, sans-serif; font-size: 13px;"><span style="background-color: white; color: #333333; font-family: &quot;YouTube Noto&quot;, Roboto, arial, sans-serif; font-size: 13px;">In this talk, we will introduce BCC, the BPF Compiler Collection, which is an open set of tools and libraries for dynamic tracing on Linux. Some tools are easy and ready to use, such as execsnoop, fileslower, and memleak. Other tools such as trace and argdist require more sophistication and can be used as a Swiss Army knife for a variety of scenarios. We will spend most of the time demonstrating the power of modern dynamic tracing -- from memory leaks to static probes in Ruby, Node, and Java programs, from slow file I/O to monitoring network traffic. Finally, we will discuss building our own tools using the Python and Lua bindings to BCC, and its LLVM backend.</span></div>
+<br>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2_ueSCacllY?ecver=1" frameborder="0" allowfullscreen=""></iframe><br>
+<br>
+<a href="http://m2.reversim.com/summit2016_SASHA_GOLDSHTEIN.mp3">MP3</a>
+</div>
+<div style="clear: both;"></div>
+</div>
