@@ -1,0 +1,35 @@
+---
+import { withBase } from '../lib/urls';
+
+const siteBase = import.meta.env.SITE ?? 'https://reversim.github.io';
+const podcastFeed = new URL(withBase('/podcast.xml'), siteBase).toString();
+const rssFeed = new URL(withBase('/rss.xml'), siteBase).toString();
+const atomFeed = new URL(withBase('/atom.xml'), siteBase).toString();
+const title = 'רברס עם פלטפורמה';
+
+const links = [
+	{ href: withBase('/podcast.xml'), label: 'Podcast RSS' },
+	{ href: withBase('/rss.xml'), label: 'RSS' },
+	{ href: withBase('/atom.xml'), label: 'Atom' },
+	{ href: `itpc://${podcastFeed.replace(/^https?:\/\//, '')}`, label: 'Apple (iTunes)' },
+	{ href: `pcast://${podcastFeed.replace(/^https?:\/\//, '')}`, label: 'Any Podcast App' },
+	{
+		href: `overcast://x-callback-url/add?url=${encodeURIComponent(podcastFeed)}`,
+		label: 'Overcast',
+	},
+	{
+		href: `https://antennapod.org/deeplink/subscribe?url=${encodeURIComponent(podcastFeed)}&title=${encodeURIComponent(title)}`,
+		label: 'AntennaPod',
+		external: true,
+	},
+];
+---
+
+<div class="subscribe-strip" aria-label="קישורי הרשמה לפודקאסט">
+	<span class="subscribe-label">הרשמה:</span>
+	{links.map((item) => (
+		<a class="subscribe-link" href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer noopener' : undefined}>
+			{item.label}
+		</a>
+	))}
+</div>

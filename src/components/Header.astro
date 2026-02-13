@@ -1,5 +1,6 @@
 ---
 import { withBase } from '../lib/urls';
+import SubscribeButtons from './SubscribeButtons.astro';
 
 const nav = [
 	{ href: withBase('/'), label: 'בית' },
@@ -22,4 +23,5 @@ const nav = [
 			</a>
 		))}
 	</nav>
+	<SubscribeButtons />
 </header>
