@@ -21,6 +21,9 @@ const localRssItems = toArr(localRss?.rss?.channel?.item);
 const localPodcastXml = readFileSync('/Users/ran.tavory/dev/src/github.com/reversim/podcast/dist/podcast.xml', 'utf8');
 const localPodcast = parser.parse(localPodcastXml);
 const localPodcastItems = toArr(localPodcast?.rss?.channel?.item);
+const localAtomXml = readFileSync('/Users/ran.tavory/dev/src/github.com/reversim/podcast/dist/atom.xml', 'utf8');
+const localAtom = parser.parse(localAtomXml);
+const localAtomEntries = toArr(localAtom?.feed?.entry);
 
 const normDate = (raw) => {
 	const t = Date.parse(raw);
@@ -29,6 +32,8 @@ const normDate = (raw) => {
 const keyOf = (item) => `${item.title}||${normDate(item.pubDate)}`;
 const sourceKeySet = new Set(sourceItems.map(keyOf));
 const localRssKeySet = new Set(localRssItems.map(keyOf));
+const atomKeyOf = (entry) => `${entry.title}||${normDate(entry.published || entry.updated)}`;
+const localAtomKeySet = new Set(localAtomEntries.map(atomKeyOf));
 const missingInLocal = [...sourceKeySet].filter((k) => !localRssKeySet.has(k));
 const localSubsetInSourceOrder = sourceItems
 	.filter((item) => localRssKeySet.has(keyOf(item)))
@@ -51,6 +56,8 @@ const localPodcastAudioTailSet = new Set(localPodcastAudioTails);
 const sourceAudioMissingInLocalPodcast = sourceAudioTails.filter(
 	(tail) => !localPodcastAudioTailSet.has(tail)
 );
+const rssMissingInAtom = [...localRssKeySet].filter((k) => !localAtomKeySet.has(k));
+const atomMissingInRss = [...localAtomKeySet].filter((k) => !localRssKeySet.has(k));
 
 console.log(
 	JSON.stringify(
@@ -58,13 +65,18 @@ console.log(
 			source_feed_items: sourceItems.length,
 			local_rss_items: localRssItems.length,
 			local_podcast_items: localPodcastItems.length,
+			local_atom_items: localAtomEntries.length,
 			source_title_pubdate_missing_in_local_rss: missingInLocal.length,
 			source_order_match_within_local_rss: sourceOrderMatch,
 			source_audio_items: sourceAudioTails.length,
 			podcast_audio_items: localPodcastAudioTails.length,
 			source_audio_missing_in_local_podcast: sourceAudioMissingInLocalPodcast.length,
+			local_rss_missing_in_local_atom: rssMissingInAtom.length,
+			local_atom_missing_in_local_rss: atomMissingInRss.length,
 			missing_examples: missingInLocal.slice(0, 5),
 			missing_audio_examples: sourceAudioMissingInLocalPodcast.slice(0, 5),
+			rss_missing_in_atom_examples: rssMissingInAtom.slice(0, 5),
+			atom_missing_in_rss_examples: atomMissingInRss.slice(0, 5),
 		},
 		null,
 		2
