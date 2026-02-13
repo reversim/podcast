@@ -25,6 +25,7 @@ html {
 	background: var(--bg);
 	color: var(--ink);
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -35,6 +36,7 @@ body {
 		linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px),
 		radial-gradient(circle at 20% 0%, #ffffff, #edf3fb 50%, #e8f0fa 100%);
 	background-size: 28px 28px, 28px 28px, cover;
+	overflow-x: hidden;
 }
 
 a {
@@ -288,6 +290,27 @@ img {
 	border-radius: 10px;
 	overflow: auto;
 	border: 1px solid #22314f;
+	max-width: 100%;
+}
+
+/* Legacy Blogger content often has fixed pixel widths; clamp to viewport. */
+.article .content img,
+.article .content video,
+.article .content iframe,
+.article .content table,
+.article .content svg,
+.article .content canvas {
+	max-width: 100% !important;
+}
+
+.article .content table {
+	display: block;
+	overflow-x: auto;
+}
+
+.article .content [style*='width:'],
+.article .content [style*=' width:'] {
+	max-width: 100% !important;
 }
 
 .article .content ul,
