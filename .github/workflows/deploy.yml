@@ -30,6 +30,7 @@ jobs:
       - name: Build
         env:
           ASTRO_BASE: /podcast
+          ASTRO_SITE: https://reversim.github.io
         run: npm run build
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
