@@ -14,7 +14,7 @@ const posts = (await getAllPosts()).filter((post) => post.data.audio_url);
 					<span>{post.data.date.toLocaleDateString('he-IL')}</span>
 					{post.data.episode && <span>פרק {post.data.episode}</span>}
 				</div>
-				<h3><a href={getPostPermalink(post)}>{post.data.title}</a></h3>
+				<h3 dir="auto"><a href={getPostPermalink(post)} dir="auto">{post.data.title}</a></h3>
 				{post.data.audio_url && (
 					<div class="audio-player">
 						<audio controls preload="none" src={post.data.audio_url}></audio>

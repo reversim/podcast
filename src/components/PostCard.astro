@@ -16,7 +16,7 @@ const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 		<span>{dateLabel}</span>
 		{post.data.episode && <span>פרק {post.data.episode}</span>}
 	</div>
-	<h3><a href={permalink}>{post.data.title}</a></h3>
+	<h3 dir="auto"><a href={permalink} dir="auto">{post.data.title}</a></h3>
 	{post.data.summary && <p>{post.data.summary}</p>}
 	{post.data.tags && post.data.tags.length > 0 && (
 		<div class="post-tags">

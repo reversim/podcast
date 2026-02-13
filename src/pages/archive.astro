@@ -22,7 +22,7 @@ for (const post of posts) {
 			<ul class="archive-list">
 				{yearPosts.map((post) => (
 					<li>
-						<a href={getPostPermalink(post)}>{post.data.title}</a>
+						<a href={getPostPermalink(post)} dir="auto">{post.data.title}</a>
 					</li>
 				))}
 			</ul>
