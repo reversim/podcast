@@ -8,7 +8,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "migrate:blogger": "node scripts/migrate-from-blogger.mjs",
-    "migrate:validate": "node scripts/validate-migration.mjs"
+    "migrate:validate": "node scripts/validate-migration.mjs",
+    "migrate:audit": "node scripts/audit-migration.mjs",
+    "rss:compare": "node scripts/compare-rss.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.1",

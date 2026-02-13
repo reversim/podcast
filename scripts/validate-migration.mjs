@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { XMLParser } from 'fast-xml-parser';
+import { parse } from 'yaml';
 
 const BASE_URL = 'https://www.reversim.com';
 const SITEMAP_INDEX = `${BASE_URL}/sitemap.xml`;
@@ -50,12 +51,42 @@ async function run() {
 	const urls = await loadSitemapUrls();
 	const files = await fs.readdir(OUTPUT_DIR);
 	const markdownFiles = files.filter((file) => file.endsWith('.md'));
+	const sourceSet = new Set(urls);
+	const legacyUrls = new Set();
+	const nonLegacyFiles = [];
+
+	for (const file of markdownFiles) {
+		const fullPath = path.join(OUTPUT_DIR, file);
+		const raw = await fs.readFile(fullPath, 'utf8');
+		if (!raw.startsWith('---\n')) continue;
+		const end = raw.indexOf('\n---\n', 4);
+		if (end < 0) continue;
+		const frontmatter = parse(raw.slice(4, end)) ?? {};
+		if (frontmatter.legacy_url) {
+			legacyUrls.add(frontmatter.legacy_url);
+		} else {
+			nonLegacyFiles.push(file);
+		}
+	}
+
+	const missing = urls.filter((url) => !legacyUrls.has(url));
+	const extras = [...legacyUrls].filter((url) => !sourceSet.has(url));
 
 	console.log(`Sitemap URLs: ${urls.length}`);
-	console.log(`Markdown files: ${markdownFiles.length}`);
+	console.log(`Markdown files (all): ${markdownFiles.length}`);
+	console.log(`Markdown files (legacy_url): ${legacyUrls.size}`);
+	console.log(`Markdown files (non-legacy): ${nonLegacyFiles.length}`);
+	if (nonLegacyFiles.length > 0) {
+		console.log(`Non-legacy files: ${nonLegacyFiles.join(', ')}`);
+	}
+	console.log(`Missing legacy URLs: ${missing.length}`);
+	console.log(`Extra legacy URLs: ${extras.length}`);
 
-	if (urls.length !== markdownFiles.length) {
-		console.log('Counts differ. Check migration-errors.json or re-run migration.');
+	if (missing.length > 0 || extras.length > 0) {
+		console.log('Validation failed: sitemap and legacy_url sets are not identical.');
+		process.exitCode = 1;
+	} else {
+		console.log('Validation passed: all sitemap URLs exist in migrated legacy_url entries.');
 	}
 }
 
