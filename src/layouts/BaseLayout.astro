@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import { withBase } from '../lib/urls';
 
 const { title = 'רברס עם פלטפורמה', description = 'פודקאסט על תוכנה, מוצר, ותשתיות — בעברית.' } = Astro.props;
+const gaId = import.meta.env.PUBLIC_GA_ID ?? 'G-Y4CQKFBQGR';
 ---
 
 <html lang="he" dir="rtl">
@@ -22,6 +23,22 @@ const { title = 'רברס עם פלטפורמה', description = 'פודקאסט 
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Hebrew:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
 		/>
+		{
+			import.meta.env.PROD && (
+				<>
+					<script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+					<script
+						is:inline
+						set:html={`
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', '${gaId}');
+						`}
+					/>
+				</>
+			)
+		}
 	</head>
 	<body>
 		<Header />
