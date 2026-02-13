@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { getAllPosts, getPostPermalink } from '../lib/posts';
+import { withBase } from '../lib/urls';
 
 const posts = await getAllPosts();
 const [latest] = posts;

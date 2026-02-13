@@ -1,10 +1,12 @@
+site_url: "https://reversim.github.io/podcast"
+display_url: "https://reversim.github.io/podcast"
+
 backend:
   name: github
   repo: reversim/podcast
   branch: main
   base_url: https://netlify-cms-github-oauth-provider-xqzh.onrender.com
   auth_endpoint: /auth
-
 
 media_folder: "public/uploads"
 public_folder: "/uploads"

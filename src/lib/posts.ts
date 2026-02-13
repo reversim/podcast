@@ -1,5 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
+import { withBase } from './urls';
 
 export type PostEntry = CollectionEntry<'posts'>;
 
@@ -20,5 +21,5 @@ export function getPostPath(entry: PostEntry) {
 }
 
 export function getPostPermalink(entry: PostEntry) {
-	return `${getPostPath(entry)}.html`;
+	return withBase(`${getPostPath(entry)}.html`);
 }
