@@ -13,9 +13,10 @@ import { join } from "node:path";
 import pLimit from "p-limit";
 
 const POSTS_DIR = "/home/user/podcast/src/content/posts";
-const CONCURRENCY = 10;
-const TIMEOUT_MS = 10_000;
+const CONCURRENCY = 50;
+const TIMEOUT_MS = 5_000;
 const BODY_URL_SAMPLE_SIZE = 100;
+const AUDIO_SAMPLE_SIZE = 150; // sample across all domains instead of checking every URL
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -142,11 +143,35 @@ async function main() {
   const malformedAudio = audioEntries.filter((e) => !isWellFormedUrl(e.url));
   const validAudio = audioEntries.filter((e) => isWellFormedUrl(e.url));
 
-  // 3. Check all valid audio URLs with concurrency limit
+  // 3. Sample audio URLs across domains, then check with concurrency limit
   const limit = pLimit(CONCURRENCY);
 
+  // Group by domain and sample proportionally
+  const byDomain = new Map();
+  for (const e of validAudio) {
+    try {
+      const d = new URL(e.url).hostname;
+      if (!byDomain.has(d)) byDomain.set(d, []);
+      byDomain.get(d).push(e);
+    } catch { /* skip */ }
+  }
+
+  const sampled = [];
+  for (const [domain, entries] of byDomain) {
+    const proportion = Math.max(5, Math.ceil((entries.length / validAudio.length) * AUDIO_SAMPLE_SIZE));
+    // Take first few, last few, and random middle
+    const first = entries.slice(0, Math.ceil(proportion / 3));
+    const last = entries.slice(-Math.ceil(proportion / 3));
+    const mid = entries.filter((_, i) => i % Math.max(1, Math.floor(entries.length / Math.ceil(proportion / 3))) === 0).slice(0, Math.ceil(proportion / 3));
+    const unique = new Map();
+    for (const e of [...first, ...mid, ...last]) unique.set(e.url, e);
+    sampled.push(...unique.values());
+  }
+
+  process.stderr.write(`Checking ${sampled.length} sampled audio URLs (of ${validAudio.length} total) across ${byDomain.size} domains...\n`);
+
   const audioResults = await Promise.all(
-    validAudio.map((entry) =>
+    sampled.map((entry) =>
       limit(async () => {
         const result = await checkUrl(entry.url);
         return { ...result, file: entry.file };
@@ -177,6 +202,9 @@ async function main() {
   const report = {
     audio: {
       total: audioEntries.length,
+      totalValid: validAudio.length,
+      sampledCount: sampled.length,
+      domainBreakdown: Object.fromEntries([...byDomain].map(([d, es]) => [d, es.length])),
       working: workingAudio.length,
       broken: brokenAudio.length,
       malformed: malformedAudio.map((e) => ({
