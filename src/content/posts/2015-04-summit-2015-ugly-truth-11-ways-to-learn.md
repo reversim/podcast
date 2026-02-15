@@ -4,7 +4,7 @@ title: "Summit 2015: The ugly truth: 11 ways to learn what users really think
 date: 2015-04-24T06:09:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_The_ugly_truth-_11_ways_to_learn_what_users_really_think_about_your_product.mp3
+audio_url: https://m.reversim.com/summit2015_The_ugly_truth-_11_ways_to_learn_what_users_really_think_about_your_product.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-ugly-truth-11-ways-to-learn.html
 legacy_path: /2015/04/summit-2015-ugly-truth-11-ways-to-learn
 ---

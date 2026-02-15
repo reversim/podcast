@@ -3,7 +3,7 @@ title: "Summit 2013: Vagrant and Puppet, your ops sketching board, by Ronen Nark
 date: 2013-04-13T07:01:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_vagrant_and_puppet_your_ops_sketching_board.mp3
+audio_url: https://m.reversim.com/summit2013_vagrant_and_puppet_your_ops_sketching_board.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-vagrant-and-puppet-your-ops.html
 legacy_path: /2013/04/summit-2013-vagrant-and-puppet-your-ops
 ---

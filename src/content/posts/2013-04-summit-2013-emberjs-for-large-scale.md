@@ -3,7 +3,7 @@ title: "Summit 2013: Ember.js for Large Scale Applications, by Oren Rubin"
 date: 2013-04-07T16:27:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_ember_js_for_large_scale_applications.mp3
+audio_url: https://m.reversim.com/summit2013_ember_js_for_large_scale_applications.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-emberjs-for-large-scale.html
 legacy_path: /2013/04/summit-2013-emberjs-for-large-scale
 ---

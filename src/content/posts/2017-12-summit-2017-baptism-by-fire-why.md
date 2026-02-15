@@ -4,7 +4,7 @@ title: "Summit 2017: Baptism By Fire - why production issues make you a better
 date: 2017-12-08T20:56:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Adi_Belan_-_Baptism_By_Fire.mp3
+audio_url: https://m2.reversim.com/summit2017-Adi_Belan_-_Baptism_By_Fire.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-baptism-by-fire-why.html
 legacy_path: /2017/12/summit-2017-baptism-by-fire-why
 ---

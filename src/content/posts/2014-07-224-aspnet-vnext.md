@@ -2,7 +2,7 @@
 title: 224 ASP.NET vNext
 date: 2014-07-19T19:55:00.000Z
 episode: 224
-audio_url: http://m.reversim.com/reversim224_asp_vnext.mp3
+audio_url: https://m.reversim.com/reversim224_asp_vnext.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqj1tDDP0BA3TOUcMF8lJyTpYPL1YLr-ZKzT0YRzo7Aj8pSHGFqfhEIUG-G67esfUsuPvI1Qohc4G34O-Tm-GpB34zlL3_vEpLrlRzUCI1Yum-FFzHLZnXid0qLVzk9Mt2L9HKL_hIUDs/s1600/Highlights_TechEd_2014_ASP.Net_vNext.png
 legacy_url: https://www.reversim.com/2014/07/224-aspnet-vnext.html
 legacy_path: /2014/07/224-aspnet-vnext

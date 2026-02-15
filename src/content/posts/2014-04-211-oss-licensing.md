@@ -2,7 +2,7 @@
 title: 211 OSS Licensing
 date: 2014-04-07T21:00:00.000Z
 episode: 211
-audio_url: http://m.reversim.com/reversim211_osslicense.mp3
+audio_url: https://m.reversim.com/reversim211_osslicense.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXomKZxaf-CyNOfr23T7grZVyeGO_P2IHUw1jk_0pQzZbTlw2aGihALlxV-yKDBbUD83FbZkwFJiUd9iHgCQoa87nnrPMJedQbKSevP5rWtS7wkB6y28WkxMIHdz6FjoaCVvgQAIXDKtM/s3200/288px-Opensource.svg.png
 legacy_url: https://www.reversim.com/2014/04/211-oss-licensing.html
 legacy_path: /2014/04/211-oss-licensing

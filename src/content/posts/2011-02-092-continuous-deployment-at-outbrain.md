@@ -2,7 +2,7 @@
 title: 092 Continuous Deployment at outbrain
 date: 2011-02-25T12:48:00.000Z
 episode: 92
-audio_url: http://m.reversim.com/reversim92_outbrain_cd.mp3
+audio_url: https://m.reversim.com/reversim92_outbrain_cd.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiaYcT-dZ_uW6g2xwM3EI3KIZBv0_GZI2kn_5AppzQ1gntKLjR0ZECrTTgq2_JMgueLbjD5O3zM95ubML8S97k_x1eUv5toBkI3b_F2-9mZSa1mJ-DKfyycjm0_37glUjSn0liIhq78vMU/s200/continuousdeployment.png
 legacy_url: https://www.reversim.com/2011/02/092-continuous-deployment-at-outbrain.html
 legacy_path: /2011/02/092-continuous-deployment-at-outbrain

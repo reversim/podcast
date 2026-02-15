@@ -4,7 +4,7 @@ date: 2015-05-01T09:49:00.000Z
 tags:
   - bumpers
 episode: 259
-audio_url: http://m.reversim.com/reversim259_bumpers-wayback.mp3
+audio_url: https://m.reversim.com/reversim259_bumpers-wayback.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrIDGJBVKFvxepcPLyTvBRblCLYOe4xtqhfFXKtSwdWLVzhcjoJPzrWr1OT9GVFAdn4SckO5bAit1_9kHdFQGkC-_ED8T9-8eDlDbUSC6kgkyTfuYn9mcwOOImtzJB4PopT4RfIo0TidA/s1600/C.png
 legacy_url: https://www.reversim.com/2015/05/259-bumpers-wayback.html
 legacy_path: /2015/05/259-bumpers-wayback

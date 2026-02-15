@@ -3,7 +3,7 @@ title: "Summit 2013: Building lightweight products, by Uri Lavi"
 date: 2013-04-04T12:57:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_building_lightweight_products.mp3
+audio_url: https://m.reversim.com/summit2013_building_lightweight_products.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-building-lightweight.html
 legacy_path: /2013/04/summit-2013-building-lightweight
 ---

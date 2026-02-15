@@ -3,7 +3,7 @@ title: "Summit 2015: Should you move from Objective-C to Swift? / Yoni Tsafir"
 date: 2015-04-24T06:19:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Should_you_move_from_Objective-C_to_Swift-.mp3
+audio_url: https://m.reversim.com/summit2015_Should_you_move_from_Objective-C_to_Swift-.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-should-you-move-from.html
 legacy_path: /2015/04/summit-2015-should-you-move-from
 ---

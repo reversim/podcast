@@ -4,7 +4,7 @@ date: 2014-10-19T20:00:00.000Z
 tags:
   - carburetor
 episode: 231
-audio_url: http://m.reversim.com/reversim231_carburetor16.mp3
+audio_url: https://m.reversim.com/reversim231_carburetor16.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyU4YBWkZSRSJN3FMdgUat5NqVH_bMdOET8cWvzkIF3rPTVh-TeH_dzli9BAM82CopnAjAvsNlLvwrag4LPXL50ipkvDRNRuLZv1T-16fgXR5qnwSGFvCOINkSnNnWZzMsATvkk-wmqpg/s1600/Operator.jpg
 legacy_url: https://www.reversim.com/2014/10/231-carburetor-16-software-defined.html
 legacy_path: /2014/10/231-carburetor-16-software-defined

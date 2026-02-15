@@ -2,7 +2,7 @@
 title: 344 Power in Diversity with Galit Desheh
 date: 2018-07-30T19:17:00.000Z
 episode: 344
-audio_url: http://m2.reversim.com/reversim344_power-in-diversity.mp3
+audio_url: https://m2.reversim.com/reversim344_power-in-diversity.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUKpIPXXbEEThYRpxNiUZug9u4Czlp0GOUFdO7bBto-qtaTUCkZI1JwTOWzWlJEw1Pu6EKN0RGIkjYp5KNTABavhdHX9-KVrSTvpDHGOTgaXcpU8czqbq_YOVznFAVURmAHN5Eb6uZCFM/s200/powerindiversity.png
 legacy_url: https://www.reversim.com/2018/07/344-power-in-diversity-with-galit-desheh.html
 legacy_path: /2018/07/344-power-in-diversity-with-galit-desheh

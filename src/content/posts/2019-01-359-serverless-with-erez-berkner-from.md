@@ -2,7 +2,7 @@
 title: 359 Serverless with Erez Berkner from Lumigo
 date: 2019-01-24T18:19:00.000Z
 episode: 359
-audio_url: http://m2.reversim.com/reversim359_Serverless-lumigo.mp3
+audio_url: https://m2.reversim.com/reversim359_Serverless-lumigo.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhF7E6HIm8wmgXoQuuZ4KO65iXQTdHKDhgt6KmpXaDRRJ9trMvBLmG6pMj7uq13Pq2vgB7SWImxOFt9CaKWwQbf0dSGTatiOqGAwdu00PVwssr5VoBzEzzX57fbEJkCIHknyLWfHH0477s/s1600/lumigo.png
 legacy_url: https://www.reversim.com/2019/01/359-serverless-with-erez-berkner-from.html
 legacy_path: /2019/01/359-serverless-with-erez-berkner-from

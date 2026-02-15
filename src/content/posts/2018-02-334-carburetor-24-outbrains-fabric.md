@@ -4,7 +4,7 @@ date: 2018-02-06T19:10:00.000Z
 tags:
   - carburetor
 episode: 334
-audio_url: http://m2.reversim.com/reversim334-Carburetor_24-Outbrain_fabric_network.mp3
+audio_url: https://m2.reversim.com/reversim334-Carburetor_24-Outbrain_fabric_network.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCglR_4JVPVo861Aoc0PS6zAQphK0LYmGc3SJ4z5ROgcaQFsXtKlq5W7hpRGY8dnDzCK8Q0YoR6iPSYA_1SAKISBXDE7WDzfWDFY3jhRyb2hAp6pAuWvrj3c2XbgYfmFyhktD87sIc53A/s200/fabric.jpg
 legacy_url: https://www.reversim.com/2018/02/334-carburetor-24-outbrains-fabric.html
 legacy_path: /2018/02/334-carburetor-24-outbrains-fabric

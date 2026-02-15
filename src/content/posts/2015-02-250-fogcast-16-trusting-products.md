@@ -4,7 +4,7 @@ date: 2015-02-26T21:30:00.000Z
 tags:
   - fogcast
 episode: 250
-audio_url: http://m.reversim.com/reversim250_fogcast16-trust2.mp3
+audio_url: https://m.reversim.com/reversim250_fogcast16-trust2.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwLCmekVVJVaU89Of8pDhmvqoiOQX573q7vdX1yBxSjrabPpT18WHEzd_b9hvpOtO56zv1e182bgVmZFaxZXnFMu-2O-WgVfViFZBbrrsi-JpGKqKDAVzTLzEhBQL4kL9rbnqaUCvqR2o/s1600/trust.jpg
 legacy_url: https://www.reversim.com/2015/02/250-fogcast-16-trusting-products.html
 legacy_path: /2015/02/250-fogcast-16-trusting-products

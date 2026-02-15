@@ -3,7 +3,7 @@ title: "Summit 2014: UX for my dad / Boaz Katz"
 date: 2014-04-17T13:23:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-ux.mp3
+audio_url: https://m.reversim.com/reversim2014-ux.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-ux-for-my-dad-boaz-katz.html
 legacy_path: /2014/04/summit-2014-ux-for-my-dad-boaz-katz
 ---

@@ -4,7 +4,7 @@ title: "Summit 2016:  A call out to engineers to become product managers / Yuval
 date: 2017-07-16T10:53:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_YUVAL_SAMET.mp3
+audio_url: https://m2.reversim.com/summit2016_YUVAL_SAMET.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-call-out-to-engineers-to.html
 legacy_path: /2017/07/summit-2016-call-out-to-engineers-to
 ---

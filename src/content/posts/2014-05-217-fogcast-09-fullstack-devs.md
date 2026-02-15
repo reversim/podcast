@@ -4,7 +4,7 @@ date: 2014-05-19T17:47:00.000Z
 tags:
   - fogcast
 episode: 217
-audio_url: http://m.reversim.com/reversim217_fogcast09.mp3
+audio_url: https://m.reversim.com/reversim217_fogcast09.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8Ettb-ZpenHMdR064Wee-4GJvii3t9WcI1SatrvqMfnek7uwIoh4CIjOjiF36NeBHKXWRi-5k1a6Tc3itEnyfxSTenmTYSXRSCyLMISEx_rfvcwuab-S00Z2_xEofam9-SIMFyEauar0/s1600/fullstacklogo.png
 legacy_url: https://www.reversim.com/2014/05/217-fogcast-09-fullstack-devs.html
 legacy_path: /2014/05/217-fogcast-09-fullstack-devs

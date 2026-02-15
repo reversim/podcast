@@ -3,7 +3,7 @@ title: "Summit 2018: Micro Frontends Architecture & in practice / Idan Levin"
 date: 2018-12-31T20:24:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Idan_Levin.mp3
+audio_url: https://m2.reversim.com/summit2018-Idan_Levin.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-micro-frontends.html
 legacy_path: /2018/12/summit-2018-micro-frontends
 ---

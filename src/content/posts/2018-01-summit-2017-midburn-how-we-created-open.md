@@ -3,7 +3,7 @@ title: "Summit 2017: Midburn: How we created an open source community / Lior Kap
 date: 2018-01-31T15:16:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Lior_Kaplan_-_Midburn._How_we_created_an_open_source_community.mp3
+audio_url: https://m2.reversim.com/summit2017-Lior_Kaplan_-_Midburn._How_we_created_an_open_source_community.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-midburn-how-we-created-open.html
 legacy_path: /2018/01/summit-2017-midburn-how-we-created-open
 ---

@@ -3,7 +3,7 @@ title: "Summit 2014: Functional programming in Javascript / Yoav Rubin"
 date: 2014-04-16T21:05:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-javascript-func.mp3
+audio_url: https://m.reversim.com/reversim2014-javascript-func.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-functional-programming-in.html
 legacy_path: /2014/04/summit-2014-functional-programming-in
 ---

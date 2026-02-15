@@ -3,7 +3,7 @@ title: "Summit 2017: How hackers destroyed Mat Honan's life / Moria Ahi Mordehai
 date: 2018-02-09T11:07:00.000Z
 tags:
   - summit
-audio_url: http://traffic.libsyn.com/reversim/summit2017-Moria_Ahi_Mordehai_-_How_hackers_destroyed_Mat_Honans_life.mp3
+audio_url: https://s3.amazonaws.com/reversim/summit2017-Moria_Ahi_Mordehai_-_How_hackers_destroyed_Mat_Honans_life.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-how-hackers-destroyed-mat.html
 legacy_path: /2018/02/summit-2017-how-hackers-destroyed-mat
 ---

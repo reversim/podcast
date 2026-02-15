@@ -4,7 +4,7 @@ date: 2019-12-08T20:22:00.000Z
 tags:
   - carburetor
 episode: 382
-audio_url: http://m2.reversim.com/reversim382_carburetor27k-8s-and-multicloud.mp3
+audio_url: https://m2.reversim.com/reversim382_carburetor27k-8s-and-multicloud.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI68Cu4P43aXBUD4TPfTIXEZgoTwpS82mCPZmlu_7dumY_8tQoVtOap5bNahh-sSO9akfqzFN3KXyHf13uO1-Jked7ATaLYffwzsIFEKAgFK82w9QX-UlziZTDOIEdV8WUIT6MuFZVWv8/s200/word-image-3.png
 legacy_url: https://www.reversim.com/2019/12/382-carburetor-27-k8s-and-multi-cloud.html
 legacy_path: /2019/12/382-carburetor-27-k8s-and-multi-cloud

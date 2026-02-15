@@ -3,7 +3,7 @@ title: "Summit 2017: Do we need yet another web framework / Shimi Bar"
 date: 2018-03-07T17:06:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Shimi_Bar_-_Do_we_need_yet_another_web_framework.mp3
+audio_url: https://m2.reversim.com/summit2017-Shimi_Bar_-_Do_we_need_yet_another_web_framework.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-do-we-need-yet-another-web.html
 legacy_path: /2018/03/summit-2017-do-we-need-yet-another-web
 ---

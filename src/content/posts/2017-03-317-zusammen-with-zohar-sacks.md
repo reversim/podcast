@@ -2,7 +2,7 @@
 title: 317 Zusammen with Zohar Sacks
 date: 2017-03-04T19:54:00.000Z
 episode: 317
-audio_url: http://m2.reversim.com/reversim317_zusammen.mp3
+audio_url: https://m2.reversim.com/reversim317_zusammen.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRQ77K7w-AEQBuhIgBAxOEBzJRQ8r3NGz6gbOYI9QO3-SKCtYno-coFvZYJc-P3NpkY28OBKEQ2sxmEyxALRAgOguJKFYlh44Pv6iBHJEw4vbw8dOT4V4TnviLr3wlIISNwsjCfS0lzuQ/s200/zusammen_logo_final_888px.png
 legacy_url: https://www.reversim.com/2017/03/317-zusammen-with-zohar-sacks.html
 legacy_path: /2017/03/317-zusammen-with-zohar-sacks

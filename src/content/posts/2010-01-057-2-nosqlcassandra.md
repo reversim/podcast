@@ -2,7 +2,7 @@
 title: 057 -  לא רק אס קיו אל חלק 2 וקסנדרה- nosql+cassandra
 date: 2010-01-31T05:18:00.000Z
 episode: 57
-audio_url: http://m.reversim.com/reversim57_nosql2.mp3
+audio_url: https://m.reversim.com/reversim57_nosql2.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie121FoLmPw1Zcn4U4oIiYwdFhwudkSJmxYcCSVaNlgnlxhYEC79duzr9fYLaC8gttOObMYFUoF9jM6CjAKWV760EH0f1gqNxvkJwHsqWzysmXLHRgwbjn602sMpQMtd6kTlG1JY1cOkU/s320/The+Apache+Cassandra+Project.png
 legacy_url: https://www.reversim.com/2010/01/057-2-nosqlcassandra.html
 legacy_path: /2010/01/057-2-nosqlcassandra

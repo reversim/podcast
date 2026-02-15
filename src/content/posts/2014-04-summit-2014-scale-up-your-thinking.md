@@ -4,7 +4,7 @@ title: "Summit 2014: Scale up your thinking: Reactive programming with Scala and
 date: 2014-04-12T11:37:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-Akka.mp3
+audio_url: https://m.reversim.com/reversim2014-Akka.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-scale-up-your-thinking.html
 legacy_path: /2014/04/summit-2014-scale-up-your-thinking
 ---

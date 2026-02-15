@@ -5,7 +5,7 @@ tags:
   - תשתיות נתונים
   - scalability
 episode: 17
-audio_url: http://m2.reversim.com/reversim17.mp3
+audio_url: https://m2.reversim.com/reversim17.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYHIxKdUR5vDTkMzuQM0DZ7dRv4mDi0MNsZ3UXMLx3s06HaiVNr2HWz7Dz-uP9awiXaV-58RFAl0IHs1jZsru9gcGWR2OtCdtu7mwU2zqqskPaFz74SE_Nn1eWV9MhYvNzYbaU4sjCM56s/s320/Key-Value-DB.jpg
 legacy_url: https://www.reversim.com/2009/04/17-key-value-databases.html
 legacy_path: /2009/04/17-key-value-databases

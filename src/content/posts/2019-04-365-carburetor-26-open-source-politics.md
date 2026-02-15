@@ -2,7 +2,7 @@
 title: 365 Carburetor 26 - open source politics
 date: 2019-04-07T16:54:00.000Z
 episode: 365
-audio_url: http://m2.reversim.com/reversim365-carburetor26.mp3
+audio_url: https://m2.reversim.com/reversim365-carburetor26.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBt0DUsTpLih0_HitHNp4dR7_fbvJ7yiawbrZ0hcgVqH9UgUs-YLgGyhwcHzRXfUouDC17Zct-HcXLIjHK1D58tu8lDP5IE5On7wM3NPALDTAEx-CPb4rGW_8u6RMqnH8t8Az5fKbeQSU/s200/download.png
 legacy_url: https://www.reversim.com/2019/04/365-carburetor-26-open-source-politics.html
 legacy_path: /2019/04/365-carburetor-26-open-source-politics

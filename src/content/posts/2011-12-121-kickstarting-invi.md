@@ -2,7 +2,7 @@
 title: 121 Kickstarting invi
 date: 2011-12-23T13:09:00.000Z
 episode: 121
-audio_url: http://m.reversim.com/reversim121_invi2.mp3
+audio_url: https://m.reversim.com/reversim121_invi2.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3yxMCZrMgGSH44o6wvCgSu4nwrCbGYSwaL0n0ik_RkFxe6cjrIBSQu1r66XwTruTKLa375ZHo88a2uQMa29GRvApSLEtBXzG4hbztjiJUz-i8Mtc6kB8LI8MXwAJcFtUVUtmX3H4RDVk/s1600/invi+175+px.png
 legacy_url: https://www.reversim.com/2011/12/121-kickstarting-invi.html
 legacy_path: /2011/12/121-kickstarting-invi

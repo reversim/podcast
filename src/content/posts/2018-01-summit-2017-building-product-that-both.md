@@ -4,7 +4,7 @@ title: "Summit 2017: Building a Product That Both Your Grandma and Chuck Norris
 date: 2018-01-12T20:01:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Eynav_Dagan_-_Building_a_Product_That_Both_Your_Grandma_and_Chuck_Norris_Can_Use.mp3
+audio_url: https://m2.reversim.com/summit2017-Eynav_Dagan_-_Building_a_Product_That_Both_Your_Grandma_and_Chuck_Norris_Can_Use.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-building-product-that-both.html
 legacy_path: /2018/01/summit-2017-building-product-that-both
 ---

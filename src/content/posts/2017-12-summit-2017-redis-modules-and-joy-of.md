@@ -3,7 +3,7 @@ title: "Summit 2017: Redis Modules and The Joy of specificity / Adam Lev Libfeld
 date: 2017-12-07T18:00:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Adam_Lev-Libfeld_-_Redis_Modules_and_The_Joy_of_specificity.mp3
+audio_url: https://m2.reversim.com/summit2017-Adam_Lev-Libfeld_-_Redis_Modules_and_The_Joy_of_specificity.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-redis-modules-and-joy-of.html
 legacy_path: /2017/12/summit-2017-redis-modules-and-joy-of
 ---

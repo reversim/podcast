@@ -3,7 +3,7 @@ title: "Summit 2017: Searching Billions of Documents with Redis / Dvir Volk"
 date: 2017-12-26T06:15:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Dvir_Volk_-_Searching_Billions_of_Documents_with_Redis.mp3
+audio_url: https://m2.reversim.com/summit2017-Dvir_Volk_-_Searching_Billions_of_Documents_with_Redis.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-searching-billions-of.html
 legacy_path: /2017/12/summit-2017-searching-billions-of
 ---

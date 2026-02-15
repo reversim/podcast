@@ -3,7 +3,7 @@ title: "Summit 2018: The Open Source Development Surprise / Benjamin Gruenbaum"
 date: 2018-12-07T19:39:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Benjamin_Gruenbaum.mp3
+audio_url: https://m2.reversim.com/summit2018-Benjamin_Gruenbaum.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-open-source-development.html
 legacy_path: /2018/12/summit-2018-open-source-development
 ---

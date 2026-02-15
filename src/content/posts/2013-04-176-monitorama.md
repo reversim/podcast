@@ -6,7 +6,7 @@ tags:
   - monitoring
   - ops
 episode: 176
-audio_url: http://m.reversim.com/reversim176_monitorama.mp3
+audio_url: https://m.reversim.com/reversim176_monitorama.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_vH1kGbpqJ2mywaayA-J6-LdWw9ornIOjF2mjTNcR1WgeA_Pnaqlm_VT6t4n4T17oHdz7HoqQSiSiDstCWiyM6rkgp3EgFri-BKyTuZAW6yK6NpY1gaYrYiE4FiP8gUB6LNH36WbAbNQze12hrSXpenne6uiKagvNWEXjGuVD0=s0-d
 legacy_url: https://www.reversim.com/2013/04/176-monitorama.html
 legacy_path: /2013/04/176-monitorama

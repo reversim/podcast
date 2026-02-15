@@ -2,7 +2,7 @@
 title: 105 Marketing with Shira Abel
 date: 2011-07-05T08:42:00.000Z
 episode: 105
-audio_url: http://m.reversim.com/reversim105_shira_abel.mp3
+audio_url: https://m.reversim.com/reversim105_shira_abel.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT3MGR6qiQPd48E7CG-bkfxO_eS174CewyWd433HbVVxbfJOn7CGFGPEDxuI_J1zn1J6nSxMOwlTqT_kDh5L9Io_EoPRfu8-_5NgA3L7gcIO1gh1pwplsnGZm7IwUTy13opFO_CcKwtY8/s200/social-media-marketing.jpg
 legacy_url: https://www.reversim.com/2011/07/105-marketing-with-shira-abel.html
 legacy_path: /2011/07/105-marketing-with-shira-abel

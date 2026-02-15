@@ -2,7 +2,7 @@
 title: 066 agile and kanban
 date: 2010-06-05T19:14:00.000Z
 episode: 66
-audio_url: http://m.reversim.com/reversim66_agile_kanban.mp3
+audio_url: https://m.reversim.com/reversim66_agile_kanban.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixhb3uD1Bw6Y9B8dAawS5ItQKh1AMg0rbVmWRHDVIm2VX04dtNsTQqsxAnaAL0HHcWdSvXsNEjQ8-ujqNIJQImFlKrWMokRiToydDLtqvIVvjsHSqwBX1zFiJetPpLaixBW-4DUJEJWrw/s200/smile_token_back.jpg
 legacy_url: https://www.reversim.com/2010/06/066-agile-and-kanban.html
 legacy_path: /2010/06/066-agile-and-kanban

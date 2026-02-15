@@ -2,7 +2,7 @@
 title: 073 UX with Martin
 date: 2010-08-01T06:39:00.000Z
 episode: 73
-audio_url: http://m.reversim.com/reversim73_ux_martin.mp3
+audio_url: https://m.reversim.com/reversim73_ux_martin.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWVTMDwFb4Dmr1KTZ2dJV-qJZO76fnF0OeyIXEFIf6oJgPhQU8MiJVRop8lvPCn9qXlffxYAD0SiXkxG2dD_pXke0NWMhrmTdvEYpAqKiEixYf6yfg9ez6j8DeVomVlkV0rUOjJUnRdss/s200/dynabook-ux-02-boyle+(1).jpg
 legacy_url: https://www.reversim.com/2010/08/073-ux-with-martin.html
 legacy_path: /2010/08/073-ux-with-martin

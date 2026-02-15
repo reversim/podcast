@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: Programing, stress and mindfulness / Noam Elfanbaum"
 date: 2017-08-26T19:37:00.000Z
-audio_url: http://m2.reversim.com/summit2016_NOAM_ELFANBAUM.mp3
+audio_url: https://m2.reversim.com/summit2016_NOAM_ELFANBAUM.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-programing-stress-and.html
 legacy_path: /2017/08/summit-2016-programing-stress-and
 ---

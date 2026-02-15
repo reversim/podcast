@@ -2,7 +2,7 @@
 title: 117 Google Developer Day
 date: 2011-11-17T20:38:00.000Z
 episode: 117
-audio_url: http://m.reversim.com/reversim117_gdd.mp3
+audio_url: https://m.reversim.com/reversim117_gdd.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEG2CLOvIol_aAeC05dbt4zdhuwS0xZ342RmV8nTbnFk2g3tjgCOYCJ8eR2zMcE2GxCHu9SvP3Mz6Ve9DIz6UdFXewcGVljygeuCqzqn260bPwyd7QdKlcpUeGx-x_79Xo7c5rBPBXXME/s200/Tel+Aviv+-+Google+Developer+Day+2011.png
 legacy_url: https://www.reversim.com/2011/11/117-google-developer-day.html
 legacy_path: /2011/11/117-google-developer-day

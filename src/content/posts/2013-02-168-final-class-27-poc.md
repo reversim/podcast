@@ -4,7 +4,7 @@ date: 2013-02-08T20:09:00.000Z
 tags:
   - finalclass
 episode: 168
-audio_url: http://m.reversim.com/reversim168_finalclass27.mp3
+audio_url: https://m.reversim.com/reversim168_finalclass27.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png
 legacy_url: https://www.reversim.com/2013/02/168-final-class-27-poc.html
 legacy_path: /2013/02/168-final-class-27-poc

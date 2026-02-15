@@ -4,7 +4,7 @@ date: 2014-04-29T19:54:00.000Z
 tags:
   - carburetor
 episode: 215
-audio_url: http://m.reversim.com/reversim215_carburetor13.mp3
+audio_url: https://m.reversim.com/reversim215_carburetor13.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgajUOVTe3zH-9FM9rNry6i8R5ftZZC7ASt6kfXH_hH1aVWeyDqUnpPYNXSI_kO1stRAaGQb769AKMYFSt3bL0WL9uJXZVwjDmSvIPRUzWt0ZV7AZi0-Nod7uLXBB7uY8s3zamkQunXCRU/s1600/sandisk-ssd-uata-5000-6.jpg
 legacy_url: https://www.reversim.com/2014/04/215-carburetor-13-ssd-databases.html
 legacy_path: /2014/04/215-carburetor-13-ssd-databases

@@ -4,7 +4,7 @@ date: 2015-01-21T22:15:00.000Z
 tags:
   - carburetor
 episode: 247
-audio_url: http://m.reversim.com/reversim247_carburetor19_devopsdays.mp3
+audio_url: https://m.reversim.com/reversim247_carburetor19_devopsdays.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEMG91iUXkdFy7nveMHvsBhF24Zr-SMMe0omLaSexQxoTvD5tJn4J5CTZQHl0v-fwOkmtwqD3iuyQoLkz15ZeWHP0lxb-yszqwilByIE902hgSPg7wSTAVWi6cQ4qvLbTR0F-7Cn2Ilwc/s1600/DevOpsDays+Warsaw.jpg
 legacy_url: https://www.reversim.com/2015/01/247-carburetor-19-devopsdays.html
 legacy_path: /2015/01/247-carburetor-19-devopsdays

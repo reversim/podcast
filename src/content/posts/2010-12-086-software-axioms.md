@@ -2,7 +2,7 @@
 title: 086 Software Axioms
 date: 2010-12-19T09:21:00.000Z
 episode: 86
-audio_url: http://m.reversim.com/reversim86_sw_axioms.mp3
+audio_url: https://m.reversim.com/reversim86_sw_axioms.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjamObgQn09X2StRl4sXA4F9IaBfdu9kGhDo2AOwgMo1BUUQM9f7_pf4xzKnU1L45qMpH7y8hmxTjcXSFQMDYXEQWwLsT3vk-r9i08Ydy6txwu7tDtFBjZgzMfBLtUuOIkEqBr_yCowU6s/s200/axioms.jpg
 legacy_url: https://www.reversim.com/2010/12/086-software-axioms.html
 legacy_path: /2010/12/086-software-axioms

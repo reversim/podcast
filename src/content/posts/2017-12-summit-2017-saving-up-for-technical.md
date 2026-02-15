@@ -4,7 +4,7 @@ title: "Summit 2017: Saving up for technical debt - how to prepare so you don't
 date: 2017-12-28T20:19:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Elad_Amit_-_Saving_up_for_technical_debt.mp3
+audio_url: https://m2.reversim.com/summit2017-Elad_Amit_-_Saving_up_for_technical_debt.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-saving-up-for-technical.html
 legacy_path: /2017/12/summit-2017-saving-up-for-technical
 ---

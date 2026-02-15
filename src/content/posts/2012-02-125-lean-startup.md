@@ -2,7 +2,7 @@
 title: 125 The Lean Startup
 date: 2012-02-09T10:30:00.000Z
 episode: 125
-audio_url: http://m.reversim.com/reversim125_lean_startup.mp3
+audio_url: https://m.reversim.com/reversim125_lean_startup.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHcb-0dHC3LxGPc0FGN3YYVArZhAN_TBuIezczMe3klECGIhcsKZmuu5OBHij5Kfay6C19V45etfnLu_QGxbYIOzkRsz_EXzelFwQJEGV9G6m9-c8IstQe7x0Bivn3F_4zbuNYUUXa73w/s200/lean-startup-book-by-eric-ries.jpg
 legacy_url: https://www.reversim.com/2012/02/125-lean-startup.html
 legacy_path: /2012/02/125-lean-startup

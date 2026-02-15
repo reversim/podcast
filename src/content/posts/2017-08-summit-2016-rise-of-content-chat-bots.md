@@ -4,7 +4,7 @@ title: "Summit 2016: Rise of the (content) chat bots - how NLP, search and
 date: 2017-08-02T20:40:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_SHAKED_BAR.mp3
+audio_url: https://m2.reversim.com/summit2016_SHAKED_BAR.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-rise-of-content-chat-bots.html
 legacy_path: /2017/08/summit-2016-rise-of-content-chat-bots
 ---

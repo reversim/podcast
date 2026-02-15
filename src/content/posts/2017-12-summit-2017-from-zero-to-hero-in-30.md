@@ -4,7 +4,7 @@ title: "Summit 2017: From zero to hero in 30 minutes: Serverless
 date: 2017-12-23T19:53:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Dafna_Rosenblum_-_From_zero_to_hero_in_30_minutes.mp3
+audio_url: https://m2.reversim.com/summit2017-Dafna_Rosenblum_-_From_zero_to_hero_in_30_minutes.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-from-zero-to-hero-in-30.html
 legacy_path: /2017/12/summit-2017-from-zero-to-hero-in-30
 ---

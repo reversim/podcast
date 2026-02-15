@@ -2,7 +2,7 @@
 title: 273 The Research in R&D
 date: 2015-08-20T06:25:00.000Z
 episode: 273
-audio_url: http://m.reversim.com/reversim273_the-R-in-RnD.mp3
+audio_url: https://m.reversim.com/reversim273_the-R-in-RnD.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNz18oq4hISkTjHTkYRvtbyoMifd0tFeD8-ovJiIIiL2rItVdIH9MNZKkKJdZ8nfjBAzwNL53rf3PmypWowb2oVk_gKquK9ED-QPO4Vfxw-UZCw6Y0OxIIOgUtRGPdLgazYop62YNhfPI/s200/keyboard-with-research-label.jpg
 legacy_url: https://www.reversim.com/2015/08/273-research-in-r.html
 legacy_path: /2015/08/273-research-in-r

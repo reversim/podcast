@@ -4,7 +4,7 @@ title: "Summit 2015: JVM Garbage Collection logs, you do not want to ignore
 date: 2015-04-29T13:14:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Ignites_2_Haim_Yadid.mp3
+audio_url: https://m.reversim.com/summit2015_Ignites_2_Haim_Yadid.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-jvm-garbage-collection-logs.html
 legacy_path: /2015/04/summit-2015-jvm-garbage-collection-logs
 ---

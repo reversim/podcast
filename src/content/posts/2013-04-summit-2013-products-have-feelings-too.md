@@ -3,7 +3,7 @@ title: "Summit 2013: Products have feelings too, by Iris Shoor"
 date: 2013-04-04T11:48:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_products_have_feelings_too.mp3
+audio_url: https://m.reversim.com/summit2013_products_have_feelings_too.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-products-have-feelings-too.html
 legacy_path: /2013/04/summit-2013-products-have-feelings-too
 ---

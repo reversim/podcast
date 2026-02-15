@@ -3,7 +3,7 @@ title: "Summit 2017: Reactive Brain Waves / Uri Shaked"
 date: 2018-03-14T21:32:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Uri_Shaked_-_Reactive_Brain_Waves.mp3
+audio_url: https://m2.reversim.com/summit2017-Uri_Shaked_-_Reactive_Brain_Waves.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-reactive-brain-waves-uri.html
 legacy_path: /2018/03/summit-2017-reactive-brain-waves-uri
 ---

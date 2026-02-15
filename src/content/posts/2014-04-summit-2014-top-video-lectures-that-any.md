@@ -3,7 +3,7 @@ title: "Summit 2014: Top video lectures that any developer should see / Yoav Rub
 date: 2014-04-23T18:51:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-ignite-videos.mp3
+audio_url: https://m.reversim.com/reversim2014-ignite-videos.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-top-video-lectures-that-any.html
 legacy_path: /2014/04/summit-2014-top-video-lectures-that-any
 ---

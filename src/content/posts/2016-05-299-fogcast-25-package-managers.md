@@ -2,7 +2,7 @@
 title: 299 Fogcast 25 - Package managers
 date: 2016-05-05T19:46:00.000Z
 episode: 299
-audio_url: http://m2.reversim.com/reversim299_fogcast25-package-managers.mp3
+audio_url: https://m2.reversim.com/reversim299_fogcast25-package-managers.mp3
 legacy_url: https://www.reversim.com/2016/05/299-fogcast-25-package-managers.html
 legacy_path: /2016/05/299-fogcast-25-package-managers
 ---

@@ -2,7 +2,7 @@
 title: 080 מניפסט החומוס - hummus manifesto
 date: 2010-09-28T18:40:00.000Z
 episode: 80
-audio_url: http://m.reversim.com/reversim80_hummus.mp3
+audio_url: https://m.reversim.com/reversim80_hummus.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipGv1VRZfCKd8rStUpwN7snlgN4vvwHZbPqUUMbpqJu34WmQvRfsYns28-_-eWDEAXA6-9P1Q8H_TdbF8y0iWaA-QRoA6hp_B0QQ3uDgSVsW5lLNnASAkpBnMyZBP42FwTJFSBc3y-vBE/s320/hummus.jpg
 legacy_url: https://www.reversim.com/2010/09/080-hummus-manifesto.html
 legacy_path: /2010/09/080-hummus-manifesto

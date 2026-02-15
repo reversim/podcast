@@ -3,7 +3,7 @@ title: "Summit 2014: Panel: Lean Startup"
 date: 2014-04-17T13:29:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-Lean-Startup.mp3
+audio_url: https://m.reversim.com/reversim2014-Lean-Startup.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-panel-lean-startup.html
 legacy_path: /2014/04/summit-2014-panel-lean-startup
 ---

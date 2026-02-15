@@ -3,7 +3,7 @@ title: "Summit 2017: Future of Serverless / Yoav Abrahami"
 date: 2018-03-17T20:26:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Yoav_Abrahami_-_Future_of_Serverless.mp3
+audio_url: https://m2.reversim.com/summit2017-Yoav_Abrahami_-_Future_of_Serverless.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-future-of-serverless-yoav.html
 legacy_path: /2018/03/summit-2017-future-of-serverless-yoav
 ---

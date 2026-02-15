@@ -4,7 +4,7 @@ title: "Summit 2015: Artificial Intelligence - Is anyone building the terminator
 date: 2015-04-27T20:01:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_ignites_1_Hagai_Levin.mp3
+audio_url: https://m.reversim.com/summit2015_ignites_1_Hagai_Levin.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-artificial-intelligence-is.html
 legacy_path: /2015/04/summit-2015-artificial-intelligence-is
 ---

@@ -3,7 +3,7 @@ title: "Summit 2016: Good rules for building a bad Android app / Shem Magnezi"
 date: 2017-08-02T20:47:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_SHEM_MAGNEZI.mp3
+audio_url: https://m2.reversim.com/summit2016_SHEM_MAGNEZI.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-good-rules-for-building-bad.html
 legacy_path: /2017/08/summit-2016-good-rules-for-building-bad
 ---

@@ -4,7 +4,7 @@ title: "Summit 2015: Developers like winning: use gamification to promote code
 date: 2015-04-29T13:13:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Ignites_2_Tzach_Zohar.mp3
+audio_url: https://m.reversim.com/summit2015_Ignites_2_Tzach_Zohar.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-developers-like-winning-use.html
 legacy_path: /2015/04/summit-2015-developers-like-winning-use
 ---

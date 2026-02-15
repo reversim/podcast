@@ -4,7 +4,7 @@ title: "Summit 2014: Tools & Tricks for building a remotie friendly team / Joey
 date: 2014-04-12T13:05:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-ignite-remote.mp3
+audio_url: https://m.reversim.com/reversim2014-ignite-remote.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-tools-tricks-for-building.html
 legacy_path: /2014/04/summit-2014-tools-tricks-for-building
 ---

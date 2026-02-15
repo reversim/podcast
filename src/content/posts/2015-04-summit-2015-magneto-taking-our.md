@@ -4,7 +4,7 @@ title: "Summit 2015: Magneto - taking our Automated Testing to the next level /
 date: 2015-04-25T20:26:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Magneto_-_taking_our_Automated_Testing_to_the_next_level.mp3
+audio_url: https://m.reversim.com/summit2015_Magneto_-_taking_our_Automated_Testing_to_the_next_level.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-magneto-taking-our.html
 legacy_path: /2015/04/summit-2015-magneto-taking-our
 ---

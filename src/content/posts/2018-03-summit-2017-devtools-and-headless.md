@@ -4,7 +4,7 @@ title: "Summit 2017: DevTools and Headless Chrome - The Automation Power-Couple
 date: 2018-03-18T06:26:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Yonatan_Mevorach_-_DevTools_and_Headless_Chrome_-_The_Automation_Power-Couple.mp3
+audio_url: https://m2.reversim.com/summit2017-Yonatan_Mevorach_-_DevTools_and_Headless_Chrome_-_The_Automation_Power-Couple.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-devtools-and-headless.html
 legacy_path: /2018/03/summit-2017-devtools-and-headless
 ---

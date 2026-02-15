@@ -4,7 +4,7 @@ title: "Summit 2017: 10 Things I hate about you BE developers (with love, FE) /
 date: 2018-02-18T22:04:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Noam_Antebi_-_10_Things_I_hate_about_you_BE_developers.mp3
+audio_url: https://m2.reversim.com/summit2017-Noam_Antebi_-_10_Things_I_hate_about_you_BE_developers.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-10-things-i-hate-about-you.html
 legacy_path: /2018/02/summit-2017-10-things-i-hate-about-you
 ---

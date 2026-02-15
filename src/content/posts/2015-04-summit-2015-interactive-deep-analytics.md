@@ -3,7 +3,7 @@ title: "Summit 2015: Interactive Deep Analytics Dashboard / Yaniv Shalev"
 date: 2015-04-14T18:59:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Interactive_Deep_Analytics_Dashboard.mp3
+audio_url: https://m.reversim.com/summit2015_Interactive_Deep_Analytics_Dashboard.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-interactive-deep-analytics.html
 legacy_path: /2015/04/summit-2015-interactive-deep-analytics
 ---

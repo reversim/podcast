@@ -4,7 +4,7 @@ title: "Summit 2015: Captain's Log - Applying Kaizen & Scrum to become a ninja
 date: 2015-04-27T20:19:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Ignites_2_Asaf_Mesika.mp3
+audio_url: https://m.reversim.com/summit2015_Ignites_2_Asaf_Mesika.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-captains-log-applying.html
 legacy_path: /2015/04/summit-2015-captains-log-applying
 ---

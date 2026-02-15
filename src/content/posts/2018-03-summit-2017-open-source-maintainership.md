@@ -3,7 +3,7 @@ title: "Summit 2017: Open Source Maintainership: musing and ranting / Shlomi Noa
 date: 2018-03-09T07:52:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Shlomi_Noach_-_Open_Source_Maintainership.mp3
+audio_url: https://m2.reversim.com/summit2017-Shlomi_Noach_-_Open_Source_Maintainership.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-open-source-maintainership.html
 legacy_path: /2018/03/summit-2017-open-source-maintainership
 ---

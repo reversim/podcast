@@ -3,7 +3,7 @@ title: "Summit 2017: Deep Work for programmers / Pavel Brodsky"
 date: 2018-02-27T13:09:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Pavel_Brodsky_-_Deep_Work_for_programmers.mp3
+audio_url: https://m2.reversim.com/summit2017-Pavel_Brodsky_-_Deep_Work_for_programmers.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-deep-work-for-programmers.html
 legacy_path: /2018/02/summit-2017-deep-work-for-programmers
 ---

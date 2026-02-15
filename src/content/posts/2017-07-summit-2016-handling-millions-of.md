@@ -4,7 +4,7 @@ title: "Summit 2016: Handling millions of connections in Cowboy using Elixir /
 date: 2017-07-29T11:03:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_JOEY_FELDBERG.mp3
+audio_url: https://m2.reversim.com/summit2016_JOEY_FELDBERG.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-handling-millions-of.html
 legacy_path: /2017/07/summit-2016-handling-millions-of
 ---

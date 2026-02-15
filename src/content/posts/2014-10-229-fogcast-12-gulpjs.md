@@ -4,7 +4,7 @@ date: 2014-10-17T11:31:00.000Z
 tags:
   - fogcast
 episode: 229
-audio_url: http://m.reversim.com/reversim229_fogcast12_gulp.mp3
+audio_url: https://m.reversim.com/reversim229_fogcast12_gulp.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLiK35g_pXPqQ3Oix_QGiGX-UBrPIl5ut_AIGXgAYC6kAc5LbK40AR04o1ZhS_NnT4J7y_nfZDi_YNorW57n5cDPD_6c8M9iYWHxfyAEQwxEoDMpFTnxdJLaH0JvR87o9JtrWraQhQkTA/s1600/gulp-2x-2.png
 legacy_url: https://www.reversim.com/2014/10/229-fogcast-12-gulpjs.html
 legacy_path: /2014/10/229-fogcast-12-gulpjs

@@ -2,7 +2,7 @@
 title: 389 With Roy Osherove CD/XP in the enterprise
 date: 2020-05-24T11:25:00.000Z
 episode: 389
-audio_url: http://m2.reversim.com/reversim389_cd-xp.mp3
+audio_url: https://m2.reversim.com/reversim389_cd-xp.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiedYLRlnoLx-OP4EyY7_FLLORMlPjHplGM3MaF8fAzTPE6Zxy7clyNV1Urwxcomg4otgzrrslmf-gcIxY4PrmXYFPYZLSymbeFYpSbvjkca6Q-1V1ukBvOnzxKy2eeVaTtGIZ0SS1cPgU/w200-h184/1200px-Extreme_Programming.svg.png
 legacy_url: https://www.reversim.com/2020/05/389-with-roy-osherove-cdxp-in-enterprise.html
 legacy_path: /2020/05/389-with-roy-osherove-cdxp-in-enterprise

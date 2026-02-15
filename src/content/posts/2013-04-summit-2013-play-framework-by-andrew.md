@@ -3,7 +3,7 @@ title: "Summit 2013: Play framework, by Andrew Skiba"
 date: 2013-04-12T13:17:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_play_framework.mp3
+audio_url: https://m.reversim.com/summit2013_play_framework.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-play-framework-by-andrew.html
 legacy_path: /2013/04/summit-2013-play-framework-by-andrew
 ---

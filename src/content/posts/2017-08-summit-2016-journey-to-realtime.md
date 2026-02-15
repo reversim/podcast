@@ -4,7 +4,7 @@ title: "Summit 2016: Journey to the Realtime Analytics in Extreme Growth / Yulia
 date: 2017-08-01T19:58:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_YULIA_TRAKHTENBERG.mp3
+audio_url: https://m2.reversim.com/summit2016_YULIA_TRAKHTENBERG.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-journey-to-realtime.html
 legacy_path: /2017/08/summit-2016-journey-to-realtime
 ---

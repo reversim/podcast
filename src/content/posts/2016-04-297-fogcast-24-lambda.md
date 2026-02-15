@@ -4,7 +4,7 @@ date: 2016-04-20T22:20:00.000Z
 tags:
   - fogcast
 episode: 297
-audio_url: http://m2.reversim.com/reversim297_fogcast24.mp3
+audio_url: https://m2.reversim.com/reversim297_fogcast24.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNk-3k8WUP1Eb-yviY509HE58JSyrNp_kp9Oi0vdCaFv7NhRHZSP77c-j-bPHIbX9khJXKT9bKlGMghVnooJ3G7F93SQHWtJO8BItsQEwJmnTgXePphrMNb3hyYnjLwIt1YkV7ByfVF18/s200/aws-lambda.png
 legacy_url: https://www.reversim.com/2016/04/297-fogcast-24-lambda.html
 legacy_path: /2016/04/297-fogcast-24-lambda

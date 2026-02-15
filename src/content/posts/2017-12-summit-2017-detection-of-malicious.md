@@ -4,7 +4,7 @@ title: "Summit 2017: Detection of malicious footprints in large scale DNS
 date: 2017-12-06T20:45:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Ada_Sharoni_-_Detection_of_malicious_footprints_in_large_scale_DNS_traffic.mp3
+audio_url: https://m2.reversim.com/summit2017-Ada_Sharoni_-_Detection_of_malicious_footprints_in_large_scale_DNS_traffic.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-detection-of-malicious.html
 legacy_path: /2017/12/summit-2017-detection-of-malicious
 ---

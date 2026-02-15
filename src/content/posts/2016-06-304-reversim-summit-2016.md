@@ -2,7 +2,7 @@
 title: 304 Reversim Summit 2016
 date: 2016-06-09T08:08:00.000Z
 episode: 304
-audio_url: http://m2.reversim.com/reversim304-summit2016.mp3
+audio_url: https://m2.reversim.com/reversim304-summit2016.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0MwKNV3gexz1PFKuLaTs9_bN3OIXIbrX77qKqYpuiwwlbeKUfI9uehYnLwITjB8__7DjJuG5-gVrrohBF24xvdli-DEAy6BQMA5JfjicY9Ddjki6UJ8YmgSCGoV6P6YP7jMy8ZUu4tSg/s200/reversim-logo-white.png
 legacy_url: https://www.reversim.com/2016/06/304-reversim-summit-2016.html
 legacy_path: /2016/06/304-reversim-summit-2016

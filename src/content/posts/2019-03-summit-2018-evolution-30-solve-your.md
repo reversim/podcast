@@ -4,7 +4,7 @@ title: "Summit 2018: Evolution 3.0 : solve your everyday problems with genetic
 date: 2019-03-24T09:07:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Mey_Beisaron.mp3
+audio_url: https://m2.reversim.com/summit2018-Mey_Beisaron.mp3
 legacy_url: https://www.reversim.com/2019/03/summit-2018-evolution-30-solve-your.html
 legacy_path: /2019/03/summit-2018-evolution-30-solve-your
 ---

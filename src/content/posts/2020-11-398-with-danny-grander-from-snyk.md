@@ -2,7 +2,7 @@
 title: 398 with Danny Grander from Snyk
 date: 2020-11-29T18:46:00.000Z
 episode: 398
-audio_url: http://m2.reversim.com/reversim398_snyk.mp3
+audio_url: https://m2.reversim.com/reversim398_snyk.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGTTiok4hrmkTx9Oajs9p3btY48YXvdsoTE_36GQJcPaZjtOxCBByc8tDbI8o5VZx_l4JkjfHv5QT5HmNYYmQicPuo7vhmnoA-fWOXfVhwGW_nLbkJDr3r9VETrI-eql3Tc0D7FKysQuY/w200-h200/snyk.png
 legacy_url: https://www.reversim.com/2020/11/398-with-danny-grander-from-snyk.html
 legacy_path: /2020/11/398-with-danny-grander-from-snyk

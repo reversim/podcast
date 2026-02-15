@@ -4,7 +4,7 @@ title: "Summit 2015: Same Problems, Different Actors: Symmetry in the Content
 date: 2015-04-29T13:17:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Same_Problems,_Different_Actors-_Symmetry_in_the_Content_Discovery_Marketplace.mp3
+audio_url: https://m.reversim.com/summit2015_Same_Problems,_Different_Actors-_Symmetry_in_the_Content_Discovery_Marketplace.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-same-problems-different.html
 legacy_path: /2015/04/summit-2015-same-problems-different
 ---

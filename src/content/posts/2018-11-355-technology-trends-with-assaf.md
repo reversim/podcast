@@ -2,7 +2,7 @@
 title: 355 Technology Trends with Assaf Natanzon
 date: 2018-11-22T10:00:00.000Z
 episode: 355
-audio_url: http://m2.reversim.com/reversim355-tech_trends_assaf_natanzon.mp3
+audio_url: https://m2.reversim.com/reversim355-tech_trends_assaf_natanzon.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBlBdnmaOMueyuA4Z1UFkkOF4eQqJn5UJqZfGZcF3FT7M1s7ClF5LCOfgr7I_HaT07wSQobhfYbEEqbNry1bzykRbIwerSiRx977pEKVJ3T-wIdDjmuhPG3qTwwlSMfj8a30xkMhkBkO0/s200/dell-emc_0.png
 legacy_url: https://www.reversim.com/2018/11/355-technology-trends-with-assaf.html
 legacy_path: /2018/11/355-technology-trends-with-assaf

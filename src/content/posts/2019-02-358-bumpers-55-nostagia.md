@@ -4,7 +4,7 @@ date: 2019-02-11T07:14:00.000Z
 tags:
   - bumpers
 episode: 358
-audio_url: http://m2.reversim.com/reversim358-bumpers55.mp3
+audio_url: https://m2.reversim.com/reversim358-bumpers55.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3KyFkpV1NiIAnvNZXsQMp0iOdyi2UqCUC-JbX7B1yZgBXievBDjM8h1t6bb4WZV8Qpflb2V-FAUsiWKr4qcSNzvA43bGTFlS6-kriI4sbCTuNehUg9BwFpn6Tq_u8SkVjnQ7hV6EsSPg/s200/bumpers-grad.png
 legacy_url: https://www.reversim.com/2019/02/358-bumpers-55-nostagia.html
 legacy_path: /2019/02/358-bumpers-55-nostagia

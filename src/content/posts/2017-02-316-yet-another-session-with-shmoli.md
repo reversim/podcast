@@ -2,7 +2,7 @@
 title: 316 Yet another session with Shlomi Noach
 date: 2017-02-18T19:23:00.000Z
 episode: 316
-audio_url: http://m2.reversim.com/reversim316_mysql_shlomi.mp3
+audio_url: https://m2.reversim.com/reversim316_mysql_shlomi.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDCJT23V8K09VKORRVOXnBHcnhB5pkXQINs3MpXT9cSibx5HmETQkKGYIbdvF_nNLWYDmem4mr1wjchoAzUcbyfvO5q0x-1YZE_-_UIdyVYWxWgzM6H8B8CHztTOA8DPK2Kxq0BZao3og/s200/shlomi-noach.png
 legacy_url: https://www.reversim.com/2017/02/316-yet-another-session-with-shmoli.html
 legacy_path: /2017/02/316-yet-another-session-with-shmoli

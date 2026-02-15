@@ -3,7 +3,7 @@ title: "Summit 2015: Continious Deployment with Docker / Ariel Moskovich"
 date: 2015-04-25T20:23:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Continious-Deployment-with-Docker-Ariel-Moskovich.mp3
+audio_url: https://m.reversim.com/summit2015_Continious-Deployment-with-Docker-Ariel-Moskovich.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-continious-deployment-with.html
 legacy_path: /2015/04/summit-2015-continious-deployment-with
 ---

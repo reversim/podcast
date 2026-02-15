@@ -2,7 +2,7 @@
 title: 402 Writing Books with Miki Tebeka
 date: 2021-03-03T08:04:00.000Z
 episode: 402
-audio_url: http://m2.reversim.com/reversim402_writing-books.mp3
+audio_url: https://m2.reversim.com/reversim402_writing-books.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhveYCsOm9Yf6368fUvwzQY4tilt-D4rOEM-rDl7MEL9eDY4XJ-x2S9NWtR79ArjLh_yIJLiMWLgvbx_iELbD4KajUhwrcg-vN2vzfx5bXnDDsFFLB_IgQ_fkL_YAv6S1b0Q_c8aq2O2e8/
 legacy_url: https://www.reversim.com/2021/03/402-writing-books.html
 legacy_path: /2021/03/402-writing-books

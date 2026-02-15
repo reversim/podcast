@@ -1,7 +1,7 @@
 ---
 title: ILtechTalks
 date: 2010-09-15T08:33:00.000Z
-audio_url: http://m.reversim.com/reversim78_iltech.mp3
+audio_url: https://m.reversim.com/reversim78_iltech.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgW2C_AutRbAyB8ZCGwxIBcLzsdlWJHQN6CMxDwuicleYtmJcWyxV-qSm1-EjbS9xsvYvNJqpOeFqi1_v_Y3GZqT6CLTFV5zLIZx0UAmFgKeAsJw05_mHKmfOHdRQQax_SqARNa6nn0yZU/s200/-fortune--tech-talk--f675.jpg+(300%C3%97300).png
 legacy_url: https://www.reversim.com/2010/09/iltechtalks.html
 legacy_path: /2010/09/iltechtalks

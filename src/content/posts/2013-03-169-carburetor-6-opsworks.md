@@ -4,7 +4,7 @@ date: 2013-03-17T15:53:00.000Z
 tags:
   - carburetor
 episode: 169
-audio_url: http://m.reversim.com/reversim169_carburetor6.mp3
+audio_url: https://m.reversim.com/reversim169_carburetor6.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvZ-TmeC52IrZ_bKZApI3qYRWCJlPbBSeIikbQ5plFl4GWnDkO8YWN5u_Dz7d0rFB4hwNWiF3k0rKma8rWiCfBa5MO_nqmdsgG3SWSjhT0qu5ogTY-wKbH5WrsesAdQK3yIDejA1uoh4/s1600/Screenshot_3_17_13_5_47_PM.png
 legacy_url: https://www.reversim.com/2013/03/169-carburetor-6-opsworks.html
 legacy_path: /2013/03/169-carburetor-6-opsworks

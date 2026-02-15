@@ -2,7 +2,7 @@
 title: "Summit 2016: Open Source / Organizing an open-source conference and
   living to tell the tale / Tomer Brisker"
 date: 2017-08-21T20:34:00.000Z
-audio_url: http://m2.reversim.com/summit2016_Open_Source_D2_Tomer_B.mp3
+audio_url: https://m2.reversim.com/summit2016_Open_Source_D2_Tomer_B.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-open-source-organizing-open.html
 legacy_path: /2017/08/summit-2016-open-source-organizing-open
 ---

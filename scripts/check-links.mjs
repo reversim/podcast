@@ -3,30 +3,78 @@
 /**
  * check-links.mjs
  *
- * Scans all podcast markdown files for URLs (audio_url from frontmatter and
- * links found in the markdown body), performs HTTP HEAD requests to verify
- * accessibility, and reports broken links as JSON to stdout.
+ * Scans all markdown posts for URLs (audio_url from frontmatter and links in
+ * markdown body), validates them via HTTP HEAD, and outputs a JSON report.
+ *
+ * Usage:
+ *   node scripts/check-links.mjs
+ *   node scripts/check-links.mjs --full --out reports/link-check-full.json
+ *   node scripts/check-links.mjs --full --concurrency 40 --timeout 8000
  */
 
-import { readdir, readFile } from "node:fs/promises";
-import { join } from "node:path";
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import pLimit from "p-limit";
 
-const POSTS_DIR = "/home/user/podcast/src/content/posts";
-const CONCURRENCY = 50;
-const TIMEOUT_MS = 5_000;
-const BODY_URL_SAMPLE_SIZE = 100;
-const AUDIO_SAMPLE_SIZE = 150; // sample across all domains instead of checking every URL
+const DEFAULT_CONCURRENCY = 50;
+const DEFAULT_TIMEOUT_MS = 5_000;
+const DEFAULT_BODY_SAMPLE_SIZE = 100;
+const DEFAULT_AUDIO_SAMPLE_SIZE = 150;
 
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const ROOT_DIR = resolve(__dirname, "..");
+const POSTS_DIR = resolve(ROOT_DIR, "src/content/posts");
 
-/**
- * Parse YAML frontmatter (between --- markers) and the remaining body from
- * a markdown string.  We only need a handful of scalar fields so a minimal
- * key: value parser is sufficient – no need for a full YAML library.
- */
+function parseArgs(argv) {
+  const args = {
+    full: false,
+    out: null,
+    concurrency: DEFAULT_CONCURRENCY,
+    timeout: DEFAULT_TIMEOUT_MS,
+    audioStart: 0,
+    audioCount: null,
+    bodyStart: 0,
+    bodyCount: null,
+  };
+
+  for (let i = 2; i < argv.length; i += 1) {
+    const a = argv[i];
+    if (a === "--full") args.full = true;
+    else if (a === "--out" && argv[i + 1]) {
+      args.out = argv[i + 1];
+      i += 1;
+    } else if (a === "--concurrency" && argv[i + 1]) {
+      const n = Number(argv[i + 1]);
+      args.concurrency = Number.isNaN(n) ? DEFAULT_CONCURRENCY : n;
+      i += 1;
+    } else if (a === "--timeout" && argv[i + 1]) {
+      const n = Number(argv[i + 1]);
+      args.timeout = Number.isNaN(n) ? DEFAULT_TIMEOUT_MS : n;
+      i += 1;
+    } else if (a === "--audio-start" && argv[i + 1]) {
+      const n = Number(argv[i + 1]);
+      args.audioStart = Number.isNaN(n) ? 0 : n;
+      i += 1;
+    } else if (a === "--audio-count" && argv[i + 1]) {
+      const n = Number(argv[i + 1]);
+      args.audioCount = Number.isNaN(n) ? null : n;
+      i += 1;
+    } else if (a === "--body-start" && argv[i + 1]) {
+      const n = Number(argv[i + 1]);
+      args.bodyStart = Number.isNaN(n) ? 0 : n;
+      i += 1;
+    } else if (a === "--body-count" && argv[i + 1]) {
+      const n = Number(argv[i + 1]);
+      args.bodyCount = Number.isNaN(n) ? null : n;
+      i += 1;
+    }
+  }
+
+  return args;
+}
+
 function parseFrontmatter(content) {
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!match) return { frontmatter: {}, body: content };
@@ -37,25 +85,17 @@ function parseFrontmatter(content) {
 
   for (const line of raw.split("\n")) {
     const kv = line.match(/^(\w[\w_]*):\s*(.*)$/);
-    if (kv) {
-      fm[kv[1]] = kv[2].trim();
-    }
+    if (kv) fm[kv[1]] = kv[2].trim();
   }
 
   return { frontmatter: fm, body };
 }
 
-/**
- * Extract all http(s) URLs from a block of text.
- */
 function extractUrls(text) {
   const re = /https?:\/\/[^\s<>"')\]},;]+/gi;
   return [...(text.match(re) || [])];
 }
 
-/**
- * Check whether a URL is well-formed (starts with http:// or https://).
- */
 function isWellFormedUrl(url) {
   if (typeof url !== "string" || url.length === 0) return false;
   try {
@@ -66,165 +106,205 @@ function isWellFormedUrl(url) {
   }
 }
 
-/**
- * Perform an HTTP HEAD request and return { url, status, ok, error }.
- * Follows up to 5 redirects.  2xx and 3xx are considered "working".
- */
-async function checkUrl(url) {
+async function checkUrl(url, timeoutMs) {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
 
   try {
     const res = await fetch(url, {
       method: "HEAD",
       signal: controller.signal,
       redirect: "follow",
-      headers: {
-        "User-Agent": "podcast-link-checker/1.0",
-      },
+      headers: { "User-Agent": "podcast-link-checker/1.0" },
     });
-
     clearTimeout(timer);
-
-    const ok = res.status >= 200 && res.status < 400;
-    return { url, status: res.status, ok, error: null };
+    return { url, status: res.status, ok: res.status >= 200 && res.status < 400, error: null };
   } catch (err) {
     clearTimeout(timer);
-
-    let error = err.message || String(err);
-    if (err.name === "AbortError") error = "timeout";
-    if (err.cause) {
-      const cause = err.cause;
-      if (cause.code === "ENOTFOUND") error = "DNS lookup failed";
-      else if (cause.code === "ECONNREFUSED") error = "connection refused";
-      else if (cause.code === "ECONNRESET") error = "connection reset";
-      else if (cause.code) error = cause.code;
-    }
-
+    let error = err?.message || String(err);
+    if (err?.name === "AbortError") error = "timeout";
+    if (err?.cause?.code === "ENOTFOUND") error = "DNS lookup failed";
+    else if (err?.cause?.code === "ECONNREFUSED") error = "connection refused";
+    else if (err?.cause?.code === "ECONNRESET") error = "connection reset";
+    else if (err?.cause?.code) error = err.cause.code;
     return { url, status: null, ok: false, error };
   }
 }
 
-// ---------------------------------------------------------------------------
-// Main
-// ---------------------------------------------------------------------------
+async function runBatched(items, batchSize, worker) {
+  const results = [];
+  let completed = 0;
+  for (let i = 0; i < items.length; i += batchSize) {
+    const batch = items.slice(i, i + batchSize);
+    const batchResults = await Promise.all(
+      batch.map(async (item) => {
+        const result = await worker(item);
+        completed += 1;
+        if (completed % 50 === 0 || completed === items.length) {
+          process.stderr.write(`Heartbeat: ${completed}/${items.length}\n`);
+        }
+        return result;
+      })
+    );
+    results.push(...batchResults);
+    process.stderr.write(`Progress: ${Math.min(i + batch.length, items.length)}/${items.length}\n`);
+  }
+  return results;
+}
+
+function uniqueByUrl(entries) {
+  const map = new Map();
+  for (const e of entries) {
+    if (!map.has(e.url)) map.set(e.url, { url: e.url, files: [] });
+    map.get(e.url).files.push(e.file);
+  }
+  return map;
+}
+
+function sampleAudioByDomain(validAudioEntries, sampleSize) {
+  const byDomain = new Map();
+  for (const e of validAudioEntries) {
+    const d = new URL(e.url).hostname;
+    if (!byDomain.has(d)) byDomain.set(d, []);
+    byDomain.get(d).push(e);
+  }
+
+  const sampled = [];
+  for (const entries of byDomain.values()) {
+    const proportion = Math.max(5, Math.ceil((entries.length / validAudioEntries.length) * sampleSize));
+    const first = entries.slice(0, Math.ceil(proportion / 3));
+    const last = entries.slice(-Math.ceil(proportion / 3));
+    const step = Math.max(1, Math.floor(entries.length / Math.max(1, Math.ceil(proportion / 3))));
+    const mid = entries.filter((_, i) => i % step === 0).slice(0, Math.ceil(proportion / 3));
+    const unique = new Map();
+    for (const e of [...first, ...mid, ...last]) unique.set(e.url, e);
+    sampled.push(...unique.values());
+  }
+
+  return { sampled, byDomain };
+}
 
 async function main() {
-  // 1. Read all markdown files
+  const args = parseArgs(process.argv);
+  const limit = pLimit(args.concurrency);
+
   const entries = await readdir(POSTS_DIR);
   const mdFiles = entries.filter((f) => f.endsWith(".md")).sort();
 
-  // Collect data from every file
-  const audioEntries = [];          // { url, file, malformed? }
-  const bodyUrlMap = new Map();     // url -> Set<file>
+  const audioEntries = []; // { url, file }
+  const bodyUrlMap = new Map(); // url -> Set(files)
 
   for (const filename of mdFiles) {
     const filepath = join(POSTS_DIR, filename);
     const raw = await readFile(filepath, "utf8");
     const { frontmatter, body } = parseFrontmatter(raw);
 
-    // audio_url
     if ("audio_url" in frontmatter) {
-      audioEntries.push({
-        url: frontmatter.audio_url,
-        file: filename,
-      });
+      audioEntries.push({ url: frontmatter.audio_url, file: filename });
     }
 
-    // body URLs
-    const bodyUrls = extractUrls(body);
-    for (const u of bodyUrls) {
-      if (!bodyUrlMap.has(u)) bodyUrlMap.set(u, new Set());
-      bodyUrlMap.get(u).add(filename);
+    for (const url of extractUrls(body)) {
+      if (!bodyUrlMap.has(url)) bodyUrlMap.set(url, new Set());
+      bodyUrlMap.get(url).add(filename);
     }
   }
 
-  // 2. Classify audio URLs
   const malformedAudio = audioEntries.filter((e) => !isWellFormedUrl(e.url));
   const validAudio = audioEntries.filter((e) => isWellFormedUrl(e.url));
 
-  // 3. Sample audio URLs across domains, then check with concurrency limit
-  const limit = pLimit(CONCURRENCY);
-
-  // Group by domain and sample proportionally
-  const byDomain = new Map();
+  const domainBreakdown = {};
   for (const e of validAudio) {
-    try {
-      const d = new URL(e.url).hostname;
-      if (!byDomain.has(d)) byDomain.set(d, []);
-      byDomain.get(d).push(e);
-    } catch { /* skip */ }
+    const d = new URL(e.url).hostname;
+    domainBreakdown[d] = (domainBreakdown[d] || 0) + 1;
   }
 
-  const sampled = [];
-  for (const [domain, entries] of byDomain) {
-    const proportion = Math.max(5, Math.ceil((entries.length / validAudio.length) * AUDIO_SAMPLE_SIZE));
-    // Take first few, last few, and random middle
-    const first = entries.slice(0, Math.ceil(proportion / 3));
-    const last = entries.slice(-Math.ceil(proportion / 3));
-    const mid = entries.filter((_, i) => i % Math.max(1, Math.floor(entries.length / Math.ceil(proportion / 3))) === 0).slice(0, Math.ceil(proportion / 3));
-    const unique = new Map();
-    for (const e of [...first, ...mid, ...last]) unique.set(e.url, e);
-    sampled.push(...unique.values());
-  }
+  const rawAudioToCheck = args.full
+    ? validAudio
+    : sampleAudioByDomain(validAudio, DEFAULT_AUDIO_SAMPLE_SIZE).sampled;
+  const audioEnd =
+    args.audioCount === null ? undefined : args.audioStart + Math.max(0, args.audioCount);
+  const audioToCheck = rawAudioToCheck.slice(args.audioStart, audioEnd);
 
-  process.stderr.write(`Checking ${sampled.length} sampled audio URLs (of ${validAudio.length} total) across ${byDomain.size} domains...\n`);
-
-  const audioResults = await Promise.all(
-    sampled.map((entry) =>
-      limit(async () => {
-        const result = await checkUrl(entry.url);
-        return { ...result, file: entry.file };
-      })
-    )
+  const uniqueAudioMap = uniqueByUrl(audioToCheck);
+  const uniqueAudioUrls = [...uniqueAudioMap.keys()];
+  process.stderr.write(
+    `Checking ${uniqueAudioUrls.length} unique audio URLs (${args.full ? "full" : "sampled"})...\n`
   );
 
-  const workingAudio = audioResults.filter((r) => r.ok);
-  const brokenAudio = audioResults.filter((r) => !r.ok);
+  const audioResults = await runBatched(
+    uniqueAudioUrls,
+    250,
+    (url) => limit(() => checkUrl(url, args.timeout))
+  );
 
-  // 4. Sample body URLs (first 100 unique) and check them
+  const audioResultMap = new Map(audioResults.map((r) => [r.url, r]));
+  const expandedAudioResults = uniqueAudioUrls.map((url) => ({
+    ...audioResultMap.get(url),
+    files: uniqueAudioMap.get(url).files,
+  }));
+
+  const workingAudio = expandedAudioResults.filter((r) => r.ok);
+  const brokenAudio = expandedAudioResults.filter((r) => !r.ok);
+
   const allBodyUrls = [...bodyUrlMap.keys()];
-  const sampledBodyUrls = allBodyUrls.slice(0, BODY_URL_SAMPLE_SIZE);
+  const rawBodyToCheck = args.full ? allBodyUrls : allBodyUrls.slice(0, DEFAULT_BODY_SAMPLE_SIZE);
+  const bodyEnd =
+    args.bodyCount === null ? undefined : args.bodyStart + Math.max(0, args.bodyCount);
+  const bodyToCheck = rawBodyToCheck.slice(args.bodyStart, bodyEnd);
+  process.stderr.write(
+    `Checking ${bodyToCheck.length} unique body URLs (${args.full ? "full" : "sampled"})...\n`
+  );
 
-  const bodyResults = await Promise.all(
-    sampledBodyUrls.map((url) =>
-      limit(async () => {
-        const result = await checkUrl(url);
-        return { ...result, files: [...bodyUrlMap.get(url)] };
-      })
-    )
+  const bodyResults = await runBatched(
+    bodyToCheck,
+    250,
+    (url) =>
+      limit(async () => ({
+        ...(await checkUrl(url, args.timeout)),
+        files: [...bodyUrlMap.get(url)],
+      }))
   );
 
   const workingBody = bodyResults.filter((r) => r.ok);
   const brokenBody = bodyResults.filter((r) => !r.ok);
 
-  // 5. Build report
   const report = {
+    metadata: {
+      generatedAt: new Date().toISOString(),
+      rootDir: ROOT_DIR,
+      postsDir: POSTS_DIR,
+      mode: args.full ? "full" : "sampled",
+      concurrency: args.concurrency,
+      timeoutMs: args.timeout,
+      scannedMarkdownFiles: mdFiles.length,
+      audioStart: args.audioStart,
+      audioCount: args.audioCount,
+      bodyStart: args.bodyStart,
+      bodyCount: args.bodyCount,
+    },
     audio: {
-      total: audioEntries.length,
-      totalValid: validAudio.length,
-      sampledCount: sampled.length,
-      domainBreakdown: Object.fromEntries([...byDomain].map(([d, es]) => [d, es.length])),
+      totalEntries: audioEntries.length,
+      totalValidEntries: validAudio.length,
+      totalMalformedEntries: malformedAudio.length,
+      checkedUniqueUrls: uniqueAudioUrls.length,
+      domainBreakdown,
       working: workingAudio.length,
       broken: brokenAudio.length,
       malformed: malformedAudio.map((e) => ({
         url: e.url ?? null,
         file: e.file,
-        reason:
-          e.url === "" || e.url === undefined || e.url === null
-            ? "empty string"
-            : "malformed URL",
+        reason: e.url === "" || e.url === undefined || e.url === null ? "empty string" : "malformed URL",
       })),
       brokenList: brokenAudio.map((r) => ({
         url: r.url,
         status: r.status,
         error: r.error,
-        file: r.file,
+        files: r.files,
       })),
     },
     body: {
       totalUniqueUrls: allBodyUrls.length,
-      sampledCount: sampledBodyUrls.length,
+      checkedUniqueUrls: bodyToCheck.length,
       working: workingBody.length,
       broken: brokenBody.length,
       brokenList: brokenBody.map((r) => ({
@@ -236,7 +316,16 @@ async function main() {
     },
   };
 
-  console.log(JSON.stringify(report, null, 2));
+  const json = JSON.stringify(report, null, 2);
+
+  if (args.out) {
+    const outPath = resolve(ROOT_DIR, args.out);
+    await mkdir(dirname(outPath), { recursive: true });
+    await writeFile(outPath, json, "utf8");
+    process.stderr.write(`Full report written to: ${outPath}\n`);
+  }
+
+  console.log(json);
 }
 
 main().catch((err) => {

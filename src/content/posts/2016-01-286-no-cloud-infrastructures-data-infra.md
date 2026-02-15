@@ -2,7 +2,7 @@
 title: 286 (No) Cloud infrastructures Data infra, with Alon Elishkov
 date: 2016-01-09T20:08:00.000Z
 episode: 286
-audio_url: http://m2.reversim.com/reversim286_no-cloud-data.mp3
+audio_url: https://m2.reversim.com/reversim286_no-cloud-data.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP5LUR1My-QaU-Wyegrswp8jPP4v4ueVtHACpqeh-7Q24X4L6ZVFs1o8T61CdL5-LgLFz9a9PrKMUX4cuvTnZ6wL3bNNJ_9RvWc_t9TfUmnzxZ2qVp-ueICjyCD1WhRKXzleQU1Tvd5tY/s200/nocloud_2.png
 legacy_url: https://www.reversim.com/2016/01/286-no-cloud-infrastructures-data-infra.html
 legacy_path: /2016/01/286-no-cloud-infrastructures-data-infra

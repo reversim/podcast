@@ -3,7 +3,7 @@ title: "Summit 2013: QA without QA, Uri Nativ"
 date: 2013-03-20T20:52:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_qa_without_qa.mp3
+audio_url: https://m.reversim.com/summit2013_qa_without_qa.mp3
 legacy_url: https://www.reversim.com/2013/03/summit-2013-qa-without-qa-uri-nativ.html
 legacy_path: /2013/03/summit-2013-qa-without-qa-uri-nativ
 ---

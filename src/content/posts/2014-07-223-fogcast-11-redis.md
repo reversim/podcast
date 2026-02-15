@@ -4,7 +4,7 @@ date: 2014-07-16T17:55:00.000Z
 tags:
   - fogcast
 episode: 223
-audio_url: http://m.reversim.com/reversim223_fogcast11_redis.mp3
+audio_url: https://m.reversim.com/reversim223_fogcast11_redis.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGD1mytXKPW0QCA4_t8zq4-sNOLas7M4TcY9yQ3B8ybIWH5k7IP0bSkYM6OXJJLTt-DbMwJFuy3rFVbyjWFJxpmjCg_7vyIAOw_lK2esjxxZwvqZB0lPqlJePbTDDrDZZDXowwvYyuGYY/s1600/redis-300x253.png
 legacy_url: https://www.reversim.com/2014/07/223-fogcast-11-redis.html
 legacy_path: /2014/07/223-fogcast-11-redis

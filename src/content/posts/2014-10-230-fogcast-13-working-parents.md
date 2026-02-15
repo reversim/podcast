@@ -4,7 +4,7 @@ date: 2014-10-19T04:37:00.000Z
 tags:
   - fogcast
 episode: 230
-audio_url: http://m.reversim.com/reversim230_fogcast13.mp3
+audio_url: https://m.reversim.com/reversim230_fogcast13.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcitqpeFLYIEK8McE9FLCJhnrcEcJ1bTd9lMX-Q_h4PAMh68zo5XAaatmMU-lt818JUIwZC3p_QvTom0yzwvFOC9lbBIZrKicosiS03th88iCZHzfmwDu0ShtRvf4XYQxh4coMrIJzFjc/s1600/working-parent.png
 legacy_url: https://www.reversim.com/2014/10/230-fogcast-13-working-parents.html
 legacy_path: /2014/10/230-fogcast-13-working-parents

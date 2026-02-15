@@ -2,7 +2,7 @@
 title: 346 Transparency @ Monday.com
 date: 2018-08-21T18:56:00.000Z
 episode: 346
-audio_url: http://m2.reversim.com/reversim346-transparency_monday.mp3
+audio_url: https://m2.reversim.com/reversim346-transparency_monday.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9OrdLG-3rnEl78XWffIMD5AES2I04IbrRbJuvcDPrGApvklrkJFu3Ri1qjvif3fQW1Uz-KfNBWLeBA2_-q5q8ybOz-zPuvRpLHo6fUz628Qybs1czPAIMC0jXPEWj8qdvyX-TJAiDZVM/s200/monday.png
 legacy_url: https://www.reversim.com/2018/08/346-transparency-mondaycom.html
 legacy_path: /2018/08/346-transparency-mondaycom

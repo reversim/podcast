@@ -2,7 +2,7 @@
 title: 156 Software Patents פטנטים בתכנה
 date: 2012-11-29T20:58:00.000Z
 episode: 156
-audio_url: http://m.reversim.com/reversim156_patents.mp3
+audio_url: https://m.reversim.com/reversim156_patents.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHRd-mA-GrmVPijvSHj3D6bWqmUL1urheX1ZU-OyvaGUSQUQOSatD4QOXUI-ixjs3GbBP2vBqlCgRITXwANP3gl3kTxr-3xJJXotounPpwB2cpZNioeyVjpZdxTh60WWRxhX_FcTimfc/s200/thumb_COLOURBOX4249574.jpeg
 legacy_url: https://www.reversim.com/2012/11/156-software-patents.html
 legacy_path: /2012/11/156-software-patents

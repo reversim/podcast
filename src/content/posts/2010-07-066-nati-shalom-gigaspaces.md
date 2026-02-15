@@ -2,7 +2,7 @@
 title: 069 Nati Shalom, Gigaspaces
 date: 2010-07-05T09:38:00.000Z
 episode: 66
-audio_url: http://m.reversim.com/reversim69_nati_shalom.mp3
+audio_url: https://m.reversim.com/reversim69_nati_shalom.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3FHMX8H0XWKkOpiHriMT9R7HDUc8mjHYW3sQVZhFIpAK-Mu3wcXpzeYfoqQDZjvNa6BhIw0Rw2zHBvJA-jJniYvYjMITjPXeMLDyG1fZImrbnw9pBw3OgbycRSzzqLymcg5j-ctueN_M/s320/gigaspaces.png
 legacy_url: https://www.reversim.com/2010/07/066-nati-shalom-gigaspaces.html
 legacy_path: /2010/07/066-nati-shalom-gigaspaces

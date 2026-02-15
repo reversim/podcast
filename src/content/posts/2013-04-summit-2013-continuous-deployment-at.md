@@ -3,7 +3,7 @@ title: "Summit 2013: Continuous Deployment at scale, by Itai Hochman"
 date: 2013-04-05T08:00:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_continuous_deployment_at_scale.mp3
+audio_url: https://m.reversim.com/summit2013_continuous_deployment_at_scale.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-continuous-deployment-at.html
 legacy_path: /2013/04/summit-2013-continuous-deployment-at
 ---

@@ -3,7 +3,7 @@ title: "Summit 2015: Scaling up your R&D group / Avi Wortzel"
 date: 2015-04-25T20:31:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Scaling_up_your_RnD_group.mp3
+audio_url: https://m.reversim.com/summit2015_Scaling_up_your_RnD_group.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-scaling-up-your-r-group-avi.html
 legacy_path: /2015/04/summit-2015-scaling-up-your-r-group-avi
 ---

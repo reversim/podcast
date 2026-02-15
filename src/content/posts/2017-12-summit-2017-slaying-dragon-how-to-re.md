@@ -4,7 +4,7 @@ title: "Summit 2017: Slaying the dragon - How to re-write a monolith into micro
 date: 2017-12-24T10:55:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Dalia_Simons_-_Slaying_the_dragon.mp3
+audio_url: https://m2.reversim.com/summit2017-Dalia_Simons_-_Slaying_the_dragon.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-slaying-dragon-how-to-re.html
 legacy_path: /2017/12/summit-2017-slaying-dragon-how-to-re
 ---

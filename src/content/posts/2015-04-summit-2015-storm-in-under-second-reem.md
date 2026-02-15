@@ -3,7 +3,7 @@ title: "Summit 2015: Storm in under a second / Re'em Bensimhon"
 date: 2015-04-16T20:00:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Storm_in_under_a_second.mp3
+audio_url: https://m.reversim.com/summit2015_Storm_in_under_a_second.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-storm-in-under-second-reem.html
 legacy_path: /2015/04/summit-2015-storm-in-under-second-reem
 ---

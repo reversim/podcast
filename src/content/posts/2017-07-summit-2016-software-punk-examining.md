@@ -4,7 +4,7 @@ title: "Summit 2016: Software Punk: examining controversial ideas in Software
 date: 2017-07-23T20:48:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_LIOR_BAR-ON.mp3
+audio_url: https://m2.reversim.com/summit2016_LIOR_BAR-ON.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-software-punk-examining.html
 legacy_path: /2017/07/summit-2016-software-punk-examining
 ---

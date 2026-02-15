@@ -4,7 +4,7 @@ title: "Summit 2015: score – open source workflow engine to automate your dock
 date: 2015-05-02T20:14:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_open_source_1_Meir_Wahnon.mp3
+audio_url: https://m.reversim.com/summit2015_open_source_1_Meir_Wahnon.mp3
 legacy_url: https://www.reversim.com/2015/05/summit-2015-score-open-source-workflow.html
 legacy_path: /2015/05/summit-2015-score-open-source-workflow
 ---

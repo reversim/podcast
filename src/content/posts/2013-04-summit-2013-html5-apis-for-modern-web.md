@@ -3,7 +3,7 @@ title: "Summit 2013: HTML5 APIs For Modern Web Apps, by Ido Green"
 date: 2013-04-07T16:47:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_HTML5_APIs_for_modern_web_apps.mp3
+audio_url: https://m.reversim.com/summit2013_HTML5_APIs_for_modern_web_apps.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-html5-apis-for-modern-web.html
 legacy_path: /2013/04/summit-2013-html5-apis-for-modern-web
 ---

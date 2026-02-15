@@ -2,7 +2,7 @@
 title: "פודקאסט מספר 41: mobile web חלק א"
 date: 2009-10-28T11:27:00.000Z
 episode: 41
-audio_url: http://m2.reversim.com/reversim41_mobile_a.mp3
+audio_url: https://s3.amazonaws.com/reversim/reversim41_mobile_a.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOg_ytZkWQniEhUhkCbTdidqZKR2U0HbrOiM7lFKxSC2F0yt8HqctJqMRDRbShrOZFBS6EGLyEEm5ukm8o3kutexTON_O2ok0_Ztr7NGNG_YNc3eakFCeBzWq1paCB66vVOFbEpmMcPYo/s400/mobiles_sample.jpg
 legacy_url: https://www.reversim.com/2009/10/41-mobile-web.html
 legacy_path: /2009/10/41-mobile-web

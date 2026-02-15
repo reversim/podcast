@@ -2,7 +2,7 @@
 title: 331 with Randy Shoup about Data science and experimentation at scale (english)
 date: 2018-01-02T21:45:00.000Z
 episode: 331
-audio_url: http://m2.reversim.com/reversim331_Randy-Shoup.mp3
+audio_url: https://m2.reversim.com/reversim331_Randy-Shoup.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqjNEJhdW_xipgbO-MTzEHH99ZM6BEE58b_YZ5mBpudjCGpLdCl8F8pRXPCqwnWkQyAcj20-2iKJ4Iw4OXW6oHOzAFtnWyZlJK3CSpEacIwdXCBboZdA9608MUOez4V_oV30DKW7_pP3E/s200/stitchfix.png
 legacy_url: https://www.reversim.com/2018/01/331-with-randy-shoup-about-data-science.html
 legacy_path: /2018/01/331-with-randy-shoup-about-data-science

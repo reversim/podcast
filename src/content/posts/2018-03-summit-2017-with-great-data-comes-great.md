@@ -3,7 +3,7 @@ title: "Summit 2017: With great data comes great responsibility... / Shay Palach
 date: 2018-03-05T05:22:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Shay_Palachy_-_With_great_data_comes_great_responsibility.mp3
+audio_url: https://m2.reversim.com/summit2017-Shay_Palachy_-_With_great_data_comes_great_responsibility.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-with-great-data-comes-great.html
 legacy_path: /2018/03/summit-2017-with-great-data-comes-great
 ---

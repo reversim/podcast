@@ -2,7 +2,7 @@
 title: 238 Organizing Developer Events - devopsdays and more
 date: 2014-11-10T22:04:00.000Z
 episode: 238
-audio_url: http://m.reversim.com/reversim238_event-org.mp3
+audio_url: https://m.reversim.com/reversim238_event-org.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJEoaKEBypoVqIjXhkLtNPWEMUIyragMT5tVPmnZxuFLkmTS3hIHZwxzxcOSlS2CksJuNz2orGqbxelszg-NLHY0-RWFQbDHQlzBeBsaogIWTAZRn6y0-ZhlOVYnWs_FCjNhiaCaKA0SM/s1600/DevOpsDays+Warsaw.jpg
 legacy_url: https://www.reversim.com/2014/11/238-organizing-developer-events.html
 legacy_path: /2014/11/238-organizing-developer-events

@@ -2,7 +2,7 @@
 title: 111 HTML5 with Ido Green
 date: 2011-10-11T13:14:00.000Z
 episode: 111
-audio_url: http://m.reversim.com/reversim111_ido_green.mp3
+audio_url: https://m.reversim.com/reversim111_ido_green.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlC1kjrONvDy6EXMkKkMB1IiGmmp47R0SX6VTcPtpOqsQhNLDOsVq-Cu2GlSgNXMpi62jAuKPCWJlO_juiiDZWLwuwbFaJvqAjGQvTsomD3bGvv7yyFeckK2Hxa33qlgblLc55A2Kc5ho/s200/Ido_Green.jpg
 legacy_url: https://www.reversim.com/2011/10/111-html5-with-ido-green.html
 legacy_path: /2011/10/111-html5-with-ido-green

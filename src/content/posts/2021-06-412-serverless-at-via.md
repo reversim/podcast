@@ -2,7 +2,7 @@
 title: 412 Serverless at Via
 date: 2021-06-21T17:59:00.000Z
 episode: 412
-audio_url: http://m.reversim.com/reversim131_uijet.mp3
+audio_url: https://m.reversim.com/reversim131_uijet.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgN0ckqQzx8B_jPWxgB7gCCW_VHi0FNJtNqzOCt2rk2XhJ2bWbIAkuosfUwQFzbH0X2ZdZ0X9iZa-mi8VNE9uijXRmu1QJvVmU2pZGHXLHDnzXrAEyGscKVUDZAHRTJsQioRhDz71dBkSU/
 legacy_url: https://www.reversim.com/2021/06/412-serverless-at-via.html
 legacy_path: /2021/06/412-serverless-at-via

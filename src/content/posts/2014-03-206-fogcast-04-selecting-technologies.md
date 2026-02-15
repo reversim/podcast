@@ -4,7 +4,7 @@ date: 2014-03-05T06:50:00.000Z
 tags:
   - fogcast
 episode: 206
-audio_url: http://m.reversim.com/reversim206_fogcast04.mp3
+audio_url: https://m.reversim.com/reversim206_fogcast04.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg2O_xoip8wVFB11whFfgEpnlcypZ13mQW-JQIKqOLUZtiYoMfx5nalSlRL6Zka8zbeMiYH01gJ04BHOPelu6T3X_Nv5AvCRMAWKuQtgrw7QgMSCwIfngLTjUqsgJO6sa5UoYulzyXHm4/s1600/ClearingTheFog.jpg
 legacy_url: https://www.reversim.com/2014/03/206-fogcast-04-selecting-technologies.html
 legacy_path: /2014/03/206-fogcast-04-selecting-technologies

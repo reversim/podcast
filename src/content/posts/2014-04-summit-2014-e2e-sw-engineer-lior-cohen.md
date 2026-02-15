@@ -3,7 +3,7 @@ title: "Summit 2014: The E2E SW Engineer / Lior Cohen"
 date: 2014-04-27T18:42:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-ignite-E2E.mp3
+audio_url: https://m.reversim.com/reversim2014-ignite-E2E.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-e2e-sw-engineer-lior-cohen.html
 legacy_path: /2014/04/summit-2014-e2e-sw-engineer-lior-cohen
 ---

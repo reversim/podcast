@@ -4,7 +4,7 @@ title: "Summit 2015: Isomorphic Javascript - The Next Big Thing in Web
 date: 2015-04-24T06:21:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015-Isomorphic-Javascript-The-Next-Big-Thing-in-Web-Development-Elad-Levy.mp3
+audio_url: https://m.reversim.com/summit2015-Isomorphic-Javascript-The-Next-Big-Thing-in-Web-Development-Elad-Levy.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-isomorphic-javascript-next.html
 legacy_path: /2015/04/summit-2015-isomorphic-javascript-next
 ---

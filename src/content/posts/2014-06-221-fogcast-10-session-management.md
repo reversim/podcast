@@ -4,7 +4,7 @@ date: 2014-06-23T18:25:00.000Z
 tags:
   - fogcast
 episode: 221
-audio_url: http://m.reversim.com/reversim221_fogcast10_sessions.mp3
+audio_url: https://m.reversim.com/reversim221_fogcast10_sessions.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhntCki4JKIpXe2DuSpYq2rfqVXQWJmLTr9BIl-6oGT0Nnvrhxtk_b9zxLMaQf9r948aRyO_7qw9RdwJcJq1CiBBvVm60iHEVn-3K11xV8iMpYFQs1qdftxRHEsq2BmS8pY8_e2Dsz4bnI/s1600/For-Dummies-image_session-management.jpg
 legacy_url: https://www.reversim.com/2014/06/221-fogcast-10-session-management.html
 legacy_path: /2014/06/221-fogcast-10-session-management

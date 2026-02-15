@@ -3,7 +3,7 @@ title: "Summit 2013: Functional OOP, Clojure style, by Yoav Rubin"
 date: 2013-04-07T16:36:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_functional_OOP_clojure_style.mp3
+audio_url: https://m.reversim.com/summit2013_functional_OOP_clojure_style.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-functional-oop-clojure.html
 legacy_path: /2013/04/summit-2013-functional-oop-clojure
 ---

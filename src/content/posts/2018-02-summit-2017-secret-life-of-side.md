@@ -3,7 +3,7 @@ title: "Summit 2017: The Secret Life of Side Projects / Ofir Dagan"
 date: 2018-02-20T19:04:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Ofir_Dagan_-_The_Secret_Life_of_Side_Projects.mp3
+audio_url: https://m2.reversim.com/summit2017-Ofir_Dagan_-_The_Secret_Life_of_Side_Projects.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-secret-life-of-side.html
 legacy_path: /2018/02/summit-2017-secret-life-of-side
 ---

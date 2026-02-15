@@ -3,7 +3,7 @@ title: "Summit 2015: Technical leadership - more impact in less time! / Gili Nac
 date: 2015-04-29T13:16:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Ignites_2_Gili_Nachum.mp3
+audio_url: https://m.reversim.com/summit2015_Ignites_2_Gili_Nachum.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-technical-leadership-more.html
 legacy_path: /2015/04/summit-2015-technical-leadership-more
 ---

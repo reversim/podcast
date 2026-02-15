@@ -3,7 +3,7 @@ title: "Summit 2017: Graph computation framework for SPARK / Elior Malul"
 date: 2017-12-29T11:29:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Elior_Malul_-_Graph_computation_framework_for_SPARK.mp3
+audio_url: https://m2.reversim.com/summit2017-Elior_Malul_-_Graph_computation_framework_for_SPARK.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-graph-computation-framework.html
 legacy_path: /2017/12/summit-2017-graph-computation-framework
 ---

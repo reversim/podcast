@@ -3,7 +3,7 @@ title: "Summit 2015: Consul - much more than a Service Discovery Tool / Alon Bec
 date: 2015-04-25T20:25:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Consul_-_much_more_than_a_Service_Discovery_Tool.mp3
+audio_url: https://m.reversim.com/summit2015_Consul_-_much_more_than_a_Service_Discovery_Tool.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-consul-much-more-than.html
 legacy_path: /2015/04/summit-2015-consul-much-more-than
 ---

@@ -4,7 +4,7 @@ date: 2014-02-03T21:07:00.000Z
 tags:
   - fogcast
 episode: 203
-audio_url: http://m.reversim.com/reversim203_fogcast02.mp3
+audio_url: https://m.reversim.com/reversim203_fogcast02.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtF2P7xhwNcmkMnl6yvdZVHwujOgPNDz3tupTsR8LpW6EbDnG3zvXGS5YZDivt44B1a-DfvnO1GUChosHFF2Rnvy9Xj2Li4m6_jAmMbKZ5AryYw5fymytqzsLHzUVXJgsPTgw7Q1t0dqs/s1600/meteor-js-animated.gif
 legacy_url: https://www.reversim.com/2014/02/203-fogcast-02-meteorjs.html
 legacy_path: /2014/02/203-fogcast-02-meteorjs

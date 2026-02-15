@@ -3,7 +3,7 @@ title: "Summit 2016: DevOps paradigm in R&D day-to-day / Adi Shacham-Shavit"
 date: 2017-08-01T19:54:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_ADI_SHACHAM-SHAVIT.mp3
+audio_url: https://m2.reversim.com/summit2016_ADI_SHACHAM-SHAVIT.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-devops-paradigm-in-r-day-to.html
 legacy_path: /2017/08/summit-2016-devops-paradigm-in-r-day-to
 ---

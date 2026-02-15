@@ -2,7 +2,7 @@
 title: 108 Yoav Avrahami - Wix
 date: 2011-10-10T05:15:00.000Z
 episode: 108
-audio_url: http://m.reversim.com/reversim108_yoav_wix.mp3
+audio_url: https://m.reversim.com/reversim108_yoav_wix.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhg7FUiwy0IUcW892BCALvHWIXzfYePPEhryf17em2wbkrvsQw26mAaTqu_7rwImqjxUyETclrpO9sJICIKymoelROUoWNUrr2ooLJRyBo0_9S2eplo0JqqHFvuOfEbru1KxD0IdIyVQOc/s200/wix_logo.jpg
 legacy_url: https://www.reversim.com/2011/10/108-yoav-avrahami-wix.html
 legacy_path: /2011/10/108-yoav-avrahami-wix

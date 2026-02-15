@@ -2,7 +2,7 @@
 title: 367 Guilds at Outbrain
 date: 2019-04-27T11:36:00.000Z
 episode: 367
-audio_url: http://m2.reversim.com/reversim367-guilds.mp3
+audio_url: https://m2.reversim.com/reversim367-guilds.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjz1k1JXShCiWXMeDbdhnpua7hnpF6A0t26Zl51V4LPSGzUHSJ6-wepN2vyfI-asCgbim1Jf2mkanif3e-7hv4mpkyegrIoCk9wLrffqLGHpO-5Pq_dRR40J1wVORWeOBX0IqWYYu6K0cc/s200/ob.jpeg
 legacy_url: https://www.reversim.com/2019/04/367-guilds-at-outbrain.html
 legacy_path: /2019/04/367-guilds-at-outbrain

@@ -4,7 +4,7 @@ title: "Summit 2016: You're great at writing code. You need to be greater at
 date: 2017-07-30T20:16:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_BOAZ_GAON.mp3
+audio_url: https://m2.reversim.com/summit2016_BOAZ_GAON.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-youre-great-at-writing-code.html
 legacy_path: /2017/07/summit-2016-youre-great-at-writing-code
 ---

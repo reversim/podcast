@@ -2,7 +2,7 @@
 title: 271 Cloud Vendor Series - HA/DR - Vendor Free - outbrain
 date: 2015-08-11T05:24:00.000Z
 episode: 271
-audio_url: http://m.reversim.com/reversim271_cloud-HA-DR-DIY.mp3
+audio_url: https://m.reversim.com/reversim271_cloud-HA-DR-DIY.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIpYYI6p0T6iid-ZuCbw7rHkBaVPxzSXadavLwX4brkOoa_FKiYK4TtBEayqqY2lmG-874juNeBXxoTdexC97OaPeSNENRzqG-u3o0NnVavOPISMG_6Q3xp7MN8R0VrA4SQNRkANAH9co/s200/Latest-Outbrain-Logo.png
 legacy_url: https://www.reversim.com/2015/08/271-cloud-vendor-series-hadr-vendor.html
 legacy_path: /2015/08/271-cloud-vendor-series-hadr-vendor

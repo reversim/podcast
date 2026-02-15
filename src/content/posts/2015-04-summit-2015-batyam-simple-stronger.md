@@ -4,7 +4,7 @@ title: "Summit 2015: Batyam - a simple, stronger, collaborative dashboard  /
 date: 2015-04-29T19:35:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_open_source_1_Sella_Rafaeli.mp3
+audio_url: https://m.reversim.com/summit2015_open_source_1_Sella_Rafaeli.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-batyam-simple-stronger.html
 legacy_path: /2015/04/summit-2015-batyam-simple-stronger
 ---

@@ -2,7 +2,7 @@
 title: 075 Continuous Deployment
 date: 2010-08-24T07:20:00.000Z
 episode: 75
-audio_url: http://m.reversim.com/reversim75_eishay_cd.mp3
+audio_url: https://m.reversim.com/reversim75_eishay_cd.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnn-iK46sZ39eUA3aoSfWqc-dTJhVTN4WoXto0L4dd59rVvmZGHruYyP7T0ryLV8IAAp3qTR8g-NF6yk_MF3ZEm_Siie1SrmLAprBh5OkrX4S2DSY46ptm5N6wmf24Ko4oL3hqf5H3Gl4/s320/cd.jpg
 legacy_url: https://www.reversim.com/2010/08/075-continuous-deployment.html
 legacy_path: /2010/08/075-continuous-deployment

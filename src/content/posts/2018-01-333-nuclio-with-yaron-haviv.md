@@ -2,7 +2,7 @@
 title: 333 Nuclio with Yaron Haviv
 date: 2018-01-24T19:47:00.000Z
 episode: 333
-audio_url: http://m2.reversim.com/reversim333_Yaron-Haviv-Nuclio-CNCF.mp3
+audio_url: https://m2.reversim.com/reversim333_Yaron-Haviv-Nuclio-CNCF.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIJKWJ9iBomqVXh10GuCvRsre7D7fzLYu-SNDcEpTEx3CJrLwumwMAKBuIo71Wez52cqFv6SaQPYmgwYGiNufjiYfH5bv4NdO6D3BTVb-I4NQBeKLxUAdxtnIlC7NiLC1EMpudVPdQyaE/s200/60a587a1-nuclio.jpg
 legacy_url: https://www.reversim.com/2018/01/333-nuclio-with-yaron-haviv.html
 legacy_path: /2018/01/333-nuclio-with-yaron-haviv

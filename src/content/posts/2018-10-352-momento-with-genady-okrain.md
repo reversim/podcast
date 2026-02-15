@@ -2,7 +2,7 @@
 title: 352 Momento with Genady Okrain
 date: 2018-10-31T14:57:00.000Z
 episode: 352
-audio_url: http://m2.reversim.com/reversim352-Momento_Genady_Okrain.mp3
+audio_url: https://m2.reversim.com/reversim352-Momento_Genady_Okrain.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3lWZIiXHoEy5Uk3T7utzOC7UEyV3We4Fikj3hkObvAmGH0U_WXpwA6uDWLC7ci0U9X4cTHq9dPP5ibH2AI8U0gVhz_PDH9M9EwzZ7gt8j75cyJX_iBFJDC7hLBphh8gbmItJNO8rt1z0/s1600/momento.png
 legacy_url: https://www.reversim.com/2018/10/352-momento-with-genady-okrain.html
 legacy_path: /2018/10/352-momento-with-genady-okrain

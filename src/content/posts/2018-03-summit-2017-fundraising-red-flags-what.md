@@ -4,7 +4,7 @@ title: "Summit 2017: Fundraising red flags: what (Israeli) startups keep failing
 date: 2018-03-02T16:49:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Royi_Benyossef_-_Fundraising_red_flags.mp3
+audio_url: https://m2.reversim.com/summit2017-Royi_Benyossef_-_Fundraising_red_flags.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-fundraising-red-flags-what.html
 legacy_path: /2018/03/summit-2017-fundraising-red-flags-what
 ---

@@ -2,7 +2,7 @@
 title: 285 A podcast about Nothing
 date: 2015-12-20T06:21:00.000Z
 episode: 285
-audio_url: http://m2.reversim.com/reversim285_nothing.mp3
+audio_url: https://m2.reversim.com/reversim285_nothing.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7uxJ1ssBefAH-u3H5tOWlVd8r_OlEjoPUpYog0MlC_aDzrdFpNWj9Qp9Jqp-op3WHVK1sCL-m1mWWd1qatvJ9550uljFmEf-ICby1zfuQSTugNvNH4WbsEz0U3WHQM4sSEdBlLPqMUMI/s200/reversim-logo-white.png
 legacy_url: https://www.reversim.com/2015/12/285-podcast-about-nothing.html
 legacy_path: /2015/12/285-podcast-about-nothing

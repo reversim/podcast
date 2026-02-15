@@ -3,7 +3,7 @@ title: "Summit 2018: Making Quick Decisions / Zohar Lerman"
 date: 2019-02-06T20:00:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Zohar_Lerman.mp3
+audio_url: https://m2.reversim.com/summit2018-Zohar_Lerman.mp3
 legacy_url: https://www.reversim.com/2019/02/summit-2018-making-quick-decisions.html
 legacy_path: /2019/02/summit-2018-making-quick-decisions
 ---

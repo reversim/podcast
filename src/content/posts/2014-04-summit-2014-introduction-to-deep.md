@@ -3,7 +3,7 @@ title: "Summit 2014: Introduction to Deep Learning / Al Yaros"
 date: 2014-04-17T13:31:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-Deep-Learning.mp3
+audio_url: https://m.reversim.com/reversim2014-Deep-Learning.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-introduction-to-deep.html
 legacy_path: /2014/04/summit-2014-introduction-to-deep
 ---

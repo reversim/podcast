@@ -2,7 +2,7 @@
 title: 251 - Spark your legacy
 date: 2015-02-27T09:29:00.000Z
 episode: 251
-audio_url: http://m.reversim.com/reversim251_spark-your-legacy.mp3
+audio_url: https://m.reversim.com/reversim251_spark-your-legacy.mp3
 cover_image: //4.bp.blogspot.com/-QvFll2LCJWQ/VO-RstN0MFI/AAAAAAABgHI/q7-HOrnMM74/s1600/spark-logo.png
 legacy_url: https://www.reversim.com/2015/02/251-spark-your-legacy.html
 legacy_path: /2015/02/251-spark-your-legacy

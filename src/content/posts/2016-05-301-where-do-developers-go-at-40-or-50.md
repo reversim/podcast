@@ -2,7 +2,7 @@
 title: 301 Where do developers go at 40 or 50?
 date: 2016-05-09T18:19:00.000Z
 episode: 301
-audio_url: http://m2.reversim.com/reversim301-40-50.mp3
+audio_url: https://m2.reversim.com/reversim301-40-50.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9Zzd5CYrrJ12myA7uy_cIPnPSc1aPyc16-3-j2AnGw3EI8Ys-TC_HtHZzs1jiXSW93CFtWTfMj0uVKnesjcWuBUxQFchPpBHPt4lb1Am1j6WaHXe5KhSwciAQOEjTXFTAoV-eWfPbmaM/s200/tooOldToCode.jpg
 legacy_url: https://www.reversim.com/2016/05/301-where-do-developers-go-at-40-or-50.html
 legacy_path: /2016/05/301-where-do-developers-go-at-40-or-50

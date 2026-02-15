@@ -3,7 +3,7 @@ title: "Summit 2017: Lock Picking for Hackers / Michael Sverdlin"
 date: 2018-02-05T19:43:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Michael_Sverdlin_-_Lock_Picking_for_Hackers.mp3
+audio_url: https://m2.reversim.com/summit2017-Michael_Sverdlin_-_Lock_Picking_for_Hackers.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-lock-picking-for-hackers.html
 legacy_path: /2018/02/summit-2017-lock-picking-for-hackers
 ---

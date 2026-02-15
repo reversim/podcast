@@ -2,7 +2,7 @@
 title: 392 Podcast with Asaf from VIM
 date: 2020-07-16T17:52:00.000Z
 episode: 392
-audio_url: http://m2.reversim.com/reversim392-vim.mp3
+audio_url: https://m2.reversim.com/reversim392-vim.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_EiFvQIeoQP3NQjCM4xZR1wVTWcLvWsVI13LSS-mJ_kf-JAsNsK-IqDEK70fuYoZVAZHE7MI4sreuyDlyKMlaCFzPGoakGw0Cx7mJBZqRlIZtots2rv9OCK2CFSN69s8AlBj7tds9kWY/w183-h183/vim.png
 legacy_url: https://www.reversim.com/2020/07/392-podcast-with-asaf-from-vim.html
 legacy_path: /2020/07/392-podcast-with-asaf-from-vim

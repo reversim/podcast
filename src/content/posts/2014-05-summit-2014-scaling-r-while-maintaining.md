@@ -3,7 +3,7 @@ title: "Summit 2014: Scaling the R&D While Maintaining Quality / Aviran Mordo"
 date: 2014-05-02T08:55:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-Scaling-RD.mp3
+audio_url: https://m.reversim.com/reversim2014-Scaling-RD.mp3
 legacy_url: https://www.reversim.com/2014/05/summit-2014-scaling-r-while-maintaining.html
 legacy_path: /2014/05/summit-2014-scaling-r-while-maintaining
 ---

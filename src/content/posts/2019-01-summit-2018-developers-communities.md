@@ -4,7 +4,7 @@ title: "Summit 2018: Developers' Communities: Building your Personal Brand and
 date: 2019-01-05T21:54:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Morad_Stern.mp3
+audio_url: https://m2.reversim.com/summit2018-Morad_Stern.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-developers-communities.html
 legacy_path: /2019/01/summit-2018-developers-communities
 ---

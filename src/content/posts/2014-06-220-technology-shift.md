@@ -2,7 +2,7 @@
 title: 220 Technology Shift
 date: 2014-06-23T18:20:00.000Z
 episode: 220
-audio_url: http://m.reversim.com/reversim220_scale-refactor.mp3
+audio_url: https://m.reversim.com/reversim220_scale-refactor.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRPsrocuhBUk3izQWYK3AcagOEIUW0or-eEcGkYwLSUcpZ6ru0ttEbhgl2suDQRmxKWLipXHUrAbnp_e5VekF2IGlfejQTqBaLHfUbId3IY4WYETxhyphenhypheng1UnaNzEREYCOeX_l3vzrdTsWQ/s1600/Shift1.jpg
 legacy_url: https://www.reversim.com/2014/06/220-technology-shift.html
 legacy_path: /2014/06/220-technology-shift

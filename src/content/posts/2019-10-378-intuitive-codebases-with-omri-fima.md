@@ -2,7 +2,7 @@
 title: 378 Intuitive codebases with Omri Fima
 date: 2019-10-02T14:00:00.000Z
 episode: 378
-audio_url: http://m2.reversim.com/reversim378_intuitive-codebase.mp3
+audio_url: https://m2.reversim.com/reversim378_intuitive-codebase.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQK5yw4TaD1Z0gVMA34ZuT1204VlqONoMwomnAMJ3DGkzBOuC6ZOn5M_Psv7FcizO978sQbiYkix4gbkzj6zfly2Wu_Dd48MZ4BxceFI9e0QTxRKpdx_5PWvBpF5kmZRg02YjP_JDU-pc/s200/ni.png
 legacy_url: https://www.reversim.com/2019/10/378-intuitive-codebases-with-omri-fima.html
 legacy_path: /2019/10/378-intuitive-codebases-with-omri-fima

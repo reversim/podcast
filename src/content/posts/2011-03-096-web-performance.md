@@ -2,7 +2,7 @@
 title: 096 Web Performance
 date: 2011-03-21T21:12:00.000Z
 episode: 96
-audio_url: http://m.reversim.com/reversim96_web_performance.mp3
+audio_url: https://m.reversim.com/reversim96_web_performance.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAeeyXP7xS6OvOnLt1wr2a0zuPbhDkQ2glYf3HNdQ29rOA3XZxrfvjal6NOj97QG7ov5eJ3Wmhzw8O2G2x-nJAzJ7ST-HW9e0cgIfuhPPtvq-0WfUovqYHeQIJ4lqOVM0hqRlU2hlGYJA/s200/performance.jpg
 legacy_url: https://www.reversim.com/2011/03/096-web-performance.html
 legacy_path: /2011/03/096-web-performance

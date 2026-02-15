@@ -2,7 +2,7 @@
 title: 236 Python and NodeJS tools in Visual Studio
 date: 2014-10-29T06:00:00.000Z
 episode: 236
-audio_url: http://m.reversim.com/reversim236_vs-nodejs-python.mp3
+audio_url: https://m.reversim.com/reversim236_vs-nodejs-python.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5l6m7UI-e2eW_x6olrpFa0KAASQBQHik_eX5J_6FK2KinBw5hqg7RR3zcy2qPp4RfIR87rX2e0WMVLJJC9EMvMWNJOu_qiZ7vruVrYELToY9pXpyTG1L69P7v2jr4RiU40sIAQAkTG5I/s1600/vs-node-js.png
 legacy_url: https://www.reversim.com/2014/10/236-python-and-nodejs-tools-in-visual.html
 legacy_path: /2014/10/236-python-and-nodejs-tools-in-visual

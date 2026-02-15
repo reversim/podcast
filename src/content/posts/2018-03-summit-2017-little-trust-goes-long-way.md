@@ -3,7 +3,7 @@ title: "Summit 2017: A little trust goes a long way... / Shay Palachy"
 date: 2018-03-03T22:47:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Shay_Palachy_-_A_little_trust_goes_a_long_way.mp3
+audio_url: https://m2.reversim.com/summit2017-Shay_Palachy_-_A_little_trust_goes_a_long_way.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-little-trust-goes-long-way.html
 legacy_path: /2018/03/summit-2017-little-trust-goes-long-way
 ---

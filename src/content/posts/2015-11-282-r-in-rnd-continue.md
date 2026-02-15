@@ -2,7 +2,7 @@
 title: 282 The R in RnD (continue)
 date: 2015-11-12T19:02:00.000Z
 episode: 282
-audio_url: http://m2.reversim.com/reversim282-the_r_in_rnd_cont.mp3
+audio_url: https://m2.reversim.com/reversim282-the_r_in_rnd_cont.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg590hZS420hV4I0VAIKaF2KNWIId2dwkRhU4LuNhE9ItaFCl23tiIVAJA1AETyoZrH83p6y3Hkntvtr1wwdY2hyphenhyphenG60R_vDixDrMWGpOGagStxcsNhXtWyaEumuK6660w541iZ-Va12XV4/s200/informasjonssikkerhet.jpg
 legacy_url: https://www.reversim.com/2015/11/282-r-in-rnd-continue.html
 legacy_path: /2015/11/282-r-in-rnd-continue

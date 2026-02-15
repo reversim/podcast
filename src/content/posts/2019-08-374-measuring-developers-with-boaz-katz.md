@@ -2,7 +2,7 @@
 title: 374 Measuring Developers with Boaz Katz from Bizzabo
 date: 2019-08-05T21:13:00.000Z
 episode: 374
-audio_url: http://m2.reversim.com/reversim374_measuring-developers.mp3
+audio_url: https://m2.reversim.com/reversim374_measuring-developers.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgau2jAaGdoS2x2Rv4QuGtEb3VO_LZvINzRtKy4qpNaofb03amdckKwwopmauc_gaJqmGcvxh169OmM_nkfoqIlLq_QO6A5WFCwq6a-NF6iz1TiFPlikbPg1KzGKcKbLG6dnr_2mYTsLhE/s200/bizzabo.png
 legacy_url: https://www.reversim.com/2019/08/374-measuring-developers-with-boaz-katz.html
 legacy_path: /2019/08/374-measuring-developers-with-boaz-katz

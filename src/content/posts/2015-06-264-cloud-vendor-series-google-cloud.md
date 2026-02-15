@@ -4,7 +4,7 @@ date: 2015-06-08T06:35:00.000Z
 tags:
   - carburetor
 episode: 264
-audio_url: http://m.reversim.com/reversim264_cloud-hadr-google.mp3
+audio_url: https://m.reversim.com/reversim264_cloud-hadr-google.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnU1aJgkk97kwsuw1PQZZKA4MiYIfJ5uW3LAjTYqOTd9Ki5_JdCz3UfR4bcSz3OU8QbHeBw-8fzttV1C-t7zLVVV_tWApGExCwXM-CRzANM4BAPHtL1rCA1_7eIzEknaZPRmbY3aCsQ00/s200/gcp-logo-3.png
 legacy_url: https://www.reversim.com/2015/06/264-cloud-vendor-series-google-cloud.html
 legacy_path: /2015/06/264-cloud-vendor-series-google-cloud

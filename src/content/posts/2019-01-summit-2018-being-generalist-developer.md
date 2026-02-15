@@ -3,7 +3,7 @@ title: "Summit 2018: Being a Generalist Developer - is it for you? / Lital Hassi
 date: 2019-01-03T08:03:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Lital_Hassine.mp3
+audio_url: https://m2.reversim.com/summit2018-Lital_Hassine.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-being-generalist-developer.html
 legacy_path: /2019/01/summit-2018-being-generalist-developer
 ---

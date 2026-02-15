@@ -4,7 +4,7 @@ date: 2012-12-13T22:07:00.000Z
 tags:
   - carburetor
 episode: 158
-audio_url: http://m.reversim.com/reversim158_carburetor2.mp3
+audio_url: https://m.reversim.com/reversim158_carburetor2.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9oZbYn3hylkx4KToqfCDWTWWoTG9qm8kuuLiW6n3-7Edtv_HCOasevpPKGr-KUjtTY7oJIfv9sF97xAxwZPPoRlmhc8xBJuQ-352a1tZsLeeyHXHUT9Oaa2boUIC5EsrR58rbPc2QHq8/s200/openstack-cloud-software-vertical-large.png
 legacy_url: https://www.reversim.com/2012/12/158-carburetur-2-open-source-clouds-and.html
 legacy_path: /2012/12/158-carburetur-2-open-source-clouds-and

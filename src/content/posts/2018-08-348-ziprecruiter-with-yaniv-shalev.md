@@ -2,7 +2,7 @@
 title: 348 ZipRecruiter with Yaniv Shalev
 date: 2018-08-26T18:35:00.000Z
 episode: 348
-audio_url: http://m2.reversim.com/reversim348-ZipRecruiter.mp3
+audio_url: https://m2.reversim.com/reversim348-ZipRecruiter.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgq4z4D5r4x4uxbP9QuoRw4ZQCLoqR9gce6Hth97QnTrerQsrg7EgiOxTyDAE0GdLGQUjHll8eliuLZaw6R_Ki0rgfw_bUb4lFTZ_fDOwszUe3583xEPAHkwG1MyNBWjPI2vGKTQZVn9qc/s200/zip.jpg
 legacy_url: https://www.reversim.com/2018/08/348-ziprecruiter-with-yaniv-shalev.html
 legacy_path: /2018/08/348-ziprecruiter-with-yaniv-shalev

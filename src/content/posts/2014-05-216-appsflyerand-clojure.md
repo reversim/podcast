@@ -2,7 +2,7 @@
 title: 216 - AppsFlyer and Clojure
 date: 2014-05-12T19:35:00.000Z
 episode: 216
-audio_url: http://m.reversim.com/reversim216_appsflyer.mp3
+audio_url: https://m.reversim.com/reversim216_appsflyer.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjbYTXMZwf8JvwUt5vWa9Zpl14-Yog6x7jJi10NV7AcSwbr8HRf9arhCDT-lwygAAaIZv-XW2pmDQHB3MJBueBUsg_TTWqUd8sunG8psLPgCABLcacQPR21sCwODcXbD7lq3T1EAAwrek/s1600/appsflyer.jpg
 legacy_url: https://www.reversim.com/2014/05/216-appsflyerand-clojure.html
 legacy_path: /2014/05/216-appsflyerand-clojure

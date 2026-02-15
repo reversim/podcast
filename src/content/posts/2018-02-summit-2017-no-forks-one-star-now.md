@@ -4,7 +4,7 @@ title: "Summit 2017: No forks, One star. Now what?! — How I published my K
 date: 2018-02-23T21:26:00.000Z
 tags:
   - summit
-audio_url: http://traffic.libsyn.com/reversim/summit2017-Ohad_Shai_-_No_forks_One_star._Now_what.mp3
+audio_url: https://s3.amazonaws.com/reversim/summit2017-Ohad_Shai_-_No_forks_One_star._Now_what.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-no-forks-one-star-now.html
 legacy_path: /2018/02/summit-2017-no-forks-one-star-now
 ---

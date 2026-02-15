@@ -2,7 +2,7 @@
 title: 332 Data infrastructure at Juno with Uri Shamay
 date: 2018-01-23T10:56:00.000Z
 episode: 332
-audio_url: http://m2.reversim.com/reversim332_data-processing-framewordks.mp3
+audio_url: https://m2.reversim.com/reversim332_data-processing-framewordks.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfRqHI8hvGj3djDV3xTQU8I6n4BknGox8xH5ktGtCaQUAL2BAGSlnyZQy5nZofJfaC7FH2Dr79uUH5a346gJeF4VmK0LPXIzIo63ZlDXw5DbgMbS-7JwBuqXgWevfVqPElYmqR-2DyGX4/s200/Juno.jpeg
 legacy_url: https://www.reversim.com/2018/01/332-data-infrastructure-at-juno-with.html
 legacy_path: /2018/01/332-data-infrastructure-at-juno-with

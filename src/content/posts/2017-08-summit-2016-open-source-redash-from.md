@@ -2,7 +2,7 @@
 title: "Summit 2016: Open Source / Re:dash - from a side project to business /
   Arik Fraimovich"
 date: 2017-08-26T19:33:00.000Z
-audio_url: http://m2.reversim.com/summit2016_Open_Source_D2_Arik_F.mp3
+audio_url: https://m2.reversim.com/summit2016_Open_Source_D2_Arik_F.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-open-source-redash-from.html
 legacy_path: /2017/08/summit-2016-open-source-redash-from
 ---

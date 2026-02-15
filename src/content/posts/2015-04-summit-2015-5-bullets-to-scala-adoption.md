@@ -3,7 +3,7 @@ title: "Summit 2015: 5 Bullets to Scala Adoption / Tomer Gabel"
 date: 2015-04-14T19:05:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_5-Bullets-to-Scala-Adoption.mp3
+audio_url: https://m.reversim.com/summit2015_5-Bullets-to-Scala-Adoption.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-5-bullets-to-scala-adoption.html
 legacy_path: /2015/04/summit-2015-5-bullets-to-scala-adoption
 ---

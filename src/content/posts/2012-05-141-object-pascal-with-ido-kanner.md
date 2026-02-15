@@ -2,7 +2,7 @@
 title: 141 Object Pascal with Ido Kanner
 date: 2012-05-28T20:13:00.000Z
 episode: 141
-audio_url: http://m.reversim.com/reversim141_obj_pascal.mp3
+audio_url: https://m.reversim.com/reversim141_obj_pascal.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeJDl7nZPv5Gat_7QC8yinmk9MtHV60xbp_q8rzGKUCnS9-9LSfrWMJiyh-G4O8jwsRh1T0znTN0ytmSe70l3alm-wrlxdZZlRPDzVU_2y3x3iwtw3qHH39N1C6PqO1HEubfgfY-1CLXQ/s320/Object+Pascal.png
 legacy_url: https://www.reversim.com/2012/05/141-object-pascal-with-ido-kanner.html
 legacy_path: /2012/05/141-object-pascal-with-ido-kanner

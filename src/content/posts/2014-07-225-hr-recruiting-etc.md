@@ -2,7 +2,7 @@
 title: 225 HR, recruiting etc
 date: 2014-07-21T18:47:00.000Z
 episode: 225
-audio_url: http://m.reversim.com/reversim225_hr.mp3
+audio_url: https://m.reversim.com/reversim225_hr.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiruTjJS75W0XbuPE-qvdpAv85TKpwf2hkr7jMl-wye5tHyU680XRCiyzLMPekx2NBb_bzyln99mXygOzjeABkSchmRfvKgebmdLqggXHyu04VmdYRWnJ9eJt9I-Sx_ISGJ_UulrxH82k0/s1600/HR.jpg
 legacy_url: https://www.reversim.com/2014/07/225-hr-recruiting-etc.html
 legacy_path: /2014/07/225-hr-recruiting-etc

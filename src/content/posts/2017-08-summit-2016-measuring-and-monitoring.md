@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: Measuring and monitoring client side performance / Nir Nahum"
 date: 2017-08-28T20:50:00.000Z
-audio_url: http://m2.reversim.com/summit2016_NIR_NAHUM.mp3
+audio_url: https://m2.reversim.com/summit2016_NIR_NAHUM.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-measuring-and-monitoring.html
 legacy_path: /2017/08/summit-2016-measuring-and-monitoring
 ---

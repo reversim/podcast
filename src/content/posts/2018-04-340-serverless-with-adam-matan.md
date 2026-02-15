@@ -2,7 +2,7 @@
 title: 340 Serverless With Adam Matan
 date: 2018-04-24T17:40:00.000Z
 episode: 340
-audio_url: http://m2.reversim.com/reversim340_serverless-adam-matan.mp3
+audio_url: https://m2.reversim.com/reversim340_serverless-adam-matan.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKncX0q3_N04GJCnfJvgslT7OE2eUe8DScmXclidKJ8DS-w2-wzb0_y3sj8ssEyZcT7kVMFBr23W8sQLhcBxv1kar-VcEg7v0rgcjo4cOc-fTCjSjL9fsyGZ3oc5gkgZsYIRcxnMr3bpw/s200/serverlessil.png
 legacy_url: https://www.reversim.com/2018/04/340-serverless-with-adam-matan.html
 legacy_path: /2018/04/340-serverless-with-adam-matan

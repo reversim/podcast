@@ -3,7 +3,7 @@ title: "Summit 2014: Automating Machine Learning: from Lab to Production / Ofer 
 date: 2014-05-04T05:06:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-ml.mp3
+audio_url: https://m.reversim.com/reversim2014-ml.mp3
 legacy_url: https://www.reversim.com/2014/05/summit-2014-automating-machine-learning.html
 legacy_path: /2014/05/summit-2014-automating-machine-learning
 ---

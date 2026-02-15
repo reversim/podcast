@@ -4,7 +4,7 @@ title: "Summit 2015: How to Create a Native-Like experience in the Mobile Web /
 date: 2015-04-24T06:23:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_How_to_Create_a_Native-Like_experience_in_the_Mobile_Web.mp3
+audio_url: https://m.reversim.com/summit2015_How_to_Create_a_Native-Like_experience_in_the_Mobile_Web.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-how-to-create-native-like.html
 legacy_path: /2015/04/summit-2015-how-to-create-native-like
 ---

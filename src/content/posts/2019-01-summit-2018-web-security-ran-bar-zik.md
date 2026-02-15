@@ -3,7 +3,7 @@ title: "Summit 2018: Web security / Ran Bar Zik"
 date: 2019-01-14T17:19:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Ran_Bar_Zik.mp3
+audio_url: https://m2.reversim.com/summit2018-Ran_Bar_Zik.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-web-security-ran-bar-zik.html
 legacy_path: /2019/01/summit-2018-web-security-ran-bar-zik
 ---

@@ -3,7 +3,7 @@ title: "Summit 2017: Cheat, Scale, Win / Adam Lev Libfeld"
 date: 2017-12-06T20:50:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Adam_Lev-Libfeld_-_Cheat_Scale_Win.mp3
+audio_url: https://m2.reversim.com/summit2017-Adam_Lev-Libfeld_-_Cheat_Scale_Win.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-cheat-scale-win-adam-lev.html
 legacy_path: /2017/12/summit-2017-cheat-scale-win-adam-lev
 ---

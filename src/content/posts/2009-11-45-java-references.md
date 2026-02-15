@@ -4,7 +4,7 @@ date: 2009-11-22T21:18:00.000Z
 tags:
   - שפות תכנות
 episode: 45
-audio_url: http://m2.reversim.com/reversim45_java_ref.mp3
+audio_url: https://m2.reversim.com/reversim45_java_ref.mp3
 legacy_url: https://www.reversim.com/2009/11/45-java-references.html
 legacy_path: /2009/11/45-java-references
 ---

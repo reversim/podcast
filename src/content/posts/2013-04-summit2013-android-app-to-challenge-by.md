@@ -3,7 +3,7 @@ title: "Summit2013: Android App to the challenge, by Udi Cohen"
 date: 2013-04-01T12:38:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_android_app_to_the_challenge.mp3
+audio_url: https://m.reversim.com/summit2013_android_app_to_the_challenge.mp3
 legacy_url: https://www.reversim.com/2013/04/summit2013-android-app-to-challenge-by.html
 legacy_path: /2013/04/summit2013-android-app-to-challenge-by
 ---

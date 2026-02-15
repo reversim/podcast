@@ -4,7 +4,7 @@ title: "Summit 2017: To err is human: Introduction to modern safety thinking /
 date: 2017-12-15T16:28:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Avishai_Ish-Shalom_-_To_err_is_human.mp3
+audio_url: https://m2.reversim.com/summit2017-Avishai_Ish-Shalom_-_To_err_is_human.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-to-err-is-human.html
 legacy_path: /2017/12/summit-2017-to-err-is-human
 ---

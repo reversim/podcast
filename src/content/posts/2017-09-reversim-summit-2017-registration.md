@@ -1,7 +1,7 @@
 ---
 title: Reversim Summit 2017 - Registration
 date: 2017-09-19T20:08:00.000Z
-audio_url: http://m2.reversim.com/reversim-summit-2017-registration.mp3
+audio_url: https://m2.reversim.com/reversim-summit-2017-registration.mp3
 legacy_url: https://www.reversim.com/2017/09/reversim-summit-2017-registration.html
 legacy_path: /2017/09/reversim-summit-2017-registration
 ---

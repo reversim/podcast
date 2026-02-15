@@ -4,7 +4,7 @@ title: "Summit 2013: I want to cache it. Now, by Dimitri Krassovski & Eugene
 date: 2013-04-07T18:49:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_I_want_to_cache_it_now.mp3
+audio_url: https://m.reversim.com/summit2013_I_want_to_cache_it_now.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-i-want-to-cache-it-now-by.html
 legacy_path: /2013/04/summit-2013-i-want-to-cache-it-now-by
 ---

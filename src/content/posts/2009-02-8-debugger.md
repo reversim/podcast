@@ -4,7 +4,7 @@ date: 2009-02-27T13:19:00.000Z
 tags:
   - תאוריה מול פרקטיקה
 episode: 8
-audio_url: http://m2.reversim.com/reversim8.mp3
+audio_url: https://m2.reversim.com/reversim8.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIacwM63f26cl4_4NoYT2UohS_4fEa3XDNyqLY3J5X1_4mr-hMQDFpiAX5nYOr4mvaAET8gJo4_lgtEZx8IYT4KsSXqD1aLflZKPAOGCoOkOR_pIL9b5TrfxnHnNa1gYpXmCmZhPM-YRFx/s320/open-source-debugger.jpg
 legacy_url: https://www.reversim.com/2009/02/8-debugger.html
 legacy_path: /2009/02/8-debugger

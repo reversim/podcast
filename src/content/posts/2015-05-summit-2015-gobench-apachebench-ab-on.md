@@ -3,7 +3,7 @@ title: "Summit 2015: gobench :: ApacheBench (ab) on steroids / Uri Shamay"
 date: 2015-05-02T20:18:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_open_source_1_Uri_Shamay.mp3
+audio_url: https://m.reversim.com/summit2015_open_source_1_Uri_Shamay.mp3
 legacy_url: https://www.reversim.com/2015/05/summit-2015-gobench-apachebench-ab-on.html
 legacy_path: /2015/05/summit-2015-gobench-apachebench-ab-on
 ---

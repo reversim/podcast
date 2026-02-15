@@ -2,7 +2,7 @@
 title: 328  The tension between Agility and Ownership
 date: 2017-12-09T18:24:00.000Z
 episode: 328
-audio_url: http://m2.reversim.com/reversim328_agility-ownership.mp3
+audio_url: https://m2.reversim.com/reversim328_agility-ownership.mp3
 legacy_url: https://www.reversim.com/2017/12/328-tension-between-agility-and.html
 legacy_path: /2017/12/328-tension-between-agility-and
 ---

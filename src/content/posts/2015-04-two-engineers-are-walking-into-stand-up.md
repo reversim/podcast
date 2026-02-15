@@ -3,7 +3,7 @@ title: "Summi2015: Two engineers are walking into a Stand-up Comedy Club / Nir K
 date: 2015-04-11T12:00:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Two_engineers_walk_into_a_Stand-up_Comedy_Club.mp3
+audio_url: https://m.reversim.com/summit2015_Two_engineers_walk_into_a_Stand-up_Comedy_Club.mp3
 legacy_url: https://www.reversim.com/2015/04/two-engineers-are-walking-into-stand-up.html
 legacy_path: /2015/04/two-engineers-are-walking-into-stand-up
 ---

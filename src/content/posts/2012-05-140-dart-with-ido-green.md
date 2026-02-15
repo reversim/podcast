@@ -2,7 +2,7 @@
 title: 140 Dart with Ido Green
 date: 2012-05-24T19:50:00.000Z
 episode: 140
-audio_url: http://m.reversim.com/reversim140_dart.mp3
+audio_url: https://m.reversim.com/reversim140_dart.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKzSvVxc-3INv-hUDNTb-KPv_J1YTC7cB3rpG_Ily3TlaVSzNmh2lLlb23VmJzLQZG4wS62UYe7Bd3rfy9Gxi-AYdKSAibYBYSo-HshTALPq4HU4IEkkKuBxFjDCmrBEpUNijfBdSKCgk/s200/Dart_+Structured+web+apps+%7C+DartLang.org.png
 legacy_url: https://www.reversim.com/2012/05/140-dart-with-ido-green.html
 legacy_path: /2012/05/140-dart-with-ido-green

@@ -3,7 +3,7 @@ title: "Summit 2017: Moving Fast At Scale / Randy Shoup"
 date: 2018-02-25T09:35:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Randy_Shoup_-_Moving_Fast_At_Scale.mp3
+audio_url: https://m2.reversim.com/summit2017-Randy_Shoup_-_Moving_Fast_At_Scale.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-moving-fast-at-scale-randy.html
 legacy_path: /2018/02/summit-2017-moving-fast-at-scale-randy
 ---

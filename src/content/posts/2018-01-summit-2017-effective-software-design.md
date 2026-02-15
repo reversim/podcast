@@ -3,7 +3,7 @@ title: "Summit 2017: Effective Software Design (ESD) / Lior Bar On"
 date: 2018-01-29T22:34:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Lior_Bar-On_-_Effective_Software_Design.mp3
+audio_url: https://m2.reversim.com/summit2017-Lior_Bar-On_-_Effective_Software_Design.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-effective-software-design.html
 legacy_path: /2018/01/summit-2017-effective-software-design
 ---

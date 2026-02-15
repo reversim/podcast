@@ -4,7 +4,7 @@ title: "Summit 2018: A ballad to a programmer (בלדה למתכנת) / Yoni Tsa
 date: 2019-02-06T19:56:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Yoni_Tsafir-and-Iftach_Bar.mp3
+audio_url: https://m2.reversim.com/summit2018-Yoni_Tsafir-and-Iftach_Bar.mp3
 legacy_url: https://www.reversim.com/2019/02/summit-2018-ballad-to-programmer-yoni.html
 legacy_path: /2019/02/summit-2018-ballad-to-programmer-yoni
 ---

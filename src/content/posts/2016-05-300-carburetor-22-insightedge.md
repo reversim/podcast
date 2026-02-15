@@ -4,7 +4,7 @@ date: 2016-05-07T21:05:00.000Z
 tags:
   - carburetor
 episode: 300
-audio_url: http://m2.reversim.com/reversim300_carburetor22-insight-edge.mp3
+audio_url: https://m2.reversim.com/reversim300_carburetor22-insight-edge.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGNBxOMd7fWBI6TwewlUWT2EQG3tFiequ4BhZ9HKhNj16O9mPuvWlx59JD353IUDjbGC2bcXUwYq5gNPo-RL4CnwgDCKEH-yZK1e5RoEcy90UKmT19PakKzmdA2RaB6Vcw1rvnfuItBsg/s200/insight-edge.png
 legacy_url: https://www.reversim.com/2016/05/300-carburetor-22-insightedge.html
 legacy_path: /2016/05/300-carburetor-22-insightedge

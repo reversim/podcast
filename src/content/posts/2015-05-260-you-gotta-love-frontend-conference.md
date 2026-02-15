@@ -2,7 +2,7 @@
 title: 260 You Gotta Love Frontend - Conference
 date: 2015-05-07T12:12:00.000Z
 episode: 260
-audio_url: http://m.reversim.com/reversim260_yglf.mp3
+audio_url: https://m.reversim.com/reversim260_yglf.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAe4oweJIz3tvfdbKvpdfkhy0BEEu4pFIAbxH-hnJI1Km9q-exRCejfwRNT2uDiijh_SZnhaMnlSaeNVYSD7AlwjDMvjHVV-fL-4PkLlmqEC8ap0v5XxMT-WOw3M4ZMdMeo-tty9ufhFM/s200/You_Gotta_Love_Frontend_Conference___June_8-9__2015___Tel_Aviv__Israel.png
 legacy_url: https://www.reversim.com/2015/05/260-you-gotta-love-frontend-conference.html
 legacy_path: /2015/05/260-you-gotta-love-frontend-conference

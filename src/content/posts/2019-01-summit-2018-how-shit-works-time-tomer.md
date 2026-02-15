@@ -3,7 +3,7 @@ title: "Summit 2018: How shit works: Time / Tomer Gabel"
 date: 2019-01-26T11:46:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Tomer_Gabel.mp3
+audio_url: https://m2.reversim.com/summit2018-Tomer_Gabel.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-how-shit-works-time-tomer.html
 legacy_path: /2019/01/summit-2018-how-shit-works-time-tomer
 ---

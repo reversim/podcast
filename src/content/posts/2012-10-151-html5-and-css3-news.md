@@ -2,7 +2,7 @@
 title: 151 - HTML5 and CSS3 news
 date: 2012-10-29T20:26:00.000Z
 episode: 151
-audio_url: http://m.reversim.com/reversim151_html5news.mp3
+audio_url: https://m.reversim.com/reversim151_html5news.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2qnMayoASrPFxbLdJO8gMpp1ntuYhNB7NlEdmHa0AEIdo5OWWJkVOjHmRuJmjBcc_1GOpdCIE0g3ACyegvC7YIOLdq_c79_3kzZFXEwuMT0C_0URAPcowRpPIUxVWKrZUdqGQSI1w-1o/s200/HTML5_Logo_256.png
 legacy_url: https://www.reversim.com/2012/10/151-html5-and-css3-news.html
 legacy_path: /2012/10/151-html5-and-css3-news

@@ -3,7 +3,7 @@ title: "Summi2015: Programming with Millions of Examples / Eran Yahav"
 date: 2015-04-14T18:54:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Programming_with_Millions_of_Examples.mp3
+audio_url: https://m.reversim.com/summit2015_Programming_with_Millions_of_Examples.mp3
 legacy_url: https://www.reversim.com/2015/04/summi2015-programming-with-millions-of.html
 legacy_path: /2015/04/summi2015-programming-with-millions-of
 ---

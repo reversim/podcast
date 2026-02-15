@@ -4,7 +4,7 @@ title: "Summit 2014: Scaling Extending and Expanding your application through
 date: 2014-05-02T08:57:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-messaging.mp3
+audio_url: https://m.reversim.com/reversim2014-messaging.mp3
 legacy_url: https://www.reversim.com/2014/05/summit-2014-scaling-extending-and.html
 legacy_path: /2014/05/summit-2014-scaling-extending-and
 ---

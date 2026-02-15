@@ -3,7 +3,7 @@ title: "Summit 2013: To provide & serve...content, by Royi Benyosef"
 date: 2013-04-13T06:52:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_to_provide_and_serve_content.mp3
+audio_url: https://m.reversim.com/summit2013_to_provide_and_serve_content.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-to-provide-servecontent-by.html
 legacy_path: /2013/04/summit-2013-to-provide-servecontent-by
 ---

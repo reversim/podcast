@@ -2,7 +2,7 @@
 title: 370 ThetaRay and Unsupervised Learning
 date: 2019-05-27T20:12:00.000Z
 episode: 370
-audio_url: http://m2.reversim.com/reversim370-ThetaRay.mp3
+audio_url: https://m2.reversim.com/reversim370-ThetaRay.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqIliH4IwcwKJqXEgmfGBX7HQhcBNRqrUkXTZLoykTVLspkwH8mxhfxEfn0dKdlQIR3JrrInhLXnJrMBd7LfPMcgpukyc4m7U5t3F4JS6d0haL7eEFZHuqJOyJH2CYVuwSNx9wD-ZGRlU/s200/thetaray.png
 legacy_url: https://www.reversim.com/2019/05/370-thetaray-and-unsupervised-learning.html
 legacy_path: /2019/05/370-thetaray-and-unsupervised-learning

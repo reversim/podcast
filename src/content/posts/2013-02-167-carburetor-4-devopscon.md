@@ -4,7 +4,7 @@ date: 2013-02-06T19:17:00.000Z
 tags:
   - carburetor
 episode: 167
-audio_url: http://m.reversim.com/reversim167_carburetor4.mp3
+audio_url: https://m.reversim.com/reversim167_carburetor4.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_CfU3iMzycmoB2NomksyMQh31NCiGcDkdJEVvlgxLg9kr5kDGRhYQoh4gbyhPMxtFY_FVSQQVTMcwmkg2Q8xdp6jZEY1EIPrFfvByJUm45HjccAWAAjsuM5uNNEPGjnEL8aeLCOx_UpQ/s200/Screenshot+2:6:13+9:14+PM.png
 legacy_url: https://www.reversim.com/2013/02/167-carburetor-4-devopscon.html
 legacy_path: /2013/02/167-carburetor-4-devopscon

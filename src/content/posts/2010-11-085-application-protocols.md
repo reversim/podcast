@@ -2,7 +2,7 @@
 title: 085 Application Protocols
 date: 2010-11-29T08:05:00.000Z
 episode: 85
-audio_url: http://m.reversim.com/reversim85_app_proto.mp3
+audio_url: https://m.reversim.com/reversim85_app_proto.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjORyBWucBAXtOdG9Pcv_yHvcduk3Wk2g0Y5tHrMabPOrXdaiJ13ehIHxXce8-jMdifWLkoQSRboiXxxJ9eSA9U0hImuRTdTVUa1hsnxKUIM2tPfotLYhoqBmcEpQrhVPw061JtmJUo2mI/s320/alphaprotocollogo-700x319.jpg
 legacy_url: https://www.reversim.com/2010/11/085-application-protocols.html
 legacy_path: /2010/11/085-application-protocols

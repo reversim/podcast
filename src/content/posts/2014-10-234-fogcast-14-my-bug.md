@@ -4,7 +4,7 @@ date: 2014-10-23T20:42:00.000Z
 tags:
   - fogcast
 episode: 234
-audio_url: http://m.reversim.com/reversim234_fogcast14.mp3
+audio_url: https://m.reversim.com/reversim234_fogcast14.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTfG_j5ovgdUyBOxTg6JK4ebU_JKS3z4HPfc_9Gx-Q32oNbhSbByG0iR68ieBzdTlqULwMV1hFO8yqTUlQcRL9FmgWtHmkJWYOClVNsUR-HgHPyoLLE5PANhPB9UaHtA3oi9jkkwSZfJ8/s1600/bugzilla-logo-260x300.png
 legacy_url: https://www.reversim.com/2014/10/234-fogcast-14-my-bug.html
 legacy_path: /2014/10/234-fogcast-14-my-bug

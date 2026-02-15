@@ -3,7 +3,7 @@ title: "Summit 2017: The Hall of Shame"
 date: 2018-03-10T22:15:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-The_Hall_of_Shame.mp3
+audio_url: https://m2.reversim.com/summit2017-The_Hall_of_Shame.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-hall-of-shame.html
 legacy_path: /2018/03/summit-2017-hall-of-shame
 ---

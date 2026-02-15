@@ -4,7 +4,7 @@ title: "Summit 2018: After analyzing 30,000 SQL queries, these are the top
 date: 2019-03-24T09:13:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Tomer_Shay.mp3
+audio_url: https://m2.reversim.com/summit2018-Tomer_Shay.mp3
 legacy_url: https://www.reversim.com/2019/03/summit-2018-after-analyzing-30000-sql.html
 legacy_path: /2019/03/summit-2018-after-analyzing-30000-sql
 ---

@@ -2,7 +2,7 @@
 title: 310 FED School with Serge Krul
 date: 2016-09-14T06:44:00.000Z
 episode: 310
-audio_url: http://m2.reversim.com/reversim310_fed-school2.mp3
+audio_url: https://m2.reversim.com/reversim310_fed-school2.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxl081NBg-hgMFh5tcBdF9R_rfteIN-5UW2YMKcEfJnyGWr_CrP9Uee8ZmW5E4WGv4dKM9UfvDcIPGtTOAMpoJWIiHHpz0l0zsy6eiffElnSyK8qFBc32A115Xq17kmUEo1G7Cqu4Ms8U/s200/serge-krul.jpg
 legacy_url: https://www.reversim.com/2016/09/310-fed-school-with-serge-krul.html
 legacy_path: /2016/09/310-fed-school-with-serge-krul

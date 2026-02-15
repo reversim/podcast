@@ -2,7 +2,7 @@
 title: 241 Open Source Legal
 date: 2014-11-30T09:51:00.000Z
 episode: 241
-audio_url: http://m.reversim.com/reversim241_oss-legal.mp3
+audio_url: https://m.reversim.com/reversim241_oss-legal.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguggnn1AuYjrbXdfrXl5kEHQ1O1_sdrZAfDP-4-d2wVRknyTBJtcPekcAz6qt1-cKPu99qkw4H4vPIGSLXTOCb5O0vqhKsztx47_PjzZcbquh1pa_3ZI_kK7VriJh_xfBSUCH9bn1XFpw/s1600/OSDC_Law_balance_open_source.png
 legacy_url: https://www.reversim.com/2014/11/241-open-source-legal.html
 legacy_path: /2014/11/241-open-source-legal

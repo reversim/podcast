@@ -3,7 +3,7 @@ title: "Summit 2018: Breaking into my 3D Printer's Firmware / Uri Shaked"
 date: 2019-01-26T11:54:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Uri_Shaked.mp3
+audio_url: https://m2.reversim.com/summit2018-Uri_Shaked.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-breaking-into-my-3d.html
 legacy_path: /2019/01/summit-2018-breaking-into-my-3d
 ---

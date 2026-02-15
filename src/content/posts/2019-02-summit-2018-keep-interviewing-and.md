@@ -4,7 +4,7 @@ title: "Summit 2018: Keep interviewing and nobody explodes: How WeWork uses
 date: 2019-02-04T16:55:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Yonatan_Bergman.mp3
+audio_url: https://m2.reversim.com/summit2018-Yonatan_Bergman.mp3
 legacy_url: https://www.reversim.com/2019/02/summit-2018-keep-interviewing-and.html
 legacy_path: /2019/02/summit-2018-keep-interviewing-and
 ---
