@@ -316,6 +316,20 @@ img {
 	gap: 0.65rem;
 }
 
+.post-cover-link {
+	display: block;
+	margin: -0.2rem -0.2rem 0.1rem;
+}
+
+.post-cover-image {
+	inline-size: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 1px solid var(--line);
+	background: var(--surface-muted);
+}
+
 .post-card:hover {
 	transform: translateY(-2px);
 	box-shadow: var(--shadow-float);

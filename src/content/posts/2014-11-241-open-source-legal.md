@@ -3,7 +3,7 @@ title: 241 Open Source Legal
 date: 2014-11-30T09:51:00.000Z
 episode: 241
 audio_url: https://m.reversim.com/reversim241_oss-legal.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguggnn1AuYjrbXdfrXl5kEHQ1O1_sdrZAfDP-4-d2wVRknyTBJtcPekcAz6qt1-cKPu99qkw4H4vPIGSLXTOCb5O0vqhKsztx47_PjzZcbquh1pa_3ZI_kK7VriJh_xfBSUCH9bn1XFpw/s1600/OSDC_Law_balance_open_source.png
+cover_image: /images/blogger/35186ed6304aac4fcae9.png
 legacy_url: https://www.reversim.com/2014/11/241-open-source-legal.html
 legacy_path: /2014/11/241-open-source-legal
 ---
@@ -19,7 +19,7 @@ legacy_path: /2014/11/241-open-source-legal
 <div style="text-align: right;">
 <span style="background-color: #fefdfa; color: #333333; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 13px; line-height: 18.2000007629395px;"><br></span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguggnn1AuYjrbXdfrXl5kEHQ1O1_sdrZAfDP-4-d2wVRknyTBJtcPekcAz6qt1-cKPu99qkw4H4vPIGSLXTOCb5O0vqhKsztx47_PjzZcbquh1pa_3ZI_kK7VriJh_xfBSUCH9bn1XFpw/s1600/OSDC_Law_balance_open_source.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="111" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguggnn1AuYjrbXdfrXl5kEHQ1O1_sdrZAfDP-4-d2wVRknyTBJtcPekcAz6qt1-cKPu99qkw4H4vPIGSLXTOCb5O0vqhKsztx47_PjzZcbquh1pa_3ZI_kK7VriJh_xfBSUCH9bn1XFpw/s1600/OSDC_Law_balance_open_source.png" width="200"></a></div>
+<a href="/images/blogger/35186ed6304aac4fcae9.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="111" src="/images/blogger/35186ed6304aac4fcae9.png" width="200"></a></div>
 <div style="text-align: right;">
 <span style="background-color: #fefdfa; color: #333333; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 13px; line-height: 18.2000007629395px;"><br></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

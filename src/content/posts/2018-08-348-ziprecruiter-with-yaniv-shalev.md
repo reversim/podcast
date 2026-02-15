@@ -3,7 +3,7 @@ title: 348 ZipRecruiter with Yaniv Shalev
 date: 2018-08-26T18:35:00.000Z
 episode: 348
 audio_url: https://m2.reversim.com/reversim348-ZipRecruiter.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgq4z4D5r4x4uxbP9QuoRw4ZQCLoqR9gce6Hth97QnTrerQsrg7EgiOxTyDAE0GdLGQUjHll8eliuLZaw6R_Ki0rgfw_bUb4lFTZ_fDOwszUe3583xEPAHkwG1MyNBWjPI2vGKTQZVn9qc/s200/zip.jpg
+cover_image: /images/blogger/2861e292826dc0f81aad.jpg
 legacy_url: https://www.reversim.com/2018/08/348-ziprecruiter-with-yaniv-shalev.html
 legacy_path: /2018/08/348-ziprecruiter-with-yaniv-shalev
 ---
@@ -13,7 +13,7 @@ legacy_path: /2018/08/348-ziprecruiter-with-yaniv-shalev
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">פרק 348 מארחים את יניב של</span><span class=" author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj9vwyz76ze7fz90z97ibrkz68zc6z79zz74zz81zshh1z66zz89zsz82z">י</span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">ו ונדבר על חברת </span><span class=" author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj9vwyz76ze7fz90z97ibrkz68zc6z79zz74zz81zshh1z66zz89zsz82z">ZipRecruiter</span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z"> בה יניב עובד</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgq4z4D5r4x4uxbP9QuoRw4ZQCLoqR9gce6Hth97QnTrerQsrg7EgiOxTyDAE0GdLGQUjHll8eliuLZaw6R_Ki0rgfw_bUb4lFTZ_fDOwszUe3583xEPAHkwG1MyNBWjPI2vGKTQZVn9qc/s1600/zip.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="900" data-original-width="900" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgq4z4D5r4x4uxbP9QuoRw4ZQCLoqR9gce6Hth97QnTrerQsrg7EgiOxTyDAE0GdLGQUjHll8eliuLZaw6R_Ki0rgfw_bUb4lFTZ_fDOwszUe3583xEPAHkwG1MyNBWjPI2vGKTQZVn9qc/s200/zip.jpg" width="200"></a></div>
+<a href="/images/blogger/c6dd1f841f3569e8615c.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="900" data-original-width="900" height="200" src="/images/blogger/2861e292826dc0f81aad.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z"><br></span></div>
 <div dir="rtl" style="text-align: right;">

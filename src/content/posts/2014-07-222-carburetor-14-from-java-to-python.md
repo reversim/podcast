@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 222
 audio_url: https://m.reversim.com/reversim222_carburetor14.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEius1OlZVfkL-q6jYPkkl7HYQnlwXu5WRXN3pOOtYvukiGoGTP4SmJbKbhRPcC50x5LnIfnAUYKJ5qFARhtoJSoB-O445C246Xe0LFGWTs-mu4HxLFZJWIUrQFl4zu58KpdFQFuSzyrASg/s1600/python-vs-java-726367-copy.jpg
+cover_image: /images/blogger/60f7cff1cf50374cfd05.jpg
 legacy_url: https://www.reversim.com/2014/07/222-carburetor-14-from-java-to-python.html
 legacy_path: /2014/07/222-carburetor-14-from-java-to-python
 ---
@@ -16,7 +16,7 @@ legacy_path: /2014/07/222-carburetor-14-from-java-to-python
 <span id="docs-internal-guid-4c66bb75-fe0d-87a4-482f-8ccfaad78f44"></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEius1OlZVfkL-q6jYPkkl7HYQnlwXu5WRXN3pOOtYvukiGoGTP4SmJbKbhRPcC50x5LnIfnAUYKJ5qFARhtoJSoB-O445C246Xe0LFGWTs-mu4HxLFZJWIUrQFl4zu58KpdFQFuSzyrASg/s1600/python-vs-java-726367-copy.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="210" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEius1OlZVfkL-q6jYPkkl7HYQnlwXu5WRXN3pOOtYvukiGoGTP4SmJbKbhRPcC50x5LnIfnAUYKJ5qFARhtoJSoB-O445C246Xe0LFGWTs-mu4HxLFZJWIUrQFl4zu58KpdFQFuSzyrASg/s1600/python-vs-java-726367-copy.jpg" width="320"></a></div>
+<a href="/images/blogger/60f7cff1cf50374cfd05.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="210" src="/images/blogger/60f7cff1cf50374cfd05.jpg" width="320"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">צוות הקרבורטור יחד עם <a href="https://twitter.com/uri1803">אורי</a> ו<a href="https://twitter.com/barakmer">ברק</a> מגיגהספייסס.</span></div>
 </li>

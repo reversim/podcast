@@ -3,7 +3,7 @@ title: "פודקאסט מספר 41: mobile web חלק א"
 date: 2009-10-28T11:27:00.000Z
 episode: 41
 audio_url: https://s3.amazonaws.com/reversim/reversim41_mobile_a.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOg_ytZkWQniEhUhkCbTdidqZKR2U0HbrOiM7lFKxSC2F0yt8HqctJqMRDRbShrOZFBS6EGLyEEm5ukm8o3kutexTON_O2ok0_Ztr7NGNG_YNc3eakFCeBzWq1paCB66vVOFbEpmMcPYo/s400/mobiles_sample.jpg
+cover_image: /images/blogger/445f5ebd047472b65d84.jpg
 legacy_url: https://www.reversim.com/2009/10/41-mobile-web.html
 legacy_path: /2009/10/41-mobile-web
 ---
@@ -11,7 +11,7 @@ legacy_path: /2009/10/41-mobile-web
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOg_ytZkWQniEhUhkCbTdidqZKR2U0HbrOiM7lFKxSC2F0yt8HqctJqMRDRbShrOZFBS6EGLyEEm5ukm8o3kutexTON_O2ok0_Ztr7NGNG_YNc3eakFCeBzWq1paCB66vVOFbEpmMcPYo/s1600-h/mobiles_sample.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5397614579802828402" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOg_ytZkWQniEhUhkCbTdidqZKR2U0HbrOiM7lFKxSC2F0yt8HqctJqMRDRbShrOZFBS6EGLyEEm5ukm8o3kutexTON_O2ok0_Ztr7NGNG_YNc3eakFCeBzWq1paCB66vVOFbEpmMcPYo/s400/mobiles_sample.jpg" style="cursor: hand; cursor: pointer; float: left; height: 377px; margin: 0 10px 10px 0; width: 400px;"></a><br>
+<a href="/images/blogger/d0d8f89dd16ea20657af.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5397614579802828402" src="/images/blogger/445f5ebd047472b65d84.jpg" style="cursor: hand; cursor: pointer; float: left; height: 377px; margin: 0 10px 10px 0; width: 400px;"></a><br>
 <div dir="rtl" style="text-align: right;">
 <br>
 האורחים של רן הפעם (ללא אורי) היו <a href="http://bmobi.net/">איתן בהיר</a> ו<a href="http://ww3.co.il/">ניל</a> הזכור לנו מ<a href="http://www.reversim.com/2009/08/34.html">פרק 34 על נגישות אתרים</a> הנושא הפעם היה הווב של מכשירים ניידים, mobile web, כדוגמת טלפונים.<br>

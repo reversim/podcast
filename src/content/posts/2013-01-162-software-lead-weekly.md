@@ -3,7 +3,7 @@ title: 162 Software Lead Weekly
 date: 2013-01-14T21:48:00.000Z
 episode: 162
 audio_url: https://m.reversim.com/reversim162_sw_lead_weekly.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEUOVV0PVfcgLiPbsbMEwNq0C6nm9Bf3Mv0Mvn8cYJbY1cJil-yy2UBSX4zZFrTsUUsYbv8TrkAQwYoN0A2SBExcVbfaRPHCzNs4yiYlHFMQX8H8z-BLYpf3dC8hnn5EZVuSfd9dwPYBM/s200/leadership(5).jpeg
+cover_image: /images/blogger/949e612ef35b89d8a364.jpg).jpeg
 legacy_url: https://www.reversim.com/2013/01/162-software-lead-weekly.html
 legacy_path: /2013/01/162-software-lead-weekly
 ---
@@ -13,7 +13,7 @@ legacy_path: /2013/01/162-software-lead-weekly
 <div style="text-align: left;">
 “<a href="http://www.searchquotes.com/quotation/Thousands_of_candles_can_be_lit_from_a_single_candle%2C_and_the_life_of_the_candle_will_not_be_shorten/173/">Thousands of candles can be lit from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.</a>”<b id="internal-source-marker_0.0563333525788039"><span style="font-family: Arial;"><span style="font-size: 15px; font-weight: normal; white-space: pre-wrap;"> - </span></span><a href="http://en.wikipedia.org/wiki/Gautama_Buddha" style="font-weight: normal; text-align: start;"><span style="color: #1155cc; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">The Buddha</span></a><span style="font-family: Arial; font-size: 15px; font-weight: normal; text-align: start; vertical-align: baseline; white-space: pre-wrap;">.</span></b><br>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEUOVV0PVfcgLiPbsbMEwNq0C6nm9Bf3Mv0Mvn8cYJbY1cJil-yy2UBSX4zZFrTsUUsYbv8TrkAQwYoN0A2SBExcVbfaRPHCzNs4yiYlHFMQX8H8z-BLYpf3dC8hnn5EZVuSfd9dwPYBM/s1600/leadership(5).jpeg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="143" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEUOVV0PVfcgLiPbsbMEwNq0C6nm9Bf3Mv0Mvn8cYJbY1cJil-yy2UBSX4zZFrTsUUsYbv8TrkAQwYoN0A2SBExcVbfaRPHCzNs4yiYlHFMQX8H8z-BLYpf3dC8hnn5EZVuSfd9dwPYBM/s200/leadership(5).jpeg" width="200"></a></div>
+<a href="/images/blogger/07024c373b0c150a1c8b.jpg).jpeg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="143" src="/images/blogger/949e612ef35b89d8a364.jpg).jpeg" width="200"></a></div>
 <b><span style="font-family: Arial; font-size: 15px; font-weight: normal; text-align: start; vertical-align: baseline; white-space: pre-wrap;"><br></span></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">

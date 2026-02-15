@@ -3,13 +3,13 @@ title: 121 Kickstarting invi
 date: 2011-12-23T13:09:00.000Z
 episode: 121
 audio_url: https://m.reversim.com/reversim121_invi2.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3yxMCZrMgGSH44o6wvCgSu4nwrCbGYSwaL0n0ik_RkFxe6cjrIBSQu1r66XwTruTKLa375ZHo88a2uQMa29GRvApSLEtBXzG4hbztjiJUz-i8Mtc6kB8LI8MXwAJcFtUVUtmX3H4RDVk/s1600/invi+175+px.png
+cover_image: /images/blogger/b88abf1a85328e32ff75.png
 legacy_url: https://www.reversim.com/2011/12/121-kickstarting-invi.html
 legacy_path: /2011/12/121-kickstarting-invi
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" dir="rtl" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3yxMCZrMgGSH44o6wvCgSu4nwrCbGYSwaL0n0ik_RkFxe6cjrIBSQu1r66XwTruTKLa375ZHo88a2uQMa29GRvApSLEtBXzG4hbztjiJUz-i8Mtc6kB8LI8MXwAJcFtUVUtmX3H4RDVk/s1600/invi+175+px.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3yxMCZrMgGSH44o6wvCgSu4nwrCbGYSwaL0n0ik_RkFxe6cjrIBSQu1r66XwTruTKLa375ZHo88a2uQMa29GRvApSLEtBXzG4hbztjiJUz-i8Mtc6kB8LI8MXwAJcFtUVUtmX3H4RDVk/s1600/invi+175+px.png"></a></div><div dir="rtl" style="text-align: right;">החלטנו לזרום עם פרק מעכשיו לעכשיו ולהקליט על פרק על מה שרן עובר עם ההתחלה של</div><div dir="rtl" style="text-align: right;"><a href="http://www.invi.com/"> invi.</a></div><ul dir="rtl" style="text-align: right;"><li>רן סיפר על <a href="http://www.invi.com/">invi</a> ומה היא מתעתדת לעשות. בגדול... "למי בא באולינג? "</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" dir="rtl" style="clear: both; text-align: center;"><a href="/images/blogger/b88abf1a85328e32ff75.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/b88abf1a85328e32ff75.png"></a></div><div dir="rtl" style="text-align: right;">החלטנו לזרום עם פרק מעכשיו לעכשיו ולהקליט על פרק על מה שרן עובר עם ההתחלה של</div><div dir="rtl" style="text-align: right;"><a href="http://www.invi.com/"> invi.</a></div><ul dir="rtl" style="text-align: right;"><li>רן סיפר על <a href="http://www.invi.com/">invi</a> ומה היא מתעתדת לעשות. בגדול... "למי בא באולינג? "</li>
 <li>איך הולך כרגע? נרשמים? איך אנשים יודעים על זה?</li>
 <li>קהילות ומעגלים מקומיים - תנאי הכרחי לאפליקציה הזו. מה התנאי ההכרחי לאפליקציה שלך?</li>
 <li>אימות הצורך (ואלידציה)  - האם לפנות למי שאוהב אותנו או לעולם כולו? והסיפור של <a href="http://blog.outbrain.com/2006/09/dont-read-this-post.html">הואלידציה של אאוטבריין</a>.</li>

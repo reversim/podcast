@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 289
 audio_url: https://m2.reversim.com/reversim289_Fogcast-22-Graph-Databases.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDV0I-XVM8GdNQuAOuLqsgh6Ezn57QHGYBa_jJSYzqe7SgOXbz3wfcgnX0dw47XsXe0Ix4-dgSv_2ohs0QldIBVfXLrw-qaTTiD7W9IRtl1kMC2KSAfdNwXnUrFUVWovWmhwOSds3H4Lw/s200/profile.png
+cover_image: /images/blogger/17eee60d8cbe1b31c022.png
 legacy_url: https://www.reversim.com/2016/02/289-fogcast-22-graph-databases.html
 legacy_path: /2016/02/289-fogcast-22-graph-databases
 ---
@@ -14,7 +14,7 @@ legacy_path: /2016/02/289-fogcast-22-graph-databases
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDV0I-XVM8GdNQuAOuLqsgh6Ezn57QHGYBa_jJSYzqe7SgOXbz3wfcgnX0dw47XsXe0Ix4-dgSv_2ohs0QldIBVfXLrw-qaTTiD7W9IRtl1kMC2KSAfdNwXnUrFUVWovWmhwOSds3H4Lw/s1600/profile.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDV0I-XVM8GdNQuAOuLqsgh6Ezn57QHGYBa_jJSYzqe7SgOXbz3wfcgnX0dw47XsXe0Ix4-dgSv_2ohs0QldIBVfXLrw-qaTTiD7W9IRtl1kMC2KSAfdNwXnUrFUVWovWmhwOSds3H4Lw/s200/profile.png" width="200"></a></div>
+<a href="/images/blogger/82575b4b34b74d6741eb.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/17eee60d8cbe1b31c022.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">פרק נוסף של רברסים פלטפורמה, והפעם פרק מס' 289, ופוגקאסט מס' 22, שבו מתארח </span><a href="https://www.linkedin.com/in/liorsion" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">ליאור שיאון</span></a><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">. בפוגקאסט אנחנו מתעמקים בנושא אחד ומעמיקים בו. היום, ערב השנה האזרחית החדשה, &nbsp;אנחנו נדבר על בסיסי נתונים של גרפים (Graph Databases), נושא שיצא לנו להתעסק איתו באופן אישי בחודשים האחרונים. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

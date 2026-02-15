@@ -3,7 +3,7 @@ title: 224 ASP.NET vNext
 date: 2014-07-19T19:55:00.000Z
 episode: 224
 audio_url: https://m.reversim.com/reversim224_asp_vnext.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqj1tDDP0BA3TOUcMF8lJyTpYPL1YLr-ZKzT0YRzo7Aj8pSHGFqfhEIUG-G67esfUsuPvI1Qohc4G34O-Tm-GpB34zlL3_vEpLrlRzUCI1Yum-FFzHLZnXid0qLVzk9Mt2L9HKL_hIUDs/s1600/Highlights_TechEd_2014_ASP.Net_vNext.png
+cover_image: /images/blogger/33c8c92b7a621311d450.png
 legacy_url: https://www.reversim.com/2014/07/224-aspnet-vnext.html
 legacy_path: /2014/07/224-aspnet-vnext
 ---
@@ -11,7 +11,7 @@ legacy_path: /2014/07/224-aspnet-vnext
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqj1tDDP0BA3TOUcMF8lJyTpYPL1YLr-ZKzT0YRzo7Aj8pSHGFqfhEIUG-G67esfUsuPvI1Qohc4G34O-Tm-GpB34zlL3_vEpLrlRzUCI1Yum-FFzHLZnXid0qLVzk9Mt2L9HKL_hIUDs/s1600/Highlights_TechEd_2014_ASP.Net_vNext.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="198" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqj1tDDP0BA3TOUcMF8lJyTpYPL1YLr-ZKzT0YRzo7Aj8pSHGFqfhEIUG-G67esfUsuPvI1Qohc4G34O-Tm-GpB34zlL3_vEpLrlRzUCI1Yum-FFzHLZnXid0qLVzk9Mt2L9HKL_hIUDs/s1600/Highlights_TechEd_2014_ASP.Net_vNext.png" width="200"></a></div>
+<a href="/images/blogger/33c8c92b7a621311d450.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="198" src="/images/blogger/33c8c92b7a621311d450.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">פרק 224 - 11 ליוני 2014 - </span><a href="http://www.asp.net/vnext" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">ASP.NET vNext</span></a></div>
 <div dir="rtl" style="text-align: right;">

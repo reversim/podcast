@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 209
 audio_url: https://m.reversim.com/reversim209_carburetor12.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPxIQ97mY0xQLs0Vg2JAcHNMZddlnSS6pURUgQ3WdWlIUwLlp2jhs616jTbfoJkl6Lha70sHFZ-U0PnAcHLKjvAVBt_JLaJUkl8_I7ACiGcxQGe5s_jqaVoVrLxEiGcV3a2rmHR4RCBr4/s1600/orchestra.png
+cover_image: /images/blogger/10f08dc3006831d536c3.png
 legacy_url: https://www.reversim.com/2014/03/209-carburetor-12-devops-orchestration.html
 legacy_path: /2014/03/209-carburetor-12-devops-orchestration
 ---
@@ -14,7 +14,7 @@ legacy_path: /2014/03/209-carburetor-12-devops-orchestration
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPxIQ97mY0xQLs0Vg2JAcHNMZddlnSS6pURUgQ3WdWlIUwLlp2jhs616jTbfoJkl6Lha70sHFZ-U0PnAcHLKjvAVBt_JLaJUkl8_I7ACiGcxQGe5s_jqaVoVrLxEiGcV3a2rmHR4RCBr4/s1600/orchestra.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="171" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPxIQ97mY0xQLs0Vg2JAcHNMZddlnSS6pURUgQ3WdWlIUwLlp2jhs616jTbfoJkl6Lha70sHFZ-U0PnAcHLKjvAVBt_JLaJUkl8_I7ACiGcxQGe5s_jqaVoVrLxEiGcV3a2rmHR4RCBr4/s1600/orchestra.png" width="200"></a></div>
+<a href="/images/blogger/10f08dc3006831d536c3.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="171" src="/images/blogger/10f08dc3006831d536c3.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">במוסך הוירטואלי: נתי, אורי ורן</span></div>
 </li>

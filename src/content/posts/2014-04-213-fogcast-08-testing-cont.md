@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 213
 audio_url: https://m.reversim.com/reversim213_fogcast08.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg2O_xoip8wVFB11whFfgEpnlcypZ13mQW-JQIKqOLUZtiYoMfx5nalSlRL6Zka8zbeMiYH01gJ04BHOPelu6T3X_Nv5AvCRMAWKuQtgrw7QgMSCwIfngLTjUqsgJO6sa5UoYulzyXHm4/s1600/ClearingTheFog.jpg
+cover_image: /images/blogger/f96f60c74dacceeea100.jpg
 legacy_url: https://www.reversim.com/2014/04/213-fogcast-08-testing-cont.html
 legacy_path: /2014/04/213-fogcast-08-testing-cont
 ---
@@ -16,7 +16,7 @@ legacy_path: /2014/04/213-fogcast-08-testing-cont
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ליאור ורן - Testing, continued</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg2O_xoip8wVFB11whFfgEpnlcypZ13mQW-JQIKqOLUZtiYoMfx5nalSlRL6Zka8zbeMiYH01gJ04BHOPelu6T3X_Nv5AvCRMAWKuQtgrw7QgMSCwIfngLTjUqsgJO6sa5UoYulzyXHm4/s1600/ClearingTheFog.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg2O_xoip8wVFB11whFfgEpnlcypZ13mQW-JQIKqOLUZtiYoMfx5nalSlRL6Zka8zbeMiYH01gJ04BHOPelu6T3X_Nv5AvCRMAWKuQtgrw7QgMSCwIfngLTjUqsgJO6sa5UoYulzyXHm4/s1600/ClearingTheFog.jpg" width="200"></a></div>
+<a href="/images/blogger/f96f60c74dacceeea100.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/images/blogger/f96f60c74dacceeea100.jpg" width="200"></a></div>
 </li>
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אילו סוגי בדיקות קיימים</span></div>

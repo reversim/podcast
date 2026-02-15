@@ -3,7 +3,7 @@ title: 269 Analytics and Big Data with Google Cloud
 date: 2015-07-26T15:02:00.000Z
 episode: 269
 audio_url: https://m.reversim.com/reversim269_cloud-analytics-google.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEBD-ouOvqQNwFlhpPbGJiU9GVmclFtL4scfZJkIQ6rbmoSVmWJn3Io9l-baVIX0UdA3gbw9SPUZZP7kIZxIXGF-0YBO0RxW_p8saWKFeEHNSMf3q5u-jkUaHicN5dJRqgEZdrfRvirMM/s200/gcp-logo-3.png
+cover_image: /images/blogger/69b86b5f33fc9ad7e592.png
 legacy_url: https://www.reversim.com/2015/07/269-analytics-and-big-data-with-google.html
 legacy_path: /2015/07/269-analytics-and-big-data-with-google
 ---
@@ -11,7 +11,7 @@ legacy_path: /2015/07/269-analytics-and-big-data-with-google
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEBD-ouOvqQNwFlhpPbGJiU9GVmclFtL4scfZJkIQ6rbmoSVmWJn3Io9l-baVIX0UdA3gbw9SPUZZP7kIZxIXGF-0YBO0RxW_p8saWKFeEHNSMf3q5u-jkUaHicN5dJRqgEZdrfRvirMM/s1600/gcp-logo-3.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="123" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEBD-ouOvqQNwFlhpPbGJiU9GVmclFtL4scfZJkIQ6rbmoSVmWJn3Io9l-baVIX0UdA3gbw9SPUZZP7kIZxIXGF-0YBO0RxW_p8saWKFeEHNSMf3q5u-jkUaHicN5dJRqgEZdrfRvirMM/s200/gcp-logo-3.png" width="200"></a></div>
+<a href="/images/blogger/0dd6c463d83b2916de2c.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="123" src="/images/blogger/69b86b5f33fc9ad7e592.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">פרק נוסף בסדרה על ספקי ענן (Cloud Vendors) &nbsp;הסוקרת את פלטפורמות הענן הקיימות היום והיתרונות שלהן למפתחים. נושא התוכנית הפעם: ביג דאטה אנליטיקס. כרגיל בתוכנית המשתתפים הקבועים,</span><a href="https://www.linkedin.com/in/natishalom" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;"> נתי שלום</span></a><span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> ו</span><a href="https://www.linkedin.com/pub/ori-lahav/2/45b/749" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">אורי להב</span></a><span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">.</span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

@@ -3,7 +3,7 @@ title: 280 Cloud Vendor Series - HA/HR with AWS
 date: 2015-10-26T20:45:00.000Z
 episode: 290
 audio_url: https://m2.reversim.com/reversim280_aws-HA-DR.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj71rvoVWHdc-_GLQid9TCriILWwfWmbXWLlGPu-4jkbTRcvGEFZ_WNweIHTbwSOJAvWVsPDuXkVT_MGRj-kmwgl5T6LM8RlDl-W0VkcsBThV6Q86H5fSPho4Z7Cj0w_8rqVxjwl2OsgzA/s200/aws-logo-large.png
+cover_image: /images/blogger/46b8a8ce1e33da058706.png
 legacy_url: https://www.reversim.com/2015/10/290-cloud-vendor-series-hahr-with-aws.html
 legacy_path: /2015/10/290-cloud-vendor-series-hahr-with-aws
 ---
@@ -11,7 +11,7 @@ legacy_path: /2015/10/290-cloud-vendor-series-hahr-with-aws
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj71rvoVWHdc-_GLQid9TCriILWwfWmbXWLlGPu-4jkbTRcvGEFZ_WNweIHTbwSOJAvWVsPDuXkVT_MGRj-kmwgl5T6LM8RlDl-W0VkcsBThV6Q86H5fSPho4Z7Cj0w_8rqVxjwl2OsgzA/s1600/aws-logo-large.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="73" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj71rvoVWHdc-_GLQid9TCriILWwfWmbXWLlGPu-4jkbTRcvGEFZ_WNweIHTbwSOJAvWVsPDuXkVT_MGRj-kmwgl5T6LM8RlDl-W0VkcsBThV6Q86H5fSPho4Z7Cj0w_8rqVxjwl2OsgzA/s200/aws-logo-large.png" width="200"></a></div>
+<a href="/images/blogger/c41e039fca45c2790cfa.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="73" src="/images/blogger/46b8a8ce1e33da058706.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">פרק נוסף שלנו בסדרת ספקי שירותי הענן. דיברנו על גוגל, אמזון, Digital Ocean ואחרים. והיום (25/10/15) אנחנו מדברים שוב על AWS. ביחד עם </span><a href="https://www.linkedin.com/pub/ori-lahav/2/45b/749" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">אורי להב</span></a><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> וגיא ארנסט. והיום אנחנו נדון ב- High Availability ו-Disaster Recovery. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

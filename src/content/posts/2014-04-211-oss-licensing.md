@@ -3,7 +3,7 @@ title: 211 OSS Licensing
 date: 2014-04-07T21:00:00.000Z
 episode: 211
 audio_url: https://m.reversim.com/reversim211_osslicense.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXomKZxaf-CyNOfr23T7grZVyeGO_P2IHUw1jk_0pQzZbTlw2aGihALlxV-yKDBbUD83FbZkwFJiUd9iHgCQoa87nnrPMJedQbKSevP5rWtS7wkB6y28WkxMIHdz6FjoaCVvgQAIXDKtM/s3200/288px-Opensource.svg.png
+cover_image: /images/blogger/db207bcad10943d24a19.png
 legacy_url: https://www.reversim.com/2014/04/211-oss-licensing.html
 legacy_path: /2014/04/211-oss-licensing
 ---
@@ -14,7 +14,7 @@ legacy_path: /2014/04/211-oss-licensing
 <span style="font-family: Arial; font-size: 13px; line-height: 1.15; white-space: pre-wrap;">אורי ורן מארחים את </span><a href="http://www.linkedin.com/profile/view?id=3417549" style="font-family: Arial; font-size: 13px; line-height: 1.15; white-space: pre-wrap;">שרון</a></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXomKZxaf-CyNOfr23T7grZVyeGO_P2IHUw1jk_0pQzZbTlw2aGihALlxV-yKDBbUD83FbZkwFJiUd9iHgCQoa87nnrPMJedQbKSevP5rWtS7wkB6y28WkxMIHdz6FjoaCVvgQAIXDKtM/s3200/288px-Opensource.svg.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="179" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXomKZxaf-CyNOfr23T7grZVyeGO_P2IHUw1jk_0pQzZbTlw2aGihALlxV-yKDBbUD83FbZkwFJiUd9iHgCQoa87nnrPMJedQbKSevP5rWtS7wkB6y28WkxMIHdz6FjoaCVvgQAIXDKtM/s3200/288px-Opensource.svg.png" width="200"></a></div>
+<a href="/images/blogger/db207bcad10943d24a19.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="179" src="/images/blogger/db207bcad10943d24a19.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אז איך בוחרים את הרשיון המתאים לפרויקט שלכם? ומה ההבדלים בין הרשיונות?</span></div>
 </li>

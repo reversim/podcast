@@ -3,14 +3,14 @@ title: 113 ChromeOS with Ido Green
 date: 2011-10-29T21:14:00.000Z
 episode: 113
 audio_url: https://m.reversim.com/reversim113_chorme_os_ido_green.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivMo6IJ5SlTyOYipCluA2XphuKjEmQetF1N5eCHt9jmOrLs0NsIHpukbrKqRr8I9_mS5kv4er9rWBRlK5F44XzbKtKuAkWisqgKZ9j9lM7PpZhUahlr4ojDW-tcOeuAYjOmg0yWlqQGxo/s200/acer-chrome-os.jpg
+cover_image: /images/blogger/72b14f70f9f05d714be5.jpg
 legacy_url: https://www.reversim.com/2011/10/113-chromeos-with-ido-green.html
 legacy_path: /2011/10/113-chromeos-with-ido-green
 ---
 
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><br>
-</div><div dir="rtl" style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivMo6IJ5SlTyOYipCluA2XphuKjEmQetF1N5eCHt9jmOrLs0NsIHpukbrKqRr8I9_mS5kv4er9rWBRlK5F44XzbKtKuAkWisqgKZ9j9lM7PpZhUahlr4ojDW-tcOeuAYjOmg0yWlqQGxo/s1600/acer-chrome-os.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="135" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivMo6IJ5SlTyOYipCluA2XphuKjEmQetF1N5eCHt9jmOrLs0NsIHpukbrKqRr8I9_mS5kv4er9rWBRlK5F44XzbKtKuAkWisqgKZ9j9lM7PpZhUahlr4ojDW-tcOeuAYjOmg0yWlqQGxo/s200/acer-chrome-os.jpg" width="200"></a></div>בפרק זה המשכנו את השיחה עם <a href="http://greenido.wordpress.com/">עידו גרין</a> <a href="//www.google.com/search?q=are+you+serious???&amp;tbm=isch">מגוגל</a>, אותה התחלנו ב<a href="http://www.reversim.com/2011/10/111-html5-with-ido-green.html">פרק מספר 111</a>&nbsp;והפעם התמקדנו במערכת ההפעלה החדשה <a href="//www.google.com/chromebook/">CromeOS</a>.</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>עידו סיפר קצת על הסביבה העסקית שמסביב למערכת ההפעלה והחומרה ולקונספט בכלל</li>
+</div><div dir="rtl" style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/188ff7f0eb321c919217.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="135" src="/images/blogger/72b14f70f9f05d714be5.jpg" width="200"></a></div>בפרק זה המשכנו את השיחה עם <a href="http://greenido.wordpress.com/">עידו גרין</a> <a href="//www.google.com/search?q=are+you+serious???&amp;tbm=isch">מגוגל</a>, אותה התחלנו ב<a href="http://www.reversim.com/2011/10/111-html5-with-ido-green.html">פרק מספר 111</a>&nbsp;והפעם התמקדנו במערכת ההפעלה החדשה <a href="//www.google.com/chromebook/">CromeOS</a>.</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>עידו סיפר קצת על הסביבה העסקית שמסביב למערכת ההפעלה והחומרה ולקונספט בכלל</li>
 <li>אילו טכנולוגיות צריך מפתח להכיר על מנת להיות פרודוקטיבי על מערכת הפעלה זו?</li>
 <li>כפי שפעם שעברה הבטחנו שנדבר על HTML5 ובסופו של דבר כיסינו גם את ChromeOS, כך גם הפעם הבטחנו ChromeOS וחרגנו לא מעט ל HTML5. אבל אם תאזינו היטב תודו ששני הנושאים כל כך קשורים שאי-אפשר שלא.</li>
 <li>עידו סיפק המון טיפים וקישורים מאוד טובים לכלי פיתוח וכדו' ואת כולם נפרט כאן למטה.</li>

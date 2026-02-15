@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 206
 audio_url: https://m.reversim.com/reversim206_fogcast04.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg2O_xoip8wVFB11whFfgEpnlcypZ13mQW-JQIKqOLUZtiYoMfx5nalSlRL6Zka8zbeMiYH01gJ04BHOPelu6T3X_Nv5AvCRMAWKuQtgrw7QgMSCwIfngLTjUqsgJO6sa5UoYulzyXHm4/s1600/ClearingTheFog.jpg
+cover_image: /images/blogger/f96f60c74dacceeea100.jpg
 legacy_url: https://www.reversim.com/2014/03/206-fogcast-04-selecting-technologies.html
 legacy_path: /2014/03/206-fogcast-04-selecting-technologies
 ---
@@ -13,7 +13,7 @@ legacy_path: /2014/03/206-fogcast-04-selecting-technologies
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg2O_xoip8wVFB11whFfgEpnlcypZ13mQW-JQIKqOLUZtiYoMfx5nalSlRL6Zka8zbeMiYH01gJ04BHOPelu6T3X_Nv5AvCRMAWKuQtgrw7QgMSCwIfngLTjUqsgJO6sa5UoYulzyXHm4/s1600/ClearingTheFog.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg2O_xoip8wVFB11whFfgEpnlcypZ13mQW-JQIKqOLUZtiYoMfx5nalSlRL6Zka8zbeMiYH01gJ04BHOPelu6T3X_Nv5AvCRMAWKuQtgrw7QgMSCwIfngLTjUqsgJO6sa5UoYulzyXHm4/s1600/ClearingTheFog.jpg" width="200"></a></div>
+<a href="/images/blogger/f96f60c74dacceeea100.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/images/blogger/f96f60c74dacceeea100.jpg" width="200"></a></div>
 <div>
 <br></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

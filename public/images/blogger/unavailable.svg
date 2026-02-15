@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Image unavailable">
+  <rect width="800" height="450" fill="#eef2f7"/>
+  <g fill="none" stroke="#93a4bd" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="240" y="130" width="320" height="190" rx="16"/>
+    <path d="M280 280l70-70 55 55 45-45 70 70"/>
+    <circle cx="335" cy="185" r="20"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" font-family="IBM Plex Sans Hebrew, Assistant, sans-serif" font-size="28" fill="#4f627f">Image unavailable</text>
+</svg>

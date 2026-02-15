@@ -7,7 +7,7 @@ tags:
   - scalability
 episode: 32
 audio_url: https://m2.reversim.com/reversim13.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuAGEfpEU57_DJiAiM9gtxvo26VANFqeVviXLAP_hkY8URlxJcxvho6mzOU6BZXDKDU-JWwMD6CiVH8rJ8MGveh7WpNwCMUH0QhqUKdzMwU39IS_5GiPb4s1HFj4br6SY97hclrG4r8Uw/s320/scalability.jpg
+cover_image: /images/blogger/d3f2ebad32b8c4c84d0e.jpg
 legacy_url: https://www.reversim.com/2009/04/32-scalability.html
 legacy_path: /2009/04/32-scalability
 ---
@@ -18,7 +18,7 @@ legacy_path: /2009/04/32-scalability
 <br>
 בפרק זה אירח אורי את ניר יפת, האיש שאחראי על <span style="font-weight: bold;">scalability</span> ב <a href="http://shopping.com/">shopping.com</a> בעודו מבקר בסן-פרנסיסקו.<br>
 גם ניר מכיר את מתודולוגיית הרוורס עם פלטפורמה עוד מתקופתו במושב. ניר הוא בעל נסיון נרחב בנושא והשיחה היתה מרתקת.<br>
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuAGEfpEU57_DJiAiM9gtxvo26VANFqeVviXLAP_hkY8URlxJcxvho6mzOU6BZXDKDU-JWwMD6CiVH8rJ8MGveh7WpNwCMUH0QhqUKdzMwU39IS_5GiPb4s1HFj4br6SY97hclrG4r8Uw/s1600-h/scalability.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5320470903375548178" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuAGEfpEU57_DJiAiM9gtxvo26VANFqeVviXLAP_hkY8URlxJcxvho6mzOU6BZXDKDU-JWwMD6CiVH8rJ8MGveh7WpNwCMUH0QhqUKdzMwU39IS_5GiPb4s1HFj4br6SY97hclrG4r8Uw/s320/scalability.jpg" style="cursor: pointer; height: 213px; width: 320px;"></a><br>
+<a href="/images/blogger/630c43555e784bb1162d.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5320470903375548178" src="/images/blogger/d3f2ebad32b8c4c84d0e.jpg" style="cursor: pointer; height: 213px; width: 320px;"></a><br>
 <br>
 <ul><br>
 <li>מה הם צרכי הגידול? נתונים, משתמשים ואלגוריתם</li>

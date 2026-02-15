@@ -3,7 +3,7 @@ title: 287 Search, with Ronny Lempel
 date: 2016-01-10T21:34:00.000Z
 episode: 287
 audio_url: https://m2.reversim.com/reversim287_Search-Ronny-Lempel.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLOE7v18B7ToTx9FJ-FiVn_UbDYETEiNR7C6EuvL47i4TNKWphe-zRDWI9pDVN_AV3urRoNVCWxQRXmOfszZSIuZh5iNLQBVxRac9VFgKWjtH9zQXJOi-R45KC8A3Uh91GjebHEWchWmM/s200/512.png
+cover_image: /images/blogger/dce33d0bf80880e8055c.png
 legacy_url: https://www.reversim.com/2016/01/287-search-with-ronny-lempel.html
 legacy_path: /2016/01/287-search-with-ronny-lempel
 ---
@@ -12,7 +12,7 @@ legacy_path: /2016/01/287-search-with-ronny-lempel
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLOE7v18B7ToTx9FJ-FiVn_UbDYETEiNR7C6EuvL47i4TNKWphe-zRDWI9pDVN_AV3urRoNVCWxQRXmOfszZSIuZh5iNLQBVxRac9VFgKWjtH9zQXJOi-R45KC8A3Uh91GjebHEWchWmM/s1600/512.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLOE7v18B7ToTx9FJ-FiVn_UbDYETEiNR7C6EuvL47i4TNKWphe-zRDWI9pDVN_AV3urRoNVCWxQRXmOfszZSIuZh5iNLQBVxRac9VFgKWjtH9zQXJOi-R45KC8A3Uh91GjebHEWchWmM/s200/512.png" width="200"></a></div>
+<a href="/images/blogger/0f3a3dde1f5c2b2c89c5.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/dce33d0bf80880e8055c.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפרק מס' 287, באולפן המשוכלל שלנו ומשדרים היישר מפרדס-חנה. היום נערוך שיחה מרתקת על תחום החיפוש. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

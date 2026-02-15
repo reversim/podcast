@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 217
 audio_url: https://m.reversim.com/reversim217_fogcast09.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8Ettb-ZpenHMdR064Wee-4GJvii3t9WcI1SatrvqMfnek7uwIoh4CIjOjiF36NeBHKXWRi-5k1a6Tc3itEnyfxSTenmTYSXRSCyLMISEx_rfvcwuab-S00Z2_xEofam9-SIMFyEauar0/s1600/fullstacklogo.png
+cover_image: /images/blogger/9eb8d748b5c4193471d6.png
 legacy_url: https://www.reversim.com/2014/05/217-fogcast-09-fullstack-devs.html
 legacy_path: /2014/05/217-fogcast-09-fullstack-devs
 ---
@@ -14,7 +14,7 @@ legacy_path: /2014/05/217-fogcast-09-fullstack-devs
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8Ettb-ZpenHMdR064Wee-4GJvii3t9WcI1SatrvqMfnek7uwIoh4CIjOjiF36NeBHKXWRi-5k1a6Tc3itEnyfxSTenmTYSXRSCyLMISEx_rfvcwuab-S00Z2_xEofam9-SIMFyEauar0/s1600/fullstacklogo.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="66" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8Ettb-ZpenHMdR064Wee-4GJvii3t9WcI1SatrvqMfnek7uwIoh4CIjOjiF36NeBHKXWRi-5k1a6Tc3itEnyfxSTenmTYSXRSCyLMISEx_rfvcwuab-S00Z2_xEofam9-SIMFyEauar0/s1600/fullstacklogo.png" width="200"></a></div>
+<a href="/images/blogger/9eb8d748b5c4193471d6.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="66" src="/images/blogger/9eb8d748b5c4193471d6.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ליאור ורן דנים בפיתוח FullStack - יתרונות וחסרונות</span></div>
 </li>

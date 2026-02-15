@@ -3,7 +3,7 @@ title: 301 Where do developers go at 40 or 50?
 date: 2016-05-09T18:19:00.000Z
 episode: 301
 audio_url: https://m2.reversim.com/reversim301-40-50.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9Zzd5CYrrJ12myA7uy_cIPnPSc1aPyc16-3-j2AnGw3EI8Ys-TC_HtHZzs1jiXSW93CFtWTfMj0uVKnesjcWuBUxQFchPpBHPt4lb1Am1j6WaHXe5KhSwciAQOEjTXFTAoV-eWfPbmaM/s200/tooOldToCode.jpg
+cover_image: /images/blogger/a893cc1e4e8208815e9d.jpg
 legacy_url: https://www.reversim.com/2016/05/301-where-do-developers-go-at-40-or-50.html
 legacy_path: /2016/05/301-where-do-developers-go-at-40-or-50
 ---
@@ -14,7 +14,7 @@ legacy_path: /2016/05/301-where-do-developers-go-at-40-or-50
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפודקאסט 301, עם</span><a href="https://www.linkedin.com/in/urilavi" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;"> אורי לביא</span></a><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">, בפרק שנולד משאלה של עקיבא בלוך: "מה קורה לאנשים בתעשייה בגיל 40-50?"</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9Zzd5CYrrJ12myA7uy_cIPnPSc1aPyc16-3-j2AnGw3EI8Ys-TC_HtHZzs1jiXSW93CFtWTfMj0uVKnesjcWuBUxQFchPpBHPt4lb1Am1j6WaHXe5KhSwciAQOEjTXFTAoV-eWfPbmaM/s1600/tooOldToCode.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="161" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9Zzd5CYrrJ12myA7uy_cIPnPSc1aPyc16-3-j2AnGw3EI8Ys-TC_HtHZzs1jiXSW93CFtWTfMj0uVKnesjcWuBUxQFchPpBHPt4lb1Am1j6WaHXe5KhSwciAQOEjTXFTAoV-eWfPbmaM/s200/tooOldToCode.jpg" width="200"></a></div>
+<a href="/images/blogger/4d639072a50e5cb0f711.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="161" src="/images/blogger/a893cc1e4e8208815e9d.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-7c9dc46d-96bc-2227-4a63-0199e5e9a86a" style="font-weight: normal;"><br></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

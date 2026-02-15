@@ -3,13 +3,13 @@ title: 058 אבטחת מידע בתכנה  software security
 date: 2010-02-14T12:21:00.000Z
 episode: 58
 audio_url: https://m.reversim.com/reversim58_sec.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-bMZK9XdYai1igBBExbG_a26ivTCFIdkFdELPApAiPdjxft8qdSXbu0CD9sfgV94U-V3qBYHc5_NQJWa3KMThwgehe7fQYfkSJmQ1XDfQIrdMPLG_xgcylAOyiL_9ukZS_R3BZ8qTaiM/s320/white_hat_hacker_cartoon.jpg
+cover_image: /images/blogger/8a16952b80f1621b21cd.jpg
 legacy_url: https://www.reversim.com/2010/02/058-software-security.html
 legacy_path: /2010/02/058-software-security
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-bMZK9XdYai1igBBExbG_a26ivTCFIdkFdELPApAiPdjxft8qdSXbu0CD9sfgV94U-V3qBYHc5_NQJWa3KMThwgehe7fQYfkSJmQ1XDfQIrdMPLG_xgcylAOyiL_9ukZS_R3BZ8qTaiM/s1600-h/white_hat_hacker_cartoon.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-bMZK9XdYai1igBBExbG_a26ivTCFIdkFdELPApAiPdjxft8qdSXbu0CD9sfgV94U-V3qBYHc5_NQJWa3KMThwgehe7fQYfkSJmQ1XDfQIrdMPLG_xgcylAOyiL_9ukZS_R3BZ8qTaiM/s320/white_hat_hacker_cartoon.jpg"></a></div><div dir="rtl" style="text-align: right;">הפעם אירחנו את <a href="http://il.linkedin.com/in/erezmetula">ארז מטולה</a>, מומחה לאבטחת מידע ופיתוח קוד מאובטח.</div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>ארז הציג את עצמו ואת בעיית ההגנה של מערכות פתוחות</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/e6f24b3e294e10f673c2.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/8a16952b80f1621b21cd.jpg"></a></div><div dir="rtl" style="text-align: right;">הפעם אירחנו את <a href="http://il.linkedin.com/in/erezmetula">ארז מטולה</a>, מומחה לאבטחת מידע ופיתוח קוד מאובטח.</div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>ארז הציג את עצמו ואת בעיית ההגנה של מערכות פתוחות</li>
 <li>שיטת&nbsp;<a href="http://en.wikipedia.org/wiki/Defense_in_Depth_%28computing%29" target="_blank">מעגלי האבטחה</a>&nbsp;- כל הגנה היא ההגנה האחרונה</li>
 <li>ביצוע&nbsp;<a href="http://en.wikipedia.org/wiki/Penetration_test" target="_blank">בדיקות חדירה</a>&nbsp;(בדיקות חוסן), בעיות טכניות ובעיות לוגיות</li>
 <li>איך עובדים מוצרי סריקה לגילוי בעיות אבטחה</li>

@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 227
 audio_url: https://m.reversim.com/reversim227_carburetor15.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgr2RR2E5pg3TRPYD8db9osMHgu7JHgNI7GNVSEn1ixoQJYD1hUEs_C2MQRXq3olqQj7syRNtJuNDN-w_0aiMPGvNpBzb6CLKWfnSM_bBcMJpt993tJ0Q6_KmFMct0lbyBXIVh4fCrr3nW/s1600/adrian_cockcroft.png
+cover_image: /images/blogger/ca83aa7860a00949bffa.png
 legacy_url: https://www.reversim.com/2014/08/227-carburator-15-adrian-cockcroft.html
 legacy_path: /2014/08/227-carburator-15-adrian-cockcroft
 ---
@@ -13,7 +13,7 @@ legacy_path: /2014/08/227-carburator-15-adrian-cockcroft
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgr2RR2E5pg3TRPYD8db9osMHgu7JHgNI7GNVSEn1ixoQJYD1hUEs_C2MQRXq3olqQj7syRNtJuNDN-w_0aiMPGvNpBzb6CLKWfnSM_bBcMJpt993tJ0Q6_KmFMct0lbyBXIVh4fCrr3nW/s1600/adrian_cockcroft.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgr2RR2E5pg3TRPYD8db9osMHgu7JHgNI7GNVSEn1ixoQJYD1hUEs_C2MQRXq3olqQj7syRNtJuNDN-w_0aiMPGvNpBzb6CLKWfnSM_bBcMJpt993tJ0Q6_KmFMct0lbyBXIVh4fCrr3nW/s1600/adrian_cockcroft.png" width="200"></a></div>
+<a href="/images/blogger/ca83aa7860a00949bffa.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/ca83aa7860a00949bffa.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <span style="font-family: Arial;"><span style="font-size: 15px; line-height: 17.25px; white-space: pre-wrap;"><br></span></span></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

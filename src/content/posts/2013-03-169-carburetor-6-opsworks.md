@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 169
 audio_url: https://m.reversim.com/reversim169_carburetor6.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvZ-TmeC52IrZ_bKZApI3qYRWCJlPbBSeIikbQ5plFl4GWnDkO8YWN5u_Dz7d0rFB4hwNWiF3k0rKma8rWiCfBa5MO_nqmdsgG3SWSjhT0qu5ogTY-wKbH5WrsesAdQK3yIDejA1uoh4/s1600/Screenshot_3_17_13_5_47_PM.png
+cover_image: /images/blogger/4a1773846732018872fa.png
 legacy_url: https://www.reversim.com/2013/03/169-carburetor-6-opsworks.html
 legacy_path: /2013/03/169-carburetor-6-opsworks
 ---
@@ -16,7 +16,7 @@ legacy_path: /2013/03/169-carburetor-6-opsworks
 <b id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvZ-TmeC52IrZ_bKZApI3qYRWCJlPbBSeIikbQ5plFl4GWnDkO8YWN5u_Dz7d0rFB4hwNWiF3k0rKma8rWiCfBa5MO_nqmdsgG3SWSjhT0qu5ogTY-wKbH5WrsesAdQK3yIDejA1uoh4/s1600/Screenshot_3_17_13_5_47_PM.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvZ-TmeC52IrZ_bKZApI3qYRWCJlPbBSeIikbQ5plFl4GWnDkO8YWN5u_Dz7d0rFB4hwNWiF3k0rKma8rWiCfBa5MO_nqmdsgG3SWSjhT0qu5ogTY-wKbH5WrsesAdQK3yIDejA1uoh4/s1600/Screenshot_3_17_13_5_47_PM.png"></a></span></div>
+<span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><a href="/images/blogger/4a1773846732018872fa.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/4a1773846732018872fa.png"></a></span></div>
 <div style="margin-bottom: 0pt; margin-top: 0pt;">
 <span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><span style="vertical-align: baseline; white-space: pre-wrap;">בעננים: נתי שלום, אורי להב ורן תבורי.</span></span></div>
 </li>

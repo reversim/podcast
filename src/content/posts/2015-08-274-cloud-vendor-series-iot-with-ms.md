@@ -3,7 +3,7 @@ title: 274 Cloud vendor series - IoT with MS Azure
 date: 2015-08-21T06:51:00.000Z
 episode: 274
 audio_url: https://m.reversim.com/reversim274_cloud-IoT-azure2.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6OP_cV0bFTP-PFmpsrtphWwZh6a-rvymxIQUC4lbWq_B31Ua9LD9i60UPXyavh-bjuDRe8zPgT3Nvsfa2nasAzGS_K-HAK4dy9WQ5LNUdcwykAo8q3OYWJH3E0ngS-4WiA6QqyUhsGTE/s200/IoT_Dev.jpg
+cover_image: /images/blogger/e294702db9f4a989fe01.jpg
 legacy_url: https://www.reversim.com/2015/08/274-cloud-vendor-series-iot-with-ms.html
 legacy_path: /2015/08/274-cloud-vendor-series-iot-with-ms
 ---
@@ -11,7 +11,7 @@ legacy_path: /2015/08/274-cloud-vendor-series-iot-with-ms
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6OP_cV0bFTP-PFmpsrtphWwZh6a-rvymxIQUC4lbWq_B31Ua9LD9i60UPXyavh-bjuDRe8zPgT3Nvsfa2nasAzGS_K-HAK4dy9WQ5LNUdcwykAo8q3OYWJH3E0ngS-4WiA6QqyUhsGTE/s1600/IoT_Dev.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6OP_cV0bFTP-PFmpsrtphWwZh6a-rvymxIQUC4lbWq_B31Ua9LD9i60UPXyavh-bjuDRe8zPgT3Nvsfa2nasAzGS_K-HAK4dy9WQ5LNUdcwykAo8q3OYWJH3E0ngS-4WiA6QqyUhsGTE/s200/IoT_Dev.jpg" width="190"></a></div>
+<a href="/images/blogger/f4965efc1af1e934e309.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/e294702db9f4a989fe01.jpg" width="190"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br><br>אנו מארחים את <a href="http://blogs.msdn.com/b/partnercatalystteam/">לימור לחיאני</a> ממרכז הפיתוח של מיקרוסופט. לימור מובילה את שיתופי הפעולה בארץ של החברה עם חברות גדולות וסארטאפים.<br><br>IOT - האינטרנט של הדברים (Internet Of Thing).<br><br>היום אנו רואים ניצנים של חיבור בין העולם הווירטואלי, הכולל את הווב ותוכנות ניהול, לבין העולם הפיזי, מקררים מיקרוגלים וחיישנים אחרים.<br></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">

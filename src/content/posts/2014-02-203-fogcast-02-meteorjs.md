@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 203
 audio_url: https://m.reversim.com/reversim203_fogcast02.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtF2P7xhwNcmkMnl6yvdZVHwujOgPNDz3tupTsR8LpW6EbDnG3zvXGS5YZDivt44B1a-DfvnO1GUChosHFF2Rnvy9Xj2Li4m6_jAmMbKZ5AryYw5fymytqzsLHzUVXJgsPTgw7Q1t0dqs/s1600/meteor-js-animated.gif
+cover_image: /images/blogger/8096da35ae2fa8fffdc4.gif
 legacy_url: https://www.reversim.com/2014/02/203-fogcast-02-meteorjs.html
 legacy_path: /2014/02/203-fogcast-02-meteorjs
 ---
@@ -14,7 +14,7 @@ legacy_path: /2014/02/203-fogcast-02-meteorjs
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtF2P7xhwNcmkMnl6yvdZVHwujOgPNDz3tupTsR8LpW6EbDnG3zvXGS5YZDivt44B1a-DfvnO1GUChosHFF2Rnvy9Xj2Li4m6_jAmMbKZ5AryYw5fymytqzsLHzUVXJgsPTgw7Q1t0dqs/s1600/meteor-js-animated.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtF2P7xhwNcmkMnl6yvdZVHwujOgPNDz3tupTsR8LpW6EbDnG3zvXGS5YZDivt44B1a-DfvnO1GUChosHFF2Rnvy9Xj2Li4m6_jAmMbKZ5AryYw5fymytqzsLHzUVXJgsPTgw7Q1t0dqs/s1600/meteor-js-animated.gif" width="200"></a></div>
+<a href="/images/blogger/8096da35ae2fa8fffdc4.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/8096da35ae2fa8fffdc4.gif" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ליאור ורן מפזרים את הערפל - והפעם סביב </span><a href="https://www.meteor.com/" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">מטאור</span></a><span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span></div>
 </li>

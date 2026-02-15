@@ -5,7 +5,7 @@ tags:
   - finalclass
 episode: 142
 audio_url: https://m.reversim.com/reversim142_finalclass19.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png
+cover_image: /images/blogger/2d2e50f03112836b90da.png
 legacy_url: https://www.reversim.com/2012/06/142-final-class-19-code-as-conversation.html
 legacy_path: /2012/06/142-final-class-19-code-as-conversation
 ---
@@ -16,7 +16,7 @@ legacy_path: /2012/06/142-final-class-19-code-as-conversation
 <b id="internal-source-marker_0.21967930416576564" style="font-weight: normal; text-align: -webkit-auto;"></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="background-color: transparent; font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<b id="internal-source-marker_0.21967930416576564" style="font-weight: normal; text-align: -webkit-auto;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s1600/barbecue-crazy-tux-1800.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png" width="200"></a></b></div>
+<b id="internal-source-marker_0.21967930416576564" style="font-weight: normal; text-align: -webkit-auto;"><a href="/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/2d2e50f03112836b90da.png" width="200"></a></b></div>
 <div style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <b id="internal-source-marker_0.21967930416576564" style="font-weight: normal; text-align: -webkit-auto;"><span style="background-color: transparent; vertical-align: baseline; white-space: pre-wrap;">כתבנו בכנסת מדווח מישיבתה הראשונה של שדולת הטכנולוגיה שזה מכבר הוקמה. מסביב לשולחן הדיונים יושבים רן תבורי, ישי סמית', ארז מזור, גילי נחום ואיתי ממן.</span></b></div>
 </li>

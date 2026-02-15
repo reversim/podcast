@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 230
 audio_url: https://m.reversim.com/reversim230_fogcast13.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcitqpeFLYIEK8McE9FLCJhnrcEcJ1bTd9lMX-Q_h4PAMh68zo5XAaatmMU-lt818JUIwZC3p_QvTom0yzwvFOC9lbBIZrKicosiS03th88iCZHzfmwDu0ShtRvf4XYQxh4coMrIJzFjc/s1600/working-parent.png
+cover_image: /images/blogger/6d6ed0125cf0fbee4f36.png
 legacy_url: https://www.reversim.com/2014/10/230-fogcast-13-working-parents.html
 legacy_path: /2014/10/230-fogcast-13-working-parents
 ---
@@ -13,7 +13,7 @@ legacy_path: /2014/10/230-fogcast-13-working-parents
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcitqpeFLYIEK8McE9FLCJhnrcEcJ1bTd9lMX-Q_h4PAMh68zo5XAaatmMU-lt818JUIwZC3p_QvTom0yzwvFOC9lbBIZrKicosiS03th88iCZHzfmwDu0ShtRvf4XYQxh4coMrIJzFjc/s1600/working-parent.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="195" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcitqpeFLYIEK8McE9FLCJhnrcEcJ1bTd9lMX-Q_h4PAMh68zo5XAaatmMU-lt818JUIwZC3p_QvTom0yzwvFOC9lbBIZrKicosiS03th88iCZHzfmwDu0ShtRvf4XYQxh4coMrIJzFjc/s1600/working-parent.png" width="200"></a></div>
+<a href="/images/blogger/6d6ed0125cf0fbee4f36.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="195" src="/images/blogger/6d6ed0125cf0fbee4f36.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 הפעם בפוגקאסט שוחחו רן וליאור על נושא לא טכנולוגי בעליל. איך להיות הורים ולעבוד כמפתחי תכנה?</div>
 <div dir="rtl" style="text-align: right;">

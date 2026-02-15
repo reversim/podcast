@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 204
 audio_url: https://m.reversim.com/reversim204_fogcast03.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSS8dYt57WA_SUgmB38aAMY_eojesrTQMef17eBZANfkgxggy3Zs3ATI6J6HPBiPZHpEkR2MzZnsCtm6zhnOD8uTUfMrC3GkdmnnOEiNeKfHTjxuKrvNm3NDUtuLdqZZ8vh21YnKjvSJo/s1600/logstash.png
+cover_image: /images/blogger/10b346c98c9fc24f103d.png
 legacy_url: https://www.reversim.com/2014/02/204-fogcast-03-loggins.html
 legacy_path: /2014/02/204-fogcast-03-loggins
 ---
@@ -14,7 +14,7 @@ legacy_path: /2014/02/204-fogcast-03-loggins
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSS8dYt57WA_SUgmB38aAMY_eojesrTQMef17eBZANfkgxggy3Zs3ATI6J6HPBiPZHpEkR2MzZnsCtm6zhnOD8uTUfMrC3GkdmnnOEiNeKfHTjxuKrvNm3NDUtuLdqZZ8vh21YnKjvSJo/s1600/logstash.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSS8dYt57WA_SUgmB38aAMY_eojesrTQMef17eBZANfkgxggy3Zs3ATI6J6HPBiPZHpEkR2MzZnsCtm6zhnOD8uTUfMrC3GkdmnnOEiNeKfHTjxuKrvNm3NDUtuLdqZZ8vh21YnKjvSJo/s1600/logstash.png" width="125"></a></div>
+<a href="/images/blogger/10b346c98c9fc24f103d.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/10b346c98c9fc24f103d.png" width="125"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ליאור ורן מפזרים את הערפל - והפעם סביב לוגים</span></div>
 </li>

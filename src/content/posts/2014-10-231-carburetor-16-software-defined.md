@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 231
 audio_url: https://m.reversim.com/reversim231_carburetor16.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyU4YBWkZSRSJN3FMdgUat5NqVH_bMdOET8cWvzkIF3rPTVh-TeH_dzli9BAM82CopnAjAvsNlLvwrag4LPXL50ipkvDRNRuLZv1T-16fgXR5qnwSGFvCOINkSnNnWZzMsATvkk-wmqpg/s1600/Operator.jpg
+cover_image: /images/blogger/3c1ebc9d0b63c2508a64.jpg
 legacy_url: https://www.reversim.com/2014/10/231-carburetor-16-software-defined.html
 legacy_path: /2014/10/231-carburetor-16-software-defined
 ---
@@ -14,7 +14,7 @@ legacy_path: /2014/10/231-carburetor-16-software-defined
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyU4YBWkZSRSJN3FMdgUat5NqVH_bMdOET8cWvzkIF3rPTVh-TeH_dzli9BAM82CopnAjAvsNlLvwrag4LPXL50ipkvDRNRuLZv1T-16fgXR5qnwSGFvCOINkSnNnWZzMsATvkk-wmqpg/s1600/Operator.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="184" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyU4YBWkZSRSJN3FMdgUat5NqVH_bMdOET8cWvzkIF3rPTVh-TeH_dzli9BAM82CopnAjAvsNlLvwrag4LPXL50ipkvDRNRuLZv1T-16fgXR5qnwSGFvCOINkSnNnWZzMsATvkk-wmqpg/s1600/Operator.jpg" width="200"></a></div>
+<a href="/images/blogger/3c1ebc9d0b63c2508a64.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="184" src="/images/blogger/3c1ebc9d0b63c2508a64.jpg" width="200"></a></div>
 אורי, נתי ורן דיברו על הנושא של Software Defined Operator<br>
 <br>
 <ul style="text-align: right;">

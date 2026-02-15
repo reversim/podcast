@@ -7,7 +7,7 @@ tags:
   - openstack
 episode: 181
 audio_url: https://m.reversim.com/reversim181_carburetors_7.mp3
-cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tc0vEoB1rHpBv2g4Y9e1EofeiOFcb-ydAjNwktPwPw-QdwDcCAG-BbeZuCSAfH6M_3n9EH45hdejzXSVO_shaK9vbOVWS1J8p1L1Ekj5esFo5qwNS_gY13fm0rmLW0SIb-P2juG-nPCMtU_0MqVE4giON_IPU7pjOqUUMyKLb6vr1NVSofvMljoPdH5Gs7O4lGuvg-2Rtccf2YbAFON3dYuKD-CDaa6VhuuTSh48b8Hw=s0-d
+cover_image: /images/blogger/unavailable.svg
 legacy_url: https://www.reversim.com/2013/05/181-carburetors-7.html
 legacy_path: /2013/05/181-carburetors-7
 ---
@@ -15,7 +15,7 @@ legacy_path: /2013/05/181-carburetors-7
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
-<a href="http://en.community.dell.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-46-04/8321.openstack_2D00_logo512.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tc0vEoB1rHpBv2g4Y9e1EofeiOFcb-ydAjNwktPwPw-QdwDcCAG-BbeZuCSAfH6M_3n9EH45hdejzXSVO_shaK9vbOVWS1J8p1L1Ekj5esFo5qwNS_gY13fm0rmLW0SIb-P2juG-nPCMtU_0MqVE4giON_IPU7pjOqUUMyKLb6vr1NVSofvMljoPdH5Gs7O4lGuvg-2Rtccf2YbAFON3dYuKD-CDaa6VhuuTSh48b8Hw=s0-d" width="200"></a><b id="docs-internal-guid-20064c46-8595-c16f-9083-b2305a6aa265" style="font-weight: normal;"></b></div>
+<a href="http://en.community.dell.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-46-04/8321.openstack_2D00_logo512.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/unavailable.svg" width="200"></a><b id="docs-internal-guid-20064c46-8595-c16f-9083-b2305a6aa265" style="font-weight: normal;"></b></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <b id="docs-internal-guid-20064c46-8595-c16f-9083-b2305a6aa265" style="font-weight: normal;"><span style="font-family: Arial; font-size: 16px; vertical-align: baseline; white-space: pre-wrap;">The machine of a dream, such a clean machine, With the pistons a pumpin', and the hubcaps all gleam. &nbsp;-- </span><a href="http://en.wikipedia.org/wiki/Queen_(band)" style="text-decoration: none;"><span style="color: #1155cc; font-family: Arial; font-size: 16px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">Queen</span></a><span style="font-family: Arial; font-size: 16px; vertical-align: baseline; white-space: pre-wrap;">, </span><a href="//www.youtube.com/watch?v=gdDNFJpil50" style="text-decoration: none;"><span style="color: #1155cc; font-family: Arial; font-size: 16px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">I’m in love with my car</span></a><span style="font-family: Arial; font-size: 16px; vertical-align: baseline; white-space: pre-wrap;">.</span></b></div>
 <div dir="rtl" style="text-align: right;">

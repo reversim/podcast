@@ -3,7 +3,7 @@ title: 332 Data infrastructure at Juno with Uri Shamay
 date: 2018-01-23T10:56:00.000Z
 episode: 332
 audio_url: https://m2.reversim.com/reversim332_data-processing-framewordks.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfRqHI8hvGj3djDV3xTQU8I6n4BknGox8xH5ktGtCaQUAL2BAGSlnyZQy5nZofJfaC7FH2Dr79uUH5a346gJeF4VmK0LPXIzIo63ZlDXw5DbgMbS-7JwBuqXgWevfVqPElYmqR-2DyGX4/s200/Juno.jpeg
+cover_image: /images/blogger/9e2de5c61301b9b02b7a.jpg
 legacy_url: https://www.reversim.com/2018/01/332-data-infrastructure-at-juno-with.html
 legacy_path: /2018/01/332-data-infrastructure-at-juno-with
 ---
@@ -15,7 +15,7 @@ legacy_path: /2018/01/332-data-infrastructure-at-juno-with
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfRqHI8hvGj3djDV3xTQU8I6n4BknGox8xH5ktGtCaQUAL2BAGSlnyZQy5nZofJfaC7FH2Dr79uUH5a346gJeF4VmK0LPXIzIo63ZlDXw5DbgMbS-7JwBuqXgWevfVqPElYmqR-2DyGX4/s1600/Juno.jpeg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="462" data-original-width="822" height="111" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfRqHI8hvGj3djDV3xTQU8I6n4BknGox8xH5ktGtCaQUAL2BAGSlnyZQy5nZofJfaC7FH2Dr79uUH5a346gJeF4VmK0LPXIzIo63ZlDXw5DbgMbS-7JwBuqXgWevfVqPElYmqR-2DyGX4/s200/Juno.jpeg" width="200"></a></div>
+<a href="/images/blogger/30635a2a817ac7f39164.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="462" data-original-width="822" height="111" src="/images/blogger/9e2de5c61301b9b02b7a.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

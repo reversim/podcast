@@ -3,13 +3,13 @@ title: 084 The Lift Web Framework
 date: 2010-11-19T12:16:00.000Z
 episode: 84
 audio_url: https://m.reversim.com/reversim84_lift.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3oUmfhyphenhyphen15umJpNgriv5hrNSbMaHu12j9XdTm_VzrB80J1TyouKvkTeHCMtfGMCWJdOX4bDltm6LMFV4Z4PfYT8oRD6Um8phA0xrh3W7yPocMiaoe8YaNfXF3hitthfmTI432B-arvFDw/s1600/Lift+__+Home.png
+cover_image: /images/blogger/d60f577299c660ab93c6.png
 legacy_url: https://www.reversim.com/2010/11/084-lift-web-framework.html
 legacy_path: /2010/11/084-lift-web-framework
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3oUmfhyphenhyphen15umJpNgriv5hrNSbMaHu12j9XdTm_VzrB80J1TyouKvkTeHCMtfGMCWJdOX4bDltm6LMFV4Z4PfYT8oRD6Um8phA0xrh3W7yPocMiaoe8YaNfXF3hitthfmTI432B-arvFDw/s1600/Lift+__+Home.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3oUmfhyphenhyphen15umJpNgriv5hrNSbMaHu12j9XdTm_VzrB80J1TyouKvkTeHCMtfGMCWJdOX4bDltm6LMFV4Z4PfYT8oRD6Um8phA0xrh3W7yPocMiaoe8YaNfXF3hitthfmTI432B-arvFDw/s1600/Lift+__+Home.png"></a></div><div dir="rtl" style="text-align: right;">בפרק זה רן אירח את אריק, ערן ו<a href="http://blog.getintheloop.eu/" target="_blank">טים פרט</a>&nbsp;(<a href="http://twitter.com/timperrett" target="_blank">טוויטר</a>) committer בפרויקט&nbsp;<a href="http://liftweb.net/" target="_blank">Lift</a>, לשיחה בנושא Lift ו-&nbsp;<a href="http://www.scala-lang.org/" target="_blank">Scala</a></div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>טים הציג את יתרונות Scala מול Java והייחודיות של Lift framework</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/d60f577299c660ab93c6.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/d60f577299c660ab93c6.png"></a></div><div dir="rtl" style="text-align: right;">בפרק זה רן אירח את אריק, ערן ו<a href="http://blog.getintheloop.eu/" target="_blank">טים פרט</a>&nbsp;(<a href="http://twitter.com/timperrett" target="_blank">טוויטר</a>) committer בפרויקט&nbsp;<a href="http://liftweb.net/" target="_blank">Lift</a>, לשיחה בנושא Lift ו-&nbsp;<a href="http://www.scala-lang.org/" target="_blank">Scala</a></div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>טים הציג את יתרונות Scala מול Java והייחודיות של Lift framework</li>
 <li>השוני בארכיטקטורת Lift מול&nbsp;<a href="http://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller" target="_blank">MVC</a>&nbsp;סטנדרטי</li>
 <li>דירוג האבטחה הגבוה של Lift ושימוש בחברות מסחריות כגון <a href="http://foursquare.com/">Foursquare</a></li>
 <li>טים סיפר איך הגיע מ- Rails ל- Scala ותרומתו לפרוייקט Lift</li>

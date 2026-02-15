@@ -3,13 +3,13 @@ title: 064 mobile and android
 date: 2010-05-12T10:15:00.000Z
 episode: 64
 audio_url: https://m.reversim.com/reversim64_mobile.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSC0ypr6ho2pjyuvR-xEfEMZoXL8RCICFw5xkgf8bwf2h_IOQAO8htCjOeLzU0LS8rxrWG0Y4y89AEB3qrr9-5DGhSbFuPKAr8n-WahiK5mcfKcLHESRIZ4tjR9n3kLvFHroQyfF_JKjM/s200/android1.gif
+cover_image: /images/blogger/cc8d412c0daf298d2037.gif
 legacy_url: https://www.reversim.com/2010/05/064-mobile-and-android.html
 legacy_path: /2010/05/064-mobile-and-android
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSC0ypr6ho2pjyuvR-xEfEMZoXL8RCICFw5xkgf8bwf2h_IOQAO8htCjOeLzU0LS8rxrWG0Y4y89AEB3qrr9-5DGhSbFuPKAr8n-WahiK5mcfKcLHESRIZ4tjR9n3kLvFHroQyfF_JKjM/s1600/android1.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSC0ypr6ho2pjyuvR-xEfEMZoXL8RCICFw5xkgf8bwf2h_IOQAO8htCjOeLzU0LS8rxrWG0Y4y89AEB3qrr9-5DGhSbFuPKAr8n-WahiK5mcfKcLHESRIZ4tjR9n3kLvFHroQyfF_JKjM/s200/android1.gif" width="200"></a></div><div dir="rtl" style="text-align: right;">לבקשת מאזינים,&nbsp;<a href="http://groups.google.com/group/reversim" target="_blank">רשימת התפוצה</a>&nbsp;זימנה לנו מפגש עם דניאל שיר, מפתח אפליקציות למכשירים ניידים</div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>דניאל,&nbsp;<a href="http://portal.idc.ac.il/he/schools/cs/home/Pages/HomePage.aspx" target="_blank">סטודנט למדעי המחשב</a>&nbsp;ועובד בחברת&nbsp;<a href="http://www.fring.com/" target="_blank">פרינג</a>, הציג את עצמו</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/4e6e9c2e1a1f18be88cb.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/cc8d412c0daf298d2037.gif" width="200"></a></div><div dir="rtl" style="text-align: right;">לבקשת מאזינים,&nbsp;<a href="http://groups.google.com/group/reversim" target="_blank">רשימת התפוצה</a>&nbsp;זימנה לנו מפגש עם דניאל שיר, מפתח אפליקציות למכשירים ניידים</div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>דניאל,&nbsp;<a href="http://portal.idc.ac.il/he/schools/cs/home/Pages/HomePage.aspx" target="_blank">סטודנט למדעי המחשב</a>&nbsp;ועובד בחברת&nbsp;<a href="http://www.fring.com/" target="_blank">פרינג</a>, הציג את עצמו</li>
 <li>הבדלים בפיתוח למכשירים ניידים והתמודדות עם אמצעי קלט שונים</li>
 <li>פלטפורמת אנדרואיד היא לא רק לסלולרי, מוצרים נוספים שקיימים בשוק</li>
 <li>אני רוצה לפתח! -&nbsp;<a href="http://developer.android.com/index.html" target="_blank">מאיפה מתחילים?</a></li>

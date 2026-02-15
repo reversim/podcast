@@ -5,7 +5,7 @@ tags:
   - finalclass
 episode: 197
 audio_url: https://m.reversim.com/reversim197_finalclass35.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png
+cover_image: /images/blogger/2d2e50f03112836b90da.png
 legacy_url: https://www.reversim.com/2013/12/197-final-class-35-continuous.html
 legacy_path: /2013/12/197-final-class-35-continuous
 ---
@@ -15,7 +15,7 @@ legacy_path: /2013/12/197-final-class-35-continuous
 <div dir="rtl" style="text-align: right;">
 <span id="docs-internal-guid-5c4bd4e6-cee4-09e0-d588-a399e698c102"></span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s1600/barbecue-crazy-tux-1800.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png" width="200"></a></div>
+<a href="/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
 <div>
 <span style="font-family: Arial;"><span style="font-size: 15px; white-space: pre-wrap;"><br></span></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

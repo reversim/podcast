@@ -3,7 +3,7 @@ title: 254 Thunderbolt
 date: 2015-03-18T21:35:00.000Z
 episode: 254
 audio_url: https://m.reversim.com/reversim254_thunderbolt.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjGhKzFSk3pyfAZZS9UvOFX1_ZdxScCGVAunKvfeF9ivtFJpqgfRj8LJWRz3WR4eM7q38f26rod7WbE1jRgNj7yzN450LXKT8g1OCbMsB5En8kRZyhRWKkJo8ItzGOFcxqZapoNpa3sc0/s1600/thunderbolt_cable_apple.jpg
+cover_image: /images/blogger/92b9818b0f18b9cf769b.jpg
 legacy_url: https://www.reversim.com/2015/03/254-thunderbolt.html
 legacy_path: /2015/03/254-thunderbolt
 ---
@@ -13,7 +13,7 @@ legacy_path: /2015/03/254-thunderbolt
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">פרק 254 - Thunderbolt</span></div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjGhKzFSk3pyfAZZS9UvOFX1_ZdxScCGVAunKvfeF9ivtFJpqgfRj8LJWRz3WR4eM7q38f26rod7WbE1jRgNj7yzN450LXKT8g1OCbMsB5En8kRZyhRWKkJo8ItzGOFcxqZapoNpa3sc0/s1600/thunderbolt_cable_apple.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="110" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjGhKzFSk3pyfAZZS9UvOFX1_ZdxScCGVAunKvfeF9ivtFJpqgfRj8LJWRz3WR4eM7q38f26rod7WbE1jRgNj7yzN450LXKT8g1OCbMsB5En8kRZyhRWKkJo8ItzGOFcxqZapoNpa3sc0/s1600/thunderbolt_cable_apple.jpg" width="200"></a></div>
+<a href="/images/blogger/92b9818b0f18b9cf769b.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="110" src="/images/blogger/92b9818b0f18b9cf769b.jpg" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

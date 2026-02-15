@@ -3,7 +3,7 @@ title: 270 Cloud Vendor Series - Big Data and Analytics with AWS
 date: 2015-08-04T06:49:00.000Z
 episode: 270
 audio_url: https://m.reversim.com/reversim270_cloud-analytics-aws.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9l12Y3xlfhm2g4ahOM_TTbLdxs3qs1AT2rDCELWNqWa1DFCJWpxlONcyZU8RE6ZFpl9oQixGHZZgguPaaDkEPqcRCaQB1Gi3hh9vAW3T6XKH0G7xz0sDLK9kDGal2kdCvvVxRmy11bVI/s200/aws-logo-large.png
+cover_image: /images/blogger/a94b88bd7edc9fe86ffd.png
 legacy_url: https://www.reversim.com/2015/08/270-cloud-vendor-series-big-data-and.html
 legacy_path: /2015/08/270-cloud-vendor-series-big-data-and
 ---
@@ -11,7 +11,7 @@ legacy_path: /2015/08/270-cloud-vendor-series-big-data-and
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9l12Y3xlfhm2g4ahOM_TTbLdxs3qs1AT2rDCELWNqWa1DFCJWpxlONcyZU8RE6ZFpl9oQixGHZZgguPaaDkEPqcRCaQB1Gi3hh9vAW3T6XKH0G7xz0sDLK9kDGal2kdCvvVxRmy11bVI/s1600/aws-logo-large.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="73" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9l12Y3xlfhm2g4ahOM_TTbLdxs3qs1AT2rDCELWNqWa1DFCJWpxlONcyZU8RE6ZFpl9oQixGHZZgguPaaDkEPqcRCaQB1Gi3hh9vAW3T6XKH0G7xz0sDLK9kDGal2kdCvvVxRmy11bVI/s200/aws-logo-large.png" width="200"></a></div>
+<a href="/images/blogger/4be8cbd5a1fc5ae43917.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="73" src="/images/blogger/a94b88bd7edc9fe86ffd.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">פרק נוסף בסדרה על ספקי ענן (Cloud Vendors) &nbsp;הסוקרת את פלטפורמות הענן הקיימות היום והיתרונות שלהן למפתחים. כרגיל בתוכנית המשתתפים הקבועים,</span><a href="https://www.linkedin.com/in/natishalom" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;"> נתי שלום</span></a><span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> ו</span><a href="https://www.linkedin.com/pub/ori-lahav/2/45b/749" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">אורי להב</span></a><span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">.</span></div>
 <b id="docs-internal-guid-0e399592-f772-f5dd-d70a-2b94a16cc1f1" style="font-weight: normal;"><br></b>

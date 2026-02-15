@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 234
 audio_url: https://m.reversim.com/reversim234_fogcast14.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTfG_j5ovgdUyBOxTg6JK4ebU_JKS3z4HPfc_9Gx-Q32oNbhSbByG0iR68ieBzdTlqULwMV1hFO8yqTUlQcRL9FmgWtHmkJWYOClVNsUR-HgHPyoLLE5PANhPB9UaHtA3oi9jkkwSZfJ8/s1600/bugzilla-logo-260x300.png
+cover_image: /images/blogger/c19411ae90392c9cfe64.png
 legacy_url: https://www.reversim.com/2014/10/234-fogcast-14-my-bug.html
 legacy_path: /2014/10/234-fogcast-14-my-bug
 ---
@@ -13,7 +13,7 @@ legacy_path: /2014/10/234-fogcast-14-my-bug
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTfG_j5ovgdUyBOxTg6JK4ebU_JKS3z4HPfc_9Gx-Q32oNbhSbByG0iR68ieBzdTlqULwMV1hFO8yqTUlQcRL9FmgWtHmkJWYOClVNsUR-HgHPyoLLE5PANhPB9UaHtA3oi9jkkwSZfJ8/s1600/bugzilla-logo-260x300.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTfG_j5ovgdUyBOxTg6JK4ebU_JKS3z4HPfc_9Gx-Q32oNbhSbByG0iR68ieBzdTlqULwMV1hFO8yqTUlQcRL9FmgWtHmkJWYOClVNsUR-HgHPyoLLE5PANhPB9UaHtA3oi9jkkwSZfJ8/s1600/bugzilla-logo-260x300.png" width="173"></a></div>
+<a href="/images/blogger/c19411ae90392c9cfe64.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/c19411ae90392c9cfe64.png" width="173"></a></div>
 <div dir="rtl" style="text-align: right;">
 הפעם שוחחו ליאור ורן על אחת מהחוויות שכל מפתח עובר בחייו - באגים. אבל לא סתם באגים - באגים קשים, מתסכלים, כאלה שעובדים עליהם ימים, שבועות או יותר...</div>
 <div dir="rtl" style="text-align: right;">

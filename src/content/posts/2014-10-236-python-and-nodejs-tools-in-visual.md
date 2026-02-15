@@ -3,7 +3,7 @@ title: 236 Python and NodeJS tools in Visual Studio
 date: 2014-10-29T06:00:00.000Z
 episode: 236
 audio_url: https://m.reversim.com/reversim236_vs-nodejs-python.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5l6m7UI-e2eW_x6olrpFa0KAASQBQHik_eX5J_6FK2KinBw5hqg7RR3zcy2qPp4RfIR87rX2e0WMVLJJC9EMvMWNJOu_qiZ7vruVrYELToY9pXpyTG1L69P7v2jr4RiU40sIAQAkTG5I/s1600/vs-node-js.png
+cover_image: /images/blogger/bf5ded396658c107855d.png
 legacy_url: https://www.reversim.com/2014/10/236-python-and-nodejs-tools-in-visual.html
 legacy_path: /2014/10/236-python-and-nodejs-tools-in-visual
 ---
@@ -11,7 +11,7 @@ legacy_path: /2014/10/236-python-and-nodejs-tools-in-visual
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5l6m7UI-e2eW_x6olrpFa0KAASQBQHik_eX5J_6FK2KinBw5hqg7RR3zcy2qPp4RfIR87rX2e0WMVLJJC9EMvMWNJOu_qiZ7vruVrYELToY9pXpyTG1L69P7v2jr4RiU40sIAQAkTG5I/s1600/vs-node-js.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5l6m7UI-e2eW_x6olrpFa0KAASQBQHik_eX5J_6FK2KinBw5hqg7RR3zcy2qPp4RfIR87rX2e0WMVLJJC9EMvMWNJOu_qiZ7vruVrYELToY9pXpyTG1L69P7v2jr4RiU40sIAQAkTG5I/s1600/vs-node-js.png"></a></div>
+<a href="/images/blogger/bf5ded396658c107855d.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/bf5ded396658c107855d.png"></a></div>
 <div dir="rtl" style="text-align: right;">
 הפעם פרק בקטנה, שיחה זריזה עם עדו רן, אורח כמעט קבוע בפודקאסט על כלי פיתוח לפייתון ונוד (NodeJS) בסבחבת ויז׳ואל סטודיו (Visual Studio) המייקרוסופטית.</div>
 <div dir="rtl" style="text-align: right;">

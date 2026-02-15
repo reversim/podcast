@@ -3,7 +3,7 @@ title: 238 Organizing Developer Events - devopsdays and more
 date: 2014-11-10T22:04:00.000Z
 episode: 238
 audio_url: https://m.reversim.com/reversim238_event-org.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJEoaKEBypoVqIjXhkLtNPWEMUIyragMT5tVPmnZxuFLkmTS3hIHZwxzxcOSlS2CksJuNz2orGqbxelszg-NLHY0-RWFQbDHQlzBeBsaogIWTAZRn6y0-ZhlOVYnWs_FCjNhiaCaKA0SM/s1600/DevOpsDays+Warsaw.jpg
+cover_image: /images/blogger/cbc95d2c1a16d0c71a5c.jpg
 legacy_url: https://www.reversim.com/2014/11/238-organizing-developer-events.html
 legacy_path: /2014/11/238-organizing-developer-events
 ---
@@ -11,7 +11,7 @@ legacy_path: /2014/11/238-organizing-developer-events
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJEoaKEBypoVqIjXhkLtNPWEMUIyragMT5tVPmnZxuFLkmTS3hIHZwxzxcOSlS2CksJuNz2orGqbxelszg-NLHY0-RWFQbDHQlzBeBsaogIWTAZRn6y0-ZhlOVYnWs_FCjNhiaCaKA0SM/s1600/DevOpsDays+Warsaw.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="173" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJEoaKEBypoVqIjXhkLtNPWEMUIyragMT5tVPmnZxuFLkmTS3hIHZwxzxcOSlS2CksJuNz2orGqbxelszg-NLHY0-RWFQbDHQlzBeBsaogIWTAZRn6y0-ZhlOVYnWs_FCjNhiaCaKA0SM/s1600/DevOpsDays+Warsaw.jpg" width="200"></a></div>
+<a href="/images/blogger/cbc95d2c1a16d0c71a5c.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="173" src="/images/blogger/cbc95d2c1a16d0c71a5c.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 אנחנו צריכים עזרה!<br>
 אנחנו צריכים עזרה בתקצור הפרקים, עד עכשיו עזרו לנו רבים וטובים בתקצור הפודקאסט ואנו מודים ליוני, יותם, אורן וגיא, וכעת אנו פונים אל הקהילה שוב בבקשת עזרה -  <a href="https://www.smore.com/p7fcu">אנא עזרו לנו בהקשבה ותקצור</a>. זה דורש כשעה-שעתיים בשבוע והעזרה מבורכת ביותר! <br>

@@ -3,7 +3,7 @@ title: 260 You Gotta Love Frontend - Conference
 date: 2015-05-07T12:12:00.000Z
 episode: 260
 audio_url: https://m.reversim.com/reversim260_yglf.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAe4oweJIz3tvfdbKvpdfkhy0BEEu4pFIAbxH-hnJI1Km9q-exRCejfwRNT2uDiijh_SZnhaMnlSaeNVYSD7AlwjDMvjHVV-fL-4PkLlmqEC8ap0v5XxMT-WOw3M4ZMdMeo-tty9ufhFM/s200/You_Gotta_Love_Frontend_Conference___June_8-9__2015___Tel_Aviv__Israel.png
+cover_image: /images/blogger/ccb229ea507265f9eec9.png
 legacy_url: https://www.reversim.com/2015/05/260-you-gotta-love-frontend-conference.html
 legacy_path: /2015/05/260-you-gotta-love-frontend-conference
 ---
@@ -11,7 +11,7 @@ legacy_path: /2015/05/260-you-gotta-love-frontend-conference
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAe4oweJIz3tvfdbKvpdfkhy0BEEu4pFIAbxH-hnJI1Km9q-exRCejfwRNT2uDiijh_SZnhaMnlSaeNVYSD7AlwjDMvjHVV-fL-4PkLlmqEC8ap0v5XxMT-WOw3M4ZMdMeo-tty9ufhFM/s1600/You_Gotta_Love_Frontend_Conference___June_8-9__2015___Tel_Aviv__Israel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="129" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAe4oweJIz3tvfdbKvpdfkhy0BEEu4pFIAbxH-hnJI1Km9q-exRCejfwRNT2uDiijh_SZnhaMnlSaeNVYSD7AlwjDMvjHVV-fL-4PkLlmqEC8ap0v5XxMT-WOw3M4ZMdMeo-tty9ufhFM/s200/You_Gotta_Love_Frontend_Conference___June_8-9__2015___Tel_Aviv__Israel.png" width="200"></a></div>
+<a href="/images/blogger/f938b7a7b8f6b8a385b6.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="129" src="/images/blogger/ccb229ea507265f9eec9.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <a href="http://yougottalovefrontend.com/">You Gotta Love Frontend</a> או YGLF זהו כנס ממוקד פרונטאנד ראשון מסוגו בישראל, המביא דוברים מהשורה הראשונה בעולם לכנס של יומיים בישראל.</div>
 <div dir="rtl" style="text-align: right;">

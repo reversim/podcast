@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 233
 audio_url: https://m.reversim.com/reversim233_carburetor17.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFuDa4F4Lz-cogfsTVF2tVRCFdPo5-bREHxyGsWxoFcw0s0rq-Fc7vDwXHKv6-BQh8D95rWySRXXW2Elznwd-E2xSNQWw1iatcLdRnbGdB8Dw22byvaoxSo6vDifk674S-dIIXva1og3E/s1600/micro-services1.png
+cover_image: /images/blogger/7ec516b25a5b27ed7c82.png
 legacy_url: https://www.reversim.com/2014/10/233-carburetor-17-microservices.html
 legacy_path: /2014/10/233-carburetor-17-microservices
 ---
@@ -16,7 +16,7 @@ legacy_path: /2014/10/233-carburetor-17-microservices
 <span id="docs-internal-guid-6efcda1f-3eaa-2eca-65f9-d2bfb7efcd90"></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFuDa4F4Lz-cogfsTVF2tVRCFdPo5-bREHxyGsWxoFcw0s0rq-Fc7vDwXHKv6-BQh8D95rWySRXXW2Elznwd-E2xSNQWw1iatcLdRnbGdB8Dw22byvaoxSo6vDifk674S-dIIXva1og3E/s1600/micro-services1.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="189" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFuDa4F4Lz-cogfsTVF2tVRCFdPo5-bREHxyGsWxoFcw0s0rq-Fc7vDwXHKv6-BQh8D95rWySRXXW2Elznwd-E2xSNQWw1iatcLdRnbGdB8Dw22byvaoxSo6vDifk674S-dIIXva1og3E/s1600/micro-services1.png" width="200"></a></div>
+<a href="/images/blogger/7ec516b25a5b27ed7c82.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="189" src="/images/blogger/7ec516b25a5b27ed7c82.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">בוחנים בעניין את גל הזיזים </span><a href="http://upload.wikimedia.org/wikipedia/he/3/34/Gashashi.jpg" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">נתי שלום, אורי להב ורן תבורי</span></a><span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">. כאן קול הרעם מזכרון יעקב, </span><a href="http://en.wikipedia.org/wiki/Microservices" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">שירות קטן</span></a><span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> לאומה גדולה.</span></div>
 </li>

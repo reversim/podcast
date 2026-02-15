@@ -5,7 +5,7 @@ tags:
   - finalclass
 episode: 157
 audio_url: https://m.reversim.com/reversim157_finalclass25.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7qhMcLOnt6OwYGY7g04dwgTQ67Ibl0GhBsI29qXj6cyjR_jEepxTVJm0NIiyH-2LKD0kKZjy-vLSo0Nh3C7lQqYomIAGuBOD2NV38T1V7HhbQhqZ5DhE-rLyNeWXRo-VfCMSxzE15qDw/s200/clrtest.gif
+cover_image: /images/blogger/8204b331c92f27dcaadd.gif
 legacy_url: https://www.reversim.com/2012/12/157-final-class-25-automated-testing.html
 legacy_path: /2012/12/157-final-class-25-automated-testing
 ---
@@ -16,7 +16,7 @@ legacy_path: /2012/12/157-final-class-25-automated-testing
 <b id="internal-source-marker_0.05117091233842075" style="font-weight: normal; text-align: start;"></b></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7qhMcLOnt6OwYGY7g04dwgTQ67Ibl0GhBsI29qXj6cyjR_jEepxTVJm0NIiyH-2LKD0kKZjy-vLSo0Nh3C7lQqYomIAGuBOD2NV38T1V7HhbQhqZ5DhE-rLyNeWXRo-VfCMSxzE15qDw/s1600/clrtest.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="153" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7qhMcLOnt6OwYGY7g04dwgTQ67Ibl0GhBsI29qXj6cyjR_jEepxTVJm0NIiyH-2LKD0kKZjy-vLSo0Nh3C7lQqYomIAGuBOD2NV38T1V7HhbQhqZ5DhE-rLyNeWXRo-VfCMSxzE15qDw/s200/clrtest.gif" width="200"></a></div>
+<a href="/images/blogger/38d043fc2f52bc8e49c3.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="153" src="/images/blogger/8204b331c92f27dcaadd.gif" width="200"></a></div>
 <b id="internal-source-marker_0.05117091233842075" style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">אחחח, אוטומציה - האחיות </span><a href="//www.youtube.com/watch?v=KNi8aW8Nf6s"><span style="color: #1155cc; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">ידעו לעשות את זה</span></a><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> כמו שצריך. בדיקות אוטומטיות לעומת זאת, זה כבר סיפור אחר (</span><a href="//www.youtube.com/watch?v=er8g6D_PqvY"><span style="color: #1155cc; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">וכדאי לבדוק...</span></a><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">).</span></b></div>
 <div dir="rtl" style="text-align: right;">
 <b id="internal-source-marker_0.05117091233842075" style="font-weight: normal; text-align: start;"><br></b></div>

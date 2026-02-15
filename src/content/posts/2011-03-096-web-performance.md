@@ -3,13 +3,13 @@ title: 096 Web Performance
 date: 2011-03-21T21:12:00.000Z
 episode: 96
 audio_url: https://m.reversim.com/reversim96_web_performance.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAeeyXP7xS6OvOnLt1wr2a0zuPbhDkQ2glYf3HNdQ29rOA3XZxrfvjal6NOj97QG7ov5eJ3Wmhzw8O2G2x-nJAzJ7ST-HW9e0cgIfuhPPtvq-0WfUovqYHeQIJ4lqOVM0hqRlU2hlGYJA/s200/performance.jpg
+cover_image: /images/blogger/85cb0ce1e8c8dd10f92f.jpg
 legacy_url: https://www.reversim.com/2011/03/096-web-performance.html
 legacy_path: /2011/03/096-web-performance
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAeeyXP7xS6OvOnLt1wr2a0zuPbhDkQ2glYf3HNdQ29rOA3XZxrfvjal6NOj97QG7ov5eJ3Wmhzw8O2G2x-nJAzJ7ST-HW9e0cgIfuhPPtvq-0WfUovqYHeQIJ4lqOVM0hqRlU2hlGYJA/s1600/performance.jpg" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="199" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAeeyXP7xS6OvOnLt1wr2a0zuPbhDkQ2glYf3HNdQ29rOA3XZxrfvjal6NOj97QG7ov5eJ3Wmhzw8O2G2x-nJAzJ7ST-HW9e0cgIfuhPPtvq-0WfUovqYHeQIJ4lqOVM0hqRlU2hlGYJA/s200/performance.jpg" width="200"></a></div><div dir="rtl" style="text-align: right;">בפרק זה אירחנו את <a href="http://blogs.microsoft.co.il/blogs/vprnd">משה קפלן</a> ואת <a href="http://www.linkedin.com/pub/israel-nir/4/124/452">ישראל (רולי) ניר</a>.</div><div dir="rtl" style="text-align: right;">דיברנו על מגוון נושאים הקשורים לביצועים של אתרי אינטרנט:</div><ul dir="rtl" style="text-align: right;"><li>איך מתחילים בדיאגנוזה?</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/99428a6ccc673221cdd7.jpg" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="199" src="/images/blogger/85cb0ce1e8c8dd10f92f.jpg" width="200"></a></div><div dir="rtl" style="text-align: right;">בפרק זה אירחנו את <a href="http://blogs.microsoft.co.il/blogs/vprnd">משה קפלן</a> ואת <a href="http://www.linkedin.com/pub/israel-nir/4/124/452">ישראל (רולי) ניר</a>.</div><div dir="rtl" style="text-align: right;">דיברנו על מגוון נושאים הקשורים לביצועים של אתרי אינטרנט:</div><ul dir="rtl" style="text-align: right;"><li>איך מתחילים בדיאגנוזה?</li>
 <li>מהם הפתרונות הפשוטים שכל אחד יכול (וצריך) לעשות ללא מאמץ </li>
 <li>מהו CDN ואיך מנצלים אותו לטובתנו. (<a href="http://top-performance.blogspot.com/2011/03/faster-website-cdn-might-be-answer.html">מאמר של משה בנושא</a>)</li>
 <li>מה ההשלכות העסקיות של ביצועי האתר וכמה שוות 100 מילישניות בדולרים.&nbsp;(<a href="http://www.webperformancetoday.com/2010/06/15/everything-you-wanted-to-know-about-web-performance/">Cheat Sheet: Everything you wanted to know about web performance but were afraid to ask</a>)</li>

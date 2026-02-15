@@ -5,7 +5,7 @@ tags:
   - finalclass
 episode: 187
 audio_url: https://m.reversim.com/reversim187_finalclass31.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2xkSfH_L8vOetvzDK6wYfr4MHHNavE2Rd1QIPx4cZlDB2IvBTS6S3AMznsbynSDwH19xfqwrpEZF47zV0xikVNlg6uHTIbuROMQHrSVL3HhxmBgsWVt-ou3v1GfJWO2Vt4eK8sgXpKCU/s200/220px-Radar-hatzerim-1-1.jpg
+cover_image: /images/blogger/e39aa914e3ef599df24d.jpg
 legacy_url: https://www.reversim.com/2013/07/187-final-class-31-thoughtworks-radar.html
 legacy_path: /2013/07/187-final-class-31-thoughtworks-radar
 ---
@@ -13,7 +13,7 @@ legacy_path: /2013/07/187-final-class-31-thoughtworks-radar
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2xkSfH_L8vOetvzDK6wYfr4MHHNavE2Rd1QIPx4cZlDB2IvBTS6S3AMznsbynSDwH19xfqwrpEZF47zV0xikVNlg6uHTIbuROMQHrSVL3HhxmBgsWVt-ou3v1GfJWO2Vt4eK8sgXpKCU/s1600/220px-Radar-hatzerim-1-1.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="187" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2xkSfH_L8vOetvzDK6wYfr4MHHNavE2Rd1QIPx4cZlDB2IvBTS6S3AMznsbynSDwH19xfqwrpEZF47zV0xikVNlg6uHTIbuROMQHrSVL3HhxmBgsWVt-ou3v1GfJWO2Vt4eK8sgXpKCU/s200/220px-Radar-hatzerim-1-1.jpg" width="200"></a></div>
+<a href="/images/blogger/d318bc6f35abcd436fab.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="187" src="/images/blogger/e39aa914e3ef599df24d.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-1affcdf3-e930-1a92-1352-2a003a2b1bcb" style="font-weight: normal;"><br><span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

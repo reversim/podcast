@@ -3,7 +3,7 @@ title: 340 Serverless With Adam Matan
 date: 2018-04-24T17:40:00.000Z
 episode: 340
 audio_url: https://m2.reversim.com/reversim340_serverless-adam-matan.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKncX0q3_N04GJCnfJvgslT7OE2eUe8DScmXclidKJ8DS-w2-wzb0_y3sj8ssEyZcT7kVMFBr23W8sQLhcBxv1kar-VcEg7v0rgcjo4cOc-fTCjSjL9fsyGZ3oc5gkgZsYIRcxnMr3bpw/s200/serverlessil.png
+cover_image: /images/blogger/9cdd90233b88071363a3.png
 legacy_url: https://www.reversim.com/2018/04/340-serverless-with-adam-matan.html
 legacy_path: /2018/04/340-serverless-with-adam-matan
 ---
@@ -16,7 +16,7 @@ legacy_path: /2018/04/340-serverless-with-adam-matan
 <span class=" author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj6z89zz79zkqz78znqrz74zgz72z0mz90zz72zfpkyfz80ztlz90zz73z7v4">אדם הוא מפתח ואוונגליסט בחברת Binaris, מראשוני המאזינים לרברסים ומתנדב בכנסי רברסים בשנים האחרונות.</span></div>
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKncX0q3_N04GJCnfJvgslT7OE2eUe8DScmXclidKJ8DS-w2-wzb0_y3sj8ssEyZcT7kVMFBr23W8sQLhcBxv1kar-VcEg7v0rgcjo4cOc-fTCjSjL9fsyGZ3oc5gkgZsYIRcxnMr3bpw/s1600/serverlessil.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="400" data-original-width="400" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKncX0q3_N04GJCnfJvgslT7OE2eUe8DScmXclidKJ8DS-w2-wzb0_y3sj8ssEyZcT7kVMFBr23W8sQLhcBxv1kar-VcEg7v0rgcjo4cOc-fTCjSjL9fsyGZ3oc5gkgZsYIRcxnMr3bpw/s200/serverlessil.png" width="200"></a></div>
+<a href="/images/blogger/6d355149fe28b477e3a8.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="400" data-original-width="400" height="200" src="/images/blogger/9cdd90233b88071363a3.png" width="200"></a></div>
 <br></div>
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj6z89zz79zkqz78znqrz74zgz72z0mz90zz72zfpkyfz80ztlz90zz73z7v4">01:55 - </span><span class="attrlink url author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj6z89zz79zkqz78znqrz74zgz72z0mz90zz72zfpkyfz80ztlz90zz73z7v4"><a class="attrlink" data-target-href="https://tlv.serverlessdays.io/" href="https://tlv.serverlessdays.io/" rel="noreferrer nofollow noopener" target="_blank">כנס Serverless ראשון בארץ</a></span><span class=" author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj6z89zz79zkqz78znqrz74zgz72z0mz90zz72zfpkyfz80ztlz90zz73z7v4"> למפתחים, ב-23 במאי. אפשר כבר לקנות כרטיסים, וה-CFP פתוח עד ה 3 במאי.</span></div>

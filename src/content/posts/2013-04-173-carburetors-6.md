@@ -7,7 +7,7 @@ tags:
   - paas
 episode: 173
 audio_url: https://m.reversim.com/reversim173_carburetor_6.mp3
-cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tUpJfXGhNJnfTEo4XP3oeYkPvLFTD8KBIO7b8crTs4orTj8iCGE3mRn-5xOYpcDu_MIEbTb541Oknj70gVVJyWsvh8T70=s0-d
+cover_image: /images/blogger/unavailable.svg
 legacy_url: https://www.reversim.com/2013/04/173-carburetors-6.html
 legacy_path: /2013/04/173-carburetors-6
 ---
@@ -15,7 +15,7 @@ legacy_path: /2013/04/173-carburetors-6
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div style="text-align: right;">
-<a href="http://www.mpg.de/645190/zoom.jpeg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="148" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tUpJfXGhNJnfTEo4XP3oeYkPvLFTD8KBIO7b8crTs4orTj8iCGE3mRn-5xOYpcDu_MIEbTb541Oknj70gVVJyWsvh8T70=s0-d" width="200"></a><b id="internal-source-marker_0.4693516669794917" style="font-weight: normal; text-align: start;"></b></div>
+<a href="http://www.mpg.de/645190/zoom.jpeg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="148" src="/images/blogger/unavailable.svg" width="200"></a><b id="internal-source-marker_0.4693516669794917" style="font-weight: normal; text-align: start;"></b></div>
 <div dir="ltr" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt;">
 <b id="internal-source-marker_0.4693516669794917" style="font-weight: normal; text-align: start;"><span style="background-color: white; color: #333333; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">“Come together, right now, over me” - </span><a href="//www.youtube.com/watch?v=OEo9Bh679wM" style="text-decoration: none;"><span style="background-color: white; color: #1155cc; font-family: Arial; font-size: 15px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">Come Together</span></a><span style="background-color: white; color: #333333; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">, The Beatles.</span></b></div>
 <b id="internal-source-marker_0.4693516669794917" style="font-weight: normal; text-align: start;"><br><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"></span><br><ul style="margin-bottom: 0pt; margin-top: 0pt;">

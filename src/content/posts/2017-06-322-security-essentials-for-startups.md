@@ -3,7 +3,7 @@ title: 322 Security essentials for startups
 date: 2017-06-05T18:33:00.000Z
 episode: 322
 audio_url: https://m2.reversim.com/reversim322_security-essentials-for-startups.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTeXDOnHBmt4pJBEtvlzCOBtXuY-WN8dZ4dQD0ZzhDRpmL_L9rfOyUOBB5DhbuaHl92ZZaGK7kZjoj6zUYuE00Lx1Pa6kw8xCMg9ftMb4NzDvvnc4mfK-REEgyKFP6vQk419Z7bIgx3iI/s200/security-shield-lock-512.png
+cover_image: /images/blogger/ff1cd91fb22915ecb42d.png
 legacy_url: https://www.reversim.com/2017/06/322-security-essentials-for-startups.html
 legacy_path: /2017/06/322-security-essentials-for-startups
 ---
@@ -11,7 +11,7 @@ legacy_path: /2017/06/322-security-essentials-for-startups
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTeXDOnHBmt4pJBEtvlzCOBtXuY-WN8dZ4dQD0ZzhDRpmL_L9rfOyUOBB5DhbuaHl92ZZaGK7kZjoj6zUYuE00Lx1Pa6kw8xCMg9ftMb4NzDvvnc4mfK-REEgyKFP6vQk419Z7bIgx3iI/s1600/security-shield-lock-512.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="512" data-original-width="512" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTeXDOnHBmt4pJBEtvlzCOBtXuY-WN8dZ4dQD0ZzhDRpmL_L9rfOyUOBB5DhbuaHl92ZZaGK7kZjoj6zUYuE00Lx1Pa6kw8xCMg9ftMb4NzDvvnc4mfK-REEgyKFP6vQk419Z7bIgx3iI/s200/security-shield-lock-512.png" width="200"></a></div>
+<a href="/images/blogger/befed0f1df1b2d2d2a0d.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="512" data-original-width="512" height="200" src="/images/blogger/ff1cd91fb22915ecb42d.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.3800000000000001; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: &quot;times new roman&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אורי ורן מארחים את </span><a href="https://www.linkedin.com/in/shaharmaor?ppe=1" style="text-decoration: none;"><span style="background-color: transparent; color: blue; font-family: &quot;times new roman&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">שחר</span></a><span style="background-color: transparent; color: black; font-family: &quot;times new roman&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> לשיחה על אבטחת מידע, חולצות מכופתרות וסטארטאפים.</span></div>
 <div dir="rtl" style="line-height: 1.3800000000000001; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

@@ -3,7 +3,7 @@ title: 293 D with Shahar Shemesh
 date: 2016-03-14T21:13:00.000Z
 episode: 293
 audio_url: https://m2.reversim.com/reversim293_d.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFLHMiWjuLSyZVIOAiRkM-jRDmkOyW3Fg8YwdDco91u4_M0ExnXHzjBZwQiPf9iwYBo2_QM6QaciD0oPBw57pSRT35hYub7ZkBywuDWZ0g88n26HDacNaHKQBGcDAVcPsUFtjVaIZYslw/s200/4137JQFpiHL._SX258_BO1%252C204%252C203%252C200_.jpg
+cover_image: /images/blogger/af957b0aa9df36110512.jpg
 legacy_url: https://www.reversim.com/2016/03/293-d-with-shahar-shemesh.html
 legacy_path: /2016/03/293-d-with-shahar-shemesh
 ---
@@ -12,7 +12,7 @@ legacy_path: /2016/03/293-d-with-shahar-shemesh
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFLHMiWjuLSyZVIOAiRkM-jRDmkOyW3Fg8YwdDco91u4_M0ExnXHzjBZwQiPf9iwYBo2_QM6QaciD0oPBw57pSRT35hYub7ZkBywuDWZ0g88n26HDacNaHKQBGcDAVcPsUFtjVaIZYslw/s1600/4137JQFpiHL._SX258_BO1%252C204%252C203%252C200_.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFLHMiWjuLSyZVIOAiRkM-jRDmkOyW3Fg8YwdDco91u4_M0ExnXHzjBZwQiPf9iwYBo2_QM6QaciD0oPBw57pSRT35hYub7ZkBywuDWZ0g88n26HDacNaHKQBGcDAVcPsUFtjVaIZYslw/s200/4137JQFpiHL._SX258_BO1%252C204%252C203%252C200_.jpg" width="153"></a></div>
+<a href="/images/blogger/9944534bbd870d2f2479.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/af957b0aa9df36110512.jpg" width="153"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ברוכים הבאים לפודקאסט 293, התאריך היום ה-9 בפברואר, ואנחנו מארחים היום את </span><a href="https://www.linkedin.com/in/shachar-shemesh-83a42" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">שחר שמש</span></a><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">, לשיחה על שפת התכנות D. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

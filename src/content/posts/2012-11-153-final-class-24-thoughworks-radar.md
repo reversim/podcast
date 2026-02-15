@@ -5,7 +5,7 @@ tags:
   - finalclass
 episode: 153
 audio_url: https://m.reversim.com/reversim153_finalclass24.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipNhs9STsHtyh_AObufne1vOoaHJHxgi5nnLqZPIaaxjezGA6NabKTOMSdueDQjmWxUOQuZNxhoRXCfKSlNTURuFtPK8i7AhBFCT9wfCNAmPrcVOjxYBSQXfN0fbV2GjH3_pSfmkXz06o/s200/radar+screen.jpg
+cover_image: /images/blogger/b78cc8ab25531d8380cd.jpg
 legacy_url: https://www.reversim.com/2012/11/153-final-class-24-thoughworks-radar.html
 legacy_path: /2012/11/153-final-class-24-thoughworks-radar
 ---
@@ -19,7 +19,7 @@ legacy_path: /2012/11/153-final-class-24-thoughworks-radar
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipNhs9STsHtyh_AObufne1vOoaHJHxgi5nnLqZPIaaxjezGA6NabKTOMSdueDQjmWxUOQuZNxhoRXCfKSlNTURuFtPK8i7AhBFCT9wfCNAmPrcVOjxYBSQXfN0fbV2GjH3_pSfmkXz06o/s1600/radar+screen.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipNhs9STsHtyh_AObufne1vOoaHJHxgi5nnLqZPIaaxjezGA6NabKTOMSdueDQjmWxUOQuZNxhoRXCfKSlNTURuFtPK8i7AhBFCT9wfCNAmPrcVOjxYBSQXfN0fbV2GjH3_pSfmkXz06o/s200/radar+screen.jpg" width="200"></a></div>
+<a href="/images/blogger/4022ea612656a53df8c0.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/b78cc8ab25531d8380cd.jpg" width="200"></a></div>
 <b id="internal-source-marker_0.9812437703367323" style="font-weight: normal; text-align: start;"><span style="vertical-align: baseline; white-space: pre-wrap;">מתפעלים מהרדאר הדנדש: </span><a href="https://hackpad.com/ep/profile/-364w9fPirYwlRP902uNVGP"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">איתי ממן</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">, </span><a href="https://hackpad.com/ep/profile/-2705jsTJmt8klKpmnyuUbf"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">ישי סמית'</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">, </span><a href="https://hackpad.com/ep/profile/186EIqqR4AfPyTWmzezDpB"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">גילי נחום</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> ו</span><a href="https://hackpad.com/ep/profile/3w7V6PrlU86N0Rm6q04xJO"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">רן תבורי</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">.</span></b></div>
 </li>
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">

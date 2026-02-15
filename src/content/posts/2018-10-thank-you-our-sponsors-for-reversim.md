@@ -1,7 +1,7 @@
 ---
 title: Thank you our sponsors for Reversim Summit 2018
 date: 2018-10-14T13:21:00.000Z
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNfcrqi_FMRYCUAFff8m-jc9whCmsPjpoAIKwZfdNYFbgiXZ3AOm8KTGJniDmiRtpIbr_g8qpuN9pjf5JS7KcUSSw78zJfrMfD51986h2Pq70qOqOyRtLjkJE_rI_n8Tc7_LXE6U4-45U/s400/RS18-sponsors.jpeg
+cover_image: /images/blogger/01bd594a7bec6e598e00.jpg
 legacy_url: https://www.reversim.com/2018/10/thank-you-our-sponsors-for-reversim.html
 legacy_path: /2018/10/thank-you-our-sponsors-for-reversim
 ---
@@ -56,7 +56,7 @@ legacy_path: /2018/10/thank-you-our-sponsors-for-reversim
 <div style="text-align: left;">
 <br></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNfcrqi_FMRYCUAFff8m-jc9whCmsPjpoAIKwZfdNYFbgiXZ3AOm8KTGJniDmiRtpIbr_g8qpuN9pjf5JS7KcUSSw78zJfrMfD51986h2Pq70qOqOyRtLjkJE_rI_n8Tc7_LXE6U4-45U/s1600/RS18-sponsors.jpeg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1200" data-original-width="1600" height="300" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNfcrqi_FMRYCUAFff8m-jc9whCmsPjpoAIKwZfdNYFbgiXZ3AOm8KTGJniDmiRtpIbr_g8qpuN9pjf5JS7KcUSSw78zJfrMfD51986h2Pq70qOqOyRtLjkJE_rI_n8Tc7_LXE6U4-45U/s400/RS18-sponsors.jpeg" width="400"></a></div>
+<a href="/images/blogger/48b0c6afca1d24bad81e.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1200" data-original-width="1600" height="300" src="/images/blogger/01bd594a7bec6e598e00.jpg" width="400"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 </div>

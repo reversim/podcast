@@ -3,7 +3,7 @@ title: 388 Remote Work (Coronavirus special) With Shlomi Noach
 date: 2020-04-02T10:13:00.000Z
 episode: 388
 audio_url: https://m2.reversim.com/reversim388-remote_corona_with_shlomi_noach.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZu4SjwG4el8xbUWO-EDyzUMkMdr65EFMY2GVtqsg7FVoQbAxein0ft5DEn-QCyr4Ni_rFVk39z_xMDrC98-4xSeOEbFR3ynh1fja6W5H_PWpe_WnKCg_rc_K-G3RYpqOwLI10z4SvEx4/s200/coronavirus.jpeg
+cover_image: /images/blogger/90e01d6abfeae4d38cb6.jpg
 legacy_url: https://www.reversim.com/2020/04/388-remote-work-coronavirus-special.html
 legacy_path: /2020/04/388-remote-work-coronavirus-special
 ---
@@ -19,7 +19,7 @@ legacy_path: /2020/04/388-remote-work-coronavirus-special
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovw8ywz84zz80zwz89z0pz80zuybiz70z6oyz71zx3z72zz90zsz81zz82z7e7z85z"><br></span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZu4SjwG4el8xbUWO-EDyzUMkMdr65EFMY2GVtqsg7FVoQbAxein0ft5DEn-QCyr4Ni_rFVk39z_xMDrC98-4xSeOEbFR3ynh1fja6W5H_PWpe_WnKCg_rc_K-G3RYpqOwLI10z4SvEx4/s1600/coronavirus.jpeg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="183" data-original-width="275" height="133" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZu4SjwG4el8xbUWO-EDyzUMkMdr65EFMY2GVtqsg7FVoQbAxein0ft5DEn-QCyr4Ni_rFVk39z_xMDrC98-4xSeOEbFR3ynh1fja6W5H_PWpe_WnKCg_rc_K-G3RYpqOwLI10z4SvEx4/s200/coronavirus.jpeg" width="200"></a></div>
+<a href="/images/blogger/198cf00892c392998d1b.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="183" data-original-width="275" height="133" src="/images/blogger/90e01d6abfeae4d38cb6.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovw8ywz84zz80zwz89z0pz80zuybiz70z6oyz71zx3z72zz90zsz81zz82z7e7z85z"><br></span></div>
 <div dir="rtl" style="text-align: right;">

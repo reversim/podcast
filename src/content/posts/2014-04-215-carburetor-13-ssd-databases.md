@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 215
 audio_url: https://m.reversim.com/reversim215_carburetor13.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgajUOVTe3zH-9FM9rNry6i8R5ftZZC7ASt6kfXH_hH1aVWeyDqUnpPYNXSI_kO1stRAaGQb769AKMYFSt3bL0WL9uJXZVwjDmSvIPRUzWt0ZV7AZi0-Nod7uLXBB7uY8s3zamkQunXCRU/s1600/sandisk-ssd-uata-5000-6.jpg
+cover_image: /images/blogger/d2fcdaa5439be19320cb.jpg
 legacy_url: https://www.reversim.com/2014/04/215-carburetor-13-ssd-databases.html
 legacy_path: /2014/04/215-carburetor-13-ssd-databases
 ---
@@ -18,7 +18,7 @@ legacy_path: /2014/04/215-carburetor-13-ssd-databases
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אורי, נתי ורן מתאחסנים ב Flash</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgajUOVTe3zH-9FM9rNry6i8R5ftZZC7ASt6kfXH_hH1aVWeyDqUnpPYNXSI_kO1stRAaGQb769AKMYFSt3bL0WL9uJXZVwjDmSvIPRUzWt0ZV7AZi0-Nod7uLXBB7uY8s3zamkQunXCRU/s1600/sandisk-ssd-uata-5000-6.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="193" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgajUOVTe3zH-9FM9rNry6i8R5ftZZC7ASt6kfXH_hH1aVWeyDqUnpPYNXSI_kO1stRAaGQb769AKMYFSt3bL0WL9uJXZVwjDmSvIPRUzWt0ZV7AZi0-Nod7uLXBB7uY8s3zamkQunXCRU/s1600/sandisk-ssd-uata-5000-6.jpg" width="200"><span style="color: black; line-height: 1.15; text-align: right; text-decoration: none;"> </span></a></div>
+<a href="/images/blogger/d2fcdaa5439be19320cb.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="193" src="/images/blogger/d2fcdaa5439be19320cb.jpg" width="200"><span style="color: black; line-height: 1.15; text-align: right; text-decoration: none;"> </span></a></div>
 </li>
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Flash - העתיד של טכנולוגיות האחסון?</span></div>

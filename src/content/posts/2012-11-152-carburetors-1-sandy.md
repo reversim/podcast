@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 152
 audio_url: https://m.reversim.com/reversim152_carburetor1.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-0e4MG9ExAcQHyoRu8f0kvBCW-1yU8NayE-nHnpmkhflTK7pD5nBP17NoPgZdvKenussMZ7ggSayYI1Ok1G-beFd2WxeAmzaeGtzCtA2UNiOLFO3nhNOUcdaW4KNhDTrZsYBexK3HF5E/s200/sandy-storm.jpg
+cover_image: /images/blogger/85f4d5d17b73f3dc1573.jpg
 legacy_url: https://www.reversim.com/2012/11/152-carburetors-1-sandy.html
 legacy_path: /2012/11/152-carburetors-1-sandy
 ---
@@ -16,7 +16,7 @@ legacy_path: /2012/11/152-carburetors-1-sandy
 <b id="internal-source-marker_0.5298487027175725" style="font-weight: normal; text-align: start;"></b></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-0e4MG9ExAcQHyoRu8f0kvBCW-1yU8NayE-nHnpmkhflTK7pD5nBP17NoPgZdvKenussMZ7ggSayYI1Ok1G-beFd2WxeAmzaeGtzCtA2UNiOLFO3nhNOUcdaW4KNhDTrZsYBexK3HF5E/s1600/sandy-storm.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="171" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-0e4MG9ExAcQHyoRu8f0kvBCW-1yU8NayE-nHnpmkhflTK7pD5nBP17NoPgZdvKenussMZ7ggSayYI1Ok1G-beFd2WxeAmzaeGtzCtA2UNiOLFO3nhNOUcdaW4KNhDTrZsYBexK3HF5E/s200/sandy-storm.jpg" width="200"></a></div>
+<a href="/images/blogger/79662182cd96da3bf7f0.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="171" src="/images/blogger/85f4d5d17b73f3dc1573.jpg" width="200"></a></div>
 <b id="internal-source-marker_0.5298487027175725" style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">"תעודת יושר?" - יש. "תעודת לידה?" - יש. "צילום תעודת זהות עם ספח?" - יש. "תעודת בגרות?" - יש. "אישרו מהצנזורה בשלושה העתקים?" - יש. "אישור ממהנדס העיר, מרב העיר, מראש העיר ועוסק זעיר?" יש, יש, יש ו...יש.</span></b></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <b id="internal-source-marker_0.5298487027175725" style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">"אישור תשלום אגרת טלוויזיה?" - אתה עובד עלי … "אישור תשלום אגרת טלוויזיה!!" - רגע… הנה, יש.</span></b></div>
@@ -28,7 +28,7 @@ legacy_path: /2012/11/152-carburetors-1-sandy
 <b id="internal-source-marker_0.5298487027175725" style="font-weight: normal; text-align: start;"><br></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;"><b id="internal-source-marker_0.5298487027175725" style="font-weight: normal; text-align: start;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt;">
-<span style="vertical-align: baseline; white-space: pre-wrap;">מחפשים את הפקידה ביציאה: </span><a href="http://natishalom.typepad.com/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">נתי שלום</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">, </span><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1E6U7HnuwNd78TTBql_dX3AoZjMDUS4qlHzsmB8Fz-qebjLr4oJy0h8cJrqgyB3SocNAGrH3sraPxdCKVqvfNhsD0bU4fYpQhZfMF8ShEmlplNWFHxoPl-ZbdiM6FzhKrNhMLm3YbAQU/s1600/twins.JPG"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">רן תבורי ואורי להב</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">.</span></div>
+<span style="vertical-align: baseline; white-space: pre-wrap;">מחפשים את הפקידה ביציאה: </span><a href="http://natishalom.typepad.com/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">נתי שלום</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">, </span><a href="/images/blogger/e3609c6cd7932d81d05e.jpg"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">רן תבורי ואורי להב</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">.</span></div>
 </li>
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt;">
 <a href="http://he.wikipedia.org/wiki/%D7%94%D7%95%D7%A8%D7%99%D7%A7%D7%9F_%D7%A1%D7%A0%D7%93%D7%99"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">סנדי, הו סנדי </span></a><span style="vertical-align: baseline; white-space: pre-wrap;">- שברת לנו את ה-BIOS ונעלמת.</span></div>

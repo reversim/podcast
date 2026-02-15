@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 158
 audio_url: https://m.reversim.com/reversim158_carburetor2.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9oZbYn3hylkx4KToqfCDWTWWoTG9qm8kuuLiW6n3-7Edtv_HCOasevpPKGr-KUjtTY7oJIfv9sF97xAxwZPPoRlmhc8xBJuQ-352a1tZsLeeyHXHUT9Oaa2boUIC5EsrR58rbPc2QHq8/s200/openstack-cloud-software-vertical-large.png
+cover_image: /images/blogger/f1f14746fd7b22562ad7.png
 legacy_url: https://www.reversim.com/2012/12/158-carburetur-2-open-source-clouds-and.html
 legacy_path: /2012/12/158-carburetur-2-open-source-clouds-and
 ---
@@ -15,7 +15,7 @@ legacy_path: /2012/12/158-carburetur-2-open-source-clouds-and
 <div dir="rtl" style="text-align: right;">
 <div dir="ltr" style="text-align: left;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9oZbYn3hylkx4KToqfCDWTWWoTG9qm8kuuLiW6n3-7Edtv_HCOasevpPKGr-KUjtTY7oJIfv9sF97xAxwZPPoRlmhc8xBJuQ-352a1tZsLeeyHXHUT9Oaa2boUIC5EsrR58rbPc2QHq8/s1600/openstack-cloud-software-vertical-large.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9oZbYn3hylkx4KToqfCDWTWWoTG9qm8kuuLiW6n3-7Edtv_HCOasevpPKGr-KUjtTY7oJIfv9sF97xAxwZPPoRlmhc8xBJuQ-352a1tZsLeeyHXHUT9Oaa2boUIC5EsrR58rbPc2QHq8/s200/openstack-cloud-software-vertical-large.png" width="200"></a></div>
+<a href="/images/blogger/6dd9a902060af9c227a7.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="/images/blogger/f1f14746fd7b22562ad7.png" width="200"></a></div>
 <b id="internal-source-marker_0.24965479923412204" style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">“What were the skies like when u were young?</span><br><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">They went on for ever and they when I we lived in Arizona and the skies</span><br><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">always had little fluffy clouds and... they were long and clear and there</span><br><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">were lots of stars, at night.” </span><a href="//www.youtube.com/watch?v=FHixChYgGRI"><span style="color: #1155cc; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">The ORB, Little fluffy clouds</span></a><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">.</span><br><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"></span></b><br>
 <b style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"><br></span></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

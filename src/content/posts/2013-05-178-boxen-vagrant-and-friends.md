@@ -6,7 +6,7 @@ tags:
   - vagrant
 episode: 178
 audio_url: https://m.reversim.com/reversim178_boxen_vagrant_and_friends.mp3
-cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tJf2vIGO00c0Ayk-88v5jWFFSdUsDXAWRdHcGi4kRMWIE8S_oPAxNRxTFBZsPxkBJejRNRjQp2PE-Pb-I33S6oUYgyovU_5qfEGhz5TxzDrw7CdWF1LOFF9qpYP5ACUKEpPCGqlwcj1svi=s0-d
+cover_image: /images/blogger/f70dd69349848dfe0111.jpg
 legacy_url: https://www.reversim.com/2013/05/178-boxen-vagrant-and-friends.html
 legacy_path: /2013/05/178-boxen-vagrant-and-friends
 ---
@@ -14,7 +14,7 @@ legacy_path: /2013/05/178-boxen-vagrant-and-friends
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
-<a href="http://garbagedayreviews.files.wordpress.com/2011/09/modern-times-2.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tJf2vIGO00c0Ayk-88v5jWFFSdUsDXAWRdHcGi4kRMWIE8S_oPAxNRxTFBZsPxkBJejRNRjQp2PE-Pb-I33S6oUYgyovU_5qfEGhz5TxzDrw7CdWF1LOFF9qpYP5ACUKEpPCGqlwcj1svi=s0-d" width="200"></a><b id="docs-internal-guid-752bbfd7-66aa-3d25-9d04-190a0ecdf78e" style="font-weight: normal; text-align: start;"></b></div>
+<a href="http://garbagedayreviews.files.wordpress.com/2011/09/modern-times-2.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="/images/blogger/f70dd69349848dfe0111.jpg" width="200"></a><b id="docs-internal-guid-752bbfd7-66aa-3d25-9d04-190a0ecdf78e" style="font-weight: normal; text-align: start;"></b></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <b id="docs-internal-guid-752bbfd7-66aa-3d25-9d04-190a0ecdf78e" style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">יש מי </span><a href="//www.youtube.com/watch?v=9X_ViIPA-Gc" style="text-decoration: none;"><span style="color: #1155cc; font-family: Arial; font-size: 15px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">שיעשה הכול בשביל אהבה</span></a><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">, </span><a href="http://boxen.github.com/" style="text-decoration: none;"><span style="color: #1155cc; font-family: Arial; font-size: 15px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">Boxen</span></a><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> יעשה הכול בשביל אוטומציה מלאה של התקנת תחנת העבודה שלכם.</span></b></div>
 <div dir="rtl" style="text-align: right;">

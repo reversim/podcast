@@ -3,7 +3,7 @@ title: 242 Fogcast 15 - API Versioning
 date: 2014-12-02T07:23:00.000Z
 episode: 242
 audio_url: https://m.reversim.com/reversim242_fogcast15-API-versioning%20.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9HW_bIm-kpwxP6lVHVwyxrJt0x_gL4FGqeheVjwOnmbfO_DSg0qYN_xoMFube8gGl2hO_EeGX7ssvIXuwepPiZUN7JHApXqVM7uO3BqK7jN2ieeQqiCjx0vq7ZqJsE_qLdm3FwD2qd_M/s1600/350-rest-api-versioning.png
+cover_image: /images/blogger/eeb8540302a44bf15afc.png
 legacy_url: https://www.reversim.com/2014/12/242-fogcast-15-api-versioning.html
 legacy_path: /2014/12/242-fogcast-15-api-versioning
 ---
@@ -25,7 +25,7 @@ legacy_path: /2014/12/242-fogcast-15-api-versioning
 </li>
 </ul>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9HW_bIm-kpwxP6lVHVwyxrJt0x_gL4FGqeheVjwOnmbfO_DSg0qYN_xoMFube8gGl2hO_EeGX7ssvIXuwepPiZUN7JHApXqVM7uO3BqK7jN2ieeQqiCjx0vq7ZqJsE_qLdm3FwD2qd_M/s1600/350-rest-api-versioning.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="125" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9HW_bIm-kpwxP6lVHVwyxrJt0x_gL4FGqeheVjwOnmbfO_DSg0qYN_xoMFube8gGl2hO_EeGX7ssvIXuwepPiZUN7JHApXqVM7uO3BqK7jN2ieeQqiCjx0vq7ZqJsE_qLdm3FwD2qd_M/s1600/350-rest-api-versioning.png" width="200"></a></div>
+<a href="/images/blogger/eeb8540302a44bf15afc.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="125" src="/images/blogger/eeb8540302a44bf15afc.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-d8d3f204-09ce-5784-0512-0b7109ae3bf5" style="font-weight: normal;"><br></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

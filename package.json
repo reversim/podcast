@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "migrate:blogger": "node scripts/migrate-from-blogger.mjs",
+    "images:localize-blogger": "node scripts/localize-blogger-images.mjs",
     "migrate:validate": "node scripts/validate-migration.mjs",
     "migrate:audit": "node scripts/audit-migration.mjs",
     "rss:compare": "node scripts/compare-rss.mjs"

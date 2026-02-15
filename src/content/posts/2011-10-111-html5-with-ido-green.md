@@ -3,13 +3,13 @@ title: 111 HTML5 with Ido Green
 date: 2011-10-11T13:14:00.000Z
 episode: 111
 audio_url: https://m.reversim.com/reversim111_ido_green.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlC1kjrONvDy6EXMkKkMB1IiGmmp47R0SX6VTcPtpOqsQhNLDOsVq-Cu2GlSgNXMpi62jAuKPCWJlO_juiiDZWLwuwbFaJvqAjGQvTsomD3bGvv7yyFeckK2Hxa33qlgblLc55A2Kc5ho/s200/Ido_Green.jpg
+cover_image: /images/blogger/718fc07bcb21645e8651.jpg
 legacy_url: https://www.reversim.com/2011/10/111-html5-with-ido-green.html
 legacy_path: /2011/10/111-html5-with-ido-green
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlC1kjrONvDy6EXMkKkMB1IiGmmp47R0SX6VTcPtpOqsQhNLDOsVq-Cu2GlSgNXMpi62jAuKPCWJlO_juiiDZWLwuwbFaJvqAjGQvTsomD3bGvv7yyFeckK2Hxa33qlgblLc55A2Kc5ho/s1600/Ido_Green.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlC1kjrONvDy6EXMkKkMB1IiGmmp47R0SX6VTcPtpOqsQhNLDOsVq-Cu2GlSgNXMpi62jAuKPCWJlO_juiiDZWLwuwbFaJvqAjGQvTsomD3bGvv7yyFeckK2Hxa33qlgblLc55A2Kc5ho/s200/Ido_Green.jpg" width="165"></a></div><div dir="rtl" style="text-align: right;"><a href="http://greenido.wordpress.com/">עידו גרין</a> הוא מפתח ויזם בעל שנים רבות של נסיון וכעת בתפקיד של Developer Advocate בגוגל</div><div dir="rtl" style="text-align: right;">בשיחה קולחת ומעניינת דיברנו על:</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>עדו, החברות שבהן עבד וחלקן ייסד</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/491cb83949fe9c0f2c19.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/718fc07bcb21645e8651.jpg" width="165"></a></div><div dir="rtl" style="text-align: right;"><a href="http://greenido.wordpress.com/">עידו גרין</a> הוא מפתח ויזם בעל שנים רבות של נסיון וכעת בתפקיד של Developer Advocate בגוגל</div><div dir="rtl" style="text-align: right;">בשיחה קולחת ומעניינת דיברנו על:</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>עדו, החברות שבהן עבד וחלקן ייסד</li>
 <li>מוצרים שעדו בנה</li>
 <li>תפקידו בגוגל ומה זה Developer Advocate</li>
 <li>HTML5 שבו עדו מתמחה</li>

@@ -3,7 +3,7 @@ title: 285 A podcast about Nothing
 date: 2015-12-20T06:21:00.000Z
 episode: 285
 audio_url: https://m2.reversim.com/reversim285_nothing.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7uxJ1ssBefAH-u3H5tOWlVd8r_OlEjoPUpYog0MlC_aDzrdFpNWj9Qp9Jqp-op3WHVK1sCL-m1mWWd1qatvJ9550uljFmEf-ICby1zfuQSTugNvNH4WbsEz0U3WHQM4sSEdBlLPqMUMI/s200/reversim-logo-white.png
+cover_image: /images/blogger/9deeebc68f1dabf1f45f.png
 legacy_url: https://www.reversim.com/2015/12/285-podcast-about-nothing.html
 legacy_path: /2015/12/285-podcast-about-nothing
 ---
@@ -11,7 +11,7 @@ legacy_path: /2015/12/285-podcast-about-nothing
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7uxJ1ssBefAH-u3H5tOWlVd8r_OlEjoPUpYog0MlC_aDzrdFpNWj9Qp9Jqp-op3WHVK1sCL-m1mWWd1qatvJ9550uljFmEf-ICby1zfuQSTugNvNH4WbsEz0U3WHQM4sSEdBlLPqMUMI/s1600/reversim-logo-white.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="93" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7uxJ1ssBefAH-u3H5tOWlVd8r_OlEjoPUpYog0MlC_aDzrdFpNWj9Qp9Jqp-op3WHVK1sCL-m1mWWd1qatvJ9550uljFmEf-ICby1zfuQSTugNvNH4WbsEz0U3WHQM4sSEdBlLPqMUMI/s200/reversim-logo-white.png" width="200"></a></div>
+<a href="/images/blogger/1b819922165c345e3aba.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="93" src="/images/blogger/9deeebc68f1dabf1f45f.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפרק חגיגי של רברסים לכבוד השקת האולפן ה"לא וירטואלי" החדש שלנו. יש לנו מיקסר משוכלל, מחשבים חדשים, מיקרופונים שווים ואוזניות מצוינות. באולפן היום (24.11.15) רן ואורי. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

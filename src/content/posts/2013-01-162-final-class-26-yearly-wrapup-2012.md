@@ -5,7 +5,7 @@ tags:
   - finalclass
 episode: 162
 audio_url: https://m.reversim.com/reversim163_finalclass26.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png
+cover_image: /images/blogger/2d2e50f03112836b90da.png
 legacy_url: https://www.reversim.com/2013/01/162-final-class-26-yearly-wrapup-2012.html
 legacy_path: /2013/01/162-final-class-26-yearly-wrapup-2012
 ---
@@ -17,7 +17,7 @@ legacy_path: /2013/01/162-final-class-26-yearly-wrapup-2012
 <div style="text-align: left;">
 <b style="font-weight: normal;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"><br></span></b></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s1600/barbecue-crazy-tux-1800.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png" width="200"></a></div>
+<a href="/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
 <div style="text-align: left;">
 <b style="font-weight: normal;"><span style="font-family: Arial;"><span style="font-size: 15px; white-space: pre-wrap;"><br></span></span></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

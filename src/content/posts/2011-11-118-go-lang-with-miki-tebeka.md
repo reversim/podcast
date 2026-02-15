@@ -3,13 +3,13 @@ title: 118 Go Lang with Miki Tebeka
 date: 2011-11-27T07:33:00.000Z
 episode: 118
 audio_url: https://m.reversim.com/reversim118_go_lang.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-34I96B5cJwOas-kLX432RgwpRbDt1BLtTR8SOj4XI8PnJySaFj0i_sBvnpwzIb1dcBmp7XkPGGmwwG7un4rhHMDgP8v_ynkcNdgahBZNB24QxNjUN3vay6Y1M6r7DbVAdbimF4q5KwY/s1600/The+Go+Programming+Language+Blog.png
+cover_image: /images/blogger/3e965a20616913a75a0a.png
 legacy_url: https://www.reversim.com/2011/11/118-go-lang-with-miki-tebeka.html
 legacy_path: /2011/11/118-go-lang-with-miki-tebeka
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl"><div style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-34I96B5cJwOas-kLX432RgwpRbDt1BLtTR8SOj4XI8PnJySaFj0i_sBvnpwzIb1dcBmp7XkPGGmwwG7un4rhHMDgP8v_ynkcNdgahBZNB24QxNjUN3vay6Y1M6r7DbVAdbimF4q5KwY/s1600/The+Go+Programming+Language+Blog.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-34I96B5cJwOas-kLX432RgwpRbDt1BLtTR8SOj4XI8PnJySaFj0i_sBvnpwzIb1dcBmp7XkPGGmwwG7un4rhHMDgP8v_ynkcNdgahBZNB24QxNjUN3vay6Y1M6r7DbVAdbimF4q5KwY/s1600/The+Go+Programming+Language+Blog.png"></a></div>בפרק זה שוחחנו עם <a href="http://web.mikitebeka.com/">מיקי טבקה</a> בעיקר על <a href="http://golang.org/">שפת גו</a> ומעט גם על סלניום.</div></div><div dir="rtl"><ul style="text-align: right;"><li>מה מקור השפה ומה מייחד אותה</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl"><div style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/3e965a20616913a75a0a.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/3e965a20616913a75a0a.png"></a></div>בפרק זה שוחחנו עם <a href="http://web.mikitebeka.com/">מיקי טבקה</a> בעיקר על <a href="http://golang.org/">שפת גו</a> ומעט גם על סלניום.</div></div><div dir="rtl"><ul style="text-align: right;"><li>מה מקור השפה ומה מייחד אותה</li>
 <li>מי האנשים מאחורי השפה</li>
 <li>איזה שימוש מבצעי עושים בה היום</li>
 <li>דמיון ושוני עם שפות אחרות כמו ארלנג, סקלה, קלוז'ר</li>

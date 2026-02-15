@@ -3,7 +3,7 @@ title: "288 Carburetor 21: Predictions for 2016"
 date: 2016-01-11T20:50:00.000Z
 episode: 288
 audio_url: https://m2.reversim.com/reversim288-Carburetor_21.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipcB4OhX8cNsctDWRfWs9My92wYPsbAZON5zqu3TKADDl2zD6I0jsbFuCKV4TbDY1h7Sq_LwgKxBQBv951NcVfqkhxioT-uHN6Bf4pC0Y-7Kyv4ukZqAKopd0v8l3qCltJ1XXMpxe2Vgg/s200/Unknown3.png
+cover_image: /images/blogger/8c3e4cc5bc43458b8922.png
 legacy_url: https://www.reversim.com/2016/01/288-carburetor-21-predictions-for-2016.html
 legacy_path: /2016/01/288-carburetor-21-predictions-for-2016
 ---
@@ -12,7 +12,7 @@ legacy_path: /2016/01/288-carburetor-21-predictions-for-2016
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipcB4OhX8cNsctDWRfWs9My92wYPsbAZON5zqu3TKADDl2zD6I0jsbFuCKV4TbDY1h7Sq_LwgKxBQBv951NcVfqkhxioT-uHN6Bf4pC0Y-7Kyv4ukZqAKopd0v8l3qCltJ1XXMpxe2Vgg/s1600/Unknown3.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipcB4OhX8cNsctDWRfWs9My92wYPsbAZON5zqu3TKADDl2zD6I0jsbFuCKV4TbDY1h7Sq_LwgKxBQBv951NcVfqkhxioT-uHN6Bf4pC0Y-7Kyv4ukZqAKopd0v8l3qCltJ1XXMpxe2Vgg/s200/Unknown3.png" width="200"></a></div>
+<a href="/images/blogger/156ca74241dd711b7ce0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/images/blogger/8c3e4cc5bc43458b8922.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפודקאסט נוסף של רברסים, והגענו כבר לפרק 288, שמוקלט באולפן הביתי המשוכלל שלנו ב-29/12/15. מצטרף אלינו הפעם נתי שלום, לפרק 21 של קרבורטור, תת סדרה שלנו. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

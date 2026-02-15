@@ -3,7 +3,7 @@ title: 141 Object Pascal with Ido Kanner
 date: 2012-05-28T20:13:00.000Z
 episode: 141
 audio_url: https://m.reversim.com/reversim141_obj_pascal.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeJDl7nZPv5Gat_7QC8yinmk9MtHV60xbp_q8rzGKUCnS9-9LSfrWMJiyh-G4O8jwsRh1T0znTN0ytmSe70l3alm-wrlxdZZlRPDzVU_2y3x3iwtw3qHH39N1C6PqO1HEubfgfY-1CLXQ/s320/Object+Pascal.png
+cover_image: /images/blogger/31cdb833be5d757c5588.png
 legacy_url: https://www.reversim.com/2012/05/141-object-pascal-with-ido-kanner.html
 legacy_path: /2012/05/141-object-pascal-with-ido-kanner
 ---
@@ -14,7 +14,7 @@ legacy_path: /2012/05/141-object-pascal-with-ido-kanner
 <b id="internal-source-marker_0.5922525469213724" style="text-align: -webkit-auto;"></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeJDl7nZPv5Gat_7QC8yinmk9MtHV60xbp_q8rzGKUCnS9-9LSfrWMJiyh-G4O8jwsRh1T0znTN0ytmSe70l3alm-wrlxdZZlRPDzVU_2y3x3iwtw3qHH39N1C6PqO1HEubfgfY-1CLXQ/s1600/Object+Pascal.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="59" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeJDl7nZPv5Gat_7QC8yinmk9MtHV60xbp_q8rzGKUCnS9-9LSfrWMJiyh-G4O8jwsRh1T0znTN0ytmSe70l3alm-wrlxdZZlRPDzVU_2y3x3iwtw3qHH39N1C6PqO1HEubfgfY-1CLXQ/s320/Object+Pascal.png" width="320"></a></div>
+<a href="/images/blogger/81625d7a5c21daa2ac9f.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="59" src="/images/blogger/31cdb833be5d757c5588.png" width="320"></a></div>
 <div style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span id="internal-source-marker_0.5922525469213724" style="text-align: -webkit-auto;"><span style="vertical-align: baseline; white-space: pre-wrap;">אני מתכבד לפתוח בזאת את הכנס השמיני בנושא "אובייקטיביות ותכנות" של המחלקה לפילוסופיה. איתנו בפאנל פרופסור אורי להב ("האובייקט ואני", הוצאת מידן), דוקטור רן תבורי ("אובייקטיבי-סובייקטיבי: גילוי עצמי דרך תכנות מונחה עצמים", הוצאת עם עובד), ואורח הכבוד פרופסור אמריטוס </span><a href="http://idkn.wordpress.com/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">עידו קנר</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> ("כשסטרוסטרופ בכה: מסע לנבכי המחלקה", הוצאת זמורה-ביתן). באג'נדה היום: </span><a href="http://freepascal.org/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">Free Pascal</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"></span></span></div>
 </li>

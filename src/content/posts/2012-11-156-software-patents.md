@@ -3,7 +3,7 @@ title: 156 Software Patents פטנטים בתכנה
 date: 2012-11-29T20:58:00.000Z
 episode: 156
 audio_url: https://m.reversim.com/reversim156_patents.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHRd-mA-GrmVPijvSHj3D6bWqmUL1urheX1ZU-OyvaGUSQUQOSatD4QOXUI-ixjs3GbBP2vBqlCgRITXwANP3gl3kTxr-3xJJXotounPpwB2cpZNioeyVjpZdxTh60WWRxhX_FcTimfc/s200/thumb_COLOURBOX4249574.jpeg
+cover_image: /images/blogger/77319872966812218fb9.jpg
 legacy_url: https://www.reversim.com/2012/11/156-software-patents.html
 legacy_path: /2012/11/156-software-patents
 ---
@@ -13,7 +13,7 @@ legacy_path: /2012/11/156-software-patents
 <div dir="rtl" style="text-align: right;">
 <b id="internal-source-marker_0.8784961542114615" style="font-weight: normal; text-align: start;"></b></div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<b id="internal-source-marker_0.8784961542114615" style="font-weight: normal; text-align: start;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHRd-mA-GrmVPijvSHj3D6bWqmUL1urheX1ZU-OyvaGUSQUQOSatD4QOXUI-ixjs3GbBP2vBqlCgRITXwANP3gl3kTxr-3xJJXotounPpwB2cpZNioeyVjpZdxTh60WWRxhX_FcTimfc/s1600/thumb_COLOURBOX4249574.jpeg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="166" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoHRd-mA-GrmVPijvSHj3D6bWqmUL1urheX1ZU-OyvaGUSQUQOSatD4QOXUI-ixjs3GbBP2vBqlCgRITXwANP3gl3kTxr-3xJJXotounPpwB2cpZNioeyVjpZdxTh60WWRxhX_FcTimfc/s200/thumb_COLOURBOX4249574.jpeg" width="200"></a></b></div>
+<b id="internal-source-marker_0.8784961542114615" style="font-weight: normal; text-align: start;"><a href="/images/blogger/b65bb3935015e2a2a177.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="166" src="/images/blogger/77319872966812218fb9.jpg" width="200"></a></b></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <b id="internal-source-marker_0.8784961542114615" style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">"צינור גומי, מאלומיניום" - הגשש החיוור, </span><a href="http://he.wikiquote.org/wiki/%D7%94%D7%92%D7%A9%D7%A9_%D7%94%D7%97%D7%99%D7%95%D7%95%D7%A8#.D7.94.D7.A7.D7.A4.D7.99.D7.98.D7.A8.D7.99.D7.94_.D7.91.D7.98.D7.91.D7.A8.D7.99.D7.94"><span style="color: #1155cc; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">הקפיטריה בטבריה</span></a><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">.</span></b></div>
 <div dir="rtl" style="text-align: right;">

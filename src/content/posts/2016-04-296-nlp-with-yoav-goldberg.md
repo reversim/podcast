@@ -3,7 +3,7 @@ title: 296 NLP with Yoav Goldberg
 date: 2016-04-17T21:32:00.000Z
 episode: 296
 audio_url: https://m2.reversim.com/reversim296_nlp-yoav-goldberg.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqLte-duAQj9_Ycw_PZOfP5v-nTfBKaeSnyEzyfpBF_WNh7iNhM6dhqcoOQ7EzWsy0kxLgkQxHG2CBNUAtLe5BW31LGcQnXI0ZW6n1EFMFFQfjRfMu-14Zh8HHIcVd9JDzY2ijuPr8GMs/s200/COC-NLP-Reframing.jpg
+cover_image: /images/blogger/305772f43a332396f32c.jpg
 legacy_url: https://www.reversim.com/2016/04/296-nlp-with-yoav-goldberg.html
 legacy_path: /2016/04/296-nlp-with-yoav-goldberg
 ---
@@ -13,7 +13,7 @@ legacy_path: /2016/04/296-nlp-with-yoav-goldberg
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqLte-duAQj9_Ycw_PZOfP5v-nTfBKaeSnyEzyfpBF_WNh7iNhM6dhqcoOQ7EzWsy0kxLgkQxHG2CBNUAtLe5BW31LGcQnXI0ZW6n1EFMFFQfjRfMu-14Zh8HHIcVd9JDzY2ijuPr8GMs/s1600/COC-NLP-Reframing.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="104" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqLte-duAQj9_Ycw_PZOfP5v-nTfBKaeSnyEzyfpBF_WNh7iNhM6dhqcoOQ7EzWsy0kxLgkQxHG2CBNUAtLe5BW31LGcQnXI0ZW6n1EFMFFQfjRfMu-14Zh8HHIcVd9JDzY2ijuPr8GMs/s200/COC-NLP-Reframing.jpg" width="200"></a></div>
+<a href="/images/blogger/4bfbfc13c478ea7458bf.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="104" src="/images/blogger/305772f43a332396f32c.jpg" width="200"></a></div>
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפודקאסט 296 התאריך הוא ה 13 למרץ ואנחנו מארחים את </span><a href="https://www.cs.bgu.ac.il/~yoavg/uni/" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">יואב גולדברג</span></a><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> לשיחה על NLP- תחום עיבוד שפה טבעית וחלקו בMachine Learning.</span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

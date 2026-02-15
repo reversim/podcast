@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 221
 audio_url: https://m.reversim.com/reversim221_fogcast10_sessions.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhntCki4JKIpXe2DuSpYq2rfqVXQWJmLTr9BIl-6oGT0Nnvrhxtk_b9zxLMaQf9r948aRyO_7qw9RdwJcJq1CiBBvVm60iHEVn-3K11xV8iMpYFQs1qdftxRHEsq2BmS8pY8_e2Dsz4bnI/s1600/For-Dummies-image_session-management.jpg
+cover_image: /images/blogger/2821345474570b608b32.jpg
 legacy_url: https://www.reversim.com/2014/06/221-fogcast-10-session-management.html
 legacy_path: /2014/06/221-fogcast-10-session-management
 ---
@@ -18,7 +18,7 @@ legacy_path: /2014/06/221-fogcast-10-session-management
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ליאור ורן - על session managemeent</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhntCki4JKIpXe2DuSpYq2rfqVXQWJmLTr9BIl-6oGT0Nnvrhxtk_b9zxLMaQf9r948aRyO_7qw9RdwJcJq1CiBBvVm60iHEVn-3K11xV8iMpYFQs1qdftxRHEsq2BmS8pY8_e2Dsz4bnI/s1600/For-Dummies-image_session-management.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhntCki4JKIpXe2DuSpYq2rfqVXQWJmLTr9BIl-6oGT0Nnvrhxtk_b9zxLMaQf9r948aRyO_7qw9RdwJcJq1CiBBvVm60iHEVn-3K11xV8iMpYFQs1qdftxRHEsq2BmS8pY8_e2Dsz4bnI/s1600/For-Dummies-image_session-management.jpg" width="131"></a></div>
+<a href="/images/blogger/2821345474570b608b32.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/2821345474570b608b32.jpg" width="131"></a></div>
 </li>
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">בשתי מלים - היכולת לזהות משתמש חוזר כ-משתמש חוזר</span></div>

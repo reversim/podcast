@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 255
 audio_url: https://m.reversim.com/reversim255_fogcast18-win-deployment.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjftqgMVaeRV0N5uxeoW2pHOdbWqtKMgM3SUub3muALA4STZhUfZddU7OMvCnNsogYumxyn591ER8wQdwv3h8DZtYUvjdCycc0U3zwEmoaJaukM2oL47NVC-FzvgNeDoF7NckA10eQb_Rg/s1600/Deploying+Images+with+Windows+Deployment+Services_1.png
+cover_image: /images/blogger/b8a3d7644c0b5758541b.png
 legacy_url: https://www.reversim.com/2015/04/255-fogcast-18-windows-deployment.html
 legacy_path: /2015/04/255-fogcast-18-windows-deployment
 ---
@@ -19,7 +19,7 @@ legacy_path: /2015/04/255-fogcast-18-windows-deployment
 <div dir="rtl" style="line-height: 1.7999999999999998; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjftqgMVaeRV0N5uxeoW2pHOdbWqtKMgM3SUub3muALA4STZhUfZddU7OMvCnNsogYumxyn591ER8wQdwv3h8DZtYUvjdCycc0U3zwEmoaJaukM2oL47NVC-FzvgNeDoF7NckA10eQb_Rg/s1600/Deploying+Images+with+Windows+Deployment+Services_1.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="148" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjftqgMVaeRV0N5uxeoW2pHOdbWqtKMgM3SUub3muALA4STZhUfZddU7OMvCnNsogYumxyn591ER8wQdwv3h8DZtYUvjdCycc0U3zwEmoaJaukM2oL47NVC-FzvgNeDoF7NckA10eQb_Rg/s1600/Deploying+Images+with+Windows+Deployment+Services_1.png" width="200"></a></div>
+<a href="/images/blogger/b8a3d7644c0b5758541b.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="148" src="/images/blogger/b8a3d7644c0b5758541b.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.7999999999999998; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>
 <div dir="rtl" style="line-height: 1.7999999999999998; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

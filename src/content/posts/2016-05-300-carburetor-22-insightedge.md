@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 300
 audio_url: https://m2.reversim.com/reversim300_carburetor22-insight-edge.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGNBxOMd7fWBI6TwewlUWT2EQG3tFiequ4BhZ9HKhNj16O9mPuvWlx59JD353IUDjbGC2bcXUwYq5gNPo-RL4CnwgDCKEH-yZK1e5RoEcy90UKmT19PakKzmdA2RaB6Vcw1rvnfuItBsg/s200/insight-edge.png
+cover_image: /images/blogger/f86b1cf1d4401fa347e7.png
 legacy_url: https://www.reversim.com/2016/05/300-carburetor-22-insightedge.html
 legacy_path: /2016/05/300-carburetor-22-insightedge
 ---
@@ -16,7 +16,7 @@ legacy_path: /2016/05/300-carburetor-22-insightedge
 <div style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפודקאסט 300, עם</span><a href="https://www.linkedin.com/in/natishalom" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;"> נתי שלום</span></a><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> מחברת Gigaspaces– פרק מספר 22 של קרבורטור – היום נדבר על Spark והאתגרים בשינוי המוצר המכניס העיקרי של החברה XAP &nbsp;</span><a href="http://insightedge.io/" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.6667px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">ל</span><span style="background-color: transparent; color: #1155cc; font-family: &quot;calibri&quot;; font-size: 14.6667px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">InsightEdge</span></a><br>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGNBxOMd7fWBI6TwewlUWT2EQG3tFiequ4BhZ9HKhNj16O9mPuvWlx59JD353IUDjbGC2bcXUwYq5gNPo-RL4CnwgDCKEH-yZK1e5RoEcy90UKmT19PakKzmdA2RaB6Vcw1rvnfuItBsg/s1600/insight-edge.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGNBxOMd7fWBI6TwewlUWT2EQG3tFiequ4BhZ9HKhNj16O9mPuvWlx59JD353IUDjbGC2bcXUwYq5gNPo-RL4CnwgDCKEH-yZK1e5RoEcy90UKmT19PakKzmdA2RaB6Vcw1rvnfuItBsg/s200/insight-edge.png" width="200"></a></div>
+<a href="/images/blogger/7557ef6b5f0f4c62e511.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/images/blogger/f86b1cf1d4401fa347e7.png" width="200"></a></div>
 <br></div>
 <ul style="text-align: right;">
 <li>2:00 - מעט על <a href="http://www.gigaspaces.com/">Gigaspaces</a> – שני מוצרים עיקריים, דאטאבייס In memory מבוזר וCloudify. מוצר הדאטאבייס XAP עבר שינוי משמעותי עקב התפשטות הOpen source.</li>

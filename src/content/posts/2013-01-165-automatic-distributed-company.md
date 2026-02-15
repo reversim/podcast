@@ -3,7 +3,7 @@ title: 165 Automattic, the distributed company
 date: 2013-01-17T22:12:00.000Z
 episode: 165
 audio_url: https://m.reversim.com/reversim165_automatic.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKB5hi7oou76Vk1Nml5FdcZtHVYv82U7fCBTLVN6Esh2ZwvuU3-vBCiZsKo9DaYfhZKMvMJKOmj5H00Ams95c_h8JgbXTKIh1FfZ5T4_lel1WwquwJEOwwuZsylVuxFITsTdluPQsmiCM/s200/wordpress-logo-stacked-rgb.png
+cover_image: /images/blogger/9acff390da1f38d52962.png
 legacy_url: https://www.reversim.com/2013/01/165-automatic-distributed-company.html
 legacy_path: /2013/01/165-automatic-distributed-company
 ---
@@ -14,7 +14,7 @@ legacy_path: /2013/01/165-automatic-distributed-company
 <div dir="ltr" style="margin-bottom: 0pt; margin-top: 0pt; text-indent: 36pt;">
 <b id="internal-source-marker_0.9030889312271029" style="font-weight: normal;"><span style="background-color: white; color: #181818; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">- </span><a href="http://en.wikipedia.org/wiki/Aldous_Huxley"><span style="background-color: white; color: #1155cc; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">Aldous Huxley</span></a><span style="background-color: white; color: #181818; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">, “</span><a href="http://en.wikipedia.org/wiki/Brave_New_World"><span style="background-color: white; color: #1155cc; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">Brave New World</span></a><span style="background-color: white; color: #181818; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">”</span></b></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKB5hi7oou76Vk1Nml5FdcZtHVYv82U7fCBTLVN6Esh2ZwvuU3-vBCiZsKo9DaYfhZKMvMJKOmj5H00Ams95c_h8JgbXTKIh1FfZ5T4_lel1WwquwJEOwwuZsylVuxFITsTdluPQsmiCM/s1600/wordpress-logo-stacked-rgb.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="123" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKB5hi7oou76Vk1Nml5FdcZtHVYv82U7fCBTLVN6Esh2ZwvuU3-vBCiZsKo9DaYfhZKMvMJKOmj5H00Ams95c_h8JgbXTKIh1FfZ5T4_lel1WwquwJEOwwuZsylVuxFITsTdluPQsmiCM/s200/wordpress-logo-stacked-rgb.png" width="200"></a></div>
+<a href="/images/blogger/406b99c7a2ab62f2be8f.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="123" src="/images/blogger/9acff390da1f38d52962.png" width="200"></a></div>
 <b id="internal-source-marker_0.9030889312271029" style="font-weight: normal;"><br></b>
 <br>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;"><b id="internal-source-marker_0.9030889312271029" style="font-weight: normal;">
@@ -49,7 +49,7 @@ legacy_path: /2013/01/165-automatic-distributed-company
 <span style="vertical-align: baseline; white-space: pre-wrap;">Github מטיסים מועמדים ליום ראיונות. ב-Automattic אפילו את זה לא צריך. מה שנקרא - יעילות.</span></div>
 </li>
 <li dir="rtl" style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
-<span style="vertical-align: baseline; white-space: pre-wrap;">פגישת צוות? בוא נקבע </span><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibf48g-mlJi-lRlWpASdS6s1pSWe-zVZOxlbHksnww92B2APEReMZj6eJa8OadtTGctHrSVnzpfmVu1-jZ0Db7qwi13pngCi5_Moxz3nUoPxbzRjW6lhpK7xkgQqfoHlk2wLy3Aul25W9w/s1600/Thailand.jpg"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">במקום נחמד</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> וניפגש (ויש גם הפתעות של קול שלא כל-כך מתאים לבנאדם. כן, </span><a href="//www.youtube.com/watch?v=V7r6EozGXAo"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">זה קורה</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">)</span></div>
+<span style="vertical-align: baseline; white-space: pre-wrap;">פגישת צוות? בוא נקבע </span><a href="/images/blogger/26583a2e0706f6b3a323.jpg"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">במקום נחמד</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> וניפגש (ויש גם הפתעות של קול שלא כל-כך מתאים לבנאדם. כן, </span><a href="//www.youtube.com/watch?v=V7r6EozGXAo"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">זה קורה</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">)</span></div>
 </li>
 <li dir="rtl" style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="vertical-align: baseline; white-space: pre-wrap;">כמעט ואין שימוש באימיילים. הללויה. במקום זה משתמשים (בעיקר) בתבנית של WordpPess ש</span><a href="http://wordpress.org/extend/themes/p2"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">נקראת p2</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> (כולם יכולים להשתמש, זה קוד פתוח...)</span></div>

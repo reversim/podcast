@@ -5,7 +5,7 @@ tags:
   - finalclass
 episode: 138
 audio_url: https://m.reversim.com/reversim138_finalclass18.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png
+cover_image: /images/blogger/2d2e50f03112836b90da.png
 legacy_url: https://www.reversim.com/2012/05/138-final-class-18-past-present-future.html
 legacy_path: /2012/05/138-final-class-18-past-present-future
 ---
@@ -16,7 +16,7 @@ legacy_path: /2012/05/138-final-class-18-past-present-future
 <b id="internal-source-marker_0.4798420313745737" style="text-align: -webkit-auto;"></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;"><b id="internal-source-marker_0.4798420313745737" style="text-align: -webkit-auto;"><ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li style="font-family: Arial; font-size: 15px; font-weight: normal; list-style-type: disc; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s1600/barbecue-crazy-tux-1800.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png" width="200"></a></div>
+<a href="/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="vertical-align: baseline; white-space: pre-wrap;">יומן הקפטן, תאריך כוכבי 87.417.2. ישיבת הצוות השבועית, על האג'נדה נושא רומנטי משהו - עבר, הווה ועתיד. נוכחים: הקפטן רן תבורי, סגנו גילי נחום, מהנדס ראשי יונתן, טכנאי מערכות נשק ראשי ערן הראל, קצין רפואה ורווחה ארז מזור וישות העל המסתורית ישי סמית'.</span></div>
 </li>

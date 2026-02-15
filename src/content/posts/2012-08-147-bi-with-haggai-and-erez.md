@@ -3,7 +3,7 @@ title: 147 BI with Haggai and Erez
 date: 2012-08-25T11:01:00.000Z
 episode: 147
 audio_url: https://m.reversim.com/reversim147_bi3.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPkwNA-sUhv3YVqpBtetRUAxVWU9PzWj6YhC8WjOcfceSCIaI5b11JlXVfa4-RoaVi87WE5fDte4CAZ6in8IothKhRsfWoQzPAwBmDWqE-bcvv0-n79g55I9ZBn5kUvABvbYG78NkWJ7g/s200/bi.jpeg
+cover_image: /images/blogger/d059e26444517a5a6227.jpg
 legacy_url: https://www.reversim.com/2012/08/147-bi-with-haggai-and-erez.html
 legacy_path: /2012/08/147-bi-with-haggai-and-erez
 ---
@@ -15,7 +15,7 @@ legacy_path: /2012/08/147-bi-with-haggai-and-erez
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPkwNA-sUhv3YVqpBtetRUAxVWU9PzWj6YhC8WjOcfceSCIaI5b11JlXVfa4-RoaVi87WE5fDte4CAZ6in8IothKhRsfWoQzPAwBmDWqE-bcvv0-n79g55I9ZBn5kUvABvbYG78NkWJ7g/s1600/bi.jpeg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="187" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPkwNA-sUhv3YVqpBtetRUAxVWU9PzWj6YhC8WjOcfceSCIaI5b11JlXVfa4-RoaVi87WE5fDte4CAZ6in8IothKhRsfWoQzPAwBmDWqE-bcvv0-n79g55I9ZBn5kUvABvbYG78NkWJ7g/s200/bi.jpeg" width="200"></a></div>
+<a href="/images/blogger/f5a1a086121c01a04419.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="187" src="/images/blogger/d059e26444517a5a6227.jpg" width="200"></a></div>
 <b id="internal-source-marker_0.6202347928192466" style="font-weight: normal; text-align: start;"><span style="vertical-align: baseline; white-space: pre-wrap;">בעקבות בקשתו של מאזיננו הנאמן דוויד, התכנסנו באולפן התת-ימי שלנו לשיחה על בינה עסקית <br class="kix-line-break">(BI). בתא הלחץ נמצאים רן ואורי, ארז מ-</span><a href="https://www.outbrain.com/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">OutBrain</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> וחגי מ-</span><a href="http://www.liveperson.com/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">LivePerson</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> בפאנל המומחים.</span></b></div>
 </li>
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">

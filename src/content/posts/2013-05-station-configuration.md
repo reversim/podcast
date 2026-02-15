@@ -9,7 +9,7 @@ tags:
   - paas
 episode: 179
 audio_url: https://m.reversim.com/reversim179_final_class_29.mp3
-cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sJhk-eVJE7CGb_Cm8Gu-MiitCIy3t9Is0shC153XLzRN71E0zmjf--vJF5wxMN3O3VqGpPtQI7Dt_X3BBscLuiL2EgRqND2hfzSTHogUgociaZsBsb55gePLtWW5VUdk_SisD-Yyn1VwK44xo=s0-d
+cover_image: /images/blogger/0a60c32ebfe9c353622f.jpg
 legacy_url: https://www.reversim.com/2013/05/station-configuration.html
 legacy_path: /2013/05/station-configuration
 ---
@@ -17,7 +17,7 @@ legacy_path: /2013/05/station-configuration
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="http://ergo.human.cornell.edu/ergotips2002/workstation/workstationMAIN.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sJhk-eVJE7CGb_Cm8Gu-MiitCIy3t9Is0shC153XLzRN71E0zmjf--vJF5wxMN3O3VqGpPtQI7Dt_X3BBscLuiL2EgRqND2hfzSTHogUgociaZsBsb55gePLtWW5VUdk_SisD-Yyn1VwK44xo=s0-d" width="190"></a></div>
+<a href="http://ergo.human.cornell.edu/ergotips2002/workstation/workstationMAIN.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/0a60c32ebfe9c353622f.jpg" width="190"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-271215f3-6714-7082-45c0-b9f5e17f602d" style="font-weight: normal; text-align: start;"></b></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

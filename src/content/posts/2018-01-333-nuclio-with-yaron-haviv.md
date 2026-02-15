@@ -3,7 +3,7 @@ title: 333 Nuclio with Yaron Haviv
 date: 2018-01-24T19:47:00.000Z
 episode: 333
 audio_url: https://m2.reversim.com/reversim333_Yaron-Haviv-Nuclio-CNCF.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIJKWJ9iBomqVXh10GuCvRsre7D7fzLYu-SNDcEpTEx3CJrLwumwMAKBuIo71Wez52cqFv6SaQPYmgwYGiNufjiYfH5bv4NdO6D3BTVb-I4NQBeKLxUAdxtnIlC7NiLC1EMpudVPdQyaE/s200/60a587a1-nuclio.jpg
+cover_image: /images/blogger/fc729cfd83f598f294d2.jpg
 legacy_url: https://www.reversim.com/2018/01/333-nuclio-with-yaron-haviv.html
 legacy_path: /2018/01/333-nuclio-with-yaron-haviv
 ---
@@ -13,7 +13,7 @@ legacy_path: /2018/01/333-nuclio-with-yaron-haviv
 <div dir="rtl" style="text-align: right;">
 בפרק זה מארחים אורי ורן את <a href="https://www.linkedin.com/in/yaronh/">ירון חביב</a>, יזם ו CTO של <a href="https://www.iguazio.com/">Iguazio</a> לשיחה על פלטפורמת Serverless בשם <a href="https://github.com/nuclio/nuclio">Nuclio</a> שפותחה בחברה</div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIJKWJ9iBomqVXh10GuCvRsre7D7fzLYu-SNDcEpTEx3CJrLwumwMAKBuIo71Wez52cqFv6SaQPYmgwYGiNufjiYfH5bv4NdO6D3BTVb-I4NQBeKLxUAdxtnIlC7NiLC1EMpudVPdQyaE/s1600/60a587a1-nuclio.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="450" data-original-width="650" height="138" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIJKWJ9iBomqVXh10GuCvRsre7D7fzLYu-SNDcEpTEx3CJrLwumwMAKBuIo71Wez52cqFv6SaQPYmgwYGiNufjiYfH5bv4NdO6D3BTVb-I4NQBeKLxUAdxtnIlC7NiLC1EMpudVPdQyaE/s200/60a587a1-nuclio.jpg" width="200"></a></div>
+<a href="/images/blogger/778e9ffe12a122554967.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="450" data-original-width="650" height="138" src="/images/blogger/fc729cfd83f598f294d2.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

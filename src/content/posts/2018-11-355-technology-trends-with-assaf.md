@@ -3,7 +3,7 @@ title: 355 Technology Trends with Assaf Natanzon
 date: 2018-11-22T10:00:00.000Z
 episode: 355
 audio_url: https://m2.reversim.com/reversim355-tech_trends_assaf_natanzon.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBlBdnmaOMueyuA4Z1UFkkOF4eQqJn5UJqZfGZcF3FT7M1s7ClF5LCOfgr7I_HaT07wSQobhfYbEEqbNry1bzykRbIwerSiRx977pEKVJ3T-wIdDjmuhPG3qTwwlSMfj8a30xkMhkBkO0/s200/dell-emc_0.png
+cover_image: /images/blogger/b0f0523f830d5df63f3f.png
 legacy_url: https://www.reversim.com/2018/11/355-technology-trends-with-assaf.html
 legacy_path: /2018/11/355-technology-trends-with-assaf
 ---
@@ -13,7 +13,7 @@ legacy_path: /2018/11/355-technology-trends-with-assaf
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">פודקאסט מספר 3</span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovw8ywz84zz80zwz89z0pz80zuybiz70z6oyz71zx3z72zz90zsz81zz82z7e7z85z">55 של רברס עם פלטפורמה - </span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">אורי ורן מארחים את </span><span class="attrlink url author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovw8ywz84zz80zwz89z0pz80zuybiz70z6oyz71zx3z72zz90zsz81zz82z7e7z85z"><a class="attrlink" data-target-href="https://www.linkedin.com/in/assaf-natanzon-2247964/?originalSubdomain=il" href="https://www.linkedin.com/in/assaf-natanzon-2247964/?originalSubdomain=il" rel="noreferrer nofollow noopener" target="_blank">אסף נתנזון</a></span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovw8ywz84zz80zwz89z0pz80zuybiz70z6oyz71zx3z72zz90zsz81zz82z7e7z85z"> </span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">לשיחה על </span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovw8ywz84zz80zwz89z0pz80zuybiz70z6oyz71zx3z72zz90zsz81zz82z7e7z85z">טכנולוגיות חדשות, אחזור מידע, פטנטים ומהירות האור בישראל.</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBlBdnmaOMueyuA4Z1UFkkOF4eQqJn5UJqZfGZcF3FT7M1s7ClF5LCOfgr7I_HaT07wSQobhfYbEEqbNry1bzykRbIwerSiRx977pEKVJ3T-wIdDjmuhPG3qTwwlSMfj8a30xkMhkBkO0/s1600/dell-emc_0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="400" data-original-width="770" height="103" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBlBdnmaOMueyuA4Z1UFkkOF4eQqJn5UJqZfGZcF3FT7M1s7ClF5LCOfgr7I_HaT07wSQobhfYbEEqbNry1bzykRbIwerSiRx977pEKVJ3T-wIdDjmuhPG3qTwwlSMfj8a30xkMhkBkO0/s200/dell-emc_0.png" width="200"></a></div>
+<a href="/images/blogger/0b81c2ad4a387e5d1889.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="400" data-original-width="770" height="103" src="/images/blogger/b0f0523f830d5df63f3f.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <ul class="listtype-bullet listindent1 list-bullet1" dir="rtl" style="text-align: right;">

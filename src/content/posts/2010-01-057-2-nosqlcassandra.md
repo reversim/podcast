@@ -3,13 +3,13 @@ title: 057 -  לא רק אס קיו אל חלק 2 וקסנדרה- nosql+cassandr
 date: 2010-01-31T05:18:00.000Z
 episode: 57
 audio_url: https://m.reversim.com/reversim57_nosql2.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie121FoLmPw1Zcn4U4oIiYwdFhwudkSJmxYcCSVaNlgnlxhYEC79duzr9fYLaC8gttOObMYFUoF9jM6CjAKWV760EH0f1gqNxvkJwHsqWzysmXLHRgwbjn602sMpQMtd6kTlG1JY1cOkU/s320/The+Apache+Cassandra+Project.png
+cover_image: /images/blogger/ed991c5fa6d4f51e8cd6.png
 legacy_url: https://www.reversim.com/2010/01/057-2-nosqlcassandra.html
 legacy_path: /2010/01/057-2-nosqlcassandra
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie121FoLmPw1Zcn4U4oIiYwdFhwudkSJmxYcCSVaNlgnlxhYEC79duzr9fYLaC8gttOObMYFUoF9jM6CjAKWV760EH0f1gqNxvkJwHsqWzysmXLHRgwbjn602sMpQMtd6kTlG1JY1cOkU/s1600-h/The+Apache+Cassandra+Project.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie121FoLmPw1Zcn4U4oIiYwdFhwudkSJmxYcCSVaNlgnlxhYEC79duzr9fYLaC8gttOObMYFUoF9jM6CjAKWV760EH0f1gqNxvkJwHsqWzysmXLHRgwbjn602sMpQMtd6kTlG1JY1cOkU/s320/The+Apache+Cassandra+Project.png"></a></div><br>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/862e3fac50efccab63c9.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/ed991c5fa6d4f51e8cd6.png"></a></div><br>
 <div dir="rtl" style="text-align: right;">פרק המשך בנושא nosql, שוב הקלטנו ללא אורחים.</div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>תזכורת ותקציר הפרק הקודם</li>
 <li>מה זה NRW? וכיצד הוא מגדיר את רמת ה-&nbsp;<a href="http://en.wikipedia.org/wiki/Consistency_model" target="_blank">consistency</a></li>
 <li>איך המערכת יודעת איזה פריט נכתב אחרון ומהי בעיית snapshot במערכות מבוזרות</li>

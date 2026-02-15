@@ -3,7 +3,7 @@ title: 310 FED School with Serge Krul
 date: 2016-09-14T06:44:00.000Z
 episode: 310
 audio_url: https://m2.reversim.com/reversim310_fed-school2.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxl081NBg-hgMFh5tcBdF9R_rfteIN-5UW2YMKcEfJnyGWr_CrP9Uee8ZmW5E4WGv4dKM9UfvDcIPGtTOAMpoJWIiHHpz0l0zsy6eiffElnSyK8qFBc32A115Xq17kmUEo1G7Cqu4Ms8U/s200/serge-krul.jpg
+cover_image: /images/blogger/8e0103ab5ede3f0b608e.jpg
 legacy_url: https://www.reversim.com/2016/09/310-fed-school-with-serge-krul.html
 legacy_path: /2016/09/310-fed-school-with-serge-krul
 ---
@@ -15,7 +15,7 @@ legacy_path: /2016/09/310-fed-school-with-serge-krul
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <br></div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxl081NBg-hgMFh5tcBdF9R_rfteIN-5UW2YMKcEfJnyGWr_CrP9Uee8ZmW5E4WGv4dKM9UfvDcIPGtTOAMpoJWIiHHpz0l0zsy6eiffElnSyK8qFBc32A115Xq17kmUEo1G7Cqu4Ms8U/s1600/serge-krul.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxl081NBg-hgMFh5tcBdF9R_rfteIN-5UW2YMKcEfJnyGWr_CrP9Uee8ZmW5E4WGv4dKM9UfvDcIPGtTOAMpoJWIiHHpz0l0zsy6eiffElnSyK8qFBc32A115Xq17kmUEo1G7Cqu4Ms8U/s200/serge-krul.jpg" width="200"></a></div>
+<a href="/images/blogger/91be1bb08e2cf29d5578.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/8e0103ab5ede3f0b608e.jpg" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 </div>
 <ul dir="rtl" style="text-align: right;">

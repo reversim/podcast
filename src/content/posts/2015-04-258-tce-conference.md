@@ -3,7 +3,7 @@ title: 258 TCE Conference
 date: 2015-04-28T19:38:00.000Z
 episode: 258
 audio_url: https://m.reversim.com/reversim258_tce-conf.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCkufplASio7DoCp7eSXVBCQLU3KPqK0vpQobPfLfjzlpWpKwifM-MlmKIZX1-83Unblrd0FiMHJ0HPTxTRhlh73mkpzeasz1CGpPvsYCUXqBk8otDdCxi8emDQlYRj5kLuu0L6fOVEeo/s1600/tce_logo_color-copy-2.png
+cover_image: /images/blogger/5487577e6d6c13d862e6.png
 legacy_url: https://www.reversim.com/2015/04/258-tce-conference.html
 legacy_path: /2015/04/258-tce-conference
 ---
@@ -12,7 +12,7 @@ legacy_path: /2015/04/258-tce-conference
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="http://tce.technion.ac.il/events/the-5th-annual-henry-taub-international-tce-conference/" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="94" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCkufplASio7DoCp7eSXVBCQLU3KPqK0vpQobPfLfjzlpWpKwifM-MlmKIZX1-83Unblrd0FiMHJ0HPTxTRhlh73mkpzeasz1CGpPvsYCUXqBk8otDdCxi8emDQlYRj5kLuu0L6fOVEeo/s1600/tce_logo_color-copy-2.png" width="200"></a></div>
+<a href="http://tce.technion.ac.il/events/the-5th-annual-henry-taub-international-tce-conference/" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="94" src="/images/blogger/5487577e6d6c13d862e6.png" width="200"></a></div>
 הכנס החמישי של המרכז להנדסת מחשבים בנושא Scalable Reliable Systems ייערך&nbsp;<b>בטכניון, בתאריכים 1-2 ביוני</b><br>
 <br>
 מידע נוסף <a href="http://tce.technion.ac.il/events/the-5th-annual-henry-taub-international-tce-conference/">באתר הכנס</a><br>

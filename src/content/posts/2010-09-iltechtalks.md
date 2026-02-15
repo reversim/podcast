@@ -2,13 +2,13 @@
 title: ILtechTalks
 date: 2010-09-15T08:33:00.000Z
 audio_url: https://m.reversim.com/reversim78_iltech.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgW2C_AutRbAyB8ZCGwxIBcLzsdlWJHQN6CMxDwuicleYtmJcWyxV-qSm1-EjbS9xsvYvNJqpOeFqi1_v_Y3GZqT6CLTFV5zLIZx0UAmFgKeAsJw05_mHKmfOHdRQQax_SqARNa6nn0yZU/s200/-fortune--tech-talk--f675.jpg+(300%C3%97300).png
+cover_image: /images/blogger/6552b3a54c7973a595eb.png).png
 legacy_url: https://www.reversim.com/2010/09/iltechtalks.html
 legacy_path: /2010/09/iltechtalks
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div dir="rtl" style="text-align: right;">בפרק זה אירחנו את יעל ויה מייסדת ועורכת&nbsp;<a href="//www.youtube.com/CrictorNews" target="_blank">Crictor</a>&nbsp;לשיחה על הרצאות&nbsp;<a href="http://www.iltechtalks.org.il/" target="_blank">ILTechTalks</a></div><div dir="rtl" style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgW2C_AutRbAyB8ZCGwxIBcLzsdlWJHQN6CMxDwuicleYtmJcWyxV-qSm1-EjbS9xsvYvNJqpOeFqi1_v_Y3GZqT6CLTFV5zLIZx0UAmFgKeAsJw05_mHKmfOHdRQQax_SqARNa6nn0yZU/s1600/-fortune--tech-talk--f675.jpg+(300%C3%97300).png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgW2C_AutRbAyB8ZCGwxIBcLzsdlWJHQN6CMxDwuicleYtmJcWyxV-qSm1-EjbS9xsvYvNJqpOeFqi1_v_Y3GZqT6CLTFV5zLIZx0UAmFgKeAsJw05_mHKmfOHdRQQax_SqARNa6nn0yZU/s200/-fortune--tech-talk--f675.jpg+(300%C3%97300).png" width="200"></a></div><ul style="text-align: right;"><li>יעל הציגה את עצמה ופרוייקטים מגוונים שנעשו ב- Crictor</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div dir="rtl" style="text-align: right;">בפרק זה אירחנו את יעל ויה מייסדת ועורכת&nbsp;<a href="//www.youtube.com/CrictorNews" target="_blank">Crictor</a>&nbsp;לשיחה על הרצאות&nbsp;<a href="http://www.iltechtalks.org.il/" target="_blank">ILTechTalks</a></div><div dir="rtl" style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/e7d1ad1fb18133f80e9b.png).png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="/images/blogger/6552b3a54c7973a595eb.png).png" width="200"></a></div><ul style="text-align: right;"><li>יעל הציגה את עצמה ופרוייקטים מגוונים שנעשו ב- Crictor</li>
 <li>תקציר&nbsp;<a href="http://sixkidsandafulltimejob.blogspot.com/2010/07/hummus-manifesto-part-1.html" target="_blank">מניפסט החומוס של מייקל איזנברג</a>&nbsp;והקשר שלו ל-&nbsp;<a href="http://olahav.typepad.com/weblog_files/2010/08/israeli-internet-tech-knowledge-exchange.html" target="_blank">ILTechTalks</a></li>
 <li>בעיית העברת הידע בחברה הישראלית ובעיית הקשר עם מוקדי הידע בחו"ל</li>
 <li>אז מה זה בעצם&nbsp;<a href="http://www.iltechtalks.org.il/home/talks" target="_blank">ILTechTalks</a>?</li>

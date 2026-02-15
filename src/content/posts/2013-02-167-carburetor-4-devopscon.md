@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 167
 audio_url: https://m.reversim.com/reversim167_carburetor4.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_CfU3iMzycmoB2NomksyMQh31NCiGcDkdJEVvlgxLg9kr5kDGRhYQoh4gbyhPMxtFY_FVSQQVTMcwmkg2Q8xdp6jZEY1EIPrFfvByJUm45HjccAWAAjsuM5uNNEPGjnEL8aeLCOx_UpQ/s200/Screenshot+2:6:13+9:14+PM.png
+cover_image: /images/blogger/0fed84a6b3989bdd630e.png
 legacy_url: https://www.reversim.com/2013/02/167-carburetor-4-devopscon.html
 legacy_path: /2013/02/167-carburetor-4-devopscon
 ---
@@ -19,7 +19,7 @@ legacy_path: /2013/02/167-carburetor-4-devopscon
 <br></div>
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_CfU3iMzycmoB2NomksyMQh31NCiGcDkdJEVvlgxLg9kr5kDGRhYQoh4gbyhPMxtFY_FVSQQVTMcwmkg2Q8xdp6jZEY1EIPrFfvByJUm45HjccAWAAjsuM5uNNEPGjnEL8aeLCOx_UpQ/s1600/Screenshot+2:6:13+9:14+PM.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="43" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_CfU3iMzycmoB2NomksyMQh31NCiGcDkdJEVvlgxLg9kr5kDGRhYQoh4gbyhPMxtFY_FVSQQVTMcwmkg2Q8xdp6jZEY1EIPrFfvByJUm45HjccAWAAjsuM5uNNEPGjnEL8aeLCOx_UpQ/s200/Screenshot+2:6:13+9:14+PM.png" width="200"></a></div>
+<a href="/images/blogger/a54407a95564fce09341.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="43" src="/images/blogger/0fed84a6b3989bdd630e.png" width="200"></a></div>
 <br></div>
 <div dir="rtl" style="text-align: right;">
 בפרק זה אירח רן את נתי והם עשו סיכום של הכנס <a href="http://www.devopscon.com/">http://www.devopscon.com</a></div>

@@ -3,7 +3,7 @@ title: 218 - Propagator
 date: 2014-05-22T17:09:00.000Z
 episode: 218
 audio_url: https://m.reversim.com/reversim218_propagetor.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWCID3jzebKBoGXpgqnRAwAmI0As_qDN5fAj9seokTKBdV7hZi7X_vxiLOwzu5v_1lFvbXb86HvTaG71EYiJ-NSE2DBG10FdwrfO2G_DD5mElBrmC3a_hpWQY82C-S1CyiqaM6_DoS8CA/s1600/mysql.png
+cover_image: /images/blogger/69ace2fee80721a83781.png
 legacy_url: https://www.reversim.com/2014/05/218-propagator.html
 legacy_path: /2014/05/218-propagator
 ---
@@ -14,7 +14,7 @@ legacy_path: /2014/05/218-propagator
 <span id="docs-internal-guid-04b8d6eb-24e2-cdc7-3c4c-2d0245ac92ce"></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWCID3jzebKBoGXpgqnRAwAmI0As_qDN5fAj9seokTKBdV7hZi7X_vxiLOwzu5v_1lFvbXb86HvTaG71EYiJ-NSE2DBG10FdwrfO2G_DD5mElBrmC3a_hpWQY82C-S1CyiqaM6_DoS8CA/s1600/mysql.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWCID3jzebKBoGXpgqnRAwAmI0As_qDN5fAj9seokTKBdV7hZi7X_vxiLOwzu5v_1lFvbXb86HvTaG71EYiJ-NSE2DBG10FdwrfO2G_DD5mElBrmC3a_hpWQY82C-S1CyiqaM6_DoS8CA/s1600/mysql.png" width="197"></a></div>
+<a href="/images/blogger/69ace2fee80721a83781.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/69ace2fee80721a83781.png" width="197"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אורי ורן מארחים את שלומי מאאוטבריין.</span></div>
 </li>

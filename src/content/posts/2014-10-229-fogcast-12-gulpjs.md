@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 229
 audio_url: https://m.reversim.com/reversim229_fogcast12_gulp.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLiK35g_pXPqQ3Oix_QGiGX-UBrPIl5ut_AIGXgAYC6kAc5LbK40AR04o1ZhS_NnT4J7y_nfZDi_YNorW57n5cDPD_6c8M9iYWHxfyAEQwxEoDMpFTnxdJLaH0JvR87o9JtrWraQhQkTA/s1600/gulp-2x-2.png
+cover_image: /images/blogger/ea0ed6f6527e6e66ea15.png
 legacy_url: https://www.reversim.com/2014/10/229-fogcast-12-gulpjs.html
 legacy_path: /2014/10/229-fogcast-12-gulpjs
 ---
@@ -15,7 +15,7 @@ legacy_path: /2014/10/229-fogcast-12-gulpjs
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLiK35g_pXPqQ3Oix_QGiGX-UBrPIl5ut_AIGXgAYC6kAc5LbK40AR04o1ZhS_NnT4J7y_nfZDi_YNorW57n5cDPD_6c8M9iYWHxfyAEQwxEoDMpFTnxdJLaH0JvR87o9JtrWraQhQkTA/s1600/gulp-2x-2.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLiK35g_pXPqQ3Oix_QGiGX-UBrPIl5ut_AIGXgAYC6kAc5LbK40AR04o1ZhS_NnT4J7y_nfZDi_YNorW57n5cDPD_6c8M9iYWHxfyAEQwxEoDMpFTnxdJLaH0JvR87o9JtrWraQhQkTA/s1600/gulp-2x-2.png" width="89"></a></div>
+<a href="/images/blogger/ea0ed6f6527e6e66ea15.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/ea0ed6f6527e6e66ea15.png" width="89"></a></div>
 <div dir="rtl" style="text-align: right;">
 בפרק זה של פוגקאסט דיברנו על מערכת הבניה לפרונטאנד - gulp.js</div>
 <div dir="rtl" style="text-align: right;">

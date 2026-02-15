@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 264
 audio_url: https://m.reversim.com/reversim264_cloud-hadr-google.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnU1aJgkk97kwsuw1PQZZKA4MiYIfJ5uW3LAjTYqOTd9Ki5_JdCz3UfR4bcSz3OU8QbHeBw-8fzttV1C-t7zLVVV_tWApGExCwXM-CRzANM4BAPHtL1rCA1_7eIzEknaZPRmbY3aCsQ00/s200/gcp-logo-3.png
+cover_image: /images/blogger/259e19227c685cec2055.png
 legacy_url: https://www.reversim.com/2015/06/264-cloud-vendor-series-google-cloud.html
 legacy_path: /2015/06/264-cloud-vendor-series-google-cloud
 ---
@@ -13,7 +13,7 @@ legacy_path: /2015/06/264-cloud-vendor-series-google-cloud
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnU1aJgkk97kwsuw1PQZZKA4MiYIfJ5uW3LAjTYqOTd9Ki5_JdCz3UfR4bcSz3OU8QbHeBw-8fzttV1C-t7zLVVV_tWApGExCwXM-CRzANM4BAPHtL1rCA1_7eIzEknaZPRmbY3aCsQ00/s1600/gcp-logo-3.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="123" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnU1aJgkk97kwsuw1PQZZKA4MiYIfJ5uW3LAjTYqOTd9Ki5_JdCz3UfR4bcSz3OU8QbHeBw-8fzttV1C-t7zLVVV_tWApGExCwXM-CRzANM4BAPHtL1rCA1_7eIzEknaZPRmbY3aCsQ00/s200/gcp-logo-3.png" width="200"></a></div>
+<a href="/images/blogger/19559ed6e0cb45ff81f0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="123" src="/images/blogger/259e19227c685cec2055.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.295; margin-bottom: 8pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Calibri; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">בפרק הפעם אנחנו מתחילים סדרה שתכלול בין 9-12 נושאים, ותסקור נושאים שונים הקשורים לענן כמו למשל זמינות גבוהה, התאוששות מאסון, מובייל, אפליקציות Web, ניתוח נתונים, ביג דאטה ועוד. בכל פרק נכסה נושא אחד והיום הנושא הוא זמינות גבוהה (High Availability) והתאוששות מאסון (Disaster Recovery) בפלטפורמת הענן של גוגל. בנוסף נסקור את השימוש במגוון ספקי שירותי ענן בסביבה הטרוגנית אחת, או MultiCloud.</span></div>
 <div dir="rtl" style="line-height: 1.295; margin-bottom: 8pt; margin-top: 0pt; text-align: right;">

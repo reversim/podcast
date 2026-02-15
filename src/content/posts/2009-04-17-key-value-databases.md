@@ -6,14 +6,14 @@ tags:
   - scalability
 episode: 17
 audio_url: https://m2.reversim.com/reversim17.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYHIxKdUR5vDTkMzuQM0DZ7dRv4mDi0MNsZ3UXMLx3s06HaiVNr2HWz7Dz-uP9awiXaV-58RFAl0IHs1jZsru9gcGWR2OtCdtu7mwU2zqqskPaFz74SE_Nn1eWV9MhYvNzYbaU4sjCM56s/s320/Key-Value-DB.jpg
+cover_image: /images/blogger/df46c6734775dd241e80.jpg
 legacy_url: https://www.reversim.com/2009/04/17-key-value-databases.html
 legacy_path: /2009/04/17-key-value-databases
 ---
 
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYHIxKdUR5vDTkMzuQM0DZ7dRv4mDi0MNsZ3UXMLx3s06HaiVNr2HWz7Dz-uP9awiXaV-58RFAl0IHs1jZsru9gcGWR2OtCdtu7mwU2zqqskPaFz74SE_Nn1eWV9MhYvNzYbaU4sjCM56s/s1600-h/Key-Value-DB.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5327443407341275058" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYHIxKdUR5vDTkMzuQM0DZ7dRv4mDi0MNsZ3UXMLx3s06HaiVNr2HWz7Dz-uP9awiXaV-58RFAl0IHs1jZsru9gcGWR2OtCdtu7mwU2zqqskPaFz74SE_Nn1eWV9MhYvNzYbaU4sjCM56s/s320/Key-Value-DB.jpg" style="cursor: pointer; float: left; height: 320px; margin: 0pt 10px 10px 0pt; width: 286px;"></a><br>
+<a href="/images/blogger/ba63894f5f1fe398ccac.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5327443407341275058" src="/images/blogger/df46c6734775dd241e80.jpg" style="cursor: pointer; float: left; height: 320px; margin: 0pt 10px 10px 0pt; width: 286px;"></a><br>
 <div dir="rtl" style="text-align: right;">
 היום אירחנו את חגי - CTO של <a href="http://nuconomy.com/">Nuconomy</a><br>
 <ul dir="rtl">

@@ -1,9 +1,12 @@
 ---
 import { getPostPermalink } from '../lib/posts';
 import type { PostEntry } from '../lib/posts';
+import { withBase } from '../lib/urls';
 
 const { post } = Astro.props as { post: PostEntry };
 const permalink = getPostPermalink(post);
+const coverImage = post.data.cover_image;
+const coverImageUrl = coverImage?.startsWith('http') ? coverImage : coverImage ? withBase(coverImage) : undefined;
 const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 	year: 'numeric',
 	month: 'long',
@@ -12,6 +15,13 @@ const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 ---
 
 <article class="post-card">
+	{
+		coverImageUrl && (
+			<a class="post-cover-link" href={permalink} aria-label={post.data.title}>
+				<img class="post-cover-image" src={coverImageUrl} alt={post.data.title} loading="lazy" decoding="async" />
+			</a>
+		)
+	}
 	<div class="post-meta">
 		<span>{dateLabel}</span>
 		{post.data.episode && <span>פרק {post.data.episode}</span>}

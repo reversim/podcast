@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 223
 audio_url: https://m.reversim.com/reversim223_fogcast11_redis.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGD1mytXKPW0QCA4_t8zq4-sNOLas7M4TcY9yQ3B8ybIWH5k7IP0bSkYM6OXJJLTt-DbMwJFuy3rFVbyjWFJxpmjCg_7vyIAOw_lK2esjxxZwvqZB0lPqlJePbTDDrDZZDXowwvYyuGYY/s1600/redis-300x253.png
+cover_image: /images/blogger/7ec3f0badb879b82de2c.png
 legacy_url: https://www.reversim.com/2014/07/223-fogcast-11-redis.html
 legacy_path: /2014/07/223-fogcast-11-redis
 ---
@@ -16,7 +16,7 @@ legacy_path: /2014/07/223-fogcast-11-redis
 <span id="docs-internal-guid-cb5cb5b7-404e-46a8-16a6-6c03c0c87391"></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGD1mytXKPW0QCA4_t8zq4-sNOLas7M4TcY9yQ3B8ybIWH5k7IP0bSkYM6OXJJLTt-DbMwJFuy3rFVbyjWFJxpmjCg_7vyIAOw_lK2esjxxZwvqZB0lPqlJePbTDDrDZZDXowwvYyuGYY/s1600/redis-300x253.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="168" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGD1mytXKPW0QCA4_t8zq4-sNOLas7M4TcY9yQ3B8ybIWH5k7IP0bSkYM6OXJJLTt-DbMwJFuy3rFVbyjWFJxpmjCg_7vyIAOw_lK2esjxxZwvqZB0lPqlJePbTDDrDZZDXowwvYyuGYY/s1600/redis-300x253.png" width="200"></a></div>
+<a href="/images/blogger/7ec3f0badb879b82de2c.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="168" src="/images/blogger/7ec3f0badb879b82de2c.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ליאור ורן מארחים את דביר מחב' </span><a href="http://everything.me/" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">everything.me</span></a><span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> לשיחה על </span><a href="http://redis.io/" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">Redis</span></a></div>
 </li>

@@ -5,7 +5,7 @@ tags:
   - carburetor
 episode: 334
 audio_url: https://m2.reversim.com/reversim334-Carburetor_24-Outbrain_fabric_network.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCglR_4JVPVo861Aoc0PS6zAQphK0LYmGc3SJ4z5ROgcaQFsXtKlq5W7hpRGY8dnDzCK8Q0YoR6iPSYA_1SAKISBXDE7WDzfWDFY3jhRyb2hAp6pAuWvrj3c2XbgYfmFyhktD87sIc53A/s200/fabric.jpg
+cover_image: /images/blogger/d7de794204f472eb68a7.jpg
 legacy_url: https://www.reversim.com/2018/02/334-carburetor-24-outbrains-fabric.html
 legacy_path: /2018/02/334-carburetor-24-outbrains-fabric
 ---
@@ -15,7 +15,7 @@ legacy_path: /2018/02/334-carburetor-24-outbrains-fabric
 <div dir="rtl" style="text-align: right;">
 בפרק 24 של הקרבורטור נפגשים אורי, רן, נתי ועדי, מהנדס רשתות באאוטבריין לשיחה על Fabric Network ועל NFV בכלל</div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCglR_4JVPVo861Aoc0PS6zAQphK0LYmGc3SJ4z5ROgcaQFsXtKlq5W7hpRGY8dnDzCK8Q0YoR6iPSYA_1SAKISBXDE7WDzfWDFY3jhRyb2hAp6pAuWvrj3c2XbgYfmFyhktD87sIc53A/s1600/fabric.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="384" data-original-width="378" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCglR_4JVPVo861Aoc0PS6zAQphK0LYmGc3SJ4z5ROgcaQFsXtKlq5W7hpRGY8dnDzCK8Q0YoR6iPSYA_1SAKISBXDE7WDzfWDFY3jhRyb2hAp6pAuWvrj3c2XbgYfmFyhktD87sIc53A/s200/fabric.jpg" width="196"></a></div>
+<a href="/images/blogger/07843deb8a2c3439701b.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="384" data-original-width="378" height="200" src="/images/blogger/d7de794204f472eb68a7.jpg" width="196"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

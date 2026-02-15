@@ -3,7 +3,7 @@ title: 282 The R in RnD (continue)
 date: 2015-11-12T19:02:00.000Z
 episode: 282
 audio_url: https://m2.reversim.com/reversim282-the_r_in_rnd_cont.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg590hZS420hV4I0VAIKaF2KNWIId2dwkRhU4LuNhE9ItaFCl23tiIVAJA1AETyoZrH83p6y3Hkntvtr1wwdY2hyphenhyphenG60R_vDixDrMWGpOGagStxcsNhXtWyaEumuK6660w541iZ-Va12XV4/s200/informasjonssikkerhet.jpg
+cover_image: /images/blogger/dffe6adab741adb97b21.jpg
 legacy_url: https://www.reversim.com/2015/11/282-r-in-rnd-continue.html
 legacy_path: /2015/11/282-r-in-rnd-continue
 ---
@@ -11,7 +11,7 @@ legacy_path: /2015/11/282-r-in-rnd-continue
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg590hZS420hV4I0VAIKaF2KNWIId2dwkRhU4LuNhE9ItaFCl23tiIVAJA1AETyoZrH83p6y3Hkntvtr1wwdY2hyphenhyphenG60R_vDixDrMWGpOGagStxcsNhXtWyaEumuK6660w541iZ-Va12XV4/s1600/informasjonssikkerhet.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="133" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg590hZS420hV4I0VAIKaF2KNWIId2dwkRhU4LuNhE9ItaFCl23tiIVAJA1AETyoZrH83p6y3Hkntvtr1wwdY2hyphenhyphenG60R_vDixDrMWGpOGagStxcsNhXtWyaEumuK6660w541iZ-Va12XV4/s200/informasjonssikkerhet.jpg" width="200"></a></div>
+<a href="/images/blogger/3b065f7544772e1898f6.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="133" src="/images/blogger/dffe6adab741adb97b21.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <span style="font-family: &quot;arial&quot;; font-size: 14.6667px; vertical-align: baseline; white-space: pre-wrap;">פרק השלישי בסדרה שלנו בנושא בנושא ה-R ב-R&amp;D אחרי </span><a href="http://www.reversim.com/2015/08/273-research-in-r.html" style="line-height: 1.38; text-decoration: none;"><span style="color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.6667px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">הפרק הקודם בנושא עם אימרי קיסוס</span></a><span style="font-family: &quot;arial&quot;; font-size: 14.6667px; vertical-align: baseline; white-space: pre-wrap;">. היום (4/11/15) מצטרף אלינו </span><a href="https://www.linkedin.com/in/shlomoyona" style="line-height: 1.38; text-decoration: none;"><span style="color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.6667px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">שלמה יונה</span></a><span style="font-family: &quot;arial&quot;; font-size: 14.6667px; vertical-align: baseline; white-space: pre-wrap;">, קודם כל מאזין ותיק של הפודקאסט, ועבדנו בעבר ביחד ב-Outbrain. מוביל את המחקר אלגוריתמי בחברת F5 Networks, שמתרכזת באיזון עומסים בתעבורת אינטרנט. בשנים האחרונות מציעה גם פתרונות אבטחת מידע. המטרה של המחקר האלגוריתמי היא לתת פתרונות יותר מתוחכמים מבוססי ביג דאטה, Machine Learning.</span></div>
 <div dir="rtl" style="text-align: right;">

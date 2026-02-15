@@ -3,7 +3,7 @@ title: 338 Reversim and Cloudtalk
 date: 2018-04-26T13:33:00.000Z
 episode: 338
 audio_url: https://m2.reversim.com/reversim338_reversim-and-cloudtalk.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxjS4QZmZkmzBKAjfAVI0ZbJbJa1A1zwv8wo4hT0P0vICM0xQz_9kLjx0I0xABLDh1i5gKXhpr6At1ogqCWG810OC2DATg5wXZM0V3rJ9imiztycc_FU5XzuIkgxtIYYvM8JJi4p6TWmY/s200/logo-transparent_320X94.png
+cover_image: /images/blogger/ed78bb33b16df7c0529c.png
 legacy_url: https://www.reversim.com/2018/04/338-reversim-and-cloudtalk.html
 legacy_path: /2018/04/338-reversim-and-cloudtalk
 ---
@@ -15,7 +15,7 @@ legacy_path: /2018/04/338-reversim-and-cloudtalk
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z"><br></span></div>
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxjS4QZmZkmzBKAjfAVI0ZbJbJa1A1zwv8wo4hT0P0vICM0xQz_9kLjx0I0xABLDh1i5gKXhpr6At1ogqCWG810OC2DATg5wXZM0V3rJ9imiztycc_FU5XzuIkgxtIYYvM8JJi4p6TWmY/s1600/logo-transparent_320X94.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="94" data-original-width="320" height="58" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxjS4QZmZkmzBKAjfAVI0ZbJbJa1A1zwv8wo4hT0P0vICM0xQz_9kLjx0I0xABLDh1i5gKXhpr6At1ogqCWG810OC2DATg5wXZM0V3rJ9imiztycc_FU5XzuIkgxtIYYvM8JJi4p6TWmY/s200/logo-transparent_320X94.png" width="200"></a></div>
+<a href="/images/blogger/a40c122b5f3a28f5f662.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="94" data-original-width="320" height="58" src="/images/blogger/ed78bb33b16df7c0529c.png" width="200"></a></div>
 <br>
 <ul>
 <li>1:08 - רן מספר בקצרה על רברס עם פלטפורמה שהוא מקליט יחד עם אורי כבר 9 שנים, בו הם מדברים על כל מה שנוגע בפיתוח תוכנה</li>

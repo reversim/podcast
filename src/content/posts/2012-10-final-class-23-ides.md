@@ -4,7 +4,7 @@ date: 2012-10-14T13:47:00.000Z
 tags:
   - finalclass
 audio_url: https://m.reversim.com/reversim150_finalclass23.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfFJzaGPYnqeva9bMiSnRLdOoHoI0kodH8BUXV9bThnyqwRjAoEa4R4PSTftro9HoxM9ZG2XEz2-AbcI0jBxBCkzC-dFxKMfrXjHh3HeKyYx3EFKeuBb28epKIfeOJA2rLftPODcdmoTk/s200/emacs-vi.png
+cover_image: /images/blogger/ac8a3400e5838f71a36c.png
 legacy_url: https://www.reversim.com/2012/10/final-class-23-ides.html
 legacy_path: /2012/10/final-class-23-ides
 ---
@@ -20,7 +20,7 @@ legacy_path: /2012/10/final-class-23-ides
 <span style="font-family: Arial;"><span style="font-size: 15px; white-space: pre-wrap;"><br></span></span>
 <br>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfFJzaGPYnqeva9bMiSnRLdOoHoI0kodH8BUXV9bThnyqwRjAoEa4R4PSTftro9HoxM9ZG2XEz2-AbcI0jBxBCkzC-dFxKMfrXjHh3HeKyYx3EFKeuBb28epKIfeOJA2rLftPODcdmoTk/s1600/emacs-vi.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="98" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfFJzaGPYnqeva9bMiSnRLdOoHoI0kodH8BUXV9bThnyqwRjAoEa4R4PSTftro9HoxM9ZG2XEz2-AbcI0jBxBCkzC-dFxKMfrXjHh3HeKyYx3EFKeuBb28epKIfeOJA2rLftPODcdmoTk/s200/emacs-vi.png" width="200"></a></div>
+<a href="/images/blogger/e7cba304518ae760552d.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="98" src="/images/blogger/ac8a3400e5838f71a36c.png" width="200"></a></div>
 <span style="font-family: Arial;"><span style="font-size: 15px; white-space: pre-wrap;"><br></span></span></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">

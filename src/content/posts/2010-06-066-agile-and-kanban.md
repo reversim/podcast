@@ -3,14 +3,14 @@ title: 066 agile and kanban
 date: 2010-06-05T19:14:00.000Z
 episode: 66
 audio_url: https://m.reversim.com/reversim66_agile_kanban.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixhb3uD1Bw6Y9B8dAawS5ItQKh1AMg0rbVmWRHDVIm2VX04dtNsTQqsxAnaAL0HHcWdSvXsNEjQ8-ujqNIJQImFlKrWMokRiToydDLtqvIVvjsHSqwBX1zFiJetPpLaixBW-4DUJEJWrw/s200/smile_token_back.jpg
+cover_image: /images/blogger/456a0f914979b32cc106.jpg
 legacy_url: https://www.reversim.com/2010/06/066-agile-and-kanban.html
 legacy_path: /2010/06/066-agile-and-kanban
 ---
 
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on"><br>
-<div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixhb3uD1Bw6Y9B8dAawS5ItQKh1AMg0rbVmWRHDVIm2VX04dtNsTQqsxAnaAL0HHcWdSvXsNEjQ8-ujqNIJQImFlKrWMokRiToydDLtqvIVvjsHSqwBX1zFiJetPpLaixBW-4DUJEJWrw/s1600/smile_token_back.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="192" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixhb3uD1Bw6Y9B8dAawS5ItQKh1AMg0rbVmWRHDVIm2VX04dtNsTQqsxAnaAL0HHcWdSvXsNEjQ8-ujqNIJQImFlKrWMokRiToydDLtqvIVvjsHSqwBX1zFiJetPpLaixBW-4DUJEJWrw/s200/smile_token_back.jpg" width="200"></a></div><div dir="rtl" style="text-align: right;"><a href="http://agilesparks.wordpress.com/" target="_blank">יובל ירט</a>&nbsp;מחברת&nbsp;<a href="http://www.agilesparks.com/" target="_blank">Agilesparks</a>&nbsp;התארח אצלנו לשיחה בנושא&nbsp;<a href="http://en.wikipedia.org/wiki/Agile_software_development/" target="_blank">agile</a>&nbsp;ו-&nbsp;<a href="http://www.kanban101.com/" target="_blank">kanban</a></div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>יובל סיפר על העבר המקצועי שלו כסמנכ”ל פיתוח במספר חברות start-up</li>
+<div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/df00f45f5aa1ae5377f6.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="192" src="/images/blogger/456a0f914979b32cc106.jpg" width="200"></a></div><div dir="rtl" style="text-align: right;"><a href="http://agilesparks.wordpress.com/" target="_blank">יובל ירט</a>&nbsp;מחברת&nbsp;<a href="http://www.agilesparks.com/" target="_blank">Agilesparks</a>&nbsp;התארח אצלנו לשיחה בנושא&nbsp;<a href="http://en.wikipedia.org/wiki/Agile_software_development/" target="_blank">agile</a>&nbsp;ו-&nbsp;<a href="http://www.kanban101.com/" target="_blank">kanban</a></div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>יובל סיפר על העבר המקצועי שלו כסמנכ”ל פיתוח במספר חברות start-up</li>
 <li>כיצד חברת Agilesparks עוזרת לחברות להיות יותר יעילות בתהליך הפיתוח</li>
 <li>מתי חברה צריכה יעוץ ואיך אומרים agile בעברית?</li>
 <li>מה בודקים כשמתחילים יעוץ לחברה, מקרה לדוגמה -&nbsp;<a href="http://www.outbrain.com/" target="_blank">Outbrain</a></li>

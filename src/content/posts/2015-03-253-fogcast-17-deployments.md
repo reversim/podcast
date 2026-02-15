@@ -5,7 +5,7 @@ tags:
   - fogcast
 episode: 253
 audio_url: https://m.reversim.com/reversim253_fogcast17-deployments.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEis-qd85kyvGVeY_-eaadOZd_wlIfdTmwoVC-IE15v4QR7vw060b1f5pv9KXvBmOmo82X9oK0HVrxtPaXTnm4bjfpC72o-jO8VtKeWZMJsYMPE4zddVhXsFNDi_8KSY7JWZA8PSwoPvTd4/s1600/US_Navy_030524-N-1352S-006_ATF-West_deployed_from_San_Diego_January_17,_transporting_Marines_and_their_gear_to_Kuwait_for_further_deployment_into_Iraq.jpg
+cover_image: /images/blogger/8afd4ac157f3ba74b5aa.jpg
 legacy_url: https://www.reversim.com/2015/03/253-fogcast-17-deployments.html
 legacy_path: /2015/03/253-fogcast-17-deployments
 ---
@@ -15,7 +15,7 @@ legacy_path: /2015/03/253-fogcast-17-deployments
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">הפצה, או באנגלית - Deployment. באולפן - ליאור ורן.</span></div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEis-qd85kyvGVeY_-eaadOZd_wlIfdTmwoVC-IE15v4QR7vw060b1f5pv9KXvBmOmo82X9oK0HVrxtPaXTnm4bjfpC72o-jO8VtKeWZMJsYMPE4zddVhXsFNDi_8KSY7JWZA8PSwoPvTd4/s1600/US_Navy_030524-N-1352S-006_ATF-West_deployed_from_San_Diego_January_17,_transporting_Marines_and_their_gear_to_Kuwait_for_further_deployment_into_Iraq.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="130" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEis-qd85kyvGVeY_-eaadOZd_wlIfdTmwoVC-IE15v4QR7vw060b1f5pv9KXvBmOmo82X9oK0HVrxtPaXTnm4bjfpC72o-jO8VtKeWZMJsYMPE4zddVhXsFNDi_8KSY7JWZA8PSwoPvTd4/s1600/US_Navy_030524-N-1352S-006_ATF-West_deployed_from_San_Diego_January_17,_transporting_Marines_and_their_gear_to_Kuwait_for_further_deployment_into_Iraq.jpg" width="200"></a></div>
+<a href="/images/blogger/8afd4ac157f3ba74b5aa.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="130" src="/images/blogger/8afd4ac157f3ba74b5aa.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

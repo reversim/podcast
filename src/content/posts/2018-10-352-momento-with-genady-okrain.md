@@ -3,7 +3,7 @@ title: 352 Momento with Genady Okrain
 date: 2018-10-31T14:57:00.000Z
 episode: 352
 audio_url: https://m2.reversim.com/reversim352-Momento_Genady_Okrain.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3lWZIiXHoEy5Uk3T7utzOC7UEyV3We4Fikj3hkObvAmGH0U_WXpwA6uDWLC7ci0U9X4cTHq9dPP5ibH2AI8U0gVhz_PDH9M9EwzZ7gt8j75cyJX_iBFJDC7hLBphh8gbmItJNO8rt1z0/s1600/momento.png
+cover_image: /images/blogger/9bc6952ac711acf4c9a4.png
 legacy_url: https://www.reversim.com/2018/10/352-momento-with-genady-okrain.html
 legacy_path: /2018/10/352-momento-with-genady-okrain
 ---
@@ -14,7 +14,7 @@ legacy_path: /2018/10/352-momento-with-genady-okrain
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">פודקאסט מספר 352, רן ואורי מארחים את גנאדי אוקראין שעובד על </span><span class="attrlink url author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z"><a class="attrlink" data-target-href="https://www.momentogifs.com/" href="https://www.momentogifs.com/" rel="noreferrer nofollow noopener" target="_blank">Momento</a></span></div>
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3lWZIiXHoEy5Uk3T7utzOC7UEyV3We4Fikj3hkObvAmGH0U_WXpwA6uDWLC7ci0U9X4cTHq9dPP5ibH2AI8U0gVhz_PDH9M9EwzZ7gt8j75cyJX_iBFJDC7hLBphh8gbmItJNO8rt1z0/s1600/momento.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="69" data-original-width="106" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3lWZIiXHoEy5Uk3T7utzOC7UEyV3We4Fikj3hkObvAmGH0U_WXpwA6uDWLC7ci0U9X4cTHq9dPP5ibH2AI8U0gVhz_PDH9M9EwzZ7gt8j75cyJX_iBFJDC7hLBphh8gbmItJNO8rt1z0/s1600/momento.png"></a></div>
+<a href="/images/blogger/9bc6952ac711acf4c9a4.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="69" data-original-width="106" src="/images/blogger/9bc6952ac711acf4c9a4.png"></a></div>
 <br></div>
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">1:40 גנאדי מציג את עצמו, איך התחיל לפתח אפליקציות, ופרויקטים מעניינים שעבד עליהם בעבר</span></div>

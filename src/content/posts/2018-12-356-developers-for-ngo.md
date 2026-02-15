@@ -3,7 +3,7 @@ title: 356 Developers for NGO
 date: 2018-12-18T13:52:00.000Z
 episode: 356
 audio_url: https://m2.reversim.com/reversim356_Developers-for-NGO.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpbG6pD_nN1DDbOukF1kmRyo_6raXqffvBMKSfrHYMkl_-5yFBDqbqVuKVNme0KmnkO8Za5dqVI-m7APfiO-nv8h9Ank17nqXTOkAbP-0T0gbBX8zFLfH1fxZFIfDPmyvql3LWdRJ2F-c/s200/goodness.jpg
+cover_image: /images/blogger/1579ab6c906f58320804.jpg
 legacy_url: https://www.reversim.com/2018/12/356-developers-for-ngo.html
 legacy_path: /2018/12/356-developers-for-ngo
 ---
@@ -13,7 +13,7 @@ legacy_path: /2018/12/356-developers-for-ngo
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">פודקאסט מספר 356, אורי ורן מארחים את <a href="https://www.linkedin.com/in/lior-shinekopf-2694188/">ליאור שיינקופ</a> כדי לדבר על מעשים טובים</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpbG6pD_nN1DDbOukF1kmRyo_6raXqffvBMKSfrHYMkl_-5yFBDqbqVuKVNme0KmnkO8Za5dqVI-m7APfiO-nv8h9Ank17nqXTOkAbP-0T0gbBX8zFLfH1fxZFIfDPmyvql3LWdRJ2F-c/s1600/goodness.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="400" data-original-width="400" height="200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpbG6pD_nN1DDbOukF1kmRyo_6raXqffvBMKSfrHYMkl_-5yFBDqbqVuKVNme0KmnkO8Za5dqVI-m7APfiO-nv8h9Ank17nqXTOkAbP-0T0gbBX8zFLfH1fxZFIfDPmyvql3LWdRJ2F-c/s200/goodness.jpg" width="200"></a></div>
+<a href="/images/blogger/46e3c6a867dd65d9f057.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="400" data-original-width="400" height="200" src="/images/blogger/1579ab6c906f58320804.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z"><br></span></div>
 <ul class="listtype-bullet listindent1 list-bullet1" dir="rtl" style="text-align: right;">

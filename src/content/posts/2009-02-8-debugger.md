@@ -5,7 +5,7 @@ tags:
   - תאוריה מול פרקטיקה
 episode: 8
 audio_url: https://m2.reversim.com/reversim8.mp3
-cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIacwM63f26cl4_4NoYT2UohS_4fEa3XDNyqLY3J5X1_4mr-hMQDFpiAX5nYOr4mvaAET8gJo4_lgtEZx8IYT4KsSXqD1aLflZKPAOGCoOkOR_pIL9b5TrfxnHnNa1gYpXmCmZhPM-YRFx/s320/open-source-debugger.jpg
+cover_image: /images/blogger/5c621de71d4a54137742.jpg
 legacy_url: https://www.reversim.com/2009/02/8-debugger.html
 legacy_path: /2009/02/8-debugger
 ---
@@ -14,7 +14,7 @@ legacy_path: /2009/02/8-debugger
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div style="text-align: right;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIacwM63f26cl4_4NoYT2UohS_4fEa3XDNyqLY3J5X1_4mr-hMQDFpiAX5nYOr4mvaAET8gJo4_lgtEZx8IYT4KsSXqD1aLflZKPAOGCoOkOR_pIL9b5TrfxnHnNa1gYpXmCmZhPM-YRFx/s1600-h/open-source-debugger.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5307589695063610546" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIacwM63f26cl4_4NoYT2UohS_4fEa3XDNyqLY3J5X1_4mr-hMQDFpiAX5nYOr4mvaAET8gJo4_lgtEZx8IYT4KsSXqD1aLflZKPAOGCoOkOR_pIL9b5TrfxnHnNa1gYpXmCmZhPM-YRFx/s320/open-source-debugger.jpg" style="cursor: pointer; float: left; height: 242px; margin: 0pt 10px 10px 0pt; width: 320px;"></a></div>
+<a href="/images/blogger/180c4bbfd94020d0d324.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5307589695063610546" src="/images/blogger/5c621de71d4a54137742.jpg" style="cursor: pointer; float: left; height: 242px; margin: 0pt 10px 10px 0pt; width: 320px;"></a></div>
 <div style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">
