@@ -16,6 +16,7 @@ collections:
     label: "פוסטים"
     folder: "src/content/posts"
     create: true
+    sort: "date:desc"
     slug: "{{slug}}"
     preview_path: "{{year}}/{{month}}/{{slug}}.html"
     fields:
