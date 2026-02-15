@@ -128,41 +128,50 @@ img {
 }
 
 .subscribe-strip {
-	width: 100%;
-	min-width: 0;
 	display: flex;
 	align-items: center;
-	gap: 0.45rem;
+	gap: 0;
 	flex-wrap: wrap;
-	padding-top: 0.25rem;
+	padding-top: 0.4rem;
+	width: max-content;
+	max-width: 100%;
+	background: color-mix(in oklab, var(--surface) 82%, #eaf2ff 18%);
+	border: 1px solid color-mix(in oklab, var(--line) 75%, #bfd2f2 25%);
+	border-radius: 999px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+	overflow: hidden;
 }
 
 .subscribe-label {
-	font-size: 0.82rem;
-	color: var(--muted);
-	font-weight: 600;
+	font-size: 0.78rem;
+	color: color-mix(in oklab, var(--muted) 78%, #19335b 22%);
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	padding: 0.5rem 0.86rem;
+	background: color-mix(in oklab, var(--surface-muted) 78%, #dfeafb 22%);
+	border-left: 1px solid color-mix(in oklab, var(--line) 68%, #bfd2f2 32%);
+	white-space: nowrap;
 }
 
 .subscribe-link {
-	font-size: 0.76rem;
-	padding: 0.3rem 0.62rem;
-	border-radius: 999px;
-	background: color-mix(in oklab, var(--surface) 90%, #eef4ff 10%);
-	border: 1px solid var(--line);
-	line-height: 1.1;
+	font-size: 0.8rem;
+	padding: 0.5rem 0.82rem;
+	background: transparent;
+	border-left: 1px solid color-mix(in oklab, var(--line) 68%, #bfd2f2 32%);
+	line-height: 1;
 	white-space: nowrap;
-	max-width: 100%;
 	display: inline-flex;
 	align-items: center;
-	gap: 0.35rem;
-	font-weight: 600;
+	gap: 0.4rem;
+	font-weight: 700;
+	color: color-mix(in oklab, var(--ink) 72%, #20467d 28%);
+	transition: background-color 0.16s ease, color 0.16s ease;
 }
 
 .subscribe-link:hover,
 .subscribe-link:focus-visible {
-	background: color-mix(in oklab, var(--accent) 14%, white 86%);
-	border-color: color-mix(in oklab, var(--accent) 40%, var(--line) 60%);
-	color: var(--ink);
+	background: color-mix(in oklab, var(--surface) 45%, #dbe9ff 55%);
+	color: color-mix(in oklab, var(--ink) 60%, #0f57bf 40%);
 }
 
 .subscribe-icon {
@@ -193,8 +202,7 @@ img {
 	color: #0f766e;
 }
 
-.subscribe-rss,
-.subscribe-atom {
+.subscribe-rss {
 	color: #0f4ea8;
 }
 
@@ -516,12 +524,6 @@ img {
 	font-size: 0.9rem;
 }
 
-.footer-links {
-	display: flex;
-	gap: 0.8rem;
-	align-items: center;
-}
-
 @keyframes reveal {
 	from {
 		opacity: 0;
@@ -560,5 +562,20 @@ img {
 
 	.audio-player {
 		padding: 0.55rem 0.6rem;
+	}
+
+	.subscribe-strip {
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	.subscribe-label {
+		padding-inline: 0.72rem;
+		font-size: 0.75rem;
+	}
+
+	.subscribe-link {
+		padding-inline: 0.68rem;
+		font-size: 0.77rem;
 	}
 }
