@@ -9,7 +9,7 @@ legacy_path: /2011/11/118-go-lang-with-miki-tebeka
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl"><div style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/3e965a20616913a75a0a.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/3e965a20616913a75a0a.png"></a></div>בפרק זה שוחחנו עם <a href="http://web.mikitebeka.com/">מיקי טבקה</a> בעיקר על <a href="http://golang.org/">שפת גו</a> ומעט גם על סלניום.</div></div><div dir="rtl"><ul style="text-align: right;"><li>מה מקור השפה ומה מייחד אותה</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl"><div style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="/podcast/images/blogger/3e965a20616913a75a0a.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/podcast/images/blogger/3e965a20616913a75a0a.png"></a></div>בפרק זה שוחחנו עם <a href="http://web.mikitebeka.com/">מיקי טבקה</a> בעיקר על <a href="http://golang.org/">שפת גו</a> ומעט גם על סלניום.</div></div><div dir="rtl"><ul style="text-align: right;"><li>מה מקור השפה ומה מייחד אותה</li>
 <li>מי האנשים מאחורי השפה</li>
 <li>איזה שימוש מבצעי עושים בה היום</li>
 <li>דמיון ושוני עם שפות אחרות כמו ארלנג, סקלה, קלוז'ר</li>

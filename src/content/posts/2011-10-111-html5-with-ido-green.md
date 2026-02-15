@@ -9,7 +9,7 @@ legacy_path: /2011/10/111-html5-with-ido-green
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/491cb83949fe9c0f2c19.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/718fc07bcb21645e8651.jpg" width="165"></a></div><div dir="rtl" style="text-align: right;"><a href="http://greenido.wordpress.com/">עידו גרין</a> הוא מפתח ויזם בעל שנים רבות של נסיון וכעת בתפקיד של Developer Advocate בגוגל</div><div dir="rtl" style="text-align: right;">בשיחה קולחת ומעניינת דיברנו על:</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>עדו, החברות שבהן עבד וחלקן ייסד</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="/podcast/images/blogger/491cb83949fe9c0f2c19.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/718fc07bcb21645e8651.jpg" width="165"></a></div><div dir="rtl" style="text-align: right;"><a href="http://greenido.wordpress.com/">עידו גרין</a> הוא מפתח ויזם בעל שנים רבות של נסיון וכעת בתפקיד של Developer Advocate בגוגל</div><div dir="rtl" style="text-align: right;">בשיחה קולחת ומעניינת דיברנו על:</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>עדו, החברות שבהן עבד וחלקן ייסד</li>
 <li>מוצרים שעדו בנה</li>
 <li>תפקידו בגוגל ומה זה Developer Advocate</li>
 <li>HTML5 שבו עדו מתמחה</li>

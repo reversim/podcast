@@ -9,7 +9,7 @@ legacy_path: /2010/01/057-2-nosqlcassandra
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/862e3fac50efccab63c9.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/ed991c5fa6d4f51e8cd6.png"></a></div><br>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="/podcast/images/blogger/862e3fac50efccab63c9.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/podcast/images/blogger/ed991c5fa6d4f51e8cd6.png"></a></div><br>
 <div dir="rtl" style="text-align: right;">פרק המשך בנושא nosql, שוב הקלטנו ללא אורחים.</div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>תזכורת ותקציר הפרק הקודם</li>
 <li>מה זה NRW? וכיצד הוא מגדיר את רמת ה-&nbsp;<a href="http://en.wikipedia.org/wiki/Consistency_model" target="_blank">consistency</a></li>
 <li>איך המערכת יודעת איזה פריט נכתב אחרון ומהי בעיית snapshot במערכות מבוזרות</li>

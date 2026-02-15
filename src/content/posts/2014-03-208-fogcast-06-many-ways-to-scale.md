@@ -16,7 +16,7 @@ legacy_path: /2014/03/208-fogcast-06-many-ways-to-scale
 <span id="docs-internal-guid-58210e35-add3-e6eb-74de-ba11f75806fc"></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/f96f60c74dacceeea100.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/images/blogger/f96f60c74dacceeea100.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/f96f60c74dacceeea100.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/podcast/images/blogger/f96f60c74dacceeea100.jpg" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">רן וליאור על איך מתמודדים עם סקייל?</span></div>
 </li>

@@ -10,7 +10,7 @@ legacy_path: /2014/05/216-appsflyerand-clojure
 
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
-<a href="/images/blogger/a3df2d7086accbef509c.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/a3df2d7086accbef509c.jpg" width="200"></a>
+<a href="/podcast/images/blogger/a3df2d7086accbef509c.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/a3df2d7086accbef509c.jpg" width="200"></a>
 
 <br>
 <div dir="rtl" style="text-align: right;">

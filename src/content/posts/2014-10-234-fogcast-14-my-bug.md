@@ -13,7 +13,7 @@ legacy_path: /2014/10/234-fogcast-14-my-bug
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/c19411ae90392c9cfe64.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/c19411ae90392c9cfe64.png" width="173"></a></div>
+<a href="/podcast/images/blogger/c19411ae90392c9cfe64.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/c19411ae90392c9cfe64.png" width="173"></a></div>
 <div dir="rtl" style="text-align: right;">
 הפעם שוחחו ליאור ורן על אחת מהחוויות שכל מפתח עובר בחייו - באגים. אבל לא סתם באגים - באגים קשים, מתסכלים, כאלה שעובדים עליהם ימים, שבועות או יותר...</div>
 <div dir="rtl" style="text-align: right;">

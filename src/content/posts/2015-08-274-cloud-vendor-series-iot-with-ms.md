@@ -11,7 +11,7 @@ legacy_path: /2015/08/274-cloud-vendor-series-iot-with-ms
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/f4965efc1af1e934e309.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/e294702db9f4a989fe01.jpg" width="190"></a></div>
+<a href="/podcast/images/blogger/f4965efc1af1e934e309.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/e294702db9f4a989fe01.jpg" width="190"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br><br>אנו מארחים את <a href="http://blogs.msdn.com/b/partnercatalystteam/">לימור לחיאני</a> ממרכז הפיתוח של מיקרוסופט. לימור מובילה את שיתופי הפעולה בארץ של החברה עם חברות גדולות וסארטאפים.<br><br>IOT - האינטרנט של הדברים (Internet Of Thing).<br><br>היום אנו רואים ניצנים של חיבור בין העולם הווירטואלי, הכולל את הווב ותוכנות ניהול, לבין העולם הפיזי, מקררים מיקרוגלים וחיישנים אחרים.<br></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">

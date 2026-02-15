@@ -14,7 +14,7 @@ legacy_path: /2018/01/331-with-randy-shoup-about-data-science
 בפרק זה רן מדבר עם <a href="https://www.linkedin.com/in/randyshoup/">Randy Shoup</a>, סמנכ"ל הפיתוח של חברת <a href="https://www.stitchfix.com/">StitchFix</a> על data science ועבודה בסקייל. </div>
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/31049adc13ee6747b908.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="183" data-original-width="276" height="132" src="/images/blogger/a760cabaa9c98f30f3f9.png" width="200"></a></div>
+<a href="/podcast/images/blogger/31049adc13ee6747b908.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="183" data-original-width="276" height="132" src="/podcast/images/blogger/a760cabaa9c98f30f3f9.png" width="200"></a></div>
 <br></div>
 <div dir="rtl" style="text-align: right;">
 במה עוסקת החברה , מה הקשר בין בגדים לdata science, מה האתגרים, ואיזה עוד חברות שותפות לאתגרים הנ"ל</div>

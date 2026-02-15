@@ -11,7 +11,7 @@ legacy_path: /2014/11/238-organizing-developer-events
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/cbc95d2c1a16d0c71a5c.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="173" src="/images/blogger/cbc95d2c1a16d0c71a5c.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/cbc95d2c1a16d0c71a5c.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="173" src="/podcast/images/blogger/cbc95d2c1a16d0c71a5c.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 אנחנו צריכים עזרה!<br>
 אנחנו צריכים עזרה בתקצור הפרקים, עד עכשיו עזרו לנו רבים וטובים בתקצור הפודקאסט ואנו מודים ליוני, יותם, אורן וגיא, וכעת אנו פונים אל הקהילה שוב בבקשת עזרה -  <a href="https://www.smore.com/p7fcu">אנא עזרו לנו בהקשבה ותקצור</a>. זה דורש כשעה-שעתיים בשבוע והעזרה מבורכת ביותר! <br>

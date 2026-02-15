@@ -14,7 +14,7 @@ legacy_path: /2014/04/211-oss-licensing
 <span style="font-family: Arial; font-size: 13px; line-height: 1.15; white-space: pre-wrap;">אורי ורן מארחים את </span><a href="http://www.linkedin.com/profile/view?id=3417549" style="font-family: Arial; font-size: 13px; line-height: 1.15; white-space: pre-wrap;">שרון</a></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/db207bcad10943d24a19.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="179" src="/images/blogger/db207bcad10943d24a19.png" width="200"></a></div>
+<a href="/podcast/images/blogger/db207bcad10943d24a19.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="179" src="/podcast/images/blogger/db207bcad10943d24a19.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אז איך בוחרים את הרשיון המתאים לפרויקט שלכם? ומה ההבדלים בין הרשיונות?</span></div>
 </li>

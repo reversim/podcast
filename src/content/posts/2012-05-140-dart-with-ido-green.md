@@ -14,7 +14,7 @@ legacy_path: /2012/05/140-dart-with-ido-green
 <b id="internal-source-marker_0.028624448459595442" style="text-align: -webkit-auto;"></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/2db1a63ce617362dcc65.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="98" src="/images/blogger/ceb3655f6bccfcefc3de.png" width="200"></a></div>
+<a href="/podcast/images/blogger/2db1a63ce617362dcc65.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="98" src="/podcast/images/blogger/ceb3655f6bccfcefc3de.png" width="200"></a></div>
 <div style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span id="internal-source-marker_0.028624448459595442" style="text-align: -webkit-auto;"><span style="vertical-align: baseline; white-space: pre-wrap;">ירדנו לבירה ובוטנים בפאב השכונתי. כטוב ליבנו באלכוהול קשקשנו עם הבעלים רן תבורי, הברמן אורי להב וה-Doorman <a href="http://greenido.wordpress.com/">עידו גרין</a> על </span><a href="http://www.dartlang.org/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">Dart</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> ומשמעות החיים.</span></span></div>
 </li>

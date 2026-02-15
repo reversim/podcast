@@ -13,7 +13,7 @@ legacy_path: /2018/01/330-with-shir-meir-about-pydata-etc
 <div dir="rtl" style="text-align: right;">
 בפרק זה מדברים אורי ורן עם <a href="https://twitter.com/shirmeir86">שיר</a> מאיר, <a href="https://www.linkedin.com/in/shir-meir-lador-98b4692a/">מנהלת</a> יחידת DATA SCIENCE בחברת INTUIT על מספר נושאים, בין השאר על: <br>
 <br>
-<a href="/images/blogger/4b40b9c1d5681ff92bd8.png" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/0255883a4335d2e911bc.png"></a> </div>
+<a href="/podcast/images/blogger/4b40b9c1d5681ff92bd8.png" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/podcast/images/blogger/0255883a4335d2e911bc.png"></a> </div>
 <ul dir="rtl" style="text-align: right;">
 <li><a href="https://www.meetup.com/PyData-Tel-Aviv/">PyData</a>, קבוצת המיטאפ שהקימה&nbsp;</li>
 <li>וגם - מה מעניין ב data science&nbsp;</li>

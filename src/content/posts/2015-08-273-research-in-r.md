@@ -11,7 +11,7 @@ legacy_path: /2015/08/273-research-in-r
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/904e2801fa2c5c3d9c1a.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="107" src="/images/blogger/db516f8ed8c7e618f0de.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/904e2801fa2c5c3d9c1a.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="107" src="/podcast/images/blogger/db516f8ed8c7e618f0de.jpg" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">איתנו באולפן אורי, אמרי קיסוס ואנוכי רן.</span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

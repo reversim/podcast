@@ -12,7 +12,7 @@ legacy_path: /2017/06/summit-2017-call-for-papers
 <div dir="rtl" style="text-align: right;">
 זהו פרק מיחד וקצרצר שבו אדם ואני מספרים לכם על הקול הקורא להגשת הצעות לכנס 2017 (Call for Papers).</div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="/images/blogger/2b093d8278095ddf6bd8.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="866" data-original-width="1600" height="108" src="/images/blogger/23f89c60d7f2dade8dfa.png" width="200"></a></div>
+<a href="/podcast/images/blogger/2b093d8278095ddf6bd8.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="866" data-original-width="1600" height="108" src="/podcast/images/blogger/23f89c60d7f2dade8dfa.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

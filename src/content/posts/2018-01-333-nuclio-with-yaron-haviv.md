@@ -13,7 +13,7 @@ legacy_path: /2018/01/333-nuclio-with-yaron-haviv
 <div dir="rtl" style="text-align: right;">
 בפרק זה מארחים אורי ורן את <a href="https://www.linkedin.com/in/yaronh/">ירון חביב</a>, יזם ו CTO של <a href="https://www.iguazio.com/">Iguazio</a> לשיחה על פלטפורמת Serverless בשם <a href="https://github.com/nuclio/nuclio">Nuclio</a> שפותחה בחברה</div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/778e9ffe12a122554967.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="450" data-original-width="650" height="138" src="/images/blogger/fc729cfd83f598f294d2.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/778e9ffe12a122554967.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="450" data-original-width="650" height="138" src="/podcast/images/blogger/fc729cfd83f598f294d2.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

@@ -15,7 +15,7 @@ legacy_path: /2015/03/253-fogcast-17-deployments
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">הפצה, או באנגלית - Deployment. באולפן - ליאור ורן.</span></div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="/images/blogger/8afd4ac157f3ba74b5aa.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="130" src="/images/blogger/8afd4ac157f3ba74b5aa.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/8afd4ac157f3ba74b5aa.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="130" src="/podcast/images/blogger/8afd4ac157f3ba74b5aa.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

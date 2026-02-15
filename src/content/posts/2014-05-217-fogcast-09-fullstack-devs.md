@@ -14,7 +14,7 @@ legacy_path: /2014/05/217-fogcast-09-fullstack-devs
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/9eb8d748b5c4193471d6.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="66" src="/images/blogger/9eb8d748b5c4193471d6.png" width="200"></a></div>
+<a href="/podcast/images/blogger/9eb8d748b5c4193471d6.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="66" src="/podcast/images/blogger/9eb8d748b5c4193471d6.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ליאור ורן דנים בפיתוח FullStack - יתרונות וחסרונות</span></div>
 </li>

@@ -13,7 +13,7 @@ legacy_path: /2014/03/206-fogcast-04-selecting-technologies
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/f96f60c74dacceeea100.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/images/blogger/f96f60c74dacceeea100.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/f96f60c74dacceeea100.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/podcast/images/blogger/f96f60c74dacceeea100.jpg" width="200"></a></div>
 <div>
 <br></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

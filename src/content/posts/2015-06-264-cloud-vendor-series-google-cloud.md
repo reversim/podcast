@@ -13,7 +13,7 @@ legacy_path: /2015/06/264-cloud-vendor-series-google-cloud
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/19559ed6e0cb45ff81f0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="123" src="/images/blogger/259e19227c685cec2055.png" width="200"></a></div>
+<a href="/podcast/images/blogger/19559ed6e0cb45ff81f0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="123" src="/podcast/images/blogger/259e19227c685cec2055.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.295; margin-bottom: 8pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Calibri; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">בפרק הפעם אנחנו מתחילים סדרה שתכלול בין 9-12 נושאים, ותסקור נושאים שונים הקשורים לענן כמו למשל זמינות גבוהה, התאוששות מאסון, מובייל, אפליקציות Web, ניתוח נתונים, ביג דאטה ועוד. בכל פרק נכסה נושא אחד והיום הנושא הוא זמינות גבוהה (High Availability) והתאוששות מאסון (Disaster Recovery) בפלטפורמת הענן של גוגל. בנוסף נסקור את השימוש במגוון ספקי שירותי ענן בסביבה הטרוגנית אחת, או MultiCloud.</span></div>
 <div dir="rtl" style="line-height: 1.295; margin-bottom: 8pt; margin-top: 0pt; text-align: right;">

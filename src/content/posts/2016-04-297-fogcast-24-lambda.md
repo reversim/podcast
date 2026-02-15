@@ -15,7 +15,7 @@ legacy_path: /2016/04/297-fogcast-24-lambda
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/bdc97339e853534fbc60.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/59df8e1f5cab6390ac89.png" width="200"></a></div>
+<a href="/podcast/images/blogger/bdc97339e853534fbc60.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/59df8e1f5cab6390ac89.png" width="200"></a></div>
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">בפרק זה רן וליאור מדברים על AWS Lambda והנסיון של רן בכתיבת crawler מעל שרות זה.</span></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-23d45799-35be-b6b1-cfb6-865255f97ee9" style="font-weight: normal;"><br></b></div>

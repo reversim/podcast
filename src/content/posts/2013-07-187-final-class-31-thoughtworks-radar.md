@@ -13,7 +13,7 @@ legacy_path: /2013/07/187-final-class-31-thoughtworks-radar
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/d318bc6f35abcd436fab.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="187" src="/images/blogger/e39aa914e3ef599df24d.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/d318bc6f35abcd436fab.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="187" src="/podcast/images/blogger/e39aa914e3ef599df24d.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-1affcdf3-e930-1a92-1352-2a003a2b1bcb" style="font-weight: normal;"><br><span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

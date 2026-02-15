@@ -13,7 +13,7 @@ legacy_path: /2015/02/250-fogcast-16-trusting-products
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/bf3ff131a30fd2a61052.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="135" src="/images/blogger/bf3ff131a30fd2a61052.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/bf3ff131a30fd2a61052.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="135" src="/podcast/images/blogger/bf3ff131a30fd2a61052.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-3cf09d0c-c79a-20cf-5e13-afcae3dead26" style="font-weight: normal;"><br></b></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

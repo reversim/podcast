@@ -12,7 +12,7 @@ legacy_path: /2016/01/287-search-with-ronny-lempel
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/0f3a3dde1f5c2b2c89c5.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/dce33d0bf80880e8055c.png" width="200"></a></div>
+<a href="/podcast/images/blogger/0f3a3dde1f5c2b2c89c5.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/dce33d0bf80880e8055c.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפרק מס' 287, באולפן המשוכלל שלנו ומשדרים היישר מפרדס-חנה. היום נערוך שיחה מרתקת על תחום החיפוש. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

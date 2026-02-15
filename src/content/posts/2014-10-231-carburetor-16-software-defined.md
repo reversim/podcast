@@ -14,7 +14,7 @@ legacy_path: /2014/10/231-carburetor-16-software-defined
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/3c1ebc9d0b63c2508a64.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="184" src="/images/blogger/3c1ebc9d0b63c2508a64.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/3c1ebc9d0b63c2508a64.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="184" src="/podcast/images/blogger/3c1ebc9d0b63c2508a64.jpg" width="200"></a></div>
 אורי, נתי ורן דיברו על הנושא של Software Defined Operator<br>
 <br>
 <ul style="text-align: right;">

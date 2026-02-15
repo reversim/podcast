@@ -17,7 +17,7 @@ legacy_path: /2013/05/station-configuration
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="http://ergo.human.cornell.edu/ergotips2002/workstation/workstationMAIN.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/0a60c32ebfe9c353622f.jpg" width="190"></a></div>
+<a href="http://ergo.human.cornell.edu/ergotips2002/workstation/workstationMAIN.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/0a60c32ebfe9c353622f.jpg" width="190"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-271215f3-6714-7082-45c0-b9f5e17f602d" style="font-weight: normal; text-align: start;"></b></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

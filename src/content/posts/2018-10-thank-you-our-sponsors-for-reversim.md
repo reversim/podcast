@@ -56,7 +56,7 @@ legacy_path: /2018/10/thank-you-our-sponsors-for-reversim
 <div style="text-align: left;">
 <br></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/48b0c6afca1d24bad81e.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1200" data-original-width="1600" height="300" src="/images/blogger/01bd594a7bec6e598e00.jpg" width="400"></a></div>
+<a href="/podcast/images/blogger/48b0c6afca1d24bad81e.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1200" data-original-width="1600" height="300" src="/podcast/images/blogger/01bd594a7bec6e598e00.jpg" width="400"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 </div>

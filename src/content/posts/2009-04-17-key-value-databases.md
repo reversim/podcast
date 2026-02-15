@@ -13,7 +13,7 @@ legacy_path: /2009/04/17-key-value-databases
 
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
-<a href="/images/blogger/ba63894f5f1fe398ccac.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5327443407341275058" src="/images/blogger/df46c6734775dd241e80.jpg" style="cursor: pointer; float: left; height: 320px; margin: 0pt 10px 10px 0pt; width: 286px;"></a><br>
+<a href="/podcast/images/blogger/ba63894f5f1fe398ccac.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5327443407341275058" src="/podcast/images/blogger/df46c6734775dd241e80.jpg" style="cursor: pointer; float: left; height: 320px; margin: 0pt 10px 10px 0pt; width: 286px;"></a><br>
 <div dir="rtl" style="text-align: right;">
 היום אירחנו את חגי - CTO של <a href="http://nuconomy.com/">Nuconomy</a><br>
 <ul dir="rtl">

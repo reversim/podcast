@@ -9,7 +9,7 @@ legacy_path: /2011/10/112-net-with-ido-ran
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/cb63ab4bb4482433256a.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/cb63ab4bb4482433256a.gif"></a></div>אירחנו את <a href="http://dotdotnet.blogspot.com/">עידו רן</a> לשיחה בעיקר על .net.<br>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"><div class="separator" style="clear: both; text-align: center;"><a href="/podcast/images/blogger/cb63ab4bb4482433256a.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/podcast/images/blogger/cb63ab4bb4482433256a.gif"></a></div>אירחנו את <a href="http://dotdotnet.blogspot.com/">עידו רן</a> לשיחה בעיקר על .net.<br>
 <br>
 לעידו יש  את הפרספקטיבה הנדירה יחסית של מישהו שביום יום עובד עם שתי הטכנולוגיות של java ו .net.<br>
 <br>

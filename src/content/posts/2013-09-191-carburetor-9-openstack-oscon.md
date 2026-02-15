@@ -14,7 +14,7 @@ legacy_path: /2013/09/191-carburetor-9-openstack-oscon
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <ul dir="rtl" style="text-align: right;">
 <li>במוסך: אורי, נתי ורן.<div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/29d46e7acef47d2061cd.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="81" src="/images/blogger/903c54bf53caec51a208.png" width="200"></a></div>
+<a href="/podcast/images/blogger/29d46e7acef47d2061cd.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="81" src="/podcast/images/blogger/903c54bf53caec51a208.png" width="200"></a></div>
 </li>
 <li>מטפלים באירוע אוסקון האחרון: אופןסטאק ותחזיות עתידיות לקלאוד.</li>
 <li>פרייבט קלאוד או פאבליק? ואם אפשר אז גם ביחד - היבריד.</li>

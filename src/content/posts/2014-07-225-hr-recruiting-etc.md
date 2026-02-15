@@ -13,7 +13,7 @@ legacy_path: /2014/07/225-hr-recruiting-etc
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="font-family: Arial; font-size: 15px; line-height: 1.15; vertical-align: baseline; white-space: pre-wrap;">עדית קרני - מנהלת חברת </span><a href="http://www.karnihr.com/" style="font-family: Arial; font-size: 15px; line-height: 1.15; text-decoration: none;"><span style="color: #1155cc; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">קרני משאבי אנוש</span></a><span style="font-family: Arial; font-size: 15px; line-height: 1.15; vertical-align: baseline; white-space: pre-wrap;"> בירושלים אשר מציע שירותי outsourcing של HR לחברות קטנות ובינוניות. השירותים כוללים: איתור, מיון, גיוס, ראיונות עבודה, הגדרת תפקיד, איך עושים ramp-up, איך משמרים לאורך זמן ועוד.</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/6f7e20357500ea4a6bf0.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="88" src="/images/blogger/6f7e20357500ea4a6bf0.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/6f7e20357500ea4a6bf0.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="88" src="/podcast/images/blogger/6f7e20357500ea4a6bf0.jpg" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="font-family: Arial; font-size: 15px; line-height: 1.15; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

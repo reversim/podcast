@@ -9,7 +9,7 @@ legacy_path: /2011/05/101-bitorama-and-nodejs_23
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" dir="rtl" style="clear: both; text-align: center;"><a href="/images/blogger/8795ab47e6478290c417.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/8795ab47e6478290c417.png"></a></div><div dir="rtl" style="text-align: right;">אירחנו את אלון קרן, האיש מאחורי <a href="https://bitorama.com/">ביטורמה</a>&nbsp;לשיחה על ביטורמה, nodejs ו couchdb</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>מה זה ביטורמה? (רמז: <a href="http://news.ycombinator.com/">HackerNews</a> ציוני)&nbsp;</li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" dir="rtl" style="clear: both; text-align: center;"><a href="/podcast/images/blogger/8795ab47e6478290c417.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/podcast/images/blogger/8795ab47e6478290c417.png"></a></div><div dir="rtl" style="text-align: right;">אירחנו את אלון קרן, האיש מאחורי <a href="https://bitorama.com/">ביטורמה</a>&nbsp;לשיחה על ביטורמה, nodejs ו couchdb</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>מה זה ביטורמה? (רמז: <a href="http://news.ycombinator.com/">HackerNews</a> ציוני)&nbsp;</li>
 <li>מה מניע את אלון לכל העבודה (הנפלאה) הזו?</li>
 <li>מה אלון למד לאורך הדרך? (רמז: <a href="http://nodejs.org/">nodejs</a>, <a href="http://couchdb.apache.org/">couchdb</a> ועוד)</li>
 <li>לאן אלון רוצה להגיע? (רמז: אתם יכולים לעזור)</li>

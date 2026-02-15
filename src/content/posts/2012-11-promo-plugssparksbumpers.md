@@ -10,7 +10,7 @@ legacy_path: /2012/11/promo-plugssparksbumpers
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="/images/blogger/94bef813feabef29a508.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/006d013a574156aaa0ce.png" width="193"></a></div>
+<a href="/podcast/images/blogger/94bef813feabef29a508.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/006d013a574156aaa0ce.png" width="193"></a></div>
 <div dir="rtl" style="text-align: right;">
 עוד לא נסגרנו על שם, אבל האנשים כבר כאן!</div>
 <div dir="rtl" style="text-align: right;">

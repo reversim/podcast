@@ -19,7 +19,7 @@ legacy_path: /2014/11/241-open-source-legal
 <div style="text-align: right;">
 <span style="background-color: #fefdfa; color: #333333; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 13px; line-height: 18.2000007629395px;"><br></span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/35186ed6304aac4fcae9.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="111" src="/images/blogger/35186ed6304aac4fcae9.png" width="200"></a></div>
+<a href="/podcast/images/blogger/35186ed6304aac4fcae9.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="111" src="/podcast/images/blogger/35186ed6304aac4fcae9.png" width="200"></a></div>
 <div style="text-align: right;">
 <span style="background-color: #fefdfa; color: #333333; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 13px; line-height: 18.2000007629395px;"><br></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

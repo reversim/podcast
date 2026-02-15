@@ -11,7 +11,7 @@ legacy_path: /2015/12/285-podcast-about-nothing
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/1b819922165c345e3aba.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="93" src="/images/blogger/9deeebc68f1dabf1f45f.png" width="200"></a></div>
+<a href="/podcast/images/blogger/1b819922165c345e3aba.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="93" src="/podcast/images/blogger/9deeebc68f1dabf1f45f.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפרק חגיגי של רברסים לכבוד השקת האולפן ה"לא וירטואלי" החדש שלנו. יש לנו מיקסר משוכלל, מחשבים חדשים, מיקרופונים שווים ואוזניות מצוינות. באולפן היום (24.11.15) רן ואורי. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

@@ -11,7 +11,7 @@ legacy_path: /2015/05/260-you-gotta-love-frontend-conference
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="/images/blogger/f938b7a7b8f6b8a385b6.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="129" src="/images/blogger/ccb229ea507265f9eec9.png" width="200"></a></div>
+<a href="/podcast/images/blogger/f938b7a7b8f6b8a385b6.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="129" src="/podcast/images/blogger/ccb229ea507265f9eec9.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <a href="http://yougottalovefrontend.com/">You Gotta Love Frontend</a> או YGLF זהו כנס ממוקד פרונטאנד ראשון מסוגו בישראל, המביא דוברים מהשורה הראשונה בעולם לכנס של יומיים בישראל.</div>
 <div dir="rtl" style="text-align: right;">

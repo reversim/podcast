@@ -17,7 +17,7 @@ legacy_path: /2013/01/162-final-class-26-yearly-wrapup-2012
 <div style="text-align: left;">
 <b style="font-weight: normal;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"><br></span></b></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
+<a href="/podcast/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
 <div style="text-align: left;">
 <b style="font-weight: normal;"><span style="font-family: Arial;"><span style="font-size: 15px; white-space: pre-wrap;"><br></span></span></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

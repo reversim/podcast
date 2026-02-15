@@ -12,7 +12,7 @@ legacy_path: /2016/01/288-carburetor-21-predictions-for-2016
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/156ca74241dd711b7ce0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/images/blogger/8c3e4cc5bc43458b8922.png" width="200"></a></div>
+<a href="/podcast/images/blogger/156ca74241dd711b7ce0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="100" src="/podcast/images/blogger/8c3e4cc5bc43458b8922.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אנחנו בפודקאסט נוסף של רברסים, והגענו כבר לפרק 288, שמוקלט באולפן הביתי המשוכלל שלנו ב-29/12/15. מצטרף אלינו הפעם נתי שלום, לפרק 21 של קרבורטור, תת סדרה שלנו. </span></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

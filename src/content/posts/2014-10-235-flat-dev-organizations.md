@@ -11,7 +11,7 @@ legacy_path: /2014/10/235-flat-dev-organizations
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
-<a href="/images/blogger/a353e596d56192f08067.png" imageanchor="1" style="clear: left; display: inline !important; float: left; margin-bottom: 1em; margin-right: 1em; text-align: center;"><img border="0" height="200" src="/images/blogger/a353e596d56192f08067.png" width="200"></a></div>
+<a href="/podcast/images/blogger/a353e596d56192f08067.png" imageanchor="1" style="clear: left; display: inline !important; float: left; margin-bottom: 1em; margin-right: 1em; text-align: center;"><img border="0" height="200" src="/podcast/images/blogger/a353e596d56192f08067.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <div dir="rtl">
 אורי ורן נפגשו עם&nbsp;<a href="http://m.reversim.com/reversim235_flat-orgs.mp3">יניב</a>&nbsp;<a href="https://www.linkedin.com/pub/roi-lavan/3/2a/868">ורועי</a>&nbsp;מחברת&nbsp;<a href="http://www.convertro.com/">Convertro</a>&nbsp;ע״מ לדבר על ארגוני פיתוח שטוחים, או ארגונים שטוחים באופן כללי.&nbsp;</div>

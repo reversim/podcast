@@ -11,7 +11,7 @@ legacy_path: /2014/07/224-aspnet-vnext
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/33c8c92b7a621311d450.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="198" src="/images/blogger/33c8c92b7a621311d450.png" width="200"></a></div>
+<a href="/podcast/images/blogger/33c8c92b7a621311d450.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="198" src="/podcast/images/blogger/33c8c92b7a621311d450.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">פרק 224 - 11 ליוני 2014 - </span><a href="http://www.asp.net/vnext" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">ASP.NET vNext</span></a></div>
 <div dir="rtl" style="text-align: right;">

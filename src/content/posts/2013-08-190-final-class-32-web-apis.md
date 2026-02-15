@@ -14,7 +14,7 @@ legacy_path: /2013/08/190-final-class-32-web-apis
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
+<a href="/podcast/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">התאשפזו במחלקה: ישי, יונתן, ערן, גילי ורן.</span></div>
 </li>

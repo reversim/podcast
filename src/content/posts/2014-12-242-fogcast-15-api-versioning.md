@@ -25,7 +25,7 @@ legacy_path: /2014/12/242-fogcast-15-api-versioning
 </li>
 </ul>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/eeb8540302a44bf15afc.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="125" src="/images/blogger/eeb8540302a44bf15afc.png" width="200"></a></div>
+<a href="/podcast/images/blogger/eeb8540302a44bf15afc.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="125" src="/podcast/images/blogger/eeb8540302a44bf15afc.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-d8d3f204-09ce-5784-0512-0b7109ae3bf5" style="font-weight: normal;"><br></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

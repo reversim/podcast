@@ -15,7 +15,7 @@ legacy_path: /2017/02/316-yet-another-session-with-shmoli
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">קצת על שלומי לפני שמתחילים </span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/5c63557b810c6f406d25.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/d7eef438b2883bbc4eea.png" width="200"></a></div>
+<a href="/podcast/images/blogger/5c63557b810c6f406d25.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/d7eef438b2883bbc4eea.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-fd1ce135-52a1-48e8-e308-b23f5f8c3128" style="font-weight: normal;"><br></b></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

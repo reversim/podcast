@@ -15,7 +15,7 @@ legacy_path: /2015/05/259-bumpers-wayback
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <a href="https://disqus.com/home/discussion/reversim/252_bumpers_21/#comment-1955395720" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Arial; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">גדי פז זכה בכוס ללא קפה אבל עם הסמל של הפודקסט</span></a><span style="background-color: transparent; color: #3b3a3c; font-family: Arial; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> - והא עושה זאת עם Xamarin.</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/94be5b1e4aed61e71336.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="/images/blogger/94be5b1e4aed61e71336.png" width="200"></a></div>
+<a href="/podcast/images/blogger/94be5b1e4aed61e71336.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="/podcast/images/blogger/94be5b1e4aed61e71336.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-5a78d926-0edc-ddf4-2988-31a319f17736" style="font-weight: normal;"><br></b></div>
 <div dir="rtl" style="text-align: right;">

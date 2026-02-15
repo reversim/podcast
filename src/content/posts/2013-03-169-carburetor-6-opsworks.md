@@ -16,7 +16,7 @@ legacy_path: /2013/03/169-carburetor-6-opsworks
 <b id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><a href="/images/blogger/4a1773846732018872fa.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/4a1773846732018872fa.png"></a></span></div>
+<span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><a href="/podcast/images/blogger/4a1773846732018872fa.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/podcast/images/blogger/4a1773846732018872fa.png"></a></span></div>
 <div style="margin-bottom: 0pt; margin-top: 0pt;">
 <span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><span style="vertical-align: baseline; white-space: pre-wrap;">בעננים: נתי שלום, אורי להב ורן תבורי.</span></span></div>
 </li>

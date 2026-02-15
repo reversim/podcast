@@ -16,7 +16,7 @@ legacy_path: /2017/01/313-carburetor-23-nfv-network
 <span class=" author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90za3wz65zz87zz87zz83zz90z8qs68c1z70ziz85z0nz82z2ez90zz83zz85zxz80zz86zz70zm">אנחנו בפרק 313, קרבורטור עם אורי, רן ונתי מחברת </span><span class="attrlink url author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90za3wz65zz87zz87zz83zz90z8qs68c1z70ziz85z0nz82z2ez90zz83zz85zxz80zz86zz70zm"><a class="attrlink" data-target-href="http://getcloudify.org/" href="http://getcloudify.org/" rel="noreferrer nofollow noopener" target="_blank">cloudify</a></span></div>
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/49367f8c5c6a7d05759b.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="142" src="/images/blogger/b46effbb79d5f3bdf498.png" width="200"></a></div>
+<a href="/podcast/images/blogger/49367f8c5c6a7d05759b.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="142" src="/podcast/images/blogger/b46effbb79d5f3bdf498.png" width="200"></a></div>
 <span class=" author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90za3wz65zz87zz87zz83zz90z8qs68c1z70ziz85z0nz82z2ez90zz83zz85zxz80zz86zz70zm"><br></span></div>
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90za3wz65zz87zz87zz83zz90z8qs68c1z70ziz85z0nz82z2ez90zz83zz85zxz80zz86zz70zm">מה שנדבר עליו היום זה NFV, מה זה, מה זה לא, ומה עושים עם זה.</span></div>

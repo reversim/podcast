@@ -12,7 +12,7 @@ legacy_path: /2009/03/10-sundaysky
 
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
-<a href="/images/blogger/fb1d59fbf058d0e1f014.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5311907853799283682" src="/images/blogger/5b2873f058064c0c670f.jpg" style="cursor: pointer; float: left; height: 201px; margin: 0pt 10px 10px 0pt; width: 300px;"></a><br>
+<a href="/podcast/images/blogger/fb1d59fbf058d0e1f014.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5311907853799283682" src="/podcast/images/blogger/5b2873f058064c0c670f.jpg" style="cursor: pointer; float: left; height: 201px; margin: 0pt 10px 10px 0pt; width: 300px;"></a><br>
 <div dir="rtl" style="text-align: right;">
 פודקאסט מספר 10 - יומהולדת שמח לנו.<br>
 היום שוב אורח - <a href="http://www.linkedin.com/profile?viewProfile=&amp;key=1950868&amp;authToken=fyAh&amp;authType=name">יניב אקסן</a> יזם ו-CTO של סטארטאפ בשם <a href="http://www.sundaysky.com/">SundaySky</a>.<br>

@@ -19,7 +19,7 @@ legacy_path: /2015/04/255-fogcast-18-windows-deployment
 <div dir="rtl" style="line-height: 1.7999999999999998; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/b8a3d7644c0b5758541b.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="148" src="/images/blogger/b8a3d7644c0b5758541b.png" width="200"></a></div>
+<a href="/podcast/images/blogger/b8a3d7644c0b5758541b.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="148" src="/podcast/images/blogger/b8a3d7644c0b5758541b.png" width="200"></a></div>
 <div dir="rtl" style="line-height: 1.7999999999999998; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>
 <div dir="rtl" style="line-height: 1.7999999999999998; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

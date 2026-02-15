@@ -12,7 +12,7 @@ legacy_path: /2015/04/258-tce-conference
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="http://tce.technion.ac.il/events/the-5th-annual-henry-taub-international-tce-conference/" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="94" src="/images/blogger/5487577e6d6c13d862e6.png" width="200"></a></div>
+<a href="http://tce.technion.ac.il/events/the-5th-annual-henry-taub-international-tce-conference/" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="94" src="/podcast/images/blogger/5487577e6d6c13d862e6.png" width="200"></a></div>
 הכנס החמישי של המרכז להנדסת מחשבים בנושא Scalable Reliable Systems ייערך&nbsp;<b>בטכניון, בתאריכים 1-2 ביוני</b><br>
 <br>
 מידע נוסף <a href="http://tce.technion.ac.il/events/the-5th-annual-henry-taub-international-tce-conference/">באתר הכנס</a><br>

@@ -13,7 +13,7 @@ legacy_path: /2018/07/344-power-in-diversity-with-galit-desheh
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z">פודקאסט מספר 344, אורי ורן מארחים את <a href="https://www.linkedin.com/in/galit-desheh-997bab37/">גלית דשא</a> לשיחה על יוזמת </span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z"><b><a href="http://powerindiversityisrael.com/">PowerInDiversity</a></b></span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/eb9b9692e47f0548a133.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="221" data-original-width="221" height="200" src="/images/blogger/45fb17889b64bb2648cd.png" width="200"></a></div>
+<a href="/podcast/images/blogger/eb9b9692e47f0548a133.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="221" data-original-width="221" height="200" src="/podcast/images/blogger/45fb17889b64bb2648cd.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z"><br></span></div>
 <ul class="listtype-bullet listindent1 list-bullet1" dir="rtl" style="text-align: right;">

@@ -16,7 +16,7 @@ legacy_path: /2012/05/137-final-class-17-software-deadlines
 <b id="internal-source-marker_0.7919798865914345" style="text-align: -webkit-auto;"></b></div>
 <ul dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<span id="internal-source-marker_0.7919798865914345" style="text-align: -webkit-auto;"><a href="/images/blogger/12d5978416cca4fa81c0.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="195" src="/images/blogger/7414bef418581504a55d.jpg" width="200"></a></span></div>
+<span id="internal-source-marker_0.7919798865914345" style="text-align: -webkit-auto;"><a href="/podcast/images/blogger/12d5978416cca4fa81c0.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="195" src="/podcast/images/blogger/7414bef418581504a55d.jpg" width="200"></a></span></div>
 <div style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span id="internal-source-marker_0.7919798865914345" style="text-align: -webkit-auto;"><span style="vertical-align: baseline; white-space: pre-wrap;">להלן פרוטוקול ישיבת הוועדה המסדרת שנערכה ביום שני ה-23 באפריל. </span></span></div>
 </li>

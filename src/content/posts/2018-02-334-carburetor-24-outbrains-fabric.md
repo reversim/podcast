@@ -15,7 +15,7 @@ legacy_path: /2018/02/334-carburetor-24-outbrains-fabric
 <div dir="rtl" style="text-align: right;">
 בפרק 24 של הקרבורטור נפגשים אורי, רן, נתי ועדי, מהנדס רשתות באאוטבריין לשיחה על Fabric Network ועל NFV בכלל</div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="/images/blogger/07843deb8a2c3439701b.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="384" data-original-width="378" height="200" src="/images/blogger/d7de794204f472eb68a7.jpg" width="196"></a></div>
+<a href="/podcast/images/blogger/07843deb8a2c3439701b.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="384" data-original-width="378" height="200" src="/podcast/images/blogger/d7de794204f472eb68a7.jpg" width="196"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

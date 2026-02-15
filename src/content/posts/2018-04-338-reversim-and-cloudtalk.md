@@ -15,7 +15,7 @@ legacy_path: /2018/04/338-reversim-and-cloudtalk
 <span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz79zz75z2z79z7z79zdwz65zz76zz70z6z122zw3ocz66z1z65ziyz75zwgpz65zz70zz72zz83z"><br></span></div>
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/a40c122b5f3a28f5f662.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="94" data-original-width="320" height="58" src="/images/blogger/ed78bb33b16df7c0529c.png" width="200"></a></div>
+<a href="/podcast/images/blogger/a40c122b5f3a28f5f662.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="94" data-original-width="320" height="58" src="/podcast/images/blogger/ed78bb33b16df7c0529c.png" width="200"></a></div>
 <br>
 <ul>
 <li>1:08 - רן מספר בקצרה על רברס עם פלטפורמה שהוא מקליט יחד עם אורי כבר 9 שנים, בו הם מדברים על כל מה שנוגע בפיתוח תוכנה</li>

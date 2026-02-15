@@ -19,7 +19,7 @@ legacy_path: /2013/02/167-carburetor-4-devopscon
 <br></div>
 <div dir="rtl" style="text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/a54407a95564fce09341.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="43" src="/images/blogger/0fed84a6b3989bdd630e.png" width="200"></a></div>
+<a href="/podcast/images/blogger/a54407a95564fce09341.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="43" src="/podcast/images/blogger/0fed84a6b3989bdd630e.png" width="200"></a></div>
 <br></div>
 <div dir="rtl" style="text-align: right;">
 בפרק זה אירח רן את נתי והם עשו סיכום של הכנס <a href="http://www.devopscon.com/">http://www.devopscon.com</a></div>

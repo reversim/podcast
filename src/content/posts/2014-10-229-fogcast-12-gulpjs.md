@@ -15,7 +15,7 @@ legacy_path: /2014/10/229-fogcast-12-gulpjs
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/ea0ed6f6527e6e66ea15.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/ea0ed6f6527e6e66ea15.png" width="89"></a></div>
+<a href="/podcast/images/blogger/ea0ed6f6527e6e66ea15.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/ea0ed6f6527e6e66ea15.png" width="89"></a></div>
 <div dir="rtl" style="text-align: right;">
 בפרק זה של פוגקאסט דיברנו על מערכת הבניה לפרונטאנד - gulp.js</div>
 <div dir="rtl" style="text-align: right;">

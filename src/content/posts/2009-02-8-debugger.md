@@ -14,7 +14,7 @@ legacy_path: /2009/02/8-debugger
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div style="text-align: right;">
-<a href="/images/blogger/180c4bbfd94020d0d324.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5307589695063610546" src="/images/blogger/5c621de71d4a54137742.jpg" style="cursor: pointer; float: left; height: 242px; margin: 0pt 10px 10px 0pt; width: 320px;"></a></div>
+<a href="/podcast/images/blogger/180c4bbfd94020d0d324.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5307589695063610546" src="/podcast/images/blogger/5c621de71d4a54137742.jpg" style="cursor: pointer; float: left; height: 242px; margin: 0pt 10px 10px 0pt; width: 320px;"></a></div>
 <div style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

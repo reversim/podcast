@@ -15,7 +15,7 @@ legacy_path: /2018/01/332-data-infrastructure-at-juno-with
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/30635a2a817ac7f39164.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="462" data-original-width="822" height="111" src="/images/blogger/9e2de5c61301b9b02b7a.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/30635a2a817ac7f39164.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="462" data-original-width="822" height="111" src="/podcast/images/blogger/9e2de5c61301b9b02b7a.jpg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

@@ -15,7 +15,7 @@ legacy_path: /2013/12/197-final-class-35-continuous
 <div dir="rtl" style="text-align: right;">
 <span id="docs-internal-guid-5c4bd4e6-cee4-09e0-d588-a399e698c102"></span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
+<a href="/podcast/images/blogger/d876d2ff0d785c0a257e.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/2d2e50f03112836b90da.png" width="200"></a></div>
 <div>
 <span style="font-family: Arial;"><span style="font-size: 15px; white-space: pre-wrap;"><br></span></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">

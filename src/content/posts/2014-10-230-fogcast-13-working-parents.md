@@ -13,7 +13,7 @@ legacy_path: /2014/10/230-fogcast-13-working-parents
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="/images/blogger/6d6ed0125cf0fbee4f36.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="195" src="/images/blogger/6d6ed0125cf0fbee4f36.png" width="200"></a></div>
+<a href="/podcast/images/blogger/6d6ed0125cf0fbee4f36.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="195" src="/podcast/images/blogger/6d6ed0125cf0fbee4f36.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 הפעם בפוגקאסט שוחחו רן וליאור על נושא לא טכנולוגי בעליל. איך להיות הורים ולעבוד כמפתחי תכנה?</div>
 <div dir="rtl" style="text-align: right;">

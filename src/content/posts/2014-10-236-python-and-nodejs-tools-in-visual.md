@@ -11,7 +11,7 @@ legacy_path: /2014/10/236-python-and-nodejs-tools-in-visual
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/bf5ded396658c107855d.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/bf5ded396658c107855d.png"></a></div>
+<a href="/podcast/images/blogger/bf5ded396658c107855d.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/podcast/images/blogger/bf5ded396658c107855d.png"></a></div>
 <div dir="rtl" style="text-align: right;">
 הפעם פרק בקטנה, שיחה זריזה עם עדו רן, אורח כמעט קבוע בפודקאסט על כלי פיתוח לפייתון ונוד (NodeJS) בסבחבת ויז׳ואל סטודיו (Visual Studio) המייקרוסופטית.</div>
 <div dir="rtl" style="text-align: right;">

@@ -14,7 +14,7 @@ legacy_path: /2014/05/218-propagator
 <span id="docs-internal-guid-04b8d6eb-24e2-cdc7-3c4c-2d0245ac92ce"></span></div>
 <ul style="margin-bottom: 0pt; margin-top: 0pt;">
 <li dir="rtl" style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; list-style-type: disc; text-decoration: none; vertical-align: baseline;"><div class="separator" style="clear: both; text-align: center;">
-<a href="/images/blogger/69ace2fee80721a83781.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/images/blogger/69ace2fee80721a83781.png" width="197"></a></div>
+<a href="/podcast/images/blogger/69ace2fee80721a83781.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="/podcast/images/blogger/69ace2fee80721a83781.png" width="197"></a></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">אורי ורן מארחים את שלומי מאאוטבריין.</span></div>
 </li>

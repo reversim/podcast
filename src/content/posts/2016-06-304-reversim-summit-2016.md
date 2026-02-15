@@ -13,7 +13,7 @@ legacy_path: /2016/06/304-reversim-summit-2016
 <div dir="rtl" style="text-align: right;">
 בפרק קצר זה אדם ורן מדברים על הכנס הקרב ובא של 2016.</div>
 <div class="separator" dir="rtl" style="clear: both; text-align: center;">
-<a href="/images/blogger/da1ccdbccca3a53946b0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em; text-align: right;"><img border="0" height="93" src="/images/blogger/4580f52a281c81c6d062.png" width="200"></a></div>
+<a href="/podcast/images/blogger/da1ccdbccca3a53946b0.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em; text-align: right;"><img border="0" height="93" src="/podcast/images/blogger/4580f52a281c81c6d062.png" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">
