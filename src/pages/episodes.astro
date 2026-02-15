@@ -3,18 +3,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getAllPosts, getPostPermalink } from '../lib/posts';
 
 const posts = (await getAllPosts()).filter((post) => post.data.audio_url);
+const initialCount = 48;
+const initialPosts = posts.slice(0, initialCount);
+const deferredPosts = posts.slice(initialCount).map((post) => ({
+	permalink: getPostPermalink(post),
+	title: post.data.title,
+	audioUrl: post.data.audio_url,
+	dateLabel: post.data.date.toLocaleDateString('he-IL'),
+	episodeLabel: post.data.episode ? `פרק ${post.data.episode}` : null,
+}));
 ---
 
 <BaseLayout title="פרקים | רברס עם פלטפורמה">
 	<h1 class="section-title">פרקים עם אודיו</h1>
-	<div class="posts-grid">
-		{posts.map((post) => (
-			<article class="post-card">
-				<div class="post-meta">
+	<div id="episodes-grid" class="episodes-grid">
+		{initialPosts.map((post) => (
+			<article class="post-card episode-card">
+				<div class="post-meta episode-meta">
+					{post.data.episode && <span class="episode-number">פרק {post.data.episode}</span>}
 					<span>{post.data.date.toLocaleDateString('he-IL')}</span>
-					{post.data.episode && <span>פרק {post.data.episode}</span>}
 				</div>
-				<h3 dir="auto"><a href={getPostPermalink(post)} dir="auto">{post.data.title}</a></h3>
+				<h3 class="episode-title">
+					<a href={getPostPermalink(post)}>{post.data.title}</a>
+				</h3>
 				{post.data.audio_url && (
 					<div class="audio-player">
 						<audio controls preload="none" src={post.data.audio_url}></audio>
@@ -23,4 +34,79 @@ const posts = (await getAllPosts()).filter((post) => post.data.audio_url);
 			</article>
 		))}
 	</div>
+	{
+		deferredPosts.length > 0 && (
+			<div class="episodes-load-more-wrap">
+				<button id="episodes-load-more" class="episodes-load-more" type="button">
+					טען עוד פרקים
+				</button>
+			</div>
+		)
+	}
+	<script type="application/json" id="episodes-deferred-data" set:html={JSON.stringify(deferredPosts)} />
+	<script is:inline>
+		(() => {
+			const grid = document.getElementById('episodes-grid');
+			const button = document.getElementById('episodes-load-more');
+			const dataNode = document.getElementById('episodes-deferred-data');
+
+			if (!grid || !button || !dataNode) return;
+
+			const remaining = JSON.parse(dataNode.textContent || '[]');
+			const pageSize = 48;
+			let cursor = 0;
+
+			const createEpisodeCard = (episode) => {
+				const article = document.createElement('article');
+				article.className = 'post-card episode-card';
+
+				const meta = document.createElement('div');
+				meta.className = 'post-meta episode-meta';
+				if (episode.episodeLabel) {
+					const ep = document.createElement('span');
+					ep.className = 'episode-number';
+					ep.textContent = episode.episodeLabel;
+					meta.appendChild(ep);
+				}
+				const date = document.createElement('span');
+				date.textContent = episode.dateLabel;
+				meta.appendChild(date);
+				article.appendChild(meta);
+
+				const title = document.createElement('h3');
+				title.className = 'episode-title';
+				const titleLink = document.createElement('a');
+				titleLink.href = episode.permalink;
+				titleLink.textContent = episode.title;
+				title.appendChild(titleLink);
+				article.appendChild(title);
+
+				const playerWrap = document.createElement('div');
+				playerWrap.className = 'audio-player';
+				const audio = document.createElement('audio');
+				audio.controls = true;
+				audio.preload = 'none';
+				audio.src = episode.audioUrl;
+				playerWrap.appendChild(audio);
+				article.appendChild(playerWrap);
+
+				return article;
+			};
+
+			const renderNextBatch = () => {
+				const next = remaining.slice(cursor, cursor + pageSize);
+				if (!next.length) {
+					button.remove();
+					return;
+				}
+				const fragment = document.createDocumentFragment();
+				next.forEach((episode) => fragment.appendChild(createEpisodeCard(episode)));
+				grid.appendChild(fragment);
+				cursor += next.length;
+				if (cursor >= remaining.length) button.remove();
+			};
+
+			button.addEventListener('click', renderNextBatch);
+		})();
+	</script>
 </BaseLayout>
