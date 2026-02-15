@@ -2,7 +2,7 @@
 title: 122 - algo trading
 date: 2011-12-28T21:17:00.000Z
 episode: 122
-audio_url: http://m.reversim.com/reversim122_algotrading.mp3
+audio_url: https://m.reversim.com/reversim122_algotrading.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8eZB_OB1BzIo2yfSsh9biy7kaFID7Ad-Z6rMZ45UNDw-ayXCbmcGiq-9iAPFKVI-ydsD_Smj_PrBItuL8tqj_nrb-fI-ULwK8jhZl9C7nPw3BLwH0ZTvOISM3bEb2l46Jn_bgaABIAM8/s200/money-icon.png
 legacy_url: https://www.reversim.com/2011/12/122-algo-trading.html
 legacy_path: /2011/12/122-algo-trading

@@ -3,7 +3,7 @@ title: "Summit 2017: Look at My Slides! / Uri Nativ"
 date: 2018-03-13T21:42:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Uri_Nativ_-_Look_at_My_Slides.mp3
+audio_url: https://m2.reversim.com/summit2017-Uri_Nativ_-_Look_at_My_Slides.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-look-at-my-slides-uri-nativ.html
 legacy_path: /2018/03/summit-2017-look-at-my-slides-uri-nativ
 ---

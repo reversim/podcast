@@ -2,7 +2,7 @@
 title: 269 Analytics and Big Data with Google Cloud
 date: 2015-07-26T15:02:00.000Z
 episode: 269
-audio_url: http://m.reversim.com/reversim269_cloud-analytics-google.mp3
+audio_url: https://m.reversim.com/reversim269_cloud-analytics-google.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEBD-ouOvqQNwFlhpPbGJiU9GVmclFtL4scfZJkIQ6rbmoSVmWJn3Io9l-baVIX0UdA3gbw9SPUZZP7kIZxIXGF-0YBO0RxW_p8saWKFeEHNSMf3q5u-jkUaHicN5dJRqgEZdrfRvirMM/s200/gcp-logo-3.png
 legacy_url: https://www.reversim.com/2015/07/269-analytics-and-big-data-with-google.html
 legacy_path: /2015/07/269-analytics-and-big-data-with-google

@@ -3,7 +3,7 @@ title: "Summit 2016: How to make a Lisp interpreter in 56 languages / Dov Murik"
 date: 2017-07-29T10:58:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_Lightning_talk_d2_Dov.mp3
+audio_url: https://m2.reversim.com/summit2016_Lightning_talk_d2_Dov.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-how-to-make-lisp.html
 legacy_path: /2017/07/summit-2016-how-to-make-lisp
 ---

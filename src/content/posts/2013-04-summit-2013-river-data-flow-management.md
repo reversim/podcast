@@ -4,7 +4,7 @@ title: "Summit 2013: River - A data flow management infrastructure, by Harel Ben
 date: 2013-04-12T13:33:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_river_data_flow_management_infrastructure.mp3
+audio_url: https://m.reversim.com/summit2013_river_data_flow_management_infrastructure.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-river-data-flow-management.html
 legacy_path: /2013/04/summit-2013-river-data-flow-management
 ---

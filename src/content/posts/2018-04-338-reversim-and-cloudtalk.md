@@ -2,7 +2,7 @@
 title: 338 Reversim and Cloudtalk
 date: 2018-04-26T13:33:00.000Z
 episode: 338
-audio_url: http://m2.reversim.com/reversim338_reversim-and-cloudtalk.mp3
+audio_url: https://m2.reversim.com/reversim338_reversim-and-cloudtalk.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxjS4QZmZkmzBKAjfAVI0ZbJbJa1A1zwv8wo4hT0P0vICM0xQz_9kLjx0I0xABLDh1i5gKXhpr6At1ogqCWG810OC2DATg5wXZM0V3rJ9imiztycc_FU5XzuIkgxtIYYvM8JJi4p6TWmY/s200/logo-transparent_320X94.png
 legacy_url: https://www.reversim.com/2018/04/338-reversim-and-cloudtalk.html
 legacy_path: /2018/04/338-reversim-and-cloudtalk

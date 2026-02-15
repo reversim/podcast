@@ -2,7 +2,7 @@
 title: 272 Cloud vendor series - Mobile Backends with Google Cloud Platform
 date: 2015-08-12T06:47:00.000Z
 episode: 272
-audio_url: http://m.reversim.com/reversim272_cloud-mobile-google.mp3
+audio_url: https://m.reversim.com/reversim272_cloud-mobile-google.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEBD-ouOvqQNwFlhpPbGJiU9GVmclFtL4scfZJkIQ6rbmoSVmWJn3Io9l-baVIX0UdA3gbw9SPUZZP7kIZxIXGF-0YBO0RxW_p8saWKFeEHNSMf3q5u-jkUaHicN5dJRqgEZdrfRvirMM/s200/gcp-logo-3.png
 legacy_url: https://www.reversim.com/2015/08/272-cloud-vendor-series-mobile-backends.html
 legacy_path: /2015/08/272-cloud-vendor-series-mobile-backends

@@ -2,7 +2,7 @@
 title: 362 Elastic, distributed corporate with Uri Cohen
 date: 2019-02-26T21:13:00.000Z
 episode: 362
-audio_url: http://m2.reversim.com/reversim362-elastic.mp3
+audio_url: https://m2.reversim.com/reversim362-elastic.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT9NrNXi8uEsFTEzngw4M_N-ghMvmWiVhENzO2T8gRLs2u_7TQvLvdYsiz_EfNhyphenhyphenBMKqsk67wwgDMwR-ulfrcKrDE0mJb7J8hv3Pw4GMQqOFWamH7dmiWYfXl5oaqEmKrlgKfwthtEh8Y/s200/elastic.png
 legacy_url: https://www.reversim.com/2019/02/362-elastic-distributed-corporate-with.html
 legacy_path: /2019/02/362-elastic-distributed-corporate-with

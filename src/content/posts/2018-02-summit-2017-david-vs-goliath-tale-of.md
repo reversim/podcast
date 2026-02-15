@@ -3,7 +3,7 @@ title: "Summit 2017: A David vs. Goliath Tale of Triumph / Nati Shalom"
 date: 2018-02-13T07:55:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Nati_Shalom_-_A_David_vs._Goliath_Tale_of_Triumph.mp3
+audio_url: https://m2.reversim.com/summit2017-Nati_Shalom_-_A_David_vs._Goliath_Tale_of_Triumph.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-david-vs-goliath-tale-of.html
 legacy_path: /2018/02/summit-2017-david-vs-goliath-tale-of
 ---

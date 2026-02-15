@@ -4,7 +4,7 @@ title: "Summit 2014: Alive and kicking - evolving QA to meet future challenges /
 date: 2014-04-21T21:22:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-alive.mp3
+audio_url: https://m.reversim.com/reversim2014-alive.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-alive-and-kicking-evolving.html
 legacy_path: /2014/04/summit-2014-alive-and-kicking-evolving
 ---

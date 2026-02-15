@@ -4,7 +4,7 @@ title: "Summit 2018: The magic of distributed systems: when it all breaks and
 date: 2018-12-29T19:37:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Holden_Karau.mp3
+audio_url: https://m2.reversim.com/summit2018-Holden_Karau.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-magic-of-distributed.html
 legacy_path: /2018/12/summit-2018-magic-of-distributed
 ---

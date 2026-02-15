@@ -2,7 +2,7 @@
 title: 254 Thunderbolt
 date: 2015-03-18T21:35:00.000Z
 episode: 254
-audio_url: http://m.reversim.com/reversim254_thunderbolt.mp3
+audio_url: https://m.reversim.com/reversim254_thunderbolt.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjGhKzFSk3pyfAZZS9UvOFX1_ZdxScCGVAunKvfeF9ivtFJpqgfRj8LJWRz3WR4eM7q38f26rod7WbE1jRgNj7yzN450LXKT8g1OCbMsB5En8kRZyhRWKkJo8ItzGOFcxqZapoNpa3sc0/s1600/thunderbolt_cable_apple.jpg
 legacy_url: https://www.reversim.com/2015/03/254-thunderbolt.html
 legacy_path: /2015/03/254-thunderbolt

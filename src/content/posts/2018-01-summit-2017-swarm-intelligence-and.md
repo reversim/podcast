@@ -3,7 +3,7 @@ title: "Summit 2017: Swarm Intelligence and Emergent Behavior / Eyal Gruss"
 date: 2018-01-13T17:31:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Eyal_Gruss_-_Swarm_Intelligence_and_Emergent_Behavior.mp3
+audio_url: https://m2.reversim.com/summit2017-Eyal_Gruss_-_Swarm_Intelligence_and_Emergent_Behavior.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-swarm-intelligence-and.html
 legacy_path: /2018/01/summit-2017-swarm-intelligence-and
 ---

@@ -3,7 +3,7 @@ title: "Summit 2013: Introduction to node.js, by Ran Mizrahi"
 date: 2013-04-08T15:10:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_introduction_to_node.js.mp3
+audio_url: https://m.reversim.com/summit2013_introduction_to_node.js.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-introduction-to-nodejs-by.html
 legacy_path: /2013/04/summit-2013-introduction-to-nodejs-by
 ---

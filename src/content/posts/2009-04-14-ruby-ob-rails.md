@@ -5,7 +5,7 @@ tags:
   - פיתוח ממשק משתמש
   - שפות תכנות
 episode: 14
-audio_url: http://m2.reversim.com/reversim14.mp3
+audio_url: https://m2.reversim.com/reversim14.mp3
 legacy_url: https://www.reversim.com/2009/04/14-ruby-ob-rails.html
 legacy_path: /2009/04/14-ruby-ob-rails
 ---

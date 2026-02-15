@@ -2,7 +2,7 @@
 title: 147 BI with Haggai and Erez
 date: 2012-08-25T11:01:00.000Z
 episode: 147
-audio_url: http://m.reversim.com/reversim147_bi3.mp3
+audio_url: https://m.reversim.com/reversim147_bi3.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPkwNA-sUhv3YVqpBtetRUAxVWU9PzWj6YhC8WjOcfceSCIaI5b11JlXVfa4-RoaVi87WE5fDte4CAZ6in8IothKhRsfWoQzPAwBmDWqE-bcvv0-n79g55I9ZBn5kUvABvbYG78NkWJ7g/s200/bi.jpeg
 legacy_url: https://www.reversim.com/2012/08/147-bi-with-haggai-and-erez.html
 legacy_path: /2012/08/147-bi-with-haggai-and-erez

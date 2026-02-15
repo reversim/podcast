@@ -3,7 +3,7 @@ title: "Summit 2018: How I built the fastest graph database on earth / Roi Lipma
 date: 2019-01-19T21:12:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Roi_Lipman.mp3
+audio_url: https://m2.reversim.com/summit2018-Roi_Lipman.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-how-i-built-fastest-graph.html
 legacy_path: /2019/01/summit-2018-how-i-built-fastest-graph
 ---

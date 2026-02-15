@@ -3,7 +3,7 @@ title: "Summit 2018: There is no B2B experience / Shani Brusilovsky"
 date: 2019-01-24T07:29:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Shani_Brusilovsky.mp3
+audio_url: https://m2.reversim.com/summit2018-Shani_Brusilovsky.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-there-is-no-b2b-experience.html
 legacy_path: /2019/01/summit-2018-there-is-no-b2b-experience
 ---

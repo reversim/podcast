@@ -2,7 +2,7 @@
 title: 101 bitorama and nodejs
 date: 2011-05-23T14:50:00.000Z
 episode: 101
-audio_url: http://m.reversim.com/reversim101_node_js_bitorama.mp3
+audio_url: https://m.reversim.com/reversim101_node_js_bitorama.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwTVSkzXl2jThGKbY8pgk5vCdkUWN1jvMVQSBqPa1V1CeqjhRmbBP2-qarBgFNHB8dplnptvlpA2alecrt0UOEFCNRqItm8brL76BkKgRnyhK9Gl98iQYSqdHAMAtqliyLj1kLVx2O2lA/s1600/bitorama.png
 legacy_url: https://www.reversim.com/2011/05/101-bitorama-and-nodejs_23.html
 legacy_path: /2011/05/101-bitorama-and-nodejs_23

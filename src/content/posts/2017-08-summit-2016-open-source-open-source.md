@@ -2,7 +2,7 @@
 title: "Summit 2016: Open Source / Open Source Newbie: An Amazing Story of
   Overcoming Very Minor Obstacles / Eyal Allweil"
 date: 2017-08-21T20:49:00.000Z
-audio_url: http://m2.reversim.com/summit2016_Open_Source_D2_eyal_A.mp3
+audio_url: https://m2.reversim.com/summit2016_Open_Source_D2_eyal_A.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-open-source-open-source.html
 legacy_path: /2017/08/summit-2016-open-source-open-source
 ---

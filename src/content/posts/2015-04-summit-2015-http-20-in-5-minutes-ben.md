@@ -3,7 +3,7 @@ title: "Summit 2015: HTTP 2.0 in 5 minutes / Ben Maraney"
 date: 2015-04-27T20:14:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_ignites_1_Ben_Maraney.mp3
+audio_url: https://m.reversim.com/summit2015_ignites_1_Ben_Maraney.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-http-20-in-5-minutes-ben.html
 legacy_path: /2015/04/summit-2015-http-20-in-5-minutes-ben
 ---

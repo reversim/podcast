@@ -4,7 +4,7 @@ title: "Summit 2018: How I Built Klarna's Experimentation System, and a LISP /
 date: 2018-12-22T21:41:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Dotan_Nahum.mp3
+audio_url: https://m2.reversim.com/summit2018-Dotan_Nahum.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-how-i-built-klarnas.html
 legacy_path: /2018/12/summit-2018-how-i-built-klarnas
 ---

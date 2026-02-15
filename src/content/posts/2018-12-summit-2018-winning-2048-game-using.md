@@ -4,7 +4,7 @@ title: "Summit 2018: Winning 2048 Game Using Deep Reinforcement Learning / Eyal
 date: 2018-12-22T21:49:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Eyal_Altshuler.mp3
+audio_url: https://m2.reversim.com/summit2018-Eyal_Altshuler.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-winning-2048-game-using.html
 legacy_path: /2018/12/summit-2018-winning-2048-game-using
 ---

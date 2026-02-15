@@ -2,7 +2,7 @@
 title: 413 GitOps with Yaron from Soluto
 date: 2021-07-17T19:18:00.000Z
 episode: 413
-audio_url: http://m.reversim.com/reversim131_uijet.mp3
+audio_url: https://m.reversim.com/reversim131_uijet.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_pyAqIC4jzSa744JhKExkll8NnUv8pp77FCm_g9nMYCdIvSrjSqh1baHbLcKLH93xNwnYSzs5FKQJUEy6PdQSF6nBAXZGLXpf2UntwAI61VX2HqYdwHsvzZXjFbTnMXlsenA7uR229yo/w200-h200/image.png
 legacy_url: https://www.reversim.com/2021/07/413-gitops-with-yaron-from-soluto.html
 legacy_path: /2021/07/413-gitops-with-yaron-from-soluto

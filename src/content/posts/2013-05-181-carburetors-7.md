@@ -6,7 +6,7 @@ tags:
   - cloud technologies
   - openstack
 episode: 181
-audio_url: http://m.reversim.com/reversim181_carburetors_7.mp3
+audio_url: https://m.reversim.com/reversim181_carburetors_7.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tc0vEoB1rHpBv2g4Y9e1EofeiOFcb-ydAjNwktPwPw-QdwDcCAG-BbeZuCSAfH6M_3n9EH45hdejzXSVO_shaK9vbOVWS1J8p1L1Ekj5esFo5qwNS_gY13fm0rmLW0SIb-P2juG-nPCMtU_0MqVE4giON_IPU7pjOqUUMyKLb6vr1NVSofvMljoPdH5Gs7O4lGuvg-2Rtccf2YbAFON3dYuKD-CDaa6VhuuTSh48b8Hw=s0-d
 legacy_url: https://www.reversim.com/2013/05/181-carburetors-7.html
 legacy_path: /2013/05/181-carburetors-7

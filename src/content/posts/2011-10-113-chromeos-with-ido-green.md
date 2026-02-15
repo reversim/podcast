@@ -2,7 +2,7 @@
 title: 113 ChromeOS with Ido Green
 date: 2011-10-29T21:14:00.000Z
 episode: 113
-audio_url: http://m.reversim.com/reversim113_chorme_os_ido_green.mp3
+audio_url: https://m.reversim.com/reversim113_chorme_os_ido_green.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivMo6IJ5SlTyOYipCluA2XphuKjEmQetF1N5eCHt9jmOrLs0NsIHpukbrKqRr8I9_mS5kv4er9rWBRlK5F44XzbKtKuAkWisqgKZ9j9lM7PpZhUahlr4ojDW-tcOeuAYjOmg0yWlqQGxo/s200/acer-chrome-os.jpg
 legacy_url: https://www.reversim.com/2011/10/113-chromeos-with-ido-green.html
 legacy_path: /2011/10/113-chromeos-with-ido-green

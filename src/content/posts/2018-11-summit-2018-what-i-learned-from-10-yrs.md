@@ -4,7 +4,7 @@ title: 'Summit 2018: What I learned from 10 Yrs of "playing" with Neuroevolution
 date: 2018-11-25T17:47:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Al_Yaros.mp3
+audio_url: https://m2.reversim.com/summit2018-Al_Yaros.mp3
 legacy_url: https://www.reversim.com/2018/11/summit-2018-what-i-learned-from-10-yrs.html
 legacy_path: /2018/11/summit-2018-what-i-learned-from-10-yrs
 ---

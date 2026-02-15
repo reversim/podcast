@@ -4,7 +4,7 @@ title: "Summit 2018: Progressive Web Applications and an Offline First Mentality
 date: 2019-01-12T20:11:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Omer_Goldberg.mp3
+audio_url: https://m2.reversim.com/summit2018-Omer_Goldberg.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-progressive-web.html
 legacy_path: /2019/01/summit-2018-progressive-web
 ---

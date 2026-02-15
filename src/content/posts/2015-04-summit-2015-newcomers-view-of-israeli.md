@@ -4,7 +4,7 @@ title: "Summit 2015: A newcomer's view of the Israeli Video Games industry /
 date: 2015-04-27T20:12:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_ignites_1_Oded_Magger.mp3
+audio_url: https://m.reversim.com/summit2015_ignites_1_Oded_Magger.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-newcomers-view-of-israeli.html
 legacy_path: /2015/04/summit-2015-newcomers-view-of-israeli
 ---

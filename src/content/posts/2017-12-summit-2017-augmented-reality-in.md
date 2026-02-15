@@ -3,7 +3,7 @@ title: "Summit 2017: Augmented Reality in Reality / Bar Fingerman"
 date: 2017-12-16T22:47:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Bar_Fingerman_-_Augmented_Reality_in_Reality.mp3
+audio_url: https://m2.reversim.com/summit2017-Bar_Fingerman_-_Augmented_Reality_in_Reality.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-augmented-reality-in.html
 legacy_path: /2017/12/summit-2017-augmented-reality-in
 ---

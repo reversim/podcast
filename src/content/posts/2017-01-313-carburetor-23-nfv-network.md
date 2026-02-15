@@ -4,7 +4,7 @@ date: 2017-01-05T21:40:00.000Z
 tags:
   - carburetor
 episode: 313
-audio_url: http://m2.reversim.com/reversim313_carburetor23.mp3
+audio_url: https://m2.reversim.com/reversim313_carburetor23.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0SGhybPtbi77FIxekLzCrZLDYPm_pIT42hEYATtBuJ3oRgGHY5yyOQIcXzF4H-QR-_AcuUiCPNf3OIBMQkEbZj11IPFAO3wfD0DsP3ZbETO4LUxGKLpvQuW-ydwEbL8_qRgQf79r-Juc/s200/Screen+Shot+2017-01-05+at+23.41.50.png
 legacy_url: https://www.reversim.com/2017/01/313-carburetor-23-nfv-network.html
 legacy_path: /2017/01/313-carburetor-23-nfv-network

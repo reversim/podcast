@@ -3,7 +3,7 @@ title: "Summit 2016: Cloud Patterns / Tamir Dresher"
 date: 2017-08-19T20:06:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_TAMIR_DRESHER.mp3
+audio_url: https://m2.reversim.com/summit2016_TAMIR_DRESHER.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-cloud-patterns-tamir-dresher.html
 legacy_path: /2017/08/summit-2016-cloud-patterns-tamir-dresher
 ---

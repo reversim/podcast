@@ -3,7 +3,7 @@ title: "Summi2015: Refactoring of Legacy Code / Avi Etzioni"
 date: 2015-04-11T20:27:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Refactoring_of_Legacy_Code.mp3
+audio_url: https://m.reversim.com/summit2015_Refactoring_of_Legacy_Code.mp3
 legacy_url: https://www.reversim.com/2015/04/refactoring-legacy-code-avi-etzioni.html
 legacy_path: /2015/04/refactoring-legacy-code-avi-etzioni
 ---

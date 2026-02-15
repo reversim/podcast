@@ -2,7 +2,7 @@
 title: 296 NLP with Yoav Goldberg
 date: 2016-04-17T21:32:00.000Z
 episode: 296
-audio_url: http://m2.reversim.com/reversim296_nlp-yoav-goldberg.mp3
+audio_url: https://m2.reversim.com/reversim296_nlp-yoav-goldberg.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqLte-duAQj9_Ycw_PZOfP5v-nTfBKaeSnyEzyfpBF_WNh7iNhM6dhqcoOQ7EzWsy0kxLgkQxHG2CBNUAtLe5BW31LGcQnXI0ZW6n1EFMFFQfjRfMu-14Zh8HHIcVd9JDzY2ijuPr8GMs/s200/COC-NLP-Reframing.jpg
 legacy_url: https://www.reversim.com/2016/04/296-nlp-with-yoav-goldberg.html
 legacy_path: /2016/04/296-nlp-with-yoav-goldberg

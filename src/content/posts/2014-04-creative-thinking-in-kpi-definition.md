@@ -3,7 +3,7 @@ title: "Summit 2014: Creative Thinking in KPI Definition / Danya Swartz"
 date: 2014-04-12T11:44:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-KPI-definitions.mp3
+audio_url: https://m.reversim.com/reversim2014-KPI-definitions.mp3
 legacy_url: https://www.reversim.com/2014/04/creative-thinking-in-kpi-definition.html
 legacy_path: /2014/04/creative-thinking-in-kpi-definition
 ---

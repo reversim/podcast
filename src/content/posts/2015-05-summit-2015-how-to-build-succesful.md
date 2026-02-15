@@ -3,7 +3,7 @@ title: "Summit 2015: How to build a succesful opensource community / Ohad Levy"
 date: 2015-05-02T20:26:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/open-source-How-to-build-a-succesful-opensource-community-Ohad-Levy.mp3
+audio_url: https://m.reversim.com/open-source-How-to-build-a-succesful-opensource-community-Ohad-Levy.mp3
 legacy_url: https://www.reversim.com/2015/05/summit-2015-how-to-build-succesful.html
 legacy_path: /2015/05/summit-2015-how-to-build-succesful
 ---

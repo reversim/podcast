@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: Ja-WAT? / ALLON MUREINIK"
 date: 2017-09-01T18:09:00.000Z
-audio_url: http://m2.reversim.com/summit2016_Lightning_talk_d2_Allon_M.mp3
+audio_url: https://m2.reversim.com/summit2016_Lightning_talk_d2_Allon_M.mp3
 legacy_url: https://www.reversim.com/2017/09/summit-2016-ja-wat-allon-mureinik.html
 legacy_path: /2017/09/summit-2016-ja-wat-allon-mureinik
 ---

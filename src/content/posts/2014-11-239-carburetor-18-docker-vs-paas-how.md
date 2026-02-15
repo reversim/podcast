@@ -4,7 +4,7 @@ date: 2014-11-17T13:39:00.000Z
 tags:
   - carburetor
 episode: 239
-audio_url: http://m.reversim.com/reversim239_carburetor18.mp3
+audio_url: https://m.reversim.com/reversim239_carburetor18.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRGxhmrezf95wbjw3ao3cCyKUPbRB1MtHJe7KUWwlxY37nwp5m9cVrpU5lpq8Ii7OF5AsS7cMS4Fj_0zdTJD9cCFtX3j9HvwXa7MrVgcbHjiErro9WxjjPuTk3-Q7QvTxdDU-aVgz63Zs/s1600/gcp.png
 legacy_url: https://www.reversim.com/2014/11/239-carburetor-18-docker-vs-paas-how.html
 legacy_path: /2014/11/239-carburetor-18-docker-vs-paas-how

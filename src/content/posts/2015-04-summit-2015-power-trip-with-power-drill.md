@@ -4,7 +4,7 @@ title: "Summit 2015: Power Trip with a Power Drill - Monitoring distributed
 date: 2015-04-25T20:21:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Power_Trip_with_a_Power_Drill_-_Monitoring_distributed_systems_with_Riemann.mp3
+audio_url: https://m.reversim.com/summit2015_Power_Trip_with_a_Power_Drill_-_Monitoring_distributed_systems_with_Riemann.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-power-trip-with-power-drill.html
 legacy_path: /2015/04/summit-2015-power-trip-with-power-drill
 ---

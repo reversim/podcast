@@ -2,7 +2,7 @@
 title: 129 Backbone.js
 date: 2012-03-15T07:10:00.000Z
 episode: 129
-audio_url: http://m.reversim.com/reversim129_backbonejs.mp3
+audio_url: https://m.reversim.com/reversim129_backbonejs.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoDPOQSSDT4FnoJkd7TKnD8TYnZt0WPBKfiS_UqaDzkhIaCvCmiU1EVWkHTHdRiYc0sxvP2oID4n-smwHgQ74YsUh_nqsE1nZwtB4n-qtCSy4HqBUPXv76GWqkTIgQ4Axo5gP8052i0Vo/s200/backbone.png
 legacy_url: https://www.reversim.com/2012/03/129-backbonejs.html
 legacy_path: /2012/03/129-backbonejs

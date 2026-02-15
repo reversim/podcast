@@ -4,7 +4,7 @@ title: "Summit 2018: To DB or not to DB, or, Why Databases are like Religions /
 date: 2018-11-25T18:39:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Amit_Lichtenberg.mp3
+audio_url: https://m2.reversim.com/summit2018-Amit_Lichtenberg.mp3
 legacy_url: https://www.reversim.com/2018/11/summit-2018-to-db-or-not-to-db-or-why.html
 legacy_path: /2018/11/summit-2018-to-db-or-not-to-db-or-why
 ---

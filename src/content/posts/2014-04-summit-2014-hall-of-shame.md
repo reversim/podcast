@@ -3,7 +3,7 @@ title: "Summit 2014: The Hall of Shame"
 date: 2014-04-30T05:49:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-shame.mp3
+audio_url: https://m.reversim.com/reversim2014-shame.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgJl9m_gIrcEAPXlOS5p6bVqVR0bVwhuAR2nshojFAHVFVuFQCU96gAdWcsUPMw6dOMefz0rEeTLhduE_oQ4b-Ni2sc4VNpaTT2HXDrvfpMT2LXpVbWNVH-SgESU3b9a0NCPWs2rBlUzs/s1600/Hall+of+Shame.png
 legacy_url: https://www.reversim.com/2014/04/summit-2014-hall-of-shame.html
 legacy_path: /2014/04/summit-2014-hall-of-shame

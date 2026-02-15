@@ -3,7 +3,7 @@ title: "Summit 2018: Feature, we need to talk / Gil Vind"
 date: 2018-12-25T08:10:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Gil_Vind.mp3
+audio_url: https://m2.reversim.com/summit2018-Gil_Vind.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-feature-we-need-to-talk-gil.html
 legacy_path: /2018/12/summit-2018-feature-we-need-to-talk-gil
 ---

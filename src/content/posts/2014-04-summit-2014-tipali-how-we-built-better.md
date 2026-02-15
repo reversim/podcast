@@ -5,7 +5,7 @@ title: "Summit 2014: Tipa.li - how we built a better Open Source alternative to
 date: 2014-04-17T13:08:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-oss-tipali.mp3
+audio_url: https://m.reversim.com/reversim2014-oss-tipali.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-tipali-how-we-built-better.html
 legacy_path: /2014/04/summit-2014-tipali-how-we-built-better
 ---

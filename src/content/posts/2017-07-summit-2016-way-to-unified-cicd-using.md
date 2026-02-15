@@ -3,7 +3,7 @@ title: "Summit 2016: The way to unified CI/CD using Ansible / Hadar Davidovich"
 date: 2017-07-29T11:29:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_HADAR_DAVIDOVICH.mp3
+audio_url: https://m2.reversim.com/summit2016_HADAR_DAVIDOVICH.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-way-to-unified-cicd-using.html
 legacy_path: /2017/07/summit-2016-way-to-unified-cicd-using
 ---

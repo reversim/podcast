@@ -4,7 +4,7 @@ date: 2012-11-12T19:19:00.000Z
 tags:
   - finalclass
 episode: 153
-audio_url: http://m.reversim.com/reversim153_finalclass24.mp3
+audio_url: https://m.reversim.com/reversim153_finalclass24.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipNhs9STsHtyh_AObufne1vOoaHJHxgi5nnLqZPIaaxjezGA6NabKTOMSdueDQjmWxUOQuZNxhoRXCfKSlNTURuFtPK8i7AhBFCT9wfCNAmPrcVOjxYBSQXfN0fbV2GjH3_pSfmkXz06o/s200/radar+screen.jpg
 legacy_url: https://www.reversim.com/2012/11/153-final-class-24-thoughworks-radar.html
 legacy_path: /2012/11/153-final-class-24-thoughworks-radar

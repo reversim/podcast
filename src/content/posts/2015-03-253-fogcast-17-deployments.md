@@ -4,7 +4,7 @@ date: 2015-03-16T07:50:00.000Z
 tags:
   - fogcast
 episode: 253
-audio_url: http://m.reversim.com/reversim253_fogcast17-deployments.mp3
+audio_url: https://m.reversim.com/reversim253_fogcast17-deployments.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEis-qd85kyvGVeY_-eaadOZd_wlIfdTmwoVC-IE15v4QR7vw060b1f5pv9KXvBmOmo82X9oK0HVrxtPaXTnm4bjfpC72o-jO8VtKeWZMJsYMPE4zddVhXsFNDi_8KSY7JWZA8PSwoPvTd4/s1600/US_Navy_030524-N-1352S-006_ATF-West_deployed_from_San_Diego_January_17,_transporting_Marines_and_their_gear_to_Kuwait_for_further_deployment_into_Iraq.jpg
 legacy_url: https://www.reversim.com/2015/03/253-fogcast-17-deployments.html
 legacy_path: /2015/03/253-fogcast-17-deployments

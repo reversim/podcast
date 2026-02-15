@@ -3,7 +3,7 @@ title: "Summit 2018: When S.O.L.I.D met front-end components / Shiri Haim"
 date: 2019-01-24T07:32:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Shiri_Haim.mp3
+audio_url: https://m2.reversim.com/summit2018-Shiri_Haim.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-when-solid-met-front-end.html
 legacy_path: /2019/01/summit-2018-when-solid-met-front-end
 ---

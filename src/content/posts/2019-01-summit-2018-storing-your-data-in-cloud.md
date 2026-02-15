@@ -3,7 +3,7 @@ title: "Summit 2018: Storing your data in the cloud: doing it right / Orit Wasse
 date: 2019-01-14T17:14:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Orit_Wasserman.mp3
+audio_url: https://m2.reversim.com/summit2018-Orit_Wasserman.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-storing-your-data-in-cloud.html
 legacy_path: /2019/01/summit-2018-storing-your-data-in-cloud
 ---

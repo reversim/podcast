@@ -3,7 +3,7 @@ title: "Summit 2017: Chaos Drills FTW - Introducing GomJabbar / Eran Harel"
 date: 2018-01-11T12:55:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Eran_Harel_-_Chaos_Drills_FTW_-_Introducing_GomJabbar.mp3
+audio_url: https://m2.reversim.com/summit2017-Eran_Harel_-_Chaos_Drills_FTW_-_Introducing_GomJabbar.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-chaos-drills-ftw.html
 legacy_path: /2018/01/summit-2017-chaos-drills-ftw
 ---

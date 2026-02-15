@@ -3,7 +3,7 @@ title: "Summit 2014: Taboola's experience with Apache Spark / Tal Sliwowicz"
 date: 2014-04-21T20:55:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-Spark.mp3
+audio_url: https://m.reversim.com/reversim2014-Spark.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-taboolas-experience-with.html
 legacy_path: /2014/04/summit-2014-taboolas-experience-with
 ---

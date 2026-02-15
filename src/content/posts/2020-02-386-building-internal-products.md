@@ -2,7 +2,7 @@
 title: 386 Building internal products
 date: 2020-02-24T20:40:00.000Z
 episode: 386
-audio_url: http://m2.reversim.com/reversim386_internal-products.mp3
+audio_url: https://m2.reversim.com/reversim386_internal-products.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdmbXynPboNWq2jQ68kb_XKhrvsSt-xAAcbzp9MDGma1wc9-pUTQMkhCSuRZEmVLFL52ppZZyTYVAk3wC90znCcu0-egg1l_3vZqskeCfHf-cLsveWpIipT8PgsgWbKKbZcauY5hag9Xk/s200/ni.jpeg
 legacy_url: https://www.reversim.com/2020/02/386-building-internal-products.html
 legacy_path: /2020/02/386-building-internal-products

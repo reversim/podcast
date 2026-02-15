@@ -3,7 +3,7 @@ title: "Summit 2015: Experimenting on Humans - Advanced A/B Testing / Talya Gend
 date: 2015-04-16T19:57:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Experimenting_on_Humans_-_Advanced_A-B_Testing.mp3
+audio_url: https://m.reversim.com/summit2015_Experimenting_on_Humans_-_Advanced_A-B_Testing.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-experimenting-on-humans.html
 legacy_path: /2015/04/summit-2015-experimenting-on-humans
 ---

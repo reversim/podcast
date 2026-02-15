@@ -4,7 +4,7 @@ date: 2009-03-10T20:37:00.000Z
 tags:
   - חברות עם סיפור טכנולוגי מעניין
 episode: 10
-audio_url: http://m2.reversim.com/reversim10.3.mp3
+audio_url: https://m2.reversim.com/reversim10.3.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqcZ0vtcQWTPDn8Dz2hxTFvglfHHfpAFVXRWMl3FghBqy-azbi9g-7m7lcsMSMKMeA7VkTSl0HeUJv9r7Ieq-Nj6fEl3vNBpgSBV90ua3bIQJRaTHs-2KsWa-ojk2t2MVvkJse8ZVJ_Zl7/s320/sundaysky_logo_big-300x201.jpg
 legacy_url: https://www.reversim.com/2009/03/10-sundaysky.html
 legacy_path: /2009/03/10-sundaysky

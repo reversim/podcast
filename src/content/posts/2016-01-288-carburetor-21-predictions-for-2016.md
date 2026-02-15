@@ -2,7 +2,7 @@
 title: "288 Carburetor 21: Predictions for 2016"
 date: 2016-01-11T20:50:00.000Z
 episode: 288
-audio_url: http://m2.reversim.com/reversim288-Carburetor_21.mp3
+audio_url: https://m2.reversim.com/reversim288-Carburetor_21.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipcB4OhX8cNsctDWRfWs9My92wYPsbAZON5zqu3TKADDl2zD6I0jsbFuCKV4TbDY1h7Sq_LwgKxBQBv951NcVfqkhxioT-uHN6Bf4pC0Y-7Kyv4ukZqAKopd0v8l3qCltJ1XXMpxe2Vgg/s200/Unknown3.png
 legacy_url: https://www.reversim.com/2016/01/288-carburetor-21-predictions-for-2016.html
 legacy_path: /2016/01/288-carburetor-21-predictions-for-2016

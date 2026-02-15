@@ -2,7 +2,7 @@
 title: "Summit 2016: Functional Programming Paradigms in Software Architecture /
   Nir Rubinstein"
 date: 2017-08-26T19:40:00.000Z
-audio_url: http://m2.reversim.com/summit2016_NIR_RUBINSTEIN.mp3
+audio_url: https://m2.reversim.com/summit2016_NIR_RUBINSTEIN.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-functional-programming.html
 legacy_path: /2017/08/summit-2016-functional-programming
 ---

@@ -3,7 +3,7 @@ title: "Summit 2018: How to Find Growth Material & Learn x2 Faster / Oren Ellenb
 date: 2019-01-12T20:15:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Oren_Ellenbogen.mp3
+audio_url: https://m2.reversim.com/summit2018-Oren_Ellenbogen.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-how-to-find-growth-material.html
 legacy_path: /2019/01/summit-2018-how-to-find-growth-material
 ---

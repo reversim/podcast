@@ -4,7 +4,7 @@ title: "Summit 2016: 10 Real problems and solutions for your Build & Deploy
 date: 2017-07-31T19:34:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_ARIEL_M_MOSKOVICH.mp3
+audio_url: https://m2.reversim.com/summit2016_ARIEL_M_MOSKOVICH.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-10-real-problems-and.html
 legacy_path: /2017/07/summit-2016-10-real-problems-and
 ---

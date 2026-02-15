@@ -2,7 +2,7 @@
 title: 349 WhiteSource
 date: 2018-09-01T11:19:00.000Z
 episode: 349
-audio_url: http://m2.reversim.com/reversim349-whitesource.mp3
+audio_url: https://m2.reversim.com/reversim349-whitesource.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh80uvf4XkL-POqL7ZuoU6j3l-It7ARfRd_VU97tC00dzYl-J8GNVRgJPsx9d87zrlrKGJ5hQbfip-49pOo3EQMFUgg7NqBbYGDClJDtAnpT02lMX7lwRAJ48NShRvxpwSLC7aOOkRh06U/s200/whitesource_logo_rgb-02.png
 legacy_url: https://www.reversim.com/2018/09/349-whitesource.html
 legacy_path: /2018/09/349-whitesource

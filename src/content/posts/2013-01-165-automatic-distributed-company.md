@@ -2,7 +2,7 @@
 title: 165 Automattic, the distributed company
 date: 2013-01-17T22:12:00.000Z
 episode: 165
-audio_url: http://m.reversim.com/reversim165_automatic.mp3
+audio_url: https://m.reversim.com/reversim165_automatic.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKB5hi7oou76Vk1Nml5FdcZtHVYv82U7fCBTLVN6Esh2ZwvuU3-vBCiZsKo9DaYfhZKMvMJKOmj5H00Ams95c_h8JgbXTKIh1FfZ5T4_lel1WwquwJEOwwuZsylVuxFITsTdluPQsmiCM/s200/wordpress-logo-stacked-rgb.png
 legacy_url: https://www.reversim.com/2013/01/165-automatic-distributed-company.html
 legacy_path: /2013/01/165-automatic-distributed-company

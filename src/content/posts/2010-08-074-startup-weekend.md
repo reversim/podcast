@@ -2,7 +2,7 @@
 title: 074 Startup Weekend
 date: 2010-08-08T09:16:00.000Z
 episode: 74
-audio_url: http://m.reversim.com/reversim74_swtlv.mp3
+audio_url: https://m.reversim.com/reversim74_swtlv.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjavkNJGPXSFr9muPWEkCNWG_Ah8vaRXNDQTNGfeeO1C2W59wd3UJ5TTl8e5n50-fou5Qx_die8D6QuL3yRFfnS8ZkdmryLVNdomyMEW9uSwkT-U0uw6suwywc7KPYbW48MwMWnPZPzpIk/s320/Tel-Aviv+Startup+Weekend.png
 legacy_url: https://www.reversim.com/2010/08/074-startup-weekend.html
 legacy_path: /2010/08/074-startup-weekend

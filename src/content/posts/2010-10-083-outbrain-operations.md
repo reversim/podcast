@@ -2,7 +2,7 @@
 title: 083 Outbrain Operations
 date: 2010-10-19T21:24:00.000Z
 episode: 83
-audio_url: http://m.reversim.com/reversim83_outbrain_ops.mp3
+audio_url: https://m.reversim.com/reversim83_outbrain_ops.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_thk99OEOUm6TcFp1Njncj6co2c1Eg167dAfIzvxMeh3zOpwbDY2eGRcKgv3LI4U-XHQVPnKcAvRkQg8jPw01RuBOar07LDT-GZmtIUY5nLHmyxNA=s0-d
 legacy_url: https://www.reversim.com/2010/10/083-outbrain-operations.html
 legacy_path: /2010/10/083-outbrain-operations

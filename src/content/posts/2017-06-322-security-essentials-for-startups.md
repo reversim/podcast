@@ -2,7 +2,7 @@
 title: 322 Security essentials for startups
 date: 2017-06-05T18:33:00.000Z
 episode: 322
-audio_url: http://m2.reversim.com/reversim322_security-essentials-for-startups.mp3
+audio_url: https://m2.reversim.com/reversim322_security-essentials-for-startups.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTeXDOnHBmt4pJBEtvlzCOBtXuY-WN8dZ4dQD0ZzhDRpmL_L9rfOyUOBB5DhbuaHl92ZZaGK7kZjoj6zUYuE00Lx1Pa6kw8xCMg9ftMb4NzDvvnc4mfK-REEgyKFP6vQk419Z7bIgx3iI/s200/security-shield-lock-512.png
 legacy_url: https://www.reversim.com/2017/06/322-security-essentials-for-startups.html
 legacy_path: /2017/06/322-security-essentials-for-startups

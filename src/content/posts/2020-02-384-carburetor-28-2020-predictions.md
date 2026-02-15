@@ -4,7 +4,7 @@ date: 2020-02-09T21:14:00.000Z
 tags:
   - carburetor
 episode: 384
-audio_url: http://m2.reversim.com/reversim384_carburetor28.mp3
+audio_url: https://m2.reversim.com/reversim384_carburetor28.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJiKgbVJRuK4xmIyOcZm5EfkjesysmxMYibNhBoTyhykcfTchPRkIKAHnyfrDIG5eJKuXCEyocvcEutIWuhStQPtl0QgGkVWLPD0MkxkRmfu86ae8swio8dq8P-IP5CSegaNnEmcRGhMo/s200/636ei4mb__w643h402q95.jpg
 legacy_url: https://www.reversim.com/2020/02/384-carburetor-28-2020-predictions.html
 legacy_path: /2020/02/384-carburetor-28-2020-predictions

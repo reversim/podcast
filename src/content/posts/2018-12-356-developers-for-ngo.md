@@ -2,7 +2,7 @@
 title: 356 Developers for NGO
 date: 2018-12-18T13:52:00.000Z
 episode: 356
-audio_url: http://m2.reversim.com/reversim356_Developers-for-NGO.mp3
+audio_url: https://m2.reversim.com/reversim356_Developers-for-NGO.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpbG6pD_nN1DDbOukF1kmRyo_6raXqffvBMKSfrHYMkl_-5yFBDqbqVuKVNme0KmnkO8Za5dqVI-m7APfiO-nv8h9Ank17nqXTOkAbP-0T0gbBX8zFLfH1fxZFIfDPmyvql3LWdRJ2F-c/s200/goodness.jpg
 legacy_url: https://www.reversim.com/2018/12/356-developers-for-ngo.html
 legacy_path: /2018/12/356-developers-for-ngo

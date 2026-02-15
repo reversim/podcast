@@ -6,7 +6,7 @@ tags:
   - תשתיות נתונים
   - scalability
 episode: 32
-audio_url: http://m2.reversim.com/reversim13.mp3
+audio_url: https://m2.reversim.com/reversim13.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuAGEfpEU57_DJiAiM9gtxvo26VANFqeVviXLAP_hkY8URlxJcxvho6mzOU6BZXDKDU-JWwMD6CiVH8rJ8MGveh7WpNwCMUH0QhqUKdzMwU39IS_5GiPb4s1HFj4br6SY97hclrG4r8Uw/s320/scalability.jpg
 legacy_url: https://www.reversim.com/2009/04/32-scalability.html
 legacy_path: /2009/04/32-scalability

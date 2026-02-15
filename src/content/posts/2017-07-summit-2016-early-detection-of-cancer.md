@@ -4,7 +4,7 @@ title: "Summit 2016: Early Detection of Cancer: Using NLP Classifiers to Analyze
 date: 2017-07-23T20:53:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_Limor_Lahiani.mp3
+audio_url: https://m2.reversim.com/summit2016_Limor_Lahiani.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-early-detection-of-cancer.html
 legacy_path: /2017/07/summit-2016-early-detection-of-cancer
 ---

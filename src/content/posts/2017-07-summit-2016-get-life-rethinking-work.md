@@ -3,7 +3,7 @@ title: "Summit 2016: Get a life - Rethinking work life balance / Michal Brosh"
 date: 2017-07-24T21:02:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_Lightning_talk_d2_Michal_B.mp3
+audio_url: https://m2.reversim.com/summit2016_Lightning_talk_d2_Michal_B.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-get-life-rethinking-work.html
 legacy_path: /2017/07/summit-2016-get-life-rethinking-work
 ---

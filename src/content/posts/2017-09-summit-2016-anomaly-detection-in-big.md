@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: Anomaly detection in big data sets / David Gruzman"
 date: 2017-09-06T20:52:00.000Z
-audio_url: http://m2.reversim.com/summit2016_David_Gruzman.mp3
+audio_url: https://m2.reversim.com/summit2016_David_Gruzman.mp3
 legacy_url: https://www.reversim.com/2017/09/summit-2016-anomaly-detection-in-big.html
 legacy_path: /2017/09/summit-2016-anomaly-detection-in-big
 ---

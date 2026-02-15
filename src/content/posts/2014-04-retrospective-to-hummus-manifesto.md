@@ -3,7 +3,7 @@ title: "Summit 2014: Retrospective to the Hummus Manifesto / Michael Eisenberg"
 date: 2014-04-12T11:49:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-Manifesto.mp3
+audio_url: https://m.reversim.com/reversim2014-Manifesto.mp3
 legacy_url: https://www.reversim.com/2014/04/retrospective-to-hummus-manifesto.html
 legacy_path: /2014/04/retrospective-to-hummus-manifesto
 ---

@@ -3,7 +3,7 @@ title: "Summit 2016: How I learned to speak Vulcan / Michal Tirosh"
 date: 2017-09-17T22:21:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_MICHAL_TIROSH.mp3
+audio_url: https://m2.reversim.com/summit2016_MICHAL_TIROSH.mp3
 legacy_url: https://www.reversim.com/2017/09/summit-2016-how-i-learned-to-speak.html
 legacy_path: /2017/09/summit-2016-how-i-learned-to-speak
 ---

@@ -4,7 +4,7 @@ date: 2012-12-10T22:21:00.000Z
 tags:
   - finalclass
 episode: 157
-audio_url: http://m.reversim.com/reversim157_finalclass25.mp3
+audio_url: https://m.reversim.com/reversim157_finalclass25.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7qhMcLOnt6OwYGY7g04dwgTQ67Ibl0GhBsI29qXj6cyjR_jEepxTVJm0NIiyH-2LKD0kKZjy-vLSo0Nh3C7lQqYomIAGuBOD2NV38T1V7HhbQhqZ5DhE-rLyNeWXRo-VfCMSxzE15qDw/s200/clrtest.gif
 legacy_url: https://www.reversim.com/2012/12/157-final-class-25-automated-testing.html
 legacy_path: /2012/12/157-final-class-25-automated-testing

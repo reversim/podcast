@@ -3,7 +3,7 @@ title: "Summit 2017: The Performance Investigator's Field Guide / Sasha Goldshte
 date: 2018-03-03T20:51:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Sasha_Goldshtein_-_The_Performance_Investigators_Field_Guide.mp3
+audio_url: https://m2.reversim.com/summit2017-Sasha_Goldshtein_-_The_Performance_Investigators_Field_Guide.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-performance-investigators.html
 legacy_path: /2018/03/summit-2017-performance-investigators
 ---

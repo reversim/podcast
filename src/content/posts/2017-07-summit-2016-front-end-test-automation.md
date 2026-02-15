@@ -3,7 +3,7 @@ title: "Summit 2016: Front End Test Automation: past, present and future / Oren 
 date: 2017-07-18T06:40:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_OREN_RUBIN.mp3
+audio_url: https://m2.reversim.com/summit2016_OREN_RUBIN.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-front-end-test-automation.html
 legacy_path: /2017/07/summit-2016-front-end-test-automation
 ---

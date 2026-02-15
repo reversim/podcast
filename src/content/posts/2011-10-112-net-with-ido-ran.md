@@ -2,7 +2,7 @@
 title: 112 .net with Ido Ran
 date: 2011-10-19T08:51:00.000Z
 episode: 112
-audio_url: http://m.reversim.com/reversim112_ido_ran.mp3
+audio_url: https://m.reversim.com/reversim112_ido_ran.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjN3bf9ek7ouWXTSpJEWDqb6FpbDh7Lbd_AYXCKLYCHvSH3gEHU_YW4gW0F4MQ1v1TW8hLrhTvCNEBT_6Mbi_8mRLvsxNoI3TNbYDqoavx-f-ufTtp404vjtS89FpSmSo-HwaPlq_yl2GQ/s1600/dot_net.gif
 legacy_url: https://www.reversim.com/2011/10/112-net-with-ido-ran.html
 legacy_path: /2011/10/112-net-with-ido-ran

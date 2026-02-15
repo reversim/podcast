@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: Hardware Transactional Memory - Why You Should Care / URI SHAMAY"
 date: 2017-09-01T18:02:00.000Z
-audio_url: http://m2.reversim.com/summit2016_URI_SHAMAY.mp3
+audio_url: https://m2.reversim.com/summit2016_URI_SHAMAY.mp3
 legacy_url: https://www.reversim.com/2017/09/summit-2016-hardware-transactional.html
 legacy_path: /2017/09/summit-2016-hardware-transactional
 ---

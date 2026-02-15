@@ -2,7 +2,7 @@
 title: 134 The Zen of Python
 date: 2012-04-30T18:28:00.000Z
 episode: 134
-audio_url: http://m.reversim.com/reversim134_python_zen.mp3
+audio_url: https://m.reversim.com/reversim134_python_zen.mp3
 legacy_url: https://www.reversim.com/2012/04/134-zen-of-python.html
 legacy_path: /2012/04/134-zen-of-python
 ---

@@ -3,7 +3,7 @@ title: "Final Class 23: IDEs"
 date: 2012-10-14T13:47:00.000Z
 tags:
   - finalclass
-audio_url: http://m.reversim.com/reversim150_finalclass23.mp3
+audio_url: https://m.reversim.com/reversim150_finalclass23.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfFJzaGPYnqeva9bMiSnRLdOoHoI0kodH8BUXV9bThnyqwRjAoEa4R4PSTftro9HoxM9ZG2XEz2-AbcI0jBxBCkzC-dFxKMfrXjHh3HeKyYx3EFKeuBb28epKIfeOJA2rLftPODcdmoTk/s200/emacs-vi.png
 legacy_url: https://www.reversim.com/2012/10/final-class-23-ides.html
 legacy_path: /2012/10/final-class-23-ides

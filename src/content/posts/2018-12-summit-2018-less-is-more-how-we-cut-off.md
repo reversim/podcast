@@ -4,7 +4,7 @@ title: "Summit 2018: Less is more: how we cut off 30% of our code that did
 date: 2018-12-25T08:23:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Gilad_Ben-Yossef.mp3
+audio_url: https://m2.reversim.com/summit2018-Gilad_Ben-Yossef.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-less-is-more-how-we-cut-off.html
 legacy_path: /2018/12/summit-2018-less-is-more-how-we-cut-off
 ---

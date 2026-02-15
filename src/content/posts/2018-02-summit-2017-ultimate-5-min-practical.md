@@ -4,7 +4,7 @@ title: "Summit 2017: The ultimate 5 min practical guide on how to casually chat
 date: 2018-02-07T21:47:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Michal_Brosh_-_The_ultimate_5_min_practical_guide_on_how_to_casually_chat_with_the_people_next_to_you.mp3
+audio_url: https://m2.reversim.com/summit2017-Michal_Brosh_-_The_ultimate_5_min_practical_guide_on_how_to_casually_chat_with_the_people_next_to_you.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-ultimate-5-min-practical.html
 legacy_path: /2018/02/summit-2017-ultimate-5-min-practical
 ---

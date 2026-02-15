@@ -2,7 +2,7 @@
 title: "Summit 2016: Fund Raising 101 - Experiences Written in Blood... / Yuval
   Kaminka"
 date: 2017-09-02T20:42:00.000Z
-audio_url: http://m2.reversim.com/summit2016_YUVAL_KAMINKA.mp3
+audio_url: https://m2.reversim.com/summit2016_YUVAL_KAMINKA.mp3
 legacy_url: https://www.reversim.com/2017/09/summit-2016-fund-raising-101.html
 legacy_path: /2017/09/summit-2016-fund-raising-101
 ---

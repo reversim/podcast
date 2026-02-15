@@ -2,7 +2,7 @@
 title: 291 Raspberry Pi
 date: 2016-02-18T20:22:00.000Z
 episode: 291
-audio_url: http://m2.reversim.com/reversim291_RPi.mp3.mp3
+audio_url: https://m2.reversim.com/reversim291_RPi.mp3.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8MFEqwivbhajrwxWOffVDAckrhCdzVkIMBmX2odwvIWLeuX7z3cx9i_2R8JBDN48bibpD0XhzFFzZEXSTnIyOXvULVGxcjPS3i-x_3wYLsXP4pjUZ68NKcyvAAdhVUFfkzxFXPTZrVj4/s200/Raspi-PGB001.png
 legacy_url: https://www.reversim.com/2016/02/291-raspberry-pi.html
 legacy_path: /2016/02/291-raspberry-pi

@@ -3,7 +3,7 @@ title: "Summit 2018: Creating a Product Your Users Will Love / Reut Golan"
 date: 2019-01-14T17:23:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Reut_Golan.mp3
+audio_url: https://m2.reversim.com/summit2018-Reut_Golan.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-creating-product-your-users.html
 legacy_path: /2019/01/summit-2018-creating-product-your-users
 ---

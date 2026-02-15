@@ -3,7 +3,7 @@ title: "Summit 2017: An Abridged Guide to Event Sourcing / Tomer Gabel"
 date: 2018-03-12T18:56:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Tomer_Gabel_-_An_Abridged_Guide_to_Event_Sourcing.mp3
+audio_url: https://m2.reversim.com/summit2017-Tomer_Gabel_-_An_Abridged_Guide_to_Event_Sourcing.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-abridged-guide-to-event.html
 legacy_path: /2018/03/summit-2017-abridged-guide-to-event
 ---

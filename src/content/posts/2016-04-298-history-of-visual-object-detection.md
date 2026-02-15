@@ -2,7 +2,7 @@
 title: 298 The history of visual object detection
 date: 2016-04-26T21:41:00.000Z
 episode: 298
-audio_url: http://m2.reversim.com/reversim298_face-detection.mp3
+audio_url: https://m2.reversim.com/reversim298_face-detection.mp3
 cover_image: https://lh4.googleusercontent.com/q82vDkbeAtaztyr9oPVHY1JRSqBWaIlRgkcQNolZTCHlF1JHmx-SIIDRg7FlSRS3Oi-uUCMsBwLGxLXi-Nwr-4KZGhXnKjAUaI7_CfnuNoJsN2zcguTSFpAHkx8loqGJpVcppUMK
 legacy_url: https://www.reversim.com/2016/04/298-history-of-visual-object-detection.html
 legacy_path: /2016/04/298-history-of-visual-object-detection

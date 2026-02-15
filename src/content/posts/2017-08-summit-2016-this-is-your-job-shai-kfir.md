@@ -3,7 +3,7 @@ title: "Summit 2016: THIS _IS_ YOUR JOB / Shai Kfir"
 date: 2017-08-19T20:19:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_SHAI_KFIR.mp3
+audio_url: https://m2.reversim.com/summit2016_SHAI_KFIR.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-this-is-your-job-shai-kfir.html
 legacy_path: /2017/08/summit-2016-this-is-your-job-shai-kfir
 ---

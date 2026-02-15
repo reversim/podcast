@@ -3,7 +3,7 @@ title: "Summit 2014: Postgres + JSON - the best of both worlds? / Hadar Davidovi
 date: 2014-04-30T05:47:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-PostgreSQL.mp3
+audio_url: https://m.reversim.com/reversim2014-PostgreSQL.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-postgres-json-best-of-both.html
 legacy_path: /2014/04/summit-2014-postgres-json-best-of-both
 ---

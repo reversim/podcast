@@ -2,7 +2,7 @@
 title: 270 Cloud Vendor Series - Big Data and Analytics with AWS
 date: 2015-08-04T06:49:00.000Z
 episode: 270
-audio_url: http://m.reversim.com/reversim270_cloud-analytics-aws.mp3
+audio_url: https://m.reversim.com/reversim270_cloud-analytics-aws.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9l12Y3xlfhm2g4ahOM_TTbLdxs3qs1AT2rDCELWNqWa1DFCJWpxlONcyZU8RE6ZFpl9oQixGHZZgguPaaDkEPqcRCaQB1Gi3hh9vAW3T6XKH0G7xz0sDLK9kDGal2kdCvvVxRmy11bVI/s200/aws-logo-large.png
 legacy_url: https://www.reversim.com/2015/08/270-cloud-vendor-series-big-data-and.html
 legacy_path: /2015/08/270-cloud-vendor-series-big-data-and

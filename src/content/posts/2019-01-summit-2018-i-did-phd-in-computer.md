@@ -4,7 +4,7 @@ title: "Summit 2018: I did a PhD in computer science in order to work with human
 date: 2019-01-19T21:08:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Reuth_Mirsky.mp3
+audio_url: https://m2.reversim.com/summit2018-Reuth_Mirsky.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-i-did-phd-in-computer.html
 legacy_path: /2019/01/summit-2018-i-did-phd-in-computer
 ---

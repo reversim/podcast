@@ -4,7 +4,7 @@ title: "Summit 2016: MicroApps Architecture -- The way to do microservices for
 date: 2017-08-19T20:14:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_YONATAN_MAMAN.mp3
+audio_url: https://m2.reversim.com/summit2016_YONATAN_MAMAN.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-microapps-architecture-way.html
 legacy_path: /2017/08/summit-2016-microapps-architecture-way
 ---

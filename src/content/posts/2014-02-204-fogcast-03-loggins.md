@@ -4,7 +4,7 @@ date: 2014-02-10T20:45:00.000Z
 tags:
   - fogcast
 episode: 204
-audio_url: http://m.reversim.com/reversim204_fogcast03.mp3
+audio_url: https://m.reversim.com/reversim204_fogcast03.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSS8dYt57WA_SUgmB38aAMY_eojesrTQMef17eBZANfkgxggy3Zs3ATI6J6HPBiPZHpEkR2MzZnsCtm6zhnOD8uTUfMrC3GkdmnnOEiNeKfHTjxuKrvNm3NDUtuLdqZZ8vh21YnKjvSJo/s1600/logstash.png
 legacy_url: https://www.reversim.com/2014/02/204-fogcast-03-loggins.html
 legacy_path: /2014/02/204-fogcast-03-loggins

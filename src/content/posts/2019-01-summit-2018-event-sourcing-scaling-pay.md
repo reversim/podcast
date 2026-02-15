@@ -3,7 +3,7 @@ title: "Summit 2018: Event Sourcing Scaling - Pay Less, Do More / Michael Feinst
 date: 2019-01-05T21:47:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Michael_Feinstein.mp3
+audio_url: https://m2.reversim.com/summit2018-Michael_Feinstein.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-event-sourcing-scaling-pay.html
 legacy_path: /2019/01/summit-2018-event-sourcing-scaling-pay
 ---

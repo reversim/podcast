@@ -2,7 +2,7 @@
 title: 277 Scientific Python
 date: 2015-10-08T20:17:00.000Z
 episode: 277
-audio_url: http://m2.reversim.com/reversim277_scientific-python.mp3
+audio_url: https://m2.reversim.com/reversim277_scientific-python.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfNKDPSqTIVBuO8IXH7TmyXXDO9bG978VIq4AhQOyQYx5J0nWfDgAQ37xQ1xYPI4s7Cr99Mj1_ltkZdV-iElCeiRJaGZv1-g_MZar0GCsFD8qKy8JPwT065HpRvp15xgwOjJ-56zZr3VE/s1600/scipy_logo.png
 legacy_url: https://www.reversim.com/2015/10/277-scientific-python.html
 legacy_path: /2015/10/277-scientific-python

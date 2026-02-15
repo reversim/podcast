@@ -3,7 +3,7 @@ title: "Summit 2014: Evolutionary and Genetic Algorithms / Tzofia Shiftan"
 date: 2014-04-09T09:20:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-gen.mp3
+audio_url: https://m.reversim.com/reversim2014-gen.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-evolutionary-and-genetic.html
 legacy_path: /2014/04/summit-2014-evolutionary-and-genetic
 ---

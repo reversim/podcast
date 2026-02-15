@@ -3,7 +3,7 @@ title: "Summit 2017: The Interview Song / Iftach Bar & Yoni Tsafir"
 date: 2018-01-26T11:52:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Iftach_Bar_and_Yoni_Tsafir_-_The_Interview_Song.mp3
+audio_url: https://m2.reversim.com/summit2017-Iftach_Bar_and_Yoni_Tsafir_-_The_Interview_Song.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-interview-song-iftach-bar.html
 legacy_path: /2018/01/summit-2017-interview-song-iftach-bar
 ---

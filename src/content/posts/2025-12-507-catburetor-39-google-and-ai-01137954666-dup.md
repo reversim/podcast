@@ -4,7 +4,7 @@ date: 2025-12-19T11:42:00.000Z
 tags:
   - carburetor
 episode: 507
-audio_url: http://m2.reversim.com/reversim507-carburetor39.t2.mp3
+audio_url: https://m2.reversim.com/reversim507-carburetor39.t2.mp3
 cover_image: https://blogger.googleusercontent.com/img/a/AVvXsEgCUqXOpuqFAGYeHd-sc30DAzxuji2zRFz8J0Fx0uUluCy3y6WhVPw_QZzoGNxpLo-TKGEXMggXZZE4Yw8gM9ZYUgyRq7yCdL9i3CY9ocJJgJ3-MTIdYaRB_p8DR-u9b02ANGjAfuGET8nHU9XWDyPMMOpj6lS-wi6h4X2qpQVN_HYsXr709zcS6F5jh5g
 legacy_url: https://www.reversim.com/2025/12/507-catburetor-39-google-and-ai_01137954666.html
 legacy_path: /2025/12/507-catburetor-39-google-and-ai_01137954666

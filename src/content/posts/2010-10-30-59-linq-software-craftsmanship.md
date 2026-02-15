@@ -2,7 +2,7 @@
 title: 081 software craftsmanship
 date: 2010-10-04T13:59:00.000Z
 episode: 30
-audio_url: http://m.reversim.com/reversim81_swcraft.mp3
+audio_url: https://m.reversim.com/reversim81_swcraft.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpPd9eSxIpf5yFc8V11xQxfoN_HnQXZCWI-IZmpnB94Yq5eALg8552CplxRE1SWXKuqv91r_EAweErsftnQZBnaiwQko7tb-qb6aAMv1QY2yfw0cFJ-5PX9WQz1y_vq5rE85UTc089DJ0/s200/blacksmith.jpg
 legacy_url: https://www.reversim.com/2010/10/30-59-linq-software-craftsmanship.html
 legacy_path: /2010/10/30-59-linq-software-craftsmanship

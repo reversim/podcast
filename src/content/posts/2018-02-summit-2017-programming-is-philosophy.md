@@ -3,7 +3,7 @@ title: "Summit 2017: Programming IS(!) Philosophy / Nir Rubinstein"
 date: 2018-02-18T16:46:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Nir_Rubinstein_-_Programming_IS_Philosophy.mp3
+audio_url: https://m2.reversim.com/summit2017-Nir_Rubinstein_-_Programming_IS_Philosophy.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-programming-is-philosophy.html
 legacy_path: /2018/02/summit-2017-programming-is-philosophy
 ---

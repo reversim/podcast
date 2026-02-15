@@ -8,7 +8,7 @@ tags:
   - ops
   - paas
 episode: 179
-audio_url: http://m.reversim.com/reversim179_final_class_29.mp3
+audio_url: https://m.reversim.com/reversim179_final_class_29.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sJhk-eVJE7CGb_Cm8Gu-MiitCIy3t9Is0shC153XLzRN71E0zmjf--vJF5wxMN3O3VqGpPtQI7Dt_X3BBscLuiL2EgRqND2hfzSTHogUgociaZsBsb55gePLtWW5VUdk_SisD-Yyn1VwK44xo=s0-d
 legacy_url: https://www.reversim.com/2013/05/station-configuration.html
 legacy_path: /2013/05/station-configuration

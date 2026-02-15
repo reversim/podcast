@@ -3,7 +3,7 @@ title: "Summit 2016: How to (really) create transparency / Iris Shoor"
 date: 2017-07-15T11:50:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_Iris_Shoor.mp3
+audio_url: https://m2.reversim.com/summit2016_Iris_Shoor.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-how-to-really-create.html
 legacy_path: /2017/07/summit-2016-how-to-really-create
 ---

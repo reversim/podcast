@@ -3,7 +3,7 @@ title: "Summit 2014: Latency & Client Side Performance / Gilly Barr"
 date: 2014-05-23T12:26:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-client-side.mp3
+audio_url: https://m.reversim.com/reversim2014-client-side.mp3
 legacy_url: https://www.reversim.com/2014/05/summit-2014-latency-client-side.html
 legacy_path: /2014/05/summit-2014-latency-client-side
 ---

@@ -3,7 +3,7 @@ title: "Summit 2014: Open Source in Israel - Go Proxy / Elazar Leibovitch"
 date: 2014-04-28T19:35:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-oss-goproxy.mp3
+audio_url: https://m.reversim.com/reversim2014-oss-goproxy.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-open-source-in-israel-go.html
 legacy_path: /2014/04/summit-2014-open-source-in-israel-go
 ---

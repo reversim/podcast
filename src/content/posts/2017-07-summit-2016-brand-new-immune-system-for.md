@@ -4,7 +4,7 @@ title: "Summit 2016: A Brand new Immune System for a Brand New Google Product /
 date: 2017-07-29T11:25:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_ITAY_MAMAN.mp3
+audio_url: https://m2.reversim.com/summit2016_ITAY_MAMAN.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-brand-new-immune-system-for.html
 legacy_path: /2017/07/summit-2016-brand-new-immune-system-for
 ---

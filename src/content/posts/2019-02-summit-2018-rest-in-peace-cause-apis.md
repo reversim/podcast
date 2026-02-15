@@ -4,7 +4,7 @@ title: "Summit 2018: REST in peace? - cause APIs are much more than REST /
 date: 2019-02-04T16:58:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Yonatan_Maman.mp3
+audio_url: https://m2.reversim.com/summit2018-Yonatan_Maman.mp3
 legacy_url: https://www.reversim.com/2019/02/summit-2018-rest-in-peace-cause-apis.html
 legacy_path: /2019/02/summit-2018-rest-in-peace-cause-apis
 ---

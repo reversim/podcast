@@ -4,7 +4,7 @@ date: 2012-05-20T05:25:00.000Z
 tags:
   - finalclass
 episode: 138
-audio_url: http://m.reversim.com/reversim138_finalclass18.mp3
+audio_url: https://m.reversim.com/reversim138_finalclass18.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ-OtGmnhyphenhyphenxcuKVPmYpjQxUnLNVGLx58CVuAXfRsY5PTKgcV7cIVyIHKfnDKxvBZns53f2B31Dqj-4phqMi8N-ah1udcN0ruuV34gON9y1bW3t-7IC5NOLRupj8kC9E25dXqsDw7nhLwE/s200/barbecue-crazy-tux-1800.png
 legacy_url: https://www.reversim.com/2012/05/138-final-class-18-past-present-future.html
 legacy_path: /2012/05/138-final-class-18-past-present-future

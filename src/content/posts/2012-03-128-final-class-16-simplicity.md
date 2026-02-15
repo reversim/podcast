@@ -4,7 +4,7 @@ date: 2012-03-09T13:33:00.000Z
 tags:
   - finalclass
 episode: 128
-audio_url: http://m.reversim.com/reversim128_finalclass16.mp3
+audio_url: https://m.reversim.com/reversim128_finalclass16.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOna_fShNHRdgx0E1SfdouN3o4JqWEYXo6NtL4omU4rbc8UY_Zo3Vh5I2FHc9PS4wvTbXrXqry1D2Q3SO6AQv9UEHjKK9sgVVSEc3PlY5EHVrHIv7UGoBkOzzCCjeal_jSTsaUFf5U48E/s200/simplicity.jpg
 legacy_url: https://www.reversim.com/2012/03/128-final-class-16-simplicity.html
 legacy_path: /2012/03/128-final-class-16-simplicity

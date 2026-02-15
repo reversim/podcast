@@ -2,7 +2,7 @@
 title: 218 - Propagator
 date: 2014-05-22T17:09:00.000Z
 episode: 218
-audio_url: http://m.reversim.com/reversim218_propagetor.mp3
+audio_url: https://m.reversim.com/reversim218_propagetor.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWCID3jzebKBoGXpgqnRAwAmI0As_qDN5fAj9seokTKBdV7hZi7X_vxiLOwzu5v_1lFvbXb86HvTaG71EYiJ-NSE2DBG10FdwrfO2G_DD5mElBrmC3a_hpWQY82C-S1CyiqaM6_DoS8CA/s1600/mysql.png
 legacy_url: https://www.reversim.com/2014/05/218-propagator.html
 legacy_path: /2014/05/218-propagator

@@ -4,7 +4,7 @@ date: 2013-09-22T19:55:00.000Z
 tags:
   - carburetor
 episode: 191
-audio_url: http://m.reversim.com/reversim191_carburetor9.mp3
+audio_url: https://m.reversim.com/reversim191_carburetor9.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg40bGS4eKASyh1_IlFdiAd4QT57SS9xgfLJgnGRsZlLjyaxdmETs6AZv-wgMwkpV-JO8YwbcXv1hRlg3qn8MSUnl3Ykq2ijlq4xT2_oSV0xJAgrkHnlV7AuQAbIh1BNeTnZKuRgHzGBIs/s200/oscon2013_logo.png
 legacy_url: https://www.reversim.com/2013/09/191-carburetor-9-openstack-oscon.html
 legacy_path: /2013/09/191-carburetor-9-openstack-oscon

@@ -4,7 +4,7 @@ date: 2015-05-20T19:35:00.000Z
 tags:
   - fogcast
 episode: 262
-audio_url: http://m.reversim.com/reversim262_fogcast19-flights.mp3
+audio_url: https://m.reversim.com/reversim262_fogcast19-flights.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheKfZ3Mn8JZMsAiUBgw1W7SdM3aCt1YJFo0avNQiWKdJ8C2STI3TF-owZinI9m4-UzNIALkSpyc8YRF51kFE4g6SlRhZR5b2arApoqnJESnYMrwUsFq6ql8awjb-8QlTM1LIcZMjCsPA0/s200/flight-01.jpg
 legacy_url: https://www.reversim.com/2015/05/262-fogcast-19-flights.html
 legacy_path: /2015/05/262-fogcast-19-flights

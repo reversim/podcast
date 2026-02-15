@@ -3,7 +3,7 @@ title: "Summit 2015: Loop into the Javascript Event Loop / Yonatan M"
 date: 2015-04-27T20:05:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_ignites_1_Yonatan_M.mp3
+audio_url: https://m.reversim.com/summit2015_ignites_1_Yonatan_M.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-loop-into-javascript-event.html
 legacy_path: /2015/04/summit-2015-loop-into-javascript-event
 ---

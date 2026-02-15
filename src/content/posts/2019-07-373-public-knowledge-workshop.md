@@ -2,7 +2,7 @@
 title: 373 The Public Knowledge Workshop
 date: 2019-07-31T20:40:00.000Z
 episode: 373
-audio_url: http://m2.reversim.com/reversim373_hasadna.mp3
+audio_url: https://m2.reversim.com/reversim373_hasadna.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCXeeqU8Fd_DWRiCNdO9KwJNZ3L7vhUukcEuwrAvkw34wD2egPDSbLQor2wF-ifXLW_SHDhlPVy8DtUmFG_Mmqe7PcX1MvoApKi6WuVAU9_K1jONAgjxVuHvuDk5kwnyL0LPR8EQP5y7c/s200/hasadna.png
 legacy_url: https://www.reversim.com/2019/07/373-public-knowledge-workshop.html
 legacy_path: /2019/07/373-public-knowledge-workshop

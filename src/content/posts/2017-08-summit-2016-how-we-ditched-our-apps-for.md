@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: How we ditched our apps for a chatbot / Eyal Yavor"
 date: 2017-08-30T20:41:00.000Z
-audio_url: http://m2.reversim.com/summit2016_EYAL_YAVOR.mp3
+audio_url: https://m2.reversim.com/summit2016_EYAL_YAVOR.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-how-we-ditched-our-apps-for.html
 legacy_path: /2017/08/summit-2016-how-we-ditched-our-apps-for
 ---

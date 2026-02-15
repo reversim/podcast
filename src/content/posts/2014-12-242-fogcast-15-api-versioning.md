@@ -2,7 +2,7 @@
 title: 242 Fogcast 15 - API Versioning
 date: 2014-12-02T07:23:00.000Z
 episode: 242
-audio_url: http://m.reversim.com/reversim242_fogcast15-API-versioning%20.mp3
+audio_url: https://m.reversim.com/reversim242_fogcast15-API-versioning%20.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9HW_bIm-kpwxP6lVHVwyxrJt0x_gL4FGqeheVjwOnmbfO_DSg0qYN_xoMFube8gGl2hO_EeGX7ssvIXuwepPiZUN7JHApXqVM7uO3BqK7jN2ieeQqiCjx0vq7ZqJsE_qLdm3FwD2qd_M/s1600/350-rest-api-versioning.png
 legacy_url: https://www.reversim.com/2014/12/242-fogcast-15-api-versioning.html
 legacy_path: /2014/12/242-fogcast-15-api-versioning

@@ -2,7 +2,7 @@
 title: 118 Go Lang with Miki Tebeka
 date: 2011-11-27T07:33:00.000Z
 episode: 118
-audio_url: http://m.reversim.com/reversim118_go_lang.mp3
+audio_url: https://m.reversim.com/reversim118_go_lang.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-34I96B5cJwOas-kLX432RgwpRbDt1BLtTR8SOj4XI8PnJySaFj0i_sBvnpwzIb1dcBmp7XkPGGmwwG7un4rhHMDgP8v_ynkcNdgahBZNB24QxNjUN3vay6Y1M6r7DbVAdbimF4q5KwY/s1600/The+Go+Programming+Language+Blog.png
 legacy_url: https://www.reversim.com/2011/11/118-go-lang-with-miki-tebeka.html
 legacy_path: /2011/11/118-go-lang-with-miki-tebeka

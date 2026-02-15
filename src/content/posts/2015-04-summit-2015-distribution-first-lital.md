@@ -3,7 +3,7 @@ title: "Summit 2015: Distribution First / Lital Hassine"
 date: 2015-04-27T20:15:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_ignites_1_Lital_Hassine.mp3
+audio_url: https://m.reversim.com/summit2015_ignites_1_Lital_Hassine.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-distribution-first-lital.html
 legacy_path: /2015/04/summit-2015-distribution-first-lital
 ---

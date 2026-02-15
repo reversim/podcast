@@ -4,7 +4,7 @@ title: "Summit 2017: From 1x to 10x - A personal growth program... / Avi Etzioni
 date: 2017-12-15T16:22:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Avi_Etzioni_and_Sivan_Franko_-_From_1x_to_10x.mp3
+audio_url: https://m2.reversim.com/summit2017-Avi_Etzioni_and_Sivan_Franko_-_From_1x_to_10x.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-from-1x-to-10x-personal.html
 legacy_path: /2017/12/summit-2017-from-1x-to-10x-personal
 ---

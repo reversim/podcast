@@ -3,7 +3,7 @@ title: "Summit 2015: Putting the 'D' in TDD / Shai Yallin"
 date: 2015-04-25T20:31:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Putting_the_D_in_TDD.mp3
+audio_url: https://m.reversim.com/summit2015_Putting_the_D_in_TDD.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-putting-d-in-tdd-shai-yallin.html
 legacy_path: /2015/04/summit-2015-putting-d-in-tdd-shai-yallin
 ---

@@ -4,7 +4,7 @@ date: 2016-02-14T18:37:00.000Z
 tags:
   - fogcast
 episode: 289
-audio_url: http://m2.reversim.com/reversim289_Fogcast-22-Graph-Databases.mp3
+audio_url: https://m2.reversim.com/reversim289_Fogcast-22-Graph-Databases.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDV0I-XVM8GdNQuAOuLqsgh6Ezn57QHGYBa_jJSYzqe7SgOXbz3wfcgnX0dw47XsXe0Ix4-dgSv_2ohs0QldIBVfXLrw-qaTTiD7W9IRtl1kMC2KSAfdNwXnUrFUVWovWmhwOSds3H4Lw/s200/profile.png
 legacy_url: https://www.reversim.com/2016/02/289-fogcast-22-graph-databases.html
 legacy_path: /2016/02/289-fogcast-22-graph-databases

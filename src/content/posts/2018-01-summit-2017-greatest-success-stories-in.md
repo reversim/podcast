@@ -4,7 +4,7 @@ title: "Summit 2017: The Greatest Success Stories in History - are Inventions
 date: 2018-01-29T21:49:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Jenny_Abramov_-_The_Greatest_Success_Stories_in_History_-_are_Inventions_that_Almost_didnt_Exist.mp3
+audio_url: https://m2.reversim.com/summit2017-Jenny_Abramov_-_The_Greatest_Success_Stories_in_History_-_are_Inventions_that_Almost_didnt_Exist.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-greatest-success-stories-in.html
 legacy_path: /2018/01/summit-2017-greatest-success-stories-in
 ---

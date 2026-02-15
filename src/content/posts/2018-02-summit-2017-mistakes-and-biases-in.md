@@ -3,7 +3,7 @@ title: "Summit 2017: Mistakes and Biases in Understanding Data / Omer Nevo"
 date: 2018-02-21T10:17:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Omer_Nevo_-_Mistakes_and_Biases_in_Understanding_Data.mp3
+audio_url: https://m2.reversim.com/summit2017-Omer_Nevo_-_Mistakes_and_Biases_in_Understanding_Data.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-mistakes-and-biases-in.html
 legacy_path: /2018/02/summit-2017-mistakes-and-biases-in
 ---

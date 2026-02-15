@@ -4,7 +4,7 @@ date: 2020-06-27T19:17:00.000Z
 tags:
   - carburetor
 episode: 391
-audio_url: http://m2.reversim.com/reversim391_carburator29.mp3
+audio_url: https://m2.reversim.com/reversim391_carburator29.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLXe3nnhGtUoDue3RTU5h5aygiuJG84P5PNRxjN6UdZRi9JFJ17V8C7M7D89HTWwVQyWjTHQipLl8eefOSd-hSwKpl2ZE9bM7vOnCFOyMDc9LFS5dUqrLrP7j2edyVmHxz712rUYEs7JI/w205-h205/automation.jpg
 legacy_url: https://www.reversim.com/2020/06/391-carburetor-29-3rd-generation.html
 legacy_path: /2020/06/391-carburetor-29-3rd-generation

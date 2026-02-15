@@ -3,7 +3,7 @@ title: "Summit 2013: Doing Lean in B2B, by Oren Raboy"
 date: 2013-04-07T16:18:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_doing_lean_in_B2B.mp3
+audio_url: https://m.reversim.com/summit2013_doing_lean_in_B2B.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-doing-lean-in-b2b-by-oren.html
 legacy_path: /2013/04/summit-2013-doing-lean-in-b2b-by-oren
 ---

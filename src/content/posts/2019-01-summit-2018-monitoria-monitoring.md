@@ -3,7 +3,7 @@ title: "Summit 2018: Monitoria - A Monitoring Democracy / Yaron Idan"
 date: 2019-01-30T21:16:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Yaron_Idan.mp3
+audio_url: https://m2.reversim.com/summit2018-Yaron_Idan.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-monitoria-monitoring.html
 legacy_path: /2019/01/summit-2018-monitoria-monitoring
 ---

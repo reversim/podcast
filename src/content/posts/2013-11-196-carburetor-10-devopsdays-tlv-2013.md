@@ -4,7 +4,7 @@ date: 2013-11-25T20:43:00.000Z
 tags:
   - carburetor
 episode: 196
-audio_url: http://m.reversim.com/reversim196_carburetor10.mp3
+audio_url: https://m.reversim.com/reversim196_carburetor10.mp3
 cover_image: https://lh6.googleusercontent.com/d3TULRFrfuoslsr2Gw784_wuE6rSnKphoVEmki4zgs0VeXqP-mlTnuZxmZ-Kk7uqGikarosOAcREHeq5E8Usn4algs8p8bI7RB75fYcpja_fGW0Zaodko9q_aA
 legacy_url: https://www.reversim.com/2013/11/196-carburetor-10-devopsdays-tlv-2013.html
 legacy_path: /2013/11/196-carburetor-10-devopsdays-tlv-2013

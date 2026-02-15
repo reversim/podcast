@@ -3,7 +3,7 @@ title: "Summit 2013: Distirbuted - reinventing the workplace, by Yoav Farhi"
 date: 2013-04-06T21:46:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_distirbuted_reinventing_the_workplace.mp3
+audio_url: https://m.reversim.com/summit2013_distirbuted_reinventing_the_workplace.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-distirbuted-reinventing.html
 legacy_path: /2013/04/summit-2013-distirbuted-reinventing
 ---

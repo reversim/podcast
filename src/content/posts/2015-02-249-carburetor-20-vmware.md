@@ -4,7 +4,7 @@ date: 2015-02-19T21:42:00.000Z
 tags:
   - carburetor
 episode: 249
-audio_url: http://m.reversim.com/reversim249_carburetor20.mp3
+audio_url: https://m.reversim.com/reversim249_carburetor20.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfln1UVg2eHmnv4-N-v4vSLEnSDVL7D6ETLKCUoPHuXRoh9eBlrozPMKwnIR1q3URtlSWq2JFGcyzV12tlwXZKYJwpXBQchqzv8t-qvqjF-uPcvm3kYi4uaZWtLUhE1ct8OJQNCEuExm8/s1600/vmware_view_pilot-5132020.jpg
 legacy_url: https://www.reversim.com/2015/02/249-carburetor-20-vmware.html
 legacy_path: /2015/02/249-carburetor-20-vmware

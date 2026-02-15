@@ -4,7 +4,7 @@ date: 2013-07-16T20:40:00.000Z
 tags:
   - finalclass
 episode: 187
-audio_url: http://m.reversim.com/reversim187_finalclass31.mp3
+audio_url: https://m.reversim.com/reversim187_finalclass31.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2xkSfH_L8vOetvzDK6wYfr4MHHNavE2Rd1QIPx4cZlDB2IvBTS6S3AMznsbynSDwH19xfqwrpEZF47zV0xikVNlg6uHTIbuROMQHrSVL3HhxmBgsWVt-ou3v1GfJWO2Vt4eK8sgXpKCU/s200/220px-Radar-hatzerim-1-1.jpg
 legacy_url: https://www.reversim.com/2013/07/187-final-class-31-thoughtworks-radar.html
 legacy_path: /2013/07/187-final-class-31-thoughtworks-radar

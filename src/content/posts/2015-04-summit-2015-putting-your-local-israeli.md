@@ -4,7 +4,7 @@ title: "Summit 2015: Putting your local Israeli Open Source community on the
 date: 2015-04-29T19:33:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_open_source_1_Miriam_Schwab.mp3
+audio_url: https://m.reversim.com/summit2015_open_source_1_Miriam_Schwab.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-putting-your-local-israeli.html
 legacy_path: /2015/04/summit-2015-putting-your-local-israeli
 ---

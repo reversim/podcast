@@ -6,7 +6,7 @@ tags:
   - תשתיות פיתוח
   - IT
 episode: 99
-audio_url: http://m.reversim.com/reversim99_chef.mp3
+audio_url: https://m.reversim.com/reversim99_chef.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_srs4ksSsK7kwVnweVM6j8pdXVuXLg1IgjRtBatcqB3KB3IcKjqBXw3SLhHQuhw069cjwv8fhrygznTQsiZvrysTZoVX7SgT6U_V53wO_pAGjevvJY=s0-d
 legacy_url: https://www.reversim.com/2011/05/099-chef-outbrain.html
 legacy_path: /2011/05/099-chef-outbrain

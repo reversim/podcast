@@ -3,7 +3,7 @@ title: "Summit 2017: Let's talk about your salary / Iftach Bar"
 date: 2018-01-18T21:47:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Iftach_Bar_-_Lets_talk_about_your_salary.mp3
+audio_url: https://m2.reversim.com/summit2017-Iftach_Bar_-_Lets_talk_about_your_salary.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-lets-talk-about-your-salary.html
 legacy_path: /2018/01/summit-2017-lets-talk-about-your-salary
 ---

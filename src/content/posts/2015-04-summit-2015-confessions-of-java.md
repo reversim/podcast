@@ -4,7 +4,7 @@ title: "Summit 2015: Confessions of a Java developer that fell in love with the
 date: 2015-04-17T05:18:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Confessions-of-a-Java-developer-that-fell-in-love-with-the-Groovy-language.mp3
+audio_url: https://m.reversim.com/summit2015_Confessions-of-a-Java-developer-that-fell-in-love-with-the-Groovy-language.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-confessions-of-java.html
 legacy_path: /2015/04/summit-2015-confessions-of-java
 ---

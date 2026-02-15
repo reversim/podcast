@@ -4,7 +4,7 @@ title: "Summit 2018: We don't need no labels: the future of pretraining and
 date: 2018-12-07T19:34:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Bar_Vinograd.mp3
+audio_url: https://m2.reversim.com/summit2018-Bar_Vinograd.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-we-dont-need-no-labels.html
 legacy_path: /2018/12/summit-2018-we-dont-need-no-labels
 ---

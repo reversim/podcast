@@ -2,7 +2,7 @@
 title: 258 TCE Conference
 date: 2015-04-28T19:38:00.000Z
 episode: 258
-audio_url: http://m.reversim.com/reversim258_tce-conf.mp3
+audio_url: https://m.reversim.com/reversim258_tce-conf.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCkufplASio7DoCp7eSXVBCQLU3KPqK0vpQobPfLfjzlpWpKwifM-MlmKIZX1-83Unblrd0FiMHJ0HPTxTRhlh73mkpzeasz1CGpPvsYCUXqBk8otDdCxi8emDQlYRj5kLuu0L6fOVEeo/s1600/tce_logo_color-copy-2.png
 legacy_url: https://www.reversim.com/2015/04/258-tce-conference.html
 legacy_path: /2015/04/258-tce-conference

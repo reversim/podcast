@@ -6,7 +6,7 @@ tags:
   - openstack
   - paas
 episode: 173
-audio_url: http://m.reversim.com/reversim173_carburetor_6.mp3
+audio_url: https://m.reversim.com/reversim173_carburetor_6.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tUpJfXGhNJnfTEo4XP3oeYkPvLFTD8KBIO7b8crTs4orTj8iCGE3mRn-5xOYpcDu_MIEbTb541Oknj70gVVJyWsvh8T70=s0-d
 legacy_url: https://www.reversim.com/2013/04/173-carburetors-6.html
 legacy_path: /2013/04/173-carburetors-6

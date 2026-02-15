@@ -4,7 +4,7 @@ title: "Summit 2013: A Successful Git branching model with git-flow, by Igal
 date: 2013-04-02T07:08:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_a_successful_git_branching_model.mp3
+audio_url: https://m.reversim.com/summit2013_a_successful_git_branching_model.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-successful-git-branching.html
 legacy_path: /2013/04/summit-2013-successful-git-branching
 ---

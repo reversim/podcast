@@ -2,7 +2,7 @@
 title: 280 Cloud Vendor Series - HA/HR with AWS
 date: 2015-10-26T20:45:00.000Z
 episode: 290
-audio_url: http://m2.reversim.com/reversim280_aws-HA-DR.mp3
+audio_url: https://m2.reversim.com/reversim280_aws-HA-DR.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj71rvoVWHdc-_GLQid9TCriILWwfWmbXWLlGPu-4jkbTRcvGEFZ_WNweIHTbwSOJAvWVsPDuXkVT_MGRj-kmwgl5T6LM8RlDl-W0VkcsBThV6Q86H5fSPho4Z7Cj0w_8rqVxjwl2OsgzA/s200/aws-logo-large.png
 legacy_url: https://www.reversim.com/2015/10/290-cloud-vendor-series-hahr-with-aws.html
 legacy_path: /2015/10/290-cloud-vendor-series-hahr-with-aws

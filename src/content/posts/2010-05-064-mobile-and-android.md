@@ -2,7 +2,7 @@
 title: 064 mobile and android
 date: 2010-05-12T10:15:00.000Z
 episode: 64
-audio_url: http://m.reversim.com/reversim64_mobile.mp3
+audio_url: https://m.reversim.com/reversim64_mobile.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSC0ypr6ho2pjyuvR-xEfEMZoXL8RCICFw5xkgf8bwf2h_IOQAO8htCjOeLzU0LS8rxrWG0Y4y89AEB3qrr9-5DGhSbFuPKAr8n-WahiK5mcfKcLHESRIZ4tjR9n3kLvFHroQyfF_JKjM/s200/android1.gif
 legacy_url: https://www.reversim.com/2010/05/064-mobile-and-android.html
 legacy_path: /2010/05/064-mobile-and-android

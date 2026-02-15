@@ -3,7 +3,7 @@ title: "Summit 2015: The hall of shame"
 date: 2015-05-02T20:28:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_The_Hall_of_Shame.mp3
+audio_url: https://m.reversim.com/summit2015_The_Hall_of_Shame.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sP3ZVWo7ekCeIasQkHCNhC-eAUBeMwnwQLIp5eDmnK7sIA2sgK5c5m-hcKQWcIKHov9pgFNYfrSFdEn1D7-mQ5o51jmzsqe3sFc_zdWHja05NCqelepTzNZQ=s0-d
 legacy_url: https://www.reversim.com/2015/05/summit-2015-hall-of-shame.html
 legacy_path: /2015/05/summit-2015-hall-of-shame

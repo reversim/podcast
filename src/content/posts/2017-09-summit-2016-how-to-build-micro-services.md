@@ -2,7 +2,7 @@
 title: "Summit 2016: How to Build a Micro-services Infrastructure In 7 Days /
   Gil Tayar"
 date: 2017-09-02T20:46:00.000Z
-audio_url: http://m2.reversim.com/summit2016_GIL_TAYAR.mp3
+audio_url: https://m2.reversim.com/summit2016_GIL_TAYAR.mp3
 legacy_url: https://www.reversim.com/2017/09/summit-2016-how-to-build-micro-services.html
 legacy_path: /2017/09/summit-2016-how-to-build-micro-services
 ---

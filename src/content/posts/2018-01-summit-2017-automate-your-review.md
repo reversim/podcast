@@ -3,7 +3,7 @@ title: "Summit 2017: Automate Your Review Process / Eliran Bivas"
 date: 2018-01-04T20:28:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Eliran_Bivas_-_Automate_your_pull_request_review_process_with_a_bot.mp3
+audio_url: https://m2.reversim.com/summit2017-Eliran_Bivas_-_Automate_your_pull_request_review_process_with_a_bot.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-automate-your-review.html
 legacy_path: /2018/01/summit-2017-automate-your-review
 ---

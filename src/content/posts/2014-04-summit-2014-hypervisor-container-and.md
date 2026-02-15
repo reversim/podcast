@@ -4,7 +4,7 @@ title: "Summit 2014: A Hypervisor, a container and a zeroVm were sitting in a
 date: 2014-04-21T21:24:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-a-hypervizor.mp3
+audio_url: https://m.reversim.com/reversim2014-a-hypervizor.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-hypervisor-container-and.html
 legacy_path: /2014/04/summit-2014-hypervisor-container-and
 ---

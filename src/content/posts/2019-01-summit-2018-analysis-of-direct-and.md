@@ -4,7 +4,7 @@ title: "Summit 2018: Analysis of Direct and Local Deep Neural Networks for
 date: 2019-01-10T21:45:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Nataly_Kuritz.mp3
+audio_url: https://m2.reversim.com/summit2018-Nataly_Kuritz.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-analysis-of-direct-and.html
 legacy_path: /2019/01/summit-2018-analysis-of-direct-and
 ---

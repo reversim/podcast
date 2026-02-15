@@ -2,7 +2,7 @@
 title: 379 Building lightweight apps with Dekel Naar
 date: 2019-10-27T18:30:00.000Z
 episode: 379
-audio_url: http://m2.reversim.com/reversim379_Building-lightweight-apps.mp3
+audio_url: https://m2.reversim.com/reversim379_Building-lightweight-apps.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjA1adPEtKuTeVm_cMmruHrnl5VzDPIDHbm3ROtfo6gQYXKRJeDjfZtd6OfsP565eDvhMekbNSrolzdCHitlrkuzgB1sNNO_htDPtbMtr-Kv-6P9W98dlxvihK21l8moXakcHiyi-BfFnc/s200/Facebook-FB-Lite-796x429.jpg
 legacy_url: https://www.reversim.com/2019/10/379-building-lightweight-apps-with.html
 legacy_path: /2019/10/379-building-lightweight-apps-with

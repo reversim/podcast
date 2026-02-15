@@ -3,7 +3,7 @@ title: "Summit 2016: Social Soccer Betting Application / Roi Ezra"
 date: 2017-07-19T07:16:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_Open_Source_D1_Roi_E.mp3
+audio_url: https://m2.reversim.com/summit2016_Open_Source_D1_Roi_E.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-social-soccer-betting.html
 legacy_path: /2017/07/summit-2016-social-soccer-betting
 ---

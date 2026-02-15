@@ -2,7 +2,7 @@
 title: 368 Kubernetes and Dyploma at outbrain
 date: 2019-05-09T21:53:00.000Z
 episode: 368
-audio_url: http://m2.reversim.com/reversim368-k8s_dyploma.mp3
+audio_url: https://m2.reversim.com/reversim368-k8s_dyploma.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhkRXEiWouERpOJPROnTToYPhk82FX_mneGT-l2Ncaw-O3zR6YnlAe4prGHcS9VtX7Y6fOzAXIOnIgcBFRk1o46H-GcWQuta9fC4j5pOppWZGt0v8ATrXOgQDP_FB2gPx7N4hYVMYAw5Q/s200/Kubernetes_%2528container_engine%2529.png
 legacy_url: https://www.reversim.com/2019/05/368-kubernetes-and-dyploma-at-outbrain.html
 legacy_path: /2019/05/368-kubernetes-and-dyploma-at-outbrain

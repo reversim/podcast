@@ -3,7 +3,7 @@ title: "Summit 2014: A real life continuous integration war story / Gil Hoffer"
 date: 2014-05-02T19:56:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-real-life-continuous-integration.mp3
+audio_url: https://m.reversim.com/reversim2014-real-life-continuous-integration.mp3
 legacy_url: https://www.reversim.com/2014/05/summit-2014-real-life-continuous.html
 legacy_path: /2014/05/summit-2014-real-life-continuous
 ---

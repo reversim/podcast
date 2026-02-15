@@ -3,7 +3,7 @@ title: "Summit 2013: Panel Final Class, moderated by Gili Nachum"
 date: 2013-04-12T12:58:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_panel_final_class.mp3
+audio_url: https://m.reversim.com/summit2013_panel_final_class.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-panel-final-class-moderated.html
 legacy_path: /2013/04/summit-2013-panel-final-class-moderated
 ---

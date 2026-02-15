@@ -2,7 +2,7 @@
 title: 162 Software Lead Weekly
 date: 2013-01-14T21:48:00.000Z
 episode: 162
-audio_url: http://m.reversim.com/reversim162_sw_lead_weekly.mp3
+audio_url: https://m.reversim.com/reversim162_sw_lead_weekly.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEUOVV0PVfcgLiPbsbMEwNq0C6nm9Bf3Mv0Mvn8cYJbY1cJil-yy2UBSX4zZFrTsUUsYbv8TrkAQwYoN0A2SBExcVbfaRPHCzNs4yiYlHFMQX8H8z-BLYpf3dC8hnn5EZVuSfd9dwPYBM/s200/leadership(5).jpeg
 legacy_url: https://www.reversim.com/2013/01/162-software-lead-weekly.html
 legacy_path: /2013/01/162-software-lead-weekly

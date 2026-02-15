@@ -4,7 +4,7 @@ date: 2012-11-06T19:51:00.000Z
 tags:
   - carburetor
 episode: 152
-audio_url: http://m.reversim.com/reversim152_carburetor1.mp3
+audio_url: https://m.reversim.com/reversim152_carburetor1.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-0e4MG9ExAcQHyoRu8f0kvBCW-1yU8NayE-nHnpmkhflTK7pD5nBP17NoPgZdvKenussMZ7ggSayYI1Ok1G-beFd2WxeAmzaeGtzCtA2UNiOLFO3nhNOUcdaW4KNhDTrZsYBexK3HF5E/s200/sandy-storm.jpg
 legacy_url: https://www.reversim.com/2012/11/152-carburetors-1-sandy.html
 legacy_path: /2012/11/152-carburetors-1-sandy

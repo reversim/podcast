@@ -3,7 +3,7 @@ title: "Summit 2014: Monads in 5 minutes! / Shay Elkin"
 date: 2014-04-23T18:49:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-ignite-monads.mp3
+audio_url: https://m.reversim.com/reversim2014-ignite-monads.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-monads-in-5-minutes-shay.html
 legacy_path: /2014/04/summit-2014-monads-in-5-minutes-shay
 ---

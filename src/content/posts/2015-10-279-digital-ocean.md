@@ -2,7 +2,7 @@
 title: 279 Digital Ocean
 date: 2015-10-21T13:37:00.000Z
 episode: 279
-audio_url: http://m2.reversim.com/reversim279_digital-ocean.mp3
+audio_url: https://m2.reversim.com/reversim279_digital-ocean.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLLo535_VYp5378-w2oJVlUYfqIA5Ol3xceD10D7NlQZwDeiRUN-yV3RuvyRAGJMhWIKlIyeMW4YIiJJtDtymMLPBjGHhV_IbR-WW-eZFSY0ssGLeKe23vTY-zm5J0nKOkQA26sZe_krM/s200/DO_Logo_Vertical_Blue-75e0d68b.png
 legacy_url: https://www.reversim.com/2015/10/279-digital-ocean.html
 legacy_path: /2015/10/279-digital-ocean

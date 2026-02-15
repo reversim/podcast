@@ -4,7 +4,7 @@ date: 2015-11-11T21:49:00.000Z
 tags:
   - fogcast
 episode: 281
-audio_url: http://m2.reversim.com/reversim281_fogcast21.mp3
+audio_url: https://m2.reversim.com/reversim281_fogcast21.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzFi6RHEWlPB6cDB3LSR554VwxkxfY9lk3OcZjg4IGkleNQ0b95soeAiwPrQsa3bXx95Axk2d4XK6eQhZUyGkMET39FKPEFSaTWIfpoW0AuXctQ0fRCn7T-vbqg3yyB-yTrYjrCE2XcPA/s200/pessimism-or-optimism-small.jpg
 legacy_url: https://www.reversim.com/2015/11/281-fogcast-21-optimistic-vs.html
 legacy_path: /2015/11/281-fogcast-21-optimistic-vs

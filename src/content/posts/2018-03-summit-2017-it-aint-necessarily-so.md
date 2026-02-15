@@ -3,7 +3,7 @@ title: "Summit 2017: It ain't necessarily so! / Victor Bronstein"
 date: 2018-03-16T21:39:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Victor_Bronstein_-_It_aint_necessarily_so.mp3
+audio_url: https://m2.reversim.com/summit2017-Victor_Bronstein_-_It_aint_necessarily_so.mp3
 legacy_url: https://www.reversim.com/2018/03/summit-2017-it-aint-necessarily-so.html
 legacy_path: /2018/03/summit-2017-it-aint-necessarily-so
 ---

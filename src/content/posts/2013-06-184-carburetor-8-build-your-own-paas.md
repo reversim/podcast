@@ -6,7 +6,7 @@ tags:
   - paas
   - virtualization
 episode: 184
-audio_url: http://m.reversim.com/reversim184_carburetor8_build_your_own_pass.mp3
+audio_url: https://m.reversim.com/reversim184_carburetor8_build_your_own_pass.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sPo-MqBh5GFpK5RQjahSLaiikgZ59mggYxKJ2-xIuQxEkAvZbeNm7QASef4lSuPOAzKA5FFMghZegABkgiV_hNoUmBl7wGHRxBdu4S-iEA47ESGq_ffYiImUcCL0UICP4H0rl8TXdjnA=s0-d
 legacy_url: https://www.reversim.com/2013/06/184-carburetor-8-build-your-own-paas.html
 legacy_path: /2013/06/184-carburetor-8-build-your-own-paas

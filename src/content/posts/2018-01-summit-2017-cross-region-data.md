@@ -4,7 +4,7 @@ title: "Summit 2017: Cross Region Data Replication - Design Considerations /
 date: 2018-01-27T16:02:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Itai_Friendinger_-_Cross_Region_Data_Replication_-_Design_Considerations.mp3
+audio_url: https://m2.reversim.com/summit2017-Itai_Friendinger_-_Cross_Region_Data_Replication_-_Design_Considerations.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-cross-region-data.html
 legacy_path: /2018/01/summit-2017-cross-region-data
 ---

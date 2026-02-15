@@ -3,7 +3,7 @@ title: "Summit 2015: Developing a public API / Yonatan Maman"
 date: 2015-04-24T05:48:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Developing_a_public_API.mp3
+audio_url: https://m.reversim.com/summit2015_Developing_a_public_API.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-developing-public-api.html
 legacy_path: /2015/04/summit-2015-developing-public-api
 ---

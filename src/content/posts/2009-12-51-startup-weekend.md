@@ -2,7 +2,7 @@
 title: פודקאסט מספר  51 - Startup Weekend
 date: 2009-12-22T09:35:00.000Z
 episode: 51
-audio_url: http://m.reversim.com/reversim51_swisrael.mp3
+audio_url: https://m.reversim.com/reversim51_swisrael.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf41fn1Gol29yqizk4Z6Ztu8mO9Zga0QX7uw4KVdWbVnBjS9kWCPa7uwXO6QmLyRMnX_BqPLhyphenhyphenrb82zT42giMI956IqkTXzuOTFKk5_MN491MKsnaSEbcnzYX_3NhZdBvDdKVH2vXbJDI/s320/DSC_6262.JPG
 legacy_url: https://www.reversim.com/2009/12/51-startup-weekend.html
 legacy_path: /2009/12/51-startup-weekend

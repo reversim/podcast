@@ -3,7 +3,7 @@ title: "Summit 2018: Lean Startup in Action / Nissim Tapiro"
 date: 2019-01-12T20:07:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Nissim_Tapiro.mp3
+audio_url: https://m2.reversim.com/summit2018-Nissim_Tapiro.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-lean-startup-in-action.html
 legacy_path: /2019/01/summit-2018-lean-startup-in-action
 ---

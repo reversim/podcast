@@ -2,7 +2,7 @@
 title: 293 D with Shahar Shemesh
 date: 2016-03-14T21:13:00.000Z
 episode: 293
-audio_url: http://m2.reversim.com/reversim293_d.mp3
+audio_url: https://m2.reversim.com/reversim293_d.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFLHMiWjuLSyZVIOAiRkM-jRDmkOyW3Fg8YwdDco91u4_M0ExnXHzjBZwQiPf9iwYBo2_QM6QaciD0oPBw57pSRT35hYub7ZkBywuDWZ0g88n26HDacNaHKQBGcDAVcPsUFtjVaIZYslw/s200/4137JQFpiHL._SX258_BO1%252C204%252C203%252C200_.jpg
 legacy_url: https://www.reversim.com/2016/03/293-d-with-shahar-shemesh.html
 legacy_path: /2016/03/293-d-with-shahar-shemesh

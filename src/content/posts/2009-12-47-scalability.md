@@ -6,7 +6,7 @@ tags:
   - תשתיות נתונים
   - scalability
 episode: 47
-audio_url: http://m2.reversim.com/reversim47_eishay2.mp3
+audio_url: https://m2.reversim.com/reversim47_eishay2.mp3
 legacy_url: https://www.reversim.com/2009/12/47-scalability.html
 legacy_path: /2009/12/47-scalability
 ---

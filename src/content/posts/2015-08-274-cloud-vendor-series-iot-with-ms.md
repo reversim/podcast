@@ -2,7 +2,7 @@
 title: 274 Cloud vendor series - IoT with MS Azure
 date: 2015-08-21T06:51:00.000Z
 episode: 274
-audio_url: http://m.reversim.com/reversim274_cloud-IoT-azure2.mp3
+audio_url: https://m.reversim.com/reversim274_cloud-IoT-azure2.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6OP_cV0bFTP-PFmpsrtphWwZh6a-rvymxIQUC4lbWq_B31Ua9LD9i60UPXyavh-bjuDRe8zPgT3Nvsfa2nasAzGS_K-HAK4dy9WQ5LNUdcwykAo8q3OYWJH3E0ngS-4WiA6QqyUhsGTE/s200/IoT_Dev.jpg
 legacy_url: https://www.reversim.com/2015/08/274-cloud-vendor-series-iot-with-ms.html
 legacy_path: /2015/08/274-cloud-vendor-series-iot-with-ms

@@ -3,7 +3,7 @@ title: "Summit 2015: JTLocalize - an iOS localization framework / Matan Eilat"
 date: 2015-05-02T20:24:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_open_source_2_Matan_Eilat.mp3
+audio_url: https://m.reversim.com/summit2015_open_source_2_Matan_Eilat.mp3
 legacy_url: https://www.reversim.com/2015/05/summit-2015-jtlocalize-ios-localization.html
 legacy_path: /2015/05/summit-2015-jtlocalize-ios-localization
 ---

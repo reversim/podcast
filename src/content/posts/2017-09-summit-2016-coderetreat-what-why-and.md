@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: Coderetreat - What, Why and How / Erez Lotan"
 date: 2017-09-05T18:02:00.000Z
-audio_url: http://m2.reversim.com/summit2016_Lightning_talk_D1_Erez_L.mp3
+audio_url: https://m2.reversim.com/summit2016_Lightning_talk_D1_Erez_L.mp3
 legacy_url: https://www.reversim.com/2017/09/summit-2016-coderetreat-what-why-and.html
 legacy_path: /2017/09/summit-2016-coderetreat-what-why-and
 ---

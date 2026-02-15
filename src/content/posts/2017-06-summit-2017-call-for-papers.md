@@ -1,7 +1,7 @@
 ---
 title: Summit 2017 Call for Papers
 date: 2017-06-27T21:05:00.000Z
-audio_url: http://m2.reversim.com/reversim2017-cfp.mp3
+audio_url: https://m2.reversim.com/reversim2017-cfp.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIan0quA3Kbq71FRZt2wUkFqiBkDLhXxphOkh3DLcq2c3PwTFX0K4qk2weNNey0MasrWBLdAK5AfQy0clLZV3eiUL_z654ZBGr3G94IeroLsKkOhkXvC8idyBss9M97jGVce1C43_Y9p4/s200/Screen+Shot+2017-06-27+at+23.46.30.png
 legacy_url: https://www.reversim.com/2017/06/summit-2017-call-for-papers.html
 legacy_path: /2017/06/summit-2017-call-for-papers

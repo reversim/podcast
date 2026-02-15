@@ -4,7 +4,7 @@ title: 'Summit 2016: "Operations" - you keep using that word, but I don’t thin
 date: 2017-07-31T19:30:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_AVISHAI_ISH-SHALOM.mp3
+audio_url: https://m2.reversim.com/summit2016_AVISHAI_ISH-SHALOM.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-operations-you-keep-using.html
 legacy_path: /2017/07/summit-2016-operations-you-keep-using
 ---

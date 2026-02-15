@@ -3,7 +3,7 @@ title: "Summit 2017: Wikipedia's Democratic Structure / Agam Rafaeli"
 date: 2017-12-12T07:32:00.000Z
 tags:
   - summit
-audio_url: http://traffic.libsyn.com/reversim/summit2017-Agam_Rafaeli_-_Wikipedias_Democratic_Structure.mp3
+audio_url: https://s3.amazonaws.com/reversim/summit2017-Agam_Rafaeli_-_Wikipedias_Democratic_Structure.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-wikipedias-democratic.html
 legacy_path: /2017/12/summit-2017-wikipedias-democratic
 ---

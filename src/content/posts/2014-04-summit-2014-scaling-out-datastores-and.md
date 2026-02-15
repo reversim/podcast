@@ -3,7 +3,7 @@ title: "Summit 2014: Scaling out Datastores and the CAP Theorem / Yoav Abrahami"
 date: 2014-04-27T18:56:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-CAP-theorem.mp3
+audio_url: https://m.reversim.com/reversim2014-CAP-theorem.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-scaling-out-datastores-and.html
 legacy_path: /2014/04/summit-2014-scaling-out-datastores-and
 ---

@@ -2,7 +2,7 @@
 title: 330 with Shir Meir about PyData etc
 date: 2018-01-01T19:15:00.000Z
 episode: 330
-audio_url: http://m2.reversim.com/reversim330_shir_meir_lador.mp3
+audio_url: https://m2.reversim.com/reversim330_shir_meir_lador.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEis4Z9luk4qg2QMj2RpuF9vveSIEvLIpchuBgHUcX8CDbHNMw1KGp8NKNM0gTDt7qdHoiLprSSWY9kOY-ANU7IJ1yd62Z6MFElXJ1Phyphenhyphen53cebSLjoKbFFjinpIYC4l2bNbKjrlH4C2wfy8/s200/logo.288981a8dfa8.png
 legacy_url: https://www.reversim.com/2018/01/330-with-shir-meir-about-pydata-etc.html
 legacy_path: /2018/01/330-with-shir-meir-about-pydata-etc

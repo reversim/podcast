@@ -4,7 +4,7 @@ title: "Summit 2018: 7±2 Reasons Psychology Will Help You Write Better Code /
 date: 2019-01-10T21:41:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Moran_Weber-and-Jonathan_Avinor.mp3
+audio_url: https://m2.reversim.com/summit2018-Moran_Weber-and-Jonathan_Avinor.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-72-reasons-psychology-will.html
 legacy_path: /2019/01/summit-2018-72-reasons-psychology-will
 ---

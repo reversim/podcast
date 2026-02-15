@@ -3,7 +3,7 @@ title: "Summit 2014: Proper Unit Tests / Omer Lachish"
 date: 2014-04-21T20:50:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-Unit-Tests.mp3
+audio_url: https://m.reversim.com/reversim2014-Unit-Tests.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-proper-unit-tests-omer.html
 legacy_path: /2014/04/summit-2014-proper-unit-tests-omer
 ---

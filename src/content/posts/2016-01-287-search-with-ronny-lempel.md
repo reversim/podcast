@@ -2,7 +2,7 @@
 title: 287 Search, with Ronny Lempel
 date: 2016-01-10T21:34:00.000Z
 episode: 287
-audio_url: http://m2.reversim.com/reversim287_Search-Ronny-Lempel.mp3
+audio_url: https://m2.reversim.com/reversim287_Search-Ronny-Lempel.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLOE7v18B7ToTx9FJ-FiVn_UbDYETEiNR7C6EuvL47i4TNKWphe-zRDWI9pDVN_AV3urRoNVCWxQRXmOfszZSIuZh5iNLQBVxRac9VFgKWjtH9zQXJOi-R45KC8A3Uh91GjebHEWchWmM/s200/512.png
 legacy_url: https://www.reversim.com/2016/01/287-search-with-ronny-lempel.html
 legacy_path: /2016/01/287-search-with-ronny-lempel

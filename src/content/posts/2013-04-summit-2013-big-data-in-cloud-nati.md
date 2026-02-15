@@ -3,7 +3,7 @@ title: "Summit 2013: Big Data in the Cloud, Nati Shalon"
 date: 2013-04-04T11:42:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_big_data_in_the_cloud.mp3
+audio_url: https://m.reversim.com/summit2013_big_data_in_the_cloud.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-big-data-in-cloud-nati.html
 legacy_path: /2013/04/summit-2013-big-data-in-cloud-nati
 ---

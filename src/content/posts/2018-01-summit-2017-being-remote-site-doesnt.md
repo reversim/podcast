@@ -4,7 +4,7 @@ title: "Summit 2017: Being a remote site doesn’t have to suck / Hagai Levin &
 date: 2018-01-16T20:15:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Hagai_Levin_and_Noy_Gabay_-_Being_a_remote_site_doesnt_have_to_suck.mp3
+audio_url: https://m2.reversim.com/summit2017-Hagai_Levin_and_Noy_Gabay_-_Being_a_remote_site_doesnt_have_to_suck.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-being-remote-site-doesnt.html
 legacy_path: /2018/01/summit-2017-being-remote-site-doesnt
 ---

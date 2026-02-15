@@ -2,7 +2,7 @@
 title: 267 Cloud Vendor Series - Mobile Backends with AWS
 date: 2015-07-05T07:32:00.000Z
 episode: 267
-audio_url: http://m.reversim.com/reversim267_cloud-mobile-aws.mp3
+audio_url: https://m.reversim.com/reversim267_cloud-mobile-aws.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhR70_TSCzU6qbO-U91jH7TZfm-rcN6hzwm80vGpuwNKSkJKokm0vfRicCP5TpSxzubiqrBQhNoDsZRYgjv8boIq3mvamkRTq_q0i1aYP0epKWz5kdrQYf11nmO3gJGBrFeB1NSelWf25g/s200/aws_logo_web_300px.png
 legacy_url: https://www.reversim.com/2015/07/267-cloud-vendor-series-mobile-backends.html
 legacy_path: /2015/07/267-cloud-vendor-series-mobile-backends

@@ -3,7 +3,7 @@ title: "Summit 2013: Kenshoo and the GreenPlum, by Lior Harel"
 date: 2013-04-08T15:14:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_kenshoo_and_the_GreenPlum.mp3
+audio_url: https://m.reversim.com/summit2013_kenshoo_and_the_GreenPlum.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-kenshoo-and-greenplum-by.html
 legacy_path: /2013/04/summit-2013-kenshoo-and-greenplum-by
 ---

@@ -2,7 +2,7 @@
 title: 235 Flat Dev Organizations
 date: 2014-10-25T19:13:00.000Z
 episode: 235
-audio_url: http://m.reversim.com/reversim235_flat-orgs.mp3
+audio_url: https://m.reversim.com/reversim235_flat-orgs.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglMyye4RnVwjzmWUBYzkBUqqWjiKFxftWwbgH2LD1ymepFWQ_WKwn3NpmD04tajV5ae7Rwonu9KXCSgxp0mSgbx8DN8J_ByuHFAyiTmVhyuNUIGm3njxyvNTI5IZYgQSbfUWyxtSknYAU/s1600/convertro.png
 legacy_url: https://www.reversim.com/2014/10/235-flat-dev-organizations.html
 legacy_path: /2014/10/235-flat-dev-organizations

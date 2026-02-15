@@ -3,7 +3,7 @@ title: "Summit 2014: 10 Reasons to be excited about Go / Dvir Volk"
 date: 2014-04-20T12:33:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-go.mp3
+audio_url: https://m.reversim.com/reversim2014-go.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-10-reasons-to-be-excited.html
 legacy_path: /2014/04/summit-2014-10-reasons-to-be-excited
 ---

@@ -3,7 +3,7 @@ title: "Summit 2013: Defensive Programming, by Lior Sion"
 date: 2013-04-06T21:34:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_defensive_programming.mp3
+audio_url: https://m.reversim.com/summit2013_defensive_programming.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-defensive-programming-by.html
 legacy_path: /2013/04/summit-2013-defensive-programming-by
 ---

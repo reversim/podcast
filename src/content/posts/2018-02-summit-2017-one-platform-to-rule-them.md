@@ -3,7 +3,7 @@ title: "Summit 2017: One platform to rule them all / Moshe Eshel"
 date: 2018-02-14T12:13:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Moshe_Eshel.mp3
+audio_url: https://m2.reversim.com/summit2017-Moshe_Eshel.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-one-platform-to-rule-them.html
 legacy_path: /2018/02/summit-2017-one-platform-to-rule-them
 ---

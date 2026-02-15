@@ -3,7 +3,7 @@ title: "Summit 2013: Building Network and Battery Efficient Apps, by Ran Nachman
 date: 2013-04-04T14:22:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_building_network_and_battery_efficient_apps.mp3
+audio_url: https://m.reversim.com/summit2013_building_network_and_battery_efficient_apps.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-building-network-and.html
 legacy_path: /2013/04/summit-2013-building-network-and
 ---

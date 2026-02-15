@@ -4,7 +4,7 @@ date: 2012-05-02T05:47:00.000Z
 tags:
   - finalclass
 episode: 137
-audio_url: http://m.reversim.com/reversim135_finalclass17.mp3
+audio_url: https://m.reversim.com/reversim135_finalclass17.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi675jJ6zLRdXzkJIKyrKCFILfEk4B3Qd3Us-47zet-iMRU4iVheKb7DveE1qESSuE9MNY5HlP6by9gnW0W_Ru4NZHhtt_1QMsYg8VkUWsrui0ACXnbHMFsjPptOWv3mbfU8Ql2H2DT5pU/s200/Deadline+2.jpg
 legacy_url: https://www.reversim.com/2012/05/137-final-class-17-software-deadlines.html
 legacy_path: /2012/05/137-final-class-17-software-deadlines

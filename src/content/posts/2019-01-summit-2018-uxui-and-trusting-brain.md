@@ -3,7 +3,7 @@ title: "Summit 2018: UX/UI and the Trusting Brain / Jonathan Saring"
 date: 2019-01-03T07:58:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Jonathan_Saring.mp3
+audio_url: https://m2.reversim.com/summit2018-Jonathan_Saring.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-uxui-and-trusting-brain.html
 legacy_path: /2019/01/summit-2018-uxui-and-trusting-brain
 ---

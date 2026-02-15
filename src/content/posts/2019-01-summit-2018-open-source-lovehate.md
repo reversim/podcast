@@ -3,7 +3,7 @@ title: "Summit 2018: Open-source: A Love/Hate Relationship / Uri Shamay"
 date: 2019-01-30T21:10:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Uri_Shamay.mp3
+audio_url: https://m2.reversim.com/summit2018-Uri_Shamay.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-open-source-lovehate.html
 legacy_path: /2019/01/summit-2018-open-source-lovehate
 ---

@@ -2,7 +2,7 @@
 title: 'Summit 2016: Reverse Engineering the "Human API" for Automation and
   Profit / Nati Cohen'
 date: 2017-09-01T18:13:00.000Z
-audio_url: http://m2.reversim.com/summit2016_Lightning_talk_D1_Nati_C.mp3
+audio_url: https://m2.reversim.com/summit2016_Lightning_talk_D1_Nati_C.mp3
 legacy_url: https://www.reversim.com/2017/09/summit-2016-reverse-engineering-human.html
 legacy_path: /2017/09/summit-2016-reverse-engineering-human
 ---

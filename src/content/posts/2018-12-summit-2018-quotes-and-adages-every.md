@@ -3,7 +3,7 @@ title: "Summit 2018: Quotes and Adages every developer must know / Erez Lotan"
 date: 2018-12-22T21:45:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Erez_Lotan.mp3
+audio_url: https://m2.reversim.com/summit2018-Erez_Lotan.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-quotes-and-adages-every.html
 legacy_path: /2018/12/summit-2018-quotes-and-adages-every
 ---

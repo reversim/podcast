@@ -3,7 +3,7 @@ title: "Summit 2017: The Freelancer Journey / Haim Yadid"
 date: 2018-01-17T12:30:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Haim_Yadid_-_The_Freelancer_Journey.mp3
+audio_url: https://m2.reversim.com/summit2017-Haim_Yadid_-_The_Freelancer_Journey.mp3
 legacy_url: https://www.reversim.com/2018/01/summit-2017-freelancer-journey-haim.html
 legacy_path: /2018/01/summit-2017-freelancer-journey-haim
 ---

@@ -3,7 +3,7 @@ title: "Summit 2017: What do we care about? / Nir Kriss"
 date: 2018-02-17T19:40:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Nir_Kriss_-_What_do_we_care_about.mp3
+audio_url: https://m2.reversim.com/summit2017-Nir_Kriss_-_What_do_we_care_about.mp3
 legacy_url: https://www.reversim.com/2018/02/summit-2017-what-do-we-care-about-nir.html
 legacy_path: /2018/02/summit-2017-what-do-we-care-about-nir
 ---

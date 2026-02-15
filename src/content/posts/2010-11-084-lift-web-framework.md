@@ -2,7 +2,7 @@
 title: 084 The Lift Web Framework
 date: 2010-11-19T12:16:00.000Z
 episode: 84
-audio_url: http://m.reversim.com/reversim84_lift.mp3
+audio_url: https://m.reversim.com/reversim84_lift.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3oUmfhyphenhyphen15umJpNgriv5hrNSbMaHu12j9XdTm_VzrB80J1TyouKvkTeHCMtfGMCWJdOX4bDltm6LMFV4Z4PfYT8oRD6Um8phA0xrh3W7yPocMiaoe8YaNfXF3hitthfmTI432B-arvFDw/s1600/Lift+__+Home.png
 legacy_url: https://www.reversim.com/2010/11/084-lift-web-framework.html
 legacy_path: /2010/11/084-lift-web-framework

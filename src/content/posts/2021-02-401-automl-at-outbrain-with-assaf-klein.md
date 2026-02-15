@@ -2,7 +2,7 @@
 title: 401 AutoML at outbrain with Assaf Klein
 date: 2021-02-21T19:28:00.000Z
 episode: 401
-audio_url: http://m2.reversim.com/reversim401_automl.mp3
+audio_url: https://m2.reversim.com/reversim401_automl.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdeCA9DXYRAxLjjhx4XLy55vvLuRbHkuwIi5EsPkRdmiM5r5Swo9ylcLPv8xLllnhcPKVMDVk7jt7Ej0l5mM8sa12hzRMNIv7QBtgCyEgBsY8LyuRQTxHVyKCzQjiDv0kJMnbxWvcHYlo/
 legacy_url: https://www.reversim.com/2021/02/401-automl-at-outbrain-with-assaf-klein.html
 legacy_path: /2021/02/401-automl-at-outbrain-with-assaf-klein

@@ -4,7 +4,7 @@ title: "Summit 2018: Master the Art of the AST (and Take Control of Your JS!) /
 date: 2019-02-06T19:51:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Yonatan_Mevorach.mp3
+audio_url: https://m2.reversim.com/summit2018-Yonatan_Mevorach.mp3
 legacy_url: https://www.reversim.com/2019/02/summit-2018-master-art-of-ast-and-take.html
 legacy_path: /2019/02/summit-2018-master-art-of-ast-and-take
 ---

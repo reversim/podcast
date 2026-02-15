@@ -3,7 +3,7 @@ title: "Summit 2018: The Hall of shame / Sohar Sacks & Ido Viron"
 date: 2018-12-29T19:32:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Hall_of_shame.mp3
+audio_url: https://m2.reversim.com/summit2018-Hall_of_shame.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-hall-of-shame-sohar-sacks.html
 legacy_path: /2018/12/summit-2018-hall-of-shame-sohar-sacks
 ---

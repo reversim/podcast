@@ -5,7 +5,7 @@ tags:
   - cache
   - finalclass
 episode: 185
-audio_url: http://m.reversim.com/reversim185_final_class_30_caching.mp3
+audio_url: https://m.reversim.com/reversim185_final_class_30_caching.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_ta-vbRI2s9zDkhMvSaeHt2SURokLGijmR_dr3iXyKVvQAedxa_QJhLAjq3SVTELIJai5hBzmYoDDeRa8A1bYDAbyV4HbfLCed4modCh5r7qw=s0-d
 legacy_url: https://www.reversim.com/2013/06/185-final-class-30-caching.html
 legacy_path: /2013/06/185-final-class-30-caching

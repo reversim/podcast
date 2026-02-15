@@ -3,7 +3,7 @@ title: "Summit 2016: Simple, Battle Proven, Microservices Strategy / Erez Lotan"
 date: 2017-07-30T20:15:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_EREZ_LOTAN.mp3
+audio_url: https://m2.reversim.com/summit2016_EREZ_LOTAN.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-simple-battle-proven.html
 legacy_path: /2017/07/summit-2016-simple-battle-proven
 ---

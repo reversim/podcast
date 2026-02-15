@@ -3,7 +3,7 @@ title: "Summit 2013: Lazy Developer Zen, by Eran Sandler"
 date: 2013-04-12T12:45:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_lazy_developer_zen.mp3
+audio_url: https://m.reversim.com/summit2013_lazy_developer_zen.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-lazy-developer-zen-by-eran.html
 legacy_path: /2013/04/summit-2013-lazy-developer-zen-by-eran
 ---

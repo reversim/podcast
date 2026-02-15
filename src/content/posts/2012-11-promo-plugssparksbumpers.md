@@ -1,7 +1,7 @@
 ---
 title: Promo - Plugs/Sparks/Bumpers
 date: 2012-11-23T08:48:00.000Z
-audio_url: http://m.reversim.com/reversim155_promo.mp3
+audio_url: https://m.reversim.com/reversim155_promo.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsrLDiUQFqAkh5kA0Hbefn8ryY_8BbsTduQuSAVQI6Cn5Zk4kNU6-jQZKZnAcWP8zitiFs68xcQxFwj8IdM5vexsB2krV6HZag3sjr0jA_UKbcztVMwh_8DOUfCS_PfEdZIal2DeIOFnE/s200/promo.png
 legacy_url: https://www.reversim.com/2012/11/promo-plugssparksbumpers.html
 legacy_path: /2012/11/promo-plugssparksbumpers

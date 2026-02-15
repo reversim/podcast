@@ -2,7 +2,7 @@
 title: 395 Securing Critical Infrastructure
 date: 2020-08-08T19:30:00.000Z
 episode: 395
-audio_url: http://m2.reversim.com/reversim395-Securing_critical_infrastructure.mp3
+audio_url: https://m2.reversim.com/reversim395-Securing_critical_infrastructure.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjInNeE1FVXfDUX8CLtk5It9TL2Tagzwt-MA6OlPvPO80lypB-ip50oxk79Spsq9LzY1GoSxnFUTx7BVJnQxD6lYrmlzC6v4HBWG_eRxcNA04z0i_MHng_effJox0a6iNnnaa-mzhUtwm8/w158-h130/secure.png
 legacy_url: https://www.reversim.com/2020/08/395-securing-critical-infrastructure.html
 legacy_path: /2020/08/395-securing-critical-infrastructure

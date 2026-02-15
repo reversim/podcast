@@ -4,7 +4,7 @@ title: "Summit 2018: Career growth hack: See what other don't, Fix what other
 date: 2018-12-31T20:33:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Itiel_Shwartz.mp3
+audio_url: https://m2.reversim.com/summit2018-Itiel_Shwartz.mp3
 legacy_url: https://www.reversim.com/2018/12/summit-2018-career-growth-hack-see-what.html
 legacy_path: /2018/12/summit-2018-career-growth-hack-see-what
 ---

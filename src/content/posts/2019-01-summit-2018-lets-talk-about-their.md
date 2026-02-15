@@ -3,7 +3,7 @@ title: "Summit 2018: Let's talk about THEIR salaries / Shahar Kedar"
 date: 2019-01-24T07:25:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Shahar_Kedar.mp3
+audio_url: https://m2.reversim.com/summit2018-Shahar_Kedar.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-lets-talk-about-their.html
 legacy_path: /2019/01/summit-2018-lets-talk-about-their
 ---

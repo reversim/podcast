@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: A shallow introduction to deep learning / Eyal Gruss"
 date: 2017-08-30T20:44:00.000Z
-audio_url: http://m2.reversim.com/summit2016_Eyal_Gruss.mp3
+audio_url: https://m2.reversim.com/summit2016_Eyal_Gruss.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-shallow-introduction-to.html
 legacy_path: /2017/08/summit-2016-shallow-introduction-to
 ---

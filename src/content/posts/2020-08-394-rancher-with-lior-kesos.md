@@ -2,7 +2,7 @@
 title: 394 Rancher with Lior Kesos
 date: 2020-08-02T17:42:00.000Z
 episode: 394
-audio_url: http://m2.reversim.com/reversim394-Rancher-with-Lior-Kesos.mp3
+audio_url: https://m2.reversim.com/reversim394-Rancher-with-Lior-Kesos.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnsp8KTme_DpxBu_tC2IE2VCpKE-O3oCrjjcyWsnfqpVDeN1QHBoKmJG3oqhzlvJeWSICUAH236_Ixulu4cw-QHJmajbWFnZvWzrcEcCXMySv4Ug7qzTsqR4mpkRtaYOMTR3ecDfitvx0/w210-h210/rancher.png
 legacy_url: https://www.reversim.com/2020/08/394-rancher-with-lior-kesos.html
 legacy_path: /2020/08/394-rancher-with-lior-kesos

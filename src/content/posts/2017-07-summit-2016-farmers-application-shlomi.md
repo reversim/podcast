@@ -3,7 +3,7 @@ title: "Summit 2016: Farmers application (מהחקלאי) / Shlomi Zadok"
 date: 2017-07-19T07:05:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_Open_Source_D1_Shlomi_Z.mp3
+audio_url: https://m2.reversim.com/summit2016_Open_Source_D1_Shlomi_Z.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-farmers-application-shlomi.html
 legacy_path: /2017/07/summit-2016-farmers-application-shlomi
 ---

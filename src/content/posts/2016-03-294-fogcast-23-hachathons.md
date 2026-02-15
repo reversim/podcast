@@ -4,7 +4,7 @@ date: 2016-03-15T21:53:00.000Z
 tags:
   - fogcast
 episode: 294
-audio_url: http://m2.reversim.com/reversim294_fogcast23-hackatons.mp3
+audio_url: https://m2.reversim.com/reversim294_fogcast23-hackatons.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzewkdr8qOicxKrinRjJ3WhferfIt-q6lWt5fL9JGCFVZzVhFpMa3ZUrTGpaBL_63Hc-HYBkbc_hzy9IId-cMOEcGwhWSULiQ9TGtQkneGeTpWyCl7cwlw8zCoiDQ7_fJe07kFneMj_jk/s200/5f6.hackathon.jpg
 legacy_url: https://www.reversim.com/2016/03/294-fogcast-23-hachathons.html
 legacy_path: /2016/03/294-fogcast-23-hachathons

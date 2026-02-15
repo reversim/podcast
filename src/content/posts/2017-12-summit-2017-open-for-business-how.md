@@ -4,7 +4,7 @@ title: 'Summit 2017: Open for Business: How Thinking "Productly Open" Will Save
 date: 2017-12-25T20:31:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2017-Danny_Albocher_-_Open_for_Business.mp3
+audio_url: https://m2.reversim.com/summit2017-Danny_Albocher_-_Open_for_Business.mp3
 legacy_url: https://www.reversim.com/2017/12/summit-2017-open-for-business-how.html
 legacy_path: /2017/12/summit-2017-open-for-business-how
 ---

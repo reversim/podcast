@@ -5,7 +5,7 @@ tags:
   - devops
   - vagrant
 episode: 178
-audio_url: http://m.reversim.com/reversim178_boxen_vagrant_and_friends.mp3
+audio_url: https://m.reversim.com/reversim178_boxen_vagrant_and_friends.mp3
 cover_image: https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tJf2vIGO00c0Ayk-88v5jWFFSdUsDXAWRdHcGi4kRMWIE8S_oPAxNRxTFBZsPxkBJejRNRjQp2PE-Pb-I33S6oUYgyovU_5qfEGhz5TxzDrw7CdWF1LOFF9qpYP5ACUKEpPCGqlwcj1svi=s0-d
 legacy_url: https://www.reversim.com/2013/05/178-boxen-vagrant-and-friends.html
 legacy_path: /2013/05/178-boxen-vagrant-and-friends

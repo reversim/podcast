@@ -2,7 +2,7 @@
 title: "פודקאסט מספר 25: מרכזי מידע data centers"
 date: 2009-06-18T20:51:00.000Z
 episode: 25
-audio_url: http://m2.reversim.com/reversim25_dc.mp3
+audio_url: https://m2.reversim.com/reversim25_dc.mp3
 legacy_url: https://www.reversim.com/2009/06/25-data-centers.html
 legacy_path: /2009/06/25-data-centers
 ---

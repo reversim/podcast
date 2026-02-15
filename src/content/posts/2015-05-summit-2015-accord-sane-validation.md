@@ -3,7 +3,7 @@ title: "Summit 2015: Accord: A sane validation library for Scala / Tomer Gabel"
 date: 2015-05-02T20:20:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_open_source_2_Tomer_Gabel.mp3
+audio_url: https://m.reversim.com/summit2015_open_source_2_Tomer_Gabel.mp3
 legacy_url: https://www.reversim.com/2015/05/summit-2015-accord-sane-validation.html
 legacy_path: /2015/05/summit-2015-accord-sane-validation
 ---

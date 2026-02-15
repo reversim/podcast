@@ -3,7 +3,7 @@ title: 'Summit 2016: Dealing with "Conway law" / Guy Doulberg'
 date: 2017-07-24T21:14:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2016_Lightning_talk_d2_Guy_D.mp3
+audio_url: https://m2.reversim.com/summit2016_Lightning_talk_d2_Guy_D.mp3
 legacy_url: https://www.reversim.com/2017/07/summit-2016-dealing-with-conway-law-guy.html
 legacy_path: /2017/07/summit-2016-dealing-with-conway-law-guy
 ---

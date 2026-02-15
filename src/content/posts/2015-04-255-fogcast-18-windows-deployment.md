@@ -4,7 +4,7 @@ date: 2015-04-14T07:45:00.000Z
 tags:
   - fogcast
 episode: 255
-audio_url: http://m.reversim.com/reversim255_fogcast18-win-deployment.mp3
+audio_url: https://m.reversim.com/reversim255_fogcast18-win-deployment.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjftqgMVaeRV0N5uxeoW2pHOdbWqtKMgM3SUub3muALA4STZhUfZddU7OMvCnNsogYumxyn591ER8wQdwv3h8DZtYUvjdCycc0U3zwEmoaJaukM2oL47NVC-FzvgNeDoF7NckA10eQb_Rg/s1600/Deploying+Images+with+Windows+Deployment+Services_1.png
 legacy_url: https://www.reversim.com/2015/04/255-fogcast-18-windows-deployment.html
 legacy_path: /2015/04/255-fogcast-18-windows-deployment

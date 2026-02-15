@@ -2,7 +2,7 @@
 title: 098 Ruby with Reuven Lerner
 date: 2011-04-13T12:35:00.000Z
 episode: 98
-audio_url: http://m.reversim.com/reversim98_reuven_lerner.mp3
+audio_url: https://m.reversim.com/reversim98_reuven_lerner.mp3
 legacy_url: https://www.reversim.com/2011/04/098-ruby-with-reuven-lerner.html
 legacy_path: /2011/04/098-ruby-with-reuven-lerner
 ---

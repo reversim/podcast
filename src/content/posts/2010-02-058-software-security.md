@@ -2,7 +2,7 @@
 title: 058 אבטחת מידע בתכנה  software security
 date: 2010-02-14T12:21:00.000Z
 episode: 58
-audio_url: http://m.reversim.com/reversim58_sec.mp3
+audio_url: https://m.reversim.com/reversim58_sec.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-bMZK9XdYai1igBBExbG_a26ivTCFIdkFdELPApAiPdjxft8qdSXbu0CD9sfgV94U-V3qBYHc5_NQJWa3KMThwgehe7fQYfkSJmQ1XDfQIrdMPLG_xgcylAOyiL_9ukZS_R3BZ8qTaiM/s320/white_hat_hacker_cartoon.jpg
 legacy_url: https://www.reversim.com/2010/02/058-software-security.html
 legacy_path: /2010/02/058-software-security

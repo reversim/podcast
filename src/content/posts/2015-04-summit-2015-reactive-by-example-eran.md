@@ -3,7 +3,7 @@ title: "Summit 2015: Reactive by Example / Eran Harel"
 date: 2015-04-16T20:05:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2015_Reactive_by_Example.mp3
+audio_url: https://m.reversim.com/summit2015_Reactive_by_Example.mp3
 legacy_url: https://www.reversim.com/2015/04/summit-2015-reactive-by-example-eran.html
 legacy_path: /2015/04/summit-2015-reactive-by-example-eran
 ---

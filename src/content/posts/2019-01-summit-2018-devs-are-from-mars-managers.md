@@ -4,7 +4,7 @@ title: "Summit 2018: Devs are from Mars, Managers are from Venus: How to
 date: 2019-01-05T21:51:00.000Z
 tags:
   - summit
-audio_url: http://m2.reversim.com/summit2018-Michael_Shalyt.mp3
+audio_url: https://m2.reversim.com/summit2018-Michael_Shalyt.mp3
 legacy_url: https://www.reversim.com/2019/01/summit-2018-devs-are-from-mars-managers.html
 legacy_path: /2019/01/summit-2018-devs-are-from-mars-managers
 ---

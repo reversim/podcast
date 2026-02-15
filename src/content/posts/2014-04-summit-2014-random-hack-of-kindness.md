@@ -3,7 +3,7 @@ title: "Summit 2014: Random Hack of Kindness / Lital Hassine"
 date: 2014-04-12T12:13:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-ignite-kindness.mp3
+audio_url: https://m.reversim.com/reversim2014-ignite-kindness.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-random-hack-of-kindness.html
 legacy_path: /2014/04/summit-2014-random-hack-of-kindness
 ---

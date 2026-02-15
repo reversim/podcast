@@ -3,7 +3,7 @@ title: "Summit 2014 Panel: Moving Fast in Big Companies"
 date: 2014-04-30T05:37:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/reversim2014-Moving-fast.mp3
+audio_url: https://m.reversim.com/reversim2014-Moving-fast.mp3
 legacy_url: https://www.reversim.com/2014/04/summit-2014-panel-moving-fast-in-big.html
 legacy_path: /2014/04/summit-2014-panel-moving-fast-in-big
 ---

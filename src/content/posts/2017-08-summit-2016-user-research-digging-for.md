@@ -1,7 +1,7 @@
 ---
 title: "Summit 2016: User Research: Digging for Gold / Kaleb Loosbrock"
 date: 2017-08-28T20:53:00.000Z
-audio_url: http://m2.reversim.com/summit2016_KALEB_LOOSBROCK.mp3
+audio_url: https://m2.reversim.com/summit2016_KALEB_LOOSBROCK.mp3
 legacy_url: https://www.reversim.com/2017/08/summit-2016-user-research-digging-for.html
 legacy_path: /2017/08/summit-2016-user-research-digging-for
 ---

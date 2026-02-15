@@ -3,7 +3,7 @@ title: "Summit 2013: The Mathematical Side of User Happiness, by Roee Adler"
 date: 2013-04-12T13:49:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_the_mathematical_side_of_user_happiness.mp3
+audio_url: https://m.reversim.com/summit2013_the_mathematical_side_of_user_happiness.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-mathematical-side-of-user.html
 legacy_path: /2013/04/summit-2013-mathematical-side-of-user
 ---

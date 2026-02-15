@@ -4,7 +4,7 @@ date: 2014-07-03T21:14:00.000Z
 tags:
   - carburetor
 episode: 222
-audio_url: http://m.reversim.com/reversim222_carburetor14.mp3
+audio_url: https://m.reversim.com/reversim222_carburetor14.mp3
 cover_image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEius1OlZVfkL-q6jYPkkl7HYQnlwXu5WRXN3pOOtYvukiGoGTP4SmJbKbhRPcC50x5LnIfnAUYKJ5qFARhtoJSoB-O445C246Xe0LFGWTs-mu4HxLFZJWIUrQFl4zu58KpdFQFuSzyrASg/s1600/python-vs-java-726367-copy.jpg
 legacy_url: https://www.reversim.com/2014/07/222-carburetor-14-from-java-to-python.html
 legacy_path: /2014/07/222-carburetor-14-from-java-to-python

@@ -3,7 +3,7 @@ title: "Summit 2013: Building web infrastructure for 10M users, by Yoav Abrahami
 date: 2013-04-04T12:28:00.000Z
 tags:
   - summit
-audio_url: http://m.reversim.com/summit2013_building_a_web_infrastructure_for_10M_users.mp3
+audio_url: https://m.reversim.com/summit2013_building_a_web_infrastructure_for_10M_users.mp3
 legacy_url: https://www.reversim.com/2013/04/summit-2013-building-web-infrastructure.html
 legacy_path: /2013/04/summit-2013-building-web-infrastructure
 ---
