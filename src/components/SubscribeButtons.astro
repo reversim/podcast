@@ -5,9 +5,7 @@ const siteBase = import.meta.env.SITE ?? 'https://reversim.github.io';
 const podcastFeed = new URL(withBase('/podcast.xml'), siteBase).toString();
 
 const links = [
-	{ href: `pcast://${podcastFeed.replace(/^https?:\/\//, '')}`, label: 'Any App', kind: 'app' },
 	{ href: withBase('/podcast.xml'), label: 'Podcast RSS', kind: 'rss' },
-	{ href: withBase('/rss.xml'), label: 'Site RSS', kind: 'rss' },
 ];
 ---
 
