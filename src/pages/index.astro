@@ -2,11 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { getAllPosts, getPostPermalink } from '../lib/posts';
-import { withBase } from '../lib/urls';
 
-const posts = await getAllPosts();
+const posts = (await getAllPosts()).filter((post) => post.data.audio_url);
 const [latest] = posts;
 const latestLink = latest ? getPostPermalink(latest) : '#';
+const initialCount = 12;
+const initialPosts = posts.slice(1, initialCount + 1);
+const deferredPosts = posts.slice(initialCount + 1);
 ---
 
 <BaseLayout title="רברס עם פלטפורמה" description="פודקאסט על תוכנה, מוצר, ותשתיות — בעברית.">
@@ -33,10 +35,51 @@ const latestLink = latest ? getPostPermalink(latest) : '#';
 
 	<section>
 		<h2 class="section-title">פרקים אחרונים</h2>
-		<div class="posts-grid">
-			{posts.slice(1, 10).map((post) => (
+		<div id="home-posts-grid" class="posts-grid posts-grid-home">
+			{initialPosts.map((post) => (
+				<PostCard post={post} />
+			))}
+		</div>
+		{
+			deferredPosts.length > 0 && (
+				<div class="episodes-load-more-wrap">
+					<button id="home-load-more" class="episodes-load-more" type="button">
+						טען עוד פרקים
+					</button>
+				</div>
+			)
+		}
+		<div id="home-deferred-cards" hidden>
+			{deferredPosts.map((post) => (
 				<PostCard post={post} />
 			))}
 		</div>
 	</section>
+	<script is:inline>
+		(() => {
+			const grid = document.getElementById('home-posts-grid');
+			const button = document.getElementById('home-load-more');
+			const deferred = document.getElementById('home-deferred-cards');
+
+			if (!grid || !button || !deferred) return;
+
+			const pageSize = 12;
+
+			const renderNextBatch = () => {
+				const cards = Array.from(deferred.querySelectorAll('.post-card')).slice(0, pageSize);
+				if (!cards.length) {
+					button.remove();
+					return;
+				}
+
+				const fragment = document.createDocumentFragment();
+				cards.forEach((card) => fragment.appendChild(card));
+				grid.appendChild(fragment);
+
+				if (!deferred.querySelector('.post-card')) button.remove();
+			};
+
+			button.addEventListener('click', renderNextBatch);
+		})();
+	</script>
 </BaseLayout>

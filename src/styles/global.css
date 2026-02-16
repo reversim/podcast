@@ -131,7 +131,7 @@ img {
 	display: flex;
 	align-items: center;
 	gap: 0;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	padding-top: 0.4rem;
 	width: max-content;
 	max-width: 100%;
@@ -139,7 +139,9 @@ img {
 	border: 1px solid color-mix(in oklab, var(--line) 75%, #bfd2f2 25%);
 	border-radius: 999px;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
-	overflow: hidden;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-width: thin;
 }
 
 .subscribe-label {
@@ -163,6 +165,7 @@ img {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.4rem;
+	flex-shrink: 0;
 	font-weight: 700;
 	color: color-mix(in oklab, var(--ink) 72%, #20467d 28%);
 	transition: background-color 0.16s ease, color 0.16s ease;
@@ -270,6 +273,10 @@ img {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.posts-grid-home {
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .episodes-grid {
@@ -581,6 +588,7 @@ img {
 	.subscribe-strip {
 		width: 100%;
 		justify-content: flex-start;
+		border-radius: 16px;
 	}
 
 	.subscribe-label {
