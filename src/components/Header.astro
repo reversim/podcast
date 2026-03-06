@@ -23,5 +23,21 @@ const nav = [
 			</a>
 		))}
 	</nav>
+	<div id="search" class="search-container"></div>
+	<link href={withBase('/pagefind/pagefind-ui.css')} rel="stylesheet" />
+	<script is:inline define:vars={{ base: withBase('/') }}>
+		window.addEventListener('DOMContentLoaded', () => {
+			new PagefindUI({
+				element: '#search',
+				showSubResults: true,
+				bundlePath: base + 'pagefind/',
+				translations: {
+					placeholder: 'חיפוש...',
+					zero_results: 'לא נמצאו תוצאות עבור [SEARCH_TERM]',
+				},
+			});
+		});
+	</script>
+	<script src={withBase('/pagefind/pagefind-ui.js')} is:inline />
 	<SubscribeButtons />
 </header>

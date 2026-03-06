@@ -127,6 +127,38 @@ img {
 	border-color: var(--accent);
 }
 
+.search-container {
+	flex: 0 1 280px;
+	min-width: 160px;
+}
+
+.search-container .pagefind-ui__search-input {
+	font-family: inherit;
+	font-size: 0.88rem;
+	border-radius: 999px;
+	border: 1px solid var(--line);
+	padding: 0.42rem 0.9rem;
+	background: var(--surface);
+}
+
+.search-container .pagefind-ui__search-clear {
+	border-radius: 50%;
+}
+
+.search-container .pagefind-ui__drawer {
+	position: absolute;
+	z-index: 30;
+	background: var(--surface);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-float);
+	max-height: 60vh;
+	overflow-y: auto;
+	margin-top: 0.4rem;
+	left: 0;
+	right: 0;
+}
+
 .subscribe-strip {
 	display: flex;
 	align-items: center;

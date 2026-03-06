@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npx pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "migrate:blogger": "node scripts/migrate-from-blogger.mjs",
@@ -19,6 +19,7 @@
     "cheerio": "^1.0.0",
     "fast-xml-parser": "^5.3.5",
     "p-limit": "^6.2.0",
+    "pagefind": "^1.4.0",
     "yaml": "^2.6.0"
   }
 }

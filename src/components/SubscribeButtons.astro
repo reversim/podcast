@@ -23,6 +23,11 @@ const links = [
 		external: true,
 		kind: 'antennapod',
 	},
+	{
+		href: `podcastaddict://subscribe/${encodeURIComponent(podcastFeed)}`,
+		label: 'Podcast Addict',
+		kind: 'podcastaddict',
+	},
 	{ href: `pcast://${podcastFeed.replace(/^https?:\/\//, '')}`, label: 'Any App', kind: 'app' },
 	{ href: withBase('/podcast.xml'), label: 'Podcast RSS', kind: 'rss' },
 ];
@@ -71,7 +76,7 @@ const links = [
 					)
 				}
 				{
-					(item.kind === 'app' || item.kind === 'antennapod') && (
+					(item.kind === 'app' || item.kind === 'antennapod' || item.kind === 'podcastaddict') && (
 						<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
 							<path d="M7 2h10a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v12h12V5a1 1 0 0 0-1-1zm5 15a1.3 1.3 0 1 0 1.3 1.3A1.3 1.3 0 0 0 12 19.01z" />
 						</svg>
