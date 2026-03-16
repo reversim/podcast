@@ -1,32 +1,31 @@
 ---
 const podcastFeed = 'https://feed.reversim.com';
-const directFeed = 'https://www.reversim.com/podcast.xml';
 const title = 'רברס עם פלטפורמה';
 
 const links = [
-	{ href: `podcast://${directFeed.replace(/^https?:\/\//, '')}`, label: 'Apple Podcasts', kind: 'apple' },
+	{ href: `podcast://${podcastFeed.replace(/^https?:\/\//, '')}`, label: 'Apple Podcasts', kind: 'apple' },
 	{
-		href: `pktc://subscribe/${directFeed.replace(/^https?:\/\//, '')}`,
+		href: `pktc://subscribe/${podcastFeed.replace(/^https?:\/\//, '')}`,
 		label: 'Pocket Casts',
 		kind: 'pocketcasts',
 	},
 	{
-		href: `overcast://x-callback-url/add?url=${encodeURIComponent(directFeed)}`,
+		href: `overcast://x-callback-url/add?url=${encodeURIComponent(podcastFeed)}`,
 		label: 'Overcast',
 		kind: 'overcast',
 	},
 	{
-		href: `https://antennapod.org/deeplink/subscribe?url=${encodeURIComponent(directFeed)}&title=${encodeURIComponent(title)}`,
+		href: `https://antennapod.org/deeplink/subscribe?url=${encodeURIComponent(podcastFeed)}&title=${encodeURIComponent(title)}`,
 		label: 'AntennaPod',
 		external: true,
 		kind: 'antennapod',
 	},
 	{
-		href: `podcastaddict://subscribe/${encodeURIComponent(directFeed)}`,
+		href: `podcastaddict://subscribe/${encodeURIComponent(podcastFeed)}`,
 		label: 'Podcast Addict',
 		kind: 'podcastaddict',
 	},
-	{ href: `pcast://${directFeed.replace(/^https?:\/\//, '')}`, label: 'Any App', kind: 'app' },
+	{ href: `pcast://${podcastFeed.replace(/^https?:\/\//, '')}`, label: 'Any App', kind: 'app' },
 	{ href: podcastFeed, label: 'Podcast RSS', kind: 'rss' },
 ];
 ---
