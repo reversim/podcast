@@ -5,7 +5,7 @@ help:
 	@echo "  install   Install dependencies"
 	@echo "  dev       Run local dev server"
 	@echo "  build     Build production site"
-	@echo "  build-pages Build for GitHub Pages (/podcast)"
+	@echo "  build-pages Build for GitHub Pages (www.reversim.com)"
 	@echo "  preview   Preview production build"
 	@echo "  migrate   Migrate posts from Blogger (sitemap-driven)"
 	@echo "  validate  Validate migration counts"
@@ -24,7 +24,7 @@ build:
 	npm run build
 
 build-pages:
-	ASTRO_BASE=/podcast ASTRO_SITE=https://reversim.github.io npm run build
+	npm run build
 
 preview:
 	npm run preview

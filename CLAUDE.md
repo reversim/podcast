@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Reversim Podcast ("רברס עם פלטפורמה") — a Hebrew-language tech podcast website built with Astro. The site hosts 500+ episodes migrated from Blogger, with RSS/podcast feeds, Pagefind search, and Decap CMS for content management. Deployed to GitHub Pages at `reversim.github.io/podcast`.
+Reversim Podcast ("רברס עם פלטפורמה") — a Hebrew-language tech podcast website built with Astro. The site hosts 500+ episodes migrated from Blogger, with RSS/podcast feeds, Pagefind search, and Decap CMS for content management. Deployed to GitHub Pages at `www.reversim.com`.
 
 ## Commands
 
@@ -15,7 +15,7 @@ npm run build            # Production build (includes Pagefind indexing)
 npm run preview          # Preview production build locally
 
 make verify              # Full verification: validate + audit + build-pages + rss-compare
-make build-pages         # Build with /podcast base path (as deployed to GitHub Pages)
+make build-pages         # Build for GitHub Pages (www.reversim.com)
 ```
 
 Migration/validation scripts (rarely needed):
@@ -38,7 +38,7 @@ There is no test framework — `make verify` is the validation suite.
 
 **Key modules:**
 - `src/lib/posts.ts` — post collection queries and sorting
-- `src/lib/urls.ts` — base URL helper (handles `/podcast` prefix for GitHub Pages)
+- `src/lib/urls.ts` — base URL helper
 - `src/components/` — Astro components (BaseLayout, PostCard, Pagination, SubscribeButtons, etc.)
 - `scripts/` — Node.js migration and validation scripts
 
@@ -46,7 +46,7 @@ There is no test framework — `make verify` is the validation suite.
 
 **Search:** Pagefind — indexes at build time, runs client-side.
 
-**Deployment:** GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to GitHub Pages on push to main. Base path configurable via `ASTRO_BASE` env var.
+**Deployment:** GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to GitHub Pages on push to main. Custom domain `www.reversim.com` configured via `public/CNAME`.
 
 ## Content Conventions
 
