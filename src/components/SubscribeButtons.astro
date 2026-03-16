@@ -4,7 +4,7 @@ const directFeed = 'https://www.reversim.com/podcast.xml';
 const title = 'רברס עם פלטפורמה';
 
 const links = [
-	{ href: `itpc://${directFeed.replace(/^https?:\/\//, '')}`, label: 'Apple Podcasts', kind: 'apple' },
+	{ href: `podcast://${directFeed.replace(/^https?:\/\//, '')}`, label: 'Apple Podcasts', kind: 'apple' },
 	{
 		href: `pktc://subscribe/${directFeed.replace(/^https?:\/\//, '')}`,
 		label: 'Pocket Casts',
