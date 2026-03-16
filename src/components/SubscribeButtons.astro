@@ -1,8 +1,5 @@
 ---
-import { withBase } from '../lib/urls';
-
-const siteBase = import.meta.env.SITE ?? 'https://reversim.github.io';
-const podcastFeed = new URL(withBase('/podcast.xml'), siteBase).toString();
+const podcastFeed = 'https://feed.reversim.com';
 const title = 'רברס עם פלטפורמה';
 
 const links = [
@@ -29,7 +26,7 @@ const links = [
 		kind: 'podcastaddict',
 	},
 	{ href: `pcast://${podcastFeed.replace(/^https?:\/\//, '')}`, label: 'Any App', kind: 'app' },
-	{ href: withBase('/podcast.xml'), label: 'Podcast RSS', kind: 'rss' },
+	{ href: podcastFeed, label: 'Podcast RSS', kind: 'rss' },
 ];
 ---
 
