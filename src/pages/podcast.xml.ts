@@ -28,7 +28,7 @@ export async function GET() {
 			<language>he</language>
 			<itunes:author>רברס עם פלטפורמה</itunes:author>
 			<itunes:explicit>false</itunes:explicit>
-			<itunes:image href="${import.meta.env.SITE}/podcast-cover.svg" />
+			<itunes:image href="${import.meta.env.SITE}/podcast-cover.png" />
 			<itunes:category text="Technology" />
 		`,
 	});
