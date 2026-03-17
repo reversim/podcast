@@ -363,7 +363,7 @@ img {
 .post-cover-image {
 	inline-size: 100%;
 	aspect-ratio: 16 / 9;
-	object-fit: cover;
+	object-fit: contain;
 	border-radius: 10px;
 	border: 1px solid var(--line);
 	background: var(--surface-muted);
