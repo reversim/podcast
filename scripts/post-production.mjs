@@ -462,9 +462,6 @@ async function main() {
     }
   } else {
     console.log('\n▶ Step 1: Skipped (--skip-audio)');
-    if (!existsSync(outputMp3)) {
-      run(`cp "${rawInput}" "${outputMp3}"`, { silent: true });
-    }
   }
 
   // Step 2: Transcribe
