@@ -126,6 +126,44 @@ function parseArgs() {
   return opts;
 }
 
+// ─── Cost tracking ───────────────────────────────────────────────────────────
+
+// Pricing per 1M tokens for gemini-3-pro-preview (update if Google changes rates)
+// https://ai.google.dev/pricing
+const GEMINI_PRICING = {
+  'gemini-3-pro-preview': { inputPerM: 1.25, outputPerM: 10.00 },
+  'gemini-2.5-pro-preview': { inputPerM: 1.25, outputPerM: 10.00 },
+  'gemini-1.5-pro':        { inputPerM: 1.25, outputPerM: 5.00  },
+};
+
+const _costAccumulator = { inputTokens: 0, outputTokens: 0, totalUsd: 0 };
+
+function reportUsage(label, usageMeta, modelName) {
+  if (!usageMeta) return;
+  const { promptTokenCount = 0, candidatesTokenCount = 0 } = usageMeta;
+  const pricing = GEMINI_PRICING[modelName] ?? { inputPerM: 1.25, outputPerM: 10.00 };
+  const costUsd = (promptTokenCount / 1e6) * pricing.inputPerM +
+                  (candidatesTokenCount / 1e6) * pricing.outputPerM;
+
+  _costAccumulator.inputTokens  += promptTokenCount;
+  _costAccumulator.outputTokens += candidatesTokenCount;
+  _costAccumulator.totalUsd     += costUsd;
+
+  console.log(
+    `  💰 ${label}: ${promptTokenCount.toLocaleString()} in + ${candidatesTokenCount.toLocaleString()} out` +
+    ` = ~$${costUsd.toFixed(4)} (est. at $${pricing.inputPerM}/$${pricing.outputPerM} per 1M)`
+  );
+}
+
+function printCostSummary() {
+  if (_costAccumulator.totalUsd === 0) return;
+  console.log(
+    `\n  💰 Total Gemini cost: $${_costAccumulator.totalUsd.toFixed(4)}` +
+    ` (${_costAccumulator.inputTokens.toLocaleString()} in + ${_costAccumulator.outputTokens.toLocaleString()} out tokens)`
+  );
+  console.log(`     Verify pricing at https://ai.google.dev/pricing`);
+}
+
 // ─── Utilities ───────────────────────────────────────────────────────────────
 
 function run(cmd, { silent = false } = {}) {
@@ -516,6 +554,7 @@ Format each line as:
   ]);
 
   const transcript = result.response.text();
+  reportUsage('Transcription', result.response.usageMetadata, 'gemini-3-pro-preview');
   writeFileSync(transcriptFile, transcript, 'utf8');
   console.log(`  ✓ Transcript (${transcript.length.toLocaleString()} chars) → ${transcriptFile}`);
 
@@ -583,6 +622,7 @@ ${transcript}`;
   console.log('  Calling Gemini to write the post...');
   const result = await model.generateContent(prompt);
   const body = result.response.text();
+  reportUsage('Blog post', result.response.usageMetadata, 'gemini-3-pro-preview');
 
   // Build frontmatter
   const [year, month] = opts.date.split('-');
@@ -646,6 +686,7 @@ async function generateSocial(opts, postContent, postUrl, socialFile) {
   console.log('  Calling Gemini to write social posts...');
   const result = await model.generateContent(prompt);
   const social = result.response.text();
+  reportUsage('Social posts', result.response.usageMetadata, 'gemini-3-pro-preview');
 
   writeFileSync(socialFile, social, 'utf8');
   console.log(`  ✓ Social posts → ${socialFile}`);
@@ -791,6 +832,8 @@ async function main() {
 
   const durationSec = existsSync(outputMp3) ? getAudioDuration(outputMp3) : 0;
   const durationMin = durationSec ? `${Math.floor(durationSec / 60)}:${String(Math.floor(durationSec % 60)).padStart(2, '0')}` : 'unknown';
+
+  printCostSummary();
 
   console.log('\n✅ Done!');
   console.log(`   Audio URL:  ${audioUrl}`);
