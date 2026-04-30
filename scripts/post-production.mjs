@@ -213,19 +213,23 @@ function processAudio(opts, inputMp3, outputMp3) {
   if (!hasIntro) console.warn(`  ⚠ Intro not found: ${opts.intro} — skipping`);
   if (!hasOutro) console.warn(`  ⚠ Outro not found: ${opts.outro} — skipping`);
 
-  // Fast path: no music at all
-  if (!hasIntro && !hasOutro) {
-    run(`ffmpeg -y -i "${inputMp3}" -ac 1 -af "dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" -q:a 2 "${outputMp3}"`);
-    return;
-  }
-
   const speechDur = getAudioDuration(inputMp3);
   const introDur  = hasIntro ? getAudioDuration(opts.intro) : 0;
   const outroDur  = hasOutro ? getAudioDuration(opts.outro) : 0;
 
-  const premixMp3 = outputMp3 + '.premix.mp3';
+  // Normalize speech FIRST so dynaudnorm never sees the quiet music-only sections.
+  // Music beds are then mixed in at fixed levels on top of the normalized speech.
+  const normalizedSpeech = outputMp3 + '.normspeech.mp3';
+  console.log('  Normalizing speech (dynaudnorm, mono)...');
+  run(`ffmpeg -y -i "${inputMp3}" -ac 1 -af "dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" -q:a 2 "${normalizedSpeech}"`);
 
-  const inputs  = [`-i "${inputMp3}"`];
+  // Fast path: no music at all
+  if (!hasIntro && !hasOutro) {
+    run(`mv "${normalizedSpeech}" "${outputMp3}"`);
+    return;
+  }
+
+  const inputs  = [`-i "${normalizedSpeech}"`];
   const filters = [`[0:a]acopy[speech]`];
   const streams = ['[speech]'];
   let idx = 1;
@@ -308,12 +312,9 @@ function processAudio(opts, inputMp3, outputMp3) {
   const n = streams.length;
   filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0[out]`);
 
-  run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${premixMp3}"`);
+  run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${outputMp3}"`);
 
-  console.log('  Normalizing (dynaudnorm, mono)...');
-  run(`ffmpeg -y -i "${premixMp3}" -ac 1 -af "dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" -q:a 2 "${outputMp3}"`);
-
-  try { run(`rm -f "${premixMp3}"`, { silent: true }); } catch {}
+  try { run(`rm -f "${normalizedSpeech}"`, { silent: true }); } catch {}
   console.log(`  ✓ Processed audio → ${outputMp3}`);
 }
 
