@@ -1,12 +1,11 @@
 ---
 import { getPostPermalink } from '../lib/posts';
 import type { PostEntry } from '../lib/posts';
-import { withBase } from '../lib/urls';
 
 const { post } = Astro.props as { post: PostEntry };
 const permalink = getPostPermalink(post);
 const coverImage = post.data.cover_image;
-const coverImageUrl = coverImage?.startsWith('http') ? coverImage : coverImage ? withBase(coverImage) : undefined;
+const coverImageUrl = coverImage?.startsWith('http') ? coverImage : coverImage ?? undefined;
 const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 	year: 'numeric',
 	month: 'long',
