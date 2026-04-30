@@ -11,7 +11,11 @@
     "images:localize-blogger": "node scripts/localize-blogger-images.mjs",
     "migrate:validate": "node scripts/validate-migration.mjs",
     "migrate:audit": "node scripts/audit-migration.mjs",
-    "rss:compare": "node scripts/compare-rss.mjs"
+    "rss:compare": "node scripts/compare-rss.mjs",
+    "post-production": "node scripts/post-production.mjs"
+  },
+  "devDependencies": {
+    "@google/generative-ai": "^0.21.0"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.1",
