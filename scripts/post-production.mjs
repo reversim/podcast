@@ -76,6 +76,7 @@ function parseArgs() {
     skipTranscribe: false,
     skipPost: false,
     skipUpload: false,
+    skipSocial: false,
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -98,6 +99,7 @@ function parseArgs() {
       case '--skip-transcribe':           opts.skipTranscribe = true; break;
       case '--skip-post':                 opts.skipPost = true; break;
       case '--skip-upload':               opts.skipUpload = true; break;
+      case '--skip-social':               opts.skipSocial = true; break;
       default:
         console.error(`Unknown argument: ${args[i]}`);
         process.exit(1);
@@ -613,6 +615,44 @@ ${transcript}`;
 }
 
 // ─── Step 4: S3 upload ───────────────────────────────────────────────────────
+// ─── Step 5: Generate social media posts ─────────────────────────────────────
+
+async function generateSocial(opts, postContent, postUrl, socialFile) {
+  console.log('\n▶ Step 5: Generating social media posts');
+
+  let GoogleGenerativeAI;
+  try {
+    ({ GoogleGenerativeAI } = await import('@google/generative-ai'));
+  } catch {
+    console.error('  ✗ @google/generative-ai not installed.');
+    process.exit(1);
+  }
+
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) { console.error('  ✗ GEMINI_API_KEY is required'); process.exit(1); }
+
+  const systemPrompt = readFileSync(join(__dirname, 'SOCIAL.md'), 'utf8');
+
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const model = genAI.getGenerativeModel({
+    model: 'gemini-3-pro-preview',
+    systemInstruction: systemPrompt,
+  });
+
+  const prompt =
+    `Blog post URL: ${postUrl}\n\n` +
+    `Blog post content (use this since the site may not be deployed yet):\n\n${postContent}`;
+
+  console.log('  Calling Gemini to write social posts...');
+  const result = await model.generateContent(prompt);
+  const social = result.response.text();
+
+  writeFileSync(socialFile, social, 'utf8');
+  console.log(`  ✓ Social posts → ${socialFile}`);
+  return social;
+}
+
+
 
 function uploadToS3(localFile, bucket, s3Key) {
   console.log('\n▶ Step 4: Uploading to S3');
@@ -731,6 +771,24 @@ async function main() {
     console.log('\n▶ Step 4: Skipped (--skip-upload)');
   }
 
+  // Step 5: Social media posts
+  const [year, month] = opts.date.split('-');
+  const postFilename = `${year}-${month}-${opts.episode}-${opts.slug}.md`;
+  const postPath = join(REPO_ROOT, 'src/content/posts', postFilename);
+  const socialFile = join(opts.workdir, `reversim${opts.episode}-${fileSlug}.social.md`);
+
+  if (!opts.skipSocial) {
+    if (!existsSync(postPath)) {
+      console.warn('\n▶ Step 5: No blog post found — run produce-post first');
+    } else {
+      const postContent = readFileSync(postPath, 'utf8');
+      const postUrl = `https://www.reversim.com/${year}/${month}/${opts.episode}-${opts.slug}.html`;
+      await generateSocial(opts, postContent, postUrl, socialFile);
+    }
+  } else {
+    console.log('\n▶ Step 5: Skipped (--skip-social)');
+  }
+
   const durationSec = existsSync(outputMp3) ? getAudioDuration(outputMp3) : 0;
   const durationMin = durationSec ? `${Math.floor(durationSec / 60)}:${String(Math.floor(durationSec % 60)).padStart(2, '0')}` : 'unknown';
 
@@ -738,6 +796,7 @@ async function main() {
   console.log(`   Audio URL:  ${audioUrl}`);
   console.log(`   Duration:   ${durationMin}`);
   console.log(`   Transcript: ${transcriptFile}`);
+  console.log(`   Social:     ${socialFile}`);
   console.log(`   Workdir:    ${opts.workdir}`);
 }
 

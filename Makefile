@@ -16,7 +16,7 @@ MP3_NAME  = reversim$(EPISODE)-$(shell echo $(SLUG) | tr '-' '_').mp3
 AUDIO_URL = https://m2.reversim.com/$(MP3_NAME)
 
 .PHONY: help install dev build build-pages preview migrate validate audit rss-compare verify clean \
-        produce produce-mix produce-audio produce-transcribe produce-post produce-upload
+        produce produce-mix produce-audio produce-transcribe produce-post produce-upload produce-social
 
 help:
 	@echo "Site targets:"
@@ -39,6 +39,7 @@ help:
 	@echo "  produce-transcribe Transcribe with Gemini, save transcript"
 	@echo "  produce-post       Generate Hebrew blog post from transcript"
 	@echo "  produce-upload     Upload processed MP3 to S3"
+	@echo "  produce-social     Generate Twitter/LinkedIn/Facebook posts"
 	@echo ""
 	@echo "Example:"
 	@echo "  make produce EPISODE=514 TITLE='כותרת פרק' SLUG=my-episode TAGS=tag1 COVER_IMAGE=/images/ep514.jpg"
@@ -101,31 +102,37 @@ produce-mix: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
 		--mix-wavs "$(BAND_DIR)" \
-		--skip-audio --skip-transcribe --skip-post --skip-upload
+		--skip-audio --skip-transcribe --skip-post --skip-upload --skip-social
 
 produce-audio: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
 		--mix-wavs "$(BAND_DIR)" \
-		--skip-mix --skip-transcribe --skip-post --skip-upload
+		--skip-mix --skip-transcribe --skip-post --skip-upload --skip-social
 
 produce-transcribe: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
 		--mix-wavs "$(BAND_DIR)" \
-		--skip-mix --skip-audio --skip-post --skip-upload
+		--skip-mix --skip-audio --skip-post --skip-upload --skip-social
 
 produce-post: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
 		--mix-wavs "$(BAND_DIR)" \
-		--skip-mix --skip-audio --skip-transcribe --skip-upload
+		--skip-mix --skip-audio --skip-transcribe --skip-upload --skip-social
 
 produce-upload: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
 		--mix-wavs "$(BAND_DIR)" \
-		--skip-mix --skip-audio --skip-transcribe --skip-post
+		--skip-mix --skip-audio --skip-transcribe --skip-post --skip-social
+
+produce-social: _check-episode
+	@set -a && . ./.env && set +a && \
+	node scripts/post-production.mjs $(_post-production-args) \
+		--mix-wavs "$(BAND_DIR)" \
+		--skip-mix --skip-audio --skip-transcribe --skip-post --skip-upload
 
 produce: _check-episode
 	@set -a && . ./.env && set +a && \
