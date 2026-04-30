@@ -176,66 +176,144 @@ function mixWavTracks(bandDir, outputMp3) {
   return outputMp3;
 }
 
-// ─── Step 1: Audio processing (intro/outro + normalize) ──────────────────────
+// ─── Step 1: Audio processing (ducked intro/outro beds + normalize) ──────────
+//
+// Design:
+//   INTRO BED  — music starts simultaneously with speech at low volume (-18 dB),
+//                fades in over 3 s, holds for 20 s, then fades out over 8 s.
+//                Listener hears voice immediately with subtle music underneath.
+//
+//   OUTRO BED  — split into two overlapping parts, crossfaded at the speech-end boundary:
+//     Part 1 (under speech): fades in 5 s before the speech winds down, sits at
+//                            -20 dB, fades out as speech ends.
+//     Part 2 (after speech): overlaps Part 1 by XFADE seconds, fades in to -10 dB,
+//                            plays POST_ROLL seconds after speech, then fades out.
+//   Result: a smooth musical swell that lifts from under the speech, peaks just
+//           after the last word, then fades away naturally.
 
 function processAudio(opts, inputMp3, outputMp3) {
-  console.log('\n▶ Step 1: Audio processing (intro/outro + loudnorm)');
+  // ── Tuning ──────────────────────────────────────────────────────────────────
+  const INTRO_BED_VOL   = 0.126;  // -18 dB  — audible music bed under speech
+  const INTRO_FADE_IN   = 3;      // s — fade music in at start
+  const INTRO_BED_DUR   = 20;     // s — hold music bed before fading out
+  const INTRO_FADE_OUT  = 8;      // s — fade out (starts at INTRO_BED_DUR)
+
+  const OUTRO_PRE_VOL   = 0.100;  // -20 dB  — barely audible under speech
+  const OUTRO_POST_VOL  = 0.316;  // -10 dB  — noticeable after speech ends
+  const OUTRO_FADE_IN   = 5;      // s — fade in at outro entry
+  const OUTRO_POST_ROLL = 15;     // s — outro plays this long after speech ends
+  const OUTRO_XFADE     = 2;      // s — crossfade half-width at speech-end boundary
+  const OUTRO_FADE_OUT  = 5;      // s — final fade to silence
+  // ────────────────────────────────────────────────────────────────────────────
+
+  console.log('\n▶ Step 1: Audio processing (ducked beds + dynaudnorm)');
 
   const hasIntro = existsSync(opts.intro);
   const hasOutro = existsSync(opts.outro);
-
   if (!hasIntro) console.warn(`  ⚠ Intro not found: ${opts.intro} — skipping`);
   if (!hasOutro) console.warn(`  ⚠ Outro not found: ${opts.outro} — skipping`);
 
-  const fadedMp3 = outputMp3 + '.prefade.mp3';
-
-  if (hasIntro || hasOutro) {
-    const inputs = [];
-    const filterParts = [];
-    let idx = 0;
-
-    if (hasIntro) {
-      const introDur = getAudioDuration(opts.intro);
-      const fadeInDur = Math.min(2, introDur);
-      inputs.push(`-i "${opts.intro}"`);
-      filterParts.push(`[${idx}]afade=t=in:st=0:d=${fadeInDur}[a${idx}]`);
-      idx++;
-    }
-
-    inputs.push(`-i "${inputMp3}"`);
-    filterParts.push(`[${idx}]acopy[a${idx}]`);
-    idx++;
-
-    if (hasOutro) {
-      const outroDur = getAudioDuration(opts.outro);
-      const fadeOutStart = Math.max(0, outroDur - 3);
-      inputs.push(`-i "${opts.outro}"`);
-      filterParts.push(`[${idx}]afade=t=out:st=${fadeOutStart}:d=3[a${idx}]`);
-      idx++;
-    }
-
-    const concatInputs = Array.from({ length: idx }, (_, i) => `[a${i}]`).join('');
-    const filter = [
-      ...filterParts,
-      `${concatInputs}concat=n=${idx}:v=0:a=1[out]`,
-    ].join('; ');
-
-    run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filter}" -map "[out]" -q:a 2 "${fadedMp3}"`);
-  } else {
-    run(`ffmpeg -y -i "${inputMp3}" -c copy "${fadedMp3}"`);
+  // Fast path: no music at all
+  if (!hasIntro && !hasOutro) {
+    run(`ffmpeg -y -i "${inputMp3}" -ac 1 -af "dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" -q:a 2 "${outputMp3}"`);
+    return;
   }
 
-  // Normalize: convert to mono + dynamic audio normalization (matches existing Reversim workflow)
-  console.log('  Normalizing audio (dynaudnorm, mono)...');
-  run(
-    `ffmpeg -y -i "${fadedMp3}" -ac 1 ` +
-    `-af "dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" ` +
-    `-q:a 2 "${outputMp3}"`
-  );
+  const speechDur = getAudioDuration(inputMp3);
+  const introDur  = hasIntro ? getAudioDuration(opts.intro) : 0;
+  const outroDur  = hasOutro ? getAudioDuration(opts.outro) : 0;
 
-  // Remove intermediate file
-  try { run(`rm -f "${fadedMp3}"`, { silent: true }); } catch {}
+  const premixMp3 = outputMp3 + '.premix.mp3';
 
+  const inputs  = [`-i "${inputMp3}"`];
+  const filters = [`[0:a]acopy[speech]`];
+  const streams = ['[speech]'];
+  let idx = 1;
+
+  // ── INTRO BED ──────────────────────────────────────────────────────────────
+  // Plays from t=0 alongside speech; fades in, holds low, fades out by t=28 s.
+  if (hasIntro) {
+    inputs.push(`-i "${opts.intro}"`);
+    const trimEnd = Math.min(introDur, INTRO_BED_DUR + INTRO_FADE_OUT + 0.5);
+    filters.push(
+      `[${idx}:a]` +
+      `afade=t=in:st=0:d=${INTRO_FADE_IN},` +
+      `volume=${INTRO_BED_VOL},` +
+      `afade=t=out:st=${INTRO_BED_DUR}:d=${INTRO_FADE_OUT},` +
+      `atrim=0:${trimEnd},asetpts=PTS-STARTPTS` +
+      `[intro_bed]`
+    );
+    streams.push('[intro_bed]');
+    idx++;
+    console.log(`  Intro: bed plays 0–${INTRO_BED_DUR}s then fades out by ${INTRO_BED_DUR + INTRO_FADE_OUT}s`);
+  }
+
+  // ── OUTRO BED ──────────────────────────────────────────────────────────────
+  // Timed so the outro ends POST_ROLL seconds after speech ends.
+  // Split into Part 1 (under speech, quiet) and Part 2 (after speech, louder),
+  // crossfaded across the speech-end boundary.
+  if (hasOutro) {
+    inputs.push(`-i "${opts.outro}"`);
+
+    // Seconds of outro that play *before* speech ends
+    const preRoll    = Math.max(0, outroDur - OUTRO_POST_ROLL);
+    // Absolute time in the episode when the outro starts
+    const outroDelay = Math.max(0, speechDur - preRoll);
+    // Time within the outro track at which speech ends
+    const seAt       = speechDur - outroDelay; // ≈ preRoll
+
+    // Part 1: [0, seAt + XFADE] — quiet, fades out into the crossfade
+    const p1End          = Math.min(seAt + OUTRO_XFADE, outroDur);
+    const p1FadeOutStart = Math.max(0, seAt - OUTRO_XFADE);
+    const p1DelayMs      = Math.round(outroDelay * 1000);
+
+    // Part 2: [seAt - XFADE, end] — louder, fades in from the crossfade
+    const p2Start        = Math.max(0, seAt - OUTRO_XFADE);
+    const p2Dur          = outroDur - p2Start;
+    const p2FadeOutStart = Math.max(0, p2Dur - OUTRO_FADE_OUT);
+    const p2DelayMs      = Math.round((outroDelay + p2Start) * 1000);
+
+    filters.push(`[${idx}:a]asplit=2[outro_raw1][outro_raw2]`);
+
+    // Part 1: quiet bed under speech, fades out
+    filters.push(
+      `[outro_raw1]` +
+      `atrim=0:${p1End},asetpts=PTS-STARTPTS,` +
+      `afade=t=in:st=0:d=${OUTRO_FADE_IN},` +
+      `volume=${OUTRO_PRE_VOL},` +
+      `afade=t=out:st=${p1FadeOutStart}:d=${OUTRO_XFADE * 2},` +
+      `adelay=${p1DelayMs}:all=1` +
+      `[outro_p1]`
+    );
+
+    // Part 2: louder swell after speech ends, then fades out
+    filters.push(
+      `[outro_raw2]` +
+      `atrim=${p2Start},asetpts=PTS-STARTPTS,` +
+      `afade=t=in:st=0:d=${OUTRO_XFADE * 2},` +
+      `volume=${OUTRO_POST_VOL},` +
+      `afade=t=out:st=${p2FadeOutStart}:d=${OUTRO_FADE_OUT},` +
+      `adelay=${p2DelayMs}:all=1` +
+      `[outro_p2]`
+    );
+
+    streams.push('[outro_p1]', '[outro_p2]');
+    idx++;
+
+    const preRollMin = `${Math.floor(outroDelay / 60)}:${String(Math.floor(outroDelay % 60)).padStart(2,'0')}`;
+    console.log(`  Outro: enters at ${preRollMin} (${preRoll.toFixed(1)}s before speech ends), swells after, ${OUTRO_POST_ROLL}s post-roll`);
+  }
+
+  // ── MIX ────────────────────────────────────────────────────────────────────
+  const n = streams.length;
+  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0[out]`);
+
+  run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${premixMp3}"`);
+
+  console.log('  Normalizing (dynaudnorm, mono)...');
+  run(`ffmpeg -y -i "${premixMp3}" -ac 1 -af "dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" -q:a 2 "${outputMp3}"`);
+
+  try { run(`rm -f "${premixMp3}"`, { silent: true }); } catch {}
   console.log(`  ✓ Processed audio → ${outputMp3}`);
 }
 
