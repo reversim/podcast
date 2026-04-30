@@ -4,7 +4,8 @@ EPISODE  ?=
 TITLE    ?=
 SLUG     ?= episode-$(EPISODE)
 DATE     ?= $(shell date +%Y-%m-%d)
-TAGS     ?=
+TAGS        ?=
+COVER_IMAGE ?=
 WORKDIR  ?= /tmp/reversim-$(EPISODE)
 BAND_DIR ?= $(shell find $(HOME)/Music/GarageBand -maxdepth 1 -name "reversim$(EPISODE)*.band" | head -1)
 INTRO    ?= assets/intro.mp3
@@ -40,7 +41,7 @@ help:
 	@echo "  produce-upload     Upload processed MP3 to S3"
 	@echo ""
 	@echo "Example:"
-	@echo "  make produce EPISODE=513 TITLE='קרבורטור 41' SLUG=carburetor-41 TAGS=carburetor"
+	@echo "  make produce EPISODE=514 TITLE='כותרת פרק' SLUG=my-episode TAGS=tag1 COVER_IMAGE=/images/ep514.jpg"
 
 install:
 	npm install
@@ -93,7 +94,8 @@ _post-production-args = \
 	--workdir $(WORKDIR) \
 	--intro "$(INTRO)" \
 	--outro "$(OUTRO)" \
-	$(if $(TAGS),--tags "$(TAGS)")
+	$(if $(TAGS),--tags "$(TAGS)") \
+	$(if $(COVER_IMAGE),--cover-image "$(COVER_IMAGE)")
 
 produce-mix: _check-episode
 	@set -a && . ./.env && set +a && \

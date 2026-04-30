@@ -69,6 +69,8 @@ function parseArgs() {
     bucket: 'reversim',
     workdir: process.cwd(),
     tags: [],
+    coverImage: null,
+    transcriber: 'gemini',  // 'gemini' or 'ivrit' (ivrit requires RunPod)
     skipMix: false,
     skipAudio: false,
     skipTranscribe: false,
@@ -89,6 +91,8 @@ function parseArgs() {
       case '--bucket':         case '-b': opts.bucket = args[++i]; break;
       case '--workdir':                   opts.workdir = resolve(args[++i]); break;
       case '--tags':                      opts.tags = args[++i].split(',').map(t => t.trim()); break;
+      case '--cover-image':               opts.coverImage = args[++i]; break;
+      case '--transcriber':               opts.transcriber = args[++i]; break;
       case '--skip-mix':                  opts.skipMix = true; break;
       case '--skip-audio':                opts.skipAudio = true; break;
       case '--skip-transcribe':           opts.skipTranscribe = true; break;
@@ -137,6 +141,17 @@ function getAudioDuration(file) {
       `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${file}"`
     ).trim()
   );
+}
+
+async function promptCoverImage() {
+  const { createInterface } = await import('readline');
+  const rl = createInterface({ input: process.stdin, output: process.stdout });
+  return new Promise(resolve => {
+    rl.question('\n  Cover image — enter a URL to download or a local /images/path (leave blank to skip): ', answer => {
+      rl.close();
+      resolve(answer.trim() || null);
+    });
+  });
 }
 
 // ─── Step 0: Mix WAV tracks ──────────────────────────────────────────────────
@@ -342,10 +357,104 @@ function processAudio(opts, inputMp3, outputMp3) {
   console.log(`  ✓ Processed audio → ${outputMp3}`);
 }
 
-// ─── Step 2: Transcription via Gemini ────────────────────────────────────────
+// ─── Step 2a: Transcription via ivrit.ai (RunPod / Whisper) ─────────────────
+
+function formatTimestamp(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = String(Math.floor(seconds % 60)).padStart(2, '0');
+  return `${m}:${s}`;
+}
+
+async function transcribeIvrit(opts, audioFile, audioUrl, transcriptFile) {
+  console.log('\n▶ Step 2: Transcription via ivrit.ai (Hebrew Whisper)');
+
+  const apiKey    = process.env.RUNPOD_API_KEY;
+  const endpointId = process.env.RUNPOD_ENDPOINT_ID;
+  if (!apiKey)     { console.error('  ✗ RUNPOD_API_KEY is required'); process.exit(1); }
+  if (!endpointId) { console.error('  ✗ RUNPOD_ENDPOINT_ID is required'); process.exit(1); }
+
+  // ivrit needs a public URL — ensure the file is uploaded to S3 first
+  console.log(`  Checking if ${audioUrl} is accessible...`);
+  let urlReady = false;
+  try {
+    const r = await fetch(audioUrl, { method: 'HEAD' });
+    urlReady = r.ok;
+  } catch {}
+
+  if (!urlReady) {
+    console.log('  File not yet on S3 — uploading now...');
+    uploadToS3(audioFile, opts.bucket, audioUrl.split('/').pop());
+  }
+
+  // Submit job to RunPod
+  console.log('  Submitting transcription job to RunPod...');
+  const submitResp = await fetch(`https://api.runpod.ai/v2/${endpointId}/run`, {
+    method: 'POST',
+    headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      input: {
+        engine: 'faster-whisper',
+        model: 'ivrit-ai/whisper-large-v3-turbo-ct2',
+        streaming: false,
+        transcribe_args: { url: audioUrl, language: 'he', diarize: true },
+        output_options: { word_timestamps: false },
+      },
+    }),
+  });
+
+  if (!submitResp.ok) {
+    console.error(`  ✗ RunPod submit failed: ${submitResp.status} ${await submitResp.text()}`);
+    process.exit(1);
+  }
+
+  const { id: jobId } = await submitResp.json();
+  console.log(`  Job ID: ${jobId}`);
+
+  // Poll until complete
+  let dots = 0;
+  while (true) {
+    await new Promise(r => setTimeout(r, 8000));
+    const statusResp = await fetch(`https://api.runpod.ai/v2/${endpointId}/status/${jobId}`, {
+      headers: { 'Authorization': `Bearer ${apiKey}` },
+    });
+    const status = await statusResp.json();
+
+    if (status.status === 'COMPLETED') {
+      console.log('\n  Processing complete.');
+      const transcript = formatIvritTranscript(status.output);
+      writeFileSync(transcriptFile, transcript, 'utf8');
+      console.log(`  ✓ Transcript (${transcript.length.toLocaleString()} chars) → ${transcriptFile}`);
+      return transcript;
+    } else if (status.status === 'FAILED') {
+      console.error(`\n  ✗ Transcription failed: ${JSON.stringify(status.error)}`);
+      process.exit(1);
+    }
+
+    process.stdout.write(++dots % 10 === 0 ? `\n  ` : '.');
+  }
+}
+
+function formatIvritTranscript(output) {
+  // output.result is an array of {type, data} events; collect all segment arrays
+  const events = Array.isArray(output) ? output : (output?.result ?? []);
+  const lines = [];
+
+  for (const event of events) {
+    if (event.type !== 'segments') continue;
+    for (const seg of event.data) {
+      const time    = formatTimestamp(seg.start);
+      const speaker = seg.speakers?.[0] ?? 'דובר';
+      lines.push(`[${time}] **${speaker}**: ${seg.text.trim()}`);
+    }
+  }
+
+  return lines.join('\n');
+}
+
+// ─── Step 2b: Transcription via Gemini ───────────────────────────────────────
 
 async function transcribe(opts, audioFile, transcriptFile) {
-  console.log('\n▶ Step 2: Transcription via Gemini 1.5 Pro');
+  console.log('\n▶ Step 2: Transcription via Gemini 3 Pro');
 
   let GoogleGenerativeAI, GoogleAIFileManager, FileState;
   try {
@@ -383,7 +492,7 @@ async function transcribe(opts, audioFile, transcriptFile) {
   if (file.state === FileState.FAILED) throw new Error('Gemini file processing failed');
   console.log(' done.');
 
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-3-pro-preview' });
 
   const prompt = `This is a Hebrew-language technology podcast episode called "רברס עם פלטפורמה" (Reversim Podcast), episode ${opts.episode}: "${opts.title}".
 
@@ -430,7 +539,7 @@ async function generatePost(opts, transcript, audioUrl) {
   if (!apiKey) { console.error('  ✗ GEMINI_API_KEY is required'); process.exit(1); }
 
   const genAI = new GoogleGenerativeAI(apiKey);
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-3-pro-preview' });
 
   const tagsHint = opts.tags.length ? `\nTags: ${opts.tags.join(', ')}` : '';
 
@@ -443,7 +552,7 @@ Requirements:
 - Start with a 2–3 sentence intro naming the hosts and guest(s)
 - Divide into timestamped sections: **[MM:SS] Section Title in Hebrew**
 - Use bullet points for discussion points; start sub-points with nested bullets
-- Add hyperlinks for mentioned people (LinkedIn), companies, products, and articles when URLs can be inferred
+- Add hyperlinks for companies, products, and articles only when you are certain of the URL (e.g. official websites, well-known domains). Do NOT guess or infer LinkedIn or social media profile URLs for people — leave names as plain text
 - Conversational, engaging style — tech-savvy Israeli audience
 - End with: "האזנה נעימה!"
 - Output only the Markdown body — NO frontmatter YAML
@@ -479,12 +588,14 @@ ${transcript}`;
     ? '\ntags:\n' + opts.tags.map(t => `  - ${t}`).join('\n')
     : '';
 
+  const coverImage = opts.coverImage ? `\ncover_image: ${opts.coverImage}` : '\n# cover_image: /images/TODO.png';
+
   const frontmatter =
     `---\n` +
     `title: "${opts.episode} - ${opts.title}"\n` +
     `date: ${opts.date}T00:00:00.000Z\n` +
     `episode: ${opts.episode}\n` +
-    `audio_url: ${audioUrl}${tagsYaml}\n` +
+    `audio_url: ${audioUrl}${tagsYaml}${coverImage}\n` +
     `---\n`;
 
   const postContent = frontmatter + '\n' + body;
@@ -492,14 +603,13 @@ ${transcript}`;
   const postFilename = `${year}-${month}-${opts.episode}-${opts.slug}.md`;
   const postPath = join(REPO_ROOT, 'src/content/posts', postFilename);
 
-  const finalPath = existsSync(postPath) ? postPath + '.new.md' : postPath;
   if (existsSync(postPath)) {
-    console.warn(`  ⚠ ${postPath} already exists — writing to ${finalPath}`);
+    console.log(`  Overwriting existing post: ${postPath}`);
   }
 
-  writeFileSync(finalPath, postContent, 'utf8');
-  console.log(`  ✓ Blog post → ${finalPath}`);
-  return finalPath;
+  writeFileSync(postPath, postContent, 'utf8');
+  console.log(`  ✓ Blog post → ${postPath}`);
+  return postPath;
 }
 
 // ─── Step 4: S3 upload ───────────────────────────────────────────────────────
@@ -575,7 +685,11 @@ async function main() {
       transcript = readFileSync(transcriptFile, 'utf8');
     } else {
       const audioForTranscription = existsSync(outputMp3) ? outputMp3 : rawInput;
-      transcript = await transcribe(opts, audioForTranscription, transcriptFile);
+      if (opts.transcriber === 'ivrit') {
+        transcript = await transcribeIvrit(opts, audioForTranscription, audioUrl, transcriptFile);
+      } else {
+        transcript = await transcribe(opts, audioForTranscription, transcriptFile);
+      }
     }
   } else {
     console.log('\n▶ Step 2: Skipped (--skip-transcribe)');
@@ -587,6 +701,19 @@ async function main() {
     if (!transcript) {
       console.warn('\n▶ Step 3: No transcript available — run without --skip-transcribe first');
     } else {
+      if (!opts.coverImage) {
+        const answer = await promptCoverImage();
+        if (answer && answer.startsWith('http')) {
+          const ext = answer.split('?')[0].split('.').pop();
+          const filename = `ep${opts.episode}-cover.${ext}`;
+          const dest = join(REPO_ROOT, 'public/images', filename);
+          console.log(`  Downloading cover image → public/images/${filename}`);
+          run(`curl -sL "${answer}" -o "${dest}"`);
+          opts.coverImage = `/images/${filename}`;
+        } else {
+          opts.coverImage = answer;
+        }
+      }
       await generatePost(opts, transcript, audioUrl);
     }
   } else {
