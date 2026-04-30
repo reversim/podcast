@@ -193,7 +193,7 @@ function mixWavTracks(bandDir, outputMp3) {
 
 function processAudio(opts, inputMp3, outputMp3) {
   // ── Tuning ──────────────────────────────────────────────────────────────────
-  const INTRO_BED_VOL   = 0.020;  // -34 dB  — barely there, speech always dominant
+  const INTRO_BED_VOL   = 0.040;  // -28 dB  — subtle but present
   const INTRO_FADE_IN   = 3;      // s — fade music in at start
   const INTRO_BED_DUR   = 10;     // s — hold music bed before fading out
   const INTRO_FADE_OUT  = 32;     // s — long gradual fade out (starts at INTRO_BED_DUR)
