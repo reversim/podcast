@@ -128,12 +128,13 @@ function parseArgs() {
 
 // ─── Cost tracking ───────────────────────────────────────────────────────────
 
-// Pricing per 1M tokens for gemini-3-pro-preview (update if Google changes rates)
-// https://ai.google.dev/pricing
+// Pricing per 1M tokens — source: https://ai.google.dev/gemini-api/docs/pricing
+// Audio input: 25 tokens/second (e.g. 90-min episode = 135k tokens = ~$0.27)
+// Long context (>200k tokens): $4.00 in / $18.00 out
 const GEMINI_PRICING = {
-  'gemini-3-pro-preview': { inputPerM: 1.25, outputPerM: 10.00 },
-  'gemini-2.5-pro-preview': { inputPerM: 1.25, outputPerM: 10.00 },
-  'gemini-1.5-pro':        { inputPerM: 1.25, outputPerM: 5.00  },
+  'gemini-3-pro-preview':  { inputPerM: 2.00, outputPerM: 12.00 },
+  'gemini-2.5-pro-preview': { inputPerM: 2.00, outputPerM: 12.00 },
+  'gemini-1.5-pro':         { inputPerM: 1.25, outputPerM: 5.00  },
 };
 
 const _costAccumulator = { inputTokens: 0, outputTokens: 0, totalUsd: 0 };
