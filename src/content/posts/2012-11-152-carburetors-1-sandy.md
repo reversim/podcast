@@ -16,7 +16,7 @@ legacy_path: /2012/11/152-carburetors-1-sandy
 <b id="internal-source-marker_0.5298487027175725" style="font-weight: normal; text-align: start;"></b></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/podcast/images/blogger/79662182cd96da3bf7f0.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="171" src="/podcast/images/blogger/85f4d5d17b73f3dc1573.jpg" width="200"></a></div>
+<a href="/podcast/images/blogger/79662182cd96da3bf7f0.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="171" src="/images/blogger/85f4d5d17b73f3dc1573.jpg" width="200"></a></div>
 <b id="internal-source-marker_0.5298487027175725" style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">"תעודת יושר?" - יש. "תעודת לידה?" - יש. "צילום תעודת זהות עם ספח?" - יש. "תעודת בגרות?" - יש. "אישרו מהצנזורה בשלושה העתקים?" - יש. "אישור ממהנדס העיר, מרב העיר, מראש העיר ועוסק זעיר?" יש, יש, יש ו...יש.</span></b></div>
 <div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <b id="internal-source-marker_0.5298487027175725" style="font-weight: normal; text-align: start;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">"אישור תשלום אגרת טלוויזיה?" - אתה עובד עלי … "אישור תשלום אגרת טלוויזיה!!" - רגע… הנה, יש.</span></b></div>

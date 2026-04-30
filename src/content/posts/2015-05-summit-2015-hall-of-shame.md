@@ -12,7 +12,7 @@ legacy_path: /2015/05/summit-2015-hall-of-shame
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
-<a href="/podcast/images/blogger/unavailable.svg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/podcast/images/blogger/unavailable.svg"></a>Franklin D. Roosevelt said "There is nothing to fear but fear itself", but does this hold true for shame as well?<br>
+<a href="/podcast/images/blogger/unavailable.svg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/blogger/unavailable.svg"></a>Franklin D. Roosevelt said "There is nothing to fear but fear itself", but does this hold true for shame as well?<br>
 Not during Reversim's Hall of Shame, where your shameful acts are to be celebrated!<br>
 <br>
 Let your past mistakes bring you fame and fortune as you get 3 minutes to impress our panel of judges.<br>

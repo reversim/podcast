@@ -15,7 +15,7 @@ legacy_path: /2013/06/184-carburetor-8-build-your-own-paas
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
-<a href="http://www.coloandcloud.com/wp-content/uploads/2012/05/PaaS-Chart.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="/podcast/images/blogger/unavailable.svg" width="200"></a></div>
+<a href="http://www.coloandcloud.com/wp-content/uploads/2012/05/PaaS-Chart.gif" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="150" src="/images/blogger/unavailable.svg" width="200"></a></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-3bf12ac0-28e8-fc28-c404-d350e870994b" style="font-weight: normal;"></b></div>
 <div dir="rtl" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
