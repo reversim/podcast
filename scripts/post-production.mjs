@@ -193,10 +193,13 @@ function mixWavTracks(bandDir, outputMp3) {
 
 function processAudio(opts, inputMp3, outputMp3) {
   // ── Tuning ──────────────────────────────────────────────────────────────────
-  const INTRO_BED_VOL   = 0.040;  // -28 dB  — subtle but present
-  const INTRO_FADE_IN   = 3;      // s — fade music in at start
-  const INTRO_BED_DUR   = 10;     // s — hold music bed before fading out
-  const INTRO_FADE_OUT  = 32;     // s — long gradual fade out (starts at INTRO_BED_DUR)
+  const INTRO_PEAK_VOL  = 0.10;   // -20 dB  — brief opening hit
+  const INTRO_FADE_IN   = 2;      // s — fade in to peak
+  const INTRO_PEAK_DUR  = 2;      // s — hold at peak volume
+  const INTRO_DUCK_DUR  = 3;      // s — smooth duck from peak down to bed
+  const INTRO_BED_VOL   = 0.040;  // -28 dB  — settled bed under speech
+  const INTRO_BED_DUR   = 15;     // s — start fade-out at this point
+  const INTRO_FADE_OUT  = 32;     // s — long gradual fade out
 
   const OUTRO_PRE_VOL   = 0.100;  // -20 dB  — barely audible under speech
   const OUTRO_POST_VOL  = 0.316;  // -10 dB  — noticeable after speech ends
@@ -235,21 +238,42 @@ function processAudio(opts, inputMp3, outputMp3) {
   let idx = 1;
 
   // ── INTRO BED ──────────────────────────────────────────────────────────────
-  // Plays from t=0 alongside speech; fades in, holds low, fades out by t=28 s.
+  // Envelope: fade-in → peak hold → smooth duck to bed → long fade-out
   if (hasIntro) {
     inputs.push(`-i "${opts.intro}"`);
-    const trimEnd = Math.min(introDur, INTRO_BED_DUR + INTRO_FADE_OUT + 0.5);
+
+    // Time points for the volume envelope
+    const t1 = INTRO_FADE_IN;                          // peak reached
+    const t2 = t1 + INTRO_PEAK_DUR;                    // duck starts
+    const t3 = t2 + INTRO_DUCK_DUR;                    // bed level reached
+    const t4 = INTRO_BED_DUR;                          // fade-out starts
+    const t5 = t4 + INTRO_FADE_OUT;                    // silence
+    const trimEnd = Math.min(introDur, t5 + 0.5);
+
+    // Piecewise volume expression (t is stream time in seconds):
+    //   [0,  t1]: ramp 0 → PEAK_VOL  (fade in)
+    //   [t1, t2]: hold PEAK_VOL       (peak)
+    //   [t2, t3]: ramp PEAK→BED       (duck)
+    //   [t3, t4]: hold BED_VOL        (bed)
+    //   [t4, t5]: ramp BED→0          (fade out)
+    const dv = INTRO_BED_VOL - INTRO_PEAK_VOL;         // negative (ducking down)
+    const volExpr =
+      `if(lt(t,${t1}), ${INTRO_PEAK_VOL}*t/${t1},` +
+      `if(lt(t,${t2}), ${INTRO_PEAK_VOL},` +
+      `if(lt(t,${t3}), ${INTRO_PEAK_VOL}+${dv}*(t-${t2})/${INTRO_DUCK_DUR},` +
+      `if(lt(t,${t4}), ${INTRO_BED_VOL},` +
+      `if(lt(t,${t5}), ${INTRO_BED_VOL}*(${t5}-t)/${INTRO_FADE_OUT},` +
+      `0)))))`;
+
     filters.push(
       `[${idx}:a]` +
-      `afade=t=in:st=0:d=${INTRO_FADE_IN},` +
-      `volume=${INTRO_BED_VOL},` +
-      `afade=t=out:st=${INTRO_BED_DUR}:d=${INTRO_FADE_OUT},` +
+      `volume=eval=frame:volume='${volExpr}',` +
       `atrim=0:${trimEnd},asetpts=PTS-STARTPTS` +
       `[intro_bed]`
     );
     streams.push('[intro_bed]');
     idx++;
-    console.log(`  Intro: bed plays 0–${INTRO_BED_DUR}s then fades out by ${INTRO_BED_DUR + INTRO_FADE_OUT}s`);
+    console.log(`  Intro: peak ${INTRO_PEAK_DUR}s @ -${Math.round(-20*Math.log10(INTRO_PEAK_VOL))} dB → duck to -${Math.round(-20*Math.log10(INTRO_BED_VOL))} dB bed → fade out at ${t4}s`);
   }
 
   // ── OUTRO BED ──────────────────────────────────────────────────────────────
