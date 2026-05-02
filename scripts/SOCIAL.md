@@ -274,4 +274,23 @@ Twitter:
 
 
 
+---
+
+
+
+Twitter:
+
+
+
+🚀 פרק חדש עם יובל פלג לוי מ @AI21Labs 
+• למה חילוץ נתונים מ-PDF בעברית שובר גם מודלים מתקדמים?
+• הפתרון: החלפת מילים בעברית לאנגלית עם מידות פיזיות (Bounding Box) זהות, לשמירה על המבנה הוויזואלי מבלי לשבור טבלאות.
+להאזנה 🎧 https://www.reversim.com/2026/04/2026-04-513-pdfrtl.html
+
+
+
+---
+
+
+
 IMPORTANT: Start by visiting the provided blog post and reading its contents
