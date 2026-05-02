@@ -824,7 +824,7 @@ async function main() {
       console.warn('\n▶ Step 5: No blog post found — run produce-post first');
     } else {
       const postContent = readFileSync(postPath, 'utf8');
-      const postUrl = `https://www.reversim.com/${year}/${month}/${opts.episode}-${opts.slug}.html`;
+      const postUrl = `https://www.reversim.com/${year}/${month}/${year}-${month}-${opts.episode}-${opts.slug.toLowerCase()}.html`;
       await generateSocial(opts, postContent, postUrl, socialFile);
     }
   } else {
