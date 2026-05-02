@@ -1,5 +1,5 @@
-site_url: "https://reversim.github.io/podcast"
-display_url: "https://reversim.github.io/podcast"
+site_url: "https://www.reversim.com"
+display_url: "https://www.reversim.com"
 
 backend:
   name: github
