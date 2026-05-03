@@ -5,7 +5,7 @@ backend:
   name: github
   repo: reversim/podcast
   branch: main
-  base_url: https://netlify-cms-github-oauth-provider-xqzh.onrender.com
+  base_url: https://decap-cms-oauth.rantav.workers.dev
   auth_endpoint: /auth
 
 media_folder: "public/uploads"
