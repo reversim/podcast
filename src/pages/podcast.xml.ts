@@ -1,7 +1,8 @@
 import rss from '@astrojs/rss';
+import sanitizeHtml from 'sanitize-html';
 import { getAllPosts, getPostPermalink } from '../lib/posts';
 
-export async function GET() {
+export async function GET(context: { site: URL }) {
 	const posts = (await getAllPosts()).filter((post) => post.data.audio_url);
 
 	return rss({
@@ -16,11 +17,15 @@ export async function GET() {
 			const enclosure = post.data.audio_url
 				? `<enclosure url="${post.data.audio_url}" length="0" type="audio/mpeg" />`
 				: '';
+			const body = post.body ?? '';
+			const description = post.data.summary
+				? post.data.summary
+				: sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} }).slice(0, 1000).trim();
 			return {
 				title: post.data.title,
 				pubDate: post.data.date,
 				link: getPostPermalink(post),
-				description: post.data.summary ?? '',
+				description,
 				customData: `${enclosure}`,
 			};
 		}),
