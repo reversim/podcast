@@ -9,4 +9,7 @@ export default defineConfig({
 	build: {
 		format: 'file',
 	},
+	redirects: {
+		'/feeds/posts/default': 'https://feed.reversim.com/',
+	},
 });
