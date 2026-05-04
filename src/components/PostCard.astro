@@ -4,8 +4,7 @@ import type { PostEntry } from '../lib/posts';
 
 const { post } = Astro.props as { post: PostEntry };
 const permalink = getPostPermalink(post);
-const coverImage = post.data.cover_image;
-const coverImageUrl = coverImage?.startsWith('http') ? coverImage : coverImage ?? undefined;
+const coverImageUrl = post.data.cover_image;
 const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 	year: 'numeric',
 	month: 'long',

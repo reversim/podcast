@@ -3,11 +3,12 @@
  * Podcast post-production automation for Reversim Podcast
  *
  * Steps:
- *   1. (Optional) Mix raw WAV tracks from GarageBand project into a single MP3
- *   2. Add intro/outro with fade-in/out and normalize loudness via ffmpeg
- *   3. Transcribe via Gemini File API (handles 30–90 min files)
- *   4. Generate Hebrew blog post from transcript
- *   5. Upload processed MP3 to S3
+ *   0. (Optional) Mix raw WAV tracks from GarageBand project into a single MP3
+ *   1. Add intro/outro with fade-in/out and normalize loudness via ffmpeg
+ *   2. Transcribe via Gemini File API (handles 30–90 min files)
+ *   3. Generate Hebrew blog post from transcript
+ *   4. Upload processed MP3 to S3
+ *   5. Generate social media posts (Twitter, LinkedIn, Facebook)
  *
  * Usage — from GarageBand export:
  *   node scripts/post-production.mjs \
@@ -51,7 +52,6 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, '..');
-
 
 // ─── Argument parsing ────────────────────────────────────────────────────────
 
@@ -655,7 +655,6 @@ ${transcript}`;
   return postPath;
 }
 
-// ─── Step 4: S3 upload ───────────────────────────────────────────────────────
 // ─── Step 5: Generate social media posts ─────────────────────────────────────
 
 async function generateSocial(opts, postContent, postUrl, socialFile) {
@@ -694,7 +693,7 @@ async function generateSocial(opts, postContent, postUrl, socialFile) {
   return social;
 }
 
-
+// ─── Step 4: S3 upload ───────────────────────────────────────────────────────
 
 function uploadToS3(localFile, bucket, s3Key) {
   console.log('\n▶ Step 4: Uploading to S3');

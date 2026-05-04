@@ -36,7 +36,7 @@ const permalink = getPostPermalink(post);
 		</div>
 		<h1 dir="auto">{post.data.title}</h1>
 		{post.data.cover_image && (
-			<img src={post.data.cover_image} alt={post.data.title} class="post-cover-image" />
+			<img src={post.data.cover_image} alt={post.data.title} class="post-cover-image" loading="lazy" decoding="async" />
 		)}
 		{post.data.audio_url && (
 			<div class="audio-player">
