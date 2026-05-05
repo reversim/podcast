@@ -14,10 +14,10 @@ function stripMarkdown(text: string): string {
 }
 
 // Mirrors the description logic in podcast.xml.ts
-function makeDescription(summary: string | undefined, body: string, maxLen = 1000): string {
+function makeDescription(summary: string | undefined, body: string): string {
   if (summary) return summary;
   const rawText = sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} });
-  return stripMarkdown(rawText).slice(0, maxLen).trim();
+  return stripMarkdown(rawText).trim();
 }
 
 describe('RSS episode description', () => {
@@ -30,10 +30,10 @@ describe('RSS episode description', () => {
     expect(makeDescription(undefined, body)).toBe('תוכן הפרקקישור');
   });
 
-  it('truncates body to 1000 chars', () => {
+  it('returns full body without truncation', () => {
     const body = `<p>${'א'.repeat(2000)}</p>`;
     const result = makeDescription(undefined, body);
-    expect(result.length).toBeLessThanOrEqual(1000);
+    expect(result.length).toBe(2000);
   });
 
   it('returns empty string for empty body with no summary', () => {

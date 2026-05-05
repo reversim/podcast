@@ -33,7 +33,7 @@ export async function GET(context: { site: URL }) {
 			const rawText = sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} });
 			const description = post.data.summary
 				? post.data.summary
-				: stripMarkdown(rawText).slice(0, 1000).trim();
+				: stripMarkdown(rawText).trim();
 			return {
 				title: post.data.title,
 				pubDate: post.data.date,
