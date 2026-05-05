@@ -25,6 +25,7 @@
     "astro": "^5.17.1",
     "cheerio": "^1.0.0",
     "fast-xml-parser": "^5.3.5",
+    "marked": "^18.0.3",
     "p-limit": "^6.2.0",
     "pagefind": "^1.4.0",
     "sanitize-html": "^2.17.3",

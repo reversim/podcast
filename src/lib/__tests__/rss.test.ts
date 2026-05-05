@@ -1,69 +1,53 @@
 import { describe, it, expect } from 'vitest';
 import sanitizeHtml from 'sanitize-html';
+import { marked } from 'marked';
 
-function stripMarkdown(text: string): string {
-  return text
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/\*\*([^*]+)\*\*/g, '$1')
-    .replace(/\*([^*]+)\*/g, '$1')
-    .replace(/^#{1,6}\s+/gm, '')
-    .replace(/^[*\-]\s+/gm, '')
-    .replace(/`[^`]+`/g, (m) => m.slice(1, -1))
-    .replace(/\n{3,}/g, '\n\n')
-    .trim();
-}
+const ALLOWED_TAGS = ['p', 'a', 'strong', 'em', 'ul', 'ol', 'li', 'br', 'h1', 'h2', 'h3', 'h4'];
 
 // Mirrors the description logic in podcast.xml.ts
-function makeDescription(summary: string | undefined, body: string): string {
+async function makeDescription(summary: string | undefined, body: string): Promise<string> {
   if (summary) return summary;
-  const rawText = sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} });
-  return stripMarkdown(rawText).trim();
+  const html = await marked(body);
+  return sanitizeHtml(html, {
+    allowedTags: ALLOWED_TAGS,
+    allowedAttributes: { a: ['href'] },
+  });
 }
 
 describe('RSS episode description', () => {
-  it('prefers summary when present', () => {
-    expect(makeDescription('Short summary', '<p>Long body</p>')).toBe('Short summary');
+  it('prefers summary when present', async () => {
+    expect(await makeDescription('Short summary', '**Long body**')).toBe('Short summary');
   });
 
-  it('strips HTML tags from body', () => {
-    const body = '<div dir="rtl"><p>תוכן הפרק</p><a href="#">קישור</a></div>';
-    expect(makeDescription(undefined, body)).toBe('תוכן הפרקקישור');
+  it('converts markdown links to <a> tags', async () => {
+    const result = await makeDescription(undefined, '[יובל](https://example.com)');
+    expect(result).toContain('<a href="https://example.com">יובל</a>');
   });
 
-  it('returns full body without truncation', () => {
-    const body = `<p>${'א'.repeat(2000)}</p>`;
-    const result = makeDescription(undefined, body);
-    expect(result.length).toBe(2000);
+  it('converts bold to <strong>', async () => {
+    const result = await makeDescription(undefined, '**כותרת**');
+    expect(result).toContain('<strong>כותרת</strong>');
   });
 
-  it('returns empty string for empty body with no summary', () => {
-    expect(makeDescription(undefined, '')).toBe('');
+  it('converts bullet list to <ul><li>', async () => {
+    const result = await makeDescription(undefined, '* פריט ראשון');
+    expect(result).toContain('<li>פריט ראשון</li>');
   });
 
-  it('trims leading/trailing whitespace from body', () => {
-    expect(makeDescription(undefined, '<p>   שלום   </p>')).toBe('שלום');
-  });
-});
-
-describe('stripMarkdown', () => {
-  it('converts markdown links to plain text', () => {
-    expect(stripMarkdown('[יובל](https://example.com)')).toBe('יובל');
+  it('passes through existing HTML (Blogger posts)', async () => {
+    const body = '<p>תוכן הפרק</p>';
+    const result = await makeDescription(undefined, body);
+    expect(result).toContain('<p>תוכן הפרק</p>');
   });
 
-  it('strips bold markers', () => {
-    expect(stripMarkdown('**[04:38] כותרת**')).toBe('[04:38] כותרת');
+  it('returns empty string for empty body with no summary', async () => {
+    expect(await makeDescription(undefined, '')).toBe('');
   });
 
-  it('strips bullet markers', () => {
-    expect(stripMarkdown('* נקודה ראשונה')).toBe('נקודה ראשונה');
-  });
-
-  it('strips heading markers', () => {
-    expect(stripMarkdown('## כותרת')).toBe('כותרת');
-  });
-
-  it('leaves plain Hebrew untouched', () => {
-    expect(stripMarkdown('האזנה נעימה!')).toBe('האזנה נעימה!');
+  it('returns full body without truncation', async () => {
+    const body = 'א'.repeat(2000);
+    const result = await makeDescription(undefined, body);
+    expect(result.length).toBeGreaterThan(2000);
   });
 });
 

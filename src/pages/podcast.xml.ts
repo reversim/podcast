@@ -1,17 +1,16 @@
 import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
+import { marked } from 'marked';
 import { getAllPosts, getPostPermalink } from '../lib/posts';
 
-function stripMarkdown(text: string): string {
-	return text
-		.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')  // [text](url) → text
-		.replace(/\*\*([^*]+)\*\*/g, '$1')          // **bold** → bold
-		.replace(/\*([^*]+)\*/g, '$1')              // *italic* → italic
-		.replace(/^#{1,6}\s+/gm, '')                // ## heading → heading
-		.replace(/^[*\-]\s+/gm, '')                 // * bullet / - bullet → plain
-		.replace(/`[^`]+`/g, (m) => m.slice(1, -1)) // `code` → code
-		.replace(/\n{3,}/g, '\n\n')                 // collapse excess blank lines
-		.trim();
+const ALLOWED_TAGS = ['p', 'a', 'strong', 'em', 'ul', 'ol', 'li', 'br', 'h1', 'h2', 'h3', 'h4'];
+
+async function bodyToHtml(body: string): Promise<string> {
+	const html = await marked(body);
+	return sanitizeHtml(html, {
+		allowedTags: ALLOWED_TAGS,
+		allowedAttributes: { a: ['href'] },
+	});
 }
 
 export async function GET(context: { site: URL }) {
@@ -25,15 +24,13 @@ export async function GET(context: { site: URL }) {
 		xmlns: {
 			itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
 		},
-		items: posts.map((post) => {
+		items: await Promise.all(posts.map(async (post) => {
 			const enclosure = post.data.audio_url
 				? `<enclosure url="${post.data.audio_url}" length="0" type="audio/mpeg" />`
 				: '';
-			const body = post.body ?? '';
-			const rawText = sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} });
 			const description = post.data.summary
 				? post.data.summary
-				: stripMarkdown(rawText).trim();
+				: await bodyToHtml(post.body ?? '');
 			return {
 				title: post.data.title,
 				pubDate: post.data.date,
@@ -41,7 +38,7 @@ export async function GET(context: { site: URL }) {
 				description,
 				customData: `${enclosure}`,
 			};
-		}),
+		})),
 		customData: `
 			<language>he</language>
 			<itunes:author>רברס עם פלטפורמה</itunes:author>
