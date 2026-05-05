@@ -1,12 +1,23 @@
 import { describe, it, expect } from 'vitest';
 import sanitizeHtml from 'sanitize-html';
 
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^[*\-]\s+/gm, '')
+    .replace(/`[^`]+`/g, (m) => m.slice(1, -1))
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
 // Mirrors the description logic in podcast.xml.ts
 function makeDescription(summary: string | undefined, body: string, maxLen = 1000): string {
   if (summary) return summary;
-  return sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} })
-    .slice(0, maxLen)
-    .trim();
+  const rawText = sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} });
+  return stripMarkdown(rawText).slice(0, maxLen).trim();
 }
 
 describe('RSS episode description', () => {
@@ -31,6 +42,28 @@ describe('RSS episode description', () => {
 
   it('trims leading/trailing whitespace from body', () => {
     expect(makeDescription(undefined, '<p>   שלום   </p>')).toBe('שלום');
+  });
+});
+
+describe('stripMarkdown', () => {
+  it('converts markdown links to plain text', () => {
+    expect(stripMarkdown('[יובל](https://example.com)')).toBe('יובל');
+  });
+
+  it('strips bold markers', () => {
+    expect(stripMarkdown('**[04:38] כותרת**')).toBe('[04:38] כותרת');
+  });
+
+  it('strips bullet markers', () => {
+    expect(stripMarkdown('* נקודה ראשונה')).toBe('נקודה ראשונה');
+  });
+
+  it('strips heading markers', () => {
+    expect(stripMarkdown('## כותרת')).toBe('כותרת');
+  });
+
+  it('leaves plain Hebrew untouched', () => {
+    expect(stripMarkdown('האזנה נעימה!')).toBe('האזנה נעימה!');
   });
 });
 

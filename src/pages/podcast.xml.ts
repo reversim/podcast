@@ -2,6 +2,18 @@ import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
 import { getAllPosts, getPostPermalink } from '../lib/posts';
 
+function stripMarkdown(text: string): string {
+	return text
+		.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')  // [text](url) → text
+		.replace(/\*\*([^*]+)\*\*/g, '$1')          // **bold** → bold
+		.replace(/\*([^*]+)\*/g, '$1')              // *italic* → italic
+		.replace(/^#{1,6}\s+/gm, '')                // ## heading → heading
+		.replace(/^[*\-]\s+/gm, '')                 // * bullet / - bullet → plain
+		.replace(/`[^`]+`/g, (m) => m.slice(1, -1)) // `code` → code
+		.replace(/\n{3,}/g, '\n\n')                 // collapse excess blank lines
+		.trim();
+}
+
 export async function GET(context: { site: URL }) {
 	const posts = (await getAllPosts()).filter((post) => post.data.audio_url);
 
@@ -18,9 +30,10 @@ export async function GET(context: { site: URL }) {
 				? `<enclosure url="${post.data.audio_url}" length="0" type="audio/mpeg" />`
 				: '';
 			const body = post.body ?? '';
+			const rawText = sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} });
 			const description = post.data.summary
 				? post.data.summary
-				: sanitizeHtml(body, { allowedTags: [], allowedAttributes: {} }).slice(0, 1000).trim();
+				: stripMarkdown(rawText).slice(0, 1000).trim();
 			return {
 				title: post.data.title,
 				pubDate: post.data.date,
