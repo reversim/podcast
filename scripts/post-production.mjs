@@ -239,13 +239,18 @@ function mixWavTracks(bandDir, outputMp3) {
 //                fades in over 3 s, holds for 20 s, then fades out over 8 s.
 //                Listener hears voice immediately with subtle music underneath.
 //
-//   OUTRO BED  — split into two overlapping parts, crossfaded at the speech-end boundary:
-//     Part 1 (under speech): fades in 5 s before the speech winds down, sits at
-//                            -20 dB, fades out as speech ends.
-//     Part 2 (after speech): overlaps Part 1 by XFADE seconds, fades in to -10 dB,
-//                            plays POST_ROLL seconds after speech, then fades out.
+//   OUTRO BED  — a single stream with a piecewise volume envelope applied via
+//                volume=eval=frame, then delayed so it ends POST_ROLL seconds
+//                after speech. Sits quietly under speech (PRE_VOL), swells across
+//                a short crossfade region as speech winds down, holds at POST_VOL
+//                after speech ends, then fades to silence.
 //   Result: a smooth musical swell that lifts from under the speech, peaks just
 //           after the last word, then fades away naturally.
+//
+//   The outro deliberately uses a single stream (rather than asplit + two delayed
+//   branches with afade crossfade) — asplit feeding two long-delay consumers at
+//   different read rates was occasionally producing truncated output where amix
+//   stopped at the second branch's delay boundary.
 
 function processAudio(opts, inputMp3, outputMp3) {
   // ── Tuning ──────────────────────────────────────────────────────────────────
@@ -333,9 +338,9 @@ function processAudio(opts, inputMp3, outputMp3) {
   }
 
   // ── OUTRO BED ──────────────────────────────────────────────────────────────
-  // Timed so the outro ends POST_ROLL seconds after speech ends.
-  // Split into Part 1 (under speech, quiet) and Part 2 (after speech, louder),
-  // crossfaded across the speech-end boundary.
+  // Single-stream envelope: PRE_VOL (under speech) → linear ramp across XFADE
+  // region centered on speech-end → POST_VOL (after speech) → fade to silence.
+  // Delayed so it ends POST_ROLL seconds after speech.
   if (hasOutro) {
     inputs.push(`-i "${opts.outro}"`);
 
@@ -343,45 +348,41 @@ function processAudio(opts, inputMp3, outputMp3) {
     const preRoll    = Math.max(0, outroDur - OUTRO_POST_ROLL);
     // Absolute time in the episode when the outro starts
     const outroDelay = Math.max(0, speechDur - preRoll);
-    // Time within the outro track at which speech ends
-    const seAt       = speechDur - outroDelay; // ≈ preRoll
+    // Time within the outro track at which speech ends (≈ preRoll)
+    const seAt       = speechDur - outroDelay;
 
-    // Part 1: [0, seAt + XFADE] — quiet, fades out into the crossfade
-    const p1End          = Math.min(seAt + OUTRO_XFADE, outroDur);
-    const p1FadeOutStart = Math.max(0, seAt - OUTRO_XFADE);
-    const p1DelayMs      = Math.round(outroDelay * 1000);
+    // Volume envelope time points (relative to the outro stream's own clock)
+    const xfStart      = Math.max(0, seAt - OUTRO_XFADE);          // ramp PRE → POST starts
+    const xfEnd        = Math.min(outroDur, seAt + OUTRO_XFADE);   // ramp ends
+    const fadeOutStart = Math.max(xfEnd, outroDur - OUTRO_FADE_OUT);
+    const fadeInEnd    = Math.min(OUTRO_FADE_IN, xfStart);         // initial fade-in cap
+    const delayMs      = Math.round(outroDelay * 1000);
+    const dPostPre     = OUTRO_POST_VOL - OUTRO_PRE_VOL;
+    const xfDur        = Math.max(0.001, xfEnd - xfStart);
+    const fOutDur      = Math.max(0.001, outroDur - fadeOutStart);
 
-    // Part 2: [seAt - XFADE, end] — louder, fades in from the crossfade
-    const p2Start        = Math.max(0, seAt - OUTRO_XFADE);
-    const p2Dur          = outroDur - p2Start;
-    const p2FadeOutStart = Math.max(0, p2Dur - OUTRO_FADE_OUT);
-    const p2DelayMs      = Math.round((outroDelay + p2Start) * 1000);
+    // Piecewise volume by stream-local t:
+    //   [0, fadeInEnd]:           ramp 0 → PRE_VOL
+    //   [fadeInEnd, xfStart]:     PRE_VOL
+    //   [xfStart, xfEnd]:         ramp PRE_VOL → POST_VOL  (crossfade)
+    //   [xfEnd, fadeOutStart]:    POST_VOL
+    //   [fadeOutStart, outroDur]: ramp POST_VOL → 0
+    const volExpr =
+      `if(lt(t,${fadeInEnd}), ${OUTRO_PRE_VOL}*t/${fadeInEnd},` +
+      `if(lt(t,${xfStart}), ${OUTRO_PRE_VOL},` +
+      `if(lt(t,${xfEnd}), ${OUTRO_PRE_VOL}+${dPostPre}*(t-${xfStart})/${xfDur},` +
+      `if(lt(t,${fadeOutStart}), ${OUTRO_POST_VOL},` +
+      `if(lt(t,${outroDur}), ${OUTRO_POST_VOL}*(${outroDur}-t)/${fOutDur},` +
+      `0)))))`;
 
-    filters.push(`[${idx}:a]asplit=2[outro_raw1][outro_raw2]`);
-
-    // Part 1: quiet bed under speech, fades out
     filters.push(
-      `[outro_raw1]` +
-      `atrim=0:${p1End},asetpts=PTS-STARTPTS,` +
-      `afade=t=in:st=0:d=${OUTRO_FADE_IN},` +
-      `volume=${OUTRO_PRE_VOL},` +
-      `afade=t=out:st=${p1FadeOutStart}:d=${OUTRO_XFADE * 2},` +
-      `adelay=${p1DelayMs}:all=1` +
-      `[outro_p1]`
+      `[${idx}:a]` +
+      `volume=eval=frame:volume='${volExpr}',` +
+      `atrim=0:${outroDur},asetpts=PTS-STARTPTS,` +
+      `adelay=${delayMs}:all=1` +
+      `[outro_bed]`
     );
-
-    // Part 2: louder swell after speech ends, then fades out
-    filters.push(
-      `[outro_raw2]` +
-      `atrim=${p2Start},asetpts=PTS-STARTPTS,` +
-      `afade=t=in:st=0:d=${OUTRO_XFADE * 2},` +
-      `volume=${OUTRO_POST_VOL},` +
-      `afade=t=out:st=${p2FadeOutStart}:d=${OUTRO_FADE_OUT},` +
-      `adelay=${p2DelayMs}:all=1` +
-      `[outro_p2]`
-    );
-
-    streams.push('[outro_p1]', '[outro_p2]');
+    streams.push('[outro_bed]');
     idx++;
 
     const preRollMin = `${Math.floor(outroDelay / 60)}:${String(Math.floor(outroDelay % 60)).padStart(2,'0')}`;
