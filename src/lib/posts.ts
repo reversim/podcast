@@ -11,13 +11,12 @@ export async function getAllPosts() {
 
 export function getPostPath(entry: PostEntry) {
 	if (entry.data.legacy_path) {
-		return entry.data.legacy_path.startsWith('/')
-			? entry.data.legacy_path
-			: `/${entry.data.legacy_path}`;
+		const lp = entry.data.legacy_path.replace(/\.html$/, '');
+		return lp.startsWith('/') ? lp : `/${lp}`;
 	}
 	const year = entry.data.date.getFullYear();
 	const month = String(entry.data.date.getMonth() + 1).padStart(2, '0');
-	return `/${year}/${month}/${entry.slug}`;
+	return `/${year}/${month}/${entry.id}`;
 }
 
 export function getPostPermalink(entry: PostEntry) {

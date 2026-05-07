@@ -21,8 +21,8 @@
     "vitest": "^4.1.5"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.1",
-    "astro": "^5.17.1",
+    "@astrojs/rss": "^4.0.18",
+    "astro": "^6.3.0",
     "cheerio": "^1.0.0",
     "fast-xml-parser": "^5.3.5",
     "marked": "^18.0.3",
