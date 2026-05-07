@@ -32,6 +32,10 @@
  *   --bucket, -b       S3 bucket (default: m2.reversim.com)
  *   --workdir          Working directory for intermediate files (default: cwd)
  *   --tags             Comma-separated tags
+ *   --transcript PATH  Use this transcript file instead of running Gemini transcription
+ *   --notes            Episode notes: Google Doc URL (must be publicly shared)
+ *                      or local file path. All links from the notes will be
+ *                      embedded inline in the blog post at the matching topic.
  *   --skip-mix         Skip WAV mixing step
  *   --skip-audio       Skip intro/outro/normalize step
  *   --skip-transcribe  Skip Gemini transcription step
@@ -70,6 +74,8 @@ function parseArgs() {
     workdir: process.cwd(),
     tags: [],
     coverImage: null,
+    notes: null,
+    transcript: null,
     transcriber: 'gemini',  // 'gemini' or 'ivrit' (ivrit requires RunPod)
     skipMix: false,
     skipAudio: false,
@@ -93,6 +99,8 @@ function parseArgs() {
       case '--workdir':                   opts.workdir = resolve(args[++i]); break;
       case '--tags':                      opts.tags = args[++i].split(',').map(t => t.trim()); break;
       case '--cover-image':               opts.coverImage = args[++i]; break;
+      case '--notes':                     opts.notes = args[++i]; break;
+      case '--transcript':                opts.transcript = resolve(args[++i]); break;
       case '--transcriber':               opts.transcriber = args[++i]; break;
       case '--skip-mix':                  opts.skipMix = true; break;
       case '--skip-audio':                opts.skipAudio = true; break;
@@ -121,6 +129,13 @@ function parseArgs() {
   if (!opts.slug) {
     // Use episode number as slug base — user can pass --slug for a descriptive one
     opts.slug = `episode-${opts.episode}`;
+  }
+
+  // Bumpers episodes: auto-add the bumpers tag and default cover image
+  const isBumpers = /bumpers/i.test(opts.title) || /bumpers/i.test(opts.slug);
+  if (isBumpers) {
+    if (!opts.tags.includes('bumpers')) opts.tags.push('bumpers');
+    if (!opts.coverImage) opts.coverImage = '/images/blogger/bumpers.png';
   }
 
   return opts;
@@ -176,12 +191,72 @@ function runCapture(cmd) {
   return execSync(cmd, { encoding: 'utf8', stdio: 'pipe' });
 }
 
+// Retries a Gemini generateContent call up to 3 times with exponential backoff
+// on transient errors (503/429/500/504/network). Throws the last error otherwise.
+async function generateWithRetry(model, payload, label = 'Gemini call') {
+  const MAX_ATTEMPTS = 3;
+  const TRANSIENT = /\b(429|500|502|503|504)\b|ECONNRESET|ETIMEDOUT|EAI_AGAIN|fetch failed|high demand/i;
+  let lastErr;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      return await model.generateContent(payload);
+    } catch (err) {
+      lastErr = err;
+      const msg = err?.message || String(err);
+      if (attempt === MAX_ATTEMPTS || !TRANSIENT.test(msg)) throw err;
+      const delayMs = 2000 * Math.pow(2, attempt - 1); // 2s, 4s
+      console.warn(`  ⚠ ${label} failed (attempt ${attempt}/${MAX_ATTEMPTS}): ${msg.slice(0, 200)}`);
+      console.warn(`     Retrying in ${delayMs / 1000}s...`);
+      await new Promise(r => setTimeout(r, delayMs));
+    }
+  }
+  throw lastErr;
+}
+
 function getAudioDuration(file) {
   return parseFloat(
     runCapture(
       `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${file}"`
     ).trim()
   );
+}
+
+// Loads episode notes from either a Google Docs URL (public export) or a
+// local file (preferred for private docs — download via File → Download →
+// Markdown in Google Docs). Returns the raw text, or '' on failure.
+async function loadNotes(notesArg) {
+  if (!notesArg) return '';
+
+  const gdocMatch = notesArg.match(/docs\.google\.com\/document\/d\/([a-zA-Z0-9_-]+)/);
+  if (gdocMatch) {
+    const docId = gdocMatch[1];
+    console.log(`  Fetching Google Doc notes (${docId})...`);
+    try {
+      const r = await fetch(`https://docs.google.com/document/d/${docId}/export?format=md`, { redirect: 'follow' });
+      if (r.ok) {
+        const text = await r.text();
+        if (text && !text.trim().startsWith('<!DOCTYPE') && !text.trimStart().startsWith('<html')) {
+          console.log(`  ✓ Notes loaded (${text.length.toLocaleString()} chars)`);
+          return text;
+        }
+      }
+    } catch {}
+    console.warn(
+      '  ⚠ Google Doc is not publicly shared. Either share it as "Anyone with the link → Viewer",\n' +
+      '     or download it (File → Download → Markdown) and pass the local path via --notes.\n' +
+      '     Skipping notes.'
+    );
+    return '';
+  }
+
+  if (existsSync(notesArg)) {
+    const text = readFileSync(notesArg, 'utf8');
+    console.log(`  ✓ Notes loaded from ${notesArg} (${text.length.toLocaleString()} chars)`);
+    return text;
+  }
+
+  console.warn(`  ⚠ --notes value is neither a Google Docs URL nor an existing file: ${notesArg}`);
+  return '';
 }
 
 async function promptCoverImage() {
@@ -550,10 +625,10 @@ Format each line as:
 [MM:SS] **Speaker name**: text`;
 
   console.log('  Requesting transcription...');
-  const result = await model.generateContent([
+  const result = await generateWithRetry(model, [
     { fileData: { mimeType: file.mimeType, fileUri: file.uri } },
     { text: prompt },
-  ]);
+  ], 'Transcription');
 
   const transcript = result.response.text();
   reportUsage('Transcription', result.response.usageMetadata, 'gemini-3-pro-preview');
@@ -586,6 +661,16 @@ async function generatePost(opts, transcript, audioUrl) {
 
   const tagsHint = opts.tags.length ? `\nTags: ${opts.tags.join(', ')}` : '';
 
+  const notes = await loadNotes(opts.notes);
+  const notesSection = notes
+    ? `\nEPISODE NOTES (from the host's prep doc — authoritative source for links and context):\n${notes}\n\n` +
+      `CRITICAL: Every URL/link present in the EPISODE NOTES MUST appear in the final blog post, ` +
+      `placed at the moment in the conversation where the corresponding topic is discussed (per the TRANSCRIPT timestamps). ` +
+      `Do not drop any link. Do not move links to a separate "links" section — embed them inline in the bullet ` +
+      `that discusses that topic. Use the exact URLs from the notes; do not modify or shorten them. ` +
+      `If a link in the notes has no clear matching topic in the transcript, place it in the closest related section.\n`
+    : '';
+
   const prompt = `You are a content writer for "רברס עם פלטפורמה" (Reversim Podcast), a Hebrew-language technology podcast.
 
 Write the body of a structured Hebrew blog post for episode ${opts.episode}: "${opts.title}".${tagsHint}
@@ -598,7 +683,7 @@ Requirements:
 - Add hyperlinks for companies, products, and articles only when you are certain of the URL (e.g. official websites, well-known domains). Do NOT guess or infer LinkedIn or social media profile URLs for people — leave names as plain text
 - Conversational, engaging style — tech-savvy Israeli audience
 - End with: "האזנה נעימה!"
-- Output only the Markdown body — NO frontmatter YAML
+- Output only the Markdown body — NO frontmatter YAML${notesSection}
 
 Style reference (follow this exact format):
 ---
@@ -622,7 +707,7 @@ TRANSCRIPT:
 ${transcript}`;
 
   console.log('  Calling Gemini to write the post...');
-  const result = await model.generateContent(prompt);
+  const result = await generateWithRetry(model, prompt, 'Blog post');
   const body = result.response.text();
   reportUsage('Blog post', result.response.usageMetadata, 'gemini-3-pro-preview');
 
@@ -685,7 +770,7 @@ async function generateSocial(opts, postContent, postUrl, socialFile) {
     `Blog post content (use this since the site may not be deployed yet):\n\n${postContent}`;
 
   console.log('  Calling Gemini to write social posts...');
-  const result = await model.generateContent(prompt);
+  const result = await generateWithRetry(model, prompt, 'Social posts');
   const social = result.response.text();
   reportUsage('Social posts', result.response.usageMetadata, 'gemini-3-pro-preview');
 
@@ -762,7 +847,15 @@ async function main() {
   // Step 2: Transcribe
   let transcript = '';
   if (!opts.skipTranscribe) {
-    if (existsSync(transcriptFile)) {
+    if (opts.transcript) {
+      if (!existsSync(opts.transcript)) {
+        console.error(`\n✗ --transcript file not found: ${opts.transcript}`);
+        process.exit(1);
+      }
+      console.log(`\n▶ Step 2: Using provided transcript (${opts.transcript})`);
+      transcript = readFileSync(opts.transcript, 'utf8');
+      writeFileSync(transcriptFile, transcript, 'utf8');
+    } else if (existsSync(transcriptFile)) {
       console.log(`\n▶ Step 2: Loading existing transcript (${basename(transcriptFile)})`);
       transcript = readFileSync(transcriptFile, 'utf8');
     } else {

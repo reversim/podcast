@@ -6,10 +6,19 @@ SLUG     ?= episode-$(EPISODE)
 DATE     ?= $(shell date +%Y-%m-%d)
 TAGS        ?=
 COVER_IMAGE ?=
+NOTES       ?=
+TRANSCRIPT  ?=
 WORKDIR  ?= /tmp/reversim-$(EPISODE)
-BAND_DIR ?= $(shell find $(HOME)/Music/GarageBand -maxdepth 1 -name "reversim$(EPISODE)*.band" | head -1)
+# Source recording — provide ONE of:
+#   INPUT=/path/to/file.{mp3,wav}   for a pre-mixed file (e.g. from Riverside)
+#   BAND_DIR=/path/to/*.band        for raw GarageBand WAV tracks (auto-detected if empty)
+INPUT    ?=
+BAND_DIR ?= $(if $(INPUT),,$(shell find $(HOME)/Music/GarageBand -maxdepth 1 -name "reversim$(EPISODE)*.band" | head -1))
 INTRO    ?= assets/intro.mp3
 OUTRO    ?= assets/outro.mp3
+
+# Source argument passed to post-production.mjs
+_source-args = $(if $(INPUT),--input "$(INPUT)",--mix-wavs "$(BAND_DIR)")
 
 # Derived names
 MP3_NAME  = reversim$(EPISODE)-$(shell echo $(SLUG) | tr '-' '_').mp3
@@ -42,7 +51,8 @@ help:
 	@echo "  produce-social     Generate Twitter/LinkedIn/Facebook posts"
 	@echo ""
 	@echo "Example:"
-	@echo "  make produce EPISODE=514 TITLE='כותרת פרק' SLUG=my-episode TAGS=tag1 COVER_IMAGE=/images/ep514.jpg"
+	@echo "  make produce EPISODE=514 TITLE='כותרת פרק' SLUG=my-episode TAGS=tag1 COVER_IMAGE=/images/ep514.jpg \\"
+	@echo "       NOTES='https://docs.google.com/document/d/<id>/edit' INPUT=/path/to/riverside.wav"
 
 install:
 	npm install
@@ -87,6 +97,7 @@ _check-episode:
 	@test -n "$(EPISODE)" || (echo "ERROR: EPISODE is required  (e.g. make produce EPISODE=513 TITLE='...' SLUG=slug)"; exit 1)
 	@test -n "$(TITLE)"   || (echo "ERROR: TITLE is required"; exit 1)
 	@test -n "$(SLUG)"    || (echo "ERROR: SLUG is required"; exit 1)
+	@test -n "$(INPUT)$(BAND_DIR)" || (echo "ERROR: provide INPUT=/path/to/file.{mp3,wav} or BAND_DIR=/path/to/*.band (no GarageBand project auto-detected for episode $(EPISODE))"; exit 1)
 
 _post-production-args = \
 	--episode $(EPISODE) \
@@ -97,45 +108,47 @@ _post-production-args = \
 	--intro "$(INTRO)" \
 	--outro "$(OUTRO)" \
 	$(if $(TAGS),--tags "$(TAGS)") \
-	$(if $(COVER_IMAGE),--cover-image "$(COVER_IMAGE)")
+	$(if $(COVER_IMAGE),--cover-image "$(COVER_IMAGE)") \
+	$(if $(NOTES),--notes "$(NOTES)") \
+	$(if $(TRANSCRIPT),--transcript "$(TRANSCRIPT)")
 
 produce-mix: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
-		--mix-wavs "$(BAND_DIR)" \
+		$(_source-args) \
 		--skip-audio --skip-transcribe --skip-post --skip-upload --skip-social
 
 produce-audio: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
-		--mix-wavs "$(BAND_DIR)" \
+		$(_source-args) \
 		--skip-mix --skip-transcribe --skip-post --skip-upload --skip-social
 
 produce-transcribe: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
-		--mix-wavs "$(BAND_DIR)" \
+		$(_source-args) \
 		--skip-mix --skip-audio --skip-post --skip-upload --skip-social
 
 produce-post: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
-		--mix-wavs "$(BAND_DIR)" \
+		$(_source-args) \
 		--skip-mix --skip-audio --skip-transcribe --skip-upload --skip-social
 
 produce-upload: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
-		--mix-wavs "$(BAND_DIR)" \
+		$(_source-args) \
 		--skip-mix --skip-audio --skip-transcribe --skip-post --skip-social
 
 produce-social: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
-		--mix-wavs "$(BAND_DIR)" \
+		$(_source-args) \
 		--skip-mix --skip-audio --skip-transcribe --skip-post --skip-upload
 
 produce: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
-		--mix-wavs "$(BAND_DIR)"
+		$(_source-args)
