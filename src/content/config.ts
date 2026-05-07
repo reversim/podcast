@@ -12,6 +12,7 @@ const posts = defineCollection({
 		summary: z.string().optional(),
 		legacy_url: z.string().url().optional(),
 		legacy_path: z.string().optional(),
+		aliases: z.array(z.string()).optional(),
 		draft: z.boolean().optional(),
 	}),
 });

@@ -5,14 +5,21 @@ import { getPostPath, getPostPermalink } from '../../../lib/posts';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('posts', ({ data }) => !data.draft);
-	return posts.map((post) => {
+	const entries = [];
+	for (const post of posts) {
 		const path = getPostPath(post).replace(/^\//, '');
 		const [year, month, slug] = path.split('/');
-		return {
-			params: { year, month, slug },
-			props: { post },
-		};
-	});
+		entries.push({ params: { year, month, slug }, props: { post } });
+
+		for (const alias of post.data.aliases ?? []) {
+			const aliasPath = alias.replace(/^\//, '').replace(/\.html$/, '');
+			const parts = aliasPath.split('/');
+			if (parts.length !== 3) continue;
+			const [aYear, aMonth, aSlug] = parts;
+			entries.push({ params: { year: aYear, month: aMonth, slug: aSlug }, props: { post } });
+		}
+	}
+	return entries;
 }
 
 const { post } = Astro.props;
