@@ -8,6 +8,10 @@ const nav = [
 	{ href: withBase('/episodes.html'), label: 'פרקים' },
 	{ href: withBase('/about.html'), label: 'אודות' },
 ];
+
+// Pagefind assets only exist after `astro build` (which runs `npx pagefind`).
+// Skip the search UI in dev to avoid 404s on missing CSS/JS.
+const enableSearch = import.meta.env.PROD;
 ---
 
 <header class="site-header">
@@ -23,21 +27,25 @@ const nav = [
 			</a>
 		))}
 	</nav>
-	<div id="search" class="search-container"></div>
-	<link href={withBase('/pagefind/pagefind-ui.css')} rel="stylesheet" />
-	<script is:inline define:vars={{ base: withBase('/') }}>
-		window.addEventListener('DOMContentLoaded', () => {
-			new PagefindUI({
-				element: '#search',
-				showSubResults: true,
-				bundlePath: base + 'pagefind/',
-				translations: {
-					placeholder: 'חיפוש...',
-					zero_results: 'לא נמצאו תוצאות עבור [SEARCH_TERM]',
-				},
-			});
-		});
-	</script>
-	<script src={withBase('/pagefind/pagefind-ui.js')} is:inline />
+	{enableSearch && (
+		<>
+			<div id="search" class="search-container"></div>
+			<link href={withBase('/pagefind/pagefind-ui.css')} rel="stylesheet" />
+			<script is:inline define:vars={{ base: withBase('/') }}>
+				window.addEventListener('DOMContentLoaded', () => {
+					new PagefindUI({
+						element: '#search',
+						showSubResults: true,
+						bundlePath: base + 'pagefind/',
+						translations: {
+							placeholder: 'חיפוש...',
+							zero_results: 'לא נמצאו תוצאות עבור [SEARCH_TERM]',
+						},
+					});
+				});
+			</script>
+			<script src={withBase('/pagefind/pagefind-ui.js')} is:inline />
+		</>
+	)}
 	<SubscribeButtons />
 </header>
