@@ -7,7 +7,7 @@
  *   1. Add intro/outro with fade-in/out and normalize loudness via ffmpeg
  *   2. Transcribe via Gemini File API (handles 30–90 min files)
  *   3. Generate Hebrew blog post from transcript
- *   4. Upload processed MP3 to S3
+ *   4. Upload processed MP3 to Cloudflare R2 (served by m2.reversim.com) and S3 (backup)
  *   5. Generate social media posts (Twitter, LinkedIn, Facebook)
  *
  * Usage — from GarageBand export:
@@ -29,7 +29,7 @@
  *   --slug, -s         URL slug (auto-derived from episode number if not provided)
  *   --intro            Intro MP3 (default: $REVERSIM_INTRO or assets/intro.mp3)
  *   --outro            Outro MP3 (default: $REVERSIM_OUTRO or assets/outro.mp3)
- *   --bucket, -b       S3 bucket (default: m2.reversim.com)
+ *   --bucket, -b       Bucket name, used for both R2 and S3 (default: reversim)
  *   --workdir          Working directory for intermediate files (default: cwd)
  *   --tags             Comma-separated tags
  *   --transcript PATH  Use this transcript file instead of running Gemini transcription
@@ -40,13 +40,16 @@
  *   --skip-audio       Skip intro/outro/normalize step
  *   --skip-transcribe  Skip Gemini transcription step
  *   --skip-post        Skip blog post generation step
- *   --skip-upload      Skip S3 upload step
+ *   --skip-upload      Skip the R2 + S3 upload step
  *
  * Environment variables:
- *   GEMINI_API_KEY    Google Gemini API key (required for transcription/post steps)
- *   REVERSIM_INTRO    Default path to intro MP3
- *   REVERSIM_OUTRO    Default path to outro MP3
- *   AWS_PROFILE       AWS profile (optional)
+ *   GEMINI_API_KEY        Google Gemini API key (required for transcription/post steps)
+ *   REVERSIM_INTRO        Default path to intro MP3
+ *   REVERSIM_OUTRO        Default path to outro MP3
+ *   AWS_PROFILE           AWS profile for the S3 backup upload (optional; code uses --profile reversim)
+ *   R2_ACCOUNT_ID         Cloudflare account id for the R2 S3-compatible endpoint (required for upload)
+ *   R2_ACCESS_KEY_ID      R2 S3-API access key id (required for upload)
+ *   R2_SECRET_ACCESS_KEY  R2 S3-API secret access key (required for upload)
  */
 
 import { execSync } from 'child_process';
@@ -182,9 +185,13 @@ function printCostSummary() {
 
 // ─── Utilities ───────────────────────────────────────────────────────────────
 
-function run(cmd, { silent = false } = {}) {
+function run(cmd, { silent = false, env } = {}) {
   if (!silent) console.log(`  $ ${cmd.slice(0, 140)}`);
-  return execSync(cmd, { encoding: 'utf8', stdio: silent ? 'pipe' : 'inherit' });
+  return execSync(cmd, {
+    encoding: 'utf8',
+    stdio: silent ? 'pipe' : 'inherit',
+    env: env ? { ...process.env, ...env } : process.env,
+  });
 }
 
 function runCapture(cmd) {
@@ -499,8 +506,8 @@ async function transcribeIvrit(opts, audioFile, audioUrl, transcriptFile) {
   } catch {}
 
   if (!urlReady) {
-    console.log('  File not yet on S3 — uploading now...');
-    uploadToS3(audioFile, opts.bucket, audioUrl.split('/').pop());
+    console.log('  File not yet published — uploading now...');
+    uploadAudio(audioFile, opts.bucket, audioUrl.split('/').pop());
   }
 
   // Submit job to RunPod
@@ -779,12 +786,45 @@ async function generateSocial(opts, postContent, postUrl, socialFile) {
   return social;
 }
 
-// ─── Step 4: S3 upload ───────────────────────────────────────────────────────
+// ─── Step 4: Upload (S3 + R2) ─────────────────────────────────────────────────
+// Episodes are stored in two buckets: Cloudflare R2 (what m2.reversim.com serves)
+// and Amazon S3 (kept as a durable backup origin). See docs/media-hosting-migration.md.
 
 function uploadToS3(localFile, bucket, s3Key) {
-  console.log('\n▶ Step 4: Uploading to S3');
   const s3Uri = `s3://${bucket}/${s3Key}`;
   run(`aws s3 cp "${localFile}" "${s3Uri}" --profile reversim`);
+  console.log(`  ✓ S3:  ${s3Uri}`);
+}
+
+function uploadToR2(localFile, bucket, s3Key) {
+  const accountId       = process.env.R2_ACCOUNT_ID;
+  const accessKeyId     = process.env.R2_ACCESS_KEY_ID;
+  const secretAccessKey = process.env.R2_SECRET_ACCESS_KEY;
+  if (!accountId || !accessKeyId || !secretAccessKey) {
+    console.error('  ✗ R2 credentials missing — set R2_ACCOUNT_ID, R2_ACCESS_KEY_ID and R2_SECRET_ACCESS_KEY in .env');
+    console.error('    m2.reversim.com serves from R2, so the episode would not be live without this.');
+    process.exit(1);
+  }
+  const s3Uri    = `s3://${bucket}/${s3Key}`;
+  const endpoint = `https://${accountId}.r2.cloudflarestorage.com`;
+  // Credentials passed via env (not the command line) so they are not logged.
+  // when_required avoids the aws-cli v2 default checksum headers that R2 rejects.
+  run(`aws s3 cp "${localFile}" "${s3Uri}" --endpoint-url "${endpoint}"`, {
+    env: {
+      AWS_ACCESS_KEY_ID: accessKeyId,
+      AWS_SECRET_ACCESS_KEY: secretAccessKey,
+      AWS_DEFAULT_REGION: 'auto',
+      AWS_REQUEST_CHECKSUM_CALCULATION: 'when_required',
+      AWS_RESPONSE_CHECKSUM_VALIDATION: 'when_required',
+    },
+  });
+  console.log(`  ✓ R2:  ${s3Uri}`);
+}
+
+function uploadAudio(localFile, bucket, s3Key) {
+  console.log('\n▶ Step 4: Uploading to R2 + S3');
+  uploadToR2(localFile, bucket, s3Key);   // primary — m2.reversim.com serves this
+  uploadToS3(localFile, bucket, s3Key);   // backup origin
   const audioUrl = `https://m2.reversim.com/${s3Key}`;
   console.log(`  ✓ Live at ${audioUrl}`);
   return audioUrl;
@@ -901,7 +941,7 @@ async function main() {
       console.error(`\n✗ Processed MP3 not found: ${outputMp3}`);
       process.exit(1);
     }
-    uploadToS3(outputMp3, opts.bucket, mp3Name);
+    uploadAudio(outputMp3, opts.bucket, mp3Name);
   } else {
     console.log('\n▶ Step 4: Skipped (--skip-upload)');
   }

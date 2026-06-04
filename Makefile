@@ -47,7 +47,7 @@ help:
 	@echo "  produce-audio      Add intro/outro, normalize"
 	@echo "  produce-transcribe Transcribe with Gemini, save transcript"
 	@echo "  produce-post       Generate Hebrew blog post from transcript"
-	@echo "  produce-upload     Upload processed MP3 to S3"
+	@echo "  produce-upload     Upload processed MP3 to R2 (m2.reversim.com) + S3 backup"
 	@echo "  produce-social     Generate Twitter/LinkedIn/Facebook posts"
 	@echo ""
 	@echo "Example:"
