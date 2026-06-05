@@ -87,6 +87,23 @@ Repo-side change already shipped (commit `47f2c4e`): 11 episodes that hardcoded
 raw `s3.amazonaws.com/reversim/...` URLs were rewritten to `m2.reversim.com`
 so all audio routes through the swappable custom domain.
 
+## Cutover completed — 2026-06-05
+
+The two `m.`/`m2.` redirect rules were deleted; both hostnames now serve audio
+natively from R2 (HTTP 200, `content-type: audio/mpeg`, range/`206` supported).
+S3 retained as the rollback origin.
+
+**Gotcha hit during cutover (important for any future re-provision):** the R2
+custom-domain certificates sat stuck in `ssl: pending` for ~45 min because the
+wildcard redirect rule (`http*://m2.reversim.com/*`) also matched the cert's
+HTTP domain-control-validation path (`/.well-known/...`) and 302'd it to S3, so
+validation could never complete. Fix: add `and not
+(starts_with(http.request.uri.path, "/.well-known/"))` to the redirect rule(s)
+so the DCV challenge reaches Cloudflare, then delete + re-add the custom domain
+to force a fresh validation (it then went `active` within ~30s). If you ever
+recreate the redirect rules AND need a new R2 cert at the same time, keep the
+`/.well-known/` exclusion in place until the cert is `active`.
+
 ## Rollback procedure (if R2 delivery misbehaves after cutover)
 
 1. In R2 → bucket `reversim` → Settings → Custom Domains: **remove**
