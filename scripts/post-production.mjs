@@ -149,7 +149,9 @@ function parseArgs() {
 // Pricing per 1M tokens — source: https://ai.google.dev/gemini-api/docs/pricing
 // Audio input: 25 tokens/second (e.g. 90-min episode = 135k tokens = ~$0.27)
 // Long context (>200k tokens): $4.00 in / $18.00 out
+const GEMINI_MODEL = 'gemini-3.1-pro-preview';
 const GEMINI_PRICING = {
+  'gemini-3.1-pro-preview': { inputPerM: 2.00, outputPerM: 12.00 },
   'gemini-3-pro-preview':  { inputPerM: 2.00, outputPerM: 12.00 },
   'gemini-2.5-pro-preview': { inputPerM: 2.00, outputPerM: 12.00 },
   'gemini-1.5-pro':         { inputPerM: 1.25, outputPerM: 5.00  },
@@ -200,12 +202,24 @@ function runCapture(cmd) {
 
 // Retries a Gemini generateContent call up to 3 times with exponential backoff
 // on transient errors (503/429/500/504/network). Throws the last error otherwise.
-async function generateWithRetry(model, payload, label = 'Gemini call') {
+//
+// Pass { stream: true } for long outputs (e.g. full transcripts): streaming
+// returns response headers immediately and keeps the connection alive while the
+// model generates, avoiding undici's ~5-minute headers timeout that surfaces as
+// a bare "fetch failed". Returns a { response } object in both modes so callers
+// can uniformly use result.response.text() / result.response.usageMetadata.
+async function generateWithRetry(model, payload, label = 'Gemini call', { stream = false } = {}) {
   const MAX_ATTEMPTS = 3;
-  const TRANSIENT = /\b(429|500|502|503|504)\b|ECONNRESET|ETIMEDOUT|EAI_AGAIN|fetch failed|high demand/i;
+  const TRANSIENT = /\b(429|500|502|503|504)\b|ECONNRESET|ETIMEDOUT|EAI_AGAIN|fetch failed|high demand|terminated/i;
   let lastErr;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
+      if (stream) {
+        const { stream: chunks, response } = await model.generateContentStream(payload);
+        for await (const _ of chunks) process.stdout.write('.'); // drain to keep connection alive
+        process.stdout.write('\n');
+        return { response: await response };
+      }
       return await model.generateContent(payload);
     } catch (err) {
       lastErr = err;
@@ -616,7 +630,7 @@ async function transcribe(opts, audioFile, transcriptFile) {
   if (file.state === FileState.FAILED) throw new Error('Gemini file processing failed');
   console.log(' done.');
 
-  const model = genAI.getGenerativeModel({ model: 'gemini-3-pro-preview' });
+  const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
   const prompt = `This is a Hebrew-language technology podcast episode called "רברס עם פלטפורמה" (Reversim Podcast), episode ${opts.episode}: "${opts.title}".
 
@@ -631,14 +645,14 @@ Rules:
 Format each line as:
 [MM:SS] **Speaker name**: text`;
 
-  console.log('  Requesting transcription...');
+  console.log('  Requesting transcription (streaming)...');
   const result = await generateWithRetry(model, [
     { fileData: { mimeType: file.mimeType, fileUri: file.uri } },
     { text: prompt },
-  ], 'Transcription');
+  ], 'Transcription', { stream: true });
 
   const transcript = result.response.text();
-  reportUsage('Transcription', result.response.usageMetadata, 'gemini-3-pro-preview');
+  reportUsage('Transcription', result.response.usageMetadata, GEMINI_MODEL);
   writeFileSync(transcriptFile, transcript, 'utf8');
   console.log(`  ✓ Transcript (${transcript.length.toLocaleString()} chars) → ${transcriptFile}`);
 
@@ -664,7 +678,7 @@ async function generatePost(opts, transcript, audioUrl) {
   if (!apiKey) { console.error('  ✗ GEMINI_API_KEY is required'); process.exit(1); }
 
   const genAI = new GoogleGenerativeAI(apiKey);
-  const model = genAI.getGenerativeModel({ model: 'gemini-3-pro-preview' });
+  const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
   const tagsHint = opts.tags.length ? `\nTags: ${opts.tags.join(', ')}` : '';
 
@@ -716,7 +730,7 @@ ${transcript}`;
   console.log('  Calling Gemini to write the post...');
   const result = await generateWithRetry(model, prompt, 'Blog post');
   const body = result.response.text();
-  reportUsage('Blog post', result.response.usageMetadata, 'gemini-3-pro-preview');
+  reportUsage('Blog post', result.response.usageMetadata, GEMINI_MODEL);
 
   // Build frontmatter
   const [year, month] = opts.date.split('-');
@@ -768,7 +782,7 @@ async function generateSocial(opts, postContent, postUrl, socialFile) {
 
   const genAI = new GoogleGenerativeAI(apiKey);
   const model = genAI.getGenerativeModel({
-    model: 'gemini-3-pro-preview',
+    model: GEMINI_MODEL,
     systemInstruction: systemPrompt,
   });
 
@@ -779,7 +793,7 @@ async function generateSocial(opts, postContent, postUrl, socialFile) {
   console.log('  Calling Gemini to write social posts...');
   const result = await generateWithRetry(model, prompt, 'Social posts');
   const social = result.response.text();
-  reportUsage('Social posts', result.response.usageMetadata, 'gemini-3-pro-preview');
+  reportUsage('Social posts', result.response.usageMetadata, GEMINI_MODEL);
 
   writeFileSync(socialFile, social, 'utf8');
   console.log(`  ✓ Social posts → ${socialFile}`);
