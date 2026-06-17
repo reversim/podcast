@@ -53,7 +53,7 @@
  */
 
 import { execSync } from 'child_process';
-import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync, copyFileSync } from 'fs';
 import { resolve, dirname, join, basename, extname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -661,10 +661,31 @@ Format each line as:
   return transcript;
 }
 
+// Ensures opts.coverImage is a path the deployed site can serve. Remote URLs
+// and existing /images/ web paths are left as-is; a local filesystem path is
+// copied into public/images/ and rewritten to its /images/ web path.
+function normalizeCoverImage(opts) {
+  const img = opts.coverImage;
+  if (!img || img.startsWith('http') || img.startsWith('/images/')) return;
+
+  const src = resolve(img);
+  if (!existsSync(src)) {
+    console.warn(`  ⚠ cover_image not found locally: ${img} — leaving path as-is`);
+    return;
+  }
+  const ext = (extname(src) || '.png').toLowerCase();
+  const filename = `ep${opts.episode}-cover${ext}`;
+  const dest = join(REPO_ROOT, 'public/images', filename);
+  copyFileSync(src, dest);
+  opts.coverImage = `/images/${filename}`;
+  console.log(`  Copied cover image → public/images/${filename}`);
+}
+
 // ─── Step 3: Generate blog post ───────────────────────────────────────────────
 
 async function generatePost(opts, transcript, audioUrl) {
   console.log('\n▶ Step 3: Generating Hebrew blog post');
+  normalizeCoverImage(opts);
 
   let GoogleGenerativeAI;
   try {
