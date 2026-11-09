@@ -4,7 +4,14 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { withBase } from '../lib/urls';
 
-const { title = 'רברס עם פלטפורמה', description = 'פודקאסט על תוכנה, מוצר, ותשתיות — בעברית.' } = Astro.props;
+const { title = 'רברס עם פלטפורמה', description = 'פודקאסט על תוכנה, מוצר, ותשתיות — בעברית.', canonical } = Astro.props;
+// GitHub Pages serves every page at both /x and /x.html. Point Google at the .html form,
+// which matches the legacy Blogger URLs and the internal links.
+function canonicalPath(pathname: string) {
+	if (pathname === '/' || pathname === '' || pathname === '/index.html') return '/';
+	return `${pathname.replace(/\/$/, '').replace(/\.html$/, '')}.html`;
+}
+const canonicalUrl = new URL(canonical ?? canonicalPath(Astro.url.pathname), Astro.site).href;
 const gaId = import.meta.env.PUBLIC_GA_ID ?? 'G-Y4CQKFBQGR';
 ---
 
@@ -15,6 +22,7 @@ const gaId = import.meta.env.PUBLIC_GA_ID ?? 'G-Y4CQKFBQGR';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
 		<link rel="icon" href={withBase('/favicon.ico')} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -32,7 +32,7 @@ const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 const permalink = getPostPermalink(post);
 ---
 
-<BaseLayout title={`${post.data.title} | רברס עם פלטפורמה`}>
+<BaseLayout title={`${post.data.title} | רברס עם פלטפורמה`} canonical={permalink}>
 	<article class="article">
 		<div class="post-meta">
 			<span>{dateLabel}</span>

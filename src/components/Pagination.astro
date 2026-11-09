@@ -1,8 +1,9 @@
 ---
 const { page } = Astro.props;
+const toHtml = (url: string) => (url === '/' || url.endsWith('.html') ? url : `${url}.html`);
 ---
 
 <div class="pagination">
-	{page.url.prev ? <a href={page.url.prev}>הקודמים</a> : <span></span>}
-	{page.url.next ? <a href={page.url.next}>הבאים</a> : <span></span>}
+	{page.url.prev ? <a href={toHtml(page.url.prev)}>הקודמים</a> : <span></span>}
+	{page.url.next ? <a href={toHtml(page.url.next)}>הבאים</a> : <span></span>}
 </div>
