@@ -22,3 +22,9 @@ export function getPostPath(entry: PostEntry) {
 export function getPostPermalink(entry: PostEntry) {
 	return withBase(`${getPostPath(entry)}.html`);
 }
+
+// Group posts by the year/month in their URL (matches the legacy Blogger archive URLs).
+export function getPostYearMonth(entry: PostEntry) {
+	const [, year, month] = getPostPath(entry).split('/');
+	return { year, month };
+}

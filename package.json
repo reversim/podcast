@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && npx pagefind --site dist",
+    "build": "astro build && node scripts/legacy-archive-dirs.mjs dist && npx pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "migrate:blogger": "node scripts/migrate-from-blogger.mjs",

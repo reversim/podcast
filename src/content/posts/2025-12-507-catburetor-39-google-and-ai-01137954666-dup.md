@@ -8,6 +8,8 @@ audio_url: https://m2.reversim.com/reversim507-carburetor39.t2.mp3
 cover_image: /images/blogger/5e8187889421cef47779.png
 legacy_url: https://www.reversim.com/2025/12/507-catburetor-39-google-and-ai_01137954666.html
 legacy_path: /2025/12/507-catburetor-39-google-and-ai_01137954666
+aliases:
+  - /2025/12/507-catburetor-39-google-and-ai
 ---
 
 <div class="post-body">

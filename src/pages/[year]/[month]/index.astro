@@ -1,0 +1,24 @@
+---
+// Legacy Blogger month archive: /YYYY/MM/
+import PeriodArchive from '../../../components/PeriodArchive.astro';
+import { getAllPosts, getPostYearMonth } from '../../../lib/posts';
+
+export async function getStaticPaths() {
+	const posts = await getAllPosts();
+	const byMonth = new Map<string, typeof posts>();
+	for (const post of posts) {
+		const { year, month } = getPostYearMonth(post);
+		const key = `${year}/${month}`;
+		byMonth.set(key, [...(byMonth.get(key) ?? []), post]);
+	}
+	return [...byMonth].map(([key, posts]) => {
+		const [year, month] = key.split('/');
+		return { params: { year, month }, props: { posts } };
+	});
+}
+
+const { year, month } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<PeriodArchive heading={`ארכיון ${month}/${year}`} canonical={`/${year}/${month}/`} posts={posts} />

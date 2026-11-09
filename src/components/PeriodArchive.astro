@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPostPermalink } from '../lib/posts';
+import type { PostEntry } from '../lib/posts';
+
+const { heading, canonical, posts } = Astro.props as { heading: string; canonical: string; posts: PostEntry[] };
+---
+
+<BaseLayout title={`${heading} | רברס עם פלטפורמה`} canonical={canonical}>
+	<h1 class="section-title">{heading}</h1>
+	<ul class="archive-list" data-pagefind-ignore>
+		{posts.map((post) => (
+			<li>
+				<a href={getPostPermalink(post)} dir="auto">{post.data.title}</a>
+			</li>
+		))}
+	</ul>
+</BaseLayout>
