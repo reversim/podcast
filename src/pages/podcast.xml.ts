@@ -42,6 +42,10 @@ export async function GET(context: { site: URL }) {
 		customData: `
 			<language>he</language>
 			<itunes:author>רברס עם פלטפורמה</itunes:author>
+			<itunes:owner>
+				<itunes:name>רברס עם פלטפורמה</itunes:name>
+				<itunes:email>team@reversim.com</itunes:email>
+			</itunes:owner>
 			<itunes:explicit>false</itunes:explicit>
 			<itunes:image href="${import.meta.env.SITE}/podcast-cover.png" />
 			<itunes:category text="Technology" />
