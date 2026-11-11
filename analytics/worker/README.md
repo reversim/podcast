@@ -71,7 +71,7 @@ The stats host is behind Access, so the endpoint lives on the media hosts only.
 
 ## Apple and Spotify numbers (hand-imported)
 
-Apple Podcasts Connect and Spotify for Creators have no analytics API. The dashboard section "Apple and Spotify"
+Apple Podcasts Connect has no analytics API, and Spotify has none that is public (see the next section for Spotify). The dashboard section "Apple and Spotify"
 stores numbers you type or import from a CSV export in `platform_stats (platform, metric, day, value)`.
 
 - `POST /api/platform` with `{"rows":[{"day":"YYYY-MM-DD","platform":"spotify","metric":"followers","value":1234}]}`
@@ -84,20 +84,50 @@ stores numbers you type or import from a CSV export in `platform_stats (platform
   The sample files in `test/fixtures/` are synthetic. The real Spotify and Apple export layouts are not verified.
 - `?mock=1` on the dashboard keeps these numbers in memory only.
 
-## YouTube (automatic, daily)
+## Spotify (automatic, daily, unofficial)
 
-`src/youtube.ts` reads the YouTube Data API v3 once per UTC day. It does nothing, and logs nothing, until both values exist:
+`src/spotify.ts` reads the private analytics API behind the Spotify for Creators web app. Spotify has no public API for this. The code follows the open source connector at https://github.com/openpodcast/spotify-connector (last commit 2026-05-04). Spotify can change or block this API at any time. Using it may break the Spotify terms of service. You use it at your own risk. Your login cookies give full access to the account, so treat them like a password.
 
-- `YOUTUBE_CHANNEL_ID` in `[vars]` (now the @Reversim-summit channel; change it there if the podcast uses another channel).
-- Secret `YOUTUBE_API_KEY`: `npx wrangler secret put YOUTUBE_API_KEY` (a Google Cloud API key with only "YouTube Data API v3" enabled).
+It does nothing, and logs nothing, until all three values exist:
 
-- The hourly cron runs the fetch from 03:00 UTC on, once per day (marker `meta.youtube_day`). After a failure it retries the next hour. It has its own `waitUntil`, so it cannot affect the rollup. A YouTube error logs one line, never the key.
-- Stored in `platform_stats` as `('youtube', followers|views|videos, day)`, so the "Followers, all platforms" tile includes it. YouTube rounds subscribers to 3 significant figures. Hidden subscriber counts are skipped.
-- Per video: `yt_videos` (title, date) and `yt_video_daily (day, video_id, views, likes, comments)`. A daily row is written only when the view count changed. Nothing is pruned.
-- Cost for a 500-video channel: 21 quota units per run (limit 10000 per day), 21 fetch subrequests, at most 3 + 500 + 500 D1 rows on the first day and then one row per video whose views changed. Cap: the newest 1000 videos (41 fetches).
-- `POST /api/youtube/refresh` (same Origin rule as `/api/platform`) runs it now and returns `{ok, channel, videos_seen, rows_written}` or `{ok:false, error}`.
-- `GET /api/stats` adds `youtube: {channel_id, configured, last_day, videos[{id,title,published,views,views_in_range}]}` (top 200).
-- Deploy order: apply `schema.sql` to the remote DB first, then deploy the Worker, then set the secret.
+- `SPOTIFY_SHOW_ID` in `[vars]` (the id in `https://open.spotify.com/show/<id>`).
+- Secrets `SPOTIFY_SP_DC` and `SPOTIFY_SP_KEY`.
+
+### Get the cookies
+
+1. Log in at https://creators.spotify.com in a desktop browser.
+2. Open DevTools. Chrome: Application tab, Cookies. Firefox: Storage tab, Cookies. Safari: Storage tab.
+3. Select the `podcasters.spotify.com` entry (or `creators.spotify.com` if that is the only one).
+4. Copy the value of `sp_dc` (about 160 characters) and the value of `sp_key` (a UUID, 36 characters).
+5. Run `npx wrangler secret put SPOTIFY_SP_DC` and `npx wrangler secret put SPOTIFY_SP_KEY`. Paste each value when asked.
+6. Put the show id in `wrangler.toml` as `SPOTIFY_SHOW_ID`, then deploy.
+
+The cookies last about one year. When they expire, the dashboard shows "Spotify session expired: renew the cookies". Repeat steps 1 to 5.
+
+### Test the login before you deploy
+
+```
+SPOTIFY_SP_DC=... SPOTIFY_SP_KEY=... SPOTIFY_SHOW_ID=... node scripts/spotify-probe.mjs
+```
+
+The probe runs the login flow and calls each endpoint once. It prints the status, the keys and the first and last data point per step. It never prints cookies or the token. It exits with a non-zero code and the step name on failure. Run it first: the response shapes in the code come from the connector's fixtures, not from the live API.
+
+### How it works
+
+- Login (as the connector does it): GET `accounts.spotify.com/oauth2/v2/auth` with PKCE, `prompt=none`, `response_mode=web_message` and the two cookies. The HTML holds an authorization code. POST it to `accounts.spotify.com/api/token`. The bearer token lives one hour and is kept in memory only.
+- Data: base URL `https://generic.wg.spotify.com/podcasters/v0`. Endpoints: `shows/{id}/followers`, `listeners`, `detailedStreams` (30-day window), `shows/{id}/episodes` (pages of 50), `episodes/{id}/metadata` (fallback). The cap is 40 subrequests per run.
+- The hourly cron runs it from 04:00 UTC, once per day (marker `meta.spotify_day`). After a failure it retries the next hour, at most 4 times a day. Expired cookies do not retry the same day. It has its own `waitUntil`, so it cannot affect the rollup.
+- Stored in `platform_stats` as `('spotify', followers|listeners|streams|starts, day)`. The last 30 days are written again each day, so Spotify's late corrections replace old values. The first runs also backfill older years, step by step (marker `meta.spotify_backfill`).
+- Per episode: table `sp_episodes (episode_id, name, published, starts, streams, listeners, updated_day)`. If the list has no totals, the job fetches at most 20 episodes a day (never-fetched first, newest first, then the oldest updated).
+- Cost per day: about 5 to 15 subrequests normally (up to 40 in a backfill or rotation run). D1 writes: about 30 to 120 `platform_stats` rows and 50 to 300 `sp_episodes` rows.
+- Status: `meta.spotify_last_ok` and `meta.spotify_last_error`.
+- `POST /api/spotify/refresh` (same Origin rule as `/api/platform`) runs it now and returns `{ok, days_written, episodes_written, subrequests}` or `{ok:false, error}`.
+- `GET /api/stats` adds `spotify: {configured, last_ok, last_error, episodes[{id,name,published,starts,streams,listeners}]}` (top 300 by date).
+- The dashboard joins Spotify episodes to site episodes by the leading number in the Spotify name ("522 - Title" or "#522"). It leaves the cell empty when the match is not clear.
+- Known limits: shows hosted on Anchor are refused by this API (the connector, issue 17). Spotify removed the "starts" metric in May 2025, so that series can be empty.
+- Turn it off: delete the secrets (`npx wrangler secret delete SPOTIFY_SP_DC` and `SPOTIFY_SP_KEY`). Stored numbers stay.
+- Deploy order: apply `schema.sql` to the remote DB first (the job also creates `sp_episodes` itself), then deploy the Worker, then set the secrets.
+- The empty tables `yt_videos` and `yt_video_daily` from an earlier YouTube version may exist in the live DB. They are unused. Drop them by hand if you want.
 
 ## Notes
 

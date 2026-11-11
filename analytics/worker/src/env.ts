@@ -15,6 +15,8 @@ export interface Env {
   DASH_TOKEN?: string;
   ACCESS_TEAM_DOMAIN?: string;
   ACCESS_AUD?: string;
-  YOUTUBE_API_KEY?: string;
-  YOUTUBE_CHANNEL_ID?: string;
+  SPOTIFY_SHOW_ID?: string;
+  SPOTIFY_CLIENT_ID?: string; // optional override of the web app client id
+  SPOTIFY_SP_DC?: string;
+  SPOTIFY_SP_KEY?: string;
 }

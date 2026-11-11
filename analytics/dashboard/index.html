@@ -169,11 +169,12 @@ footer.dq b { color: var(--ink); font-weight: 600; }
 #ps-tiles { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-bottom: 12px; }
 #ps-tiles .kpi .val { font-size: 26px; }
 .ps-note { margin: 0 0 12px; }
-#tbl-yt tbody tr { cursor: default; }
-#tbl-yt th:nth-child(n+3), #tbl-yt td:nth-child(n+3) { text-align: right; }
-#tbl-yt th:nth-child(-n+2), #tbl-yt td:nth-child(-n+2) { text-align: left; }
-#tbl-yt thead th:nth-child(n+3) button { justify-content: flex-end; }
-#tbl-yt td.ttl { max-width: 420px; overflow: hidden; text-overflow: ellipsis; }
+#tbl-sp tbody tr { cursor: default; }
+#tbl-sp th:nth-child(n+3), #tbl-sp td:nth-child(n+3) { text-align: right; }
+#tbl-sp th:nth-child(-n+2), #tbl-sp td:nth-child(-n+2) { text-align: left; }
+#tbl-sp thead th:nth-child(n+3) button { justify-content: flex-end; }
+#tbl-sp td.ttl { max-width: 420px; overflow: hidden; text-overflow: ellipsis; }
+#sp-warn { margin: 0 0 8px; }
 </style>
 </head>
 <body>
@@ -230,6 +231,7 @@ footer.dq b { color: var(--ink); font-weight: 600; }
           <th scope="col" data-k="d30"><button type="button">D30</button></th>
           <th scope="col" data-k="total"><button type="button">Total</button></th>
           <th scope="col" data-k="in_range"><button type="button">In range</button></th>
+          <th scope="col" data-k="spStreams" id="th-sps" hidden><button type="button">Spotify streams</button></th>
           <th scope="col" class="plain" style="text-align:center">Compare</th>
         </tr></thead>
         <tbody></tbody>
@@ -271,8 +273,8 @@ footer.dq b { color: var(--ink); font-weight: 600; }
   </section>
 
   <section class="card" id="s-ps" style="margin-bottom:16px" aria-labelledby="h-ps">
-    <header><h2 id="h-ps">Apple, Spotify and YouTube</h2><span class="sub">Apple and Spotify numbers you add by hand, YouTube numbers that update by themselves</span></header>
-    <p class="count ps-note">Find the numbers in Apple Podcasts Connect, under Analytics, and in Spotify for Creators, under Analytics, then export. Neither has an API, so add them here. Spotify plays are mostly not visible in download counts, so compare streams here.</p>
+    <header><h2 id="h-ps">Apple and Spotify</h2><span class="sub">Apple numbers you add by hand, Spotify numbers that can update by themselves</span></header>
+    <p class="count ps-note">Find the numbers in Apple Podcasts Connect, under Analytics, and in Spotify for Creators, under Analytics, then export. Apple has no API, so add its numbers here. Spotify can update by itself when the Worker has the Spotify cookies (see the README). Spotify plays are mostly not visible in download counts, so compare streams here.</p>
     <div id="ps-mock" class="banner" hidden>Mock mode: nothing is saved. Changes live in memory until you reload the page.</div>
     <div class="grid" id="ps-tiles"></div>
     <p class="empty" id="ps-empty" hidden></p>
@@ -282,15 +284,16 @@ footer.dq b { color: var(--ink); font-weight: 600; }
       <div class="chart sm"><canvas id="c-ps" role="img" aria-label="Line chart of the selected metric over time, one line per platform"></canvas></div>
       <details class="tv"><summary>View as table</summary><div id="tv-ps"></div><p class="status" id="ps-tv-status" role="status"></p></details>
     </div>
-    <div id="yt-block" style="margin-top:16px">
-      <div class="tools" style="justify-content:space-between;margin-bottom:8px"><h3 style="margin:0">YouTube videos</h3><button type="button" class="btn" id="yt-refresh">Refresh from YouTube now</button></div>
-      <p class="count ps-note">YouTube numbers update automatically once per day. YouTube rounds subscriber counts to 3 significant figures.</p>
-      <p class="empty" id="yt-empty" hidden></p>
-      <div class="tablewrap" id="yt-wrap"><table id="tbl-yt">
-        <caption class="sr">YouTube videos with total views and views gained in the selected range. Click a column heading to sort.</caption>
+    <div id="sp-block" style="margin-top:16px" hidden>
+      <div class="tools" style="justify-content:space-between;margin-bottom:8px"><h3 style="margin:0">Spotify episodes</h3><button type="button" class="btn" id="sp-refresh">Refresh from Spotify now</button></div>
+      <p class="count ps-note" id="sp-line"></p>
+      <p class="banner" id="sp-warn" role="alert" hidden></p>
+      <p class="empty" id="sp-empty" hidden></p>
+      <div class="tablewrap" id="sp-wrap"><table id="tbl-sp">
+        <caption class="sr">Spotify episodes with total starts, streams and listeners. Click a column heading to sort.</caption>
         <thead><tr></tr></thead><tbody></tbody>
       </table></div>
-      <p class="status" id="yt-status" role="status"></p>
+      <p class="status" id="sp-status" role="status"></p>
     </div>
     <details class="tv" id="ps-add" style="margin-top:14px"><summary><b>Add numbers</b></summary>
       <div class="addbox">
@@ -651,7 +654,7 @@ function getStats(N) {
     var p = mockCache || (mockCache = fetchJson('mock-stats.json'));
     return p.then(function (raw) {
       if (!psMock) psMock = arr(raw.platforms && raw.platforms.series).map(function (r) { return { platform: r.platform, metric: r.metric, day: r.day, value: r.value }; });
-      var out = sliceMock(raw, N); out.platforms = mockPlatforms(); if (raw.youtube) out.youtube = mockYoutube(raw.youtube, N); return out;
+      var out = sliceMock(raw, N); out.platforms = mockPlatforms(); out.spotify = mockSpotify(raw.spotify); return out;
     });
   }
   return fetchJson('/api/stats?days=' + N);
@@ -711,11 +714,12 @@ function norm(raw, N) {
   D.psLatest = arr(pl.latest).length ? arr(pl.latest).filter(function (r) { return r && validDay(r.day); }).map(function (r) {
     return { platform: str(r.platform), metric: str(r.metric), day: str(r.day).slice(0, 10), value: num(r.value), prev_day: validDay(r.prev_day) ? str(r.prev_day).slice(0, 10) : null, prev_value: r.prev_value == null ? null : num(r.prev_value) };
   }) : deriveLatest(D.psSeries);
-  var yt = raw.youtube;
-  D.yt = { present: !!(yt && typeof yt === 'object'), configured: !!(yt && yt.configured), lastDay: yt && validDay(yt.last_day) ? str(yt.last_day).slice(0, 10) : '',
-    videos: arr(yt && yt.videos).filter(function (v) { return v && str(v.id); }).map(function (v) {
-      return { id: str(v.id), title: str(v.title), published: validDay(v.published) ? str(v.published).slice(0, 10) : '', views: num(v.views), gain: num(v.views_in_range) };
+  var sp = raw.spotify;
+  D.sp = { present: !!(sp && typeof sp === 'object'), configured: !!(sp && sp.configured), lastOk: str(sp && sp.last_ok), lastError: str(sp && sp.last_error),
+    episodes: arr(sp && sp.episodes).filter(function (e) { return e && str(e.id); }).map(function (e) {
+      return { id: str(e.id), name: str(e.name), published: validDay(e.published) ? str(e.published).slice(0, 10) : '', starts: e.starts == null ? null : num(e.starts), streams: e.streams == null ? null : num(e.streams), listeners: e.listeners == null ? null : num(e.listeners) };
     }) };
+  D.sp.byNum = spStreamsByEpisode(D.sp.episodes);
   D.first = null;
   for (var j = 0; j < n; j++) if (D.dl[j] > 0 || D.rq[j] > 0) { D.first = days[j]; break; }
   return D;
@@ -736,6 +740,7 @@ function joinMeta(D, metaList) {
     e.dateISO = m && validDay(m.date) ? str(m.date) : '';
     e.rel = e.dateISO ? e.dateISO.slice(0, 10) : e.first_day;
     e.series = D.epSeries[e.file] || null;
+    e.spStreams = e.number != null && D.sp && D.sp.byNum[e.number] != null ? D.sp.byNum[e.number] : null;
   });
   D.hasMeta = D.episodes.some(function (e) { return e.meta; });
   D.metaList = metaList.filter(function (m) { return m && validDay(m.date); });
@@ -960,6 +965,7 @@ function renderEpisodes(D) {
   var card = $('#s-eps');
   if (setEmpty(card, D.episodes.length ? '' : 'No episode downloads recorded yet.')) { killChart('c-detail'); killChart('c-cmp'); return; }
   var rows = visibleRows(D), tb = $('#tbl tbody');
+  var hasSp = D.episodes.some(function (e) { return e.spStreams != null; });
   clear(tb);
   $('#ep-count').textContent = rows.length === D.episodes.length ? nf.format(rows.length) + ' episodes' : rows.length + ' of ' + D.episodes.length;
   var frag = document.createDocumentFragment();
@@ -979,6 +985,7 @@ function renderEpisodes(D) {
       el('td', null, sparkSvg(e.series)),
       el('td', { class: 'num', text: nf.format(e.d1) }), el('td', { class: 'num', text: nf.format(e.d7) }), el('td', { class: 'num', text: nf.format(e.d30) }),
       el('td', { class: 'num', text: nf.format(e.total) }), el('td', { class: 'num', text: nf.format(e.in_range) }),
+      hasSp ? el('td', { class: 'num', text: e.spStreams != null ? nf.format(e.spStreams) : '' }) : null,
       el('td', { style: 'text-align:center' }, cb));
     frag.append(tr);
   });
@@ -1219,7 +1226,7 @@ function renderHeader(D) {
 
 function renderAll() {
   var D = state.D;
-  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderPS(D); renderYT(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
+  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderPS(D); renderSP(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
 }
 
 /* ---------- Apple and Spotify (hand-imported numbers) ---------- */
@@ -1274,67 +1281,72 @@ function psDelete(platform, metric, day) {
   var q = 'platform=' + encodeURIComponent(platform) + '&metric=' + encodeURIComponent(metric) + (day ? '&day=' + encodeURIComponent(day) : '');
   return fetch('/api/platform?' + q, { method: 'DELETE', credentials: 'same-origin' }).then(function (res) { return res.ok ? res.json() : readErr(res); });
 }
-/* ---------- YouTube videos (filled by the Worker once per day) ---------- */
-var YT_ID = /^[A-Za-z0-9_-]{11}$/;
-var yt = { sort: { k: 'gain', dir: -1 } };
-var ytMockAdd = {};
-function mockYoutube(y, N) {
-  var f = N / 90;
-  return Object.assign({}, y, { videos: arr(y.videos).map(function (v) {
-    var add = ytMockAdd[v.id] || 0;
-    return Object.assign({}, v, { views: num(v.views) + add, views_in_range: Math.round(num(v.views_in_range) * Math.min(1, f)) + add });
-  }) });
+/* ---------- Spotify episodes (filled by the Worker once per day) ---------- */
+/* spmatch:start */
+function spEpisodeNumber(name) {
+  var m = /^\s*#?\s*(\d{1,4})\s*(?:[-–—:.|]|$)/.exec(String(name == null ? '' : name));
+  return m ? parseInt(m[1], 10) : null;
 }
-function ytRefreshCall() {
-  if (DEV) {
-    var n = 0;
-    return mockCache.then(function (raw) {
-      arr(raw.youtube && raw.youtube.videos).forEach(function (v, i) { if (i % 2 === 0) { ytMockAdd[v.id] = (ytMockAdd[v.id] || 0) + 5 + i; n++; } });
-      return { ok: true, channel: { followers: 2340, views: 0, videos: arr(raw.youtube && raw.youtube.videos).length }, videos_seen: arr(raw.youtube && raw.youtube.videos).length, rows_written: n + 3 };
-    });
-  }
-  return fetch('/api/youtube/refresh', { method: 'POST', credentials: 'same-origin' }).then(function (res) { return res.ok ? res.json() : readErr(res); });
+function spStreamsByEpisode(list) {
+  var out = {}, bad = {};
+  (list || []).forEach(function (e) {
+    var n = spEpisodeNumber(e && e.name);
+    if (n == null || e.streams == null) return;
+    if (n in out || bad[n]) { bad[n] = 1; delete out[n]; return; }
+    out[n] = e.streams;
+  });
+  return out;
 }
-function ytRefresh() {
-  var b = $('#yt-refresh'); b.disabled = true; setStatus('yt-status', 'Refreshing from YouTube…');
-  ytRefreshCall().then(function (r) {
+/* spmatch:end */
+var sp = { sort: { k: 'published', dir: -1 } };
+function mockSpotify(s) { return s || undefined; }
+function spRefreshCall() {
+  if (DEV) return Promise.resolve({ ok: true, days_written: 120, episodes_written: 20, subrequests: 9 });
+  return fetch('/api/spotify/refresh', { method: 'POST', credentials: 'same-origin' }).then(function (res) { return res.ok ? res.json() : readErr(res); });
+}
+function spRefresh() {
+  var b = $('#sp-refresh'); b.disabled = true; setStatus('sp-status', 'Refreshing from Spotify…');
+  spRefreshCall().then(function (r) {
     if (r && r.ok === false) throw new Error(str(r.error) || 'refresh failed');
-    setStatus('yt-status', 'Done. ' + nf.format(num(r.videos_seen)) + ' videos checked, ' + nf.format(num(r.rows_written)) + ' rows saved.');
+    setStatus('sp-status', 'Done. ' + nf.format(num(r.days_written)) + ' day values and ' + nf.format(num(r.episodes_written)) + ' episodes saved.');
     psReload();
-  }).catch(function (err) { setStatus('yt-status', 'Refresh failed: ' + err.message, true); }).then(function () { b.disabled = false; });
+  }).catch(function (err) { setStatus('sp-status', 'Refresh failed: ' + err.message, true); }).then(function () { b.disabled = false; });
 }
-function ytRows(D) {
-  var k = yt.sort.k, dir = yt.sort.dir;
-  var val = function (v) { return k === 'title' ? v.title.toLowerCase() : k === 'published' ? v.published || null : v[k]; };
-  return D.yt.videos.slice().sort(function (a, b) {
+function spRows(D) {
+  var k = sp.sort.k, dir = sp.sort.dir;
+  var val = function (v) { return k === 'name' ? v.name.toLowerCase() : k === 'published' ? v.published || null : v[k]; };
+  return D.sp.episodes.slice().sort(function (a, b) {
     var x = val(a), y = val(b);
     if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
-    return (x < y ? -1 : x > y ? 1 : 0) * dir || (b.views - a.views);
+    return (x < y ? -1 : x > y ? 1 : 0) * dir;
   });
 }
-function renderYT(D) {
-  var empty = $('#yt-empty'), wrap = $('#yt-wrap'), rows = ytRows(D);
-  var msg = rows.length ? '' : (D.yt.present && !D.yt.configured) ? 'YouTube is not configured: set YOUTUBE_API_KEY' : 'No YouTube data yet';
-  empty.hidden = !msg; empty.textContent = msg; wrap.hidden = !!msg;
-  if (msg) return;
-  var heads = [['title', 'Title'], ['published', 'Published'], ['views', 'Total views'], ['gain', 'Views gained in range']];
-  var hr = $('#tbl-yt thead tr'), tb = $('#tbl-yt tbody'); clear(hr); clear(tb);
+function renderSP(D) {
+  var block = $('#sp-block'), th = $('#th-sps');
+  var hasSp = D.episodes.some(function (e) { return e.spStreams != null; });
+  th.hidden = !hasSp;
+  if (!D.sp.configured) { block.hidden = true; return; }
+  block.hidden = false;
+  var line = $('#sp-line'), warn = $('#sp-warn');
+  line.textContent = 'Spotify: updated automatically, last success ' + (D.sp.lastOk ? (validDay(D.sp.lastOk) && D.sp.lastOk.length === 10 ? fmtDay(D.sp.lastOk, true) : D.sp.lastOk.replace('T', ' ').replace(/:\d\d(\.\d+)?Z?$/, ' UTC')) : 'none yet');
+  warn.hidden = !D.sp.lastError; warn.textContent = D.sp.lastError ? 'Spotify problem: ' + D.sp.lastError : '';
+  var rows = spRows(D), empty = $('#sp-empty'), wrap = $('#sp-wrap');
+  empty.hidden = !!rows.length; empty.textContent = rows.length ? '' : 'No Spotify episodes yet'; wrap.hidden = !rows.length;
+  if (!rows.length) return;
+  var heads = [['name', 'Episode'], ['published', 'Published'], ['starts', 'Starts'], ['streams', 'Streams'], ['listeners', 'Listeners']];
+  var hr = $('#tbl-sp thead tr'), tb = $('#tbl-sp tbody'); clear(hr); clear(tb);
   heads.forEach(function (h) {
-    hr.append(el('th', { scope: 'col', 'aria-sort': h[0] === yt.sort.k ? (yt.sort.dir > 0 ? 'ascending' : 'descending') : 'none' },
+    hr.append(el('th', { scope: 'col', 'aria-sort': h[0] === sp.sort.k ? (sp.sort.dir > 0 ? 'ascending' : 'descending') : 'none' },
       el('button', { type: 'button', text: h[1], onclick: function () {
-        if (yt.sort.k === h[0]) yt.sort.dir *= -1; else yt.sort = { k: h[0], dir: h[0] === 'title' ? 1 : -1 };
-        renderYT(state.D);
+        if (sp.sort.k === h[0]) sp.sort.dir *= -1; else sp.sort = { k: h[0], dir: h[0] === 'name' ? 1 : -1 };
+        renderSP(state.D);
       } })));
   });
+  var cell = function (v) { return el('td', { class: 'num', text: v == null ? '—' : nf.format(v) }); };
   rows.forEach(function (v) {
-    var label = v.title || v.id;
-    var cell = YT_ID.test(v.id)
-      ? el('a', { href: 'https://www.youtube.com/watch?v=' + v.id, target: '_blank', rel: 'noopener', dir: 'auto', text: label })
-      : el('span', { dir: 'auto', text: label });
-    tb.append(el('tr', null, el('td', { class: 'ttl', title: label }, cell),
-      el('td', { text: v.published ? fmtDay(v.published, true) : '—' }),
-      el('td', { class: 'num', text: nf.format(v.views) }),
-      el('td', { class: 'num', text: (v.gain > 0 ? '+' : '') + nf.format(v.gain) })));
+    var label = v.name || v.id;
+    tb.append(el('tr', null, el('td', { class: 'ttl', title: label }, el('span', { dir: 'auto', text: label })),
+      el('td', { text: v.published ? fmtDay(v.published, true) : '—' }), cell(v.starts), cell(v.streams), cell(v.listeners)));
   });
 }
 function psReload() { bust = true; load(); bust = false; }
@@ -1351,7 +1363,7 @@ function renderPS(D) {
   var S = D.psSeries, tiles = $('#ps-tiles'); clear(tiles);
   var empty = $('#ps-empty'), data = $('#ps-data');
   if (!S.length) {
-    empty.hidden = false; empty.textContent = 'No Apple, Spotify or YouTube numbers yet. Open "Add numbers" below to enter or import them.';
+    empty.hidden = false; empty.textContent = 'No Apple or Spotify numbers yet. Open "Add numbers" below to enter or import them.';
     data.hidden = true; killChart('c-ps'); return;
   }
   empty.hidden = true; data.hidden = false;
@@ -1558,7 +1570,7 @@ function load() {
   });
 }
 
-$('#yt-refresh').addEventListener('click', ytRefresh);
+$('#sp-refresh').addEventListener('click', spRefresh);
 document.querySelectorAll('#range button').forEach(function (b) { b.addEventListener('click', function () { state.days = +b.dataset.days; load(); }); });
 
 /* ---------- auto refresh ----------

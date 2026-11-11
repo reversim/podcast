@@ -96,12 +96,10 @@ CREATE TABLE IF NOT EXISTS meta (
   value TEXT NOT NULL
 ) WITHOUT ROWID;
 
--- YouTube, filled by the daily fetch (src/youtube.ts). Views are stored only when they change.
-CREATE TABLE IF NOT EXISTS yt_videos (
-  video_id TEXT PRIMARY KEY, title TEXT, published TEXT
+-- Spotify for Creators, filled by the daily fetch (src/spotify.ts). Per-episode totals, one row per Spotify episode.
+CREATE TABLE IF NOT EXISTS sp_episodes (
+  episode_id TEXT PRIMARY KEY, name TEXT, published TEXT,
+  starts INTEGER, streams INTEGER, listeners INTEGER, updated_day TEXT
 ) WITHOUT ROWID;
 
-CREATE TABLE IF NOT EXISTS yt_video_daily (
-  day TEXT, video_id TEXT, views INTEGER, likes INTEGER, comments INTEGER,
-  PRIMARY KEY (video_id, day)
-) WITHOUT ROWID;
+-- Note: the empty tables yt_videos and yt_video_daily may exist in the live DB from an earlier version. They are unused and can be dropped by hand.

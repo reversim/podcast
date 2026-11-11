@@ -4,7 +4,7 @@ import { handleMedia } from './media';
 import { handlePlatform, originOk } from './platform';
 import { refreshIfStale, rollup } from './rollup';
 import { buildStats } from './stats';
-import { handleYoutubeRefresh, runDailyYoutube } from './youtube';
+import { handleSpotifyRefresh, runDailySpotify } from './spotify';
 import type { Env } from './env';
 
 const list = (s: string | undefined) => (s ?? '').split(',').map((h) => h.trim().toLowerCase()).filter(Boolean);
@@ -36,8 +36,8 @@ export default {
     // Heavy tables (monthly, audience) every 6 hours; per-day tables every hour.
     const heavy = new Date(event.scheduledTime).getUTCHours() % 6 === 0;
     ctx.waitUntil(rollup(env, { now: event.scheduledTime, heavy }));
-    // Own waitUntil: a YouTube failure must never touch the rollup. runDailyYoutube never throws.
-    ctx.waitUntil(runDailyYoutube(env, event.scheduledTime).catch((e) => console.error('youtube job failed', e)));
+    // Own waitUntil: a Spotify failure must never touch the rollup. runDailySpotify never throws.
+    ctx.waitUntil(runDailySpotify(env, event.scheduledTime).catch((e) => console.error('spotify job failed', e)));
   },
 } satisfies ExportedHandler<Env>;
 
@@ -65,10 +65,10 @@ async function statsInner(req: Request, env: Env): Promise<Response> {
     return Response.json(await buildStats(env, days), { headers: { 'cache-control': 'private, max-age=60' } });
   }
   if (url.pathname === '/api/platform') return handlePlatform(req, env);
-  if (url.pathname === '/api/youtube/refresh') {
+  if (url.pathname === '/api/spotify/refresh') {
     if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });
     if (!originOk(req, env)) return Response.json({ ok: false, error: 'bad origin' }, { status: 403, headers: { 'cache-control': 'no-store' } });
-    return handleYoutubeRefresh(env);
+    return handleSpotifyRefresh(env);
   }
   if (url.pathname === '/api/rollup') {
     if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });

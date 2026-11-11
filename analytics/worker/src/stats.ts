@@ -1,7 +1,7 @@
 // GET /api/stats. Reads rollup tables only (never `hits`).
 import { addDays, utcDay } from './lib';
 import { platformStats } from './platform';
-import { youtubeStats } from './youtube';
+import { spotifyStats } from './spotify';
 import type { Env } from './env';
 
 export async function buildStats(env: Env, days: number, now = Date.now()) {
@@ -66,6 +66,7 @@ export async function buildStats(env: Env, days: number, now = Date.now()) {
     web,
     // Hand-imported Apple/Spotify numbers. Isolated like `web`: a missing table gives empty arrays.
     platforms: await platformStats(env),
-    youtube: await youtubeStats(env, from),
+    // Spotify for Creators (unofficial daily fetch). Isolated: never throws.
+    spotify: await spotifyStats(env),
   };
 }
