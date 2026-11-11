@@ -1,9 +1,11 @@
 import { listenerId, parseContentRange, utcDay } from './lib';
 import { classify } from './ua';
 import { serveR2 } from './r2';
+import { BEACON_PATH, handleBeacon } from './beacon';
 import type { Env } from './env';
 
 export async function handleMedia(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  if (new URL(req.url).pathname === BEACON_PATH) return handleBeacon(req, env, ctx);
   let res: Response;
   try {
     res = env.ORIGIN_MODE === 'r2' ? await serveR2(req, env) : await fetch(req);

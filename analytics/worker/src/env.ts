@@ -5,6 +5,7 @@ export interface Env {
   MEDIA_HOSTS: string;
   FEED_HOSTS: string;
   STATS_HOST: string;
+  SITE_ORIGINS?: string; // comma list of origins allowed to send beacons
   FEED_ORIGIN: string;
   FEED_MODE?: string;
   ORIGIN_MODE: string;

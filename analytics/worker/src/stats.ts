@@ -40,6 +40,17 @@ export async function buildStats(env: Env, days: number, now = Date.now()) {
          WHERE subs > 0 AND day = (SELECT max(day) FROM feed_daily WHERE subs > 0) ORDER BY subs DESC, app`),
   ]);
 
+  // The web tables may not exist yet on a DB that has not re-applied schema.sql: never break the API for it.
+  const web = await Promise.all([
+    all(`SELECT day, views, visitors, plays FROM web_daily WHERE day BETWEEN ?1 AND ?2 ORDER BY day`, from, to),
+    // visitors = sum of daily unique visitors, so a returning visitor counts once per day.
+    all(`SELECT path, sum(views) AS views, sum(visitors) AS visitors, sum(plays) AS plays FROM pages_daily
+         WHERE day BETWEEN ?1 AND ?2 GROUP BY path ORDER BY views DESC, path LIMIT 100`, from, to),
+    all(`SELECT ref AS key, sum(visitors) AS visitors FROM ref_daily WHERE day BETWEEN ?1 AND ?2
+         GROUP BY ref ORDER BY visitors DESC, ref LIMIT 20`, from, to),
+  ]).then(([d, pages, referrers]) => ({ daily: d, pages, referrers }))
+    .catch((e) => { console.error('web stats failed', e); return { daily: [], pages: [], referrers: [] }; });
+
   return {
     generated_at: new Date(now).toISOString(),
     range: { from, to },
@@ -50,5 +61,6 @@ export async function buildStats(env: Env, days: number, now = Date.now()) {
       history: audHistory,
     },
     feed: { daily: feedDaily, apps: feedApps, reported_subscribers: feedSubs },
+    web,
   };
 }

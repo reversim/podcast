@@ -19,6 +19,9 @@ export async function rollup(env: Env, opts: { now?: number; heavy?: boolean; ba
   for (let i = 2; i <= (opts.backfillDays ?? 0); i++) days.unshift(addDays(today, -i));
   const stmts: D1PreparedStatement[] = [];
   const q = (sql: string, ...args: unknown[]) => stmts.push(db.prepare(sql).bind(...args));
+  // Website tables go in their own batch: a DB without them yet must not break the download rollup.
+  const webStmts: D1PreparedStatement[] = [];
+  const w = (sql: string, ...args: unknown[]) => webStmts.push(db.prepare(sql).bind(...args));
 
   for (const d of days) {
     for (const t of ['ep_daily', 'dim_daily', 'totals_daily', 'feed_daily']) q(`DELETE FROM ${t} WHERE day = ?1`, d);
@@ -37,6 +40,15 @@ export async function rollup(env: Env, opts: { now?: number; heavy?: boolean; ba
        FROM hits WHERE day = ?1`, d, minBytes);
     q(`INSERT INTO feed_daily SELECT day, coalesce(app, 'Unknown'), count(*), sum(reqs), coalesce(sum(subs), 0)
        FROM feed_hits WHERE day = ?1 GROUP BY 2`, d);
+    // Website. page_hits PK is (day, path, visitor), so count(*) per path = visitors of that path.
+    for (const t of ['web_daily', 'pages_daily', 'ref_daily']) w(`DELETE FROM ${t} WHERE day = ?1`, d);
+    w(`INSERT INTO web_daily SELECT ?1, coalesce(sum(views), 0), count(DISTINCT visitor), coalesce(sum(plays), 0)
+       FROM page_hits WHERE day = ?1`, d);
+    w(`INSERT INTO pages_daily SELECT day, path, sum(views), count(*), sum(plays) FROM page_hits
+       WHERE day = ?1 GROUP BY path`, d);
+    // One referrer per visitor: max() prefers a real host over '' (a later same-site page view stores '').
+    w(`INSERT INTO ref_daily SELECT ?1, CASE WHEN ref = '' THEN '(direct)' ELSE ref END, count(*)
+       FROM (SELECT visitor, max(ref) AS ref FROM page_hits WHERE day = ?1 GROUP BY visitor) GROUP BY 2`, d);
   }
 
   if (opts.heavy !== false) {
@@ -66,5 +78,7 @@ export async function rollup(env: Env, opts: { now?: number; heavy?: boolean; ba
   const cutoff = addDays(today, -RETENTION_DAYS);
   q(`DELETE FROM hits WHERE day < ?1`, cutoff);
   q(`DELETE FROM feed_hits WHERE day < ?1`, cutoff);
+  w(`DELETE FROM page_hits WHERE day < ?1`, cutoff);
   await db.batch(stmts);
+  try { await db.batch(webStmts); } catch (e) { console.error('web rollup failed', e); }
 }

@@ -43,6 +43,32 @@ const gaId = import.meta.env.PUBLIC_GA_ID ?? 'G-Y4CQKFBQGR';
 							gtag('config', '${gaId}');
 						`}
 					/>
+					<script
+						is:inline
+						set:html={`
+							(function () {
+								var ENDPOINT = 'https://m2.reversim.com/_e'; // private cookieless counter, see analytics/worker
+								try {
+									if (navigator.webdriver || !navigator.sendBeacon) return;
+									var path = location.pathname, played = false, ref = '';
+									var send = function (o) {
+										try { navigator.sendBeacon(ENDPOINT, new Blob([JSON.stringify(o)], { type: 'text/plain' })); } catch (e) {}
+									};
+									try { ref = new URL(document.referrer).hostname.toLowerCase(); } catch (e) {}
+									if (ref === location.hostname.toLowerCase()) ref = '';
+									send({ t: 'pv', p: path, r: ref });
+									var play = function () { if (!played) { played = true; send({ t: 'play', p: path }); } };
+									// 'play' does not bubble, so listen in the capture phase.
+									document.addEventListener('play', function (e) { if (e.target && e.target.tagName === 'AUDIO') play(); }, true);
+									// Many old posts only link to the mp3: count a click on such a link as a play.
+									document.addEventListener('click', function (e) {
+										var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+										if (a && /[.]mp3([?#]|$)/i.test(a.getAttribute('href'))) play();
+									}, true);
+								} catch (e) {}
+							})();
+						`}
+					/>
 				</>
 			)
 		}

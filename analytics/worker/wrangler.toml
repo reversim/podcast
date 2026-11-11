@@ -19,6 +19,7 @@ routes = [
 MEDIA_HOSTS = "m.reversim.com,m2.reversim.com"
 FEED_HOSTS = "feed.reversim.com"
 STATS_HOST = "stats.reversim.com"
+SITE_ORIGINS = "https://www.reversim.com"   # origins allowed to send page-view beacons to /_e
 FEED_ORIGIN = "https://www.reversim.com/podcast.xml"
 FEED_MODE = "redirect"         # "redirect" (count, then 302) or "proxy" (return the feed body)
 ORIGIN_MODE = "passthrough"   # "passthrough" or "r2"

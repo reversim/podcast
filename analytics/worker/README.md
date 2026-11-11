@@ -5,6 +5,7 @@ One Worker serves three hosts:
 
 - Media (`MEDIA_HOSTS`): logs MP3 downloads. It never blocks audio.
 - Feed (`FEED_HOSTS`): proxies the RSS feed (10 minute cache) and counts fetchers.
+- Beacon (`POST /_e` on the media hosts): cookieless page views, see below.
 - Stats (`STATS_HOST`): dashboard (`../dashboard`) and `GET /api/stats?days=N`, behind auth.
 
 A download is one `(day, file, listener)` key that is not a bot and has
@@ -50,6 +51,23 @@ curl -u x:local-dev-token -X POST -H 'x-dev-host: stats.reversim.com' localhost:
 ```
 
 `npm test` runs unit tests. `npm run typecheck` runs tsc.
+
+## Website page views (beacon)
+
+The site script (`src/layouts/BaseLayout.astro`) sends `navigator.sendBeacon` to `https://m2.reversim.com/_e`
+on page load (`pv`) and on the first audio play or `.mp3` link click (`play`). No cookies, no storage.
+The stats host is behind Access, so the endpoint lives on the media hosts only.
+
+- The Worker answers 204 at once and writes in `waitUntil`. It stores nothing when the `Origin` (or `Referer`)
+  is not in `SITE_ORIGINS`, the body is over 1024 bytes or invalid, the path or referrer fails its pattern, or the UA is a bot.
+  `DEV=1` also allows `http://localhost:*`.
+- `page_hits (day, path, visitor)` takes one upsert per beacon (1 D1 row written). Pruned after 100 days.
+- The hourly rollup builds `web_daily`, `pages_daily`, `ref_daily` in a separate batch, so a DB without them cannot break the download rollup.
+- `/api/stats` adds `web: { daily, pages, referrers }`. `pages.visitors` and `referrers.visitors` are sums of daily uniques.
+  A visitor has one referrer per day: the real host if any page view that day had one.
+- Deploy order: apply `schema.sql` to the remote DB first, then deploy the Worker, then publish the site.
+- Local test: POST with `-H 'x-dev-host: m2.reversim.com' -H 'Origin: https://www.reversim.com' -d '{"t":"pv","p":"/x.html","r":"google.com"}'`,
+  then `POST /api/rollup`. To use the token locally, start dev with `--var ACCESS_TEAM_DOMAIN: --var ACCESS_AUD:`.
 
 ## Notes
 

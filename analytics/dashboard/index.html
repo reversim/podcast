@@ -148,6 +148,12 @@ footer.dq { color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap
 footer.dq b { color: var(--ink); font-weight: 600; }
 .split { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: 16px; align-items: start; }
 @media (max-width: 900px) { .split { grid-template-columns: minmax(0, 1fr); } }
+.webk { display: flex; flex-wrap: wrap; gap: 8px 32px; margin-bottom: 12px; }
+.webk .val { font-size: 24px; font-weight: 650; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.15; }
+.webk .lab { color: var(--ink-2); font-size: 12.5px; }
+#tbl-pages tbody tr { cursor: default; }
+#tbl-pages td.pg { max-width: 320px; overflow: hidden; text-overflow: ellipsis; text-align: left; }
+#tbl-pages td.pg .fn { font-family: var(--mono); font-size: 12px; direction: ltr; unicode-bidi: plain-text; }
 .big { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
 </style>
 </head>
@@ -241,6 +247,29 @@ footer.dq b { color: var(--ink); font-weight: 600; }
         <h3>Apps polling the feed</h3><ul class="bars" id="b-feedapps"></ul>
         <h3 style="margin-top:16px">Self-reported by aggregators</h3><ul class="bars" id="b-reported"></ul>
         <p class="count" style="margin-top:10px">Apple Podcasts and Spotify follower counts are only visible in their own consoles.</p>
+      </div>
+    </div><p class="empty" hidden></p>
+  </section>
+
+  <section class="card" id="s-web" style="margin-bottom:16px" aria-labelledby="h-web">
+    <header><h2 id="h-web">Website</h2><span class="sub">Page views on www.reversim.com</span></header>
+    <div data-body>
+      <div class="webk" id="web-kpis"></div>
+      <div class="legend" id="lg-web"></div>
+      <div class="chart sm"><canvas id="c-web" role="img" aria-label="Line chart of page views and unique visitors per day"></canvas></div>
+      <p class="count" style="margin-top:6px">Counted without cookies. Visitors are unique per day.</p>
+      <details class="tv"><summary>View as table</summary><div class="tablewrap" id="tv-web"></div></details>
+      <div style="margin-top:16px">
+        <div>
+          <div class="tools" style="justify-content:space-between;margin-bottom:8px"><h3 style="margin:0">Top pages</h3><button type="button" class="btn" id="csv-pages">Export CSV</button></div>
+          <div class="tablewrap"><table id="tbl-pages">
+            <caption class="sr">Top pages by views in the selected range</caption>
+            <thead><tr></tr></thead><tbody></tbody>
+          </table></div>
+          <p class="count" style="margin-top:6px">Visitors are summed over days: a person who returns on another day counts again. Downloads in range are shown for episode pages only.</p>
+        </div>
+        <div style="margin-top:16px"><h3>Referrers</h3><ul class="bars" id="b-refs"></ul>
+          <p class="count" style="margin-top:10px">Share of unique visitors per day, by the site they came from. Direct includes visits from apps and from pages on this site.</p></div>
       </div>
     </div><p class="empty" hidden></p>
   </section>
@@ -343,6 +372,12 @@ function sliceMock(raw, N) {
   out.episodes = arr(raw.episodes).map(function (e) { return Object.assign({}, e, { in_range: tot[e.file] || 0 }); });
   out.audience = Object.assign({}, raw.audience, { history: arr(raw.audience && raw.audience.history).filter(inR) });
   out.feed = Object.assign({}, raw.feed, { daily: arr(raw.feed && raw.feed.daily).filter(inR) });
+  if (raw.web) {
+    var wd = arr(raw.web.daily), wIn = wd.filter(inR), vAll = sum(wd.map(function (r) { return r.views; })) || 1;
+    var ratio = sum(wIn.map(function (r) { return r.views; })) / vAll;
+    var scale = function (r) { var o = Object.assign({}, r); ['views', 'visitors', 'plays'].forEach(function (k) { if (k in o) o[k] = Math.round(o[k] * ratio); }); return o; };
+    out.web = { daily: wIn, pages: arr(raw.web.pages).map(scale), referrers: arr(raw.web.referrers).map(scale) };
+  }
   return out;
 }
 
@@ -405,6 +440,12 @@ function norm(raw, N) {
   D.fetch = zero(); D.hasFeed = false;
   arr(fd.daily).forEach(function (r) { var k = ix(r.day); if (k < 0) return; D.fetch[k] = num(r.fetchers); D.hasFeed = true; });
   D.feedApps = keyed(fd.apps, 'fetchers'); D.reported = keyed(fd.reported_subscribers, 'subscribers');
+  var wb = raw.web || {};
+  D.wv = zero(); D.wu = zero(); D.wp = zero();
+  arr(wb.daily).forEach(function (r) { var k = ix(r.day); if (k < 0) return; D.wv[k] = num(r.views); D.wu[k] = num(r.visitors); D.wp[k] = num(r.plays); });
+  D.webPages = arr(wb.pages).map(function (r) { return { path: str(r.path), views: num(r.views), visitors: num(r.visitors), plays: num(r.plays) }; }).filter(function (r) { return r.path; });
+  D.webRefs = keyed(wb.referrers, 'visitors');
+  D.hasWeb = sum(D.wv) > 0 || D.webPages.length > 0;
   D.first = null;
   for (var j = 0; j < n; j++) if (D.dl[j] > 0 || D.rq[j] > 0) { D.first = days[j]; break; }
   return D;
@@ -795,6 +836,57 @@ function renderSubs(D) {
   if (D.reported.length) barList(rp, D.reported.map(function (r) { return { label: r.key, v: r.v }; }), { noPct: true }); else rp.append(el('li', { class: 'count', text: 'None reported' }));
 }
 
+function csvDownload(prefix, head, rows) {
+  var safe = function (v) { var s = str(v); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  var out = [head.join(',')];
+  rows.forEach(function (r) { out.push(r.map(safe).join(',')); });
+  var blob = new Blob(['\ufeff' + out.join('\r\n')], { type: 'text/csv;charset=utf-8' });
+  var a = el('a', { href: URL.createObjectURL(blob), download: prefix + '-' + dayStr(Date.now()) + '.csv' });
+  document.body.append(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+}
+
+/* Page rows for the Top pages table: episode pages get their title and download count. */
+function webRows(D) {
+  var byPath = {};
+  arr(state.metaForWeb).forEach(function (m) {
+    try { byPath[new URL(str(m.url)).pathname] = m; } catch (e) {}
+  });
+  return D.webPages.map(function (r) {
+    var m = byPath[r.path] || null, ep = m && m.file ? findEp(D, str(m.file)) : null;
+    return { path: r.path, title: m ? str(m.title) : '', views: r.views, visitors: r.visitors, plays: r.plays, downloads: m ? (ep ? ep.in_range : 0) : null };
+  });
+}
+
+function renderWeb(D) {
+  var card = $('#s-web');
+  if (setEmpty(card, D.hasWeb ? '' : 'No page views recorded yet.')) { killChart('c-web'); return; }
+  var T = themeInfo();
+  var kp = $('#web-kpis'); clear(kp);
+  [['Page views', sum(D.wv)], ['Unique visitors (sum of daily)', sum(D.wu)], ['Plays', sum(D.wp)]].forEach(function (x) {
+    kp.append(el('div', null, el('div', { class: 'val', text: nf.format(x[1]) }), el('div', { class: 'lab', text: x[0] })));
+  });
+  var o = baseOpts(T, { xLabels: function (l) { return fmtDay(l); }, tooltip: { callbacks: { title: function (it) { return fmtDay(it[0].label, true); }, label: function (c) { return c.dataset.label + ': ' + nf.format(c.parsed.y); } } } });
+  makeChart('c-web', { type: 'line', data: { labels: D.days, datasets: [lineDs('Page views', D.wv, T.c[0], { fill: true }), lineDs('Unique visitors', D.wu, T.c[1])] }, options: o });
+  legend($('#lg-web'), [{ label: 'Page views', color: T.c[0] }, { label: 'Unique visitors', color: T.c[1] }]);
+  tableView($('#tv-web'), ['Day', 'Page views', 'Unique visitors', 'Plays'], D.days.map(function (d, i) { return [d, nf.format(D.wv[i]), nf.format(D.wu[i]), nf.format(D.wp[i])]; }).reverse());
+
+  var heads = ['Page', 'Views', 'Visitors', 'Plays', 'Downloads in range'];
+  var hr = $('#tbl-pages thead tr'), tb = $('#tbl-pages tbody');
+  clear(hr); clear(tb);
+  heads.forEach(function (h, i) { hr.append(el('th', { scope: 'col', class: 'plain', style: i ? 'text-align:right' : 'text-align:left', text: h })); });
+  var rows = webRows(D);
+  if (!rows.length) tb.append(el('tr', null, el('td', { colspan: 5, class: 'count', text: 'No page data yet' })));
+  rows.forEach(function (r) {
+    var cell = r.title ? el('span', { dir: 'auto', text: r.title }) : el('span', { class: 'fn', text: r.path });
+    var nc = function (v) { return el('td', { style: 'text-align:right', text: v == null ? '—' : nf.format(v) }); };
+    tb.append(el('tr', null, el('td', { class: 'pg', title: r.path }, cell), nc(r.views), nc(r.visitors), nc(r.plays), nc(r.downloads)));
+  });
+  var rf = $('#b-refs'); clear(rf);
+  var vt = sum(D.wu);
+  if (D.webRefs.length) barList(rf, D.webRefs.map(function (x) { return { label: x.key, v: x.v }; }), { total: vt > 0 ? vt : null });
+  else rf.append(el('li', { class: 'count', text: 'No referrers yet' }));
+}
+
 function countryName(code) {
   var c = str(code).toUpperCase();
   if (c === 'ZZ' || c === 'XX' || !c) return 'Unknown';
@@ -857,7 +949,7 @@ function renderHeader(D) {
 
 function renderAll() {
   var D = state.D;
-  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderGeo(D); renderBack(D); renderQuality(D);
+  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
 }
 
 /* ---------- load ---------- */
@@ -880,6 +972,7 @@ function load() {
       if (!matched) meta = arr(raw._mock_episodes);
     }
     joinMeta(state.D, meta);
+    state.metaForWeb = meta;
     var withDate = latestEpisodes(state.D);
     if (!state.sel || !findEp(state.D, state.sel)) state.sel = withDate[0] ? withDate[0].file : (state.D.episodes[0] && state.D.episodes[0].file) || null;
     state.cmp = state.cmp.filter(function (f) { var e = findEp(state.D, f); return e && e.rel && e.rel >= state.D.from; });
@@ -907,12 +1000,13 @@ document.querySelectorAll('#tbl thead th[data-k]').forEach(function (th) {
 document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && document.activeElement && document.activeElement.classList.contains('info')) document.activeElement.blur(); });
 $('#csv').addEventListener('click', function () {
   if (!state.D) return;
-  var safe = function (v) { var s = str(v); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
-  var out = [['episode', 'title', 'release_date', 'file', 'd1', 'd7', 'd30', 'total', 'in_range'].join(',')];
-  visibleRows(state.D).forEach(function (e) { out.push([e.number == null ? '' : e.number, e.title, e.rel, e.file, e.d1, e.d7, e.d30, e.total, e.in_range].map(safe).join(',')); });
-  var blob = new Blob(['﻿' + out.join('\r\n')], { type: 'text/csv;charset=utf-8' });
-  var a = el('a', { href: URL.createObjectURL(blob), download: 'reversim-episodes-' + dayStr(Date.now()) + '.csv' });
-  document.body.append(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  csvDownload('reversim-episodes', ['episode', 'title', 'release_date', 'file', 'd1', 'd7', 'd30', 'total', 'in_range'],
+    visibleRows(state.D).map(function (e) { return [e.number == null ? '' : e.number, e.title, e.rel, e.file, e.d1, e.d7, e.d30, e.total, e.in_range]; }));
+});
+$('#csv-pages').addEventListener('click', function () {
+  if (!state.D) return;
+  csvDownload('reversim-pages', ['path', 'title', 'views', 'visitors_sum_of_daily', 'plays', 'downloads_in_range'],
+    webRows(state.D).map(function (r) { return [r.path, r.title, r.views, r.visitors, r.plays, r.downloads == null ? '' : r.downloads]; }));
 });
 if (window.matchMedia) {
   var mq = window.matchMedia('(prefers-color-scheme: dark)');
