@@ -294,7 +294,8 @@ function el(tag, props) {
   for (var i = 2; i < arguments.length; i++) {
     var c = arguments[i];
     if (c == null) continue;
-    e.append(c);
+    if (Array.isArray(c)) c.forEach(function (x) { if (x != null) e.append(x); });
+    else e.append(c);
   }
   return e;
 }
