@@ -31,7 +31,10 @@ const START_HOUR = 4;
 const MAX_ATTEMPTS_PER_DAY = 4;
 const LIST_SIZE = 50;
 const MAX_LIST_PAGES = 14;
-const MAX_EPISODE_CALLS = 20;
+const MAX_EPISODE_CALLS = 12;
+/** Pause between per-episode calls. Tests set it to 0. */
+export const pacing = { episodePauseMs: 700 };
+const BACKFILL_CALLS_PER_RUN = 9; // 3 years of history per run (3 calls per 365-day chunk)
 const PER_STMT = 100;
 const BATCH = 50;
 
@@ -291,9 +294,18 @@ async function storeEpisodes(env: Env, budget: Budget, token: string, eps: Ep[],
     const rank = (e: Ep) => old.get(e.id)?.upd ?? '';
     const order = eps.slice().sort((a, b) => (rank(a) < rank(b) ? -1 : rank(a) > rank(b) ? 1 : (a.published < b.published ? 1 : a.published > b.published ? -1 : 0)));
     const got: Ep[] = [];
+    // One call at a time with a pause: Spotify answers 429 to a fast series of calls. An error
+    // (429 included) only ends today's pass: names and the totals read so far are still stored,
+    // and the rotation continues tomorrow.
     for (const e of order.slice(0, Math.min(MAX_EPISODE_CALLS, Math.max(0, budget.left())))) {
-      const m = await api(budget, token, `episodes/${e.id}/metadata`, {}, secrets);
-      got.push({ ...e, starts: num(m?.starts), streams: num(m?.streams), listeners: num(m?.listeners) });
+      try {
+        if (got.length) await new Promise((r) => setTimeout(r, pacing.episodePauseMs));
+        const m = await api(budget, token, `episodes/${e.id}/metadata`, {}, secrets);
+        got.push({ ...e, starts: num(m?.starts), streams: num(m?.streams), listeners: num(m?.listeners) });
+      } catch (err) {
+        console.warn('spotify episode totals stopped after ' + got.length + ': ' + redact(String((err as Error)?.message ?? err), secrets));
+        break;
+      }
     }
     for (const c of chunks(got, PER_STMT)) stmts.push(env.DB.prepare(UPSERT_EPISODES).bind(JSON.stringify(c.map(toJson)), day));
     written = names.length + got.length;
@@ -308,7 +320,8 @@ async function backfill(env: Env, budget: Budget, token: string, showId: string,
   if (next === 'done') return { days: 0 };
   let end = next && DAY.test(next) ? addDays(next, -1) : addDays(windowStart, -1);
   let days = 0;
-  while (budget.left() >= 3) {
+  const stopAt = budget.n + BACKFILL_CALLS_PER_RUN;
+  while (budget.left() >= 3 && budget.n + 3 <= stopAt) {
     if (end < BACKFILL_FLOOR) { await env.DB.prepare(UPSERT_META).bind('spotify_backfill', 'done').run(); return { days }; }
     const start = addDays(end, -(BACKFILL_CHUNK - 1)) < BACKFILL_FLOOR ? BACKFILL_FLOOR : addDays(end, -(BACKFILL_CHUNK - 1));
     let rows: Row[];
@@ -352,16 +365,17 @@ export async function fetchSpotify(env: Env, now = Date.now()): Promise<SpResult
     let days = await writeRows(env, rows);
     let episodes = 0;
     const warnings: string[] = [];
-    try {
-      const eps = await listEpisodes(budget, token, showId, today, secrets);
-      if (eps.length) episodes = await storeEpisodes(env, budget, token, eps, day, secrets);
-      else warnings.push('episodes: Spotify returned an empty list');
-    } catch (e) { warnings.push('episodes: ' + redact(e instanceof Error ? e.message : String(e), secrets)); }
+    // History first: it needs few calls and must not wait behind the per-episode calls.
     try {
       const b = await backfill(env, budget, token, showId, windowStart, secrets);
       days += b.days;
       if (b.note) warnings.push(b.note);
     } catch (e) { warnings.push('backfill: ' + redact(e instanceof Error ? e.message : String(e), secrets)); }
+    try {
+      const eps = await listEpisodes(budget, token, showId, today, secrets);
+      if (eps.length) episodes = await storeEpisodes(env, budget, token, eps, day, secrets);
+      else warnings.push('episodes: Spotify returned an empty list');
+    } catch (e) { warnings.push('episodes: ' + redact(e instanceof Error ? e.message : String(e), secrets)); }
     const warning = warnings.join('; ').slice(0, 300) || undefined;
     const stmts = [
       env.DB.prepare(UPSERT_META).bind('spotify_day', day),

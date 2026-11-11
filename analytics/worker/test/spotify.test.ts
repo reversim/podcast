@@ -7,7 +7,9 @@
 import { readFileSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { codeChallenge, fetchSpotify, handleSpotifyRefresh, parseAuthPage, redact, runDailySpotify, spotifyStats, streamRows, EXPIRED, MAX_SUBREQUESTS } from '../src/spotify';
+import { codeChallenge, fetchSpotify, handleSpotifyRefresh, parseAuthPage, redact, runDailySpotify, spotifyStats, streamRows, EXPIRED, MAX_SUBREQUESTS, pacing } from '../src/spotify';
+
+pacing.episodePauseMs = 0; // no real waiting in tests
 import { buildStats } from '../src/stats';
 import type { Env } from '../src/env';
 
@@ -312,56 +314,62 @@ describe('30-day window and backfill', () => {
     expect(after.find((r) => r.day === d)!.value).toBe(before.find((r) => r.day === d)!.value + 10);
     expect(sql.prepare(`SELECT count(*) AS n FROM platform_stats WHERE platform = 'spotify' AND metric = 'streams' AND day = ?`).get(d).n).toBe(1);
   });
-  it('first run backfills in chunks, resumes on the next day and ends at the first empty chunk', async () => {
+  it('backfills a few chunks per run, resumes on later days and ends at the first empty chunk', async () => {
     const { DB, sql } = makeDb();
     const first = '2022-06-01';
-    vi.stubGlobal('fetch', fakeSpotify({ first, eps: mkEps(3) }).fn);
-    const r1 = await fetchSpotify(envOf(DB), T1);
-    expect(r1.ok).toBe(true);
-    const oldest = stat(sql, 'streams')[0].day;
-    expect(oldest).toBe(first);
-    expect(meta(sql, 'spotify_backfill')).toBe('done'); // reached the empty chunk in the same run
+    let runs = 0;
+    for (; runs < 6 && meta(sql, 'spotify_backfill') !== 'done'; runs++) {
+      vi.stubGlobal('fetch', fakeSpotify({ first, eps: mkEps(3) }).fn);
+      const r = await fetchSpotify(envOf(DB), T1 + runs * DAY);
+      expect(r.ok).toBe(true);
+    }
+    expect(runs).toBeGreaterThan(1); // more than one run: the history is spread over days
+    expect(meta(sql, 'spotify_backfill')).toBe('done');
+    expect(stat(sql, 'streams')[0].day).toBe(first);
     const n = stat(sql, 'streams').length;
     const api2 = fakeSpotify({ first, eps: mkEps(3) }); vi.stubGlobal('fetch', api2.fn);
-    await fetchSpotify(envOf(DB), T1 + DAY);
-    // second run: window only, no backfill calls beyond the 30-day window
+    await fetchSpotify(envOf(DB), T1 + runs * DAY);
+    // after the backfill is done: window only
     const series = api2.seen.filter((s) => /\/(followers|listeners|detailedStreams)$/.test(s.url.pathname));
     expect(series.length).toBe(3);
     expect(stat(sql, 'streams').length).toBe(n + 1);
   });
-  it('resumes a backfill that ran out of budget', async () => {
-    const { DB, sql } = makeDb();
-    // 3000 episodes use 14 list pages, so the first run has few calls left for backfill
-    vi.stubGlobal('fetch', fakeSpotify({ first: '2012-01-01', eps: mkEps(3000) }).fn);
-    await fetchSpotify(envOf(DB), T1);
-    const m1 = meta(sql, 'spotify_backfill');
-    expect(m1).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-    await fetchSpotify(envOf(DB), T1 + DAY);
-    const m2 = meta(sql, 'spotify_backfill');
-    expect(m2 < m1 || m2 === 'done').toBe(true);
-  });
 });
 
 describe('per-episode rotation', () => {
-  it('uses at most 20 metadata calls a day, newest never-fetched first, then the oldest updated', async () => {
+  it('uses at most 12 metadata calls a day, newest never-fetched first', async () => {
     const { DB, sql } = makeDb();
     const eps = mkEps(45, false);
+    const ids = (api: { seen: { url: URL }[] }) => api.seen.filter((s) => /\/episodes\/\w+\/metadata$/.test(s.url.pathname)).map((s) => s.url.pathname.split('/')[4]);
     const api = fakeSpotify({ eps, first: '2026-11-05' }); vi.stubGlobal('fetch', api.fn);
     await fetchSpotify(envOf(DB), T1);
-    const ids1 = api.seen.filter((s) => /\/episodes\/\w+\/metadata$/.test(s.url.pathname)).map((s) => s.url.pathname.split('/')[4]);
-    expect(ids1.length).toBe(20);
+    const ids1 = ids(api);
+    expect(ids1.length).toBe(12);
     expect(ids1[0]).toBe(epId(0)); // newest
-    expect(sql.prepare('SELECT count(*) AS n FROM sp_episodes WHERE streams IS NOT NULL').get().n).toBe(20);
+    expect(sql.prepare('SELECT count(*) AS n FROM sp_episodes WHERE streams IS NOT NULL').get().n).toBe(12);
+    expect(sql.prepare('SELECT count(*) AS n FROM sp_episodes').get().n).toBe(45); // all names stored
     const api2 = fakeSpotify({ eps, first: '2026-11-05' }); vi.stubGlobal('fetch', api2.fn);
     await fetchSpotify(envOf(DB), T1 + DAY);
-    const ids2 = api2.seen.filter((s) => /\/episodes\/\w+\/metadata$/.test(s.url.pathname)).map((s) => s.url.pathname.split('/')[4]);
-    expect(ids2.length).toBe(20);
+    const ids2 = ids(api2);
+    expect(ids2.length).toBe(12);
     expect(ids2.some((i) => ids1.includes(i))).toBe(false); // never-fetched ones come first
-    const api3 = fakeSpotify({ eps, first: '2026-11-05' }); vi.stubGlobal('fetch', api3.fn);
-    await fetchSpotify(envOf(DB), T1 + 2 * DAY);
-    const ids3 = api3.seen.filter((s) => /\/episodes\/\w+\/metadata$/.test(s.url.pathname)).map((s) => s.url.pathname.split('/')[4]);
-    expect(ids3.slice(0, 5)).toEqual(ids3.slice(0, 5).filter((i) => !ids1.slice(0, 0).includes(i)));
-    expect(ids3.filter((i) => !ids1.includes(i) && !ids2.includes(i)).length).toBe(5); // the last 5 never fetched, then the oldest updated
+  });
+
+  it('a 429 during the per-episode calls keeps the names and the totals read so far', async () => {
+    const { DB, sql } = makeDb();
+    const api = fakeSpotify({ eps: mkEps(45, false), first: '2026-11-05' });
+    let metaCalls = 0;
+    vi.stubGlobal('fetch', (input: RequestInfo | URL, init?: RequestInit) => {
+      const u = new URL(typeof input === 'string' ? input : input instanceof URL ? input.href : input.url);
+      if (/\/episodes\/\w+\/metadata$/.test(u.pathname) && ++metaCalls > 3) return Promise.resolve(new Response('slow down', { status: 429 }));
+      return api.fn(input as never, init as never);
+    });
+    const r = await fetchSpotify(envOf(DB), T1);
+    expect(r.ok).toBe(true);
+    expect(metaCalls).toBe(4); // stopped at the first 429
+    expect(sql.prepare('SELECT count(*) AS n FROM sp_episodes').get().n).toBe(45);
+    expect(sql.prepare('SELECT count(*) AS n FROM sp_episodes WHERE streams IS NOT NULL').get().n).toBe(3);
+    expect(meta(sql, 'spotify_last_error')).toBeUndefined();
   });
 });
 
