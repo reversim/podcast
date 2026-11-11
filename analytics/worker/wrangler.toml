@@ -1,0 +1,47 @@
+name = "reversim-analytics"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+account_id = "bddcd14d3bb33ee6bdb8cfff3cab9b37"
+workers_dev = false
+preview_urls = false
+
+# Routes are OFF on purpose. Enable them one at a time as a canary, then deploy.
+# Keep the R2 custom domains attached: in ORIGIN_MODE=passthrough they are the origin.
+routes = [
+  { pattern = "m2.reversim.com/*", zone_name = "reversim.com" },
+  { pattern = "m.reversim.com/*", zone_name = "reversim.com" },
+  # Runs only when no Redirect Rule matches feed.reversim.com (rules run before Workers).
+  { pattern = "feed.reversim.com/*", zone_name = "reversim.com" },
+  { pattern = "stats.reversim.com", custom_domain = true },
+]
+
+[vars]
+MEDIA_HOSTS = "m.reversim.com,m2.reversim.com"
+FEED_HOSTS = "feed.reversim.com"
+STATS_HOST = "stats.reversim.com"
+FEED_ORIGIN = "https://www.reversim.com/podcast.xml"
+FEED_MODE = "redirect"         # "redirect" (count, then 302) or "proxy" (return the feed body)
+ORIGIN_MODE = "passthrough"   # "passthrough" or "r2"
+MIN_BYTES = "750000"
+# Optional, for Cloudflare Access (preferred over DASH_TOKEN):
+ACCESS_TEAM_DOMAIN = "hamal-docs.cloudflareaccess.com"
+ACCESS_AUD = "86ad7c3107ef26ce1216d5af0588461609377493ae2afb72487883beed128d81"
+
+# Secrets (set with `wrangler secret put`): HASH_SALT, DASH_TOKEN
+
+[[d1_databases]]
+binding = "DB"
+database_name = "reversim-analytics"
+database_id = "b4116abf-07f9-4f09-bda2-c120c477af8f"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "reversim"
+
+[assets]
+directory = "../dashboard"
+binding = "ASSETS"
+run_worker_first = true
+
+[triggers]
+crons = ["7 * * * *"]

@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>Reversim Analytics</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f4f3ef;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #66655f;
+  --grid: #e7e6e1;
+  --line: #d9d8d2;
+  --fill-muted: #b9b8b0;
+  --focus: #2a78d6;
+  --c1: #2a78d6; --c2: #eb6834; --c3: #1baf7a; --c4: #eda100;
+  --c5: #e87ba4; --c6: #008300; --c7: #6250d6; --c8: #e34948;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #121211;
+    --surface: #1a1a19;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #a09f95;
+    --grid: #2b2b29;
+    --line: #363531;
+    --fill-muted: #55544e;
+    --focus: #6da7ec;
+    --c1: #3987e5; --c2: #d95926; --c3: #199e70; --c4: #c98500;
+    --c5: #d55181; --c6: #008300; --c7: #9085e9; --c8: #e66767;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 var(--font); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 20px 16px 48px; }
+h1 { font-size: 22px; line-height: 1.2; margin: 0; font-weight: 650; letter-spacing: -0.01em; }
+h2 { font-size: 15px; margin: 0; font-weight: 650; }
+h3 { font-size: 13px; margin: 0 0 8px; font-weight: 600; color: var(--ink-2); }
+p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* header */
+.top { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-end; justify-content: space-between; margin-bottom: 16px; }
+.top .meta { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.top .meta span + span::before { content: "\00b7"; margin: 0 8px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: transparent; padding: 7px 14px; cursor: pointer; color: var(--ink-2); min-height: 36px; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); font-weight: 600; }
+.seg button:focus-visible { outline-offset: -2px; }
+.banner { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; color: var(--ink-2); }
+.banner.err { border-color: var(--c8); }
+
+/* cards */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; min-width: 0; }
+.card > header { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
+.card > header .sub { color: var(--muted); font-size: 13px; }
+.grid { display: grid; gap: 16px; margin-bottom: 16px; }
+.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kpis { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+@media (max-width: 1100px) { .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); } .g3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .g2, .g3 { grid-template-columns: minmax(0, 1fr); } .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .card { padding: 12px; } }
+.chart { position: relative; height: 280px; }
+.chart.sm { height: 220px; }
+.empty { color: var(--muted); padding: 28px 8px; text-align: center; border: 1px dashed var(--line); border-radius: 8px; }
+[hidden] { display: none !important; }
+
+/* kpi */
+.kpi { position: relative; padding: 14px; }
+.kpi .lab { color: var(--ink-2); font-size: 12.5px; display: flex; gap: 6px; align-items: center; min-height: 18px; }
+.kpi .val { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; margin-top: 6px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.kpi .note { color: var(--muted); font-size: 12.5px; margin-top: 6px; min-height: 18px; }
+.kpi .note b { color: var(--ink); font-weight: 600; }
+.info { border: 1px solid var(--line); background: transparent; color: var(--ink-2); width: 20px; height: 20px; border-radius: 50%; font-size: 12px; line-height: 1; cursor: help; padding: 0; flex: none; }
+.pop { display: none; position: absolute; z-index: 20; left: 8px; right: 8px; top: calc(100% - 4px); background: var(--ink); color: var(--surface); padding: 10px 12px; border-radius: 8px; font-size: 12.5px; line-height: 1.4; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
+.kpi:hover .info + .pop, .kpi:focus-within .info + .pop { display: block; }
+
+/* bars */
+.bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.bars li { display: grid; grid-template-columns: minmax(70px, 140px) 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+.bars .l { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink-2); }
+.bars .t { height: 14px; }
+.bars .f { height: 100%; background: var(--c1); border-radius: 0 4px 4px 0; min-width: 2px; }
+.bars .f.other { background: var(--fill-muted); }
+.bars .v { text-align: right; min-width: 92px; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.bars .v b { color: var(--ink); font-weight: 600; margin-right: 6px; }
+@media (max-width: 760px) { .bars li { grid-template-columns: minmax(60px, 96px) 1fr auto; gap: 8px; } .bars .v { min-width: 78px; } }
+
+/* legend */
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12.5px; color: var(--ink-2); margin-bottom: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.legend i.dash { width: 0; height: 12px; border-radius: 0; border-left: 2px dashed var(--muted); }
+.legend .x { border: 0; background: none; padding: 0 2px; cursor: pointer; color: var(--muted); }
+
+/* controls */
+.tools { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.tools label.chk { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; color: var(--ink-2); font-size: 13px; min-height: 32px; }
+.in, .btn { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 6px 10px; min-height: 36px; }
+.btn { cursor: pointer; }
+.btn:hover { border-color: var(--muted); }
+input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--c1); }
+
+/* table */
+.tablewrap { overflow: auto; max-height: 520px; border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 7px 10px; text-align: right; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:nth-child(-n+4), td:nth-child(-n+4) { text-align: left; }
+thead th { position: sticky; top: 0; background: var(--surface); z-index: 2; border-bottom: 1px solid var(--line); font-weight: 600; color: var(--ink-2); padding: 0; }
+thead th button { width: 100%; background: none; border: 0; padding: 8px 10px; cursor: pointer; font-weight: 600; color: inherit; text-align: inherit; display: inline-flex; gap: 4px; align-items: center; min-height: 36px; }
+thead th:not(:nth-child(-n+4)) button { justify-content: flex-end; }
+thead th button:focus-visible { outline-offset: -2px; }
+thead th[aria-sort="ascending"] button::after { content: "\2191"; }
+thead th[aria-sort="descending"] button::after { content: "\2193"; }
+thead th.plain { padding: 8px 10px; }
+tbody tr { cursor: pointer; }
+tbody tr:hover { background: var(--grid); }
+tbody tr.sel { background: var(--grid); box-shadow: inset 3px 0 0 var(--c1); }
+td.ttl { max-width: 340px; }
+td.ttl .w { display: flex; align-items: center; gap: 6px; min-width: 0; }
+td.ttl .w a { flex: none; margin: 0; }
+td.ttl button { min-width: 0; background: none; border: 0; padding: 0; cursor: pointer; text-align: start; max-width: 100%; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; unicode-bidi: plaintext; }
+td.ttl .fn { font-family: var(--mono); font-size: 12px; direction: ltr; unicode-bidi: normal; }
+td.ttl a { color: var(--muted); font-size: 12px; margin-left: 6px; }
+.spark { width: 84px; height: 22px; display: block; }
+.spark polyline { fill: none; stroke: var(--c1); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.count { color: var(--muted); font-size: 13px; }
+
+details.tv { margin-top: 10px; font-size: 13px; color: var(--ink-2); }
+details.tv summary { cursor: pointer; min-height: 28px; }
+details.tv .tablewrap { max-height: 240px; margin-top: 6px; }
+footer.dq { color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px 24px; padding: 4px 2px; }
+footer.dq b { color: var(--ink); font-weight: 600; }
+.split { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .split { grid-template-columns: minmax(0, 1fr); } }
+.big { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Reversim Analytics <span dir="rtl" lang="he" style="font-weight:400;color:var(--muted)">רברס עם פלטפורמה</span></h1>
+      <p class="meta"><span id="updated">Loading…</span><span>UTC days · IAB-style counting</span><span id="started" hidden></span></p>
+    </div>
+    <div class="seg" role="group" aria-label="Date range" id="range">
+      <button type="button" data-days="30">30 days</button>
+      <button type="button" data-days="90">90 days</button>
+      <button type="button" data-days="180">180 days</button>
+      <button type="button" data-days="365">365 days</button>
+    </div>
+  </div>
+  <div id="banner" class="banner" hidden role="status"></div>
+
+  <div class="grid kpis" id="kpis">
+    <div class="card kpi" id="k-dl"><div class="lab">Downloads</div><div class="val">—</div><div class="note"></div></div>
+    <div class="card kpi" id="k-li"><div class="lab">Unique listeners</div><div class="val">—</div><div class="note"></div></div>
+    <div class="card kpi" id="k-act"><div class="lab">Active audience (30 d)</div><div class="val">—</div><div class="note"></div></div>
+    <div class="card kpi" id="k-idle"><div class="lab">Idle audience (31–90 d)</div><div class="val">—</div><div class="note"></div></div>
+    <div class="card kpi" id="k-sub"><div class="lab"><span>Estimated subscribers</span><button type="button" class="info" aria-label="How subscribers are estimated" aria-describedby="sub-pop">i</button><span class="pop" id="sub-pop" role="tooltip">Estimate = the larger of (a) the median daily number of unique clients that fetched the RSS feed over the last 7 days and (b) downloads in the first 7 days of the latest episode. Follower counts in Apple Podcasts and Spotify exist only in their own consoles and are not included.</span></div><div class="val">—</div><div class="note"></div></div>
+    <div class="card kpi" id="k-ep"><div class="lab">Latest episode, first 7 days</div><div class="val">—</div><div class="note"></div></div>
+  </div>
+
+  <section class="card" id="s-daily" style="margin-bottom:16px" aria-labelledby="h-daily">
+    <header><h2 id="h-daily">Downloads and listeners per day</h2>
+      <div class="tools"><label class="chk"><input type="checkbox" id="ma"> 7-day moving average</label></div></header>
+    <div class="legend" id="lg-daily"></div>
+    <div data-body><div class="chart"><canvas id="c-daily" role="img" aria-label="Line chart of downloads and unique listeners per day"></canvas></div>
+      <details class="tv"><summary>View as table</summary><div class="tablewrap" id="tv-daily"></div></details></div>
+    <p class="empty" hidden></p>
+  </section>
+
+  <section class="card" id="s-eps" style="margin-bottom:16px" aria-labelledby="h-eps">
+    <header><h2 id="h-eps">Episodes</h2>
+      <div class="tools">
+        <input class="in" type="search" id="q" placeholder="Search title, number or file" aria-label="Search episodes" size="26">
+        <button type="button" class="btn" id="csv">Export CSV</button>
+        <span class="count" id="ep-count" aria-live="polite"></span>
+      </div></header>
+    <div data-body>
+      <div class="tablewrap"><table id="tbl">
+        <caption class="sr">Episodes with downloads at day 1, 7 and 30, total and in the selected range. Click a column heading to sort.</caption>
+        <thead><tr>
+          <th scope="col" data-k="episode"><button type="button">Ep.</button></th>
+          <th scope="col" data-k="title"><button type="button">Title</button></th>
+          <th scope="col" data-k="date"><button type="button">Released</button></th>
+          <th scope="col" class="plain">Trend</th>
+          <th scope="col" data-k="d1"><button type="button">D1</button></th>
+          <th scope="col" data-k="d7"><button type="button">D7</button></th>
+          <th scope="col" data-k="d30"><button type="button">D30</button></th>
+          <th scope="col" data-k="total"><button type="button">Total</button></th>
+          <th scope="col" data-k="in_range"><button type="button">In range</button></th>
+          <th scope="col" class="plain" style="text-align:center">Compare</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="count" style="margin-top:6px">D1, D7, D30 are cumulative downloads on the first 1, 7 and 30 days after the first download. Click a row to chart it. Tick up to 5 episodes to compare.</p>
+      <div class="split" style="margin-top:16px">
+        <div><h3 id="det-title">Episode detail</h3><div class="chart sm"><canvas id="c-detail" role="img" aria-label="Daily downloads of the selected episode"></canvas></div></div>
+        <div><h3>Cumulative downloads by days since release</h3><div class="legend" id="lg-cmp"></div><div class="chart sm"><canvas id="c-cmp" role="img" aria-label="Cumulative downloads versus days since release for selected episodes"></canvas></div><p class="empty" id="cmp-empty" hidden></p></div>
+      </div>
+    </div>
+    <p class="empty" hidden></p>
+  </section>
+
+  <div class="grid g2">
+    <section class="card" id="s-plat" aria-labelledby="h-plat"><header><h2 id="h-plat">Platforms</h2><span class="sub">Share of downloads by app</span></header>
+      <div data-body><ul class="bars" id="b-apps"></ul></div><p class="empty" hidden></p></section>
+    <section class="card" id="s-appt" aria-labelledby="h-appt"><header><h2 id="h-appt">Apps over time</h2><span class="sub">Top 5, 7-day average</span></header>
+      <div data-body><div class="legend" id="lg-appt"></div><div class="chart"><canvas id="c-appt" role="img" aria-label="Stacked area chart of downloads over time for the top five apps"></canvas></div></div><p class="empty" hidden></p></section>
+  </div>
+
+  <div class="grid g2">
+    <section class="card" id="s-aud" aria-labelledby="h-aud"><header><h2 id="h-aud">Audience</h2><span class="sub">Active vs idle devices</span></header>
+      <div data-body><div class="legend" id="lg-aud"></div><div class="chart"><canvas id="c-aud" role="img" aria-label="Line chart of active and idle audience over time"></canvas></div></div><p class="empty" hidden></p></section>
+    <section class="card" id="s-mon" aria-labelledby="h-mon"><header><h2 id="h-mon">Monthly</h2><span class="sub">Downloads and unique listeners</span></header>
+      <div data-body><div class="legend" id="lg-mon"></div><div class="chart"><canvas id="c-mon" role="img" aria-label="Bar chart of monthly downloads and unique listeners"></canvas></div>
+      <details class="tv"><summary>View as table</summary><div class="tablewrap" id="tv-mon"></div></details></div><p class="empty" hidden></p></section>
+  </div>
+
+  <section class="card" id="s-sub" style="margin-bottom:16px" aria-labelledby="h-sub">
+    <header><h2 id="h-sub">Subscribers</h2><span class="sub">Unique clients polling the RSS feed</span></header>
+    <div data-body class="split">
+      <div><h3>Feed fetchers per day</h3><div class="chart sm"><canvas id="c-feed" role="img" aria-label="Line chart of unique feed fetchers per day"></canvas></div></div>
+      <div>
+        <h3>Apps polling the feed</h3><ul class="bars" id="b-feedapps"></ul>
+        <h3 style="margin-top:16px">Self-reported by aggregators</h3><ul class="bars" id="b-reported"></ul>
+        <p class="count" style="margin-top:10px">Apple Podcasts and Spotify follower counts are only visible in their own consoles.</p>
+      </div>
+    </div><p class="empty" hidden></p>
+  </section>
+
+  <div class="grid g2">
+    <section class="card" id="s-geo" aria-labelledby="h-geo"><header><h2 id="h-geo">Geography</h2><span class="sub">Top countries</span></header>
+      <div data-body><ul class="bars" id="b-geo"></ul></div><p class="empty" hidden></p></section>
+    <section class="card" id="s-dev" aria-labelledby="h-dev"><header><h2 id="h-dev">Devices</h2><span class="sub">Share of downloads</span></header>
+      <div data-body><ul class="bars" id="b-dev"></ul></div><p class="empty" hidden></p></section>
+  </div>
+
+  <section class="card" id="s-back" style="margin-bottom:16px" aria-labelledby="h-back">
+    <header><h2 id="h-back">Back-catalog share</h2><span class="sub">Downloads of episodes released more than 90 days before the download day</span></header>
+    <div data-body class="split">
+      <div><div class="big" id="back-big">—</div><p class="count" id="back-note" style="margin-top:4px"></p></div>
+      <div class="chart sm"><canvas id="c-back" role="img" aria-label="Line chart of back-catalog share of downloads, 7-day average"></canvas></div>
+    </div><p class="empty" hidden></p>
+  </section>
+
+  <footer class="dq" id="dq"></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+(function () {
+'use strict';
+var params = new URLSearchParams(location.search);
+var DEV = params.get('mock') === '1' || (params.get('mock') !== '0' && (location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1'));
+var EPISODES_URL = 'https://www.reversim.com/episodes.json';
+var DAY = 86400000;
+var nf = new Intl.NumberFormat('en-US');
+var nfc = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+var pf = new Intl.NumberFormat('en-US', { style: 'percent', maximumFractionDigits: 1 });
+var dfShort = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+var dfLong = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+var dfMonth = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+var regionNames = null;
+try { regionNames = new Intl.DisplayNames(['en'], { type: 'region' }); } catch (e) {}
+
+var $ = function (s, r) { return (r || document).querySelector(s); };
+function el(tag, props) {
+  var e = document.createElement(tag), p = props || {};
+  Object.keys(p).forEach(function (k) {
+    var v = p[k];
+    if (v == null || v === false) return;
+    if (k === 'class') e.className = v;
+    else if (k === 'text') e.textContent = v;
+    else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? '' : v);
+  });
+  for (var i = 2; i < arguments.length; i++) {
+    var c = arguments[i];
+    if (c == null) continue;
+    e.append(c);
+  }
+  return e;
+}
+function clear(n) { while (n.firstChild) n.removeChild(n.firstChild); }
+var parseDay = function (s) { return Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10)); };
+var dayStr = function (ms) { return new Date(ms).toISOString().slice(0, 10); };
+var fmtDay = function (s, y) { return (y ? dfLong : dfShort).format(parseDay(s)); };
+function sum(a) { var t = 0; for (var i = 0; i < a.length; i++) t += a[i] || 0; return t; }
+function median(a) {
+  if (!a.length) return null;
+  var b = a.slice().sort(function (x, y) { return x - y; }), m = b.length >> 1;
+  return b.length % 2 ? b[m] : (b[m - 1] + b[m]) / 2;
+}
+function trailingAvg(a, w) {
+  var out = [], s = 0;
+  for (var i = 0; i < a.length; i++) {
+    s += a[i] || 0;
+    if (i >= w) s -= a[i - w] || 0;
+    out.push(i >= w - 1 ? s / w : null);
+  }
+  return out;
+}
+function hexA(hex, al) {
+  var n = parseInt(hex.slice(1), 16);
+  return 'rgba(' + (n >> 16) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + al + ')';
+}
+var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+var arr = function (v) { return Array.isArray(v) ? v : []; };
+var num = function (v) { v = +v; return isFinite(v) ? v : 0; };
+var str = function (v) { return v == null ? '' : String(v); };
+var validDay = function (s) { return /^\d{4}-\d{2}-\d{2}/.test(str(s)); };
+
+/* ---------- data ---------- */
+var state = { days: 90, raw: null, rawPrev: null, meta: [], D: null, prev: null, sort: { k: 'date', dir: -1 }, q: '', sel: null, cmp: [], cmpColor: {}, charts: {}, ma: false };
+
+function sliceMock(raw, N) {
+  var to = raw.range && raw.range.to;
+  if (!to) return raw;
+  var toMs = parseDay(to), fromS = dayStr(toMs - (N - 1) * DAY);
+  var inR = function (r) { return validDay(r.day) && r.day >= fromS; };
+  var out = Object.assign({}, raw, { range: { from: fromS, to: to } });
+  ['daily', 'episode_daily', 'apps_daily'].forEach(function (k) { out[k] = arr(raw[k]).filter(inR); });
+  var tot = {};
+  out.episode_daily.forEach(function (r) { tot[r.file] = (tot[r.file] || 0) + r.downloads; });
+  out.episodes = arr(raw.episodes).map(function (e) { return Object.assign({}, e, { in_range: tot[e.file] || 0 }); });
+  out.audience = Object.assign({}, raw.audience, { history: arr(raw.audience && raw.audience.history).filter(inR) });
+  out.feed = Object.assign({}, raw.feed, { daily: arr(raw.feed && raw.feed.daily).filter(inR) });
+  return out;
+}
+
+function fetchJson(url, ms) {
+  var ctl = new AbortController(), t = setTimeout(function () { ctl.abort(); }, ms || 20000);
+  return fetch(url, { signal: ctl.signal, credentials: DEV ? 'omit' : 'same-origin' }).then(function (r) {
+    clearTimeout(t);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  });
+}
+var mockCache = null;
+function getStats(N) {
+  if (DEV) {
+    var p = mockCache || (mockCache = fetchJson('mock-stats.json'));
+    return p.then(function (raw) { return sliceMock(raw, N); });
+  }
+  return fetchJson('/api/stats?days=' + N);
+}
+
+function norm(raw, N) {
+  raw = raw || {};
+  var rng = raw.range || {}, to = rng.to, from = rng.from;
+  if (!validDay(to)) to = dayStr(Math.floor(Date.now() / DAY) * DAY - DAY);
+  if (!validDay(from)) from = dayStr(parseDay(to) - (N - 1) * DAY);
+  to = to.slice(0, 10); from = from.slice(0, 10);
+  var fromMs = parseDay(from), toMs = parseDay(to);
+  var n = Math.max(1, Math.min(800, Math.round((toMs - fromMs) / DAY) + 1));
+  var days = []; for (var i = 0; i < n; i++) days.push(dayStr(fromMs + i * DAY));
+  var zero = function () { var a = new Array(n); for (var i = 0; i < n; i++) a[i] = 0; return a; };
+  var ix = function (d) { if (!validDay(d)) return -1; var k = Math.round((parseDay(d) - fromMs) / DAY); return k >= 0 && k < n ? k : -1; };
+  var D = { from: from, to: to, n: n, days: days, ix: ix, raw: raw, generated: raw.generated_at };
+  D.dl = zero(); D.li = zero(); D.rq = zero(); D.bt = zero(); D.uq = zero();
+  arr(raw.daily).forEach(function (r) {
+    var k = ix(r.day); if (k < 0) return;
+    D.dl[k] = num(r.downloads); D.li[k] = num(r.listeners); D.rq[k] = num(r.requests); D.bt[k] = num(r.bot_requests); D.uq[k] = num(r.unqualified);
+  });
+  D.epSeries = {};
+  arr(raw.episode_daily).forEach(function (r) {
+    var k = ix(r.day); if (k < 0) return; var f = str(r.file);
+    (D.epSeries[f] = D.epSeries[f] || zero())[k] += num(r.downloads);
+  });
+  D.episodes = arr(raw.episodes).map(function (e) {
+    return { file: str(e.file), total: num(e.total), first_day: validDay(e.first_day) ? e.first_day.slice(0, 10) : '', d1: num(e.d1), d7: num(e.d7), d30: num(e.d30), in_range: num(e.in_range) };
+  });
+  D.appsDaily = {};
+  arr(raw.apps_daily).forEach(function (r) {
+    var k = ix(r.day); if (k < 0) return; var key = str(r.key) || 'Unknown';
+    (D.appsDaily[key] = D.appsDaily[key] || zero())[k] += num(r.downloads);
+  });
+  var keyed = function (a, f) { return arr(a).map(function (r) { return { key: str(r.key) || 'Unknown', v: num(r[f || 'downloads']) }; }).filter(function (r) { return r.v > 0; }).sort(function (a, b) { return b.v - a.v; }); };
+  D.apps = keyed(raw.apps); D.countries = keyed(raw.countries); D.devices = keyed(raw.devices);
+  D.monthly = arr(raw.monthly).filter(function (m) { return /^\d{4}-\d{2}/.test(str(m.month)); }).map(function (m) { return { month: m.month.slice(0, 7), downloads: num(m.downloads), listeners: num(m.listeners) }; }).sort(function (a, b) { return a.month < b.month ? -1 : 1; });
+  var au = raw.audience || {};
+  D.active = au.active_30d == null ? null : num(au.active_30d);
+  D.idle = au.idle_31_90d == null ? null : num(au.idle_31_90d);
+  D.act = zero(); D.idl = zero(); D.hasHist = false;
+  arr(au.history).forEach(function (r) { var k = ix(r.day); if (k < 0) return; D.act[k] = num(r.active_30d); D.idl[k] = num(r.idle_31_90d); D.hasHist = true; });
+  var fd = (raw.feed || {});
+  D.fetch = zero(); D.hasFeed = false;
+  arr(fd.daily).forEach(function (r) { var k = ix(r.day); if (k < 0) return; D.fetch[k] = num(r.fetchers); D.hasFeed = true; });
+  D.feedApps = keyed(fd.apps, 'fetchers'); D.reported = keyed(fd.reported_subscribers, 'subscribers');
+  D.first = null;
+  for (var j = 0; j < n; j++) if (D.dl[j] > 0 || D.rq[j] > 0) { D.first = days[j]; break; }
+  return D;
+}
+
+function joinMeta(D, metaList) {
+  var by = {};
+  metaList.forEach(function (m) { if (m && m.file) by[str(m.file)] = m; });
+  D.metaBy = by;
+  var seen = {};
+  D.episodes.forEach(function (e) { seen[e.file] = 1; });
+  Object.keys(D.epSeries).forEach(function (f) { if (!seen[f]) D.episodes.push({ file: f, total: 0, first_day: '', d1: 0, d7: 0, d30: 0, in_range: sum(D.epSeries[f]) }); });
+  D.episodes.forEach(function (e) {
+    var m = by[e.file] || null;
+    e.meta = m;
+    e.number = m && m.episode != null ? num(m.episode) : null;
+    e.title = m ? str(m.title) : '';
+    e.dateISO = m && validDay(m.date) ? str(m.date) : '';
+    e.rel = e.dateISO ? e.dateISO.slice(0, 10) : e.first_day;
+    e.series = D.epSeries[e.file] || null;
+  });
+  D.hasMeta = D.episodes.some(function (e) { return e.meta; });
+  D.metaList = metaList.filter(function (m) { return m && validDay(m.date); });
+}
+
+/* ---------- charts ---------- */
+function themeInfo() {
+  return { ink: css('--ink'), ink2: css('--ink-2'), muted: css('--muted'), grid: css('--grid'), surface: css('--surface'), line: css('--line'), fill: css('--fill-muted'), c: [1, 2, 3, 4, 5, 6, 7, 8].map(function (i) { return css('--c' + i); }) };
+}
+function makeChart(id, cfg) {
+  if (state.charts[id]) state.charts[id].destroy();
+  var cv = document.getElementById(id);
+  if (!cv || typeof Chart === 'undefined') return null;
+  state.charts[id] = new Chart(cv, cfg);
+  return state.charts[id];
+}
+function killChart(id) { if (state.charts[id]) { state.charts[id].destroy(); delete state.charts[id]; } }
+function baseOpts(T, o) {
+  o = o || {};
+  var xlab = o.xLabels;
+  return {
+    responsive: true, maintainAspectRatio: false, animation: false,
+    interaction: { mode: 'index', intersect: false },
+    layout: { padding: { top: 4, right: 4 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: Object.assign({
+        backgroundColor: T.surface, titleColor: T.ink, bodyColor: T.ink2, footerColor: T.ink2, borderColor: T.line, borderWidth: 1,
+        padding: 10, boxPadding: 4, usePointStyle: true, titleFont: { weight: '600' }
+      }, o.tooltip || {})
+    },
+    scales: {
+      x: { stacked: !!o.stacked, grid: { display: false }, border: { color: T.line }, ticks: { color: T.muted, maxRotation: 0, autoSkip: true, maxTicksLimit: o.maxX || 8, callback: function (v) { return xlab ? xlab(this.getLabelForValue(v)) : this.getLabelForValue(v); } } },
+      y: { stacked: !!o.stacked, beginAtZero: true, grid: { color: T.grid }, border: { display: false }, ticks: { color: T.muted, maxTicksLimit: 5, callback: function (v) { return o.yFmt ? o.yFmt(v) : nfc.format(v); } } }
+    }
+  };
+}
+var lineDs = function (label, data, color, o) {
+  o = o || {};
+  return { label: label, data: data, borderColor: color, backgroundColor: o.fill ? hexA(color, 0.14) : color, borderWidth: o.w || 2, pointRadius: 0, pointHoverRadius: 4, pointHoverBackgroundColor: color, pointHoverBorderColor: css('--surface'), pointHoverBorderWidth: 2, fill: o.fill ? 'origin' : false, tension: 0, spanGaps: false, borderDash: o.dash || [] };
+};
+function legend(host, items) {
+  clear(host);
+  items.forEach(function (it) {
+    host.append(el('span', null, el('i', { class: it.dash ? 'dash' : '', style: it.dash ? null : 'background:' + it.color }), it.label));
+  });
+}
+function setEmpty(card, msg) {
+  var body = $('[data-body]', card), e = $(':scope > .empty', card);
+  if (body) body.hidden = !!msg;
+  if (e) { e.hidden = !msg; e.textContent = msg || ''; }
+  return !!msg;
+}
+
+var releaseMarkers = {
+  id: 'releaseMarkers',
+  afterDatasetsDraw: function (chart, args, opt) {
+    if (!opt || !opt.idx || !opt.idx.length) return;
+    var x = chart.scales.x, a = chart.chartArea, ctx = chart.ctx;
+    ctx.save(); ctx.strokeStyle = opt.color; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+    opt.idx.forEach(function (i) { var px = x.getPixelForValue(i); ctx.beginPath(); ctx.moveTo(px, a.top); ctx.lineTo(px, a.bottom); ctx.stroke(); });
+    ctx.restore();
+  }
+};
+
+/* ---------- renderers ---------- */
+function delta(cur, prev) {
+  if (!prev) return null;
+  return (cur - prev) / prev;
+}
+function setKpi(id, val, note, noteNodes) {
+  var k = document.getElementById(id);
+  $('.val', k).textContent = val;
+  var n = $('.note', k); clear(n);
+  if (noteNodes) noteNodes.forEach(function (x) { n.append(x); }); else n.textContent = note || '';
+}
+
+function latestEpisodes(D) {
+  return D.episodes.filter(function (e) { return e.rel; }).sort(function (a, b) { return a.rel < b.rel ? 1 : a.rel > b.rel ? -1 : 0; });
+}
+
+function renderKpis(D) {
+  var has = D.first != null;
+  var total = sum(D.dl);
+  var notes = null;
+  if (has) {
+    var P = state.prev, pdl = null;
+    if (P) {
+      var ps = parseDay(D.from) - D.n * DAY, pe = parseDay(D.from) - DAY, s = 0, firstOK = P.first && parseDay(P.first) <= ps;
+      P.days.forEach(function (d, i) { var t = parseDay(d); if (t >= ps && t <= pe) s += P.dl[i]; });
+      if (firstOK) pdl = s;
+    }
+    if (pdl) {
+      var dl = delta(total, pdl);
+      notes = [document.createTextNode((dl >= 0 ? '▲ ' : '▼ ')), el('b', { text: (dl >= 0 ? '+' : '') + (dl * 100).toFixed(1) + '%' }), document.createTextNode(' vs previous ' + D.n + ' days')];
+    } else {
+      notes = [document.createTextNode('No full previous period yet')];
+    }
+  }
+  setKpi('k-dl', has ? nf.format(total) : '—', has ? '' : 'No data yet', notes);
+
+  // listeners: latest full month
+  var endMonth = D.to.slice(0, 7), lastOfMonth = dayStr(Date.UTC(+D.to.slice(0, 4), +D.to.slice(5, 7), 0)) === D.to;
+  var full = D.monthly.filter(function (m) { return m.month < endMonth || (m.month === endMonth && lastOfMonth); });
+  var pick = full.length ? full[full.length - 1] : null, partial = false;
+  if (!pick && D.monthly.length) { pick = D.monthly[D.monthly.length - 1]; partial = true; }
+  setKpi('k-li', pick ? nf.format(pick.listeners) : '—', pick ? dfMonth.format(parseDay(pick.month + '-01')) + (partial ? ' (partial month)' : ' (latest full month)') : 'No data yet');
+  setKpi('k-act', D.active != null && has ? nf.format(D.active) : '—', 'Devices with a download in the last 30 days');
+  setKpi('k-idle', D.idle != null && has ? nf.format(D.idle) : '—', 'Last download 31 to 90 days ago');
+
+  // latest episode
+  var eps = latestEpisodes(D), latest = eps[0] || null, d7 = null;
+  if (latest) {
+    var prevTen = eps.slice(1, 11).map(function (e) { return e.d7; }).filter(function (v) { return v > 0; });
+    var med = median(prevTen);
+    var age = Math.floor((Date.UTC(+D.to.slice(0, 4), +D.to.slice(5, 7) - 1, +D.to.slice(8, 10)) - parseDay(latest.rel)) / DAY) + 1;
+    d7 = latest.d7;
+    var label = latest.number != null ? 'Ep. ' + latest.number : latest.file;
+    var nodes = [];
+    if (age < 7) nodes.push(document.createTextNode('So far, day ' + Math.max(age, 1) + ' of 7 · '));
+    if (med) {
+      var r = (latest.d7 - med) / med;
+      nodes.push(el('b', { text: (r >= 0 ? '+' : '') + (r * 100).toFixed(0) + '%' }), document.createTextNode(' vs median ' + nf.format(Math.round(med)) + ' of previous ' + prevTen.length + '. '));
+    } else nodes.push(document.createTextNode('No earlier episodes to compare. '));
+    nodes.push(document.createTextNode(label));
+    setKpi('k-ep', nf.format(latest.d7), '', nodes);
+  } else {
+    setKpi('k-ep', '—', D.hasMeta || !D.episodes.length ? 'No episode data yet' : 'No release date available');
+  }
+
+  // subscribers
+  var tail = D.fetch.slice(-7), est = null;
+  var m7 = D.hasFeed ? median(tail) : null;
+  if (m7 != null || d7 != null) est = Math.round(Math.max(m7 || 0, d7 || 0));
+  var basis = m7 != null && (d7 == null || m7 >= d7) ? 'median daily feed fetchers, last 7 days' : 'latest episode, first 7 days';
+  setKpi('k-sub', est ? nf.format(est) : '—', est ? 'Based on ' + basis : 'No data yet');
+}
+
+function renderDaily(D) {
+  var card = $('#s-daily');
+  if (setEmpty(card, D.first == null ? 'No downloads recorded yet.' : '')) { killChart('c-daily'); return; }
+  var T = themeInfo(), idx = [], rel = {};
+  D.metaList.forEach(function (m) {
+    var d = m.date.slice(0, 10), k = D.ix(d);
+    if (k >= 0 && m.episode != null) { (rel[k] = rel[k] || []).push(m.episode); }
+  });
+  idx = Object.keys(rel).map(Number);
+  var ds;
+  if (state.ma) {
+    ds = [lineDs('Downloads (7-day avg)', trailingAvg(D.dl, 7), T.c[0], { fill: true }), lineDs('Listeners (7-day avg)', trailingAvg(D.li, 7), T.c[1]),
+      lineDs('Downloads (daily)', D.dl, hexA(T.c[0], 0.35), { w: 1 }), lineDs('Listeners (daily)', D.li, hexA(T.c[1], 0.35), { w: 1 })];
+  } else {
+    ds = [lineDs('Downloads', D.dl, T.c[0], { fill: true }), lineDs('Listeners', D.li, T.c[1])];
+  }
+  var o = baseOpts(T, { xLabels: function (l) { return fmtDay(l); }, tooltip: {
+    callbacks: {
+      title: function (it) { return fmtDay(it[0].label, true); },
+      label: function (c) { return c.dataset.label + ': ' + (c.parsed.y == null ? '—' : nf.format(Math.round(c.parsed.y))); },
+      footer: function (it) { var r = rel[it[0].dataIndex]; return r ? r.map(function (n) { return 'Episode ' + n + ' released'; }) : ''; }
+    }, filter: function (it) { return true; }
+  } });
+  o.plugins.releaseMarkers = { idx: idx, color: T.muted };
+  makeChart('c-daily', { type: 'line', data: { labels: D.days, datasets: ds }, options: o, plugins: [releaseMarkers] });
+  var items = [{ label: state.ma ? 'Downloads' : 'Downloads', color: T.c[0] }, { label: 'Listeners', color: T.c[1] }];
+  if (state.ma) items.push({ label: 'Faint lines: daily values', color: T.muted });
+  if (idx.length) items.push({ label: 'Episode release', dash: true });
+  legend($('#lg-daily'), items);
+  var ma = trailingAvg(D.dl, 7);
+  tableView($('#tv-daily'), ['Day', 'Downloads', 'Listeners', '7-day avg downloads'], D.days.map(function (d, i) { return [d, nf.format(D.dl[i]), nf.format(D.li[i]), ma[i] == null ? '—' : nf.format(Math.round(ma[i]))]; }).reverse());
+}
+
+function tableView(host, heads, rows) {
+  clear(host);
+  var t = el('table', null, el('thead', null, el('tr', null, heads.map(function (h, i) { return el('th', { scope: 'col', class: 'plain', style: i ? 'text-align:right' : 'text-align:left', text: h }); }))),
+    el('tbody', null, rows.map(function (r) { return el('tr', null, r.map(function (c, i) { return el('td', { text: c, style: i ? 'text-align:right' : 'text-align:left' }); })); })));
+  host.append(t);
+}
+
+function visibleRows(D) {
+  var q = state.q.trim().toLowerCase();
+  var rows = D.episodes.filter(function (e) {
+    if (!q) return true;
+    return (e.title.toLowerCase().indexOf(q) >= 0) || e.file.toLowerCase().indexOf(q) >= 0 || (e.number != null && String(e.number).indexOf(q) >= 0);
+  });
+  var k = state.sort.k, dir = state.sort.dir;
+  var val = function (e) {
+    switch (k) {
+      case 'episode': return e.number;
+      case 'title': return (e.title || e.file).toLowerCase();
+      case 'date': return e.rel || null;
+      default: return e[k];
+    }
+  };
+  rows.sort(function (a, b) {
+    var x = val(a), y = val(b);
+    if (x == null && y == null) return 0;
+    if (x == null) return 1; if (y == null) return -1;
+    return (x < y ? -1 : x > y ? 1 : 0) * dir;
+  });
+  return rows;
+}
+
+function sparkSvg(series) {
+  var ns = 'http://www.w3.org/2000/svg';
+  var svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('class', 'spark'); svg.setAttribute('viewBox', '0 0 84 22'); svg.setAttribute('preserveAspectRatio', 'none'); svg.setAttribute('aria-hidden', 'true');
+  if (!series || !sum(series)) return svg;
+  var max = Math.max.apply(null, series) || 1, n = series.length, pts = [];
+  // bucket to at most 84 points
+  var step = Math.max(1, Math.ceil(n / 84));
+  for (var i = 0; i < n; i += step) {
+    var m = 0; for (var j = i; j < Math.min(n, i + step); j++) m = Math.max(m, series[j]);
+    pts.push((pts.length * 84 / Math.max(1, Math.ceil(n / step) - 1)).toFixed(1) + ',' + (20.5 - (m / max) * 19).toFixed(1));
+  }
+  var pl = document.createElementNS(ns, 'polyline'); pl.setAttribute('points', pts.join(' ')); svg.append(pl);
+  return svg;
+}
+
+function epLabelText(e) { return (e.number != null ? '#' + e.number + ' ' : '') + (e.title || e.file); }
+
+function renderEpisodes(D) {
+  var card = $('#s-eps');
+  if (setEmpty(card, D.episodes.length ? '' : 'No episode downloads recorded yet.')) { killChart('c-detail'); killChart('c-cmp'); return; }
+  var rows = visibleRows(D), tb = $('#tbl tbody');
+  clear(tb);
+  $('#ep-count').textContent = rows.length === D.episodes.length ? nf.format(rows.length) + ' episodes' : rows.length + ' of ' + D.episodes.length;
+  var frag = document.createDocumentFragment();
+  rows.forEach(function (e) {
+    var inRange = e.rel && e.rel >= D.from;
+    var isCmp = state.cmp.indexOf(e.file) >= 0;
+    var cb = el('input', { type: 'checkbox', 'aria-label': 'Compare ' + epLabelText(e), checked: isCmp, disabled: (!isCmp && (state.cmp.length >= 5)) || !inRange, title: inRange ? null : 'Released before the selected range',
+      onclick: function (ev) { ev.stopPropagation(); toggleCmp(e.file, ev.target.checked); } });
+    var titleBtn = el('button', { type: 'button', 'aria-label': 'Show daily chart for ' + epLabelText(e), onclick: function (ev) { ev.stopPropagation(); selectEp(e.file); } },
+      e.title ? el('span', { dir: 'auto', text: e.title }) : el('span', { class: 'fn', text: e.file }));
+    var wrapT = el('div', { class: 'w' }, titleBtn);
+    var tdT = el('td', { class: 'ttl', title: e.title ? e.title + ' (' + e.file + ')' : e.file }, wrapT);
+    if (e.meta && /^https:\/\/www\.reversim\.com\//.test(str(e.meta.url))) wrapT.append(el('a', { href: e.meta.url, target: '_blank', rel: 'noopener noreferrer', 'aria-label': 'Open episode page', text: '↗' }));
+    var tr = el('tr', { class: state.sel === e.file ? 'sel' : '', 'aria-current': state.sel === e.file ? 'true' : null, onclick: function () { selectEp(e.file); } },
+      el('td', { class: 'num', text: e.number != null ? String(e.number) : '—' }), tdT,
+      el('td', { class: 'num', text: e.rel ? fmtDay(e.rel, true) : '—' }),
+      el('td', null, sparkSvg(e.series)),
+      el('td', { class: 'num', text: nf.format(e.d1) }), el('td', { class: 'num', text: nf.format(e.d7) }), el('td', { class: 'num', text: nf.format(e.d30) }),
+      el('td', { class: 'num', text: nf.format(e.total) }), el('td', { class: 'num', text: nf.format(e.in_range) }),
+      el('td', { style: 'text-align:center' }, cb));
+    frag.append(tr);
+  });
+  tb.append(frag);
+  document.querySelectorAll('#tbl thead th[data-k]').forEach(function (th) {
+    th.setAttribute('aria-sort', th.dataset.k === state.sort.k ? (state.sort.dir > 0 ? 'ascending' : 'descending') : 'none');
+  });
+  renderDetail(D); renderCompare(D);
+}
+
+function findEp(D, f) { for (var i = 0; i < D.episodes.length; i++) if (D.episodes[i].file === f) return D.episodes[i]; return null; }
+function selectEp(f) { state.sel = f; renderEpisodes(state.D); }
+function toggleCmp(f, on) {
+  var i = state.cmp.indexOf(f);
+  if (on && i < 0 && state.cmp.length < 5) {
+    state.cmp.push(f);
+    var used = Object.keys(state.cmpColor).filter(function (k) { return state.cmp.indexOf(k) >= 0; }).map(function (k) { return state.cmpColor[k]; });
+    for (var s = 0; s < 5; s++) if (used.indexOf(s) < 0) { state.cmpColor[f] = s; break; }
+  } else if (!on && i >= 0) { state.cmp.splice(i, 1); delete state.cmpColor[f]; }
+  renderEpisodes(state.D);
+}
+
+function renderDetail(D) {
+  var e = state.sel && findEp(D, state.sel), T = themeInfo(), h = $('#det-title');
+  if (!e || !e.series) { killChart('c-detail'); h.textContent = 'Episode detail'; if (e) h.textContent += ': no downloads in range'; return; }
+  clear(h); h.append(document.createTextNode('Daily downloads: ' + (e.number != null ? '#' + e.number + ' ' : '')), el('span', { dir: 'auto', text: e.title || e.file }));
+  var o = baseOpts(T, { xLabels: function (l) { return fmtDay(l); }, tooltip: { callbacks: { title: function (it) { return fmtDay(it[0].label, true); }, label: function (c) { return 'Downloads: ' + nf.format(c.parsed.y); } } } });
+  var ds = { label: 'Downloads', data: e.series, backgroundColor: T.c[0], borderRadius: { topLeft: 3, topRight: 3 }, borderSkipped: 'bottom', maxBarThickness: 14, categoryPercentage: 0.9, barPercentage: 0.85 };
+  makeChart('c-detail', { type: 'bar', data: { labels: D.days, datasets: [ds] }, options: o });
+}
+
+function renderCompare(D) {
+  var T = themeInfo(), lg = $('#lg-cmp'), emp = $('#cmp-empty'), cv = $('#c-cmp').parentNode;
+  clear(lg);
+  var list = state.cmp.map(function (f) { return findEp(D, f); }).filter(function (e) { return e && e.series && e.rel; });
+  if (!list.length) { killChart('c-cmp'); cv.hidden = true; emp.hidden = false; emp.textContent = 'Tick episodes released within the range to compare them.'; return; }
+  cv.hidden = false; emp.hidden = true;
+  var toMs = parseDay(D.to), maxLen = 0;
+  var ds = list.map(function (e) {
+    var col = T.c[state.cmpColor[e.file] || 0], r = parseDay(e.rel), avail = Math.floor((toMs - r) / DAY) + 1, out = [], c = 0;
+    for (var a = 0; a < avail; a++) { var k = D.ix(dayStr(r + a * DAY)); c += k >= 0 ? e.series[k] : 0; out.push(c); }
+    maxLen = Math.max(maxLen, avail);
+    var lab = epLabelText(e);
+    lg.append(el('span', null, el('i', { style: 'background:' + col }), el('span', { dir: 'auto', text: lab.length > 34 ? lab.slice(0, 33) + '…' : lab }),
+      el('button', { type: 'button', class: 'x', 'aria-label': 'Remove ' + lab + ' from comparison', onclick: function () { toggleCmp(e.file, false); }, text: '×' })));
+    return lineDs(e.number != null ? 'Ep. ' + e.number : e.file, out, col);
+  });
+  var labels = []; for (var i = 0; i < maxLen; i++) labels.push(String(i));
+  var o = baseOpts(T, { maxX: 10, xLabels: function (l) { return 'Day ' + l; }, tooltip: { callbacks: { title: function (it) { return 'Day ' + it[0].label + ' after release'; }, label: function (c) { return c.dataset.label + ': ' + (c.parsed.y == null ? '—' : nf.format(c.parsed.y)); } } } });
+  makeChart('c-cmp', { type: 'line', data: { labels: labels, datasets: ds }, options: o });
+}
+
+function barList(host, items, o) {
+  o = o || {};
+  clear(host);
+  var total = o.total != null ? o.total : sum(items.map(function (i) { return i.v; }));
+  var max = Math.max.apply(null, items.map(function (i) { return i.v; }).concat([1]));
+  items.forEach(function (it) {
+    var pct = total ? it.v / total : 0;
+    host.append(el('li', null,
+      el('span', { class: 'l', title: it.label, text: it.label }),
+      el('span', { class: 't', 'aria-hidden': 'true' }, el('span', { class: 'f' + (it.other ? ' other' : ''), style: 'display:block;width:' + (it.v / max * 100).toFixed(1) + '%' })),
+      el('span', { class: 'v' }, o.noPct ? null : el('b', { text: pf.format(pct) }), nf.format(it.v))));
+  });
+}
+function topWithOther(items, n, otherLabel) {
+  var top = items.slice(0, n).map(function (i) { return { label: i.key, v: i.v }; });
+  var rest = sum(items.slice(n).map(function (i) { return i.v; }));
+  if (rest > 0) top.push({ label: otherLabel || 'Other', v: rest, other: true });
+  return top;
+}
+
+function renderPlatforms(D) {
+  var apps = D.apps;
+  if (!apps.length && Object.keys(D.appsDaily).length) apps = Object.keys(D.appsDaily).map(function (k) { return { key: k, v: sum(D.appsDaily[k]) }; }).sort(function (a, b) { return b.v - a.v; });
+  var card = $('#s-plat');
+  if (!setEmpty(card, apps.length ? '' : 'No platform data yet.')) barList($('#b-apps'), topWithOther(apps, 10));
+  // over time
+  var c2 = $('#s-appt'), keys = Object.keys(D.appsDaily);
+  if (setEmpty(c2, keys.length ? '' : 'No platform data yet.')) { killChart('c-appt'); return; }
+  var T = themeInfo();
+  var ranked = keys.map(function (k) { return { k: k, t: sum(D.appsDaily[k]) }; }).sort(function (a, b) { return b.t - a.t; });
+  var top = ranked.slice(0, 5), rest = ranked.slice(5);
+  var ds = top.map(function (r, i) {
+    var d = trailingAvg(D.appsDaily[r.k], 7), c = T.c[i];
+    return { label: r.k, data: d, borderColor: T.surface, borderWidth: 1.5, backgroundColor: c, fill: i === 0 ? 'origin' : '-1', pointRadius: 0, pointHoverRadius: 3, tension: 0 };
+  });
+  if (rest.length) {
+    var o2 = D.days.map(function (_, i) { var s = 0; rest.forEach(function (r) { s += D.appsDaily[r.k][i]; }); return s; });
+    ds.push({ label: 'Other', data: trailingAvg(o2, 7), borderColor: T.surface, borderWidth: 1.5, backgroundColor: T.fill, fill: '-1', pointRadius: 0, pointHoverRadius: 3, tension: 0 });
+  }
+  var o = baseOpts(T, { stacked: true, xLabels: function (l) { return fmtDay(l); }, tooltip: { itemSort: function (a, b) { return b.datasetIndex - a.datasetIndex; }, callbacks: { title: function (it) { return fmtDay(it[0].label, true); }, label: function (c) { return c.dataset.label + ': ' + (c.parsed.y == null ? '—' : nf.format(Math.round(c.parsed.y))); } } } });
+  makeChart('c-appt', { type: 'line', data: { labels: D.days, datasets: ds }, options: o });
+  legend($('#lg-appt'), ds.map(function (d, i) { return { label: d.label, color: i < top.length ? T.c[i] : T.fill }; }));
+}
+
+function renderAudience(D) {
+  var T = themeInfo(), c = $('#s-aud');
+  if (setEmpty(c, D.hasHist ? '' : 'No audience history yet.')) killChart('c-aud');
+  else {
+    var o = baseOpts(T, { xLabels: function (l) { return fmtDay(l); }, tooltip: { callbacks: { title: function (it) { return fmtDay(it[0].label, true); }, label: function (c) { return c.dataset.label + ': ' + nf.format(c.parsed.y); } } } });
+    makeChart('c-aud', { type: 'line', data: { labels: D.days, datasets: [lineDs('Active (30 d)', D.act, T.c[0], { fill: true }), lineDs('Idle (31–90 d)', D.idl, T.c[1])] }, options: o });
+    legend($('#lg-aud'), [{ label: 'Active (30 d)', color: T.c[0] }, { label: 'Idle (31–90 d)', color: T.c[1] }]);
+  }
+  var m = $('#s-mon');
+  if (setEmpty(m, D.monthly.length ? '' : 'No monthly data yet.')) { killChart('c-mon'); return; }
+  var endMonth = D.to.slice(0, 7), lastOfMonth = dayStr(Date.UTC(+D.to.slice(0, 4), +D.to.slice(5, 7), 0)) === D.to;
+  var labels = D.monthly.map(function (x) { return dfMonth.format(parseDay(x.month + '-01')) + (x.month === endMonth && !lastOfMonth ? ' (partial)' : ''); });
+  var bar = function (l, d, col) { return { label: l, data: d, backgroundColor: col, borderRadius: { topLeft: 4, topRight: 4 }, borderSkipped: 'bottom', maxBarThickness: 28 }; };
+  var o2 = baseOpts(T, { maxX: 12, tooltip: { callbacks: { label: function (c) { return c.dataset.label + ': ' + nf.format(c.parsed.y); } } } });
+  makeChart('c-mon', { type: 'bar', data: { labels: labels, datasets: [bar('Downloads', D.monthly.map(function (x) { return x.downloads; }), T.c[0]), bar('Unique listeners', D.monthly.map(function (x) { return x.listeners; }), T.c[1])] }, options: o2 });
+  legend($('#lg-mon'), [{ label: 'Downloads', color: T.c[0] }, { label: 'Unique listeners', color: T.c[1] }]);
+  tableView($('#tv-mon'), ['Month', 'Downloads', 'Unique listeners'], D.monthly.map(function (x, i) { return [labels[i], nf.format(x.downloads), nf.format(x.listeners)]; }).reverse());
+}
+
+function renderSubs(D) {
+  var c = $('#s-sub');
+  if (setEmpty(c, D.hasFeed || D.feedApps.length || D.reported.length ? '' : 'No feed data yet. Feed fetchers appear once the feed is polled through the tracked URL.')) { killChart('c-feed'); return; }
+  var T = themeInfo();
+  var o = baseOpts(T, { xLabels: function (l) { return fmtDay(l); }, tooltip: { callbacks: { title: function (it) { return fmtDay(it[0].label, true); }, label: function (c) { return 'Unique fetchers: ' + nf.format(c.parsed.y); } } } });
+  makeChart('c-feed', { type: 'line', data: { labels: D.days, datasets: [lineDs('Unique fetchers', D.fetch, T.c[0], { fill: true })] }, options: o });
+  var fa = $('#b-feedapps'), rp = $('#b-reported');
+  clear(fa); clear(rp);
+  if (D.feedApps.length) barList(fa, topWithOther(D.feedApps, 8), { noPct: false }); else fa.append(el('li', { class: 'count', text: 'No data' }));
+  if (D.reported.length) barList(rp, D.reported.map(function (r) { return { label: r.key, v: r.v }; }), { noPct: true }); else rp.append(el('li', { class: 'count', text: 'None reported' }));
+}
+
+function countryName(code) {
+  var c = str(code).toUpperCase();
+  if (c === 'ZZ' || c === 'XX' || !c) return 'Unknown';
+  try { return regionNames ? (regionNames.of(c) || c) : c; } catch (e) { return c; }
+}
+function renderGeo(D) {
+  var c = $('#s-geo');
+  if (!setEmpty(c, D.countries.length ? '' : 'No country data yet.')) barList($('#b-geo'), topWithOther(D.countries.map(function (x) { return { key: countryName(x.key), v: x.v }; }), 10));
+  var d = $('#s-dev');
+  if (!setEmpty(d, D.devices.length ? '' : 'No device data yet.')) barList($('#b-dev'), topWithOther(D.devices, 8));
+}
+
+function renderBack(D) {
+  var card = $('#s-back');
+  if (!D.hasMeta) { setEmpty(card, 'Needs episode release dates, which are not available right now.'); killChart('c-back'); return; }
+  var tot = new Array(D.n).fill(0), back = new Array(D.n).fill(0), used = 0;
+  D.episodes.forEach(function (e) {
+    if (!e.series || !e.dateISO) return;
+    used++;
+    var r = parseDay(e.dateISO.slice(0, 10));
+    for (var i = 0; i < D.n; i++) {
+      var v = e.series[i]; if (!v) continue;
+      tot[i] += v; if ((parseDay(D.days[i]) - r) / DAY > 90) back[i] += v;
+    }
+  });
+  var T = sum(tot);
+  if (setEmpty(card, T > 0 ? '' : 'No downloads with known release dates in this range.')) { killChart('c-back'); return; }
+  $('#back-big').textContent = pf.format(sum(back) / T);
+  $('#back-note').textContent = nf.format(sum(back)) + ' of ' + nf.format(T) + ' downloads in range' + (used < D.episodes.length ? ' (episodes without release date excluded)' : '') + '.';
+  var share = trailingAvg(tot, 7).map(function (t, i) { if (t == null) return null; var b = trailingAvg(back, 7)[i]; return t > 0 ? b / t : null; });
+  var th = themeInfo();
+  var o = baseOpts(th, { xLabels: function (l) { return fmtDay(l); }, yFmt: function (v) { return Math.round(v * 100) + '%'; }, tooltip: { callbacks: { title: function (it) { return fmtDay(it[0].label, true); }, label: function (c) { return 'Back catalog: ' + (c.parsed.y == null ? '—' : pf.format(c.parsed.y)); } } } });
+  o.scales.y.max = 1;
+  makeChart('c-back', { type: 'line', data: { labels: D.days, datasets: [lineDs('Back-catalog share (7-day avg)', share, th.c[0], { fill: true })] }, options: o });
+}
+
+function renderQuality(D) {
+  var host = $('#dq'); clear(host);
+  var rq = sum(D.rq), bt = sum(D.bt), uq = sum(D.uq), dl = sum(D.dl);
+  var p = function (x) { return rq ? pf.format(x / rq) : '—'; };
+  [['Requests', nf.format(rq)], ['Bot requests', nf.format(bt) + ' (' + p(bt) + ')'], ['Unqualified (partial) requests', nf.format(uq) + ' (' + p(uq) + ')'], ['Counted downloads', nf.format(dl)]].forEach(function (x) {
+    host.append(el('span', null, x[0] + ': ', el('b', { class: 'num', text: x[1] })));
+  });
+  host.append(el('span', { text: 'Downloads: unique listener and episode per day, bots excluded, at least 1 minute of audio. Days are UTC.' }));
+}
+
+function renderHeader(D) {
+  var up = $('#updated');
+  if (D.generated && !isNaN(Date.parse(D.generated))) up.textContent = 'Updated ' + new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(D.generated));
+  else up.textContent = 'Updated: unknown';
+  var st = $('#started');
+  var first = (state.prev && state.prev.first && state.prev.first < (D.first || '9')) ? state.prev.first : D.first;
+  if (first && (first > D.from)) { st.hidden = false; st.textContent = 'Data collection started on ' + fmtDay(first, true); }
+  else st.hidden = true;
+  var b = $('#banner');
+  if (D.first == null) { b.hidden = false; b.className = 'banner'; b.textContent = 'No data collected for this range yet. Charts fill in as downloads are recorded.'; }
+  else if (DEV) { b.hidden = false; b.className = 'banner'; b.textContent = 'Showing mock data (development mode).'; }
+  else b.hidden = true;
+}
+
+function renderAll() {
+  var D = state.D;
+  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderGeo(D); renderBack(D); renderQuality(D);
+}
+
+/* ---------- load ---------- */
+function showError(msg) { var b = $('#banner'); b.hidden = false; b.className = 'banner err'; b.textContent = msg; }
+
+function load() {
+  var N = state.days;
+  document.querySelectorAll('#range button').forEach(function (b) { b.setAttribute('aria-pressed', String(+b.dataset.days === N)); });
+  var metaP = fetchJson(EPISODES_URL, 8000).then(function (m) { return Array.isArray(m) ? m : []; }).catch(function () { return []; });
+  var cur = getStats(N);
+  var prev = getStats(N * 2).catch(function () { return null; });
+  Promise.all([cur, prev, metaP]).then(function (res) {
+    if (N !== state.days) return;
+    var raw = res[0] || {}, meta = res[2];
+    state.D = norm(raw, N);
+    state.prev = res[1] ? norm(res[1], N * 2) : null;
+    if (DEV) {
+      var known = {}; arr(raw.episodes).forEach(function (e) { known[e.file] = 1; });
+      var matched = meta.some(function (m) { return known[m.file]; });
+      if (!matched) meta = arr(raw._mock_episodes);
+    }
+    joinMeta(state.D, meta);
+    var withDate = latestEpisodes(state.D);
+    if (!state.sel || !findEp(state.D, state.sel)) state.sel = withDate[0] ? withDate[0].file : (state.D.episodes[0] && state.D.episodes[0].file) || null;
+    state.cmp = state.cmp.filter(function (f) { var e = findEp(state.D, f); return e && e.rel && e.rel >= state.D.from; });
+    if (!state.cmp.length) {
+      state.cmpColor = {};
+      withDate.filter(function (e) { return e.rel >= state.D.from; }).slice(0, 3).forEach(function (e, i) { state.cmp.push(e.file); state.cmpColor[e.file] = i; });
+    }
+    renderAll();
+  }).catch(function (err) {
+    showError('Could not load stats: ' + (err && err.message ? err.message : 'unknown error') + (DEV && location.protocol === 'file:' ? '. Serve this folder over http to use mock data.' : '.'));
+    $('#updated').textContent = 'Not loaded';
+  });
+}
+
+document.querySelectorAll('#range button').forEach(function (b) { b.addEventListener('click', function () { state.days = +b.dataset.days; load(); }); });
+$('#ma').addEventListener('change', function (e) { state.ma = e.target.checked; if (state.D) renderDaily(state.D); });
+$('#q').addEventListener('input', function (e) { state.q = e.target.value; if (state.D) renderEpisodes(state.D); });
+document.querySelectorAll('#tbl thead th[data-k]').forEach(function (th) {
+  $('button', th).addEventListener('click', function () {
+    var k = th.dataset.k;
+    if (state.sort.k === k) state.sort.dir *= -1; else state.sort = { k: k, dir: (k === 'title') ? 1 : -1 };
+    if (state.D) renderEpisodes(state.D);
+  });
+});
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && document.activeElement && document.activeElement.classList.contains('info')) document.activeElement.blur(); });
+$('#csv').addEventListener('click', function () {
+  if (!state.D) return;
+  var safe = function (v) { var s = str(v); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  var out = [['episode', 'title', 'release_date', 'file', 'd1', 'd7', 'd30', 'total', 'in_range'].join(',')];
+  visibleRows(state.D).forEach(function (e) { out.push([e.number == null ? '' : e.number, e.title, e.rel, e.file, e.d1, e.d7, e.d30, e.total, e.in_range].map(safe).join(',')); });
+  var blob = new Blob(['﻿' + out.join('\r\n')], { type: 'text/csv;charset=utf-8' });
+  var a = el('a', { href: URL.createObjectURL(blob), download: 'reversim-episodes-' + dayStr(Date.now()) + '.csv' });
+  document.body.append(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+});
+if (window.matchMedia) {
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  var rerender = function () { if (state.D) renderAll(); };
+  if (mq.addEventListener) mq.addEventListener('change', rerender);
+}
+if (typeof Chart === 'undefined') showError('Chart library failed to load. Tables and lists still work.');
+load();
+})();
+</script>
+</body>
+</html>
