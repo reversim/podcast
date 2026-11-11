@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:,">
+<link rel="icon" href="favicon.ico" type="image/png">
 <title>Reversim Analytics</title>
 <style>
 :root {
@@ -48,7 +48,7 @@ h1 { font-size: 22px; line-height: 1.2; margin: 0; font-weight: 650; letter-spac
 h2 { font-size: 15px; margin: 0; font-weight: 650; }
 h3 { font-size: 13px; margin: 0 0 8px; font-weight: 600; color: var(--ink-2); }
 p { margin: 0; }
-button, input, select { font: inherit; color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .num { font-variant-numeric: tabular-nums; }
@@ -155,6 +155,25 @@ footer.dq b { color: var(--ink); font-weight: 600; }
 #tbl-pages td.pg { max-width: 320px; overflow: hidden; text-overflow: ellipsis; text-align: left; }
 #tbl-pages td.pg .fn { font-family: var(--mono); font-size: 12px; direction: ltr; unicode-bidi: plain-text; }
 .big { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.frm { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; align-items: end; }
+.frm label, .lbl { display: grid; gap: 4px; font-size: 12.5px; color: var(--ink-2); }
+.btn.primary { background: var(--ink); color: var(--surface); border-color: var(--ink); font-weight: 600; }
+.btn.primary:disabled { opacity: .45; cursor: not-allowed; }
+.btn.danger { border-color: var(--c8); color: var(--c8); }
+.status { min-height: 20px; margin-top: 8px; font-size: 13px; color: var(--ink-2); }
+.status.err { color: var(--c8); }
+.addbox { border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin-top: 12px; display: grid; gap: 10px; }
+.addbox h3 { margin: 0; }
+#tv-ps tbody tr, #ps-map tbody tr, #ps-prev tbody tr { cursor: default; }
+#tv-ps tbody tr:hover, #ps-map tbody tr:hover, #ps-prev tbody tr:hover { background: transparent; }
+#ps-tiles { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-bottom: 12px; }
+#ps-tiles .kpi .val { font-size: 26px; }
+.ps-note { margin: 0 0 12px; }
+#tbl-yt tbody tr { cursor: default; }
+#tbl-yt th:nth-child(n+3), #tbl-yt td:nth-child(n+3) { text-align: right; }
+#tbl-yt th:nth-child(-n+2), #tbl-yt td:nth-child(-n+2) { text-align: left; }
+#tbl-yt thead th:nth-child(n+3) button { justify-content: flex-end; }
+#tbl-yt td.ttl { max-width: 420px; overflow: hidden; text-overflow: ellipsis; }
 </style>
 </head>
 <body>
@@ -249,6 +268,62 @@ footer.dq b { color: var(--ink); font-weight: 600; }
         <p class="count" style="margin-top:10px">Apple Podcasts and Spotify follower counts are only visible in their own consoles.</p>
       </div>
     </div><p class="empty" hidden></p>
+  </section>
+
+  <section class="card" id="s-ps" style="margin-bottom:16px" aria-labelledby="h-ps">
+    <header><h2 id="h-ps">Apple, Spotify and YouTube</h2><span class="sub">Apple and Spotify numbers you add by hand, YouTube numbers that update by themselves</span></header>
+    <p class="count ps-note">Find the numbers in Apple Podcasts Connect, under Analytics, and in Spotify for Creators, under Analytics, then export. Neither has an API, so add them here. Spotify plays are mostly not visible in download counts, so compare streams here.</p>
+    <div id="ps-mock" class="banner" hidden>Mock mode: nothing is saved. Changes live in memory until you reload the page.</div>
+    <div class="grid" id="ps-tiles"></div>
+    <p class="empty" id="ps-empty" hidden></p>
+    <div id="ps-data">
+      <div class="tools" style="margin-bottom:8px"><label class="lbl" style="display:inline-flex;align-items:center;gap:8px">Metric <select class="in" id="ps-metric"></select></label></div>
+      <div class="legend" id="lg-ps"></div>
+      <div class="chart sm"><canvas id="c-ps" role="img" aria-label="Line chart of the selected metric over time, one line per platform"></canvas></div>
+      <details class="tv"><summary>View as table</summary><div id="tv-ps"></div><p class="status" id="ps-tv-status" role="status"></p></details>
+    </div>
+    <div id="yt-block" style="margin-top:16px">
+      <div class="tools" style="justify-content:space-between;margin-bottom:8px"><h3 style="margin:0">YouTube videos</h3><button type="button" class="btn" id="yt-refresh">Refresh from YouTube now</button></div>
+      <p class="count ps-note">YouTube numbers update automatically once per day. YouTube rounds subscriber counts to 3 significant figures.</p>
+      <p class="empty" id="yt-empty" hidden></p>
+      <div class="tablewrap" id="yt-wrap"><table id="tbl-yt">
+        <caption class="sr">YouTube videos with total views and views gained in the selected range. Click a column heading to sort.</caption>
+        <thead><tr></tr></thead><tbody></tbody>
+      </table></div>
+      <p class="status" id="yt-status" role="status"></p>
+    </div>
+    <details class="tv" id="ps-add" style="margin-top:14px"><summary><b>Add numbers</b></summary>
+      <div class="addbox">
+        <h3>Quick entry</h3>
+        <form id="ps-quick" class="frm" autocomplete="off">
+          <label>Date<input class="in" type="date" id="q-day" required></label>
+          <label>Platform<select class="in" id="q-plat"></select></label>
+          <label>Metric<select class="in" id="q-metric"></select></label>
+          <label id="q-other-l" hidden>Other metric<input class="in" type="text" id="q-other" maxlength="40" placeholder="e.g. completion_rate"></label>
+          <label>Value<input class="in" type="text" inputmode="decimal" id="q-val" required placeholder="1,234"></label>
+          <button type="submit" class="btn primary">Save</button>
+        </form>
+        <p class="status" id="q-status" role="status"></p>
+      </div>
+      <div class="addbox">
+        <h3>CSV import</h3>
+        <p class="count">Export a CSV from the console, then choose the file or paste its text. Dates and number columns are detected here, in your browser.</p>
+        <div class="frm">
+          <label>CSV file<input class="in" type="file" id="i-file" accept=".csv,.tsv,.txt,text/csv,text/plain"></label>
+          <label>Platform<select class="in" id="i-plat"></select></label>
+        </div>
+        <label class="lbl">Or paste CSV text<textarea class="in" id="i-text" rows="5" spellcheck="false" style="font-family:var(--mono);font-size:12px;width:100%"></textarea></label>
+        <div id="i-opts" class="frm" hidden>
+          <label id="i-order-l" hidden>Dates look like 03/04/2026. Read them as<select class="in" id="i-order"><option value="mdy">Month/Day/Year</option><option value="dmy">Day/Month/Year</option></select></label>
+          <label id="i-date-l" hidden>Date of these totals<input class="in" type="date" id="i-date"></label>
+        </div>
+        <div id="i-map" hidden><h3>Columns</h3><div class="tablewrap" style="max-height:260px"><table id="ps-map"><thead><tr><th scope="col" class="plain" style="text-align:left">Column</th><th scope="col" class="plain" style="text-align:left">Example</th><th scope="col" class="plain" style="text-align:left">Import as</th></tr></thead><tbody></tbody></table></div></div>
+        <div id="i-prev" hidden><h3>Preview</h3><p class="count" id="i-sum"></p><div class="tablewrap" style="max-height:300px"><table id="ps-prev"><thead><tr></tr></thead><tbody></tbody></table></div></div>
+        <p class="status" id="i-msg" role="status"></p>
+        <div><button type="button" class="btn primary" id="i-go" disabled>Import</button></div>
+        <p class="status" id="i-status" role="status"></p>
+      </div>
+    </details>
   </section>
 
   <section class="card" id="s-web" style="margin-bottom:16px" aria-labelledby="h-web">
@@ -357,7 +432,186 @@ var num = function (v) { v = +v; return isFinite(v) ? v : 0; };
 var str = function (v) { return v == null ? '' : String(v); };
 var validDay = function (s) { return /^\d{4}-\d{2}-\d{2}/.test(str(s)); };
 
+/* csv:start */
+var CSV_MONTHS = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+var COMMON_METRICS = ['followers', 'listeners', 'streams', 'starts', 'plays', 'engaged_listeners', 'impressions'];
+
+function csvStripBom(t) { t = String(t); return t.charCodeAt(0) === 0xFEFF ? t.slice(1) : t; }
+
+/* Pick , ; or tab by counting them outside quotes on the first non-empty line. */
+function csvDetectDelim(text) {
+  text = csvStripBom(text);
+  var counts = { ',': 0, ';': 0, '\t': 0 }, inQ = false, started = false;
+  for (var i = 0; i < text.length; i++) {
+    var c = text.charAt(i);
+    if (c === '"') { inQ = !inQ; started = true; continue; }
+    if (inQ) continue;
+    if (c === '\n' || c === '\r') { if (started) break; continue; }
+    started = true;
+    if (counts[c] !== undefined) counts[c]++;
+  }
+  var best = ',';
+  [';', '\t'].forEach(function (d) { if (counts[d] > counts[best]) best = d; });
+  return best;
+}
+
+/* RFC 4180 style: quoted fields, "" escapes, embedded commas and newlines, CRLF, BOM. Blank lines are dropped. */
+function parseCsv(text, delim) {
+  text = csvStripBom(text);
+  delim = delim || csvDetectDelim(text);
+  var rows = [], row = [], f = '', q = false, i = 0, n = text.length;
+  while (i < n) {
+    var c = text.charAt(i);
+    if (q) {
+      if (c === '"') { if (text.charAt(i + 1) === '"') { f += '"'; i += 2; continue; } q = false; i++; continue; }
+      f += c; i++; continue;
+    }
+    if (c === '"' && f === '') { q = true; i++; continue; }
+    if (c === delim) { row.push(f); f = ''; i++; continue; }
+    if (c === '\r' || c === '\n') {
+      if (c === '\r' && text.charAt(i + 1) === '\n') i++;
+      row.push(f); f = ''; rows.push(row); row = []; i++; continue;
+    }
+    f += c; i++;
+  }
+  if (f !== '' || row.length) { row.push(f); rows.push(row); }
+  return rows.filter(function (r) { return r.some(function (x) { return String(x).trim() !== ''; }); });
+}
+
+/* "1,234" "1 234" "1.234,5" "12,5" "1234.5" -> number, else null. */
+function parseNumberCell(s) {
+  s = String(s == null ? '' : s).replace(/[  \s]/g, '').replace(/^\+/, '');
+  if (!s) return null;
+  if (/^-?\d+(\.\d+)?$/.test(s)) return +s;
+  if (/^-?\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) return +s.replace(/,/g, '');
+  if (/^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) return +s.replace(/\./g, '').replace(',', '.');
+  if (/^-?\d+,\d{1,2}$/.test(s)) return +s.replace(',', '.');
+  return null;
+}
+
+function csvIso(y, m, d) {
+  var t = new Date(Date.UTC(y, m - 1, d));
+  if (y < 1000 || t.getUTCFullYear() !== y || t.getUTCMonth() !== m - 1 || t.getUTCDate() !== d) return null;
+  return t.toISOString().slice(0, 10);
+}
+
+/* Returns {iso} for unambiguous formats, {amb:true,a,b,y} for NN/NN/YYYY, or null. */
+function parseDateCell(s) {
+  s = String(s == null ? '' : s).trim();
+  var m;
+  if ((m = /^(\d{4})[-\/.](\d{1,2})[-\/.](\d{1,2})(?:$|[T\s])/.exec(s))) { var a = csvIso(+m[1], +m[2], +m[3]); return a ? { iso: a } : null; }
+  if ((m = /^(\d{1,2})[\/.\-](\d{1,2})[\/.\-](\d{4})(?:$|[T\s,])/.exec(s))) return { amb: true, a: +m[1], b: +m[2], y: +m[3] };
+  if ((m = /^([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})$/.exec(s))) {
+    var mo = CSV_MONTHS[m[1].slice(0, 3).toLowerCase()];
+    var b = mo ? csvIso(+m[3], mo, +m[2]) : null; return b ? { iso: b } : null;
+  }
+  if ((m = /^(\d{1,2})\s+([A-Za-z]{3,9})\.?,?\s+(\d{4})$/.exec(s))) {
+    var mo2 = CSV_MONTHS[m[2].slice(0, 3).toLowerCase()];
+    var c = mo2 ? csvIso(+m[3], mo2, +m[1]) : null; return c ? { iso: c } : null;
+  }
+  return null;
+}
+
+/* order: 'mdy' or 'dmy' for NN/NN/YYYY. Returns YYYY-MM-DD or null. */
+function csvResolveDate(s, order) {
+  var p = parseDateCell(s);
+  if (!p) return null;
+  if (!p.amb) return p.iso;
+  return order === 'dmy' ? csvIso(p.y, p.b, p.a) : csvIso(p.y, p.a, p.b);
+}
+
+/* Decide day/month order from values: a part above 12 settles it. {order, ambiguous}. */
+function csvDateOrder(cells) {
+  var dmy = false, mdy = false, differ = false;
+  cells.forEach(function (s) {
+    var p = parseDateCell(s);
+    if (!p || !p.amb) return;
+    if (p.a > 12) dmy = true;
+    if (p.b > 12) mdy = true;
+    if (p.a !== p.b) differ = true;
+  });
+  if (dmy && !mdy) return { order: 'dmy', ambiguous: false };
+  if (mdy && !dmy) return { order: 'mdy', ambiguous: false };
+  return { order: 'mdy', ambiguous: differ && !dmy && !mdy };
+}
+
+function guessMetric(h) {
+  h = String(h || '').toLowerCase();
+  if (/follower/.test(h)) return 'followers';
+  if (/engaged/.test(h)) return 'engaged_listeners';
+  if (/listener/.test(h)) return 'listeners';
+  if (/stream/.test(h)) return 'streams';
+  if (/start/.test(h)) return 'starts';
+  if (/play/.test(h)) return 'plays';
+  if (/impression/.test(h)) return 'impressions';
+  return '';
+}
+
+function sanitizeMetric(s) {
+  return String(s == null ? '' : s).toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 40);
+}
+
+/* Find the date column, the numeric columns and the header. Returns {error} or the analysis. */
+function analyzeCsv(text) {
+  var delim = csvDetectDelim(text), rows = parseCsv(text, delim);
+  if (!rows.length) return { error: 'No rows found.' };
+  var first = rows[0], nonEmpty = first.filter(function (x) { return String(x).trim() !== ''; });
+  var typed = nonEmpty.filter(function (x) { return parseNumberCell(x) !== null || parseDateCell(x) !== null; }).length;
+  var header = typed < Math.ceil(nonEmpty.length / 2);
+  var data = header ? rows.slice(1) : rows, width = 0;
+  rows.forEach(function (r) { if (r.length > width) width = r.length; });
+  var cols = [];
+  for (var i = 0; i < width; i++) {
+    var name = header ? String(first[i] == null ? '' : first[i]).trim() : '';
+    var vals = data.map(function (r) { return r[i] == null ? '' : String(r[i]).trim(); }).filter(function (v) { return v !== ''; });
+    var nd = vals.filter(function (v) { return parseDateCell(v) !== null; }).length;
+    var nn = vals.filter(function (v) { return parseNumberCell(v) !== null; }).length;
+    cols.push({ index: i, name: name || ('Column ' + (i + 1)), vals: vals, dateRatio: vals.length ? nd / vals.length : 0, numRatio: vals.length ? nn / vals.length : 0 });
+  }
+  var cands = cols.filter(function (c) { return c.dateRatio >= 0.6; }), dateCol = -1;
+  if (cands.length) {
+    var hit = cands.filter(function (c) { return /date|day|time/i.test(c.name); });
+    dateCol = (hit[0] || cands.slice().sort(function (a, b) { return b.dateRatio - a.dateRatio; })[0]).index;
+  }
+  var numeric = cols.filter(function (c) { return c.index !== dateCol && c.numRatio >= 0.6; }).map(function (c) {
+    return { index: c.index, name: c.name, guess: guessMetric(c.name), sample: c.vals.slice(0, 3).join(', ') };
+  });
+  if (!data.length) return { error: 'The file has a header but no data rows.' };
+  if (!numeric.length) return { error: 'No numeric columns found.' };
+  if (dateCol < 0 && data.length > 1) return { error: 'No date column found. A file without dates must have exactly one data row (totals).' };
+  var ord = dateCol >= 0 ? csvDateOrder(cols[dateCol].vals) : { order: 'mdy', ambiguous: false };
+  return { delim: delim, header: header, dateCol: dateCol, order: ord.order, ambiguous: ord.ambiguous, needsDate: dateCol < 0, columns: numeric, dataRows: data };
+}
+
+/* map: {columnIndex: metric}; '' or missing = skip. opts: {order, date, today}.
+   Skips rows with a bad, future or pre-2008 date, and negative or missing values. Later duplicates win. */
+function csvBuildRows(an, map, platform, opts) {
+  var out = [], seen = {}, skipped = 0, why = [];
+  var maxDay = opts.today ? new Date(Date.parse(opts.today + 'T00:00:00Z') + 86400000).toISOString().slice(0, 10) : '9999-12-31';
+  an.dataRows.forEach(function (r, ri) {
+    var day = an.dateCol >= 0 ? csvResolveDate(r[an.dateCol], opts.order) : (opts.date || null);
+    var line = ri + 1 + (an.header ? 1 : 0);
+    if (!day) { skipped++; why.push('line ' + line + ': bad date'); return; }
+    if (day < '2008-01-01' || day > maxDay) { skipped++; why.push('line ' + line + ': date out of range'); return; }
+    var got = 0;
+    an.columns.forEach(function (c) {
+      var metric = map[c.index];
+      if (!metric) return;
+      var v = parseNumberCell(r[c.index]);
+      if (v === null || v < 0 || !isFinite(v)) return;
+      var k = platform + '|' + metric + '|' + day;
+      var row = { day: day, platform: platform, metric: metric, value: v };
+      if (seen[k] !== undefined) out[seen[k]] = row; else { seen[k] = out.length; out.push(row); }
+      got++;
+    });
+    if (!got) { skipped++; why.push('line ' + line + ': no usable value'); }
+  });
+  return { rows: out, skipped: skipped, why: why, total: an.dataRows.length };
+}
+/* csv:end */
+
 /* ---------- data ---------- */
+var bust = false, psMock = null;
 var state = { days: 90, raw: null, rawPrev: null, meta: [], D: null, prev: null, sort: { k: 'date', dir: -1 }, q: '', sel: null, cmp: [], cmpColor: {}, charts: {}, ma: false };
 
 function sliceMock(raw, N) {
@@ -383,7 +637,9 @@ function sliceMock(raw, N) {
 
 function fetchJson(url, ms) {
   var ctl = new AbortController(), t = setTimeout(function () { ctl.abort(); }, ms || 20000);
-  return fetch(url, { signal: ctl.signal, credentials: DEV ? 'omit' : 'same-origin' }).then(function (r) {
+  var fresh = bust && url.indexOf('/api/') === 0;
+  if (fresh) url += (url.indexOf('?') < 0 ? '?' : '&') + '_=' + Date.now();
+  return fetch(url, { signal: ctl.signal, credentials: DEV ? 'omit' : 'same-origin', cache: fresh ? 'reload' : 'default' }).then(function (r) {
     clearTimeout(t);
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return r.json();
@@ -393,7 +649,10 @@ var mockCache = null;
 function getStats(N) {
   if (DEV) {
     var p = mockCache || (mockCache = fetchJson('mock-stats.json'));
-    return p.then(function (raw) { return sliceMock(raw, N); });
+    return p.then(function (raw) {
+      if (!psMock) psMock = arr(raw.platforms && raw.platforms.series).map(function (r) { return { platform: r.platform, metric: r.metric, day: r.day, value: r.value }; });
+      var out = sliceMock(raw, N); out.platforms = mockPlatforms(); if (raw.youtube) out.youtube = mockYoutube(raw.youtube, N); return out;
+    });
   }
   return fetchJson('/api/stats?days=' + N);
 }
@@ -446,6 +705,17 @@ function norm(raw, N) {
   D.webPages = arr(wb.pages).map(function (r) { return { path: str(r.path), views: num(r.views), visitors: num(r.visitors), plays: num(r.plays) }; }).filter(function (r) { return r.path; });
   D.webRefs = keyed(wb.referrers, 'visitors');
   D.hasWeb = sum(D.wv) > 0 || D.webPages.length > 0;
+  var pl = raw.platforms || {};
+  D.psSeries = arr(pl.series).filter(function (r) { return r && validDay(r.day) && str(r.platform) && /^[a-z0-9_]+$/.test(str(r.metric)); })
+    .map(function (r) { return { platform: str(r.platform), metric: str(r.metric), day: str(r.day).slice(0, 10), value: num(r.value) }; });
+  D.psLatest = arr(pl.latest).length ? arr(pl.latest).filter(function (r) { return r && validDay(r.day); }).map(function (r) {
+    return { platform: str(r.platform), metric: str(r.metric), day: str(r.day).slice(0, 10), value: num(r.value), prev_day: validDay(r.prev_day) ? str(r.prev_day).slice(0, 10) : null, prev_value: r.prev_value == null ? null : num(r.prev_value) };
+  }) : deriveLatest(D.psSeries);
+  var yt = raw.youtube;
+  D.yt = { present: !!(yt && typeof yt === 'object'), configured: !!(yt && yt.configured), lastDay: yt && validDay(yt.last_day) ? str(yt.last_day).slice(0, 10) : '',
+    videos: arr(yt && yt.videos).filter(function (v) { return v && str(v.id); }).map(function (v) {
+      return { id: str(v.id), title: str(v.title), published: validDay(v.published) ? str(v.published).slice(0, 10) : '', views: num(v.views), gain: num(v.views_in_range) };
+    }) };
   D.first = null;
   for (var j = 0; j < n; j++) if (D.dl[j] > 0 || D.rq[j] > 0) { D.first = days[j]; break; }
   return D;
@@ -949,7 +1219,308 @@ function renderHeader(D) {
 
 function renderAll() {
   var D = state.D;
-  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
+  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderPS(D); renderYT(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
+}
+
+/* ---------- Apple and Spotify (hand-imported numbers) ---------- */
+var PLATS = ['apple', 'spotify', 'youtube', 'amazon', 'other'];
+var PLAT_LABEL = { apple: 'Apple Podcasts', spotify: 'Spotify', youtube: 'YouTube', amazon: 'Amazon', other: 'Other' };
+var PLAT_COLOR = { spotify: 2, apple: 6, youtube: 7, amazon: 3, other: 0 };
+var ps = { metric: null, confirm: null, csv: null, map: {} };
+var metricLabel = function (m) { return str(m).replace(/_/g, ' '); };
+var platLabel = function (p) { return PLAT_LABEL[p] || p; };
+var todayStr = function () { return dayStr(Date.now()); };
+
+function deriveLatest(series) {
+  var g = {};
+  series.forEach(function (r) { (g[r.platform + '|' + r.metric] = g[r.platform + '|' + r.metric] || []).push(r); });
+  return Object.keys(g).map(function (k) {
+    var a = g[k].slice().sort(function (x, y) { return x.day < y.day ? -1 : x.day > y.day ? 1 : 0; });
+    var l = a[a.length - 1], p = a.length > 1 ? a[a.length - 2] : null;
+    return { platform: l.platform, metric: l.metric, day: l.day, value: l.value, prev_day: p ? p.day : null, prev_value: p ? p.value : null };
+  }).sort(function (a, b) { return PLATS.indexOf(a.platform) - PLATS.indexOf(b.platform) || (a.metric < b.metric ? -1 : 1); });
+}
+function mockPlatforms() {
+  var s = psMock.slice().sort(function (a, b) { return a.day < b.day ? -1 : a.day > b.day ? 1 : 0; });
+  return { series: s, latest: deriveLatest(s) };
+}
+
+/* Write API. Mock mode keeps rows in memory. */
+function readErr(res) {
+  return res.text().then(function (t) {
+    var msg = 'HTTP ' + res.status;
+    try { var j = JSON.parse(t); if (j && j.error) msg = String(j.error) + (j.row != null ? ' (row ' + (j.row + 1) + ')' : ''); }
+    catch (e) { if (t && t.length < 200 && res.status !== 403) msg += ': ' + t; }
+    throw new Error(msg);
+  });
+}
+function psWrite(rows) {
+  if (DEV) {
+    rows.forEach(function (r) {
+      var hit = psMock.filter(function (x) { return x.platform === r.platform && x.metric === r.metric && x.day === r.day; })[0];
+      if (hit) hit.value = r.value; else psMock.push({ platform: r.platform, metric: r.metric, day: r.day, value: r.value });
+    });
+    return Promise.resolve({ ok: true, rows: rows.length });
+  }
+  return fetch('/api/platform', { method: 'POST', credentials: 'same-origin', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ rows: rows }) })
+    .then(function (res) { return res.ok ? res.json() : readErr(res); });
+}
+function psDelete(platform, metric, day) {
+  if (DEV) {
+    var before = psMock.length;
+    psMock = psMock.filter(function (x) { return !(x.platform === platform && x.metric === metric && (!day || x.day === day)); });
+    return Promise.resolve({ ok: true, deleted: before - psMock.length });
+  }
+  var q = 'platform=' + encodeURIComponent(platform) + '&metric=' + encodeURIComponent(metric) + (day ? '&day=' + encodeURIComponent(day) : '');
+  return fetch('/api/platform?' + q, { method: 'DELETE', credentials: 'same-origin' }).then(function (res) { return res.ok ? res.json() : readErr(res); });
+}
+/* ---------- YouTube videos (filled by the Worker once per day) ---------- */
+var YT_ID = /^[A-Za-z0-9_-]{11}$/;
+var yt = { sort: { k: 'gain', dir: -1 } };
+var ytMockAdd = {};
+function mockYoutube(y, N) {
+  var f = N / 90;
+  return Object.assign({}, y, { videos: arr(y.videos).map(function (v) {
+    var add = ytMockAdd[v.id] || 0;
+    return Object.assign({}, v, { views: num(v.views) + add, views_in_range: Math.round(num(v.views_in_range) * Math.min(1, f)) + add });
+  }) });
+}
+function ytRefreshCall() {
+  if (DEV) {
+    var n = 0;
+    return mockCache.then(function (raw) {
+      arr(raw.youtube && raw.youtube.videos).forEach(function (v, i) { if (i % 2 === 0) { ytMockAdd[v.id] = (ytMockAdd[v.id] || 0) + 5 + i; n++; } });
+      return { ok: true, channel: { followers: 2340, views: 0, videos: arr(raw.youtube && raw.youtube.videos).length }, videos_seen: arr(raw.youtube && raw.youtube.videos).length, rows_written: n + 3 };
+    });
+  }
+  return fetch('/api/youtube/refresh', { method: 'POST', credentials: 'same-origin' }).then(function (res) { return res.ok ? res.json() : readErr(res); });
+}
+function ytRefresh() {
+  var b = $('#yt-refresh'); b.disabled = true; setStatus('yt-status', 'Refreshing from YouTube…');
+  ytRefreshCall().then(function (r) {
+    if (r && r.ok === false) throw new Error(str(r.error) || 'refresh failed');
+    setStatus('yt-status', 'Done. ' + nf.format(num(r.videos_seen)) + ' videos checked, ' + nf.format(num(r.rows_written)) + ' rows saved.');
+    psReload();
+  }).catch(function (err) { setStatus('yt-status', 'Refresh failed: ' + err.message, true); }).then(function () { b.disabled = false; });
+}
+function ytRows(D) {
+  var k = yt.sort.k, dir = yt.sort.dir;
+  var val = function (v) { return k === 'title' ? v.title.toLowerCase() : k === 'published' ? v.published || null : v[k]; };
+  return D.yt.videos.slice().sort(function (a, b) {
+    var x = val(a), y = val(b);
+    if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
+    return (x < y ? -1 : x > y ? 1 : 0) * dir || (b.views - a.views);
+  });
+}
+function renderYT(D) {
+  var empty = $('#yt-empty'), wrap = $('#yt-wrap'), rows = ytRows(D);
+  var msg = rows.length ? '' : (D.yt.present && !D.yt.configured) ? 'YouTube is not configured: set YOUTUBE_API_KEY' : 'No YouTube data yet';
+  empty.hidden = !msg; empty.textContent = msg; wrap.hidden = !!msg;
+  if (msg) return;
+  var heads = [['title', 'Title'], ['published', 'Published'], ['views', 'Total views'], ['gain', 'Views gained in range']];
+  var hr = $('#tbl-yt thead tr'), tb = $('#tbl-yt tbody'); clear(hr); clear(tb);
+  heads.forEach(function (h) {
+    hr.append(el('th', { scope: 'col', 'aria-sort': h[0] === yt.sort.k ? (yt.sort.dir > 0 ? 'ascending' : 'descending') : 'none' },
+      el('button', { type: 'button', text: h[1], onclick: function () {
+        if (yt.sort.k === h[0]) yt.sort.dir *= -1; else yt.sort = { k: h[0], dir: h[0] === 'title' ? 1 : -1 };
+        renderYT(state.D);
+      } })));
+  });
+  rows.forEach(function (v) {
+    var label = v.title || v.id;
+    var cell = YT_ID.test(v.id)
+      ? el('a', { href: 'https://www.youtube.com/watch?v=' + v.id, target: '_blank', rel: 'noopener', dir: 'auto', text: label })
+      : el('span', { dir: 'auto', text: label });
+    tb.append(el('tr', null, el('td', { class: 'ttl', title: label }, cell),
+      el('td', { text: v.published ? fmtDay(v.published, true) : '—' }),
+      el('td', { class: 'num', text: nf.format(v.views) }),
+      el('td', { class: 'num', text: (v.gain > 0 ? '+' : '') + nf.format(v.gain) })));
+  });
+}
+function psReload() { bust = true; load(); bust = false; }
+function setStatus(id, msg, isErr) { var s = document.getElementById(id); s.textContent = msg || ''; s.className = 'status' + (isErr ? ' err' : ''); }
+
+function psMetrics(S) {
+  var seen = {}; S.forEach(function (r) { seen[r.metric] = 1; });
+  var all = Object.keys(seen);
+  return COMMON_METRICS.filter(function (m) { return seen[m]; }).concat(all.filter(function (m) { return COMMON_METRICS.indexOf(m) < 0; }).sort());
+}
+
+function renderPS(D) {
+  $('#ps-mock').hidden = !DEV;
+  var S = D.psSeries, tiles = $('#ps-tiles'); clear(tiles);
+  var empty = $('#ps-empty'), data = $('#ps-data');
+  if (!S.length) {
+    empty.hidden = false; empty.textContent = 'No Apple, Spotify or YouTube numbers yet. Open "Add numbers" below to enter or import them.';
+    data.hidden = true; killChart('c-ps'); return;
+  }
+  empty.hidden = true; data.hidden = false;
+  var fol = D.psLatest.filter(function (l) { return l.metric === 'followers'; });
+  fol.forEach(function (l) {
+    var note;
+    if (l.prev_day != null && l.prev_value != null) {
+      var d = l.value - l.prev_value;
+      note = el('div', { class: 'note' }, 'As of ' + fmtDay(l.day, true) + ' · ', el('b', { text: (d > 0 ? '▲ +' : d < 0 ? '▼ ' : '') + (d === 0 ? 'no change' : nf.format(d)) }), ' since ' + fmtDay(l.prev_day, true));
+    } else note = el('div', { class: 'note', text: 'As of ' + fmtDay(l.day, true) + ' · no earlier number' });
+    tiles.append(el('div', { class: 'card kpi' }, el('div', { class: 'lab', text: 'Followers, ' + platLabel(l.platform) }), el('div', { class: 'val', text: nf.format(l.value) }), note));
+  });
+  if (fol.length) {
+    tiles.append(el('div', { class: 'card kpi' }, el('div', { class: 'lab', text: 'Followers, all platforms' }), el('div', { class: 'val', text: nf.format(sum(fol.map(function (l) { return l.value; }))) }),
+      el('div', { class: 'note', text: 'Sum of the latest imported number per platform. The dates can differ, and one person can follow on both.' })));
+  } else tiles.append(el('div', { class: 'card kpi' }, el('div', { class: 'lab', text: 'Followers' }), el('div', { class: 'val', text: '—' }), el('div', { class: 'note', text: 'No follower numbers imported yet.' })));
+
+  var metrics = psMetrics(S), sel = $('#ps-metric');
+  if (!ps.metric || metrics.indexOf(ps.metric) < 0) ps.metric = metrics.indexOf('followers') >= 0 ? 'followers' : metrics[0];
+  clear(sel); metrics.forEach(function (m) { sel.append(el('option', { value: m, text: metricLabel(m), selected: m === ps.metric })); });
+  sel.value = ps.metric;
+  renderPSChart(D);
+  renderPSTable(D);
+}
+
+function renderPSChart(D) {
+  var T = themeInfo(), m = ps.metric, items = [];
+  var ds = PLATS.map(function (p) {
+    var pts = D.psSeries.filter(function (r) { return r.platform === p && r.metric === m; }).map(function (r) { return { x: parseDay(r.day) / DAY, y: r.value }; }).sort(function (a, b) { return a.x - b.x; });
+    if (!pts.length) return null;
+    var col = T.c[PLAT_COLOR[p]], d = lineDs(platLabel(p), pts, col);
+    d.pointRadius = 3; d.pointHoverRadius = 5; d.pointBackgroundColor = col; d.spanGaps = true; d.fill = false;
+    items.push({ label: platLabel(p), color: col });
+    return d;
+  }).filter(Boolean);
+  var o = baseOpts(T, { tooltip: { callbacks: { title: function (it) { return fmtDay(dayStr(it[0].parsed.x * DAY), true); }, label: function (c) { return c.dataset.label + ': ' + nf.format(c.parsed.y); } } } });
+  o.interaction = { mode: 'nearest', axis: 'x', intersect: false };
+  o.scales.x = { type: 'linear', grid: { display: false }, border: { color: T.line }, ticks: { color: T.muted, maxRotation: 0, maxTicksLimit: 8, callback: function (v) { return fmtDay(dayStr(v * DAY)); } } };
+  o.scales.y.beginAtZero = false;
+  makeChart('c-ps', { type: 'line', data: { datasets: ds }, options: o });
+  legend($('#lg-ps'), items);
+}
+
+function renderPSTable(D) {
+  var host = $('#tv-ps'); clear(host);
+  var S = D.psSeries, g = {};
+  S.forEach(function (r) { var k = r.platform + '|' + r.metric; var x = g[k] = g[k] || { platform: r.platform, metric: r.metric, n: 0, first: r.day, last: r.day, value: r.value }; x.n++; if (r.day < x.first) x.first = r.day; if (r.day >= x.last) { x.last = r.day; x.value = r.value; } });
+  var list = Object.keys(g).map(function (k) { return g[k]; }).sort(function (a, b) { return PLATS.indexOf(a.platform) - PLATS.indexOf(b.platform) || (a.metric < b.metric ? -1 : 1); });
+  var th = function (t, i) { return el('th', { scope: 'col', class: 'plain', style: i >= 2 ? 'text-align:right' : 'text-align:left', text: t }); };
+  var td = function (t, left) { return el('td', { style: left ? 'text-align:left' : 'text-align:right', text: t }); };
+  var rows = list.map(function (s) {
+    var key = s.platform + '|' + s.metric, act;
+    if (ps.confirm === key) {
+      act = el('span', null,
+        el('button', { type: 'button', class: 'btn danger', text: 'Confirm: delete ' + s.n + ' points', onclick: function () {
+          setStatus('ps-tv-status', 'Deleting…');
+          psDelete(s.platform, s.metric).then(function (r) { ps.confirm = null; setStatus('ps-tv-status', 'Deleted ' + r.deleted + ' points.'); psReload(); })
+            .catch(function (e) { setStatus('ps-tv-status', 'Delete failed: ' + e.message, true); });
+        } }), ' ',
+        el('button', { type: 'button', class: 'btn', text: 'Cancel', onclick: function () { ps.confirm = null; renderPSTable(state.D); } }));
+    } else act = el('button', { type: 'button', class: 'btn', 'aria-label': 'Delete series ' + platLabel(s.platform) + ' ' + metricLabel(s.metric), text: 'Delete series', onclick: function () { ps.confirm = key; setStatus('ps-tv-status', ''); renderPSTable(state.D); } });
+    return el('tr', null, td(platLabel(s.platform), true), td(metricLabel(s.metric), true), td(String(s.n)), td(s.first), td(s.last), td(nf.format(s.value)), el('td', { style: 'text-align:right' }, act));
+  });
+  host.append(el('div', { class: 'tablewrap', style: 'max-height:260px' }, el('table', null,
+    el('thead', null, el('tr', null, ['Platform', 'Metric', 'Points', 'First', 'Last', 'Latest value', ''].map(th))), el('tbody', null, rows))));
+  var cap = 500, pts = S.slice().sort(function (a, b) { return a.day < b.day ? 1 : a.day > b.day ? -1 : (a.platform + a.metric < b.platform + b.metric ? -1 : 1); });
+  host.append(el('h3', { style: 'margin-top:12px', text: 'All points' + (pts.length > cap ? ' (newest ' + cap + ' of ' + nf.format(pts.length) + ')' : '') }));
+  host.append(el('div', { class: 'tablewrap', style: 'max-height:300px' }, el('table', null,
+    el('thead', null, el('tr', null, ['Day', 'Platform', 'Metric', 'Value'].map(function (t, i) { return th(t, i === 3 ? 2 : 0); }))),
+    el('tbody', null, pts.slice(0, cap).map(function (r) { return el('tr', null, td(r.day, true), td(platLabel(r.platform), true), td(metricLabel(r.metric), true), td(nf.format(r.value))); })))));
+}
+
+/* ----- add numbers: forms ----- */
+function fillSelect(sel, opts, labelFn, chosen) {
+  clear(sel); opts.forEach(function (o) { sel.append(el('option', { value: o, text: labelFn(o), selected: o === chosen })); });
+}
+function initPS() {
+  fillSelect($('#q-plat'), PLATS, platLabel, 'spotify'); fillSelect($('#i-plat'), PLATS, platLabel, 'spotify');
+  fillSelect($('#q-metric'), COMMON_METRICS.concat(['other']), function (m) { return m === 'other' ? 'other…' : metricLabel(m); }, 'followers');
+  $('#q-day').value = todayStr(); $('#i-date').value = todayStr();
+  $('#ps-metric').addEventListener('change', function (e) { ps.metric = e.target.value; if (state.D) renderPSChart(state.D); });
+  $('#q-metric').addEventListener('change', function (e) { $('#q-other-l').hidden = e.target.value !== 'other'; });
+  $('#ps-quick').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var metric = $('#q-metric').value === 'other' ? sanitizeMetric($('#q-other').value) : $('#q-metric').value;
+    var value = parseNumberCell($('#q-val').value), day = $('#q-day').value;
+    if (!metric) return setStatus('q-status', 'Type a metric name (letters and digits).', true);
+    if (value === null || value < 0) return setStatus('q-status', 'Value must be a number, 0 or more.', true);
+    if (!day) return setStatus('q-status', 'Choose a date.', true);
+    setStatus('q-status', 'Saving…');
+    psWrite([{ day: day, platform: $('#q-plat').value, metric: metric, value: value }]).then(function () {
+      setStatus('q-status', 'Saved ' + metricLabel(metric) + ' = ' + nf.format(value) + ' for ' + day + (DEV ? ' (mock mode: not stored)' : '') + '.');
+      $('#q-val').value = ''; psReload();
+    }).catch(function (err) { setStatus('q-status', 'Save failed: ' + err.message, true); });
+  });
+  $('#i-file').addEventListener('change', function (e) {
+    var f = e.target.files && e.target.files[0]; if (!f) return;
+    if (f.size > 2 * 1024 * 1024) return setStatus('i-msg', 'File is larger than 2 MB.', true);
+    var rd = new FileReader();
+    rd.onload = function () { $('#i-text').value = String(rd.result); csvAnalyzeUi(); };
+    rd.onerror = function () { setStatus('i-msg', 'Could not read the file.', true); };
+    rd.readAsText(f);
+  });
+  var t = null;
+  $('#i-text').addEventListener('input', function () { clearTimeout(t); t = setTimeout(csvAnalyzeUi, 250); });
+  $('#i-plat').addEventListener('change', csvPreviewUi);
+  $('#i-order').addEventListener('change', csvPreviewUi);
+  $('#i-date').addEventListener('change', csvPreviewUi);
+  $('#i-go').addEventListener('click', csvImportUi);
+}
+
+function csvAnalyzeUi() {
+  var text = $('#i-text').value, an;
+  setStatus('i-status', '');
+  ['#i-opts', '#i-map', '#i-prev'].forEach(function (s) { $(s).hidden = true; });
+  $('#i-go').disabled = true; ps.csv = null;
+  if (!text.trim()) return setStatus('i-msg', '');
+  an = analyzeCsv(text);
+  if (an.error) return setStatus('i-msg', an.error, true);
+  setStatus('i-msg', '');
+  ps.csv = an; ps.map = {};
+  an.columns.forEach(function (c) { ps.map[c.index] = c.guess; });
+  $('#i-opts').hidden = !(an.ambiguous || an.needsDate);
+  $('#i-order-l').hidden = !an.ambiguous; $('#i-date-l').hidden = !an.needsDate;
+  $('#i-order').value = an.order;
+  var tb = $('#ps-map tbody'); clear(tb);
+  an.columns.forEach(function (c) {
+    var s = el('select', { class: 'in', 'aria-label': 'Import column ' + c.name + ' as' });
+    s.append(el('option', { value: '', text: 'Skip' }));
+    COMMON_METRICS.forEach(function (m) { s.append(el('option', { value: m, text: metricLabel(m) })); });
+    var custom = sanitizeMetric(c.name);
+    if (custom && COMMON_METRICS.indexOf(custom) < 0) s.append(el('option', { value: custom, text: 'Custom: ' + custom }));
+    s.value = ps.map[c.index];
+    s.addEventListener('change', function () { ps.map[c.index] = s.value; csvPreviewUi(); });
+    tb.append(el('tr', null, el('td', { style: 'text-align:left', text: c.name }), el('td', { style: 'text-align:left', text: c.sample }), el('td', { style: 'text-align:left' }, s)));
+  });
+  $('#i-map').hidden = false;
+  csvPreviewUi();
+}
+
+function csvBuild() {
+  var an = ps.csv; if (!an) return null;
+  return csvBuildRows(an, ps.map, $('#i-plat').value, { order: $('#i-order').value, date: an.needsDate ? $('#i-date').value : null, today: todayStr() });
+}
+function csvPreviewUi() {
+  var b = csvBuild(); if (!b) return;
+  $('#i-prev').hidden = false;
+  var metrics = []; b.rows.forEach(function (r) { if (metrics.indexOf(r.metric) < 0) metrics.push(r.metric); });
+  var days = [], by = {};
+  b.rows.forEach(function (r) { if (!by[r.day]) { by[r.day] = {}; days.push(r.day); } by[r.day][r.metric] = r.value; });
+  var hr = $('#ps-prev thead tr'), tb = $('#ps-prev tbody'); clear(hr); clear(tb);
+  ['Day'].concat(metrics.map(metricLabel)).forEach(function (h, i) { hr.append(el('th', { scope: 'col', class: 'plain', style: i ? 'text-align:right' : 'text-align:left', text: h })); });
+  days.slice(0, 10).forEach(function (d) {
+    tb.append(el('tr', null, el('td', { style: 'text-align:left', text: d }), metrics.map(function (m) { return el('td', { style: 'text-align:right', text: by[d][m] == null ? '—' : nf.format(by[d][m]) }); })));
+  });
+  var sm = nf.format(b.rows.length) + ' numbers on ' + nf.format(days.length) + ' days from ' + nf.format(b.total) + ' rows. ' + (days.length > 10 ? 'Showing the first 10 days. ' : '') + 'Skipped rows: ' + b.skipped + '.';
+  if (b.skipped) sm += ' (' + b.why.slice(0, 3).join('; ') + (b.why.length > 3 ? '; …' : '') + ')';
+  $('#i-sum').textContent = sm;
+  $('#i-go').disabled = !b.rows.length;
+  if (!b.rows.length) setStatus('i-msg', 'Nothing to import. Map at least one column.', true); else setStatus('i-msg', '');
+}
+function csvImportUi() {
+  var b = csvBuild(); if (!b || !b.rows.length) return;
+  if (b.rows.length > 5000) return setStatus('i-status', 'Too many numbers (' + b.rows.length + '). The limit is 5000 per import. Split the file.', true);
+  $('#i-go').disabled = true; setStatus('i-status', 'Importing…');
+  psWrite(b.rows).then(function (r) {
+    setStatus('i-status', 'Imported ' + r.rows + ' numbers' + (DEV ? ' (mock mode: nothing is saved)' : '') + '.');
+    psReload();
+  }).catch(function (err) { setStatus('i-status', 'Import failed: ' + err.message, true); }).then(function () { $('#i-go').disabled = false; });
 }
 
 /* ---------- load ---------- */
@@ -987,7 +1558,27 @@ function load() {
   });
 }
 
+$('#yt-refresh').addEventListener('click', ytRefresh);
 document.querySelectorAll('#range button').forEach(function (b) { b.addEventListener('click', function () { state.days = +b.dataset.days; load(); }); });
+
+/* ---------- auto refresh ----------
+   Reload the numbers every 5 minutes while the tab is visible. Skip a cycle while the user
+   types in a field or has the "Add numbers" panel open, so a redraw does not disturb the input. */
+var REFRESH_MS = 5 * 60 * 1000, lastLoad = Date.now();
+function busyWithInput() {
+  var a = document.activeElement, tag = a && a.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true;
+  var add = document.getElementById('ps-add');
+  return !!(add && add.open);
+}
+function autoRefresh() {
+  if (document.visibilityState !== 'visible' || busyWithInput()) return;
+  if (Date.now() - lastLoad < REFRESH_MS - 5000) return;
+  lastLoad = Date.now();
+  load();
+}
+setInterval(autoRefresh, REFRESH_MS);
+document.addEventListener('visibilitychange', autoRefresh);
 $('#ma').addEventListener('change', function (e) { state.ma = e.target.checked; if (state.D) renderDaily(state.D); });
 $('#q').addEventListener('input', function (e) { state.q = e.target.value; if (state.D) renderEpisodes(state.D); });
 document.querySelectorAll('#tbl thead th[data-k]').forEach(function (th) {
@@ -1013,6 +1604,7 @@ if (window.matchMedia) {
   var rerender = function () { if (state.D) renderAll(); };
   if (mq.addEventListener) mq.addEventListener('change', rerender);
 }
+initPS();
 if (typeof Chart === 'undefined') showError('Chart library failed to load. Tables and lists still work.');
 load();
 })();

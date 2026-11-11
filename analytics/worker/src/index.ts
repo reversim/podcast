@@ -1,8 +1,10 @@
 import { authorize } from './auth';
 import { handleFeed } from './feed';
 import { handleMedia } from './media';
-import { rollup } from './rollup';
+import { handlePlatform, originOk } from './platform';
+import { refreshIfStale, rollup } from './rollup';
 import { buildStats } from './stats';
+import { handleYoutubeRefresh, runDailyYoutube } from './youtube';
 import type { Env } from './env';
 
 const list = (s: string | undefined) => (s ?? '').split(',').map((h) => h.trim().toLowerCase()).filter(Boolean);
@@ -34,6 +36,8 @@ export default {
     // Heavy tables (monthly, audience) every 6 hours; per-day tables every hour.
     const heavy = new Date(event.scheduledTime).getUTCHours() % 6 === 0;
     ctx.waitUntil(rollup(env, { now: event.scheduledTime, heavy }));
+    // Own waitUntil: a YouTube failure must never touch the rollup. runDailyYoutube never throws.
+    ctx.waitUntil(runDailyYoutube(env, event.scheduledTime).catch((e) => console.error('youtube job failed', e)));
   },
 } satisfies ExportedHandler<Env>;
 
@@ -57,7 +61,14 @@ async function statsInner(req: Request, env: Env): Promise<Response> {
   if (url.pathname === '/api/stats' && req.method === 'GET') {
     const n = Math.floor(Number(url.searchParams.get('days') ?? 90));
     const days = Math.min(730, Math.max(1, Number.isFinite(n) ? n : 90));
-    return Response.json(await buildStats(env, days), { headers: { 'cache-control': 'private, max-age=300' } });
+    await refreshIfStale(env);
+    return Response.json(await buildStats(env, days), { headers: { 'cache-control': 'private, max-age=60' } });
+  }
+  if (url.pathname === '/api/platform') return handlePlatform(req, env);
+  if (url.pathname === '/api/youtube/refresh') {
+    if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });
+    if (!originOk(req, env)) return Response.json({ ok: false, error: 'bad origin' }, { status: 403, headers: { 'cache-control': 'no-store' } });
+    return handleYoutubeRefresh(env);
   }
   if (url.pathname === '/api/rollup') {
     if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });

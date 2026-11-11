@@ -69,6 +69,36 @@ The stats host is behind Access, so the endpoint lives on the media hosts only.
 - Local test: POST with `-H 'x-dev-host: m2.reversim.com' -H 'Origin: https://www.reversim.com' -d '{"t":"pv","p":"/x.html","r":"google.com"}'`,
   then `POST /api/rollup`. To use the token locally, start dev with `--var ACCESS_TEAM_DOMAIN: --var ACCESS_AUD:`.
 
+## Apple and Spotify numbers (hand-imported)
+
+Apple Podcasts Connect and Spotify for Creators have no analytics API. The dashboard section "Apple and Spotify"
+stores numbers you type or import from a CSV export in `platform_stats (platform, metric, day, value)`.
+
+- `POST /api/platform` with `{"rows":[{"day":"YYYY-MM-DD","platform":"spotify","metric":"followers","value":1234}]}`
+  upserts up to 5000 rows (512 KB). Any invalid row gives 400 `{"error":"...","row":N}` and nothing is written.
+  `DELETE /api/platform?platform=..&metric=..[&day=..]` removes a series or one point.
+- Both need `Origin` equal to `https://<STATS_HOST>` (with `DEV=1`, the `x-dev-host` host), else 403. POST needs `Content-Type: application/json`.
+- `GET /api/stats` adds `platforms: { series, latest }`. If the table is missing, both are empty arrays.
+- Deploy order: apply `schema.sql` to the remote DB first, then deploy the Worker.
+- The CSV parser and column detection live in `dashboard/index.html` between `csv:start` and `csv:end`; `test/csv.test.ts` evaluates that block.
+  The sample files in `test/fixtures/` are synthetic. The real Spotify and Apple export layouts are not verified.
+- `?mock=1` on the dashboard keeps these numbers in memory only.
+
+## YouTube (automatic, daily)
+
+`src/youtube.ts` reads the YouTube Data API v3 once per UTC day. It does nothing, and logs nothing, until both values exist:
+
+- `YOUTUBE_CHANNEL_ID` in `[vars]` (now the @Reversim-summit channel; change it there if the podcast uses another channel).
+- Secret `YOUTUBE_API_KEY`: `npx wrangler secret put YOUTUBE_API_KEY` (a Google Cloud API key with only "YouTube Data API v3" enabled).
+
+- The hourly cron runs the fetch from 03:00 UTC on, once per day (marker `meta.youtube_day`). After a failure it retries the next hour. It has its own `waitUntil`, so it cannot affect the rollup. A YouTube error logs one line, never the key.
+- Stored in `platform_stats` as `('youtube', followers|views|videos, day)`, so the "Followers, all platforms" tile includes it. YouTube rounds subscribers to 3 significant figures. Hidden subscriber counts are skipped.
+- Per video: `yt_videos` (title, date) and `yt_video_daily (day, video_id, views, likes, comments)`. A daily row is written only when the view count changed. Nothing is pruned.
+- Cost for a 500-video channel: 21 quota units per run (limit 10000 per day), 21 fetch subrequests, at most 3 + 500 + 500 D1 rows on the first day and then one row per video whose views changed. Cap: the newest 1000 videos (41 fetches).
+- `POST /api/youtube/refresh` (same Origin rule as `/api/platform`) runs it now and returns `{ok, channel, videos_seen, rows_written}` or `{ok:false, error}`.
+- `GET /api/stats` adds `youtube: {channel_id, configured, last_day, videos[{id,title,published,views,views_in_range}]}` (top 200).
+- Deploy order: apply `schema.sql` to the remote DB first, then deploy the Worker, then set the secret.
+
 ## Notes
 
 - Cron runs hourly (minute 7). Per-day tables rebuild every hour. Monthly and audience

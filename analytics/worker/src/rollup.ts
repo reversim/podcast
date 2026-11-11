@@ -10,12 +10,13 @@ const RETENTION_DAYS = 100;
  * heavy=true: also monthly + audience tables, which scan up to 90 days of hits
  * (run every 6 hours from cron to stay inside the D1 free read quota).
  */
-export async function rollup(env: Env, opts: { now?: number; heavy?: boolean; backfillDays?: number } = {}): Promise<void> {
+export async function rollup(env: Env, opts: { now?: number; heavy?: boolean; backfillDays?: number; todayOnly?: boolean } = {}): Promise<void> {
   const now = opts.now ?? Date.now();
   const today = utcDay(now);
   const minBytes = Number(env.MIN_BYTES) || 750000;
   const db = env.DB;
-  const days = [addDays(today, -1), today];
+  // todayOnly: the cheap refresh that the dashboard triggers; yesterday no longer changes.
+  const days = opts.todayOnly ? [today] : [addDays(today, -1), today];
   for (let i = 2; i <= (opts.backfillDays ?? 0); i++) days.unshift(addDays(today, -i));
   const stmts: D1PreparedStatement[] = [];
   const q = (sql: string, ...args: unknown[]) => stmts.push(db.prepare(sql).bind(...args));
@@ -81,4 +82,25 @@ export async function rollup(env: Env, opts: { now?: number; heavy?: boolean; ba
   w(`DELETE FROM page_hits WHERE day < ?1`, cutoff);
   await db.batch(stmts);
   try { await db.batch(webStmts); } catch (e) { console.error('web rollup failed', e); }
+}
+
+const FRESH_MS = 5 * 60 * 1000;
+
+/**
+ * Rebuild today's per-day tables when the last rebuild is older than 5 minutes, so an open
+ * dashboard is at most ~5 minutes behind. Runs only when someone loads the stats. Never throws.
+ */
+export async function refreshIfStale(env: Env, now = Date.now()): Promise<boolean> {
+  try {
+    const row = await env.DB.prepare(`SELECT value FROM meta WHERE key = 'today_rollup_ts'`).first<{ value: string }>();
+    if (row && now - Number(row.value) < FRESH_MS) return false;
+    // Write the time first: a second request that arrives during the rebuild then skips it.
+    await env.DB.prepare(`INSERT INTO meta (key, value) VALUES ('today_rollup_ts', ?1)
+                          ON CONFLICT (key) DO UPDATE SET value = excluded.value`).bind(String(now)).run();
+    await rollup(env, { now, heavy: false, todayOnly: true });
+    return true;
+  } catch (e) {
+    console.error('refreshIfStale failed', e);
+    return false;
+  }
 }

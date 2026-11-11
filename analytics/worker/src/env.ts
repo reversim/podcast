@@ -15,4 +15,6 @@ export interface Env {
   DASH_TOKEN?: string;
   ACCESS_TEAM_DOMAIN?: string;
   ACCESS_AUD?: string;
+  YOUTUBE_API_KEY?: string;
+  YOUTUBE_CHANNEL_ID?: string;
 }

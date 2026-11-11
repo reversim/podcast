@@ -28,7 +28,10 @@ MIN_BYTES = "750000"
 ACCESS_TEAM_DOMAIN = "hamal-docs.cloudflareaccess.com"
 ACCESS_AUD = "86ad7c3107ef26ce1216d5af0588461609377493ae2afb72487883beed128d81"
 
-# Secrets (set with `wrangler secret put`): HASH_SALT, DASH_TOKEN
+# YouTube channel for the daily numbers: @Reversim-summit. Change here if the podcast uses a different channel.
+YOUTUBE_CHANNEL_ID = "UCYo4kdfR4KkHKMaE6xqO8XA"
+
+# Secrets (set with `wrangler secret put`): HASH_SALT, DASH_TOKEN, YOUTUBE_API_KEY (optional)
 
 [[d1_databases]]
 binding = "DB"

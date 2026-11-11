@@ -79,3 +79,29 @@ CREATE TABLE IF NOT EXISTS ref_daily (
   day TEXT NOT NULL, ref TEXT NOT NULL, visitors INTEGER NOT NULL,
   PRIMARY KEY (day, ref)
 ) WITHOUT ROWID;
+
+-- Numbers imported by hand from Apple Podcasts Connect, Spotify for Creators and similar consoles.
+-- One value per (platform, metric, day). A new import of the same key replaces the old value.
+CREATE TABLE IF NOT EXISTS platform_stats (
+  platform TEXT NOT NULL,     -- apple | spotify | youtube | amazon | other
+  metric TEXT NOT NULL,       -- e.g. followers, listeners, streams
+  day TEXT NOT NULL,          -- YYYY-MM-DD
+  value REAL NOT NULL,
+  PRIMARY KEY (platform, metric, day)
+) WITHOUT ROWID;
+
+-- Small key/value store. today_rollup_ts = time (ms) of the last dashboard-triggered rebuild of today.
+CREATE TABLE IF NOT EXISTS meta (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL
+) WITHOUT ROWID;
+
+-- YouTube, filled by the daily fetch (src/youtube.ts). Views are stored only when they change.
+CREATE TABLE IF NOT EXISTS yt_videos (
+  video_id TEXT PRIMARY KEY, title TEXT, published TEXT
+) WITHOUT ROWID;
+
+CREATE TABLE IF NOT EXISTS yt_video_daily (
+  day TEXT, video_id TEXT, views INTEGER, likes INTEGER, comments INTEGER,
+  PRIMARY KEY (video_id, day)
+) WITHOUT ROWID;
