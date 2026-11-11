@@ -799,7 +799,21 @@ async function generateSocial(opts, postContent, postUrl, socialFile) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) { console.error('  ✗ GEMINI_API_KEY is required'); process.exit(1); }
 
-  const systemPrompt = readFileSync(join(__dirname, 'SOCIAL.md'), 'utf8');
+  // Style guide + Ran's real past posts (social-posts/*.md) as few-shot examples.
+  // Append new posts to those files to keep the voice up to date.
+  let systemPrompt = readFileSync(join(__dirname, 'SOCIAL.md'), 'utf8');
+  const examplesDir = join(REPO_ROOT, 'social-posts');
+  const exampleSections = ['twitter', 'linkedin', 'facebook']
+    .map(name => join(examplesDir, `${name}.md`))
+    .filter(existsSync)
+    .map(file => readFileSync(file, 'utf8').trim());
+  if (exampleSections.length) {
+    systemPrompt +=
+      '\n\n# REAL POSTS (written by Ran — match this voice and structure)\n\n' +
+      exampleSections.join('\n\n====================\n\n');
+  } else {
+    console.warn(`  ⚠ No example posts found in ${examplesDir}`);
+  }
 
   const genAI = new GoogleGenerativeAI(apiKey);
   const model = genAI.getGenerativeModel({
