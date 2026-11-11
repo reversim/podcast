@@ -1,0 +1,57 @@
+name: Deploy analytics Worker
+
+# Deploys analytics/worker (Worker + dashboard page) to Cloudflare.
+# Runs only for pushes to main, never for pull requests: the API token can
+# change the Worker that sits in front of the podcast audio.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "analytics/**"
+      - ".github/workflows/deploy-analytics.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: analytics-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: analytics/worker
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: analytics/worker/package-lock.json
+      - name: Install
+        run: npm ci
+      - name: Type check
+        run: npm run typecheck
+      - name: Test
+        run: npm test
+      - name: Deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::Repository secret CLOUDFLARE_API_TOKEN is not set."
+            exit 1
+          fi
+          npx wrangler deploy
+      - name: Check audio and dashboard after deploy
+        run: |
+          audio=$(curl -s -o /dev/null -w '%{http_code}' -r 0-99 https://m2.reversim.com/reversim458-MAX.mp3)
+          stats=$(curl -s -o /dev/null -w '%{http_code}' https://stats.reversim.com/api/stats)
+          echo "audio=$audio stats_without_login=$stats"
+          if [ "$audio" != "206" ]; then echo "::error::Audio check failed (HTTP $audio). Roll back: npx wrangler rollback"; exit 1; fi
+          if [ "$stats" = "200" ]; then echo "::error::Stats API answered without login."; exit 1; fi
