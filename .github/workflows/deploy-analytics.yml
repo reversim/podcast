@@ -47,6 +47,16 @@ jobs:
             echo "::error::Repository secret CLOUDFLARE_API_TOKEN is not set."
             exit 1
           fi
+          # Fail early with a clear message when the token cannot reach the D1 database.
+          if ! npx wrangler d1 list --json > /tmp/d1.json 2> /tmp/d1.err; then
+            cat /tmp/d1.err
+            echo "::error::The API token cannot list D1 databases. Add the permission Account > D1 > Edit to the token, for the account that owns reversim.com."
+            exit 1
+          fi
+          if ! grep -q '"reversim-analytics"' /tmp/d1.json; then
+            echo "::error::The API token does not see the D1 database reversim-analytics. Check the Account Resources of the token."
+            exit 1
+          fi
           npx wrangler deploy
       - name: Check audio and dashboard after deploy
         run: |
