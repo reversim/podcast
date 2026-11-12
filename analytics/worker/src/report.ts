@@ -3,7 +3,6 @@
 import { addDays, utcDay } from './lib';
 import type { Env } from './env';
 
-const EPISODES_URL = 'https://www.reversim.com/episodes.json';
 const VALID = `ua_type != 'bot' AND bytes >= min(size, ?3)`;
 
 export interface Report { subject: string; html: string; text: string; from: string; to: string }
@@ -23,13 +22,24 @@ export function delta(cur: number | null | undefined, prev: number | null | unde
   return `${sign}${Math.abs(d).toLocaleString('en-US')}${pct}`;
 }
 
-async function titles(): Promise<Map<string, string>> {
-  const out = new Map<string, string>();
+/** "reversim522-company_brain.mp3" -> 522. null for files without an episode number. */
+export function episodeNumber(file: string): number | null {
+  const m = /^reversim[-_ ]?0*(\d{1,4})(?!\d)/i.exec(file);
+  return m ? Number(m[1]) : null;
+}
+const prettyFile = (file: string) => file.replace(/\.mp3$/i, '').replace(/[_-]+/g, ' ').trim();
+
+/**
+ * Episode titles by number, from the names that the daily Spotify job stores ("522 - Company brain ...").
+ * The Worker cannot fetch www.reversim.com/episodes.json: a fetch to its own zone ends in a redirect loop.
+ */
+async function titlesByNumber(env: Env): Promise<Map<number, string>> {
+  const out = new Map<number, string>();
   try {
-    const res = await fetch(EPISODES_URL, { signal: AbortSignal.timeout(5000) });
-    if (!res.ok) return out;
-    for (const e of (await res.json()) as { file?: string; title?: string }[]) {
-      if (e && typeof e.file === 'string' && typeof e.title === 'string') out.set(e.file, e.title);
+    const rows = (await env.DB.prepare(`SELECT name FROM sp_episodes WHERE name GLOB '[0-9]*'`).all<{ name: string }>()).results;
+    for (const r of rows) {
+      const m = /^0*(\d{1,4})\s*[-–:.]/.exec(r.name);
+      if (m && !out.has(Number(m[1]))) out.set(Number(m[1]), r.name);
     }
   } catch (e) {
     console.warn('report: episode titles not loaded', e);
@@ -47,9 +57,9 @@ export async function buildReport(env: Env, now = Date.now()): Promise<Report> {
   const all = async <T>(sql: string, ...a: unknown[]) => { try { return (await db.prepare(sql).bind(...a).all<T>()).results; } catch (e) { console.error('report query failed', e); return [] as T[]; } };
 
   // n = days with data in the range. null when the range has no data at all.
-  const sumOf = async (table: string, cols: string[], a: string, b: string) => {
+  const sumOf = async (table: string, cols: string[], a: string, b: string, has = '1') => {
     const r = await first<Record<string, number>>(
-      `SELECT count(*) AS n, ${cols.map((c) => `sum(${c}) AS ${c}`).join(', ')} FROM ${table} WHERE day BETWEEN ?1 AND ?2`, a, b);
+      `SELECT count(CASE WHEN ${has} THEN 1 END) AS n, ${cols.map((c) => `sum(${c}) AS ${c}`).join(', ')} FROM ${table} WHERE day BETWEEN ?1 AND ?2`, a, b);
     return r && r.n > 0 ? r : null;
   };
   const uniq = async (a: string, b: string) =>
@@ -65,14 +75,14 @@ export async function buildReport(env: Env, now = Date.now()): Promise<Report> {
 
   const [dl, dlPrev, u, uPrev, eps, apps, web, webPrev, feed, feedPrev, names,
     spF, spFPrev, spStreams, spStreamsPrev, apF, apFPrev, meta, audience] = await Promise.all([
-    sumOf('totals_daily', ['downloads'], from, to), sumOf('totals_daily', ['downloads'], pFrom, pTo),
+    sumOf('totals_daily', ['downloads'], from, to, 'requests > 0'), sumOf('totals_daily', ['downloads'], pFrom, pTo, 'requests > 0'),
     uniq(from, to), uniq(pFrom, pTo),
     all<{ file: string; n: number }>(`SELECT file, sum(downloads) AS n FROM ep_daily WHERE day BETWEEN ?1 AND ?2 GROUP BY file ORDER BY n DESC, file LIMIT 5`, from, to),
     all<{ key: string; n: number }>(`SELECT key, sum(downloads) AS n FROM dim_daily WHERE dim = 'app' AND day BETWEEN ?1 AND ?2 GROUP BY key ORDER BY n DESC, key LIMIT 5`, from, to),
     sumOf('web_daily', ['views', 'visitors', 'plays'], from, to), sumOf('web_daily', ['views', 'visitors', 'plays'], pFrom, pTo),
     first<{ n: number }>(`SELECT cast(round(avg(f)) AS INTEGER) AS n FROM (SELECT sum(fetchers) AS f FROM feed_daily WHERE day BETWEEN ?1 AND ?2 GROUP BY day)`, from, to),
     first<{ n: number }>(`SELECT cast(round(avg(f)) AS INTEGER) AS n FROM (SELECT sum(fetchers) AS f FROM feed_daily WHERE day BETWEEN ?1 AND ?2 GROUP BY day)`, pFrom, pTo),
-    titles(),
+    titlesByNumber(env),
     platAt('spotify', 'followers', to), platAt('spotify', 'followers', pTo),
     platSum('spotify', 'streams', from, to), platSum('spotify', 'streams', pFrom, pTo),
     platAt('apple', 'followers', to), platAt('apple', 'followers', pTo),
@@ -97,7 +107,7 @@ export async function buildReport(env: Env, now = Date.now()): Promise<Report> {
       { label: 'Unique listeners', value: dl ? u : null, prev: dlPrev ? uPrev : null },
       ...(audience ? [{ label: 'Active listeners, last 30 days', value: audience.active_30d }] : []),
     ] },
-    { title: 'Top episodes', rows: eps.map((e) => [names.get(e.file) ?? e.file, e.n]), empty: 'No downloads.' },
+    { title: 'Top episodes', rows: eps.map((e) => [names.get(episodeNumber(e.file) ?? -1) ?? prettyFile(e.file), e.n]), empty: 'No downloads.' },
     { title: 'Top apps', rows: apps.map((a) => [a.key, a.n]), empty: 'No downloads.' },
     { title: 'Followers', lines: [
       { label: 'Spotify', value: spF?.value ?? null, prev: spFPrev?.value },
@@ -112,9 +122,17 @@ export async function buildReport(env: Env, now = Date.now()): Promise<Report> {
     ] },
   ];
 
+  // Followers on all platforms: only when each platform that has numbers also has them for the week before.
+  const fol = spF || apF ? (spF?.value ?? 0) + (apF?.value ?? 0) : null;
+  const folPrev = (!spF || spFPrev) && (!apF || apFPrev) && (spFPrev || apFPrev) ? (spFPrev?.value ?? 0) + (apFPrev?.value ?? 0) : null;
+  const tiles: Line[] = [
+    { label: 'Downloads', value: dl?.downloads ?? null, prev: dlPrev?.downloads },
+    { label: 'Unique listeners', value: dl ? u : null, prev: dlPrev ? uPrev : null },
+    { label: 'Followers, Spotify + Apple', value: fol, prev: folPrev },
+  ];
   const dash = `https://${env.STATS_HOST}`;
   const subject = `Reversim weekly stats: ${fmt(dl?.downloads)} downloads (${from} to ${to})`;
-  return { subject, from, to, text: toText(sections, warnings, from, to, dash), html: toHtml(sections, warnings, from, to, dash) };
+  return { subject, from, to, text: toText(sections, warnings, from, to, dash), html: toHtml(tiles, sections, warnings, from, to, dash) };
 }
 
 const lineText = (l: Line) => {
@@ -135,18 +153,32 @@ function toText(sections: Section[], warnings: string[], from: string, to: strin
   return out.join('\n');
 }
 
-function toHtml(sections: Section[], warnings: string[], from: string, to: string, dash: string): string {
+function toHtml(tiles: Line[], sections: Section[], warnings: string[], from: string, to: string, dash: string): string {
+  // Fixed column widths, the same in each table, so the numbers of all sections are in one line.
   const td = 'padding:6px 12px 6px 0;border-bottom:1px solid #e3e8eb;font-size:14px;vertical-align:top';
   const num = td + ';text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums';
+  const cols = '<colgroup><col><col width="80" style="width:80px"><col width="120" style="width:120px"></colgroup>';
   const row = (a: string, b: string, c = '') =>
-    `<tr><td style="${td}" dir="auto">${a}</td><td style="${num}"><b>${b}</b></td><td style="${td};color:#5a6b73;white-space:nowrap">${c}</td></tr>`;
+    `<tr><td style="${td};word-break:break-word" dir="auto">${a}</td><td style="${num}"><b>${b}</b></td><td style="${td};padding-right:0;color:#5a6b73;white-space:nowrap">${c}</td></tr>`;
   let h = `<div style="font-family:-apple-system,'Segoe UI',Arial,sans-serif;color:#16242b;max-width:600px">`;
   h += `<h2 style="margin:0 0 4px;font-size:20px">Reversim weekly stats</h2><p style="margin:0 0 16px;color:#5a6b73;font-size:13px">${from} to ${to} (UTC days). Changes are from the week before.</p>`;
+  if (tiles.length) {
+    const w = Math.floor(100 / tiles.length);
+    h += `<table role="presentation" style="border-collapse:separate;border-spacing:0;width:100%;table-layout:fixed;margin:0 0 16px"><tr>`;
+    tiles.forEach((t, i) => {
+      const d = delta(t.value, t.prev);
+      h += `<td width="${w}%" style="width:${w}%;padding:0 ${i < tiles.length - 1 ? 8 : 0}px 0 0;vertical-align:top"><div style="background:#e2f1f4;border-radius:6px;padding:12px 14px">`
+        + `<div style="font-size:12px;color:#3d5560">${esc(t.label)}</div>`
+        + `<div style="font-size:28px;font-weight:700;line-height:1.2;color:#0b7285">${fmt(t.value)}</div>`
+        + `<div style="font-size:12px;color:#5a6b73">${esc(d || t.note || ' ')}</div></div></td>`;
+    });
+    h += '</tr></table>';
+  }
   if (warnings.length) {
     h += `<div style="background:#fff4e0;border-left:4px solid #c77700;padding:10px 12px;margin:0 0 16px;font-size:14px"><b>Warnings</b><ul style="margin:6px 0 0;padding-left:18px">${warnings.map((w) => `<li>${esc(w)}</li>`).join('')}</ul></div>`;
   }
   for (const s of sections) {
-    h += `<h3 style="margin:18px 0 4px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#0b7285">${esc(s.title)}</h3><table style="border-collapse:collapse;width:100%">`;
+    h += `<h3 style="margin:18px 0 4px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#0b7285">${esc(s.title)}</h3><table style="border-collapse:collapse;width:100%;table-layout:fixed">${cols}`;
     for (const l of s.lines ?? []) h += row(esc(l.label) + (l.note ? ` <span style="color:#5a6b73">(${esc(l.note)})</span>` : ''), fmt(l.value), esc(delta(l.value, l.prev)));
     if (s.rows) h += s.rows.length ? s.rows.map(([k, n]) => row(esc(k), fmt(n))).join('') : row(esc(s.empty ?? 'No data.'), '');
     h += '</table>';

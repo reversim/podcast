@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { buildReport, delta, isSendTime, runWeeklyReport, sendReport } from '../src/report';
+import { buildReport, delta, episodeNumber, isSendTime, runWeeklyReport, sendReport } from '../src/report';
 
 const NOW = Date.UTC(2026, 10, 22, 6, 7); // Sunday 2026-11-22; week = 11-15..11-21, before = 11-08..11-14
 
@@ -18,29 +18,29 @@ function makeDb() {
   return { sql, DB: { prepare: (q) => stmt(q) } };
 }
 const envOf = (DB, o = {}) => ({ DB, STATS_HOST: 'stats.reversim.com', MIN_BYTES: '750000', ...o });
-const titles = (list = [{ file: 'a.mp3', title: '522 - <Brain> & co' }]) =>
-  vi.stubGlobal('fetch', async () => Response.json(list));
+const titles = () => {}; // titles come from sp_episodes; no network
 
 function seed(sql) {
   const days = (a, n) => Array.from({ length: n }, (_, i) => new Date(Date.parse(a) + i * 86400000).toISOString().slice(0, 10));
   for (const d of days('2026-11-15', 7)) {
     sql.prepare(`INSERT INTO totals_daily VALUES (?, 100, 90, 150, 10, 2)`).run(d);
-    sql.prepare(`INSERT INTO ep_daily VALUES (?, 'a.mp3', 70, 60)`).run(d);
-    sql.prepare(`INSERT INTO ep_daily VALUES (?, 'b.mp3', 30, 30)`).run(d);
+    sql.prepare(`INSERT INTO ep_daily VALUES (?, 'reversim522-brain.mp3', 70, 60)`).run(d);
+    sql.prepare(`INSERT INTO ep_daily VALUES (?, 'summit2016_Eyal_Gruss.mp3', 30, 30)`).run(d);
     sql.prepare(`INSERT INTO dim_daily VALUES (?, 'app', 'Apple Podcasts', 100)`).run(d);
     sql.prepare(`INSERT INTO web_daily VALUES (?, 40, 30, 1)`).run(d);
     sql.prepare(`INSERT INTO feed_daily VALUES (?, 'Overcast', 130, 400, 0)`).run(d);
     sql.prepare(`INSERT INTO platform_stats VALUES ('spotify', 'streams', ?, 50)`).run(d);
     // the same listener on each day: 1 unique; a bot and a short request do not count
-    sql.prepare(`INSERT INTO hits VALUES (?, 'a.mp3', 'L1', 'x', 'app', 'phone', 'IL', 5000000, 5000000, 1, 0)`).run(d);
-    sql.prepare(`INSERT INTO hits VALUES (?, 'a.mp3', 'BOT', 'x', 'bot', 'phone', 'IL', 5000000, 5000000, 1, 0)`).run(d);
-    sql.prepare(`INSERT INTO hits VALUES (?, 'a.mp3', 'SHORT', 'x', 'app', 'phone', 'IL', 5000000, 1000, 1, 0)`).run(d);
+    sql.prepare(`INSERT INTO hits VALUES (?, 'reversim522-brain.mp3', 'L1', 'x', 'app', 'phone', 'IL', 5000000, 5000000, 1, 0)`).run(d);
+    sql.prepare(`INSERT INTO hits VALUES (?, 'reversim522-brain.mp3', 'BOT', 'x', 'bot', 'phone', 'IL', 5000000, 5000000, 1, 0)`).run(d);
+    sql.prepare(`INSERT INTO hits VALUES (?, 'reversim522-brain.mp3', 'SHORT', 'x', 'app', 'phone', 'IL', 5000000, 1000, 1, 0)`).run(d);
   }
-  sql.prepare(`INSERT INTO hits VALUES ('2026-11-21', 'b.mp3', 'L2', 'x', 'app', 'phone', 'IL', 5000000, 5000000, 1, 0)`).run();
+  sql.prepare(`INSERT INTO hits VALUES ('2026-11-21', 'summit2016_Eyal_Gruss.mp3', 'L2', 'x', 'app', 'phone', 'IL', 5000000, 5000000, 1, 0)`).run();
   for (const d of days('2026-11-08', 7)) sql.prepare(`INSERT INTO totals_daily VALUES (?, 80, 70, 100, 5, 1)`).run(d);
   sql.prepare(`INSERT INTO platform_stats VALUES ('spotify', 'followers', '2026-11-14', 1990)`).run();
   sql.prepare(`INSERT INTO platform_stats VALUES ('spotify', 'followers', '2026-11-21', 2000)`).run();
   sql.prepare(`INSERT INTO platform_stats VALUES ('apple', 'followers', '2026-11-11', 973)`).run();
+  sql.prepare(`INSERT INTO sp_episodes (episode_id, name) VALUES ('e1', '522 - <Brain> & co'), ('e2', 'Bonus without a number'), ('e3', '52 - Other')`).run();
   sql.prepare(`INSERT INTO meta VALUES ('spotify_last_ok', '2026-11-22T04:07:00Z')`).run();
 }
 
@@ -57,6 +57,15 @@ describe('delta', () => {
   });
 });
 
+describe('episodeNumber', () => {
+  it('reads the number from the file name', () => {
+    expect(episodeNumber('reversim522-company_brain.mp3')).toBe(522);
+    expect(episodeNumber('reversim50_cdn.mp3')).toBe(50);
+    expect(episodeNumber('Reversim007.mp3')).toBe(7);
+    expect(episodeNumber('summit2016_Eyal_Gruss.mp3')).toBeNull();
+  });
+});
+
 describe('buildReport', () => {
   it('sums the week that ends yesterday and compares with the week before', async () => {
     const { sql, DB } = makeDb(); seed(sql); titles();
@@ -66,7 +75,7 @@ describe('buildReport', () => {
     expect(r.text).toContain('Downloads: 700, +140 (+25%) from the week before');
     expect(r.text).toContain('Unique listeners: 2');
     expect(r.text).toContain('1. 522 - <Brain> & co: 490');
-    expect(r.text).toContain('2. b.mp3: 210'); // no title: file name
+    expect(r.text).toContain('2. summit2016 Eyal Gruss: 210'); // no number: cleaned file name
     expect(r.text).toContain('Spotify: 2,000, +10 (+1%) from the week before');
     expect(r.text).toContain('Apple: 973 (as of 2026-11-11)');
     expect(r.text).toContain('Spotify streams this week: 350');
@@ -81,9 +90,17 @@ describe('buildReport', () => {
     expect(r.html).toContain('522 - &lt;Brain&gt; &amp; co');
     expect(r.html).not.toContain('<Brain>');
   });
-  it('works on an empty database and when the title fetch fails', async () => {
-    const { DB } = makeDb();
-    vi.stubGlobal('fetch', async () => { throw new Error('down'); });
+  it('shows three number tiles and the same column widths in each table', async () => {
+    const { sql, DB } = makeDb(); seed(sql);
+    const r = await buildReport(envOf(DB), NOW);
+    expect(r.html).toContain('Followers, Spotify + Apple');
+    expect(r.html).toMatch(/font-size:28px[^>]*>700</);
+    expect(r.html).toMatch(/font-size:28px[^>]*>2,973</);
+    expect(r.html.match(/<colgroup>/g)).toHaveLength(5);
+  });
+  it('works on an empty database and does not count days without requests', async () => {
+    const { sql, DB } = makeDb();
+    sql.prepare(`INSERT INTO totals_daily VALUES ('2026-11-20', 0, 0, 0, 0, 0)`).run();
     const r = await buildReport(envOf(DB), NOW);
     expect(r.subject).toContain('no data downloads');
     expect(r.text).toContain('No download data for this week');
