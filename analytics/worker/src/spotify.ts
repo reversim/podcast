@@ -30,7 +30,7 @@ const BACKFILL_FLOOR = '2015-05-01'; // the connector's own "oldest date"
 const START_HOUR = 4;
 const MAX_ATTEMPTS_PER_DAY = 4;
 const LIST_SIZE = 50;
-const MAX_LIST_PAGES = 14;
+const MAX_LIST_PAGES = 16;
 const MAX_EPISODE_CALLS = 12;
 /** Pause between per-episode calls. Tests set it to 0. */
 export const pacing = { episodePauseMs: 700 };
