@@ -1,4 +1,5 @@
 # Copy to .dev.vars for local development (never commit .dev.vars).
 DEV=1
 HASH_SALT=local-dev-salt
+# Basic auth password for the stats host. It works only with DEV=1.
 DASH_TOKEN=local-dev-token

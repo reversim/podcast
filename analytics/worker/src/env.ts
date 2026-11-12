@@ -12,7 +12,7 @@ export interface Env {
   MIN_BYTES: string;
   DEV?: string;
   HASH_SALT?: string;
-  DASH_TOKEN?: string;
+  DASH_TOKEN?: string; // local development only, used when DEV=1
   ACCESS_TEAM_DOMAIN?: string;
   ACCESS_AUD?: string;
   SPOTIFY_SHOW_ID?: string;

@@ -23,11 +23,9 @@ Run all commands in this directory. Check that `npx wrangler whoami` shows accou
 2. `npx wrangler d1 create reversim-analytics`, then put the `database_id` in `wrangler.toml`.
 3. `npx wrangler d1 execute reversim-analytics --remote --file=schema.sql`
 4. `openssl rand -hex 32 | npx wrangler secret put HASH_SALT`. Never change it later: it resets all listener ids.
-5. Auth for the stats host, one of:
-   - Cloudflare Access (preferred): create an Access app for the stats host, then set
-     `ACCESS_TEAM_DOMAIN` and `ACCESS_AUD` in `[vars]`.
-   - Token: `npx wrangler secret put DASH_TOKEN`. Use it as the Basic auth password.
-   - With neither, the stats host answers 503.
+5. Auth for the stats host: create a Cloudflare Access app for the stats host, then set
+   `ACCESS_TEAM_DOMAIN` and `ACCESS_AUD` in `[vars]`. Without them the stats host answers 503.
+   The Basic auth token (`DASH_TOKEN`) works only in local development (`DEV=1`).
 6. `npx wrangler deploy`. No traffic arrives until you enable routes.
 7. Canary: uncomment one route in `wrangler.toml` (start with `m2.reversim.com/*`), deploy, test, then the next.
    Keep the R2 custom domains attached: `ORIGIN_MODE="passthrough"` fetches audio from them.
@@ -127,7 +125,6 @@ The probe runs the login flow and calls each endpoint once. It prints the status
 - Known limits: shows hosted on Anchor are refused by this API (the connector, issue 17). Spotify removed the "starts" metric in May 2025, so that series can be empty.
 - Turn it off: delete the secrets (`npx wrangler secret delete SPOTIFY_SP_DC` and `SPOTIFY_SP_KEY`). Stored numbers stay.
 - Deploy order: apply `schema.sql` to the remote DB first (the job also creates `sp_episodes` itself), then deploy the Worker, then set the secrets.
-- The empty tables `yt_videos` and `yt_video_daily` from an earlier YouTube version may exist in the live DB. They are unused. Drop them by hand if you want.
 
 ## Notes
 

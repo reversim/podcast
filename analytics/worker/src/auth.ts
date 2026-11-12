@@ -1,4 +1,5 @@
-// Stats-host auth. Fail closed: Cloudflare Access JWT, else Basic with DASH_TOKEN, else 503.
+// Stats-host auth. Fail closed: Cloudflare Access JWT, else 503.
+// Local development only (DEV=1): Basic auth with DASH_TOKEN, because Access does not exist on localhost.
 import type { Env } from './env';
 
 export interface Jwk { kid?: string; kty: string; n: string; e: string; alg?: string }
@@ -91,7 +92,7 @@ export async function authorize(req: Request, env: Env): Promise<Response | null
   if (env.ACCESS_TEAM_DOMAIN && env.ACCESS_AUD) {
     return (await checkAccess(req, env)) ? null : new Response('Forbidden', { status: 403 });
   }
-  if (env.DASH_TOKEN) {
+  if (env.DEV === '1' && env.DASH_TOKEN) {
     if (await checkBasic(req, env.DASH_TOKEN)) return null;
     return new Response('Unauthorized', {
       status: 401, headers: { 'www-authenticate': 'Basic realm="stats", charset="UTF-8"' },

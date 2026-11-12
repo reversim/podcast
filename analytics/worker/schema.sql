@@ -102,4 +102,3 @@ CREATE TABLE IF NOT EXISTS sp_episodes (
   starts INTEGER, streams INTEGER, listeners INTEGER, updated_day TEXT
 ) WITHOUT ROWID;
 
--- Note: the empty tables yt_videos and yt_video_daily may exist in the live DB from an earlier version. They are unused and can be dropped by hand.

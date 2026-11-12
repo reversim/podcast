@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { safeEqual, verifyJwt, type Jwk } from '../src/auth';
+import { authorize, safeEqual, verifyJwt, type Jwk } from '../src/auth';
+import type { Env } from '../src/env';
 
 const b64u = (b: ArrayBuffer | string) => {
   const bytes = typeof b === 'string' ? new TextEncoder().encode(b) : new Uint8Array(b);
@@ -45,5 +46,24 @@ describe('safeEqual', () => {
     expect(await safeEqual('abc', 'abc')).toBe(true);
     expect(await safeEqual('abc', 'abd')).toBe(false);
     expect(await safeEqual('', 'abd')).toBe(false);
+  });
+});
+
+describe('authorize', () => {
+  const basic = 'Basic ' + btoa('x:tok');
+  const req = (h: Record<string, string> = {}) => new Request('https://stats.reversim.com/api/stats', { headers: h });
+  const status = async (env: Partial<Env>, h?: Record<string, string>) => (await authorize(req(h), env as Env))?.status ?? 200;
+  it('fails closed without Access, also when a token is set', async () => {
+    expect(await status({})).toBe(503);
+    expect(await status({ DASH_TOKEN: 'tok' }, { authorization: basic })).toBe(503);
+  });
+  it('accepts the token only in local development', async () => {
+    expect(await status({ DEV: '1', DASH_TOKEN: 'tok' }, { authorization: basic })).toBe(200);
+    expect(await status({ DEV: '1', DASH_TOKEN: 'tok' }, { authorization: 'Basic ' + btoa('x:bad') })).toBe(401);
+    expect(await status({ DEV: '1', DASH_TOKEN: 'tok' })).toBe(401);
+  });
+  it('uses Access when it is configured, and never the token', async () => {
+    const env = { DEV: '1', DASH_TOKEN: 'tok', ACCESS_TEAM_DOMAIN: 't.example', ACCESS_AUD: 'aud' };
+    expect(await status(env, { authorization: basic })).toBe(403);
   });
 });

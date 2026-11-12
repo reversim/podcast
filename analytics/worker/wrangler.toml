@@ -24,7 +24,7 @@ FEED_ORIGIN = "https://www.reversim.com/podcast.xml"
 FEED_MODE = "redirect"         # "redirect" (count, then 302) or "proxy" (return the feed body)
 ORIGIN_MODE = "passthrough"   # "passthrough" or "r2"
 MIN_BYTES = "750000"
-# Optional, for Cloudflare Access (preferred over DASH_TOKEN):
+# Cloudflare Access for the stats host. Without these two values the stats host answers 503.
 ACCESS_TEAM_DOMAIN = "hamal-docs.cloudflareaccess.com"
 ACCESS_AUD = "86ad7c3107ef26ce1216d5af0588461609377493ae2afb72487883beed128d81"
 
@@ -34,7 +34,7 @@ SPOTIFY_SHOW_ID = "6Lr6PCSEqN8siYm9n6fE8N"
 # Weekly email through resend.com. Secrets: RESEND_API_KEY, REPORT_TO (comma list of addresses).
 REPORT_FROM = "Reversim Stats <stats@stats-mail.reversim.com>"
 
-# Secrets (set with `wrangler secret put`): HASH_SALT, DASH_TOKEN, SPOTIFY_SP_DC and SPOTIFY_SP_KEY (optional)
+# Secrets (set with `wrangler secret put`): HASH_SALT, SPOTIFY_SP_DC and SPOTIFY_SP_KEY (optional), RESEND_API_KEY and REPORT_TO (optional)
 
 [[d1_databases]]
 binding = "DB"
