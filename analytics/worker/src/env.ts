@@ -19,4 +19,7 @@ export interface Env {
   SPOTIFY_CLIENT_ID?: string; // optional override of the web app client id
   SPOTIFY_SP_DC?: string;
   SPOTIFY_SP_KEY?: string;
+  RESEND_API_KEY?: string; // secret: weekly email through resend.com
+  REPORT_TO?: string;      // secret: comma list of addresses that receive the weekly email
+  REPORT_FROM?: string;    // var: sender on a domain verified in Resend
 }

@@ -5,6 +5,7 @@ import { handlePlatform, originOk } from './platform';
 import { refreshIfStale, rollup } from './rollup';
 import { buildStats } from './stats';
 import { handleSpotifyRefresh, runDailySpotify } from './spotify';
+import { handleReportSend, runWeeklyReport } from './report';
 import type { Env } from './env';
 
 const list = (s: string | undefined) => (s ?? '').split(',').map((h) => h.trim().toLowerCase()).filter(Boolean);
@@ -38,6 +39,8 @@ export default {
     ctx.waitUntil(rollup(env, { now: event.scheduledTime, heavy }));
     // Own waitUntil: a Spotify failure must never touch the rollup. runDailySpotify never throws.
     ctx.waitUntil(runDailySpotify(env, event.scheduledTime).catch((e) => console.error('spotify job failed', e)));
+    // Weekly email. Own waitUntil for the same reason. runWeeklyReport never throws.
+    ctx.waitUntil(runWeeklyReport(env, event.scheduledTime).catch((e) => console.error('weekly report failed', e)));
   },
 } satisfies ExportedHandler<Env>;
 
@@ -69,6 +72,11 @@ async function statsInner(req: Request, env: Env): Promise<Response> {
     if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });
     if (!originOk(req, env)) return Response.json({ ok: false, error: 'bad origin' }, { status: 403, headers: { 'cache-control': 'no-store' } });
     return handleSpotifyRefresh(env);
+  }
+  if (url.pathname === '/api/report/send') {
+    if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });
+    if (!originOk(req, env)) return Response.json({ ok: false, error: 'bad origin' }, { status: 403, headers: { 'cache-control': 'no-store' } });
+    return handleReportSend(env);
   }
   if (url.pathname === '/api/rollup') {
     if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });
