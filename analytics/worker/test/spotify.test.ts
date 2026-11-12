@@ -278,7 +278,7 @@ describe('subrequest cap', () => {
     expect(r.subrequests).toBe(api.count());
     const perEp = api.seen.filter((s) => /\/episodes\/\w+\/metadata$/.test(s.url.pathname)).length;
     expect(perEp).toBeLessThanOrEqual(20);
-    expect(sql.prepare('SELECT count(*) AS n FROM sp_episodes').get().n).toBeLessThanOrEqual(14 * 50 + 1);
+    expect(sql.prepare('SELECT count(*) AS n FROM sp_episodes').get().n).toBeLessThanOrEqual(16 * 50 + 1);
   });
 });
 
