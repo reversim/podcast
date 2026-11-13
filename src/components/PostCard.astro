@@ -1,10 +1,12 @@
 ---
 import { getPostPermalink } from '../lib/posts';
 import type { PostEntry } from '../lib/posts';
+import { catalog } from '../lib/catalog';
 
 const { post } = Astro.props as { post: PostEntry };
 const permalink = getPostPermalink(post);
 const coverImageUrl = post.data.cover_image;
+const blurb = post.data.summary ?? catalog[post.id]?.hook;
 const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 	year: 'numeric',
 	month: 'long',
@@ -25,7 +27,7 @@ const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 		{post.data.episode && <span>פרק {post.data.episode}</span>}
 	</div>
 	<h3 dir="auto"><a href={permalink} dir="auto">{post.data.title}</a></h3>
-	{post.data.summary && <p>{post.data.summary}</p>}
+	{blurb && <p>{blurb}</p>}
 	{post.data.tags && post.data.tags.length > 0 && (
 		<div class="post-tags">
 			{post.data.tags.slice(0, 4).map((tag) => (

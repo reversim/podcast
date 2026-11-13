@@ -1,0 +1,2890 @@
+{
+	"http://barakdanin.com/podcast/usable0003_Reversim.mp3": {
+		"bytes": 15020306,
+		"seconds": 1877
+	},
+	"https://m.reversim.com/open-source-How-to-build-a-succesful-opensource-community-Ohad-Levy.mp3": {
+		"bytes": 9745180,
+		"seconds": 609
+	},
+	"https://m.reversim.com/reversim100.mp3": {
+		"bytes": 11268515,
+		"seconds": 1408
+	},
+	"https://m.reversim.com/reversim101_node_js_bitorama.mp3": {
+		"bytes": 22948594,
+		"seconds": 2868
+	},
+	"https://m.reversim.com/reversim102_sgura7.mp3": {
+		"bytes": 45892673,
+		"seconds": 5736
+	},
+	"https://m.reversim.com/reversim103_foreman.mp3": {
+		"bytes": 17892541,
+		"seconds": 2236
+	},
+	"https://m.reversim.com/reversim104_final_class8b.mp3": {
+		"bytes": 35463317,
+		"seconds": 4433
+	},
+	"https://m.reversim.com/reversim105_shira_abel.mp3": {
+		"bytes": 21636620,
+		"seconds": 2704
+	},
+	"https://m.reversim.com/reversim106-finalclass9b.mp3": {
+		"bytes": 31823412,
+		"seconds": 3978
+	},
+	"https://m.reversim.com/reversim107_lambda.mp3": {
+		"bytes": 16507215,
+		"seconds": 2063
+	},
+	"https://m.reversim.com/reversim108_yoav_wix.mp3": {
+		"bytes": 21396711,
+		"seconds": 2674
+	},
+	"https://m.reversim.com/reversim109_finalclass10.mp3": {
+		"bytes": 39251091,
+		"seconds": 3271
+	},
+	"https://m.reversim.com/reversim110_finalclass11.mp3": {
+		"bytes": 36263311,
+		"seconds": 4532
+	},
+	"https://m.reversim.com/reversim111_ido_green.mp3": {
+		"bytes": 23044515,
+		"seconds": 2880
+	},
+	"https://m.reversim.com/reversim112_ido_ran.mp3": {
+		"bytes": 17684606,
+		"seconds": 2210
+	},
+	"https://m.reversim.com/reversim113_chorme_os_ido_green.mp3": {
+		"bytes": 21524607,
+		"seconds": 2690
+	},
+	"https://m.reversim.com/reversim114_zookeeper.mp3": {
+		"bytes": 17348567,
+		"seconds": 2168
+	},
+	"https://m.reversim.com/reversim115_clojure.mp3": {
+		"bytes": 19380685,
+		"seconds": 2422
+	},
+	"https://m.reversim.com/reversim116_finalclass12.mp3": {
+		"bytes": 36244712,
+		"seconds": 4530
+	},
+	"https://m.reversim.com/reversim117_gdd.mp3": {
+		"bytes": 18509867,
+		"seconds": 2313
+	},
+	"https://m.reversim.com/reversim118_go_lang.mp3": {
+		"bytes": 17237808,
+		"seconds": 2154
+	},
+	"https://m.reversim.com/reversim119_finalclass13.mp3": {
+		"bytes": 35108698,
+		"seconds": 4388
+	},
+	"https://m.reversim.com/reversim120_android.mp3": {
+		"bytes": 16804593,
+		"seconds": 2100
+	},
+	"https://m.reversim.com/reversim121_invi2.mp3": {
+		"bytes": 17905498,
+		"seconds": 2238
+	},
+	"https://m.reversim.com/reversim122_algotrading.mp3": {
+		"bytes": 14500593,
+		"seconds": 1812
+	},
+	"https://m.reversim.com/reversim123_finalclass14.mp3": {
+		"bytes": 25044659,
+		"seconds": 3130
+	},
+	"https://m.reversim.com/reversim124_final_class15.mp3": {
+		"bytes": 30957737,
+		"seconds": 3869
+	},
+	"https://m.reversim.com/reversim125_lean_startup.mp3": {
+		"bytes": 17348567,
+		"seconds": 2168
+	},
+	"https://m.reversim.com/reversim126_android2.mp3": {
+		"bytes": 18804528,
+		"seconds": 2350
+	},
+	"https://m.reversim.com/reversim127_gogobot.mp3": {
+		"bytes": 24656584,
+		"seconds": 3082
+	},
+	"https://m.reversim.com/reversim128_finalclass16.mp3": {
+		"bytes": 33538008,
+		"seconds": 4192
+	},
+	"https://m.reversim.com/reversim129_backbonejs.mp3": {
+		"bytes": 22320610,
+		"seconds": 2790
+	},
+	"https://m.reversim.com/reversim130_win8.mp3": {
+		"bytes": 18447382,
+		"seconds": 2305
+	},
+	"https://m.reversim.com/reversim131_uijet.mp3": {
+		"bytes": 15716646,
+		"seconds": 1964
+	},
+	"https://m.reversim.com/reversim132_sasson.mp3": {
+		"bytes": 23252659,
+		"seconds": 2906
+	},
+	"https://m.reversim.com/reversim133_thejunction.mp3": {
+		"bytes": 17684606,
+		"seconds": 2210
+	},
+	"https://m.reversim.com/reversim134_python_zen.mp3": {
+		"bytes": 22996659,
+		"seconds": 2874
+	},
+	"https://m.reversim.com/reversim135_finalclass17.mp3": {
+		"bytes": 33940712,
+		"seconds": 4242
+	},
+	"https://m.reversim.com/reversim136_nir_katz.mp3": {
+		"bytes": 19844620,
+		"seconds": 2480
+	},
+	"https://m.reversim.com/reversim137_binpress.mp3": {
+		"bytes": 19363131,
+		"seconds": 2420
+	},
+	"https://m.reversim.com/reversim138_finalclass18.mp3": {
+		"bytes": 35405867,
+		"seconds": 4425
+	},
+	"https://m.reversim.com/reversim139_emberjs.mp3": {
+		"bytes": 19076620,
+		"seconds": 2384
+	},
+	"https://m.reversim.com/reversim140_dart.mp3": {
+		"bytes": 21401936,
+		"seconds": 2675
+	},
+	"https://m.reversim.com/reversim141_obj_pascal.mp3": {
+		"bytes": 15812567,
+		"seconds": 1976
+	},
+	"https://m.reversim.com/reversim142_finalclass19.mp3": {
+		"bytes": 34179366,
+		"seconds": 4272
+	},
+	"https://m.reversim.com/reversim143_hamakor.mp3": {
+		"bytes": 20612620,
+		"seconds": 2576
+	},
+	"https://m.reversim.com/reversim144_finalclass20.mp3": {
+		"bytes": 21023265,
+		"seconds": 2627
+	},
+	"https://m.reversim.com/reversim145_couchbase.mp3": {
+		"bytes": 9700541,
+		"seconds": 1212
+	},
+	"https://m.reversim.com/reversim146_how_github.mp3": {
+		"bytes": 18484580,
+		"seconds": 2310
+	},
+	"https://m.reversim.com/reversim147_bi3.mp3": {
+		"bytes": 10091855,
+		"seconds": 2522
+	},
+	"https://m.reversim.com/reversim148_finalclass21.mp3": {
+		"bytes": 64064833,
+		"seconds": 3203
+	},
+	"https://m.reversim.com/reversim149_finalclass22.mp3": {
+		"bytes": 14150343,
+		"seconds": 3537
+	},
+	"https://m.reversim.com/reversim150_finalclass23.mp3": {
+		"bytes": 14041883,
+		"seconds": 3509
+	},
+	"https://m.reversim.com/reversim151_html5news.mp3": {
+		"bytes": 16184969,
+		"seconds": 2023
+	},
+	"https://m.reversim.com/reversim152_carburetor1.mp3": {
+		"bytes": 26865289,
+		"seconds": 3358
+	},
+	"https://m.reversim.com/reversim153_finalclass24.mp3": {
+		"bytes": 29059993,
+		"seconds": 3632
+	},
+	"https://m.reversim.com/reversim154_hasadna.mp3": {
+		"bytes": 21308940,
+		"seconds": 2663
+	},
+	"https://m.reversim.com/reversim155_promo.mp3": {
+		"bytes": 908142,
+		"seconds": 113
+	},
+	"https://m.reversim.com/reversim156_patents.mp3": {
+		"bytes": 54389594,
+		"seconds": 2719
+	},
+	"https://m.reversim.com/reversim157_finalclass25.mp3": {
+		"bytes": 27146367,
+		"seconds": 3393
+	},
+	"https://m.reversim.com/reversim158_carburetor2.mp3": {
+		"bytes": 16184969,
+		"seconds": 2023
+	},
+	"https://m.reversim.com/reversim159_bumpers1.mp3": {
+		"bytes": 16042886,
+		"seconds": 2005
+	},
+	"https://m.reversim.com/reversim160_kvm.mp3": {
+		"bytes": 17789932,
+		"seconds": 2223
+	},
+	"https://m.reversim.com/reversim161_bumpers2.mp3": {
+		"bytes": 20023297,
+		"seconds": 2502
+	},
+	"https://m.reversim.com/reversim162_sw_lead_weekly.mp3": {
+		"bytes": 14698915,
+		"seconds": 1837
+	},
+	"https://m.reversim.com/reversim163_finalclass26.mp3": {
+		"bytes": 32056342,
+		"seconds": 4007
+	},
+	"https://m.reversim.com/reversim164_carburetor3.mp3": {
+		"bytes": 21832016,
+		"seconds": 2728
+	},
+	"https://m.reversim.com/reversim165_automatic.mp3": {
+		"bytes": 15114993,
+		"seconds": 1889
+	},
+	"https://m.reversim.com/reversim166_bumpers3.mp3": {
+		"bytes": 21190030,
+		"seconds": 2648
+	},
+	"https://m.reversim.com/reversim167_carburetor4.mp3": {
+		"bytes": 29000852,
+		"seconds": 3625
+	},
+	"https://m.reversim.com/reversim168_finalclass27.mp3": {
+		"bytes": 23769883,
+		"seconds": 2971
+	},
+	"https://m.reversim.com/reversim169_carburetor6.mp3": {
+		"bytes": 19213277,
+		"seconds": 2402
+	},
+	"https://m.reversim.com/reversim170_bumpers_4.mp3": {
+		"bytes": 39472494,
+		"seconds": 2467
+	},
+	"https://m.reversim.com/reversim171_mysql_5_6.mp3": {
+		"bytes": 35089716,
+		"seconds": 2193
+	},
+	"https://m.reversim.com/reversim172_js_testing.mp3": {
+		"bytes": 43723917,
+		"seconds": 2733
+	},
+	"https://m.reversim.com/reversim173_carburetor_6.mp3": {
+		"bytes": 42213412,
+		"seconds": 2638
+	},
+	"https://m.reversim.com/reversim174_angular_js.mp3": {
+		"bytes": 47068844,
+		"seconds": 2942
+	},
+	"https://m.reversim.com/reversim175_final_class_28.mp3": {
+		"bytes": 46087534,
+		"seconds": 2880
+	},
+	"https://m.reversim.com/reversim176_monitorama.mp3": {
+		"bytes": 26537435,
+		"seconds": 1658
+	},
+	"https://m.reversim.com/reversim177_bumpers5.mp3": {
+		"bytes": 31239894,
+		"seconds": 1952
+	},
+	"https://m.reversim.com/reversim178_boxen_vagrant_and_friends.mp3": {
+		"bytes": 31260374,
+		"seconds": 1954
+	},
+	"https://m.reversim.com/reversim179_final_class_29.mp3": {
+		"bytes": 30745866,
+		"seconds": 1922
+	},
+	"https://m.reversim.com/reversim180_scala_conf.mp3": {
+		"bytes": 25915930,
+		"seconds": 1620
+	},
+	"https://m.reversim.com/reversim181_carburetors_7.mp3": {
+		"bytes": 26394493,
+		"seconds": 1650
+	},
+	"https://m.reversim.com/reversim182_varnish.mp3": {
+		"bytes": 25454503,
+		"seconds": 1591
+	},
+	"https://m.reversim.com/reversim183_xamarin.mp3": {
+		"bytes": 25371329,
+		"seconds": 1586
+	},
+	"https://m.reversim.com/reversim184_carburetor8_build_your_own_pass.mp3": {
+		"bytes": 42950692,
+		"seconds": 2684
+	},
+	"https://m.reversim.com/reversim185_bumpers6.mp3": {
+		"bytes": 8311975,
+		"seconds": 2077
+	},
+	"https://m.reversim.com/reversim185_final_class_30_caching.mp3": {
+		"bytes": 50980524,
+		"seconds": 3186
+	},
+	"https://m.reversim.com/reversim187_finalclass31.mp3": {
+		"bytes": 16400322,
+		"seconds": 4099
+	},
+	"https://m.reversim.com/reversim188_mean.io.mp3": {
+		"bytes": 11312818,
+		"seconds": 2827
+	},
+	"https://m.reversim.com/reversim189_bumpers7.mp3": {
+		"bytes": 7512837,
+		"seconds": 1877
+	},
+	"https://m.reversim.com/reversim190_finalclass32.mp3": {
+		"bytes": 13542317,
+		"seconds": 3385
+	},
+	"https://m.reversim.com/reversim191_carburetor9.mp3": {
+		"bytes": 7305739,
+		"seconds": 1825
+	},
+	"https://m.reversim.com/reversim192_bumpers8.mp3": {
+		"bytes": 11868808,
+		"seconds": 2966
+	},
+	"https://m.reversim.com/reversim193_bumpers9.mp3": {
+		"bytes": 8041033,
+		"seconds": 2009
+	},
+	"https://m.reversim.com/reversim194_swagger.mp3": {
+		"bytes": 7205637,
+		"seconds": 1800
+	},
+	"https://m.reversim.com/reversim195_finalclass34_anti-patterns.mp3": {
+		"bytes": 13357056,
+		"seconds": 3338
+	},
+	"https://m.reversim.com/reversim196_carburetor10.mp3": {
+		"bytes": 10664250,
+		"seconds": 2665
+	},
+	"https://m.reversim.com/reversim197_finalclass35.mp3": {
+		"bytes": 15883933,
+		"seconds": 3970
+	},
+	"https://m.reversim.com/reversim198_onering.mp3": {
+		"bytes": 11482509,
+		"seconds": 2870
+	},
+	"https://m.reversim.com/reversim199_bumpers10.mp3": {
+		"bytes": 13143061,
+		"seconds": 3285
+	},
+	"https://m.reversim.com/reversim2014-Akka.mp3": {
+		"bytes": 133183313,
+		"seconds": 3328
+	},
+	"https://m.reversim.com/reversim2014-CAP-theorem.mp3": {
+		"bytes": 120108049,
+		"seconds": 3001
+	},
+	"https://m.reversim.com/reversim2014-Deep-Learning.mp3": {
+		"bytes": 139346724,
+		"seconds": 3482
+	},
+	"https://m.reversim.com/reversim2014-DevOps.mp3": {
+		"bytes": 117881927,
+		"seconds": 2946
+	},
+	"https://m.reversim.com/reversim2014-Female.mp3": {
+		"bytes": 113462185,
+		"seconds": 2834
+	},
+	"https://m.reversim.com/reversim2014-KPI-definitions.mp3": {
+		"bytes": 120915198,
+		"seconds": 3021
+	},
+	"https://m.reversim.com/reversim2014-Lean-Startup.mp3": {
+		"bytes": 118264909,
+		"seconds": 2953
+	},
+	"https://m.reversim.com/reversim2014-Manifesto.mp3": {
+		"bytes": 87125584,
+		"seconds": 2173
+	},
+	"https://m.reversim.com/reversim2014-Meteor.mp3": {
+		"bytes": 115913193,
+		"seconds": 2897
+	},
+	"https://m.reversim.com/reversim2014-Moving-fast.mp3": {
+		"bytes": 122627772,
+		"seconds": 3060
+	},
+	"https://m.reversim.com/reversim2014-PostgreSQL.mp3": {
+		"bytes": 102543232,
+		"seconds": 2561
+	},
+	"https://m.reversim.com/reversim2014-Scaling-RD.mp3": {
+		"bytes": 109683575,
+		"seconds": 2734
+	},
+	"https://m.reversim.com/reversim2014-Spark.mp3": {
+		"bytes": 127023197,
+		"seconds": 3173
+	},
+	"https://m.reversim.com/reversim2014-Unit-Tests.mp3": {
+		"bytes": 108648146,
+		"seconds": 2715
+	},
+	"https://m.reversim.com/reversim2014-a-hypervizor.mp3": {
+		"bytes": 88649272,
+		"seconds": 2214
+	},
+	"https://m.reversim.com/reversim2014-alive.mp3": {
+		"bytes": 110814389,
+		"seconds": 2765
+	},
+	"https://m.reversim.com/reversim2014-client-side.mp3": {
+		"bytes": 69106881,
+		"seconds": 1725
+	},
+	"https://m.reversim.com/reversim2014-code-review.mp3": {
+		"bytes": 117389290,
+		"seconds": 2932
+	},
+	"https://m.reversim.com/reversim2014-coding-marketing.mp3": {
+		"bytes": 81875910,
+		"seconds": 2045
+	},
+	"https://m.reversim.com/reversim2014-concurrency.mp3": {
+		"bytes": 110677683,
+		"seconds": 2765
+	},
+	"https://m.reversim.com/reversim2014-culture-scale.mp3": {
+		"bytes": 99522071,
+		"seconds": 2487
+	},
+	"https://m.reversim.com/reversim2014-engineering-your-culture.mp3": {
+		"bytes": 106314975,
+		"seconds": 2656
+	},
+	"https://m.reversim.com/reversim2014-gen.mp3": {
+		"bytes": 111307693,
+		"seconds": 2779
+	},
+	"https://m.reversim.com/reversim2014-go.mp3": {
+		"bytes": 134120391,
+		"seconds": 3352
+	},
+	"https://m.reversim.com/reversim2014-ignite-E2E.mp3": {
+		"bytes": 13168241,
+		"seconds": 328
+	},
+	"https://m.reversim.com/reversim2014-ignite-brain.mp3": {
+		"bytes": 12713621,
+		"seconds": 317
+	},
+	"https://m.reversim.com/reversim2014-ignite-docker.mp3": {
+		"bytes": 13358643,
+		"seconds": 333
+	},
+	"https://m.reversim.com/reversim2014-ignite-drones.mp3": {
+		"bytes": 5072998,
+		"seconds": 126
+	},
+	"https://m.reversim.com/reversim2014-ignite-girls.mp3": {
+		"bytes": 12552358,
+		"seconds": 313
+	},
+	"https://m.reversim.com/reversim2014-ignite-kindness.mp3": {
+		"bytes": 12242234,
+		"seconds": 305
+	},
+	"https://m.reversim.com/reversim2014-ignite-monads.mp3": {
+		"bytes": 13250494,
+		"seconds": 330
+	},
+	"https://m.reversim.com/reversim2014-ignite-peak.mp3": {
+		"bytes": 10915740,
+		"seconds": 272
+	},
+	"https://m.reversim.com/reversim2014-ignite-remote.mp3": {
+		"bytes": 11502379,
+		"seconds": 287
+	},
+	"https://m.reversim.com/reversim2014-ignite-scraping.mp3": {
+		"bytes": 13350557,
+		"seconds": 333
+	},
+	"https://m.reversim.com/reversim2014-ignite-videos.mp3": {
+		"bytes": 12658011,
+		"seconds": 316
+	},
+	"https://m.reversim.com/reversim2014-ignite-weapons.mp3": {
+		"bytes": 12423061,
+		"seconds": 310
+	},
+	"https://m.reversim.com/reversim2014-javascript-func.mp3": {
+		"bytes": 112770013,
+		"seconds": 2817
+	},
+	"https://m.reversim.com/reversim2014-kids.mp3": {
+		"bytes": 22315954,
+		"seconds": 1116
+	},
+	"https://m.reversim.com/reversim2014-messaging.mp3": {
+		"bytes": 113571425,
+		"seconds": 2837
+	},
+	"https://m.reversim.com/reversim2014-ml.mp3": {
+		"bytes": 125080713,
+		"seconds": 3125
+	},
+	"https://m.reversim.com/reversim2014-oss-Pi-in-The-Cloud.mp3": {
+		"bytes": 12533575,
+		"seconds": 312
+	},
+	"https://m.reversim.com/reversim2014-oss-bulshit.mp3": {
+		"bytes": 24671339,
+		"seconds": 615
+	},
+	"https://m.reversim.com/reversim2014-oss-celestial.mp3": {
+		"bytes": 17138289,
+		"seconds": 428
+	},
+	"https://m.reversim.com/reversim2014-oss-closed.mp3": {
+		"bytes": 15671537,
+		"seconds": 391
+	},
+	"https://m.reversim.com/reversim2014-oss-codeine.mp3": {
+		"bytes": 11898967,
+		"seconds": 296
+	},
+	"https://m.reversim.com/reversim2014-oss-goproxy.mp3": {
+		"bytes": 17782472,
+		"seconds": 444
+	},
+	"https://m.reversim.com/reversim2014-oss-mean.mp3": {
+		"bytes": 24930559,
+		"seconds": 622
+	},
+	"https://m.reversim.com/reversim2014-oss-mordor.mp3": {
+		"bytes": 16590909,
+		"seconds": 414
+	},
+	"https://m.reversim.com/reversim2014-oss-redash.mp3": {
+		"bytes": 14686533,
+		"seconds": 366
+	},
+	"https://m.reversim.com/reversim2014-oss-sneakers.mp3": {
+		"bytes": 14992933,
+		"seconds": 374
+	},
+	"https://m.reversim.com/reversim2014-oss-tipali.mp3": {
+		"bytes": 19058483,
+		"seconds": 475
+	},
+	"https://m.reversim.com/reversim2014-oss-workshop.mp3": {
+		"bytes": 15481636,
+		"seconds": 386
+	},
+	"https://m.reversim.com/reversim2014-real-life-continuous-integration.mp3": {
+		"bytes": 111725962,
+		"seconds": 2792
+	},
+	"https://m.reversim.com/reversim2014-shame.mp3": {
+		"bytes": 103837375,
+		"seconds": 2595
+	},
+	"https://m.reversim.com/reversim2014-sw-architecture.mp3": {
+		"bytes": 48674537,
+		"seconds": 2434
+	},
+	"https://m.reversim.com/reversim2014-ux.mp3": {
+		"bytes": 53968376,
+		"seconds": 1348
+	},
+	"https://m.reversim.com/reversim201_tmp01.mp3": {
+		"bytes": 9324377,
+		"seconds": 2330
+	},
+	"https://m.reversim.com/reversim202_carburetor11.mp3": {
+		"bytes": 8529732,
+		"seconds": 2131
+	},
+	"https://m.reversim.com/reversim203_fogcast02.mp3": {
+		"bytes": 11089001,
+		"seconds": 2771
+	},
+	"https://m.reversim.com/reversim204_fogcast03.mp3": {
+		"bytes": 9955078,
+		"seconds": 2488
+	},
+	"https://m.reversim.com/reversim205_bumpers12.mp3": {
+		"bytes": 9634085,
+		"seconds": 2407
+	},
+	"https://m.reversim.com/reversim206_fogcast04.mp3": {
+		"bytes": 9206095,
+		"seconds": 2300
+	},
+	"https://m.reversim.com/reversim207_fogcast05.mp3": {
+		"bytes": 60384700,
+		"seconds": 3019
+	},
+	"https://m.reversim.com/reversim208_fogcast06.mp3": {
+		"bytes": 10220586,
+		"seconds": 2554
+	},
+	"https://m.reversim.com/reversim209_carburetor12.mp3": {
+		"bytes": 7510748,
+		"seconds": 1877
+	},
+	"https://m.reversim.com/reversim210_bumpers13.mp3": {
+		"bytes": 11746033,
+		"seconds": 2935
+	},
+	"https://m.reversim.com/reversim211_osslicense.mp3": {
+		"bytes": 9027835,
+		"seconds": 2256
+	},
+	"https://m.reversim.com/reversim212_fogcast07.mp3": {
+		"bytes": 7868312,
+		"seconds": 1966
+	},
+	"https://m.reversim.com/reversim213_fogcast08.mp3": {
+		"bytes": 6768975,
+		"seconds": 1691
+	},
+	"https://m.reversim.com/reversim214_arduino.mp3": {
+		"bytes": 5224824,
+		"seconds": 1305
+	},
+	"https://m.reversim.com/reversim215_carburetor13.mp3": {
+		"bytes": 7274287,
+		"seconds": 1818
+	},
+	"https://m.reversim.com/reversim216_appsflyer.mp3": {
+		"bytes": 7161334,
+		"seconds": 1789
+	},
+	"https://m.reversim.com/reversim217_fogcast09.mp3": {
+		"bytes": 9164403,
+		"seconds": 2290
+	},
+	"https://m.reversim.com/reversim218_propagetor.mp3": {
+		"bytes": 7827038,
+		"seconds": 1956
+	},
+	"https://m.reversim.com/reversim219_bumpers14.mp3": {
+		"bytes": 12118748,
+		"seconds": 3029
+	},
+	"https://m.reversim.com/reversim220_scale-refactor.mp3": {
+		"bytes": 7962353,
+		"seconds": 1990
+	},
+	"https://m.reversim.com/reversim221_fogcast10_sessions.mp3": {
+		"bytes": 10267711,
+		"seconds": 2566
+	},
+	"https://m.reversim.com/reversim222_carburetor14.mp3": {
+		"bytes": 7697993,
+		"seconds": 1923
+	},
+	"https://m.reversim.com/reversim223_fogcast11_redis.mp3": {
+		"bytes": 10528727,
+		"seconds": 2631
+	},
+	"https://m.reversim.com/reversim224_asp_vnext.mp3": {
+		"bytes": 9943270,
+		"seconds": 2485
+	},
+	"https://m.reversim.com/reversim225_hr.mp3": {
+		"bytes": 9443913,
+		"seconds": 2360
+	},
+	"https://m.reversim.com/reversim226_bumpers15.mp3": {
+		"bytes": 10091855,
+		"seconds": 2522
+	},
+	"https://m.reversim.com/reversim227_carburetor15.mp3": {
+		"bytes": 8819796,
+		"seconds": 2204
+	},
+	"https://m.reversim.com/reversim228_scalapeno2.mp3": {
+		"bytes": 6948697,
+		"seconds": 1736
+	},
+	"https://m.reversim.com/reversim229_fogcast12_gulp.mp3": {
+		"bytes": 8151061,
+		"seconds": 2037
+	},
+	"https://m.reversim.com/reversim230_fogcast13.mp3": {
+		"bytes": 9378503,
+		"seconds": 2344
+	},
+	"https://m.reversim.com/reversim231_carburetor16.mp3": {
+		"bytes": 12618209,
+		"seconds": 3154
+	},
+	"https://m.reversim.com/reversim232_bumpers16.mp3": {
+		"bytes": 11036965,
+		"seconds": 2758
+	},
+	"https://m.reversim.com/reversim233_carburetor17.mp3": {
+		"bytes": 12742970,
+		"seconds": 3185
+	},
+	"https://m.reversim.com/reversim234_fogcast14.mp3": {
+		"bytes": 7476371,
+		"seconds": 1868
+	},
+	"https://m.reversim.com/reversim235_flat-orgs.mp3": {
+		"bytes": 10710016,
+		"seconds": 2676
+	},
+	"https://m.reversim.com/reversim236_vs-nodejs-python.mp3": {
+		"bytes": 4700390,
+		"seconds": 1174
+	},
+	"https://m.reversim.com/reversim237_bumpers17.mp3": {
+		"bytes": 14639251,
+		"seconds": 3659
+	},
+	"https://m.reversim.com/reversim238_event-org.mp3": {
+		"bytes": 9639727,
+		"seconds": 2409
+	},
+	"https://m.reversim.com/reversim239_carburetor18.mp3": {
+		"bytes": 9294389,
+		"seconds": 2323
+	},
+	"https://m.reversim.com/reversim240_wework.mp3": {
+		"bytes": 11402784,
+		"seconds": 2850
+	},
+	"https://m.reversim.com/reversim241_oss-legal.mp3": {
+		"bytes": 9167329,
+		"seconds": 2291
+	},
+	"https://m.reversim.com/reversim242_fogcast15-API-versioning%20.mp3": {
+		"bytes": 9824361,
+		"seconds": 2455
+	},
+	"https://m.reversim.com/reversim243_bumpers18.mp3": {
+		"bytes": 15453644,
+		"seconds": 3862
+	},
+	"https://m.reversim.com/reversim244_bumpers19.mp3": {
+		"bytes": 12154065,
+		"seconds": 3037
+	},
+	"https://m.reversim.com/reversim245_benefits.mp3": {
+		"bytes": 10733004,
+		"seconds": 2682
+	},
+	"https://m.reversim.com/reversim246_gormim.mp3": {
+		"bytes": 9161582,
+		"seconds": 2289
+	},
+	"https://m.reversim.com/reversim247_carburetor19_devopsdays.mp3": {
+		"bytes": 9368994,
+		"seconds": 2341
+	},
+	"https://m.reversim.com/reversim248_bumpers20.mp3": {
+		"bytes": 15332332,
+		"seconds": 3832
+	},
+	"https://m.reversim.com/reversim249_carburetor20.mp3": {
+		"bytes": 8445304,
+		"seconds": 2110
+	},
+	"https://m.reversim.com/reversim250_fogcast16-trust2.mp3": {
+		"bytes": 6507437,
+		"seconds": 1626
+	},
+	"https://m.reversim.com/reversim251_spark-your-legacy.mp3": {
+		"bytes": 9598454,
+		"seconds": 2399
+	},
+	"https://m.reversim.com/reversim252_bumpers21.mp3": {
+		"bytes": 12356358,
+		"seconds": 3088
+	},
+	"https://m.reversim.com/reversim253_fogcast17-deployments.mp3": {
+		"bytes": 8736518,
+		"seconds": 2183
+	},
+	"https://m.reversim.com/reversim254_thunderbolt.mp3": {
+		"bytes": 5119603,
+		"seconds": 1279
+	},
+	"https://m.reversim.com/reversim255_fogcast18-win-deployment.mp3": {
+		"bytes": 7513673,
+		"seconds": 1877
+	},
+	"https://m.reversim.com/reversim256_bumpers22.mp3": {
+		"bytes": 12129406,
+		"seconds": 3031
+	},
+	"https://m.reversim.com/reversim257_mindcet.mp3": {
+		"bytes": 7165409,
+		"seconds": 1790
+	},
+	"https://m.reversim.com/reversim258_tce-conf.mp3": {
+		"bytes": 6626346,
+		"seconds": 1656
+	},
+	"https://m.reversim.com/reversim259_bumpers-wayback.mp3": {
+		"bytes": 11964312,
+		"seconds": 2990
+	},
+	"https://m.reversim.com/reversim260_yglf.mp3": {
+		"bytes": 8113654,
+		"seconds": 2027
+	},
+	"https://m.reversim.com/reversim261_fpga_2.mp3": {
+		"bytes": 9491456,
+		"seconds": 2372
+	},
+	"https://m.reversim.com/reversim262_fogcast19-flights.mp3": {
+		"bytes": 8052005,
+		"seconds": 2012
+	},
+	"https://m.reversim.com/reversim263_wfh.mp3": {
+		"bytes": 11871316,
+		"seconds": 2967
+	},
+	"https://m.reversim.com/reversim264_cloud-hadr-google.mp3": {
+		"bytes": 12967309,
+		"seconds": 3241
+	},
+	"https://m.reversim.com/reversim265_groovy.mp3": {
+		"bytes": 9038075,
+		"seconds": 2258
+	},
+	"https://m.reversim.com/reversim267_cloud-mobile-aws.mp3": {
+		"bytes": 12284364,
+		"seconds": 3070
+	},
+	"https://m.reversim.com/reversim268_bumpers23.mp3": {
+		"bytes": 15562105,
+		"seconds": 3890
+	},
+	"https://m.reversim.com/reversim269_cloud-analytics-google.mp3": {
+		"bytes": 13020390,
+		"seconds": 3254
+	},
+	"https://m.reversim.com/reversim270_cloud-analytics-aws.mp3": {
+		"bytes": 14525670,
+		"seconds": 3630
+	},
+	"https://m.reversim.com/reversim271_cloud-HA-DR-DIY.mp3": {
+		"bytes": 12640361,
+		"seconds": 3159
+	},
+	"https://m.reversim.com/reversim272_cloud-mobile-google.mp3": {
+		"bytes": 9264400,
+		"seconds": 2315
+	},
+	"https://m.reversim.com/reversim273_the-R-in-RnD.mp3": {
+		"bytes": 9793327,
+		"seconds": 2447
+	},
+	"https://m.reversim.com/reversim274_cloud-IoT-azure2.mp3": {
+		"bytes": 11469030,
+		"seconds": 2866
+	},
+	"https://m.reversim.com/reversim275_bumpers24.mp3": {
+		"bytes": 83227085,
+		"seconds": 3468
+	},
+	"https://m.reversim.com/reversim51_swisrael.mp3": {
+		"bytes": 39183174,
+		"seconds": 4897
+	},
+	"https://m.reversim.com/reversim53_cms.mp3": {
+		"bytes": 22847238,
+		"seconds": 2855
+	},
+	"https://m.reversim.com/reversim54_platonix.mp3": {
+		"bytes": 16709926,
+		"seconds": 2088
+	},
+	"https://m.reversim.com/reversim55_bday1.mp3": {
+		"bytes": 17354001,
+		"seconds": 2169
+	},
+	"https://m.reversim.com/reversim56_nosql.mp3": {
+		"bytes": 19932600,
+		"seconds": 2491
+	},
+	"https://m.reversim.com/reversim57_nosql2.mp3": {
+		"bytes": 21930027,
+		"seconds": 2741
+	},
+	"https://m.reversim.com/reversim58_sec.mp3": {
+		"bytes": 20195078,
+		"seconds": 2524
+	},
+	"https://m.reversim.com/reversim59_linq.mp3": {
+		"bytes": 18055336,
+		"seconds": 2256
+	},
+	"https://m.reversim.com/reversim60_qna.mp3": {
+		"bytes": 20191317,
+		"seconds": 2523
+	},
+	"https://m.reversim.com/reversim61_sxsw.mp3": {
+		"bytes": 15074033,
+		"seconds": 1884
+	},
+	"https://m.reversim.com/reversim62_women.mp3": {
+		"bytes": 16015277,
+		"seconds": 2001
+	},
+	"https://m.reversim.com/reversim63_history.mp3": {
+		"bytes": 16954014,
+		"seconds": 2119
+	},
+	"https://m.reversim.com/reversim64_mobile.mp3": {
+		"bytes": 15887382,
+		"seconds": 1985
+	},
+	"https://m.reversim.com/reversim65_hadoop.mp3": {
+		"bytes": 17796620,
+		"seconds": 2224
+	},
+	"https://m.reversim.com/reversim66_agile_kanban.mp3": {
+		"bytes": 24804541,
+		"seconds": 3100
+	},
+	"https://m.reversim.com/reversim67_cantina.mp3": {
+		"bytes": 17447206,
+		"seconds": 2180
+	},
+	"https://m.reversim.com/reversim68_technion_panel.mp3": {
+		"bytes": 26052568,
+		"seconds": 3256
+	},
+	"https://m.reversim.com/reversim69_nati_shalom.mp3": {
+		"bytes": 17741867,
+		"seconds": 2217
+	},
+	"https://m.reversim.com/reversim70_yazamiyot.mp3": {
+		"bytes": 17364659,
+		"seconds": 2170
+	},
+	"https://m.reversim.com/reversim71_iphone.mp3": {
+		"bytes": 19556646,
+		"seconds": 2444
+	},
+	"https://m.reversim.com/reversim72_atdd.mp3": {
+		"bytes": 18820620,
+		"seconds": 2352
+	},
+	"https://m.reversim.com/reversim73_ux_martin.mp3": {
+		"bytes": 15476528,
+		"seconds": 1934
+	},
+	"https://m.reversim.com/reversim74_swtlv.mp3": {
+		"bytes": 14404672,
+		"seconds": 1800
+	},
+	"https://m.reversim.com/reversim75_eishay_cd.mp3": {
+		"bytes": 16610033,
+		"seconds": 2076
+	},
+	"https://m.reversim.com/reversim76_ob_algo.mp3": {
+		"bytes": 13292691,
+		"seconds": 1661
+	},
+	"https://m.reversim.com/reversim77_taldor.mp3": {
+		"bytes": 19615369,
+		"seconds": 2451
+	},
+	"https://m.reversim.com/reversim78_iltech.mp3": {
+		"bytes": 14925867,
+		"seconds": 1865
+	},
+	"https://m.reversim.com/reversim79_fooducate.mp3": {
+		"bytes": 17073968,
+		"seconds": 2134
+	},
+	"https://m.reversim.com/reversim80_hummus.mp3": {
+		"bytes": 15764711,
+		"seconds": 1970
+	},
+	"https://m.reversim.com/reversim81_swcraft.mp3": {
+		"bytes": 15684672,
+		"seconds": 1960
+	},
+	"https://m.reversim.com/reversim82_scalebase.mp3": {
+		"bytes": 23095297,
+		"seconds": 2886
+	},
+	"https://m.reversim.com/reversim83_outbrain_ops.mp3": {
+		"bytes": 14759310,
+		"seconds": 1844
+	},
+	"https://m.reversim.com/reversim84_lift.mp3": {
+		"bytes": 16580567,
+		"seconds": 2072
+	},
+	"https://m.reversim.com/reversim85_app_proto.mp3": {
+		"bytes": 20852528,
+		"seconds": 2606
+	},
+	"https://m.reversim.com/reversim86_sw_axioms.mp3": {
+		"bytes": 22228659,
+		"seconds": 2778
+	},
+	"https://m.reversim.com/reversim87_sgura1.mp3": {
+		"bytes": 24772568,
+		"seconds": 3096
+	},
+	"https://m.reversim.com/reversim88_sgura2.mp3": {
+		"bytes": 30788672,
+		"seconds": 3848
+	},
+	"https://m.reversim.com/reversim89_soluto.mp3": {
+		"bytes": 29241596,
+		"seconds": 3655
+	},
+	"https://m.reversim.com/reversim90_sgura3.mp3": {
+		"bytes": 33508542,
+		"seconds": 4188
+	},
+	"https://m.reversim.com/reversim91_dc2.mp3": {
+		"bytes": 17604567,
+		"seconds": 2200
+	},
+	"https://m.reversim.com/reversim92_outbrain_cd.mp3": {
+		"bytes": 19895193,
+		"seconds": 2486
+	},
+	"https://m.reversim.com/reversim93_sgura4.mp3": {
+		"bytes": 53028699,
+		"seconds": 6628
+	},
+	"https://m.reversim.com/reversim94_mysql.mp3": {
+		"bytes": 24932646,
+		"seconds": 3116
+	},
+	"https://m.reversim.com/reversim95_sgura5.mp3": {
+		"bytes": 34465668,
+		"seconds": 4308
+	},
+	"https://m.reversim.com/reversim96_web_performance.mp3": {
+		"bytes": 20692659,
+		"seconds": 2586
+	},
+	"https://m.reversim.com/reversim97_sgura6_v2.mp3": {
+		"bytes": 42286939,
+		"seconds": 5285
+	},
+	"https://m.reversim.com/reversim98_reuven_lerner.mp3": {
+		"bytes": 20516698,
+		"seconds": 2564
+	},
+	"https://m.reversim.com/reversim99_chef.mp3": {
+		"bytes": 18292528,
+		"seconds": 2286
+	},
+	"https://m.reversim.com/summit2013_HTML5_APIs_for_modern_web_apps.mp3": {
+		"bytes": 19305805,
+		"seconds": 2413
+	},
+	"https://m.reversim.com/summit2013_I_want_to_cache_it_now.mp3": {
+		"bytes": 18833511,
+		"seconds": 2354
+	},
+	"https://m.reversim.com/summit2013_a_successful_git_branching_model.mp3": {
+		"bytes": 23775296,
+		"seconds": 2972
+	},
+	"https://m.reversim.com/summit2013_android_app_to_the_challenge.mp3": {
+		"bytes": 25618452,
+		"seconds": 3202
+	},
+	"https://m.reversim.com/summit2013_big_data_in_the_cloud.mp3": {
+		"bytes": 24155386,
+		"seconds": 3019
+	},
+	"https://m.reversim.com/summit2013_building_a_web_infrastructure_for_10M_users.mp3": {
+		"bytes": 27339608,
+		"seconds": 3417
+	},
+	"https://m.reversim.com/summit2013_building_lightweight_products.mp3": {
+		"bytes": 26855193,
+		"seconds": 3357
+	},
+	"https://m.reversim.com/summit2013_building_network_and_battery_efficient_apps.mp3": {
+		"bytes": 30604914,
+		"seconds": 3826
+	},
+	"https://m.reversim.com/summit2013_continuous_deployment_at_scale.mp3": {
+		"bytes": 25417413,
+		"seconds": 3177
+	},
+	"https://m.reversim.com/summit2013_data_design_meaning.mp3": {
+		"bytes": 25851673,
+		"seconds": 3231
+	},
+	"https://m.reversim.com/summit2013_defensive_programming.mp3": {
+		"bytes": 14070239,
+		"seconds": 1759
+	},
+	"https://m.reversim.com/summit2013_distirbuted_reinventing_the_workplace.mp3": {
+		"bytes": 21108672,
+		"seconds": 2639
+	},
+	"https://m.reversim.com/summit2013_doing_lean_in_B2B.mp3": {
+		"bytes": 10051771,
+		"seconds": 1256
+	},
+	"https://m.reversim.com/summit2013_ember_js_for_large_scale_applications.mp3": {
+		"bytes": 28988039,
+		"seconds": 3623
+	},
+	"https://m.reversim.com/summit2013_functional_OOP_clojure_style.mp3": {
+		"bytes": 10616225,
+		"seconds": 1327
+	},
+	"https://m.reversim.com/summit2013_how_scala_promotes_TDD.mp3": {
+		"bytes": 21005645,
+		"seconds": 2626
+	},
+	"https://m.reversim.com/summit2013_how_to_fuckup.mp3": {
+		"bytes": 24422253,
+		"seconds": 3053
+	},
+	"https://m.reversim.com/summit2013_introduction_to_node.js.mp3": {
+		"bytes": 25698491,
+		"seconds": 3212
+	},
+	"https://m.reversim.com/summit2013_kenshoo_and_the_GreenPlum.mp3": {
+		"bytes": 25116901,
+		"seconds": 3140
+	},
+	"https://m.reversim.com/summit2013_lazy_developer_zen.mp3": {
+		"bytes": 19683013,
+		"seconds": 2460
+	},
+	"https://m.reversim.com/summit2013_panel_are_we_an_industry_or_just_a_bunch_of_companies.mp3": {
+		"bytes": 38398599,
+		"seconds": 4800
+	},
+	"https://m.reversim.com/summit2013_panel_final_class.mp3": {
+		"bytes": 35348959,
+		"seconds": 4419
+	},
+	"https://m.reversim.com/summit2013_panel_startups.mp3": {
+		"bytes": 27769688,
+		"seconds": 3471
+	},
+	"https://m.reversim.com/summit2013_play_framework.mp3": {
+		"bytes": 27284646,
+		"seconds": 3411
+	},
+	"https://m.reversim.com/summit2013_products_have_feelings_too.mp3": {
+		"bytes": 17972724,
+		"seconds": 2247
+	},
+	"https://m.reversim.com/summit2013_qa_without_qa.mp3": {
+		"bytes": 25193132,
+		"seconds": 3149
+	},
+	"https://m.reversim.com/summit2013_river_data_flow_management_infrastructure.mp3": {
+		"bytes": 27734579,
+		"seconds": 3467
+	},
+	"https://m.reversim.com/summit2013_streaming_BI.mp3": {
+		"bytes": 22746027,
+		"seconds": 2843
+	},
+	"https://m.reversim.com/summit2013_the_mathematical_side_of_user_happiness.mp3": {
+		"bytes": 15554413,
+		"seconds": 1944
+	},
+	"https://m.reversim.com/summit2013_to_provide_and_serve_content.mp3": {
+		"bytes": 15488166,
+		"seconds": 1936
+	},
+	"https://m.reversim.com/summit2013_vagrant_and_puppet_your_ops_sketching_board.mp3": {
+		"bytes": 21036365,
+		"seconds": 2629
+	},
+	"https://m.reversim.com/summit2015-Isomorphic-Javascript-The-Next-Big-Thing-in-Web-Development-Elad-Levy.mp3": {
+		"bytes": 31392958,
+		"seconds": 1962
+	},
+	"https://m.reversim.com/summit2015_5-Bullets-to-Scala-Adoption.mp3": {
+		"bytes": 106087658,
+		"seconds": 2652
+	},
+	"https://m.reversim.com/summit2015_Confessions-of-a-Java-developer-that-fell-in-love-with-the-Groovy-language.mp3": {
+		"bytes": 80455014,
+		"seconds": 2011
+	},
+	"https://m.reversim.com/summit2015_Consul_-_much_more_than_a_Service_Discovery_Tool.mp3": {
+		"bytes": 91104584,
+		"seconds": 2277
+	},
+	"https://m.reversim.com/summit2015_Continious-Deployment-with-Docker-Ariel-Moskovich.mp3": {
+		"bytes": 94178329,
+		"seconds": 2354
+	},
+	"https://m.reversim.com/summit2015_Developing_a_public_API.mp3": {
+		"bytes": 95143837,
+		"seconds": 2378
+	},
+	"https://m.reversim.com/summit2015_Experimenting_on_Humans_-_Advanced_A-B_Testing.mp3": {
+		"bytes": 97942085,
+		"seconds": 2448
+	},
+	"https://m.reversim.com/summit2015_How_to_Create_a_Native-Like_experience_in_the_Mobile_Web.mp3": {
+		"bytes": 94450136,
+		"seconds": 2361
+	},
+	"https://m.reversim.com/summit2015_Ignites_2_-_Ori_Hoch.mp3": {
+		"bytes": 12504366,
+		"seconds": 312
+	},
+	"https://m.reversim.com/summit2015_Ignites_2_Asaf_Mesika.mp3": {
+		"bytes": 12431226,
+		"seconds": 310
+	},
+	"https://m.reversim.com/summit2015_Ignites_2_Gili_Nachum.mp3": {
+		"bytes": 12453218,
+		"seconds": 311
+	},
+	"https://m.reversim.com/summit2015_Ignites_2_Haim_Yadid.mp3": {
+		"bytes": 12731966,
+		"seconds": 318
+	},
+	"https://m.reversim.com/summit2015_Ignites_2_Tzach_Zohar.mp3": {
+		"bytes": 12518981,
+		"seconds": 312
+	},
+	"https://m.reversim.com/summit2015_Interactive_Deep_Analytics_Dashboard.mp3": {
+		"bytes": 72727671,
+		"seconds": 1818
+	},
+	"https://m.reversim.com/summit2015_Magneto_-_taking_our_Automated_Testing_to_the_next_level.mp3": {
+		"bytes": 86447571,
+		"seconds": 2161
+	},
+	"https://m.reversim.com/summit2015_Microservices_and_Event-Driven-Architecture_with_Clojure_and_Kafka.mp3": {
+		"bytes": 103091386,
+		"seconds": 2577
+	},
+	"https://m.reversim.com/summit2015_Power_Trip_with_a_Power_Drill_-_Monitoring_distributed_systems_with_Riemann.mp3": {
+		"bytes": 105639225,
+		"seconds": 2640
+	},
+	"https://m.reversim.com/summit2015_Programming_with_Millions_of_Examples.mp3": {
+		"bytes": 90533653,
+		"seconds": 2263
+	},
+	"https://m.reversim.com/summit2015_Putting_the_D_in_TDD.mp3": {
+		"bytes": 97391910,
+		"seconds": 2434
+	},
+	"https://m.reversim.com/summit2015_Reactive_by_Example.mp3": {
+		"bytes": 97701164,
+		"seconds": 2442
+	},
+	"https://m.reversim.com/summit2015_Refactoring_of_Legacy_Code.mp3": {
+		"bytes": 116758788,
+		"seconds": 2918
+	},
+	"https://m.reversim.com/summit2015_Same_Problems,_Different_Actors-_Symmetry_in_the_Content_Discovery_Marketplace.mp3": {
+		"bytes": 83586534,
+		"seconds": 2089
+	},
+	"https://m.reversim.com/summit2015_Scaling_up_your_RnD_group.mp3": {
+		"bytes": 94427676,
+		"seconds": 2360
+	},
+	"https://m.reversim.com/summit2015_Scaling_with_microservices_architecture_and_multi-cloud_platforms.mp3": {
+		"bytes": 114551010,
+		"seconds": 2863
+	},
+	"https://m.reversim.com/summit2015_Should_you_move_from_Objective-C_to_Swift-.mp3": {
+		"bytes": 91255386,
+		"seconds": 2281
+	},
+	"https://m.reversim.com/summit2015_Storm_in_under_a_second.mp3": {
+		"bytes": 95843695,
+		"seconds": 2396
+	},
+	"https://m.reversim.com/summit2015_The_Hall_of_Shame.mp3": {
+		"bytes": 70425389,
+		"seconds": 1760
+	},
+	"https://m.reversim.com/summit2015_The_ugly_truth-_11_ways_to_learn_what_users_really_think_about_your_product.mp3": {
+		"bytes": 93234689,
+		"seconds": 2330
+	},
+	"https://m.reversim.com/summit2015_Two_engineers_walk_into_a_Stand-up_Comedy_Club.mp3": {
+		"bytes": 84386447,
+		"seconds": 2108
+	},
+	"https://m.reversim.com/summit2015_ignites_1_Ben_Maraney.mp3": {
+		"bytes": 12522723,
+		"seconds": 313
+	},
+	"https://m.reversim.com/summit2015_ignites_1_Hagai_Levin.mp3": {
+		"bytes": 12677847,
+		"seconds": 316
+	},
+	"https://m.reversim.com/summit2015_ignites_1_Lital_Hassine.mp3": {
+		"bytes": 12381420,
+		"seconds": 309
+	},
+	"https://m.reversim.com/summit2015_ignites_1_Oded_Magger.mp3": {
+		"bytes": 12439211,
+		"seconds": 310
+	},
+	"https://m.reversim.com/summit2015_ignites_1_Yoav_Rubin.mp3": {
+		"bytes": 12261731,
+		"seconds": 306
+	},
+	"https://m.reversim.com/summit2015_ignites_1_Yonatan_M.mp3": {
+		"bytes": 12239807,
+		"seconds": 306
+	},
+	"https://m.reversim.com/summit2015_open_source_1_Meir_Wahnon.mp3": {
+		"bytes": 12603819,
+		"seconds": 315
+	},
+	"https://m.reversim.com/summit2015_open_source_1_Miriam_Schwab.mp3": {
+		"bytes": 11746695,
+		"seconds": 293
+	},
+	"https://m.reversim.com/summit2015_open_source_1_Sella_Rafaeli.mp3": {
+		"bytes": 14133949,
+		"seconds": 353
+	},
+	"https://m.reversim.com/summit2015_open_source_1_Shai_Alon.mp3": {
+		"bytes": 15891033,
+		"seconds": 397
+	},
+	"https://m.reversim.com/summit2015_open_source_1_Uri_Shamay.mp3": {
+		"bytes": 14235591,
+		"seconds": 355
+	},
+	"https://m.reversim.com/summit2015_open_source_2_Matan_Eilat.mp3": {
+		"bytes": 13859082,
+		"seconds": 346
+	},
+	"https://m.reversim.com/summit2015_open_source_2_Ori_Hock.mp3": {
+		"bytes": 14348297,
+		"seconds": 358
+	},
+	"https://m.reversim.com/summit2015_open_source_2_Tomer_Gabel.mp3": {
+		"bytes": 14365001,
+		"seconds": 359
+	},
+	"https://m2.reversim.com/reversim-summit-2017-registration.mp3": {
+		"bytes": 11668292,
+		"seconds": 486
+	},
+	"https://m2.reversim.com/reversim18.mp3": {
+		"bytes": 10019025,
+		"seconds": 2504
+	},
+	"https://m2.reversim.com/reversim2017-cfp.mp3": {
+		"bytes": 2322934,
+		"seconds": 290
+	},
+	"https://m2.reversim.com/reversim276_fogcast20.mp3": {
+		"bytes": 40200903,
+		"seconds": 1675
+	},
+	"https://m2.reversim.com/reversim277_scientific-python.mp3": {
+		"bytes": 50300260,
+		"seconds": 2096
+	},
+	"https://m2.reversim.com/reversim278_bumpers25.mp3": {
+		"bytes": 62922002,
+		"seconds": 3932
+	},
+	"https://m2.reversim.com/reversim279_digital-ocean.mp3": {
+		"bytes": 31870142,
+		"seconds": 1992
+	},
+	"https://m2.reversim.com/reversim280_aws-HA-DR.mp3": {
+		"bytes": 18586562,
+		"seconds": 2323
+	},
+	"https://m2.reversim.com/reversim281_fogcast21.mp3": {
+		"bytes": 38726136,
+		"seconds": 1936
+	},
+	"https://m2.reversim.com/reversim282-the_r_in_rnd_cont.mp3": {
+		"bytes": 42531516,
+		"seconds": 2127
+	},
+	"https://m2.reversim.com/reversim283_totango.mp3": {
+		"bytes": 41146128,
+		"seconds": 2057
+	},
+	"https://m2.reversim.com/reversim284_bumpers26.mp3": {
+		"bytes": 80070624,
+		"seconds": 4004
+	},
+	"https://m2.reversim.com/reversim285_nothing.mp3": {
+		"bytes": 39949704,
+		"seconds": 1997
+	},
+	"https://m2.reversim.com/reversim286_no-cloud-data.mp3": {
+		"bytes": 43773354,
+		"seconds": 2189
+	},
+	"https://m2.reversim.com/reversim287_Search-Ronny-Lempel.mp3": {
+		"bytes": 81797400,
+		"seconds": 4090
+	},
+	"https://m2.reversim.com/reversim288-Carburetor_21.mp3": {
+		"bytes": 67573944,
+		"seconds": 3379
+	},
+	"https://m2.reversim.com/reversim289_Fogcast-22-Graph-Databases.mp3": {
+		"bytes": 43288938,
+		"seconds": 2164
+	},
+	"https://m2.reversim.com/reversim290_bumpers27.mp3": {
+		"bytes": 77451228,
+		"seconds": 3873
+	},
+	"https://m2.reversim.com/reversim291_RPi.mp3.mp3": {
+		"bytes": 41417046,
+		"seconds": 2071
+	},
+	"https://m2.reversim.com/reversim292_bumpers28.mp3": {
+		"bytes": 57193452,
+		"seconds": 2860
+	},
+	"https://m2.reversim.com/reversim293_d.mp3": {
+		"bytes": 48056364,
+		"seconds": 2403
+	},
+	"https://m2.reversim.com/reversim294_fogcast23-hackatons.mp3": {
+		"bytes": 36974304,
+		"seconds": 1849
+	},
+	"https://m2.reversim.com/reversim295_bumpers29.mp3": {
+		"bytes": 60748794,
+		"seconds": 3037
+	},
+	"https://m2.reversim.com/reversim296_nlp-yoav-goldberg.mp3": {
+		"bytes": 46479924,
+		"seconds": 2324
+	},
+	"https://m2.reversim.com/reversim297_fogcast24.mp3": {
+		"bytes": 59393160,
+		"seconds": 2970
+	},
+	"https://m2.reversim.com/reversim298_face-detection.mp3": {
+		"bytes": 92240694,
+		"seconds": 2306
+	},
+	"https://m2.reversim.com/reversim299_fogcast25-package-managers.mp3": {
+		"bytes": 74064694,
+		"seconds": 1852
+	},
+	"https://m2.reversim.com/reversim300_carburetor22-insight-edge.mp3": {
+		"bytes": 98785935,
+		"seconds": 2470
+	},
+	"https://m2.reversim.com/reversim301-40-50.mp3": {
+		"bytes": 103427371,
+		"seconds": 2586
+	},
+	"https://m2.reversim.com/reversim302-bumpers30.mp3": {
+		"bytes": 71073878,
+		"seconds": 4442
+	},
+	"https://m2.reversim.com/reversim303_redis.mp3": {
+		"bytes": 56345527,
+		"seconds": 2348
+	},
+	"https://m2.reversim.com/reversim304-summit2016.mp3": {
+		"bytes": 23971659,
+		"seconds": 999
+	},
+	"https://m2.reversim.com/reversim305_the-ops-school.mp3": {
+		"bytes": 49064883,
+		"seconds": 2044
+	},
+	"https://m2.reversim.com/reversim306_redash.mp3": {
+		"bytes": 45365317,
+		"seconds": 2835
+	},
+	"https://m2.reversim.com/reversim307_bumpers31.mp3": {
+		"bytes": 69446345,
+		"seconds": 4340
+	},
+	"https://m2.reversim.com/reversim308_wisdo.mp3": {
+		"bytes": 60441314,
+		"seconds": 2518
+	},
+	"https://m2.reversim.com/reversim309_bumpers32.mp3": {
+		"bytes": 62422232,
+		"seconds": 3901
+	},
+	"https://m2.reversim.com/reversim310_fed-school2.mp3": {
+		"bytes": 33959102,
+		"seconds": 2122
+	},
+	"https://m2.reversim.com/reversim311_Bumpers-33.mp3": {
+		"bytes": 85941631,
+		"seconds": 5371
+	},
+	"https://m2.reversim.com/reversim312_Bumpers-34.mp3": {
+		"bytes": 59416269,
+		"seconds": 3713
+	},
+	"https://m2.reversim.com/reversim313_carburetor23.mp3": {
+		"bytes": 69370176,
+		"seconds": 2890
+	},
+	"https://m2.reversim.com/reversim314_bumpers35.mp3": {
+		"bytes": 102334617,
+		"seconds": 4264
+	},
+	"https://m2.reversim.com/reversim315_bumpers36.mp3": {
+		"bytes": 81210333,
+		"seconds": 5076
+	},
+	"https://m2.reversim.com/reversim316_mysql_shlomi.mp3": {
+		"bytes": 87321308,
+		"seconds": 2183
+	},
+	"https://m2.reversim.com/reversim317_zusammen.mp3": {
+		"bytes": 75344897,
+		"seconds": 3139
+	},
+	"https://m2.reversim.com/reversim318_bumpers37.mp3": {
+		"bytes": 70353396,
+		"seconds": 4397
+	},
+	"https://m2.reversim.com/reversim319_bumpers38.mp3": {
+		"bytes": 16312946,
+		"seconds": 1020
+	},
+	"https://m2.reversim.com/reversim320_bumpers39.mp3": {
+		"bytes": 78866389,
+		"seconds": 4929
+	},
+	"https://m2.reversim.com/reversim321_bumpers40.mp3": {
+		"bytes": 78893974,
+		"seconds": 4931
+	},
+	"https://m2.reversim.com/reversim322_security-essentials-for-startups.mp3": {
+		"bytes": 34957292,
+		"seconds": 2185
+	},
+	"https://m2.reversim.com/reversim323_mozilla.mp3": {
+		"bytes": 52854730,
+		"seconds": 3303
+	},
+	"https://m2.reversim.com/reversim324_bumpers41.mp3": {
+		"bytes": 197364505,
+		"seconds": 4934
+	},
+	"https://m2.reversim.com/reversim325_Bumpers-42.mp3": {
+		"bytes": 65956466,
+		"seconds": 4122
+	},
+	"https://m2.reversim.com/reversim326-she-codes.mp3": {
+		"bytes": 48845762,
+		"seconds": 2035
+	},
+	"https://m2.reversim.com/reversim327_bumpers43.mp3": {
+		"bytes": 47985267,
+		"seconds": 3999
+	},
+	"https://m2.reversim.com/reversim328_agility-ownership.mp3": {
+		"bytes": 57320721,
+		"seconds": 2388
+	},
+	"https://m2.reversim.com/reversim329_Bumpers-44.mp3": {
+		"bytes": 46557100,
+		"seconds": 3880
+	},
+	"https://m2.reversim.com/reversim330_shir_meir_lador.mp3": {
+		"bytes": 42091124,
+		"seconds": 1754
+	},
+	"https://m2.reversim.com/reversim331_Randy-Shoup.mp3": {
+		"bytes": 59175833,
+		"seconds": 2465
+	},
+	"https://m2.reversim.com/reversim332_data-processing-framewordks.mp3": {
+		"bytes": 74261860,
+		"seconds": 3094
+	},
+	"https://m2.reversim.com/reversim333_Yaron-Haviv-Nuclio-CNCF.mp3": {
+		"bytes": 62726814,
+		"seconds": 2613
+	},
+	"https://m2.reversim.com/reversim334-Carburetor_24-Outbrain_fabric_network.mp3": {
+		"bytes": 81784499,
+		"seconds": 3408
+	},
+	"https://m2.reversim.com/reversim335_bumpers45.mp3": {
+		"bytes": 55966198,
+		"seconds": 4664
+	},
+	"https://m2.reversim.com/reversim336_bumpers46.mp3": {
+		"bytes": 59149479,
+		"seconds": 4929
+	},
+	"https://m2.reversim.com/reversim337_bumpers47.mp3": {
+		"bytes": 26856803,
+		"seconds": 2238
+	},
+	"https://m2.reversim.com/reversim338_reversim-and-cloudtalk.mp3": {
+		"bytes": 74380352,
+		"seconds": 3099
+	},
+	"https://m2.reversim.com/reversim339-JAMStack.mp3": {
+		"bytes": 42087990,
+		"seconds": 2630
+	},
+	"https://m2.reversim.com/reversim340_serverless-adam-matan.mp3": {
+		"bytes": 16382973,
+		"seconds": 2048
+	},
+	"https://m2.reversim.com/reversim341_Bumpers-48.mp3": {
+		"bytes": 45201345,
+		"seconds": 3767
+	},
+	"https://m2.reversim.com/reversim342-optibus.mp3": {
+		"bytes": 25584762,
+		"seconds": 3198
+	},
+	"https://m2.reversim.com/reversim343-bumpers49.mp3": {
+		"bytes": 31304533,
+		"seconds": 3913
+	},
+	"https://m2.reversim.com/reversim344_power-in-diversity.mp3": {
+		"bytes": 19547760,
+		"seconds": 2443
+	},
+	"https://m2.reversim.com/reversim345_carburetor25.mp3": {
+		"bytes": 20389111,
+		"seconds": 2549
+	},
+	"https://m2.reversim.com/reversim346-transparency_monday.mp3": {
+		"bytes": 18368906,
+		"seconds": 2296
+	},
+	"https://m2.reversim.com/reversim347_bumpers50.mp3": {
+		"bytes": 55310688,
+		"seconds": 4609
+	},
+	"https://m2.reversim.com/reversim348-ZipRecruiter.mp3": {
+		"bytes": 20988047,
+		"seconds": 2623
+	},
+	"https://m2.reversim.com/reversim349-whitesource.mp3": {
+		"bytes": 19640547,
+		"seconds": 2455
+	},
+	"https://m2.reversim.com/reversim350-bumpers51.mp3": {
+		"bytes": 4702545,
+		"seconds": 1567
+	},
+	"https://m2.reversim.com/reversim351-Bumpers52.mp3": {
+		"bytes": 22883697,
+		"seconds": 3814
+	},
+	"https://m2.reversim.com/reversim352-Momento_Genady_Okrain.mp3": {
+		"bytes": 24084915,
+		"seconds": 3011
+	},
+	"https://m2.reversim.com/reversim354-bumpers53.mp3": {
+		"bytes": 25443418,
+		"seconds": 3635
+	},
+	"https://m2.reversim.com/reversim355-tech_trends_assaf_natanzon.mp3": {
+		"bytes": 18571198,
+		"seconds": 2321
+	},
+	"https://m2.reversim.com/reversim356_Developers-for-NGO.mp3": {
+		"bytes": 14409578,
+		"seconds": 1801
+	},
+	"https://m2.reversim.com/reversim357-bumpers54.mp3": {
+		"bytes": 34527402,
+		"seconds": 4932
+	},
+	"https://m2.reversim.com/reversim358-bumpers55.mp3": {
+		"bytes": 37091178,
+		"seconds": 4636
+	},
+	"https://m2.reversim.com/reversim359_Serverless-lumigo.mp3": {
+		"bytes": 20603524,
+		"seconds": 2575
+	},
+	"https://m2.reversim.com/reversim360_via.mp3": {
+		"bytes": 22500432,
+		"seconds": 2812
+	},
+	"https://m2.reversim.com/reversim361-bumpers56.mp3": {
+		"bytes": 25804870,
+		"seconds": 3686
+	},
+	"https://m2.reversim.com/reversim362-elastic.mp3": {
+		"bytes": 19099289,
+		"seconds": 2387
+	},
+	"https://m2.reversim.com/reversim363_gpu-nvidia.mp3": {
+		"bytes": 22790914,
+		"seconds": 2849
+	},
+	"https://m2.reversim.com/reversim364-bumpers57.mp3": {
+		"bytes": 18439512,
+		"seconds": 2634
+	},
+	"https://m2.reversim.com/reversim365-carburetor26.mp3": {
+		"bytes": 16748896,
+		"seconds": 2094
+	},
+	"https://m2.reversim.com/reversim366-clicktale.mp3": {
+		"bytes": 18293464,
+		"seconds": 2287
+	},
+	"https://m2.reversim.com/reversim367-guilds.mp3": {
+		"bytes": 18880488,
+		"seconds": 2360
+	},
+	"https://m2.reversim.com/reversim368-k8s_dyploma.mp3": {
+		"bytes": 22597190,
+		"seconds": 2825
+	},
+	"https://m2.reversim.com/reversim369-bumpers58.mp3": {
+		"bytes": 19610454,
+		"seconds": 4902
+	},
+	"https://m2.reversim.com/reversim370-ThetaRay.mp3": {
+		"bytes": 17643120,
+		"seconds": 2205
+	},
+	"https://m2.reversim.com/reversim371_bumpers59.mp3": {
+		"bytes": 35319867,
+		"seconds": 4415
+	},
+	"https://m2.reversim.com/reversim372-zadara.mp3": {
+		"bytes": 19937715,
+		"seconds": 2492
+	},
+	"https://m2.reversim.com/reversim373_hasadna.mp3": {
+		"bytes": 21055338,
+		"seconds": 2632
+	},
+	"https://m2.reversim.com/reversim374_measuring-developers.mp3": {
+		"bytes": 17928586,
+		"seconds": 2241
+	},
+	"https://m2.reversim.com/reversim375_bumpers60.mp3": {
+		"bytes": 28073709,
+		"seconds": 3509
+	},
+	"https://m2.reversim.com/reversim376_pysnooper.mp3": {
+		"bytes": 16941784,
+		"seconds": 2118
+	},
+	"https://m2.reversim.com/reversim377-bumpers61.mp3": {
+		"bytes": 57769512,
+		"seconds": 3611
+	},
+	"https://m2.reversim.com/reversim378_intuitive-codebase.mp3": {
+		"bytes": 21078953,
+		"seconds": 2635
+	},
+	"https://m2.reversim.com/reversim379_Building-lightweight-apps.mp3": {
+		"bytes": 18509549,
+		"seconds": 2314
+	},
+	"https://m2.reversim.com/reversim37_accessibility2.mp3": {
+		"bytes": 15599199,
+		"seconds": 1949
+	},
+	"https://m2.reversim.com/reversim380-bumpers62.mp3": {
+		"bytes": 27895867,
+		"seconds": 3487
+	},
+	"https://m2.reversim.com/reversim381-bumpers63.mp3": {
+		"bytes": 22696246,
+		"seconds": 2837
+	},
+	"https://m2.reversim.com/reversim382_carburetor27k-8s-and-multicloud.mp3": {
+		"bytes": 22707740,
+		"seconds": 2838
+	},
+	"https://m2.reversim.com/reversim383_bumpers64.mp3": {
+		"bytes": 27030483,
+		"seconds": 3379
+	},
+	"https://m2.reversim.com/reversim384_carburetor28.mp3": {
+		"bytes": 24669431,
+		"seconds": 3084
+	},
+	"https://m2.reversim.com/reversim386_internal-products.mp3": {
+		"bytes": 15836073,
+		"seconds": 1979
+	},
+	"https://m2.reversim.com/reversim387-bumpers66.mp3": {
+		"bytes": 17458800,
+		"seconds": 2182
+	},
+	"https://m2.reversim.com/reversim388-remote_corona_with_shlomi_noach.mp3": {
+		"bytes": 30245216,
+		"seconds": 3781
+	},
+	"https://m2.reversim.com/reversim389_cd-xp.mp3": {
+		"bytes": 23040644,
+		"seconds": 2880
+	},
+	"https://m2.reversim.com/reversim38_maven.mp3": {
+		"bytes": 18937021,
+		"seconds": 2367
+	},
+	"https://m2.reversim.com/reversim390_Bumpers-67.mp3": {
+		"bytes": 27056605,
+		"seconds": 3382
+	},
+	"https://m2.reversim.com/reversim391_carburator29.mp3": {
+		"bytes": 21572981,
+		"seconds": 2697
+	},
+	"https://m2.reversim.com/reversim392-vim.mp3": {
+		"bytes": 16929872,
+		"seconds": 2116
+	},
+	"https://m2.reversim.com/reversim393_Bumpers-68.mp3": {
+		"bytes": 31595015,
+		"seconds": 3949
+	},
+	"https://m2.reversim.com/reversim395-Securing_critical_infrastructure.mp3": {
+		"bytes": 19666460,
+		"seconds": 2458
+	},
+	"https://m2.reversim.com/reversim396_Magal.mp3": {
+		"bytes": 19616723,
+		"seconds": 2452
+	},
+	"https://m2.reversim.com/reversim397_Bumpers-69.mp3": {
+		"bytes": 29631339,
+		"seconds": 4938
+	},
+	"https://m2.reversim.com/reversim398_snyk.mp3": {
+		"bytes": 16237827,
+		"seconds": 2706
+	},
+	"https://m2.reversim.com/reversim399_bumpers70.mp3": {
+		"bytes": 27966733,
+		"seconds": 3494
+	},
+	"https://m2.reversim.com/reversim39_product_design.mp3": {
+		"bytes": 17540620,
+		"seconds": 2192
+	},
+	"https://m2.reversim.com/reversim400_bumpers71.mp3": {
+		"bytes": 20916576,
+		"seconds": 2615
+	},
+	"https://m2.reversim.com/reversim401_automl.mp3": {
+		"bytes": 17975887,
+		"seconds": 2247
+	},
+	"https://m2.reversim.com/reversim402_writing-books.mp3": {
+		"bytes": 16937259,
+		"seconds": 2117
+	},
+	"https://m2.reversim.com/reversim403_carburetor30.mp3": {
+		"bytes": 20866911,
+		"seconds": 2608
+	},
+	"https://m2.reversim.com/reversim404_network-protocols-with-tal-from-armis.mp3": {
+		"bytes": 20259825,
+		"seconds": 2532
+	},
+	"https://m2.reversim.com/reversim405_bumpers68.mp3": {
+		"bytes": 16213627,
+		"seconds": 2025
+	},
+	"https://m2.reversim.com/reversim406_smart-software-delivery-with-yisahi.mp3": {
+		"bytes": 22211485,
+		"seconds": 2776
+	},
+	"https://m2.reversim.com/reversim407-acumen.mp3": {
+		"bytes": 19009709,
+		"seconds": 2376
+	},
+	"https://m2.reversim.com/reversim408_moving-fast-under-regulations.mp3": {
+		"bytes": 21067740,
+		"seconds": 2633
+	},
+	"https://m2.reversim.com/reversim409_ml-models-for-real-world-use.mp3": {
+		"bytes": 21591025,
+		"seconds": 2699
+	},
+	"https://m2.reversim.com/reversim40_smart_and_gets_things.mp3": {
+		"bytes": 21694298,
+		"seconds": 2711
+	},
+	"https://m2.reversim.com/reversim410_bumpers73.mp3": {
+		"bytes": 32106597,
+		"seconds": 4013
+	},
+	"https://m2.reversim.com/reversim411-bumpers74.mp3": {
+		"bytes": 24638783,
+		"seconds": 3080
+	},
+	"https://m2.reversim.com/reversim414_cloud-native-challenges-with-liran-rookout.mp3": {
+		"bytes": 15777422,
+		"seconds": 1972
+	},
+	"https://m2.reversim.com/reversim415_bumpers75.mp3": {
+		"bytes": 25324028,
+		"seconds": 3165
+	},
+	"https://m2.reversim.com/reversim416_fe-state-management.mp3": {
+		"bytes": 17025657,
+		"seconds": 2128
+	},
+	"https://m2.reversim.com/reversim417_developer-growth.mp3": {
+		"bytes": 21698023,
+		"seconds": 2712
+	},
+	"https://m2.reversim.com/reversim418-carboretor31.mp3": {
+		"bytes": 24426042,
+		"seconds": 3053
+	},
+	"https://m2.reversim.com/reversim419-waze_routing.mp3": {
+		"bytes": 20770571,
+		"seconds": 2596
+	},
+	"https://m2.reversim.com/reversim41_mobile_a.mp3": {
+		"bytes": 18937857,
+		"seconds": 2367
+	},
+	"https://m2.reversim.com/reversim41_mobile_b.mp3": {
+		"bytes": 12668678,
+		"seconds": 1583
+	},
+	"https://m2.reversim.com/reversim421-the_cloud_paradox2_with_martin.mp3": {
+		"bytes": 17212276,
+		"seconds": 2151
+	},
+	"https://m2.reversim.com/reversim422-pentesting.mp3": {
+		"bytes": 19886170,
+		"seconds": 2486
+	},
+	"https://m2.reversim.com/reversim423-b2d.mp3": {
+		"bytes": 15785818,
+		"seconds": 1973
+	},
+	"https://m2.reversim.com/reversim424-melio.mp3": {
+		"bytes": 23320331,
+		"seconds": 2915
+	},
+	"https://m2.reversim.com/reversim426-bumpers77.mp3": {
+		"bytes": 29710509,
+		"seconds": 3714
+	},
+	"https://m2.reversim.com/reversim427-devops-reloaded.mp3": {
+		"bytes": 19343587,
+		"seconds": 2418
+	},
+	"https://m2.reversim.com/reversim428-jarvis.mp3": {
+		"bytes": 16623717,
+		"seconds": 2078
+	},
+	"https://m2.reversim.com/reversim429-terminal7.mp3": {
+		"bytes": 20436968,
+		"seconds": 2555
+	},
+	"https://m2.reversim.com/reversim42_gc.mp3": {
+		"bytes": 19143284,
+		"seconds": 2392
+	},
+	"https://m2.reversim.com/reversim430-bumpers78.mp3": {
+		"bytes": 26220896,
+		"seconds": 3278
+	},
+	"https://m2.reversim.com/reversim431-multirepo.mp3": {
+		"bytes": 17643120,
+		"seconds": 2205
+	},
+	"https://m2.reversim.com/reversim432-Carburetor32_2022_DevOps_Prediction.mp3": {
+		"bytes": 26159665,
+		"seconds": 3270
+	},
+	"https://m2.reversim.com/reversim433-observability.mp3": {
+		"bytes": 17666943,
+		"seconds": 2208
+	},
+	"https://m2.reversim.com/reversim435-optibus_replay.mp3": {
+		"bytes": 21718431,
+		"seconds": 2715
+	},
+	"https://m2.reversim.com/reversim436-BentzyLupu.mp3": {
+		"bytes": 20824207,
+		"seconds": 2603
+	},
+	"https://m2.reversim.com/reversim437-refactoring_observability_omer.mp3": {
+		"bytes": 24642055,
+		"seconds": 3080
+	},
+	"https://m2.reversim.com/reversim438_deepchecks.mp3": {
+		"bytes": 19730617,
+		"seconds": 2466
+	},
+	"https://m2.reversim.com/reversim439_easy.mp3": {
+		"bytes": 20342116,
+		"seconds": 2543
+	},
+	"https://m2.reversim.com/reversim43_ux3.mp3": {
+		"bytes": 18964607,
+		"seconds": 2370
+	},
+	"https://m2.reversim.com/reversim440_bumpers79.mp3": {
+		"bytes": 28129323,
+		"seconds": 3516
+	},
+	"https://m2.reversim.com/reversim441_DSworkflow.mp3": {
+		"bytes": 17137080,
+		"seconds": 2142
+	},
+	"https://m2.reversim.com/reversim442_management-in-tech-and-families.mp3": {
+		"bytes": 21401690,
+		"seconds": 2675
+	},
+	"https://m2.reversim.com/reversim443_hiring-for-strength-not-skill.mp3": {
+		"bytes": 20291172,
+		"seconds": 2536
+	},
+	"https://m2.reversim.com/reversim444_GPUdatabases.mp3": {
+		"bytes": 15813712,
+		"seconds": 1977
+	},
+	"https://m2.reversim.com/reversim445_carburetor33.mp3": {
+		"bytes": 23933823,
+		"seconds": 2992
+	},
+	"https://m2.reversim.com/reversim446_apis.mp3": {
+		"bytes": 14545206,
+		"seconds": 1818
+	},
+	"https://m2.reversim.com/reversim447_nlp.mp3": {
+		"bytes": 16708354,
+		"seconds": 2088
+	},
+	"https://m2.reversim.com/reversim448_synthetic-data.mp3": {
+		"bytes": 15428145,
+		"seconds": 1928
+	},
+	"https://m2.reversim.com/reversim449_bumpers80.mp3": {
+		"bytes": 30126307,
+		"seconds": 3766
+	},
+	"https://m2.reversim.com/reversim44_startup_weekend.mp3": {
+		"bytes": 21374559,
+		"seconds": 2671
+	},
+	"https://m2.reversim.com/reversim450_mleng.mp3": {
+		"bytes": 12496788,
+		"seconds": 1562
+	},
+	"https://m2.reversim.com/reversim451_structuring_dev_orgs.mp3": {
+		"bytes": 18009043,
+		"seconds": 2251
+	},
+	"https://m2.reversim.com/reversim452_carburetor34.mp3": {
+		"bytes": 25382679,
+		"seconds": 3173
+	},
+	"https://m2.reversim.com/reversim453_payments.mp3": {
+		"bytes": 14813745,
+		"seconds": 1852
+	},
+	"https://m2.reversim.com/reversim454_govil.mp3": {
+		"bytes": 19349229,
+		"seconds": 2419
+	},
+	"https://m2.reversim.com/reversim455_dbt.mp3": {
+		"bytes": 15158561,
+		"seconds": 1895
+	},
+	"https://m2.reversim.com/reversim456_carburetor35.mp3": {
+		"bytes": 28699603,
+		"seconds": 3587
+	},
+	"https://m2.reversim.com/reversim457-tech_debt.mp3": {
+		"bytes": 16596968,
+		"seconds": 2075
+	},
+	"https://m2.reversim.com/reversim458-MAX.mp3": {
+		"bytes": 15966894,
+		"seconds": 1996
+	},
+	"https://m2.reversim.com/reversim459_bumpers81.mp3": {
+		"bytes": 31838267,
+		"seconds": 3980
+	},
+	"https://m2.reversim.com/reversim45_java_ref.mp3": {
+		"bytes": 15737962,
+		"seconds": 1967
+	},
+	"https://m2.reversim.com/reversim460-fuckeup_driven_development.mp3": {
+		"bytes": 15027739,
+		"seconds": 1878
+	},
+	"https://m2.reversim.com/reversim461_bumpers82.mp3": {
+		"bytes": 21758345,
+		"seconds": 2720
+	},
+	"https://m2.reversim.com/reversim462_platformize.mp3": {
+		"bytes": 19830717,
+		"seconds": 2479
+	},
+	"https://m2.reversim.com/reversim463_synthetic_data_gen.mp3": {
+		"bytes": 18216977,
+		"seconds": 2277
+	},
+	"https://m2.reversim.com/reversim464_crittical.mp3": {
+		"bytes": 17996085,
+		"seconds": 2249
+	},
+	"https://m2.reversim.com/reversim465_carburetor36.mp3": {
+		"bytes": 23254639,
+		"seconds": 2907
+	},
+	"https://m2.reversim.com/reversim466_codium.mp3": {
+		"bytes": 20734345,
+		"seconds": 2592
+	},
+	"https://m2.reversim.com/reversim467_Passkeys-with-Rooly.mp3": {
+		"bytes": 17084516,
+		"seconds": 2135
+	},
+	"https://m2.reversim.com/reversim468_cryptography-with-arik-fireblocks.mp3": {
+		"bytes": 17559945,
+		"seconds": 2195
+	},
+	"https://m2.reversim.com/reversim469-software-early-startup-Shai-Yallin.mp3": {
+		"bytes": 21281035,
+		"seconds": 2660
+	},
+	"https://m2.reversim.com/reversim46_multiple_dc.mp3": {
+		"bytes": 14788567,
+		"seconds": 1848
+	},
+	"https://m2.reversim.com/reversim470_carburetor37.mp3": {
+		"bytes": 19299491,
+		"seconds": 2412
+	},
+	"https://m2.reversim.com/reversim471_Notifications-at-scale-with-Gal-Barak.mp3": {
+		"bytes": 15088134,
+		"seconds": 1886
+	},
+	"https://m2.reversim.com/reversim472-Bumpers83-Nostalgia.mp3": {
+		"bytes": 30185656,
+		"seconds": 3773
+	},
+	"https://m2.reversim.com/reversim473_product-thinking.mp3": {
+		"bytes": 17405509,
+		"seconds": 2176
+	},
+	"https://m2.reversim.com/reversim475_jamba.mp3": {
+		"bytes": 18118756,
+		"seconds": 2265
+	},
+	"https://m2.reversim.com/reversim476_ML-explainability-etc.mp3": {
+		"bytes": 18653744,
+		"seconds": 2332
+	},
+	"https://m2.reversim.com/reversim477-exploits.mp3": {
+		"bytes": 20627347,
+		"seconds": 2578
+	},
+	"https://m2.reversim.com/reversim478-haim-yadid.mp3": {
+		"bytes": 19764052,
+		"seconds": 2470
+	},
+	"https://m2.reversim.com/reversim479_distributed_workflows.mp3": {
+		"bytes": 18320839,
+		"seconds": 2290
+	},
+	"https://m2.reversim.com/reversim47_eishay2.mp3": {
+		"bytes": 21572672,
+		"seconds": 2696
+	},
+	"https://m2.reversim.com/reversim480_dev-manager-dev.mp3": {
+		"bytes": 21096088,
+		"seconds": 2637
+	},
+	"https://m2.reversim.com/reversim481-ML-for-insurance-with-Dror-Lederman.mp3": {
+		"bytes": 21723236,
+		"seconds": 2715
+	},
+	"https://m2.reversim.com/reversim482-Bumpers84.mp3": {
+		"bytes": 23539896,
+		"seconds": 2942
+	},
+	"https://m2.reversim.com/reversim483-foundational_models_Ofir_Bibi_Lightricks.mp3": {
+		"bytes": 22648598,
+		"seconds": 2831
+	},
+	"https://m2.reversim.com/reversim484-ArchitectWTF.mp3": {
+		"bytes": 24193793,
+		"seconds": 3024
+	},
+	"https://m2.reversim.com/reversim485-Ivrit.mp3": {
+		"bytes": 18142580,
+		"seconds": 2268
+	},
+	"https://m2.reversim.com/reversim486-saas-onpremises.mp3": {
+		"bytes": 17397777,
+		"seconds": 2175
+	},
+	"https://m2.reversim.com/reversim487-Bumpers85.mp3": {
+		"bytes": 21780497,
+		"seconds": 2722
+	},
+	"https://m2.reversim.com/reversim488-Developing-with-LLMs-securely-Guy-from-Pillar.mp3": {
+		"bytes": 20829430,
+		"seconds": 2604
+	},
+	"https://m2.reversim.com/reversim489-carburetor38.mp3": {
+		"bytes": 20033500,
+		"seconds": 2504
+	},
+	"https://m2.reversim.com/reversim48_eyal_sela.mp3": {
+		"bytes": 19156659,
+		"seconds": 2394
+	},
+	"https://m2.reversim.com/reversim490-K8s-with-Erez-Komodor.mp3": {
+		"bytes": 20559957,
+		"seconds": 2569
+	},
+	"https://m2.reversim.com/reversim491-Precise-GenAI-Finance.mp3": {
+		"bytes": 17778020,
+		"seconds": 2222
+	},
+	"https://m2.reversim.com/reversim492-Ella-Onezero.mp3": {
+		"bytes": 21601093,
+		"seconds": 2700
+	},
+	"https://m2.reversim.com/reversim493-Accessibility-Asaf-Evinced.mp3": {
+		"bytes": 23052555,
+		"seconds": 2882
+	},
+	"https://m2.reversim.com/reversim494_solead_rs.mp3": {
+		"bytes": 19676281,
+		"seconds": 2459
+	},
+	"https://m2.reversim.com/reversim495_ML_Democratization_Yuval_Voyantis.mp3": {
+		"bytes": 19355079,
+		"seconds": 2419
+	},
+	"https://m2.reversim.com/reversim496_bumpers86.mp3": {
+		"bytes": 21839847,
+		"seconds": 2730
+	},
+	"https://m2.reversim.com/reversim497_aihr.mp3": {
+		"bytes": 19997065,
+		"seconds": 2500
+	},
+	"https://m2.reversim.com/reversim498-hailo.mp3": {
+		"bytes": 15610165,
+		"seconds": 1951
+	},
+	"https://m2.reversim.com/reversim499-myops.mp3": {
+		"bytes": 19628634,
+		"seconds": 2454
+	},
+	"https://m2.reversim.com/reversim49_zig_zag.mp3": {
+		"bytes": 20599245,
+		"seconds": 2574
+	},
+	"https://m2.reversim.com/reversim500_bumpers87.mp3": {
+		"bytes": 28878561,
+		"seconds": 3610
+	},
+	"https://m2.reversim.com/reversim502_carborator35.mp3": {
+		"bytes": 21817977,
+		"seconds": 2727
+	},
+	"https://m2.reversim.com/reversim503_bumpers88.mp3": {
+		"bytes": 17798463,
+		"seconds": 2225
+	},
+	"https://m2.reversim.com/reversim504_functional.mp3": {
+		"bytes": 16264762,
+		"seconds": 2033
+	},
+	"https://m2.reversim.com/reversim505_bumpers89.mp3": {
+		"bytes": 25466552,
+		"seconds": 3183
+	},
+	"https://m2.reversim.com/reversim506-ml_infra_mind.mp3": {
+		"bytes": 18392629,
+		"seconds": 2299
+	},
+	"https://m2.reversim.com/reversim507-carburetor39.t2.mp3": {
+		"bytes": 24940759,
+		"seconds": 3118
+	},
+	"https://m2.reversim.com/reversim508-controlled_image_generation.mp3": {
+		"bytes": 19762454,
+		"seconds": 2470
+	},
+	"https://m2.reversim.com/reversim509-bumpers90.mp3": {
+		"bytes": 35142135,
+		"seconds": 4392
+	},
+	"https://m2.reversim.com/reversim50_cdn.mp3": {
+		"bytes": 28684666,
+		"seconds": 3585
+	},
+	"https://m2.reversim.com/reversim510-federated_learning.mp3": {
+		"bytes": 17328050,
+		"seconds": 2166
+	},
+	"https://m2.reversim.com/reversim511_Data-for-AI-Nimrod-BigID.mp3": {
+		"bytes": 18266369,
+		"seconds": 2283
+	},
+	"https://m2.reversim.com/reversim512-carburetor40.mp3": {
+		"bytes": 23029432,
+		"seconds": 2879
+	},
+	"https://m2.reversim.com/reversim513-PDFRTL.mp3": {
+		"bytes": 30655586,
+		"seconds": 2366
+	},
+	"https://m2.reversim.com/reversim514-attack_analytics.mp3": {
+		"bytes": 27909301,
+		"seconds": 2058
+	},
+	"https://m2.reversim.com/reversim515-bumpers91.mp3": {
+		"bytes": 43663709,
+		"seconds": 3156
+	},
+	"https://m2.reversim.com/reversim516-carburetor41.mp3": {
+		"bytes": 42888837,
+		"seconds": 3310
+	},
+	"https://m2.reversim.com/reversim517-bumpers92.mp3": {
+		"bytes": 30382953,
+		"seconds": 2269
+	},
+	"https://m2.reversim.com/reversim518-carburetor42.mp3": {
+		"bytes": 36540546,
+		"seconds": 2820
+	},
+	"https://m2.reversim.com/reversim519-agentic_awakening.mp3": {
+		"bytes": 34050327,
+		"seconds": 2726
+	},
+	"https://m2.reversim.com/reversim520-harness_optimization_with_or_from_ai21labs.mp3": {
+		"bytes": 37371400,
+		"seconds": 2342
+	},
+	"https://m2.reversim.com/reversim521-evaluating_risk_with_marina_from_cyera.mp3": {
+		"bytes": 28036719,
+		"seconds": 2204
+	},
+	"https://m2.reversim.com/reversim522-company_brain_with_shmulik_from_lusha.mp3": {
+		"bytes": 30216747,
+		"seconds": 2460
+	},
+	"https://m2.reversim.com/reversimreversim353_istio-with-shay-erlichman.mp3": {
+		"bytes": 18326483,
+		"seconds": 2291
+	},
+	"https://m2.reversim.com/summit2016_ADI_SHACHAM-SHAVIT.mp3": {
+		"bytes": 18576286,
+		"seconds": 2322
+	},
+	"https://m2.reversim.com/summit2016_AMIT_ROSEBERGER.mp3": {
+		"bytes": 18172953,
+		"seconds": 2272
+	},
+	"https://m2.reversim.com/summit2016_ARIEL_M_MOSKOVICH.mp3": {
+		"bytes": 15229686,
+		"seconds": 1904
+	},
+	"https://m2.reversim.com/summit2016_AVISHAI_ISH-SHALOM.mp3": {
+		"bytes": 12920254,
+		"seconds": 1615
+	},
+	"https://m2.reversim.com/summit2016_BOAZ_GAON.mp3": {
+		"bytes": 16324313,
+		"seconds": 2040
+	},
+	"https://m2.reversim.com/summit2016_David_Gruzman.mp3": {
+		"bytes": 9339801,
+		"seconds": 1167
+	},
+	"https://m2.reversim.com/summit2016_EREZ_LOTAN.mp3": {
+		"bytes": 21437000,
+		"seconds": 2680
+	},
+	"https://m2.reversim.com/summit2016_EYAL_YAVOR.mp3": {
+		"bytes": 15193526,
+		"seconds": 1899
+	},
+	"https://m2.reversim.com/summit2016_Eyal_Gruss.mp3": {
+		"bytes": 20514982,
+		"seconds": 2564
+	},
+	"https://m2.reversim.com/summit2016_GIL_TAYAR.mp3": {
+		"bytes": 13162452,
+		"seconds": 1645
+	},
+	"https://m2.reversim.com/summit2016_HADAR_DAVIDOVICH.mp3": {
+		"bytes": 16930988,
+		"seconds": 2116
+	},
+	"https://m2.reversim.com/summit2016_IFTACH_BAR.mp3": {
+		"bytes": 20089082,
+		"seconds": 2511
+	},
+	"https://m2.reversim.com/summit2016_ITAY_MAMAN.mp3": {
+		"bytes": 19150345,
+		"seconds": 2394
+	},
+	"https://m2.reversim.com/summit2016_Inbal_G.mp3": {
+		"bytes": 2438244,
+		"seconds": 305
+	},
+	"https://m2.reversim.com/summit2016_Iris_Shoor.mp3": {
+		"bytes": 16273114,
+		"seconds": 2034
+	},
+	"https://m2.reversim.com/summit2016_JOEY_FELDBERG.mp3": {
+		"bytes": 19493702,
+		"seconds": 2437
+	},
+	"https://m2.reversim.com/summit2016_KALEB_LOOSBROCK.mp3": {
+		"bytes": 25089550,
+		"seconds": 3136
+	},
+	"https://m2.reversim.com/summit2016_LIOR_BAR-ON.mp3": {
+		"bytes": 18950562,
+		"seconds": 2369
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_D1_Erez_L.mp3": {
+		"bytes": 2546095,
+		"seconds": 318
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_D1_Hagai_L.mp3": {
+		"bytes": 2533557,
+		"seconds": 317
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_D1_Nati_C.mp3": {
+		"bytes": 2431574,
+		"seconds": 304
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_D1_Yonatan_Ma.mp3": {
+		"bytes": 2492391,
+		"seconds": 311
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_d2_Allon_M.mp3": {
+		"bytes": 2634703,
+		"seconds": 329
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_d2_Dov.mp3": {
+		"bytes": 2475666,
+		"seconds": 309
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_d2_Guy_D.mp3": {
+		"bytes": 2490505,
+		"seconds": 311
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_d2_Michal_B.mp3": {
+		"bytes": 2478596,
+		"seconds": 310
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_d2_Moran_S.mp3": {
+		"bytes": 2377449,
+		"seconds": 297
+	},
+	"https://m2.reversim.com/summit2016_Lightning_talk_d2_Yoni_T.mp3": {
+		"bytes": 2512867,
+		"seconds": 314
+	},
+	"https://m2.reversim.com/summit2016_Limor_Lahiani.mp3": {
+		"bytes": 17716330,
+		"seconds": 2214
+	},
+	"https://m2.reversim.com/summit2016_MICHAL_TIROSH.mp3": {
+		"bytes": 3178484,
+		"seconds": 317
+	},
+	"https://m2.reversim.com/summit2016_NIR_NAHUM.mp3": {
+		"bytes": 14153851,
+		"seconds": 1769
+	},
+	"https://m2.reversim.com/summit2016_NIR_RUBINSTEIN.mp3": {
+		"bytes": 17361484,
+		"seconds": 2170
+	},
+	"https://m2.reversim.com/summit2016_NOAM_ELFANBAUM.mp3": {
+		"bytes": 15006911,
+		"seconds": 1876
+	},
+	"https://m2.reversim.com/summit2016_OREN_ELLENBOGEN.mp3": {
+		"bytes": 33511678,
+		"seconds": 2333
+	},
+	"https://m2.reversim.com/summit2016_OREN_RUBIN.mp3": {
+		"bytes": 20392520,
+		"seconds": 2549
+	},
+	"https://m2.reversim.com/summit2016_Open_Source_D1_Boris_K.mp3": {
+		"bytes": 4510919,
+		"seconds": 564
+	},
+	"https://m2.reversim.com/summit2016_Open_Source_D1_Roi_E.mp3": {
+		"bytes": 3466855,
+		"seconds": 433
+	},
+	"https://m2.reversim.com/summit2016_Open_Source_D1_Shlomi_Z.mp3": {
+		"bytes": 3274806,
+		"seconds": 409
+	},
+	"https://m2.reversim.com/summit2016_Open_Source_D1_Yonatan_Me.mp3": {
+		"bytes": 4595141,
+		"seconds": 574
+	},
+	"https://m2.reversim.com/summit2016_Open_Source_D2_Arik_F.mp3": {
+		"bytes": 4929504,
+		"seconds": 616
+	},
+	"https://m2.reversim.com/summit2016_Open_Source_D2_Itamar_SH.mp3": {
+		"bytes": 4810807,
+		"seconds": 601
+	},
+	"https://m2.reversim.com/summit2016_Open_Source_D2_Tomer_B.mp3": {
+		"bytes": 4868065,
+		"seconds": 608
+	},
+	"https://m2.reversim.com/summit2016_Open_Source_D2_eyal_A.mp3": {
+		"bytes": 5084985,
+		"seconds": 636
+	},
+	"https://m2.reversim.com/summit2016_Ran_Levy.mp3": {
+		"bytes": 13223891,
+		"seconds": 1653
+	},
+	"https://m2.reversim.com/summit2016_SASHA_GOLDSHTEIN.mp3": {
+		"bytes": 18507112,
+		"seconds": 2313
+	},
+	"https://m2.reversim.com/summit2016_SHAI_KFIR.mp3": {
+		"bytes": 19470919,
+		"seconds": 2434
+	},
+	"https://m2.reversim.com/summit2016_SHAKED_BAR.mp3": {
+		"bytes": 14674838,
+		"seconds": 1834
+	},
+	"https://m2.reversim.com/summit2016_SHEM_MAGNEZI.mp3": {
+		"bytes": 19931304,
+		"seconds": 2491
+	},
+	"https://m2.reversim.com/summit2016_TAL_KOL.mp3": {
+		"bytes": 21768439,
+		"seconds": 2721
+	},
+	"https://m2.reversim.com/summit2016_TAMIR_DRESHER.mp3": {
+		"bytes": 19429545,
+		"seconds": 2429
+	},
+	"https://m2.reversim.com/summit2016_URI_SHAMAY.mp3": {
+		"bytes": 19415540,
+		"seconds": 2427
+	},
+	"https://m2.reversim.com/summit2016_YONATAN_MAMAN.mp3": {
+		"bytes": 17361483,
+		"seconds": 2170
+	},
+	"https://m2.reversim.com/summit2016_YULIA_TRAKHTENBERG.mp3": {
+		"bytes": 14273188,
+		"seconds": 1784
+	},
+	"https://m2.reversim.com/summit2016_YUVAL_KAMINKA.mp3": {
+		"bytes": 20138195,
+		"seconds": 2517
+	},
+	"https://m2.reversim.com/summit2016_YUVAL_SAMET.mp3": {
+		"bytes": 16920116,
+		"seconds": 2115
+	},
+	"https://m2.reversim.com/summit2017-Moshe_Eshel.mp3": {
+		"bytes": 23781141,
+		"seconds": 2378
+	},
+	"https://m2.reversim.com/summit2018-Al_Yaros.mp3": {
+		"bytes": 14114383,
+		"seconds": 1764
+	},
+	"https://m2.reversim.com/summit2018-Alex_Badyan.mp3": {
+		"bytes": 13138657,
+		"seconds": 1642
+	},
+	"https://m2.reversim.com/summit2018-Amit_Lichtenberg.mp3": {
+		"bytes": 12466161,
+		"seconds": 1558
+	},
+	"https://m2.reversim.com/summit2018-Ayelet_Dekel.mp3": {
+		"bytes": 2504940,
+		"seconds": 313
+	},
+	"https://m2.reversim.com/summit2018-Bar_Vinograd.mp3": {
+		"bytes": 9202945,
+		"seconds": 1150
+	},
+	"https://m2.reversim.com/summit2018-Benjamin_Gruenbaum.mp3": {
+		"bytes": 18104222,
+		"seconds": 2263
+	},
+	"https://m2.reversim.com/summit2018-Dalya_Gartzman.mp3": {
+		"bytes": 11915500,
+		"seconds": 1489
+	},
+	"https://m2.reversim.com/summit2018-Dana_Averbuch.mp3": {
+		"bytes": 11000378,
+		"seconds": 1375
+	},
+	"https://m2.reversim.com/summit2018-Danny_Grander.mp3": {
+		"bytes": 9643683,
+		"seconds": 1205
+	},
+	"https://m2.reversim.com/summit2018-David_Weinberg.mp3": {
+		"bytes": 2433260,
+		"seconds": 304
+	},
+	"https://m2.reversim.com/summit2018-Dotan_Nahum.mp3": {
+		"bytes": 11717178,
+		"seconds": 1465
+	},
+	"https://m2.reversim.com/summit2018-Erez_Lotan.mp3": {
+		"bytes": 2635134,
+		"seconds": 329
+	},
+	"https://m2.reversim.com/summit2018-Eyal_Altshuler.mp3": {
+		"bytes": 2465234,
+		"seconds": 308
+	},
+	"https://m2.reversim.com/summit2018-Eyal_Eizenberg.mp3": {
+		"bytes": 8758863,
+		"seconds": 1095
+	},
+	"https://m2.reversim.com/summit2018-Gil_Vind.mp3": {
+		"bytes": 2493864,
+		"seconds": 312
+	},
+	"https://m2.reversim.com/summit2018-Gilad_Ben-Yossef.mp3": {
+		"bytes": 13455471,
+		"seconds": 1682
+	},
+	"https://m2.reversim.com/summit2018-Gilad_Shoham.mp3": {
+		"bytes": 6137214,
+		"seconds": 767
+	},
+	"https://m2.reversim.com/summit2018-Hall_of_shame.mp3": {
+		"bytes": 24547898,
+		"seconds": 3068
+	},
+	"https://m2.reversim.com/summit2018-Holden_Karau.mp3": {
+		"bytes": 16966955,
+		"seconds": 2121
+	},
+	"https://m2.reversim.com/summit2018-Idan_Levin.mp3": {
+		"bytes": 16867480,
+		"seconds": 2108
+	},
+	"https://m2.reversim.com/summit2018-Inbal_Zilberman_Kubovsky.mp3": {
+		"bytes": 5432326,
+		"seconds": 679
+	},
+	"https://m2.reversim.com/summit2018-Itiel_Shwartz.mp3": {
+		"bytes": 2543601,
+		"seconds": 318
+	},
+	"https://m2.reversim.com/summit2018-Jenny_Abramov.mp3": {
+		"bytes": 2513508,
+		"seconds": 314
+	},
+	"https://m2.reversim.com/summit2018-Jonathan_Saring.mp3": {
+		"bytes": 15969704,
+		"seconds": 1996
+	},
+	"https://m2.reversim.com/summit2018-Lital_Hassine.mp3": {
+		"bytes": 13823066,
+		"seconds": 1728
+	},
+	"https://m2.reversim.com/summit2018-Mey_Beisaron.mp3": {
+		"bytes": 15462511,
+		"seconds": 1933
+	},
+	"https://m2.reversim.com/summit2018-Michael_Feinstein.mp3": {
+		"bytes": 15313299,
+		"seconds": 1914
+	},
+	"https://m2.reversim.com/summit2018-Michael_Shalyt.mp3": {
+		"bytes": 11744973,
+		"seconds": 1468
+	},
+	"https://m2.reversim.com/summit2018-Morad_Stern.mp3": {
+		"bytes": 15130860,
+		"seconds": 1891
+	},
+	"https://m2.reversim.com/summit2018-Moran_Weber-and-Jonathan_Avinor.mp3": {
+		"bytes": 14194213,
+		"seconds": 1774
+	},
+	"https://m2.reversim.com/summit2018-Nataly_Kuritz.mp3": {
+		"bytes": 2496790,
+		"seconds": 312
+	},
+	"https://m2.reversim.com/summit2018-Netta_Bondy.mp3": {
+		"bytes": 12595102,
+		"seconds": 1574
+	},
+	"https://m2.reversim.com/summit2018-Nissim_Tapiro.mp3": {
+		"bytes": 12902093,
+		"seconds": 1613
+	},
+	"https://m2.reversim.com/summit2018-Omer_Goldberg.mp3": {
+		"bytes": 11711745,
+		"seconds": 1464
+	},
+	"https://m2.reversim.com/summit2018-Oren_Ellenbogen.mp3": {
+		"bytes": 14927523,
+		"seconds": 1866
+	},
+	"https://m2.reversim.com/summit2018-Orit_Wasserman.mp3": {
+		"bytes": 13745743,
+		"seconds": 1718
+	},
+	"https://m2.reversim.com/summit2018-Ran_Bar_Zik.mp3": {
+		"bytes": 14215738,
+		"seconds": 1777
+	},
+	"https://m2.reversim.com/summit2018-Reut_Golan.mp3": {
+		"bytes": 10197897,
+		"seconds": 1275
+	},
+	"https://m2.reversim.com/summit2018-Reuth_Mirsky.mp3": {
+		"bytes": 2518106,
+		"seconds": 315
+	},
+	"https://m2.reversim.com/summit2018-Roi_Lipman.mp3": {
+		"bytes": 14458155,
+		"seconds": 1807
+	},
+	"https://m2.reversim.com/summit2018-Shachar_Brenner.mp3": {
+		"bytes": 10464346,
+		"seconds": 1308
+	},
+	"https://m2.reversim.com/summit2018-Shahar_Kedar.mp3": {
+		"bytes": 13014315,
+		"seconds": 1627
+	},
+	"https://m2.reversim.com/summit2018-Shani_Brusilovsky.mp3": {
+		"bytes": 2518315,
+		"seconds": 315
+	},
+	"https://m2.reversim.com/summit2018-Shiri_Haim.mp3": {
+		"bytes": 12171500,
+		"seconds": 1521
+	},
+	"https://m2.reversim.com/summit2018-Tomer_Gabel.mp3": {
+		"bytes": 15205675,
+		"seconds": 1901
+	},
+	"https://m2.reversim.com/summit2018-Uri_Nativ-and-Roni_Nativ.mp3": {
+		"bytes": 17683128,
+		"seconds": 2210
+	},
+	"https://m2.reversim.com/summit2018-Uri_Shaked.mp3": {
+		"bytes": 15507441,
+		"seconds": 1938
+	},
+	"https://m2.reversim.com/summit2018-Uri_Shamay.mp3": {
+		"bytes": 13381910,
+		"seconds": 1673
+	},
+	"https://m2.reversim.com/summit2018-Vlad_Ioffe.mp3": {
+		"bytes": 12772107,
+		"seconds": 1596
+	},
+	"https://m2.reversim.com/summit2018-Yaron_Idan.mp3": {
+		"bytes": 11986344,
+		"seconds": 1498
+	},
+	"https://m2.reversim.com/summit2018-Yoel_Zeldes.mp3": {
+		"bytes": 15250396,
+		"seconds": 1906
+	},
+	"https://m2.reversim.com/summit2018-Yonatan_Bergman.mp3": {
+		"bytes": 2603578,
+		"seconds": 325
+	},
+	"https://m2.reversim.com/summit2018-Yonatan_Maman.mp3": {
+		"bytes": 13004493,
+		"seconds": 1625
+	},
+	"https://m2.reversim.com/summit2018-Yonatan_Mevorach.mp3": {
+		"bytes": 12094595,
+		"seconds": 1512
+	},
+	"https://m2.reversim.com/summit2018-Yoni_Tsafir-and-Iftach_Bar.mp3": {
+		"bytes": 2662093,
+		"seconds": 333
+	},
+	"https://m2.reversim.com/summit2018-Zohar_Lerman.mp3": {
+		"bytes": 2525629,
+		"seconds": 316
+	}
+}

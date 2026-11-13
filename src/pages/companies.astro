@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import IndexPage from '../components/IndexPage.astro';
+import { getAllPosts } from '../lib/posts';
+import { buildCompanyIndex, catalog } from '../lib/catalog';
+
+const ids = new Set((await getAllPosts()).map((p) => p.id));
+const groups = buildCompanyIndex(catalog, ids);
+---
+
+<BaseLayout title="חברות | רברס עם פלטפורמה" description={`${groups.length} חברות שהתארחו ברברס עם פלטפורמה, והפרקים עליהן.`}>
+	<h1 class="section-title">חברות ({groups.length})</h1>
+	<p class="index-note">הרשימה נוצרה אוטומטית מדפי הפרקים. מצאתם טעות? <a href="/about.html">כתבו לנו</a>.</p>
+	<IndexPage groups={groups} />
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+// Shared layout of the guest index and the company index: a jump list of letters, then one block for each name.
+import { getAllPosts, getPostPermalink } from '../lib/posts';
+import { initial, type IndexGroup } from '../lib/catalog';
+
+interface Props {
+	groups: IndexGroup[];
+}
+const { groups } = Astro.props;
+const posts = new Map((await getAllPosts()).map((p) => [p.id, p]));
+const letters = [...new Set(groups.map((g) => initial(g.name)))];
+const firstOfLetter = new Set<string>();
+const anchor = (g: IndexGroup) => {
+	const l = initial(g.name);
+	if (firstOfLetter.has(l)) return undefined;
+	firstOfLetter.add(l);
+	return `letter-${l}`;
+};
+---
+
+<nav class="index-letters" aria-label="קפיצה לאות">
+	{letters.map((l) => <a href={`#letter-${l}`}>{l}</a>)}
+</nav>
+<input class="index-filter" type="search" placeholder="סינון…" aria-label="סינון הרשימה" />
+<div class="index-groups">
+	{groups.map((g) => (
+		<section class="index-group" id={anchor(g)} data-search={`${g.name} ${g.altName ?? ''}`.toLowerCase()}>
+			<h2 dir="auto">
+				{g.name}
+				{g.altName && <span class="index-alt" dir="ltr">{g.altName}</span>}
+			</h2>
+			<ul>
+				{g.episodes
+					.map((e) => ({ e, post: posts.get(e.id) }))
+					.filter((x) => x.post)
+					.sort((a, b) => b.post!.data.date.getTime() - a.post!.data.date.getTime())
+					.map(({ e, post }) => (
+						<li>
+							<a href={getPostPermalink(post!)} dir="auto">{post!.data.title}</a>
+							<span class="index-meta">
+								{post!.data.date.getFullYear()}
+								{e.detail && ` · ${e.detail}`}
+							</span>
+						</li>
+					))}
+			</ul>
+			{g.links && g.links.length > 0 && (
+				<ul class="index-talks">
+					{g.links.map((l) => (
+						<li>
+							<a href={l.href} target="_blank" rel="noreferrer noopener" dir="auto">{l.label}</a>
+							{l.meta && <span class="index-meta">{l.meta} · וידאו</span>}
+						</li>
+					))}
+				</ul>
+			)}
+		</section>
+	))}
+</div>
+
+<script is:inline>
+	(function () {
+		var input = document.querySelector('.index-filter');
+		if (!input) return;
+		var groups = Array.prototype.slice.call(document.querySelectorAll('.index-group'));
+		var apply = function () {
+			var q = input.value.trim().toLowerCase();
+			groups.forEach(function (g) { g.hidden = q !== '' && g.dataset.search.indexOf(q) === -1; });
+		};
+		input.addEventListener('input', apply);
+		// Episode pages link here with ?q=<guest name>.
+		try {
+			var q = new URLSearchParams(location.search).get('q');
+			if (q) { input.value = q; apply(); }
+		} catch (e) {}
+	})();
+</script>

@@ -1,0 +1,125 @@
+{
+	"generated": "2026-11-13",
+	"overall": [
+		"2021-09-419-navigation-waze",
+		"2023-06-460-fuckups-driven-development-with",
+		"2010-12-086-software-axioms",
+		"2021-09-421-cost-of-cloud-trillion-dollar",
+		"2024-11-480-developer-manager-developer-manager",
+		"2026-08-519-agentic-awakening"
+	],
+	"topics": {
+		"ai": [
+			"2026-08-519-agentic-awakening",
+			"2019-03-363-gpu-nvidia",
+			"2026-09-520-harness-optimization-with-or-from-ai21labs",
+			"2022-11-450-what-is-ml-engineer-with-or-from",
+			"2016-04-296-nlp-with-yoav-goldberg",
+			"2026-10-521-evaluating-risk-with-marina-from-cyera"
+		],
+		"data": [
+			"2026-10-521-evaluating-risk-with-marina-from-cyera",
+			"2023-02-455-dbt-with-chaim-turkel",
+			"2021-09-419-navigation-waze",
+			"2018-01-331-with-randy-shoup-about-data-science",
+			"2016-01-287-search-with-ronny-lempel",
+			"2010-01-056-nosql"
+		],
+		"architecture": [
+			"2010-12-086-software-axioms",
+			"2014-03-208-fogcast-06-many-ways-to-scale",
+			"2017-12-328-tension-between-agility-and",
+			"2021-09-421-cost-of-cloud-trillion-dollar",
+			"2024-11-484-architect-wtf-with-shai-yalin-and",
+			"2026-08-519-agentic-awakening"
+		],
+		"infra": [
+			"2021-09-421-cost-of-cloud-trillion-dollar",
+			"2024-10-479-durable-distributed-workflows-with",
+			"2014-03-208-fogcast-06-many-ways-to-scale",
+			"2013-06-185-final-class-30-caching",
+			"2022-02-433-breaking-down-observability",
+			"2025-01-490-k8s-with-erez-from-komodor"
+		],
+		"databases": [
+			"2010-01-056-nosql",
+			"2017-02-316-yet-another-session-with-shmoli",
+			"2023-02-455-dbt-with-chaim-turkel",
+			"2009-12-47-scalability",
+			"2014-07-223-fogcast-11-redis",
+			"2022-08-444-gpu-databases"
+		],
+		"frontend": [
+			"2021-08-416-state-management-in-react",
+			"2018-05-339-jamstack",
+			"2019-10-379-building-lightweight-apps-with",
+			"2025-03-493-accessibility-with-asaf-from-evinced",
+			"2014-05-217-fogcast-09-fullstack-devs",
+			"2011-03-096-web-performance"
+		],
+		"security": [
+			"2022-08-446-securing-web-apis",
+			"2021-10-422-pentesting-with-erez-metula",
+			"2023-09-passkeys-with-rooly-from-ownid",
+			"2025-01-488-developing-with-llms-securely-with",
+			"2024-03-468-crypto-with-arik-from-fireblocks",
+			"2026-10-521-evaluating-risk-with-marina-from-cyera"
+		],
+		"languages": [
+			"2025-11-504-functional-programming-with-daniel",
+			"2022-03-436-how-to-reach-retirement-as-software",
+			"2009-11-42",
+			"2012-02-final-class-15-oop-ftw",
+			"2017-06-323-mozilla",
+			"2019-04-3-66-clicktale"
+		],
+		"quality": [
+			"2023-06-460-fuckups-driven-development-with",
+			"2014-04-212-fogcast-7-testing-or-not",
+			"2022-03-437-refactoring-and-observability-with",
+			"2020-05-389-with-roy-osherove-cdxp-in-enterprise",
+			"2011-10-109-final-class-10",
+			"2009-02-8-debugger"
+		],
+		"management": [
+			"2013-01-162-software-lead-weekly",
+			"2024-11-480-developer-manager-developer-manager",
+			"2023-06-460-fuckups-driven-development-with",
+			"2016-05-301-where-do-developers-go-at-40-or-50",
+			"2012-05-137-final-class-17-software-deadlines",
+			"2024-04-469-software-development-in-early-stage"
+		],
+		"career": [
+			"2024-11-480-developer-manager-developer-manager",
+			"2016-05-301-where-do-developers-go-at-40-or-50",
+			"2021-08-417-developer-growth",
+			"2015-01-gkh",
+			"2022-03-436-how-to-reach-retirement-as-software",
+			"2012-09-149-final-class-22-personal-development"
+		],
+		"product": [
+			"2024-07-473-product-thinking-for-devs-with-with",
+			"2012-02-125-lean-startup",
+			"2021-10-423-b2d-with-asi-from-cloudinary",
+			"2022-03-437-refactoring-and-observability-with",
+			"2023-07-462-when-and-why-should-you-platformize",
+			"2009-12-49"
+		],
+		"opensource": [
+			"2014-04-211-oss-licensing",
+			"2017-02-316-yet-another-session-with-shmoli",
+			"2012-08-148-final-class-21-working-extra",
+			"2016-07-306-redash",
+			"2019-02-362-elastic-distributed-corporate-with",
+			"2024-12-485-ivrit"
+		],
+		"lowlevel": [
+			"2019-03-363-gpu-nvidia",
+			"2012-12-160-kvm",
+			"2009-11-42",
+			"2025-07-498-with-niv-from-hailo",
+			"2016-03-293-d-with-shahar-shemesh",
+			"2015-05-261-fpga"
+		]
+	}
+}

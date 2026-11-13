@@ -1,7 +1,13 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
-import { getPostPath, getPostPermalink } from '../../../lib/posts';
+import { getAllPosts, getPostPath, getPostPermalink } from '../../../lib/posts';
+import { catalog, TOPIC_LABELS } from '../../../lib/catalog';
+import { relatedEpisodes } from '../../../lib/related';
+import { SHOW_LINKS } from '../../../lib/links';
+import { formatTime, plainDescription } from '../../../lib/episode';
+import { getAudioMeta } from '../../../lib/audioMeta';
+import { getTranscript } from '../../../lib/transcripts';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('posts', ({ data }) => !data.draft);
@@ -30,13 +36,71 @@ const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 	day: 'numeric',
 });
 const permalink = getPostPermalink(post);
+const entry = catalog[post.id];
+const description = post.data.summary ?? (entry?.hook || plainDescription(post.body ?? '') || undefined);
+const audioPosts = (await getAllPosts()).filter((p) => p.data.audio_url);
+const byId = new Map(audioPosts.map((p) => [p.id, p]));
+const related = post.data.audio_url
+	? relatedEpisodes(post.id, audioPosts.map((p) => ({ id: p.id, time: p.data.date.getTime() })), catalog, 3).map((id) => byId.get(id)!)
+	: [];
+const position = audioPosts.findIndex((p) => p.id === post.id); // newest first
+const newer = position > 0 ? audioPosts[position - 1] : undefined;
+const older = position >= 0 ? audioPosts[position + 1] : undefined;
+const guests = entry?.guests ?? [];
+const durationLabel = (s: number) => (s >= 3600 ? `${Math.floor(s / 3600)} שע׳ ${Math.round((s % 3600) / 60)} דק׳` : `${Math.round(s / 60)} דק׳`);
+const transcript = post.data.audio_url ? getTranscript(post.id) : [];
+const audioMeta = getAudioMeta(post.data.audio_url);
+const pageUrl = new URL(permalink, Astro.site).href;
+const isoDuration = (s: number) => `PT${Math.floor(s / 3600)}H${Math.floor((s % 3600) / 60)}M${s % 60}S`;
+const jsonLd = post.data.audio_url
+	? {
+			'@context': 'https://schema.org',
+			'@type': 'PodcastEpisode',
+			url: pageUrl,
+			name: post.data.title,
+			datePublished: post.data.date.toISOString().slice(0, 10),
+			inLanguage: 'he',
+			...(description ? { description } : {}),
+			...(post.data.episode ? { episodeNumber: post.data.episode } : {}),
+			associatedMedia: {
+				'@type': 'AudioObject',
+				contentUrl: post.data.audio_url,
+				encodingFormat: 'audio/mpeg',
+				...(audioMeta ? { duration: isoDuration(audioMeta.seconds), contentSize: String(audioMeta.bytes) } : {}),
+			},
+			partOfSeries: { '@type': 'PodcastSeries', name: 'רברס עם פלטפורמה', url: new URL('/', Astro.site).href },
+			...(post.data.cover_image ? { image: new URL(post.data.cover_image, Astro.site).href } : {}),
+			...(guests.length
+				? { actor: guests.map((g) => ({ '@type': 'Person', name: g.name_en || g.name_he, ...(g.company ? { worksFor: { '@type': 'Organization', name: g.company } } : {}) })) }
+				: {}),
+		}
+	: null;
+const breadcrumbs = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'רברס עם פלטפורמה', item: new URL('/', Astro.site).href },
+		{ '@type': 'ListItem', position: 2, name: 'פרקים', item: new URL('/episodes.html', Astro.site).href },
+		{ '@type': 'ListItem', position: 3, name: post.data.title, item: pageUrl },
+	],
+};
 ---
 
-<BaseLayout title={`${post.data.title} | רברס עם פלטפורמה`} canonical={permalink}>
+<BaseLayout
+	title={`${post.data.title} | רברס עם פלטפורמה`}
+	canonical={permalink}
+	description={description}
+	image={post.data.cover_image}
+	ogType="article"
+>
+	{post.data.audio_url && <meta slot="head" property="og:audio" content={post.data.audio_url} />}
+	{jsonLd && <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}
+	<script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbs).replace(/</g, '\\u003c')} />
 	<article class="article">
 		<div class="post-meta">
 			<span>{dateLabel}</span>
 			{post.data.episode && <span>פרק {post.data.episode}</span>}
+			{audioMeta && <span>{durationLabel(audioMeta.seconds)}</span>}
 			{post.data.tags && post.data.tags.length > 0 && (
 				<span>{post.data.tags.join(' • ')}</span>
 			)}
@@ -50,9 +114,45 @@ const permalink = getPostPermalink(post);
 				<audio controls preload="none" src={post.data.audio_url}></audio>
 			</div>
 		)}
+		{entry && (guests.length > 0 || entry.topics.length > 0) && (
+			<div class="episode-facts">
+				{guests.map((g) => (
+					<a class="fact-chip fact-guest" href={`/guests.html?q=${encodeURIComponent(g.name_he || g.name_en)}`}>
+						<strong>{g.name_he || g.name_en}</strong>
+						{(g.role || g.company) && <span>{[g.role, g.company].filter(Boolean).join(', ')}</span>}
+					</a>
+				))}
+				{entry.topics.map((t) => (
+					<a class="fact-chip" href={`/start-here.html#${t}`}>{TOPIC_LABELS[t] ?? t}</a>
+				))}
+			</div>
+		)}
 		<div class="content">
 			<Content />
 		</div>
+		{transcript.length > 0 && (
+			<details class="transcript" id="transcript">
+				<summary>תמלול מלא של הפרק</summary>
+				<p class="transcript-note">
+					התמלול נוצר אוטומטית וייתכנו בו שגיאות. לחיצה על חותמת זמן מנגנת את הפרק מאותה נקודה.
+				</p>
+				{transcript.map((line) => (
+					<p class="transcript-line" data-start={line.start}>
+						<a class="ts-link" href={`#t=${line.start}`} data-t={line.start}>{formatTime(line.start)}</a>
+						{line.speaker && <strong>{line.speaker}:</strong>} {line.text}
+					</p>
+				))}
+			</details>
+		)}
+		{post.data.audio_url && (
+			<aside class="listen-on">
+				<span>להאזנה ולמעקב:</span>
+				<a href={SHOW_LINKS.spotify} target="_blank" rel="noreferrer noopener">Spotify</a>
+				<a href={SHOW_LINKS.apple} target="_blank" rel="noreferrer noopener">Apple Podcasts</a>
+				<a href={SHOW_LINKS.feed}>RSS</a>
+				<a href={post.data.audio_url} download>הורדת MP3</a>
+			</aside>
+		)}
 		{post.data.legacy_url && (
 			<p class="post-meta">
 				<a href={post.data.legacy_url}>קישור היסטורי</a>
@@ -61,4 +161,73 @@ const permalink = getPostPermalink(post);
 			</p>
 		)}
 	</article>
+	{related.length > 0 && (
+		<section class="related">
+			<h2 class="section-title">פרקים קשורים</h2>
+			<ul class="start-list">
+				{related.map((r) => (
+					<li>
+						<a href={getPostPermalink(r)} dir="auto">{r.data.title}</a>
+						<span class="index-meta">{r.data.date.getFullYear()}</span>
+						{catalog[r.id]?.hook && <p class="start-hook">{catalog[r.id].hook}</p>}
+					</li>
+				))}
+			</ul>
+		</section>
+	)}
+	{(newer || older) && (
+		<nav class="episode-nav" aria-label="ניווט בין פרקים">
+			{older ? <a href={getPostPermalink(older)} rel="prev"><span>הפרק הקודם</span><bdi dir="auto">{older.data.title}</bdi></a> : <span />}
+			{newer ? <a href={getPostPermalink(newer)} rel="next"><span>הפרק הבא</span><bdi dir="auto">{newer.data.title}</bdi></a> : <span />}
+		</nav>
+	)}
 </BaseLayout>
+
+<script is:inline>
+	// Timestamps: "[MM:SS]" chapter headings and transcript lines seek the audio player. "#t=75" in the URL does the same.
+	(function () {
+		var audio = document.querySelector('.audio-player audio');
+		if (!audio) return;
+		var seek = function (t, play) {
+			var go = function () { audio.currentTime = t; if (play) audio.play().catch(function () {}); };
+			if (audio.readyState >= 1) go();
+			else { audio.addEventListener('loadedmetadata', go, { once: true }); audio.preload = 'metadata'; audio.load(); }
+		};
+		var toSeconds = function (s) { return s.split(':').reduce(function (a, p) { return a * 60 + Number(p); }, 0); };
+		// Make the "[MM:SS]" part of each chapter heading a link.
+		document.querySelectorAll('.article .content strong').forEach(function (el) {
+			var first = el.firstChild;
+			if (!first || first.nodeType !== 3) return;
+			var m = /^\[(\d{1,2}(?::\d{2}){1,2})\]\s*/.exec(first.nodeValue);
+			if (!m) return;
+			var t = toSeconds(m[1]);
+			var a = document.createElement('a');
+			a.className = 'ts-link'; a.href = '#t=' + t; a.dataset.t = String(t); a.textContent = m[1];
+			first.nodeValue = ' ' + first.nodeValue.slice(m[0].length);
+			el.insertBefore(a, first);
+		});
+		document.addEventListener('click', function (e) {
+			var a = e.target && e.target.closest ? e.target.closest('a[data-t]') : null;
+			if (!a) return;
+			e.preventDefault();
+			history.replaceState(null, '', '#t=' + a.dataset.t);
+			seek(Number(a.dataset.t), true);
+		});
+		var m = /^#t=(\d+)$/.exec(location.hash);
+		if (m) seek(Number(m[1]), false);
+		// Mark the transcript line that plays now.
+		var lines = Array.prototype.slice.call(document.querySelectorAll('.transcript-line'));
+		if (lines.length) {
+			var current = null;
+			audio.addEventListener('timeupdate', function () {
+				var t = audio.currentTime, hit = null;
+				for (var i = 0; i < lines.length; i++) { if (Number(lines[i].dataset.start) <= t) hit = lines[i]; else break; }
+				if (hit !== current) {
+					if (current) current.classList.remove('is-current');
+					if (hit) hit.classList.add('is-current');
+					current = hit;
+				}
+			});
+		}
+	})();
+</script>

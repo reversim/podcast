@@ -1,0 +1,52 @@
+---
+// Talks of Reversim Summit, by year. Each row links to the video on YouTube. Data: scripts/summit-talks.mjs.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import data from '../data/summit-talks.json';
+
+const years = [...new Set(data.talks.map((t) => t.year))].sort((a, b) => b - a);
+const playlists = data.playlists as Record<string, string>;
+const minutes = (s: number) => (s >= 60 ? `${Math.round(s / 60)} דק׳` : '');
+// The yearly promo clip and the opening sessions are not talks.
+const isTalk = (t: { title: string; speaker: string }) => t.speaker !== '' || !/clip|welcome session|behind the scenes/i.test(t.title);
+---
+
+<BaseLayout title="הרצאות Reversim Summit | רברס עם פלטפורמה" description={`${data.talks.length} הרצאות מכנסי Reversim Summit, לפי שנה, עם קישור לצפייה ב-YouTube.`}>
+	<h1 class="section-title">הרצאות מ-Reversim Summit</h1>
+	<p>
+		<a href="https://summit.reversim.com/" target="_blank" rel="noreferrer noopener">Reversim Summit</a> הוא הכנס השנתי של קהילת רברסים.
+		כאן כל ההרצאות שצולמו, לפי שנה. הקישורים מובילים לצפייה ב-YouTube.
+	</p>
+	<nav class="start-topics-nav" aria-label="שנים">
+		{years.map((y) => <a href={`#y${y}`}>{y}</a>)}
+	</nav>
+	<input class="index-filter" type="search" placeholder="סינון לפי כותרת או מרצה…" aria-label="סינון ההרצאות" />
+	{years.map((y) => (
+		<section class="start-topic summit-year" id={`y${y}`}>
+			<h2 class="section-title">
+				{y}
+				<a class="index-alt" href={`https://www.youtube.com/playlist?list=${playlists[String(y)]}`} target="_blank" rel="noreferrer noopener">כל הפלייליסט</a>
+				<a class="index-alt" href={`https://summit.reversim.com/${y}/`} target="_blank" rel="noreferrer noopener">אתר הכנס</a>
+			</h2>
+			<ul class="summit-list">
+				{data.talks.filter((t) => t.year === y && isTalk(t)).map((t) => (
+					<li data-search={`${t.title} ${t.speaker}`.toLowerCase()}>
+						<a href={`https://www.youtube.com/watch?v=${t.id}`} target="_blank" rel="noreferrer noopener" dir="ltr">{t.title}</a>
+						<span class="index-meta" dir="ltr">{[t.speaker, minutes(t.seconds)].filter(Boolean).join(' · ')}</span>
+					</li>
+				))}
+			</ul>
+		</section>
+	))}
+</BaseLayout>
+
+<script is:inline>
+	(function () {
+		var input = document.querySelector('.index-filter');
+		if (!input) return;
+		var rows = Array.prototype.slice.call(document.querySelectorAll('.summit-list li'));
+		input.addEventListener('input', function () {
+			var q = input.value.trim().toLowerCase();
+			rows.forEach(function (r) { r.hidden = q !== '' && r.dataset.search.indexOf(q) === -1; });
+		});
+	})();
+</script>

@@ -1,8 +1,30 @@
 ---
+import { SHOW_LINKS } from '../lib/links';
 ---
 
 <footer class="site-footer">
-	<div>
-		<p>כל התכנים © רברס עם פלטפורמה.</p>
-	</div>
+	<nav class="footer-cols" aria-label="קישורים">
+		<div>
+			<h2>הפודקאסט</h2>
+			<a href="/start-here.html">מאיפה מתחילים?</a>
+			<a href="/episodes.html">כל הפרקים</a>
+			<a href="/archive.html">ארכיון לפי שנה</a>
+			<a href="/about.html">אודות ויצירת קשר</a>
+		</div>
+		<div>
+			<h2>לגלות</h2>
+			<a href="/guests.html">אורחות ואורחים</a>
+			<a href="/companies.html">חברות</a>
+			<a href="/summit-talks.html">הרצאות Reversim Summit</a>
+			<a href={SHOW_LINKS.summit} target="_blank" rel="noreferrer noopener">אתר הכנס</a>
+		</div>
+		<div>
+			<h2>להאזין</h2>
+			<a href={SHOW_LINKS.spotify} target="_blank" rel="noreferrer noopener">Spotify</a>
+			<a href={SHOW_LINKS.apple} target="_blank" rel="noreferrer noopener">Apple Podcasts</a>
+			<a href={SHOW_LINKS.feed}>Podcast RSS</a>
+			<a href={SHOW_LINKS.x} target="_blank" rel="noreferrer noopener">X / Twitter</a>
+		</div>
+	</nav>
+	<p>כל התכנים © רברס עם פלטפורמה.</p>
 </footer>

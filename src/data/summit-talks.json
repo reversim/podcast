@@ -1,0 +1,3494 @@
+{
+	"playlists": {
+		"2016": "PLqXy0aX6TzQrwbJ_4hG_C9oGQmUDdB2gh",
+		"2017": "PLqXy0aX6TzQrRE_sAtkqBsJAdFQOGme8O",
+		"2018": "PLqXy0aX6TzQo7_HyHWeN0I0Cldr20g1A8",
+		"2019": "PLqXy0aX6TzQqzJWXJZOKxGuF4W8hJEa5s",
+		"2020": "PLqXy0aX6TzQqdhzY9jqew2sb33hhDXAHf",
+		"2021": "PLqXy0aX6TzQryGoAdbyPevKocQxMJzg8_",
+		"2022": "PLqXy0aX6TzQrVZn7A42IWfYstZRAv2rGq",
+		"2024": "PLqXy0aX6TzQqQ8tIs2Xm_OWLOFxgHTnM0",
+		"2025": "PLqXy0aX6TzQqBTdWTLnN--urikR5CFIaz"
+	},
+	"talks": [
+		{
+			"year": 2016,
+			"id": "Myzo_UVgfYw",
+			"seconds": 114,
+			"title": "Reversim Summit 2016 CLIP",
+			"speaker": ""
+		},
+		{
+			"year": 2016,
+			"id": "iYjrLoT-0iY",
+			"seconds": 311,
+			"title": "Mobile Development in 2016 - A song",
+			"speaker": "YONI TSAFIR"
+		},
+		{
+			"year": 2016,
+			"id": "zc3zSSl_a_s",
+			"seconds": 2023,
+			"title": "How to (really) create transparency",
+			"speaker": "Iris Shoor"
+		},
+		{
+			"year": 2016,
+			"id": "Kh5WMFue5do",
+			"seconds": 2103,
+			"title": "A call out to engineers to become product managers",
+			"speaker": "Yuval Samet"
+		},
+		{
+			"year": 2016,
+			"id": "VOBHQCQ9Xs4",
+			"seconds": 2709,
+			"title": "Performance Limitations of React Native and How to Overcome Them",
+			"speaker": "Tal Kol"
+		},
+		{
+			"year": 2016,
+			"id": "2_ueSCacllY",
+			"seconds": 2302,
+			"title": "The Next Linux Superpower: eBPF Primer",
+			"speaker": "Sasha Goldshtein"
+		},
+		{
+			"year": 2016,
+			"id": "YEPz_VmVcx0",
+			"seconds": 1641,
+			"title": "Digital Information Preservation",
+			"speaker": "Ran Levy"
+		},
+		{
+			"year": 2016,
+			"id": "JZ_KMkHOR7M",
+			"seconds": 2537,
+			"title": "Front End Test Automation: past, present and future",
+			"speaker": "Oren Rubin"
+		},
+		{
+			"year": 2016,
+			"id": "2LdUi6RlJvU",
+			"seconds": 398,
+			"title": "Farmers application (מהחקלאי)",
+			"speaker": "Shlomi Zadok"
+		},
+		{
+			"year": 2016,
+			"id": "JxdYo_X-H_A",
+			"seconds": 422,
+			"title": "Social Soccer Betting Application",
+			"speaker": "Roi Ezra"
+		},
+		{
+			"year": 2016,
+			"id": "fZy1tO3SGW4",
+			"seconds": 552,
+			"title": "Subdivision - a tiny library for building highly decoupled and modular web apps",
+			"speaker": "Boris Kozorovitzky"
+		},
+		{
+			"year": 2016,
+			"id": "D9vFLE3lR-0",
+			"seconds": 2357,
+			"title": "Software Punk: examining controversial ideas in Software Development",
+			"speaker": "Lior Bar-On"
+		},
+		{
+			"year": 2016,
+			"id": "H0hiqWJYw8c",
+			"seconds": 2203,
+			"title": "Early Detection of Cancer: Using NLP Classifiers to Analyze Medical Research Papers",
+			"speaker": "Limor Lahiani"
+		},
+		{
+			"year": 2016,
+			"id": "qq_vQgweVRU",
+			"seconds": 286,
+			"title": "Is it good enough? or - what is MVP?",
+			"speaker": "Moran Shimron"
+		},
+		{
+			"year": 2016,
+			"id": "eQkH684Y994",
+			"seconds": 298,
+			"title": "Get a life - Rethinking work life balance",
+			"speaker": "Michal Brosh"
+		},
+		{
+			"year": 2016,
+			"id": "3tqCXNJg1Nk",
+			"seconds": 300,
+			"title": "Dealing with \"Conway law\"",
+			"speaker": "Guy Doulberg"
+		},
+		{
+			"year": 2016,
+			"id": "VzI0CIqT6s8",
+			"seconds": 298,
+			"title": "How to make a Lisp interpreter in 56 languages",
+			"speaker": "Dov Murik"
+		},
+		{
+			"year": 2016,
+			"id": "Tck4DQkL-Us",
+			"seconds": 2425,
+			"title": "Handling millions of connections in Cowboy using Elixir",
+			"speaker": "Joey Feldberg"
+		},
+		{
+			"year": 2016,
+			"id": "R9CfZlbkd2g",
+			"seconds": 2382,
+			"title": "A Brand new Immune System for a Brand New Google Product",
+			"speaker": "Itay Maman"
+		},
+		{
+			"year": 2016,
+			"id": "AT1M_MDDJKo",
+			"seconds": 2105,
+			"title": "The way to unified CI/CD using Ansible",
+			"speaker": "Hadar Davidovich"
+		},
+		{
+			"year": 2016,
+			"id": "Rc1K1CXjb7s",
+			"seconds": 2668,
+			"title": "Simple, Battle Proven, Microservices Strategy",
+			"speaker": "Erez Lotan"
+		},
+		{
+			"year": 2016,
+			"id": "bFnrdPsmoGQ",
+			"seconds": 2029,
+			"title": "You're great at writing code. You need to be greater at telling stories",
+			"speaker": "Boaz Gaon"
+		},
+		{
+			"year": 2016,
+			"id": "PfCeK6bxmoA",
+			"seconds": 1603,
+			"title": "\"Operations\" - you keep using that word, but I don’t think it means ...",
+			"speaker": "Avishai Ish-Shalom"
+		},
+		{
+			"year": 2016,
+			"id": "H5Yo5a8SG6g",
+			"seconds": 1892,
+			"title": "10 Real problems and solutions for your Build & Deploy process",
+			"speaker": "Ariel M. Moskovich"
+		},
+		{
+			"year": 2016,
+			"id": "nEu8zAIqTRQ",
+			"seconds": 2310,
+			"title": "DevOps paradigm in R&D day-to-day",
+			"speaker": "Adi Shacham-Shavit"
+		},
+		{
+			"year": 2016,
+			"id": "kuJ--_yWKYM",
+			"seconds": 1773,
+			"title": "Journey to the Realtime Analytics in Extreme Growth",
+			"speaker": "Yulia Trakhtenberg"
+		},
+		{
+			"year": 2016,
+			"id": "gB_1mJ58aDk",
+			"seconds": 1823,
+			"title": "Rise of the (content) chat bots - how NLP, search and recommendations play together",
+			"speaker": "Shaked Bar"
+		},
+		{
+			"year": 2016,
+			"id": "N65__L1rTm0",
+			"seconds": 2480,
+			"title": "Good rules for building a bad Android app",
+			"speaker": "Shem Magnezi"
+		},
+		{
+			"year": 2016,
+			"id": "fQjshljdEdA",
+			"seconds": 2417,
+			"title": "Cloud Patterns",
+			"speaker": "Tamir Dresher"
+		},
+		{
+			"year": 2016,
+			"id": "XtHCs2odiec",
+			"seconds": 2159,
+			"title": "MicroApps Architecture -- The way to do microservices for web apps",
+			"speaker": "Yonatan Maman"
+		},
+		{
+			"year": 2016,
+			"id": "35NTHa8ocCE",
+			"seconds": 2422,
+			"title": "THIS _IS_ YOUR JOB",
+			"speaker": "Shai Kfir"
+		},
+		{
+			"year": 2016,
+			"id": "upE95kiCg90",
+			"seconds": 597,
+			"title": "Open Source / Organizing an open-source conference and living to tell the tale",
+			"speaker": "Tomer Brisker"
+		},
+		{
+			"year": 2016,
+			"id": "v8w32wC6ppI",
+			"seconds": 590,
+			"title": "Open Source / HebMorph - Hebrew made searchable",
+			"speaker": "Itamar Syn-Hershko"
+		},
+		{
+			"year": 2016,
+			"id": "v3mRfkLKYNw",
+			"seconds": 624,
+			"title": "Open Source / Open Source Newbie: An Amazing Story of Overcoming Very Minor Obstacles",
+			"speaker": "Eyal Allweil"
+		},
+		{
+			"year": 2016,
+			"id": "j5elkjovzj4",
+			"seconds": 606,
+			"title": "Open Source / Re:dash - from a side project to business",
+			"speaker": "Arik Fraimovich"
+		},
+		{
+			"year": 2016,
+			"id": "bjDprrTnnLg",
+			"seconds": 1864,
+			"title": "Programing, stress and mindfulness",
+			"speaker": "Noam Elfanbaum"
+		},
+		{
+			"year": 2016,
+			"id": "mBTv4g7xdgU",
+			"seconds": 2159,
+			"title": "Functional Programming Paradigms in Software Architecture",
+			"speaker": "Nir Rubinstein"
+		},
+		{
+			"year": 2016,
+			"id": "EA-Cd0ZHt6M",
+			"seconds": 1758,
+			"title": "Measuring and monitoring client side performance",
+			"speaker": "Nir Nahum"
+		},
+		{
+			"year": 2016,
+			"id": "11LH06WpqwA",
+			"seconds": 3125,
+			"title": "User Research: Digging for Gold",
+			"speaker": "Kaleb Loosbrock"
+		},
+		{
+			"year": 2016,
+			"id": "8uAnfE3LfTY",
+			"seconds": 2500,
+			"title": "How to make kids excited about programming",
+			"speaker": "Iftach Bar"
+		},
+		{
+			"year": 2016,
+			"id": "hqfJ48KVi-0",
+			"seconds": 1888,
+			"title": "How we ditched our apps for a chatbot",
+			"speaker": "Eyal Yavor"
+		},
+		{
+			"year": 2016,
+			"id": "KbTFBhy0Aq8",
+			"seconds": 2553,
+			"title": "A shallow introduction to deep learning",
+			"speaker": "Eyal Gruss"
+		},
+		{
+			"year": 2016,
+			"id": "pRBrQW_Slo8",
+			"seconds": 2260,
+			"title": "From Quality Assurance to Quality Enablement",
+			"speaker": "Amit Roseberger"
+		},
+		{
+			"year": 2016,
+			"id": "gRUXJRTvjqM",
+			"seconds": 2415,
+			"title": "Hardware Transactional Memory - Why You Should Care",
+			"speaker": "URI SHAMAY"
+		},
+		{
+			"year": 2016,
+			"id": "KnNA66H8Rnc",
+			"seconds": 2333,
+			"title": "The Subtle Dynamics Of Leading Without Authority As A Technical Lead",
+			"speaker": "OREN ELLENBOGEN"
+		},
+		{
+			"year": 2016,
+			"id": "R_M7IgtwRO4",
+			"seconds": 318,
+			"title": "Ja-WAT?",
+			"speaker": "ALLON MUREINIK"
+		},
+		{
+			"year": 2016,
+			"id": "gzLFDc65VEY",
+			"seconds": 292,
+			"title": "Reverse Engineering the \"Human API\" for Automation and Profit",
+			"speaker": "Nati Cohen"
+		},
+		{
+			"year": 2016,
+			"id": "AehHGZKjvFM",
+			"seconds": 2506,
+			"title": "Fund Raising 101 - Experiences Written in Blood...",
+			"speaker": "Yuval Kaminka"
+		},
+		{
+			"year": 2016,
+			"id": "RjNV6Iw6uME",
+			"seconds": 1606,
+			"title": "How to Build a Micro-services Infrastructure In 7 Days",
+			"speaker": "Gil Tayar"
+		},
+		{
+			"year": 2016,
+			"id": "f2u0w0n64Z8",
+			"seconds": 563,
+			"title": "Flush your head! - an HTTP performance optimization tool",
+			"speaker": "YONATAN MEVORACH"
+		},
+		{
+			"year": 2016,
+			"id": "4GIkPRsSzhQ",
+			"seconds": 307,
+			"title": "Coderetreat - What, Why and How",
+			"speaker": "Erez Lotan"
+		},
+		{
+			"year": 2016,
+			"id": "NbvBYGY3Gjw",
+			"seconds": 305,
+			"title": "Can Sci-Fi movies predict the future?",
+			"speaker": "Hagai Levin"
+		},
+		{
+			"year": 2016,
+			"id": "Di3t9uWgpjA",
+			"seconds": 293,
+			"title": "self.reproduce!",
+			"speaker": "Inbal Galai"
+		},
+		{
+			"year": 2016,
+			"id": "doFsrSL6iho",
+			"seconds": 317,
+			"title": "How I learned to speak Vulcan",
+			"speaker": "Michal Tirosh"
+		},
+		{
+			"year": 2016,
+			"id": "lsM346P9-K8",
+			"seconds": 300,
+			"title": "From 400 bugs to 0 in 2 weeks - What we found below the \"Static Analysis hood\" ...",
+			"speaker": "Yonatan Maman"
+		},
+		{
+			"year": 2016,
+			"id": "eDP-twWcCUA",
+			"seconds": 1093,
+			"title": "The Hall of Shame",
+			"speaker": ""
+		},
+		{
+			"year": 2016,
+			"id": "dedGFA5WGNE",
+			"seconds": 1967,
+			"title": "Anomaly detection in big data sets",
+			"speaker": "David Gruzman"
+		},
+		{
+			"year": 2017,
+			"id": "ltY6Ut9bGOw",
+			"seconds": 80,
+			"title": "Reversim Summit 2017 Clip",
+			"speaker": ""
+		},
+		{
+			"year": 2017,
+			"id": "EYLqAQN4lOU",
+			"seconds": 2097,
+			"title": "Digital Culture/Clutter",
+			"speaker": "Sheizaf Rafaeli"
+		},
+		{
+			"year": 2017,
+			"id": "Qa25xSpYGb4",
+			"seconds": 2556,
+			"title": "Moving Fast At Scale",
+			"speaker": "Randy Shoup"
+		},
+		{
+			"year": 2017,
+			"id": "kvc6fE9yPr8",
+			"seconds": 2217,
+			"title": "Build a High-Performance Microservices Architecture with NATS.io & Golang",
+			"speaker": "Uri Shamay"
+		},
+		{
+			"year": 2017,
+			"id": "Xy1X1CqrnDQ",
+			"seconds": 503,
+			"title": "No forks, One star. Now what?! — How I published my Kotlin Open-Source lib",
+			"speaker": "Ohad Shai"
+		},
+		{
+			"year": 2017,
+			"id": "_EUMawqEfyc",
+			"seconds": 427,
+			"title": "Redis Modules and The Joy of specificity",
+			"speaker": "Adam Lev Libfeld"
+		},
+		{
+			"year": 2017,
+			"id": "AgExa5dpjLg",
+			"seconds": 307,
+			"title": "10 Things I hate about you BE developers (with love, FE)",
+			"speaker": "Noam Antebi"
+		},
+		{
+			"year": 2017,
+			"id": "7YD2cK1SJ1o",
+			"seconds": 310,
+			"title": "Deep Work for programmers",
+			"speaker": "Pavel Brodsky"
+		},
+		{
+			"year": 2017,
+			"id": "GWQbnpFpSJc",
+			"seconds": 1376,
+			"title": "Future of Serverless",
+			"speaker": "Yoav Abrahami"
+		},
+		{
+			"year": 2017,
+			"id": "k16gXpiQNjc",
+			"seconds": 2248,
+			"title": "Slaying the dragon - How to re-write a monolith into micro services and stay alive",
+			"speaker": "Dalia Simons"
+		},
+		{
+			"year": 2017,
+			"id": "bwP1_lIlHPg",
+			"seconds": 303,
+			"title": "Open Source Maintainership: musing and ranting",
+			"speaker": "Shlomi Noach"
+		},
+		{
+			"year": 2017,
+			"id": "6q2nZq8mEfE",
+			"seconds": 2400,
+			"title": "Cross Region Data Replication - Design Considerations",
+			"speaker": "Itai Friendinger"
+		},
+		{
+			"year": 2017,
+			"id": "d5mbGt7hYBM",
+			"seconds": 321,
+			"title": "Fundraising red flags: what (Israeli) startups keep failing at ...",
+			"speaker": "Royi Benyossef"
+		},
+		{
+			"year": 2017,
+			"id": "lUubm2B4VIU",
+			"seconds": 261,
+			"title": "The Interview Song",
+			"speaker": "Iftach Bar & Yoni Tsafir"
+		},
+		{
+			"year": 2017,
+			"id": "phvcl5k8AR0",
+			"seconds": 584,
+			"title": "With great data comes great responsibility...",
+			"speaker": "Shay Palachy"
+		},
+		{
+			"year": 2017,
+			"id": "Vy1iZ9QQbbA",
+			"seconds": 299,
+			"title": "Look at My Slides!",
+			"speaker": "Uri Nativ"
+		},
+		{
+			"year": 2017,
+			"id": "zxJ7j-Xwc_4",
+			"seconds": 314,
+			"title": "How hackers destroyed Mat Honan's life",
+			"speaker": "Moria Ahi Mordehai"
+		},
+		{
+			"year": 2017,
+			"id": "McoyJZE1o6o",
+			"seconds": 310,
+			"title": "The ultimate 5 min practical guide on how to casually chat with the people...",
+			"speaker": "Michal Brosh"
+		},
+		{
+			"year": 2017,
+			"id": "bI4ojSXzKzY",
+			"seconds": 1949,
+			"title": "Wikipedia's Democratic Structure",
+			"speaker": "Agam Rafaeli"
+		},
+		{
+			"year": 2017,
+			"id": "NgSxx-JO5Xo",
+			"seconds": 2321,
+			"title": "The Performance Investigator's Field Guide",
+			"speaker": "Sasha Goldshtein"
+		},
+		{
+			"year": 2017,
+			"id": "u_eX8vW5mM4",
+			"seconds": 325,
+			"title": "What do we care about?",
+			"speaker": "Nir Kriss"
+		},
+		{
+			"year": 2017,
+			"id": "r3uC-af4RV0",
+			"seconds": 314,
+			"title": "A World without WhatsApp's Blue Lines",
+			"speaker": "Gil Vind Picciotto"
+		},
+		{
+			"year": 2017,
+			"id": "nIjwwRko6Ls",
+			"seconds": 318,
+			"title": "The Secret Life of Side Projects",
+			"speaker": "Ofir Dagan"
+		},
+		{
+			"year": 2017,
+			"id": "VNvv825eaAM",
+			"seconds": 2135,
+			"title": "Lock Picking for Hackers",
+			"speaker": "Michael Sverdlin"
+		},
+		{
+			"year": 2017,
+			"id": "dd4p8V8C1Ak",
+			"seconds": 574,
+			"title": "Orchestrator: MySQL high availability and management",
+			"speaker": "Shlomi Noach"
+		},
+		{
+			"year": 2017,
+			"id": "b2RbssB8L-I",
+			"seconds": 323,
+			"title": "The Greatest Success Stories in History - are Inventions that Almost didn’t Exist",
+			"speaker": "Jenny Abramov"
+		},
+		{
+			"year": 2017,
+			"id": "qge79roph_E",
+			"seconds": 319,
+			"title": "From Developer to Data Hacker",
+			"speaker": "Omri Fima"
+		},
+		{
+			"year": 2017,
+			"id": "Jecwwd_xoiI",
+			"seconds": 521,
+			"title": "Chaos Drills FTW - Introducing GomJabbar",
+			"speaker": "Eran Harel"
+		},
+		{
+			"year": 2017,
+			"id": "tgDpQUiykjg",
+			"seconds": 2145,
+			"title": "Searching Billions of Documents with Redis",
+			"speaker": "Dvir Volk"
+		},
+		{
+			"year": 2017,
+			"id": "RATSlFznPwI",
+			"seconds": 1741,
+			"title": "Swarm Intelligence and Emergent Behavior",
+			"speaker": "Eyal Gruss"
+		},
+		{
+			"year": 2017,
+			"id": "wEUuNQ8d808",
+			"seconds": 2180,
+			"title": "Mistakes and Biases in Understanding Data",
+			"speaker": "Omer Nevo"
+		},
+		{
+			"year": 2017,
+			"id": "a_bpEelXfG0",
+			"seconds": 2389,
+			"title": "A little trust goes a long way...",
+			"speaker": "Shay Palachy"
+		},
+		{
+			"year": 2017,
+			"id": "AGevNM5dAeY",
+			"seconds": 2335,
+			"title": "Open for Business: How Thinking \"Productly Open\" Will Save You Time",
+			"speaker": "Danny Albocher"
+		},
+		{
+			"year": 2017,
+			"id": "A0OBs3kl9Rs",
+			"seconds": 2353,
+			"title": "From 1x to 10x - A personal growth program...",
+			"speaker": "Avi Etzioni & Sivan Franko"
+		},
+		{
+			"year": 2017,
+			"id": "tTmvz_EusjY",
+			"seconds": 2409,
+			"title": "Being a remote site doesn’t have to suck / Hagai Levin & Noy Gabay",
+			"speaker": "חגי לוין ונוי גבאי"
+		},
+		{
+			"year": 2017,
+			"id": "whbgMCqrJZ0",
+			"seconds": 1946,
+			"title": "Smart replies, dumb people",
+			"speaker": "Shira Weinberg"
+		},
+		{
+			"year": 2017,
+			"id": "Ni0o7uhpTfQ",
+			"seconds": 1654,
+			"title": "Detection of malicious footprints in large scale DNS traffic",
+			"speaker": "Ada Sharoni"
+		},
+		{
+			"year": 2017,
+			"id": "6v_SA81jB-Q",
+			"seconds": 640,
+			"title": "A David vs. Goliath Tale of Triumph",
+			"speaker": "Nati Shalom"
+		},
+		{
+			"year": 2017,
+			"id": "ariZeH1QUZA",
+			"seconds": 339,
+			"title": "Graph computation framework for SPARK",
+			"speaker": "Elior Malul"
+		},
+		{
+			"year": 2017,
+			"id": "LPQJ4ZJizog",
+			"seconds": 2403,
+			"title": "The Freelancer Journey",
+			"speaker": "Haim Yadid"
+		},
+		{
+			"year": 2017,
+			"id": "oYZu2u76otk",
+			"seconds": 1508,
+			"title": "Saving up for technical debt - how to prepare so you don't go bankrupt",
+			"speaker": "Elad Amit"
+		},
+		{
+			"year": 2017,
+			"id": "vhYiL9xxwuE",
+			"seconds": 2408,
+			"title": "To err is human: Introduction to modern safety thinking",
+			"speaker": "Avishai Ish Shalom"
+		},
+		{
+			"year": 2017,
+			"id": "13ykkP8b4LE",
+			"seconds": 1666,
+			"title": "Programming IS(!) Philosophy",
+			"speaker": "Nir Rubinstein"
+		},
+		{
+			"year": 2017,
+			"id": "TW3X7i4-QYM",
+			"seconds": 1705,
+			"title": "It ain't necessarily so!",
+			"speaker": "Victor Bronstein"
+		},
+		{
+			"year": 2017,
+			"id": "7s_zfHHUnqI",
+			"seconds": 2257,
+			"title": "Effective Software Design (ESD)",
+			"speaker": "Lior Bar On"
+		},
+		{
+			"year": 2017,
+			"id": "kELjS_che_M",
+			"seconds": 2147,
+			"title": "Baptism By Fire - why production issues make you a better developer",
+			"speaker": "Adi Belan"
+		},
+		{
+			"year": 2017,
+			"id": "vLvhilFjGq0",
+			"seconds": 1999,
+			"title": "DevTools and Headless Chrome - The Automation Power-Couple",
+			"speaker": "Yonatan Mevorach"
+		},
+		{
+			"year": 2017,
+			"id": "Okh9vlxPnbU",
+			"seconds": 1892,
+			"title": "Augmented Reality in Reality",
+			"speaker": "Bar Fingerman"
+		},
+		{
+			"year": 2017,
+			"id": "_Q3yUb3yADc",
+			"seconds": 2328,
+			"title": "Do we need yet another web framework",
+			"speaker": "Shimi Bar"
+		},
+		{
+			"year": 2017,
+			"id": "aBnIeAk5Ua8",
+			"seconds": 1789,
+			"title": "From zero to hero in 30 minutes: Serverless GraphQL/React...",
+			"speaker": "Dafna Rosenblum"
+		},
+		{
+			"year": 2017,
+			"id": "Nh8BOemNs8s",
+			"seconds": 655,
+			"title": "Automate Your Review Process",
+			"speaker": "Eliran Bivas"
+		},
+		{
+			"year": 2017,
+			"id": "rjvmdwOogqY",
+			"seconds": 1644,
+			"title": "Reactive Brain Waves",
+			"speaker": "Uri Shaked"
+		},
+		{
+			"year": 2017,
+			"id": "ddN-t4j0LNU",
+			"seconds": 1553,
+			"title": "Managing people? Lead them to engagement. One manager’s journey...",
+			"speaker": "Lior Lavi"
+		},
+		{
+			"year": 2017,
+			"id": "pzq37L4UBUU",
+			"seconds": 2474,
+			"title": "Let's talk about your salary",
+			"speaker": "Iftach Bar"
+		},
+		{
+			"year": 2017,
+			"id": "H_AnSGHh8YI",
+			"seconds": 1740,
+			"title": "Building a Product That Both Your Grandma and Chuck Norris Can Use",
+			"speaker": "Eynav Dagan"
+		},
+		{
+			"year": 2017,
+			"id": "md8uf3Yo5h8",
+			"seconds": 325,
+			"title": "איך באג בשער של החניון של הקלפי כמעט עלה לאבי גבאי בפריימריז",
+			"speaker": "Itai Friendinger"
+		},
+		{
+			"year": 2017,
+			"id": "AvRnY9pDmSw",
+			"seconds": 2421,
+			"title": "An Abridged Guide to Event Sourcing",
+			"speaker": "Tomer Gabel"
+		},
+		{
+			"year": 2017,
+			"id": "e6U51IGWTM8",
+			"seconds": 2476,
+			"title": "Midburn: How we created an open source community",
+			"speaker": "Lior Kaplan"
+		},
+		{
+			"year": 2017,
+			"id": "NSNmwETCCh0",
+			"seconds": 1050,
+			"title": "Cheat, Scale, Win",
+			"speaker": "Adam Lev Libfeld"
+		},
+		{
+			"year": 2017,
+			"id": "wC_GIP_C4fc",
+			"seconds": 2665,
+			"title": "The Hall of Shame",
+			"speaker": ""
+		},
+		{
+			"year": 2017,
+			"id": "hsNxTW8v_bc",
+			"seconds": 2378,
+			"title": "One platform to rule them all",
+			"speaker": "Moshe Eshel"
+		},
+		{
+			"year": 2018,
+			"id": "65muE6zmWPU",
+			"seconds": 100,
+			"title": "Reversim Summit 2018 Clip",
+			"speaker": ""
+		},
+		{
+			"year": 2018,
+			"id": "Lckris5U5iw",
+			"seconds": 2263,
+			"title": "The Open Source Development Surprise",
+			"speaker": "Benjamin Gruenbaum"
+		},
+		{
+			"year": 2018,
+			"id": "iLZo2G_3C_Q",
+			"seconds": 2121,
+			"title": "The magic of distributed systems: when it all breaks and why",
+			"speaker": "Holden Karau"
+		},
+		{
+			"year": 2018,
+			"id": "z7O1DMzncLE",
+			"seconds": 1627,
+			"title": "Let's talk about THEIR salaries",
+			"speaker": "Shahar Kedar"
+		},
+		{
+			"year": 2018,
+			"id": "St3PbiTc5fM",
+			"seconds": 1468,
+			"title": "Devs are from Mars, Managers are from Venus: How to convince your CEO better code...",
+			"speaker": "Michael Shalyt"
+		},
+		{
+			"year": 2018,
+			"id": "WgbX7vWCOPA",
+			"seconds": 1308,
+			"title": "Same same, but different: Lessons learned from building the same feature twice a 1Y",
+			"speaker": "Shachar Brenner"
+		},
+		{
+			"year": 2018,
+			"id": "p8j0_BYB4Ng",
+			"seconds": 1597,
+			"title": "Gain velocity by switching to Safe Mode",
+			"speaker": "Vlad Ioffe"
+		},
+		{
+			"year": 2018,
+			"id": "-aDoLgEfJJE",
+			"seconds": 1275,
+			"title": "Creating a Product Your Users Will Love",
+			"speaker": "Reut Golan"
+		},
+		{
+			"year": 2018,
+			"id": "T-vJvtGnC6k",
+			"seconds": 1095,
+			"title": "Your Next Game - Built by React",
+			"speaker": "Eyal Eizenberg"
+		},
+		{
+			"year": 2018,
+			"id": "-dJRcPtgNbs",
+			"seconds": 1997,
+			"title": "UX/UI and the Trusting Brain",
+			"speaker": "Jonathan Saring"
+		},
+		{
+			"year": 2018,
+			"id": "OlYURxvOReI",
+			"seconds": 1522,
+			"title": "When S.O.L.I.D met front-end components",
+			"speaker": "Shiri Haim"
+		},
+		{
+			"year": 2018,
+			"id": "6JEjnxlwNuM",
+			"seconds": 1464,
+			"title": "Progressive Web Applications and an Offline First Mentality",
+			"speaker": "Omer Goldberg"
+		},
+		{
+			"year": 2018,
+			"id": "wRiIXm-Z2ck",
+			"seconds": 2109,
+			"title": "Micro Frontends Architecture & in practice",
+			"speaker": "Idan Levin"
+		},
+		{
+			"year": 2018,
+			"id": "UXhsOoma4ss",
+			"seconds": 1575,
+			"title": "Deeper Than Abstractions (Let’s Dive into Source Code!!)",
+			"speaker": "Netta Bondy"
+		},
+		{
+			"year": 2018,
+			"id": "tCkAvel4QFo",
+			"seconds": 1728,
+			"title": "Being a Generalist Developer - is it for you?",
+			"speaker": "Lital Hassine"
+		},
+		{
+			"year": 2018,
+			"id": "X8AgwnoYWmw",
+			"seconds": 2211,
+			"title": "Daddy, where is my Arduino?",
+			"speaker": "Uri Nativ & Roni Nativ"
+		},
+		{
+			"year": 2018,
+			"id": "4a8CM1vzjIs",
+			"seconds": 1626,
+			"title": "REST in peace? - cause APIs are much more than REST",
+			"speaker": "Yonatan Maman"
+		},
+		{
+			"year": 2018,
+			"id": "4TeRRxxAhUI",
+			"seconds": 1512,
+			"title": "Master the Art of the AST (and Take Control of Your JS!)",
+			"speaker": "Yonatan Mevorach"
+		},
+		{
+			"year": 2018,
+			"id": "1rD--ADwX3I",
+			"seconds": 1901,
+			"title": "How shit works: Time",
+			"speaker": "Tomer Gabel"
+		},
+		{
+			"year": 2018,
+			"id": "ZvP0uLjy8dQ",
+			"seconds": 1673,
+			"title": "Open-source: A Love/Hate Relationship",
+			"speaker": "Uri Shamay"
+		},
+		{
+			"year": 2018,
+			"id": "cAiK8GZdz3s",
+			"seconds": 1808,
+			"title": "How I built the fastest graph database on earth",
+			"speaker": "Roi Lipman"
+		},
+		{
+			"year": 2018,
+			"id": "c_oAlYJ6k4s",
+			"seconds": 1765,
+			"title": "What I learned from 10 Yrs of \"playing\" with Neuroevolution -",
+			"speaker": "Al Yaros"
+		},
+		{
+			"year": 2018,
+			"id": "rk9IJHsovkw",
+			"seconds": 1907,
+			"title": "Beyond the point estimate: uncertainty in neural networks for recommendations",
+			"speaker": "Yoel Zeldes"
+		},
+		{
+			"year": 2018,
+			"id": "rZSdHKyp55M",
+			"seconds": 1490,
+			"title": "Sequence Alignment for Ride Sharing",
+			"speaker": "Dalya Gartzman"
+		},
+		{
+			"year": 2018,
+			"id": "w9WzUijy4h0",
+			"seconds": 1151,
+			"title": "We don't need no labels: the future of pretraining and self-supervised learning",
+			"speaker": "Bar Vinograd"
+		},
+		{
+			"year": 2018,
+			"id": "AUqQdzWc2Yc",
+			"seconds": 679,
+			"title": "Shifting Sec to the Left with Conjur Open Source",
+			"speaker": "Inbal Zilberman Kubovsky"
+		},
+		{
+			"year": 2018,
+			"id": "ZhDUEHww3t4",
+			"seconds": 768,
+			"title": "Building Bit: Lessons Learned In The Trenches",
+			"speaker": "Gilad Shoham"
+		},
+		{
+			"year": 2018,
+			"id": "Pr9ZHZvcAFY",
+			"seconds": 1866,
+			"title": "How to Find Growth Material & Learn x2 Faster",
+			"speaker": "Oren Ellenbogen"
+		},
+		{
+			"year": 2018,
+			"id": "SklIgwU-umI",
+			"seconds": 1892,
+			"title": "Developers' Communities: Building your Personal Brand and Creating Real Impact",
+			"speaker": "Morad Stern"
+		},
+		{
+			"year": 2018,
+			"id": "hNYvEYA5Zx4",
+			"seconds": 1933,
+			"title": "Evolution 3.0 : solve your everyday problems with genetic algorithm",
+			"speaker": "Mey Maayan Akiva"
+		},
+		{
+			"year": 2018,
+			"id": "p0oe2BPl6zw",
+			"seconds": 1915,
+			"title": "Event Sourcing Scaling - Pay Less, Do More",
+			"speaker": "Michael Feinstein"
+		},
+		{
+			"year": 2018,
+			"id": "R03hGovUvpw",
+			"seconds": 1499,
+			"title": "Monitoria - A Monitoring Democracy",
+			"speaker": "Yaron Idan"
+		},
+		{
+			"year": 2018,
+			"id": "ai-q50AB-9M",
+			"seconds": 1939,
+			"title": "Breaking into my 3D Printer's Firmware",
+			"speaker": "Uri Shaked"
+		},
+		{
+			"year": 2018,
+			"id": "kCoaNTayKEE",
+			"seconds": 1777,
+			"title": "Web security",
+			"speaker": "Ran Bar Zik"
+		},
+		{
+			"year": 2018,
+			"id": "DtsaKDSbVoc",
+			"seconds": 1465,
+			"title": "How I Built Klarna's Experimentation System, and a LISP",
+			"speaker": "Dotan Nahum"
+		},
+		{
+			"year": 2018,
+			"id": "TK_u496ZE4Q",
+			"seconds": 1643,
+			"title": "Going Full Rewrite - The Incremental Way",
+			"speaker": "Alex Badyan"
+		},
+		{
+			"year": 2018,
+			"id": "iL8GUwvUqqw",
+			"seconds": 1559,
+			"title": "To DB or not to DB, or, Why Databases are like Religions",
+			"speaker": "Amit Lichtenberg"
+		},
+		{
+			"year": 2018,
+			"id": "rx_zK-MIkvA",
+			"seconds": 1206,
+			"title": "Stackoverflow, the vulnerability marketplace",
+			"speaker": "Danny Grander"
+		},
+		{
+			"year": 2018,
+			"id": "Lf4WULRsUQI",
+			"seconds": 1719,
+			"title": "Storing your data in the cloud: doing it right",
+			"speaker": "Orit Wasserman"
+		},
+		{
+			"year": 2018,
+			"id": "UfvrBBLLmUQ",
+			"seconds": 3069,
+			"title": "The Hall of shame",
+			"speaker": "Sohar Sacks & Ido Viron"
+		},
+		{
+			"year": 2018,
+			"id": "PuA-1DvQ6qU",
+			"seconds": 318,
+			"title": "Career growth hack: See what other don't, Fix what other fear!",
+			"speaker": "Itiel Shwartz"
+		},
+		{
+			"year": 2018,
+			"id": "YKtErsgCG40",
+			"seconds": 312,
+			"title": "Analysis of Direct and Local Deep Neural Networks for Quantum Atomic Forces",
+			"speaker": "Nataly Kuritz"
+		},
+		{
+			"year": 2018,
+			"id": "JhBA-NhV1Eo",
+			"seconds": 309,
+			"title": "Winning 2048 Game Using Deep Reinforcement Learning",
+			"speaker": "Eyal Altshuler"
+		},
+		{
+			"year": 2018,
+			"id": "1NUZGrzYBM8",
+			"seconds": 333,
+			"title": "A ballad to a programmer (בלדה למתכנת)",
+			"speaker": "Yoni Tsafir & Iftach Bar"
+		},
+		{
+			"year": 2018,
+			"id": "958313v1CfY",
+			"seconds": 315,
+			"title": "Software engineers - let's crash the Deep Learning party!",
+			"speaker": "Jenny Abramov"
+		},
+		{
+			"year": 2018,
+			"id": "65yjjYfUPVE",
+			"seconds": 327,
+			"title": "After analyzing 30,000 SQL queries, these are the top mistakes developers make",
+			"speaker": "Tomer Shay Shimshi"
+		},
+		{
+			"year": 2018,
+			"id": "SXe4Ryf3SFo",
+			"seconds": 326,
+			"title": "Keep interviewing and nobody explodes: How WeWork uses games as part of our hiring",
+			"speaker": "Yonatan Bergman"
+		},
+		{
+			"year": 2018,
+			"id": "Lft5c_76170",
+			"seconds": 313,
+			"title": "Keeping it real - a practical guide to identifying fake news",
+			"speaker": "Ayelet Dekel"
+		},
+		{
+			"year": 2018,
+			"id": "Dqx2vlcJKK8",
+			"seconds": 305,
+			"title": "Don't be a freelancer",
+			"speaker": "David Weinberg"
+		},
+		{
+			"year": 2018,
+			"id": "UedXU0RA_k8",
+			"seconds": 315,
+			"title": "There is no B2B experience",
+			"speaker": "Shani Brusilovsky"
+		},
+		{
+			"year": 2018,
+			"id": "sOZrHtHPCpU",
+			"seconds": 316,
+			"title": "Making Quick Decisions",
+			"speaker": "Zohar Lerman"
+		},
+		{
+			"year": 2018,
+			"id": "RNKzf2-GZb8",
+			"seconds": 1613,
+			"title": "Lean Startup in Action",
+			"speaker": "Nissim Tapiro"
+		},
+		{
+			"year": 2018,
+			"id": "BYLI4nYvWWY",
+			"seconds": 312,
+			"title": "Feature, we need to talk",
+			"speaker": "Gil Vind"
+		},
+		{
+			"year": 2018,
+			"id": "OXFqzzqImLg",
+			"seconds": 315,
+			"title": "I did a PhD in computer science in order to work with human beings",
+			"speaker": "Reuth Mirsky"
+		},
+		{
+			"year": 2018,
+			"id": "lsJUQuGngVw",
+			"seconds": 330,
+			"title": "Quotes and Adages every developer must know",
+			"speaker": "Erez Lotan"
+		},
+		{
+			"year": 2018,
+			"id": "qj8xl_itwkg",
+			"seconds": 1387,
+			"title": "Don't Panic! (even if you get some really crazy data science project)",
+			"speaker": "Dana Averbuch"
+		},
+		{
+			"year": 2018,
+			"id": "DpSUGhPPswA",
+			"seconds": 1572,
+			"title": "nuclio - a super-fast open-source serverless",
+			"speaker": "Yaron Haviv"
+		},
+		{
+			"year": 2018,
+			"id": "_JYKovIAnGs",
+			"seconds": 1650,
+			"title": "7±2 Reasons Psychology Will Help You Write Better Code",
+			"speaker": "Moran Weber & Jonathan Avinor"
+		},
+		{
+			"year": 2018,
+			"id": "Tolv2Za-MyY",
+			"seconds": 1668,
+			"title": "Less is more: how we cut off 30% of our code that did nothing without trying to",
+			"speaker": "Gilad Ben Yossef"
+		},
+		{
+			"year": 2019,
+			"id": "uz4c-oXAPLM",
+			"seconds": 85,
+			"title": "RS19 Clip",
+			"speaker": ""
+		},
+		{
+			"year": 2019,
+			"id": "T7x4fC-9H9c",
+			"seconds": 1566,
+			"title": "Orchestrating Data Workflows Using a Fully Serverless Architecture",
+			"speaker": "Tomer Levi"
+		},
+		{
+			"year": 2019,
+			"id": "0HNr_cB8GEs",
+			"seconds": 1646,
+			"title": "Strike gold (and avoid drowning) with streaming algorithms",
+			"speaker": "Guy Smoilovsky"
+		},
+		{
+			"year": 2019,
+			"id": "aejjRzjGYOE",
+			"seconds": 1636,
+			"title": "Googlies! Grubbers! Lollies! How cricket helped us improve our throughput by 200%",
+			"speaker": "Ethan Pransky"
+		},
+		{
+			"year": 2019,
+			"id": "uokr9WbYm10",
+			"seconds": 1585,
+			"title": "Breaking Down Our Billion User Reach with HyperLogLog",
+			"speaker": "Daniel Avramson"
+		},
+		{
+			"year": 2019,
+			"id": "Q5p2L-gVR04",
+			"seconds": 1929,
+			"title": "“Micro Frontends”- You Keep Using That Word...",
+			"speaker": "Shem Magnezi"
+		},
+		{
+			"year": 2019,
+			"id": "mNz0IL2g7eo",
+			"seconds": 2869,
+			"title": "How to Reach the Moon",
+			"speaker": "Yoav Landsman"
+		},
+		{
+			"year": 2019,
+			"id": "DQw64BdyOAQ",
+			"seconds": 1640,
+			"title": "Track all users! How to locate & track users and bypass all those nagging privacy...",
+			"speaker": "Ran Bar Zik"
+		},
+		{
+			"year": 2019,
+			"id": "MUSTIr2Slg0",
+			"seconds": 1587,
+			"title": "Predictive Innovation - Understand why customer make choices...",
+			"speaker": "Effie Arditi"
+		},
+		{
+			"year": 2019,
+			"id": "h884h8JzV0A",
+			"seconds": 316,
+			"title": "Manage your Engineers as Managers",
+			"speaker": "Rotem Haber"
+		},
+		{
+			"year": 2019,
+			"id": "XBobcMjH6t0",
+			"seconds": 319,
+			"title": "What I Learned From 9 Year Olds About Onboarding",
+			"speaker": "Moran Tsur"
+		},
+		{
+			"year": 2019,
+			"id": "bitmoAahAJ0",
+			"seconds": 314,
+			"title": "Painless mentorship that solves understaffing",
+			"speaker": "Max C Reuveni"
+		},
+		{
+			"year": 2019,
+			"id": "YZf_h_dUXNs",
+			"seconds": 309,
+			"title": "How to speak American",
+			"speaker": "Yaara Wertheim"
+		},
+		{
+			"year": 2019,
+			"id": "Ag1PhNtJaYU",
+			"seconds": 311,
+			"title": "5 concepts I took from Data Science to Team Leading",
+			"speaker": "Dima Goldenberg"
+		},
+		{
+			"year": 2019,
+			"id": "PjIQzcx8kRc",
+			"seconds": 318,
+			"title": "How to grow and stay small?",
+			"speaker": "Gal Bar"
+		},
+		{
+			"year": 2019,
+			"id": "ZkapfiszoVE",
+			"seconds": 333,
+			"title": "Computerstones - lessons from 40 years of programming",
+			"speaker": "Atzmon Ghilai"
+		},
+		{
+			"year": 2019,
+			"id": "UMZnZBJ28ew",
+			"seconds": 1840,
+			"title": "I want to grab the next 23 minutes and 11 seconds to discuss time estimations",
+			"speaker": "Itay Maman"
+		},
+		{
+			"year": 2019,
+			"id": "0Lfm4xBjEjw",
+			"seconds": 1293,
+			"title": "Better Software Design With Mind Maps",
+			"speaker": "Rina Artstain"
+		},
+		{
+			"year": 2019,
+			"id": "cR0d0hIpkxI",
+			"seconds": 1891,
+			"title": "Microservices: A retrospective",
+			"speaker": "Tomer Gabel"
+		},
+		{
+			"year": 2019,
+			"id": "ABElGkXWrGk",
+			"seconds": 707,
+			"title": "אני אכתוב את זה מחר: לחיות עם דחיינות (חלקי)",
+			"speaker": "דורון פישלר"
+		},
+		{
+			"year": 2019,
+			"id": "948by_y1VKI",
+			"seconds": 1818,
+			"title": "Deno",
+			"speaker": "Benjamin Gruenbaum"
+		},
+		{
+			"year": 2019,
+			"id": "IHmgcO4Gaw0",
+			"seconds": 1457,
+			"title": "From Clever code to Better code",
+			"speaker": "Dror Helper"
+		},
+		{
+			"year": 2019,
+			"id": "vnwovI3C3V8",
+			"seconds": 1722,
+			"title": "Conjure: simple, polyglot RPC",
+			"speaker": "Robert Fink"
+		},
+		{
+			"year": 2019,
+			"id": "hR8zRnIocwY",
+			"seconds": 1614,
+			"title": "How we built a scalable end-to-end architecture for real-life machine learning",
+			"speaker": "Eilon Reshef"
+		},
+		{
+			"year": 2019,
+			"id": "2LcRJd3Mq5E",
+			"seconds": 1948,
+			"title": "Public Cloud vs Private Data Center deployments",
+			"speaker": "Benny Schnaider"
+		},
+		{
+			"year": 2019,
+			"id": "VC0aBzpTsgo",
+			"seconds": 1820,
+			"title": "Lessons from building deep learning recommendation systems",
+			"speaker": "Inbar Naor"
+		},
+		{
+			"year": 2019,
+			"id": "YXGHuWhXrUE",
+			"seconds": 2376,
+			"title": "Agile Data Science",
+			"speaker": "Noa Agiv"
+		},
+		{
+			"year": 2019,
+			"id": "hYDCgDJEX8o",
+			"seconds": 1467,
+			"title": "The battle of the techies - developers vs product managers",
+			"speaker": "Dalia Simons"
+		},
+		{
+			"year": 2019,
+			"id": "T-rhGKhiDb4",
+			"seconds": 1604,
+			"title": "Level Up - Building High performing team culture",
+			"speaker": "Yonatan Bergman"
+		},
+		{
+			"year": 2019,
+			"id": "PF2Hj2zPveM",
+			"seconds": 1676,
+			"title": "My Website is Slow, Now What?",
+			"speaker": "Dan Shappir"
+		},
+		{
+			"year": 2019,
+			"id": "4hhRDiWVOg0",
+			"seconds": 585,
+			"title": "Refactoring React code with Glean",
+			"speaker": "Boris Litvinsky"
+		},
+		{
+			"year": 2019,
+			"id": "_R5WfSXBruk",
+			"seconds": 886,
+			"title": "Rethinking JS form validations. Say hi to Passable",
+			"speaker": "Evyatar Alush"
+		},
+		{
+			"year": 2019,
+			"id": "vueK_1Gm93c",
+			"seconds": 875,
+			"title": "Nothing Good Ever Happens After 2am",
+			"speaker": "Daniel Korn"
+		},
+		{
+			"year": 2019,
+			"id": "bOs9jr2dlrY",
+			"seconds": 852,
+			"title": "Clarizen adventures with the wild GC in the holiday season",
+			"speaker": "Tamir Dresher"
+		},
+		{
+			"year": 2019,
+			"id": "PH5C-oDvZyw",
+			"seconds": 1795,
+			"title": "Developers as a Malware Distribution Vehicle",
+			"speaker": "Danny Grander"
+		},
+		{
+			"year": 2019,
+			"id": "zjmo3u7-Gig",
+			"seconds": 1834,
+			"title": "The wild side of visual tests",
+			"speaker": "Eran Shapira"
+		},
+		{
+			"year": 2019,
+			"id": "lq6lvIkA5VM",
+			"seconds": 1611,
+			"title": "Data Driven - I don't think it means what you think it means",
+			"speaker": "Erez Lotan"
+		},
+		{
+			"year": 2019,
+			"id": "Cz_0Dfg2KvA",
+			"seconds": 1813,
+			"title": "Can Your UX Be So Bad You Get Sued? Ask Domino's USA!",
+			"speaker": "Eynav Dagan"
+		},
+		{
+			"year": 2019,
+			"id": "bLv9J0B8ySQ",
+			"seconds": 1610,
+			"title": "Functional Reactive Programming: What Does It Solve? Does It Solve Things? Let's Fi...",
+			"speaker": "Netta Bondy"
+		},
+		{
+			"year": 2019,
+			"id": "xMk4V2pvWVQ",
+			"seconds": 1639,
+			"title": "C̶r̶a̶c̶k̶i̶n̶g̶ Fixing the coding interview",
+			"speaker": "Omri Fima & Yossi Shmueli"
+		},
+		{
+			"year": 2019,
+			"id": "AmZT-zr_gMM",
+			"seconds": 1684,
+			"title": "Pushing impact velocity through the roof with an extreme squad-like structure",
+			"speaker": "Yuval Kaminka"
+		},
+		{
+			"year": 2019,
+			"id": "aydH3Rr4GSs",
+			"seconds": 1956,
+			"title": "Lessons from hiring engineers and how to screen for culture",
+			"speaker": "Kfir Amitai"
+		},
+		{
+			"year": 2019,
+			"id": "YxRNT_8yeFc",
+			"seconds": 1812,
+			"title": "Massive Scale Anomaly Detection Framework",
+			"speaker": "Uri Silberstein & Guy Gerson"
+		},
+		{
+			"year": 2019,
+			"id": "OvHsP5bUmMY",
+			"seconds": 1980,
+			"title": "Bundling at scale: How Javascript bundling works at Facebook",
+			"speaker": "Noam Elboim"
+		},
+		{
+			"year": 2019,
+			"id": "GXx2Fl2AtzA",
+			"seconds": 1802,
+			"title": "Deploy and Destroy: Testing Environments",
+			"speaker": "Michael Arenzon"
+		},
+		{
+			"year": 2019,
+			"id": "GicM1h9KVl4",
+			"seconds": 562,
+			"title": "Metorikku: spark ETL made super simple",
+			"speaker": "Liran Yogev"
+		},
+		{
+			"year": 2019,
+			"id": "uxEX5Bopufs",
+			"seconds": 592,
+			"title": "RESTool - Stop Developing Apps for Managing RESTful APIs",
+			"speaker": "Daniel Sternlicht"
+		},
+		{
+			"year": 2019,
+			"id": "JNwYyjMtwtk",
+			"seconds": 546,
+			"title": "Tweek - Feature manager for the people",
+			"speaker": "Yshay Yaacobi"
+		},
+		{
+			"year": 2019,
+			"id": "icM133fkYZ4",
+			"seconds": 754,
+			"title": "Sboblegate - how the famous Internet Guru Forced me to roll back the Change...",
+			"speaker": "Tzvika Barenholz"
+		},
+		{
+			"year": 2019,
+			"id": "ap5QD9yeqss",
+			"seconds": 879,
+			"title": "Ensuring 100% uptime in the cloud of failing GPUs",
+			"speaker": "Jonatan Bien"
+		},
+		{
+			"year": 2019,
+			"id": "NabAgEgopLs",
+			"seconds": 1739,
+			"title": "How TMA* Addresses Performance Analysis Challenges through the IceLake Processor",
+			"speaker": "Ahmad Yasin"
+		},
+		{
+			"year": 2019,
+			"id": "-nGvI8NFrS8",
+			"seconds": 1828,
+			"title": "“Show Me the Garbage!”, Understanding Garbage Collection",
+			"speaker": "Haim Yadid"
+		},
+		{
+			"year": 2019,
+			"id": "_KQCLIwa5qM",
+			"seconds": 1505,
+			"title": "A scalable, available, searchable and near realtime system. but at what cost?",
+			"speaker": "Tamar Rucham"
+		},
+		{
+			"year": 2019,
+			"id": "yuKDBN490oQ",
+			"seconds": 1635,
+			"title": "In a galaxy far, far away - A procedural generation tale",
+			"speaker": "Shay Davidson"
+		},
+		{
+			"year": 2019,
+			"id": "TspN1NLcabM",
+			"seconds": 1446,
+			"title": "We talked about your salary, now let's talk about your career",
+			"speaker": "Iftach Bar"
+		},
+		{
+			"year": 2019,
+			"id": "8W3vdbuldmg",
+			"seconds": 1613,
+			"title": "Ethical questions in software engineering",
+			"speaker": "Rotem Hermon"
+		},
+		{
+			"year": 2019,
+			"id": "aVDSBQSUIDM",
+			"seconds": 304,
+			"title": "Managing for dummies: Managing people smarter than you",
+			"speaker": "Erik Zaadi"
+		},
+		{
+			"year": 2019,
+			"id": "kttJ7js7uC8",
+			"seconds": 318,
+			"title": "Artificial Insanity - How to Keep Calm & Combat Imposter Syndrome",
+			"speaker": "Sharone Revah Zitzman"
+		},
+		{
+			"year": 2019,
+			"id": "dTBV3kCxklA",
+			"seconds": 313,
+			"title": "Your career choices as an optimization problem",
+			"speaker": "Gil Hoffer"
+		},
+		{
+			"year": 2019,
+			"id": "MuETn0bBUZs",
+			"seconds": 315,
+			"title": "A glimpse into a Data Scientist’s work - implementing algorithms from research papers",
+			"speaker": "Noa Raindel"
+		},
+		{
+			"year": 2019,
+			"id": "kMI5TXJ-AwQ",
+			"seconds": 325,
+			"title": "Health KPIs of AI/ML models in production",
+			"speaker": "Ofer Razon"
+		},
+		{
+			"year": 2019,
+			"id": "H-WKM0Qtqf4",
+			"seconds": 365,
+			"title": "CI גברת עם",
+			"speaker": "Iftach Bar & Yoni Tsafir"
+		},
+		{
+			"year": 2019,
+			"id": "UpY3P1MmwMg",
+			"seconds": 1527,
+			"title": "Egoprogramophobia, or fear of one's own code: how testing can change your life",
+			"speaker": "Gil Tayar"
+		},
+		{
+			"year": 2019,
+			"id": "FlpXes7QVk4",
+			"seconds": 1549,
+			"title": "Demystifying git: from SHA to interactive rebase",
+			"speaker": "Adam Matan"
+		},
+		{
+			"year": 2019,
+			"id": "R0d2iuxnxsk",
+			"seconds": 1762,
+			"title": "The Reversim Story",
+			"speaker": "Ran Tavory & Ori Lahav"
+		},
+		{
+			"year": 2019,
+			"id": "AB6cMvCt_0Q",
+			"seconds": 1865,
+			"title": "Abstractions All the Way Down",
+			"speaker": "Hila Noga"
+		},
+		{
+			"year": 2019,
+			"id": "FEMf2prhZ-4",
+			"seconds": 1314,
+			"title": "You don’t have a production environment",
+			"speaker": "Avishai Ish Shalom"
+		},
+		{
+			"year": 2019,
+			"id": "TVmfVE3Xc_U",
+			"seconds": 1714,
+			"title": "Towards Explainable Machine Learning",
+			"speaker": "Einat Naaman"
+		},
+		{
+			"year": 2019,
+			"id": "cZnlssdwG4Y",
+			"seconds": 1593,
+			"title": "Scaling Production data across Microservices @ Fiverr",
+			"speaker": "Erik Ashepa"
+		},
+		{
+			"year": 2019,
+			"id": "L6PnNAmT-4Q",
+			"seconds": 1467,
+			"title": "Entity and Word Embbeding: Evaluation and Out-Of-Box Thinking",
+			"speaker": "Dor Amir"
+		},
+		{
+			"year": 2019,
+			"id": "JNpbRhaZ3ms",
+			"seconds": 1756,
+			"title": "Bringing Decades of DevOps Experience To Deep Learning",
+			"speaker": "Jesse Freeman"
+		},
+		{
+			"year": 2019,
+			"id": "lSrFh4vOno4",
+			"seconds": 1742,
+			"title": "Labeling against all odds",
+			"speaker": "Dana Kaner"
+		},
+		{
+			"year": 2019,
+			"id": "FOoLZwN-wMQ",
+			"seconds": 1316,
+			"title": "Anomaly Detection: The Bad Boy of Data Science",
+			"speaker": "Bar Vinograd"
+		},
+		{
+			"year": 2019,
+			"id": "2rZBx2iy-EE",
+			"seconds": 2138,
+			"title": "Building your first malicious chrome extension 😈",
+			"speaker": "Alon Kiriati"
+		},
+		{
+			"year": 2019,
+			"id": "JG37q97YDWM",
+			"seconds": 1743,
+			"title": "Debugging (with) your mind",
+			"speaker": "Gilad Ben Yossef"
+		},
+		{
+			"year": 2019,
+			"id": "2eZ4G-loZkY",
+			"seconds": 2016,
+			"title": "React Native - Under The Bridge",
+			"speaker": "Chen Feldman"
+		},
+		{
+			"year": 2020,
+			"id": "1VbkG9CaoU8",
+			"seconds": 346,
+			"title": "Welcome Session - Day 1 and Introduction - Invincibility & Excellence Tracks",
+			"speaker": ""
+		},
+		{
+			"year": 2020,
+			"id": "JWknJNtOnVU",
+			"seconds": 2775,
+			"title": "The Art of Performance - A Panel Discussion",
+			"speaker": "Tamar Rucham, Adam Lev Libfeld & Guy Kobrinsky"
+		},
+		{
+			"year": 2020,
+			"id": "n3z7u79VSkM",
+			"seconds": 2158,
+			"title": "The Architectural Transformations of Building Corvid",
+			"speaker": "Yoav Abrahami"
+		},
+		{
+			"year": 2020,
+			"id": "3DzAqfUcp-4",
+			"seconds": 2541,
+			"title": "Panel: Successfully Working with Microservices Architectures",
+			"speaker": ""
+		},
+		{
+			"year": 2020,
+			"id": "GB1IXhqEn70",
+			"seconds": 2425,
+			"title": "Keep your Logic Close and Your Data Closer - How to Share data Between Services",
+			"speaker": "Yonatan Maman"
+		},
+		{
+			"year": 2020,
+			"id": "jTwbRkC8SWk",
+			"seconds": 322,
+			"title": "Welcome Session - Day 2 and Introduction - Visuals & Skynet Tracks",
+			"speaker": ""
+		},
+		{
+			"year": 2020,
+			"id": "GAQls8vM95I",
+			"seconds": 1807,
+			"title": "Deno + Node.js: State of the Union",
+			"speaker": "Benjamin Gruenbaum"
+		},
+		{
+			"year": 2020,
+			"id": "5xfKDrmCL4k",
+			"seconds": 2812,
+			"title": "Bullet Proof Testing for your Design System",
+			"speaker": "Chen Feldman"
+		},
+		{
+			"year": 2020,
+			"id": "1GxdGHinpwk",
+			"seconds": 1567,
+			"title": "Auxiliary Tuning and its Application to Conditional Text Generation",
+			"speaker": "Yoel Zeldes"
+		},
+		{
+			"year": 2020,
+			"id": "v_T4SrODHTw",
+			"seconds": 1797,
+			"title": "PyGraphicsGui for Human-in-the-Loop Machine Learning",
+			"speaker": "Dalya Gartzman"
+		},
+		{
+			"year": 2020,
+			"id": "Aj0xEyLVeRc",
+			"seconds": 339,
+			"title": "Welcome Session - Day 3 and Introduction - Humanity & Vision Tracks",
+			"speaker": ""
+		},
+		{
+			"year": 2020,
+			"id": "O9Qf8YlGsc8",
+			"seconds": 1768,
+			"title": "Engineering the Magic, Disney's Secret for Building Awesome Products",
+			"speaker": "Omri Fima"
+		},
+		{
+			"year": 2020,
+			"id": "qGtCI7sWPXM",
+			"seconds": 1608,
+			"title": "Building a self-brand, for introverts as well",
+			"speaker": "Iris Shoor"
+		},
+		{
+			"year": 2020,
+			"id": "4mAD0Hc38LY",
+			"seconds": 2732,
+			"title": "Ideation Process for Building your Venture - Lessons Learned",
+			"speaker": "Ido Wiesenberg & Liad Rubin"
+		},
+		{
+			"year": 2020,
+			"id": "tT99auaS0jE",
+			"seconds": 2791,
+			"title": "Bizzabo Transformation During COVID-19",
+			"speaker": "Boaz Katz & Chen Salmon"
+		},
+		{
+			"year": 2020,
+			"id": "xcI06LHG1k4",
+			"seconds": 1270,
+			"title": "QnA: Successfully Working with Microservices Architectures",
+			"speaker": ""
+		},
+		{
+			"year": 2020,
+			"id": "NmvK4pHUuaw",
+			"seconds": 864,
+			"title": "QnA: Keep your Logic Close and Your Data Closer - How to Share data Between Services",
+			"speaker": ""
+		},
+		{
+			"year": 2021,
+			"id": "Tks5rdJnAmM",
+			"seconds": 104,
+			"title": "RS21 Clip",
+			"speaker": ""
+		},
+		{
+			"year": 2021,
+			"id": "dEjeS2avtis",
+			"seconds": 1623,
+			"title": "The Reboot, Reloaded",
+			"speaker": "Avishai Ish Shalom"
+		},
+		{
+			"year": 2021,
+			"id": "ym_U2Nm6qXM",
+			"seconds": 1576,
+			"title": "WebRTC for Live Video Streaming",
+			"speaker": "Evyatar Rosner"
+		},
+		{
+			"year": 2021,
+			"id": "zcKnUhlyC2s",
+			"seconds": 1464,
+			"title": "Web is a Great IDEa! - Salto's Story of Developing a Web Based IDE",
+			"speaker": "Noam Hammer"
+		},
+		{
+			"year": 2021,
+			"id": "QolZN1oxI3Q",
+			"seconds": 1633,
+			"title": "Board Games Frontend Joyride",
+			"speaker": "Shay Davidson"
+		},
+		{
+			"year": 2021,
+			"id": "XwV9H3_m4lY",
+			"seconds": 1558,
+			"title": "Strength in weakness: JavaScript memory management and weak references",
+			"speaker": "Dan Shappir"
+		},
+		{
+			"year": 2021,
+			"id": "EX-cYcThGK4",
+			"seconds": 1741,
+			"title": "What If I Told You, You're Only Using Half of Your Chip",
+			"speaker": "Barak Yoresh"
+		},
+		{
+			"year": 2021,
+			"id": "If_544UO3fw",
+			"seconds": 2308,
+			"title": "From developer to AR developer in 30 minutes - RealityKit live coding session",
+			"speaker": "Arad Seroussi"
+		},
+		{
+			"year": 2021,
+			"id": "qNn01T1xV8o",
+			"seconds": 515,
+			"title": "GraphQL in HTML with Apollo Elements",
+			"speaker": "Benny Powers"
+		},
+		{
+			"year": 2021,
+			"id": "q_tBjaKlDPI",
+			"seconds": 741,
+			"title": "Maintaining an Open Source - The Good, Bad & Ugly",
+			"speaker": "Ohad Shai"
+		},
+		{
+			"year": 2021,
+			"id": "VLojgjqSNnE",
+			"seconds": 570,
+			"title": "Open Sourcing a Successful Internal Project",
+			"speaker": "Natan Silnitsky"
+		},
+		{
+			"year": 2021,
+			"id": "Fi-jIiI6IM0",
+			"seconds": 1439,
+			"title": "Let's Build a Load Balancer",
+			"speaker": "Amir Hadadi"
+		},
+		{
+			"year": 2021,
+			"id": "VIJmFlkUVMU",
+			"seconds": 1795,
+			"title": "Everything You Always Wanted to Know About Data Mesh* (*But Were Afraid to Ask)",
+			"speaker": "Erez Lotan"
+		},
+		{
+			"year": 2021,
+			"id": "0EgZrL7hxSM",
+			"seconds": 1661,
+			"title": "Understanding Java’s Debugging Internals",
+			"speaker": "Liran Haimovitch"
+		},
+		{
+			"year": 2021,
+			"id": "ZeE-JxMZDLk",
+			"seconds": 1733,
+			"title": "Immutable Rules: Git-like Commits for Data at S3 Scale",
+			"speaker": "Ariel Shaqed Scolnicov"
+		},
+		{
+			"year": 2021,
+			"id": "OdcOH78KLaM",
+			"seconds": 1623,
+			"title": "Scale Up the Architecture - Divergence vs. Convergence",
+			"speaker": "Roni Cohen"
+		},
+		{
+			"year": 2021,
+			"id": "81UAsPwhdO4",
+			"seconds": 1668,
+			"title": "Lets Talk About Multipliers",
+			"speaker": "Iftach Bar"
+		},
+		{
+			"year": 2021,
+			"id": "jS6FxOteQdI",
+			"seconds": 1855,
+			"title": "The Code Review of Many Faces\\ Arya Stark Method for Reviewing a Code",
+			"speaker": "Danielle Shaul"
+		},
+		{
+			"year": 2021,
+			"id": "s2g9Kz6-Vq4",
+			"seconds": 1754,
+			"title": "The Mysterious Journey of Becoming a Senior Engineer",
+			"speaker": "Shem Magnezi"
+		},
+		{
+			"year": 2021,
+			"id": "YReY_xpdo78",
+			"seconds": 2020,
+			"title": "Retro About What's Working and not in Startups/VCs",
+			"speaker": "Eden Shochat"
+		},
+		{
+			"year": 2021,
+			"id": "FyUrfol7EMw",
+			"seconds": 1908,
+			"title": "ESM in Node.js: a tangled tale of asynchronicity, compatibility, and people",
+			"speaker": "Gil Tayar"
+		},
+		{
+			"year": 2021,
+			"id": "1_MDwZVh99o",
+			"seconds": 1797,
+			"title": "Architecting for a Reasonable Future",
+			"speaker": "Tomer Gabel"
+		},
+		{
+			"year": 2021,
+			"id": "HQiCPwfBWwQ",
+			"seconds": 1968,
+			"title": "Don’t Forget about Memory Management",
+			"speaker": "Shachar Langbeheim"
+		},
+		{
+			"year": 2021,
+			"id": "BC-fBhvExlM",
+			"seconds": 1886,
+			"title": "Growth Marketing - It’s all Reverse Engineering",
+			"speaker": "Nathaniel Yanky Yankelevich"
+		},
+		{
+			"year": 2021,
+			"id": "tLc0OGrNRbI",
+			"seconds": 1753,
+			"title": "Goodbye Logs, Hello Distributed Tracing!",
+			"speaker": "Ilai Fallach"
+		},
+		{
+			"year": 2021,
+			"id": "mrYfZVsjXFs",
+			"seconds": 1406,
+			"title": "The (ir)rational Incident Response: How Psychological Biases Affects Incident...",
+			"speaker": "Boris Cherkasky"
+		},
+		{
+			"year": 2021,
+			"id": "Y-LCKNytF1k",
+			"seconds": 1922,
+			"title": "Breaking Out of CI Environments",
+			"speaker": "Rotem Bar & Omer Gil"
+		},
+		{
+			"year": 2021,
+			"id": "ItmGvSG3juc",
+			"seconds": 1833,
+			"title": "Edge Security in Untrusted Environments",
+			"speaker": "Issac Goldstand"
+		},
+		{
+			"year": 2021,
+			"id": "98u9t2CC-UQ",
+			"seconds": 1802,
+			"title": "Censor Everything! Save the Children!",
+			"speaker": "Ran Bar Zik"
+		},
+		{
+			"year": 2021,
+			"id": "Qa-UfhkflIM",
+			"seconds": 1843,
+			"title": "Stranger Danger: Your Node.js Attack Surface Just Got Bigger",
+			"speaker": "Liran Tal"
+		},
+		{
+			"year": 2021,
+			"id": "WIOZDQY71AY",
+			"seconds": 1747,
+			"title": "When the Firefighters Come Knocking",
+			"speaker": "Barak Luzon & Ariel Pisetzky"
+		},
+		{
+			"year": 2021,
+			"id": "SdSqQMwgw_4",
+			"seconds": 1756,
+			"title": "Neurosurgery for Neural Networks - How we Cut a Language Model in Half ...",
+			"speaker": "Tomer Asida"
+		},
+		{
+			"year": 2021,
+			"id": "wlRLI1J-nFs",
+			"seconds": 1715,
+			"title": "Quality Over Quantity - The Secret Behind Active Learning",
+			"speaker": "Sivan Biham"
+		},
+		{
+			"year": 2021,
+			"id": "iUyJv4B-_M0",
+			"seconds": 1533,
+			"title": "Silly Baboons, Stubborn Elephants: Navigating Culture Differences Across R&D groups",
+			"speaker": "Rina Artstain"
+		},
+		{
+			"year": 2021,
+			"id": "0q74ehl0AXI",
+			"seconds": 1486,
+			"title": "How to REVERSE a Giant Arch Decision",
+			"speaker": "Pavel Brodsky"
+		},
+		{
+			"year": 2021,
+			"id": "PX6vj6va7XA",
+			"seconds": 411,
+			"title": "לילה קוד",
+			"speaker": "Yoni Tsafir & Iftach Bar"
+		},
+		{
+			"year": 2021,
+			"id": "eOxBcxiwAEE",
+			"seconds": 323,
+			"title": "Abra Kadabra - Find Your Inner Jupyter Notebook Magician",
+			"speaker": "Malvina Matlis"
+		},
+		{
+			"year": 2021,
+			"id": "4cCluLk4Ni4",
+			"seconds": 323,
+			"title": "Individual Contributor Roles Are Actually All About Teamwork",
+			"speaker": "Tomer Brosh"
+		},
+		{
+			"year": 2021,
+			"id": "FlCP2zWThpI",
+			"seconds": 325,
+			"title": "Reviewing the Code Reviewee",
+			"speaker": "Ofir Elias"
+		},
+		{
+			"year": 2021,
+			"id": "Iwak9NA8tI8",
+			"seconds": 1542,
+			"title": "Building an Impactful Guild In Your Company",
+			"speaker": "Chen Feldman"
+		},
+		{
+			"year": 2021,
+			"id": "nf63PkCeUjA",
+			"seconds": 1799,
+			"title": "Reverse Engineering: an Insider Story",
+			"speaker": "Dotan Nahum"
+		},
+		{
+			"year": 2021,
+			"id": "8FzwxGqYQzM",
+			"seconds": 263,
+			"title": "דת האנליסט",
+			"speaker": "Efrat Garber Aran"
+		},
+		{
+			"year": 2021,
+			"id": "zlnwoaABKQ0",
+			"seconds": 320,
+			"title": "Matchmaking the Difference",
+			"speaker": "Lior Nachmias"
+		},
+		{
+			"year": 2021,
+			"id": "-vvkDmEc2wY",
+			"seconds": 326,
+			"title": "Finding that Needle in the Haystack - Git Bisect",
+			"speaker": "Leah Vogel"
+		},
+		{
+			"year": 2021,
+			"id": "ItkOWUF90bg",
+			"seconds": 319,
+			"title": "GeoGuessing our Way to R&D Culture",
+			"speaker": "Lior Resisi & Ilay Azulay"
+		},
+		{
+			"year": 2021,
+			"id": "Tz9pbW8E4PE",
+			"seconds": 328,
+			"title": "A Brief History of Data",
+			"speaker": "Josef Goldstein"
+		},
+		{
+			"year": 2021,
+			"id": "6QMzUnQ-3yw",
+			"seconds": 326,
+			"title": "My Personal Technical co-founder Story - What's my Job Here?",
+			"speaker": "Amichai Schreiber"
+		},
+		{
+			"year": 2021,
+			"id": "ud4aKKRjoyw",
+			"seconds": 319,
+			"title": "Getting to 60k Users with $0 marketing budget...",
+			"speaker": "Oded Valin"
+		},
+		{
+			"year": 2021,
+			"id": "uKJ1O5iRyRc",
+			"seconds": 1421,
+			"title": "Can you Read This? (Or: how I Improved Text Readability on the Web...)",
+			"speaker": "Asya Frumkin"
+		},
+		{
+			"year": 2021,
+			"id": "6izoHMO0Bmw",
+			"seconds": 1665,
+			"title": "Data Science as a Bridge Between Urban Planning and the Comm...",
+			"speaker": "Keren Ben Tov Sher & Nataly Kuritz"
+		},
+		{
+			"year": 2021,
+			"id": "eq8TmKBLVAI",
+			"seconds": 1628,
+			"title": "How to Personalize Free Benefits Without Spending Money?",
+			"speaker": "Dima Goldenberg"
+		},
+		{
+			"year": 2021,
+			"id": "ahGLUdW3cqk",
+			"seconds": 1651,
+			"title": "Write Thousands of Tests and Catch Bugs Earlier with Property-Based Testing",
+			"speaker": "Shai Geva"
+		},
+		{
+			"year": 2021,
+			"id": "NyKBy1suyWo",
+			"seconds": 1442,
+			"title": "Non-developers can Easily use your Public API - Ask me How",
+			"speaker": "Yonatan Maman"
+		},
+		{
+			"year": 2021,
+			"id": "abyNOiFsKro",
+			"seconds": 332,
+			"title": "How I Used \"Cyber\" to Beat my Little Brother",
+			"speaker": "Akiva Schiff Blass"
+		},
+		{
+			"year": 2021,
+			"id": "p9QDGERkyyo",
+			"seconds": 1738,
+			"title": "Cracking Into Black Boxes - Unattainable Integrations",
+			"speaker": "Lilach Ritter"
+		},
+		{
+			"year": 2021,
+			"id": "BgfRs3oG2nw",
+			"seconds": 1536,
+			"title": "The Impact of Clustering on the Animation World",
+			"speaker": "Yonit Hoffman"
+		},
+		{
+			"year": 2021,
+			"id": "9K4ZulR_7Ew",
+			"seconds": 1597,
+			"title": "Using Data Visualization to Fight COVID-19",
+			"speaker": "Gil Fink"
+		},
+		{
+			"year": 2021,
+			"id": "To7w_jVOcLw",
+			"seconds": 133,
+			"title": "RS21 behind the scenes and sponsors thank you",
+			"speaker": ""
+		},
+		{
+			"year": 2022,
+			"id": "gZpYoqsDZ3s",
+			"seconds": 111,
+			"title": "Reversim Summit 2022 Clip",
+			"speaker": ""
+		},
+		{
+			"year": 2022,
+			"id": "pCY09FDvC5I",
+			"seconds": 2011,
+			"title": "What’s Next, or, how we messed up the WWW, and how to fix it!",
+			"speaker": "Joel Spolsky"
+		},
+		{
+			"year": 2022,
+			"id": "XXmTXMPD7j4",
+			"seconds": 1443,
+			"title": "SourceCodeAI - NOT yet another NLP",
+			"speaker": "Ori Abramovsky"
+		},
+		{
+			"year": 2022,
+			"id": "h7x2nyOuAkk",
+			"seconds": 1837,
+			"title": "Data Science of the Road @Waze",
+			"speaker": "Roy Sasson & Philippe Adjiman"
+		},
+		{
+			"year": 2022,
+			"id": "Iv6ifIAQX7M",
+			"seconds": 1540,
+			"title": "Living in Perfect Harmony - Where Music and Machine Learning Meet",
+			"speaker": "Yama Anin Aminof"
+		},
+		{
+			"year": 2022,
+			"id": "r2Sdvo4E3Do",
+			"seconds": 1752,
+			"title": "The Unique Challenges of Data-rich UI Applications",
+			"speaker": "Hava Babay-Adi"
+		},
+		{
+			"year": 2022,
+			"id": "48nIJc1ek8o",
+			"seconds": 1835,
+			"title": "You (probably) Don't Need Global State Management",
+			"speaker": "Shai Yallin"
+		},
+		{
+			"year": 2022,
+			"id": "BzkV-9pvpaA",
+			"seconds": 1344,
+			"title": "My Browser can be a Musical Instrument?",
+			"speaker": "Marik Shnitman"
+		},
+		{
+			"year": 2022,
+			"id": "Z2Zf7H316Kw",
+			"seconds": 1807,
+			"title": "Winning with SEO on Facebook and Instagram",
+			"speaker": "Noam Elboim"
+		},
+		{
+			"year": 2022,
+			"id": "QTg8ZBXNri8",
+			"seconds": 1775,
+			"title": "A Gentle Introduction To Developer Experience",
+			"speaker": "Michael Arenzon"
+		},
+		{
+			"year": 2022,
+			"id": "3XK7JOLNomY",
+			"seconds": 1429,
+			"title": "One Platform to Serve Them All - From Service Duplication to Platform Architecture",
+			"speaker": "Daphna Regev"
+		},
+		{
+			"year": 2022,
+			"id": "MKnc31NWIOs",
+			"seconds": 1417,
+			"title": "The cache that broke the camel's back",
+			"speaker": "Rami Stern"
+		},
+		{
+			"year": 2022,
+			"id": "PuyuDvWhH4E",
+			"seconds": 1831,
+			"title": "Behind the doors of key-value stores",
+			"speaker": "Eran Gilad"
+		},
+		{
+			"year": 2022,
+			"id": "0wNS3Ux3kX8",
+			"seconds": 328,
+			"title": "Behind the scenes of the most famous bot in Israel",
+			"speaker": "Shilo Magen"
+		},
+		{
+			"year": 2022,
+			"id": "uzy3exRq-v4",
+			"seconds": 314,
+			"title": "A Brief History of Observability",
+			"speaker": "Assaf Dayan"
+		},
+		{
+			"year": 2022,
+			"id": "FVnYCE_uGmM",
+			"seconds": 319,
+			"title": "Human Management or: Managing Humanly",
+			"speaker": "Lea Cohen Tannoudji"
+		},
+		{
+			"year": 2022,
+			"id": "7rz_MfAIJnY",
+			"seconds": 321,
+			"title": "ZTML - Extreme inline text compression for HTML/JS",
+			"speaker": "Eyal Gruss"
+		},
+		{
+			"year": 2022,
+			"id": "jKJeA7eqavM",
+			"seconds": 313,
+			"title": "How to keep the fire going when you start to feel Burnout",
+			"speaker": "Revital Sirotkin"
+		},
+		{
+			"year": 2022,
+			"id": "F--DUGfIgYk",
+			"seconds": 316,
+			"title": "SigTERM - everything that has a beginning has an end",
+			"speaker": "Alon Nisser"
+		},
+		{
+			"year": 2022,
+			"id": "WzB_yJRDQmA",
+			"seconds": 305,
+			"title": "לקוד יש בעיה",
+			"speaker": "Dan Leshem & Jonathan Harel"
+		},
+		{
+			"year": 2022,
+			"id": "MqRL2vwRlJg",
+			"seconds": 1703,
+			"title": "Lessons learned from working with 2000 event-driven microservices",
+			"speaker": "Natan Silnitsky"
+		},
+		{
+			"year": 2022,
+			"id": "Lh4c2Pp5wW8",
+			"seconds": 1735,
+			"title": "5 Mistakes We Made in A/B Testing (We Made Them so You Don’t Have To!)",
+			"speaker": "Nurit Moscovici"
+		},
+		{
+			"year": 2022,
+			"id": "zX8kXNW0Vn0",
+			"seconds": 1615,
+			"title": "Designing for production: Stability patterns and antipatterns",
+			"speaker": "Amir Belgi"
+		},
+		{
+			"year": 2022,
+			"id": "gPBwtckdHL4",
+			"seconds": 1520,
+			"title": "Hardware/software co-design - what does it mean from the software perspective?",
+			"speaker": "Anat Heilper"
+		},
+		{
+			"year": 2022,
+			"id": "D15eKbqqmDc",
+			"seconds": 1896,
+			"title": "How I became the world's first Quantum DevOps engineer",
+			"speaker": "Shahak Lahav"
+		},
+		{
+			"year": 2022,
+			"id": "oqAEPbi_bCc",
+			"seconds": 1503,
+			"title": "PySnooper: Never use print for debugging again",
+			"speaker": "Ram Rachum"
+		},
+		{
+			"year": 2022,
+			"id": "mlybXXeWZpw",
+			"seconds": 1670,
+			"title": "The DX anthology: Volume 3, Chapter 8",
+			"speaker": "Itay Maman"
+		},
+		{
+			"year": 2022,
+			"id": "7L_xe5Ze5EI",
+			"seconds": 1411,
+			"title": "Node Save The Trees",
+			"speaker": "Galia Ruppin"
+		},
+		{
+			"year": 2022,
+			"id": "LhenT8G5hVc",
+			"seconds": 1867,
+			"title": "The Golem Turns On His Creator - How I took home automation too far",
+			"speaker": "Gilad Shoham"
+		},
+		{
+			"year": 2022,
+			"id": "GVnXg4eGcPY",
+			"seconds": 1631,
+			"title": "Incorporate Juniors to a Corporate: How We Built Microsoft’s Jr Developers Community",
+			"speaker": "Shay Ben Haim"
+		},
+		{
+			"year": 2022,
+			"id": "4alePSc9DVg",
+			"seconds": 1805,
+			"title": "It’s time for relational databases to focus on developers",
+			"speaker": "Shlomi Noach"
+		},
+		{
+			"year": 2022,
+			"id": "OHtIJ8rliZs",
+			"seconds": 1832,
+			"title": "Jam session: Jamming the world for fun and profit (or just for fun)",
+			"speaker": "Ran Bar-Zik"
+		},
+		{
+			"year": 2022,
+			"id": "YSC6mVUx25w",
+			"seconds": 1813,
+			"title": "What the Premier League can teach us about Zero Trust Security",
+			"speaker": "Michal Davidson"
+		},
+		{
+			"year": 2022,
+			"id": "3Kz5YgXmRjQ",
+			"seconds": 1857,
+			"title": "How to keep solid engineering skills as an Engineering Manager?",
+			"speaker": "Oren Ellenbogen"
+		},
+		{
+			"year": 2022,
+			"id": "bTMVk22FCkA",
+			"seconds": 1819,
+			"title": "Building A Programmer's Second Brain",
+			"speaker": "Guy Wiener"
+		},
+		{
+			"year": 2022,
+			"id": "9og0WmsEXW8",
+			"seconds": 330,
+			"title": "The Size of a Pixel",
+			"speaker": "Akiva Schiff-Blass"
+		},
+		{
+			"year": 2022,
+			"id": "uNq2Inls1J4",
+			"seconds": 320,
+			"title": "Protect Your Code From Cognitive Load",
+			"speaker": "Guy Erez"
+		},
+		{
+			"year": 2022,
+			"id": "X3dGfpK8Ey4",
+			"seconds": 324,
+			"title": "This Place is a Mess, Rewrite Everything!",
+			"speaker": "Josef Goldstein"
+		},
+		{
+			"year": 2022,
+			"id": "ckQ4VBDH4IU",
+			"seconds": 299,
+			"title": "'kushkubayes': The easy way to stay focused during meetings",
+			"speaker": "Bracha Elitzur"
+		},
+		{
+			"year": 2022,
+			"id": "pb-8jChZAsE",
+			"seconds": 1732,
+			"title": "Getting to Love Incidents",
+			"speaker": "Oleg Chernoguz"
+		},
+		{
+			"year": 2022,
+			"id": "CKQ5hIUVano",
+			"seconds": 1812,
+			"title": "Antifragile Teams - how to build teams that gain from disorder and randomness",
+			"speaker": "Guy Grinapell"
+		},
+		{
+			"year": 2022,
+			"id": "zVFXVKrrI6A",
+			"seconds": 1826,
+			"title": "When the product is your company",
+			"speaker": "Lital Hassine"
+		},
+		{
+			"year": 2022,
+			"id": "TQ5UuIphdSg",
+			"seconds": 1548,
+			"title": "Stop Labelling Everything! How Self-Supervision Can Reduce Labelling Costs",
+			"speaker": "Shira Navot"
+		},
+		{
+			"year": 2022,
+			"id": "GoyqeE-jHT4",
+			"seconds": 1553,
+			"title": "Follow Your Gut - AI for Depth Estimation in GI Endoscopy",
+			"speaker": "Erez Posner"
+		},
+		{
+			"year": 2022,
+			"id": "Q4zC7TqBS_w",
+			"seconds": 1603,
+			"title": "What does Vision and Language processing have to do with financial data?",
+			"speaker": "Hadar Rosenwald"
+		},
+		{
+			"year": 2022,
+			"id": "OjA5sxDzz0Y",
+			"seconds": 291,
+			"title": "יוני ויפתח",
+			"speaker": "ככה לא כותבים קוד"
+		},
+		{
+			"year": 2022,
+			"id": "dOr4LxmWAtI",
+			"seconds": 321,
+			"title": "Here's my API! What's yours?",
+			"speaker": "Gal Bar"
+		},
+		{
+			"year": 2022,
+			"id": "dCUoGCZ34g4",
+			"seconds": 1815,
+			"title": "Code Like a Girl. Breaking the Gender Stereotype",
+			"speaker": "Moran Weber"
+		},
+		{
+			"year": 2022,
+			"id": "7Yi9uBe-LMg",
+			"seconds": 1759,
+			"title": "Architecture - I don’t think it means what you think it means",
+			"speaker": "Omri Fima & Yossi Shmueli"
+		},
+		{
+			"year": 2022,
+			"id": "S2NmneEGq_0",
+			"seconds": 1338,
+			"title": "Handling the (Ground) Truth in the Fraud Detection domain",
+			"speaker": "Amir Dolev"
+		},
+		{
+			"year": 2022,
+			"id": "AdfjK8qyTI0",
+			"seconds": 321,
+			"title": "Great Expectations",
+			"speaker": "Leah Vogel"
+		},
+		{
+			"year": 2022,
+			"id": "zwgvOa8HWlw",
+			"seconds": 1627,
+			"title": "Predictably Non-Binary",
+			"speaker": "Yossi Sassi"
+		},
+		{
+			"year": 2022,
+			"id": "x8Fd5qpIogM",
+			"seconds": 1398,
+			"title": "Deprecating The Greatest Legacy System In The Industry, or: your keyboard sucks",
+			"speaker": "Lior Haim"
+		},
+		{
+			"year": 2022,
+			"id": "ib6Tz7JbRDs",
+			"seconds": 1353,
+			"title": "Mmm... smells like Chips!",
+			"speaker": "Diana Gastrin"
+		},
+		{
+			"year": 2022,
+			"id": "_ajfVpwXdTA",
+			"seconds": 1793,
+			"title": "Glueing bits by hand: Building an Apple 2 clone on FPGA from scratch",
+			"speaker": "Shachar Shemesh"
+		},
+		{
+			"year": 2022,
+			"id": "_ajyx6ry22A",
+			"seconds": 1873,
+			"title": "Build a 3D Solar System with Hand Recognition and Three.js",
+			"speaker": "Liad Yosef"
+		},
+		{
+			"year": 2024,
+			"id": "gbcaCFO65Bo",
+			"seconds": 120,
+			"title": "Reversim 2024 Clip",
+			"speaker": ""
+		},
+		{
+			"year": 2024,
+			"id": "UewAtdxY4-Y",
+			"seconds": 1763,
+			"title": "A Small Pod to Win the World",
+			"speaker": "Eran Efrat"
+		},
+		{
+			"year": 2024,
+			"id": "6hdvLeHzL88",
+			"seconds": 1969,
+			"title": "Don't get hacked!",
+			"speaker": "Ran Bar Zik"
+		},
+		{
+			"year": 2024,
+			"id": "2SLUiD4Xc1E",
+			"seconds": 1547,
+			"title": "Real-time Market Event Notifications: Plus500's Scalable Fanout Architecture",
+			"speaker": "Gal Barak"
+		},
+		{
+			"year": 2024,
+			"id": "2duNtWZogRg",
+			"seconds": 1566,
+			"title": "Mastering LLMs for Source Code Classification: From Hype to Hands-On Success",
+			"speaker": "Ori Abramovsky"
+		},
+		{
+			"year": 2024,
+			"id": "8XysLIq-e3s",
+			"seconds": 1766,
+			"title": "The Dark Side of AI: The Hidden Risks in Open-Source AI Models",
+			"speaker": "Jossef Harush Kadouri"
+		},
+		{
+			"year": 2024,
+			"id": "Aq0GgPUUH90",
+			"seconds": 1726,
+			"title": "Harmony Unleashed: Combining Git Trees and Syntax Trees for Fun and Profit",
+			"speaker": "May Walter"
+		},
+		{
+			"year": 2024,
+			"id": "AupRgDNGavw",
+			"seconds": 1426,
+			"title": "From Sprints to Cycles: Revolutionizing Agile with Empathy",
+			"speaker": "Yonatan Bergman"
+		},
+		{
+			"year": 2024,
+			"id": "EIj8WwqHgFU",
+			"seconds": 1843,
+			"title": "Unlocking JavaScript's Hidden Gems",
+			"speaker": "Yanai Edri"
+		},
+		{
+			"year": 2024,
+			"id": "ImZ0dJVusms",
+			"seconds": 319,
+			"title": "My awesome collection of pocket stories",
+			"speaker": "Boris Cherkasky"
+		},
+		{
+			"year": 2024,
+			"id": "Jfy5qNshp18",
+			"seconds": 1583,
+			"title": "Stable Confusion: A Deep Dive into AI Image and Video Creation",
+			"speaker": "Barak Yoresh"
+		},
+		{
+			"year": 2024,
+			"id": "LU4nMmgBoCc",
+			"seconds": 1561,
+			"title": "AI, SQL, and GraphQL Walk into a Fertility Clinic… LLM-based development",
+			"speaker": "Shirli Di Castro Shashua"
+		},
+		{
+			"year": 2024,
+			"id": "PezOrCKBYEM",
+			"seconds": 1805,
+			"title": "Stop using your ORM to manage your database schema",
+			"speaker": "Rotem Tamir"
+		},
+		{
+			"year": 2024,
+			"id": "QSZb576i5RI",
+			"seconds": 1764,
+			"title": "The art of fake doors",
+			"speaker": "Shlomi Cohen"
+		},
+		{
+			"year": 2024,
+			"id": "QjYo8eJj0tg",
+			"seconds": 298,
+			"title": "Tips for Building Multi-Architecture Containers",
+			"speaker": "Nati Cohen"
+		},
+		{
+			"year": 2024,
+			"id": "RKbEZHAt33U",
+			"seconds": 1729,
+			"title": "Unlocking the Staff Engineer Achievement: Leveling Up from IC",
+			"speaker": "Orit Wasserman"
+		},
+		{
+			"year": 2024,
+			"id": "SKyHuxl92ZQ",
+			"seconds": 1908,
+			"title": "Winning the Performance Race",
+			"speaker": "Gil Eckstein"
+		},
+		{
+			"year": 2024,
+			"id": "TMoIEX_0DiI",
+			"seconds": 1769,
+			"title": "Chaos Engineering and How to Manage Data Stages in Large-Scale Complex Data Flow",
+			"speaker": "Einat Orr"
+		},
+		{
+			"year": 2024,
+			"id": "V2W_D2s_0bw",
+			"seconds": 1181,
+			"title": "Losing your Components' Head",
+			"speaker": "Gil Fink"
+		},
+		{
+			"year": 2024,
+			"id": "ZPDgqJKocvs",
+			"seconds": 1679,
+			"title": "Three Flavors of Pokémon - Framework Agnostic UI Testing",
+			"speaker": "Shelly Goldblit"
+		},
+		{
+			"year": 2024,
+			"id": "_pQNJ6LecGI",
+			"seconds": 1851,
+			"title": "Cooking Up Creativity: Harnessing AI and ChatGPT to Whip Up Delicious Recipes!",
+			"speaker": "Moran Mizrahi"
+		},
+		{
+			"year": 2024,
+			"id": "f2amtjZYDaQ",
+			"seconds": 1562,
+			"title": "It’s time to pay off your management debt",
+			"speaker": "Daniel Korn"
+		},
+		{
+			"year": 2024,
+			"id": "gJW9HRe2Ayc",
+			"seconds": 335,
+			"title": "Surviving the Hype - How to Not Let the Success of Your Domain Ruin You",
+			"speaker": "Rachel Wities"
+		},
+		{
+			"year": 2024,
+			"id": "teloyUxPAyc",
+			"seconds": 2012,
+			"title": "Throttling your service: the good, the bad and the ugly",
+			"speaker": "Yonatan Zusman"
+		},
+		{
+			"year": 2024,
+			"id": "uHj5e7Hmfeo",
+			"seconds": 1884,
+			"title": "Figma for Engineers",
+			"speaker": "Omer Shlifka Gurvitz"
+		},
+		{
+			"year": 2024,
+			"id": "wVe19dQGbms",
+			"seconds": 1509,
+			"title": "Breaking the Limits of Content Scale",
+			"speaker": "Shir Magen"
+		},
+		{
+			"year": 2024,
+			"id": "yxdIw6-PaK4",
+			"seconds": 1672,
+			"title": "Bragging with math at parties: Visualizing your music with shaders and math",
+			"speaker": "Sagie Levy Genadi Iosad"
+		},
+		{
+			"year": 2024,
+			"id": "1p8K3aqZJhA",
+			"seconds": 321,
+			"title": "Programming is The Easy Part - Fix Your Meetings First!",
+			"speaker": "Boris Kushnir"
+		},
+		{
+			"year": 2024,
+			"id": "5o7UNB4eptk",
+			"seconds": 1856,
+			"title": "The Queen's Gambit",
+			"speaker": "Uri Nativ"
+		},
+		{
+			"year": 2024,
+			"id": "9t8UOiKb3fk",
+			"seconds": 336,
+			"title": "Feedback is a Gift",
+			"speaker": "Leah Vogel"
+		},
+		{
+			"year": 2024,
+			"id": "CJNATrVcuws",
+			"seconds": 1748,
+			"title": "Troubleshooting: from Art, to Science to Automation",
+			"speaker": "Aviva Peisach"
+		},
+		{
+			"year": 2024,
+			"id": "Gd3NJef7aS0",
+			"seconds": 317,
+			"title": "RAM is your friend - implement FIFO wisely",
+			"speaker": "Ron Klein"
+		},
+		{
+			"year": 2024,
+			"id": "JMspmzFoXjw",
+			"seconds": 308,
+			"title": "It's Time to Become a Time Wizard",
+			"speaker": "Guy Erez"
+		},
+		{
+			"year": 2024,
+			"id": "JNQd757r2Kc",
+			"seconds": 1476,
+			"title": "Team Leading and Parenting: What my 5 and 3-year-olds taught me re effective leadership",
+			"speaker": "Alex Weiss"
+		},
+		{
+			"year": 2024,
+			"id": "KDs9ykZ2IMs",
+			"seconds": 1786,
+			"title": "The conspiracy of Quantum Computing",
+			"speaker": "Yotam Vaknin"
+		},
+		{
+			"year": 2024,
+			"id": "MVkIplMDDSk",
+			"seconds": 2318,
+			"title": "Beyond Big O: real world performance explained",
+			"speaker": "Avishai Ish Shalom"
+		},
+		{
+			"year": 2024,
+			"id": "O4GuA7KQhKM",
+			"seconds": 1933,
+			"title": "Lies, Damned Lies, Metrics and KPIs",
+			"speaker": "Roy Osherove"
+		},
+		{
+			"year": 2024,
+			"id": "OB6cih-UDI8",
+			"seconds": 1592,
+			"title": "How to generate text without generation?",
+			"speaker": "Nitzan Cohen"
+		},
+		{
+			"year": 2024,
+			"id": "PmyBgLckW8A",
+			"seconds": 333,
+			"title": "The Second-Fastest Kind of Code",
+			"speaker": "Tal Tiano Einat"
+		},
+		{
+			"year": 2024,
+			"id": "Rsbqb_zvZw8",
+			"seconds": 315,
+			"title": "Playful Programming: Trolling Friends with Hilarious Code",
+			"speaker": "Eyal Trabelsi"
+		},
+		{
+			"year": 2024,
+			"id": "Vwu3Nu2SdFA",
+			"seconds": 318,
+			"title": "Everybody Hates Chris? A Day in a Verification Engineer’s Life",
+			"speaker": "Sharon Rones-Makmal"
+		},
+		{
+			"year": 2024,
+			"id": "WWbdSvEr-Tg",
+			"seconds": 1852,
+			"title": "Model-Based Testing Considered Useful",
+			"speaker": "Michael Bar Sinai"
+		},
+		{
+			"year": 2024,
+			"id": "XbmAXxTRTTY",
+			"seconds": 317,
+			"title": "That tough conversation you're not having",
+			"speaker": "Lea Cohen Tannoudji"
+		},
+		{
+			"year": 2024,
+			"id": "b2w26PUy3HA",
+			"seconds": 1553,
+			"title": "How to Spy on Your Neighbors: Discover What You Can't See",
+			"speaker": "Noa Bratman Tomer Lev"
+		},
+		{
+			"year": 2024,
+			"id": "cAvBDGMDsoY",
+			"seconds": 1700,
+			"title": "From a Backend Developer to DevOps - THE FORCE AWAKENS",
+			"speaker": "Mey Beisaron"
+		},
+		{
+			"year": 2024,
+			"id": "gIUM9tIPArQ",
+			"seconds": 1804,
+			"title": "From Cobol to Copilot",
+			"speaker": "Guy Wiener"
+		},
+		{
+			"year": 2024,
+			"id": "kpqYcjoVmoI",
+			"seconds": 1508,
+			"title": "FormatAI: Structuring Unstructured Text using generative AI",
+			"speaker": "Oren Matar"
+		},
+		{
+			"year": 2024,
+			"id": "kwACp1K_yrQ",
+			"seconds": 1613,
+			"title": "Turbocharge your kubernetes cluster with Operators",
+			"speaker": "Gil Bahat"
+		},
+		{
+			"year": 2024,
+			"id": "mydvwR4IRVE",
+			"seconds": 1718,
+			"title": "Decoding the DNA of Innovation: The Dynamic Landscape of C++ Standardization",
+			"speaker": "Inbal Levi"
+		},
+		{
+			"year": 2024,
+			"id": "ruAbh31MePo",
+			"seconds": 1616,
+			"title": "Embrace the power of a Sourcerer: Writing plugins and extensions for your favorite tools",
+			"speaker": "Liri Sokol"
+		},
+		{
+			"year": 2024,
+			"id": "tanetBVMefc",
+			"seconds": 328,
+			"title": "DRYing up your CI/CD with Git Rebase",
+			"speaker": "Erik Zaadi"
+		},
+		{
+			"year": 2024,
+			"id": "uzNambAk9DU",
+			"seconds": 316,
+			"title": "Why you should never use Local Storage",
+			"speaker": "Ron Hagafny"
+		},
+		{
+			"year": 2024,
+			"id": "vkH3Z9GgEsI",
+			"seconds": 1686,
+			"title": "Can Silicon Valley Learn from Wall St? The Economic Side of Tech Leadership",
+			"speaker": "Yonatan Maman"
+		},
+		{
+			"year": 2024,
+			"id": "wY3GHppd4l0",
+			"seconds": 1771,
+			"title": "Building Resilience: A Journey of Crafting and Validating Our DR Plan",
+			"speaker": "Yedidya Schwartz"
+		},
+		{
+			"year": 2024,
+			"id": "wlP-e-GMCCw",
+			"seconds": 1616,
+			"title": "Testing for Data Science: boosting ML reliability with Great Expectations",
+			"speaker": "Rachel Abo"
+		},
+		{
+			"year": 2024,
+			"id": "km3lh7VCpAA",
+			"seconds": 371,
+			"title": "LLMs - how do they really work? / אני רק מודל שפה",
+			"speaker": "Iftach Bar and Yoni Tsafir"
+		},
+		{
+			"year": 2024,
+			"id": "gkih0021ZN0",
+			"seconds": 1424,
+			"title": "Beyond Hard Work: Building Your Path to Seniority Through Independence",
+			"speaker": "Guy Gadon"
+		},
+		{
+			"year": 2025,
+			"id": "flni_8Ptqls",
+			"seconds": 76,
+			"title": "Reversim Summit 2025 Clip",
+			"speaker": ""
+		},
+		{
+			"year": 2025,
+			"id": "DWC1tqvPNJQ",
+			"seconds": 1735,
+			"title": "Consensus: Quorum, Minority Quorum, Administered Quorum, and Beyond",
+			"speaker": "Shlomi Noach"
+		},
+		{
+			"year": 2025,
+			"id": "6bbgqHrFTYc",
+			"seconds": 1113,
+			"title": "From Zero to Full Prototype in 72 Hours? Ninjas Say “Yes”",
+			"speaker": "Dima Gershman"
+		},
+		{
+			"year": 2025,
+			"id": "B7t_yKNXBNs",
+			"seconds": 310,
+			"title": "Building a Window to History: Talking to Anne Frank",
+			"speaker": "Alon Carmel"
+		},
+		{
+			"year": 2025,
+			"id": "5_bzC_WwEV8",
+			"seconds": 297,
+			"title": "I swear, PMs and Developers CAN Actually Like Each Other",
+			"speaker": "Neta Dror"
+		},
+		{
+			"year": 2025,
+			"id": "3szsVuuMrFw",
+			"seconds": 1731,
+			"title": "How Kernel Programming Escaped the Kernel",
+			"speaker": "Ori Shussman"
+		},
+		{
+			"year": 2025,
+			"id": "6olanhgSjAk",
+			"seconds": 299,
+			"title": "Hacking the quarantine with a Raspberry Pi & Electronics",
+			"speaker": "Yonatan Mevorach"
+		},
+		{
+			"year": 2025,
+			"id": "9uon3gU7JrE",
+			"seconds": 1752,
+			"title": "Building CSS Features your Browser Doesn’t Have Yet",
+			"speaker": "Shay Davidson"
+		},
+		{
+			"year": 2025,
+			"id": "BgJsdS9bLTg",
+			"seconds": 1221,
+			"title": "Optimizing the Deployment of LLMs for Cost Efficiency",
+			"speaker": "Michael Levinger"
+		},
+		{
+			"year": 2025,
+			"id": "1mFHqZDUlt4",
+			"seconds": 311,
+			"title": "Wildlife S.O.S.: Why Isn't There an App for that?",
+			"speaker": "Daniella Karni-Harel"
+		},
+		{
+			"year": 2025,
+			"id": "Uf3d6oA2zOk",
+			"seconds": 1713,
+			"title": "A Picture is Worth a Thousand Words: Optimizing Attack Placement",
+			"speaker": "Tsofit Zazon & Margarita Vald"
+		},
+		{
+			"year": 2025,
+			"id": "WfWBwWPY4c0",
+			"seconds": 1485,
+			"title": "The Fourth Revolution: How AI is Redefining Our Era",
+			"speaker": "Hila Chefer"
+		},
+		{
+			"year": 2025,
+			"id": "LBL77DIEoLE",
+			"seconds": 1928,
+			"title": "Flattening the Curve: Rediscovering Web UI Through Historic Geometric..",
+			"speaker": "Liri Sokol & Mia Joskowicz"
+		},
+		{
+			"year": 2025,
+			"id": "DyS09rcCGls",
+			"seconds": 1378,
+			"title": "Beyond Doctor GPT: Fine-Tuning Open-Source LLMs for Real-World Clinical Data Research",
+			"speaker": "Talia Tron"
+		},
+		{
+			"year": 2025,
+			"id": "PpF3gOQoRiQ",
+			"seconds": 1698,
+			"title": "Not Broken Yet: Observability Beyond the Obvious",
+			"speaker": "Oren Efraim"
+		},
+		{
+			"year": 2025,
+			"id": "OhxRa3MI6WY",
+			"seconds": 317,
+			"title": "Me, Myself and (A)I - Deploying a Persona-Based Agent When Real Users Don’t Exist",
+			"speaker": "Reut Beker"
+		},
+		{
+			"year": 2025,
+			"id": "Ltf7OH-01kA",
+			"seconds": 1449,
+			"title": "Who Bumped My Car? Multimodal Agentic AI for Edge Case Mining in Massive Datasets",
+			"speaker": "Shira Navot"
+		},
+		{
+			"year": 2025,
+			"id": "RoRjItepmSo",
+			"seconds": 412,
+			"title": "קידוד לפי תחושה",
+			"speaker": "Iftach Bar & Yoni Tsafir"
+		},
+		{
+			"year": 2025,
+			"id": "Lwu_KVuOktU",
+			"seconds": 1945,
+			"title": "From Chat to Everything: Building Reusable AI Infrastructure Across All Platforms",
+			"speaker": "Jenia Barabanov"
+		},
+		{
+			"year": 2025,
+			"id": "N2kqMbAB0io",
+			"seconds": 1825,
+			"title": "Bringing AI into R&D, Taking a Human-Centric Approach",
+			"speaker": "Haim Yadid"
+		},
+		{
+			"year": 2025,
+			"id": "gBSwzsZuCFU",
+			"seconds": 1574,
+			"title": "From Outside In to Inside Out: Owning Your Success",
+			"speaker": "Hila Elkayam"
+		},
+		{
+			"year": 2025,
+			"id": "_Qgn3qRX6Hw",
+			"seconds": 307,
+			"title": "Seven Process Optimization Techniques That Just Work",
+			"speaker": "Uri Lifshitz"
+		},
+		{
+			"year": 2025,
+			"id": "bnlavNPLz5A",
+			"seconds": 312,
+			"title": "How Internal Platforms Drive Business Outcomes in the AI Era",
+			"speaker": "Yifat Yaacov Matatof"
+		},
+		{
+			"year": 2025,
+			"id": "bKfjnMmcQzU",
+			"seconds": 1378,
+			"title": "The Illusion of Success: Rethinking Frontend Monitoring",
+			"speaker": "Boris Litvinsky"
+		},
+		{
+			"year": 2025,
+			"id": "eQRWhX4ou2U",
+			"seconds": 1483,
+			"title": "When Labels Are Missing: Building ML Pipelines Without Annotated Data",
+			"speaker": "Amit Avni Yaccobi"
+		},
+		{
+			"year": 2025,
+			"id": "eKydsQc6UbM",
+			"seconds": 1697,
+			"title": "Beyond Vector Similarity - Making Your Search Smarter",
+			"speaker": "Guy Wiener"
+		},
+		{
+			"year": 2025,
+			"id": "YIHAw85KVTA",
+			"seconds": 1660,
+			"title": "Evaluating Your AI Agent: How Do You Properly Measure Performance?",
+			"speaker": "Linoy Cohen"
+		},
+		{
+			"year": 2025,
+			"id": "fv7WNb1MzSs",
+			"seconds": 294,
+			"title": "Dating Analysis",
+			"speaker": "Efrat Aran"
+		},
+		{
+			"year": 2025,
+			"id": "h-XVdJfXbhE",
+			"seconds": 310,
+			"title": "The End of SaaS: The (Re)birth of Service Companies",
+			"speaker": "Nir Hemed"
+		},
+		{
+			"year": 2025,
+			"id": "ZyFmScTLLM0",
+			"seconds": 1596,
+			"title": "You Are No Longer a Senior Engineer",
+			"speaker": "Tal Salmona"
+		},
+		{
+			"year": 2025,
+			"id": "igDDQOoGNdk",
+			"seconds": 1987,
+			"title": "History in the Making: On Computer Preservation",
+			"speaker": "Tomer Gabel"
+		},
+		{
+			"year": 2025,
+			"id": "sBc13ajeW-A",
+			"seconds": 1413,
+			"title": "Small Habits, Big Impact: Rethinking How We Lead",
+			"speaker": "Yael Oshri Balla"
+		},
+		{
+			"year": 2025,
+			"id": "nlrJoHdsrtM",
+			"seconds": 320,
+			"title": "The Secret Masters of Time: Who Really Controls Your datetime.now()?",
+			"speaker": "Alon Wolenitz"
+		},
+		{
+			"year": 2025,
+			"id": "psiqrVjyurM",
+			"seconds": 1459,
+			"title": "Iceberg Lakehouses: Scaling Data & AI Without Breaking the Bank",
+			"speaker": "Guy Gadon"
+		},
+		{
+			"year": 2025,
+			"id": "njlcLQIm8t8",
+			"seconds": 1846,
+			"title": "Breakin ‘Em All – Overcoming Pokemon’s Go Anti-Cheat Mechanism",
+			"speaker": "Tal Skverer"
+		},
+		{
+			"year": 2025,
+			"id": "sjEkLY2djKA",
+			"seconds": 1657,
+			"title": "Riding the AI Crisis",
+			"speaker": "Hila Kraisler"
+		},
+		{
+			"year": 2025,
+			"id": "rOiINwgpdYs",
+			"seconds": 308,
+			"title": "Standard Score for Trend Analysis",
+			"speaker": "Guy Louzon"
+		},
+		{
+			"year": 2025,
+			"id": "kusesp7q1KY",
+			"seconds": 1859,
+			"title": "Successful AI adoption in complex environments",
+			"speaker": "May Walter"
+		},
+		{
+			"year": 2025,
+			"id": "lfCWbBoN_W8",
+			"seconds": 1915,
+			"title": "🔥 Generative UI: The Future of Frontend (And Why You Should Care)",
+			"speaker": "Daniel Ostrovsky"
+		},
+		{
+			"year": 2025,
+			"id": "tS7oXioM1CM",
+			"seconds": 1849,
+			"title": "Agentic AI in DevOps",
+			"speaker": "Bella Markovich & Haggai Philip Zagury"
+		},
+		{
+			"year": 2025,
+			"id": "yr1iVeDyEBw",
+			"seconds": 1768,
+			"title": "Attacks on Machine Learning Models",
+			"speaker": "Ran Bar-Zik"
+		},
+		{
+			"year": 2025,
+			"id": "ud4TBzbMY6c",
+			"seconds": 1543,
+			"title": "How We Handed the Keys to Marketing - Building a Self-Serve Marketing Stack",
+			"speaker": "Yonatan Bergman"
+		},
+		{
+			"year": 2025,
+			"id": "uJy4Z7LAQmo",
+			"seconds": 1489,
+			"title": "When Tables Start Talking: The Next Big AI Revolution",
+			"speaker": "Alan Arazi"
+		},
+		{
+			"year": 2025,
+			"id": "wGf2Y6wkESw",
+			"seconds": 1696,
+			"title": "Timeouts, Retries and the Devil",
+			"speaker": "Alon Nativ"
+		},
+		{
+			"year": 2025,
+			"id": "yZr381RxHbg",
+			"seconds": 311,
+			"title": "Explain It Like I’m 5: Discovering the Joy of Coding with Cramel",
+			"speaker": "Moran Weber"
+		},
+		{
+			"year": 2025,
+			"id": "xLBB0utzYs0",
+			"seconds": 316,
+			"title": "From Spacecraft Docking to API Hacking: Integration Lessons Across 50 Years",
+			"speaker": "Robert Barron"
+		},
+		{
+			"year": 2025,
+			"id": "vzzb1GpAWrI",
+			"seconds": 1714,
+			"title": "Protecting your LLM Based Service from Fraud & Abuse - the Base44 Story",
+			"speaker": "Oren Karmi"
+		},
+		{
+			"year": 2025,
+			"id": "iclyuci2P4A",
+			"seconds": 1720,
+			"title": "Uncovering My Holocaust Legacy: Using LLMs for Historical Exploration",
+			"speaker": "Dean Langsam"
+		},
+		{
+			"year": 2025,
+			"id": "JBXFg0QAQuc",
+			"seconds": 1798,
+			"title": "One of Us Is an Agent!",
+			"speaker": "Niv Eckhaus"
+		},
+		{
+			"year": 2025,
+			"id": "a2djnPt4gsY",
+			"seconds": 1682,
+			"title": "Curiosity Driven Development",
+			"speaker": "Gwen Shapira"
+		},
+		{
+			"year": 2025,
+			"id": "Bk4Z_bthGV0",
+			"seconds": 1616,
+			"title": "LLMs Suck at Cyber Intel—Unless You Hack Them Right",
+			"speaker": "Inga Cherny"
+		},
+		{
+			"year": 2025,
+			"id": "hkd0NBNJsDY",
+			"seconds": 1904,
+			"title": "Prepare for the Fragmented Web Revolution",
+			"speaker": "Liad Yosef & Ido Salomon"
+		},
+		{
+			"year": 2025,
+			"id": "l9Tez1wEkow",
+			"seconds": 1476,
+			"title": "The Dev Team Has New Teammates (and They’re Autonomous)",
+			"speaker": "Michael Arenzon"
+		},
+		{
+			"year": 2025,
+			"id": "n53OrKRjHUI",
+			"seconds": 1823,
+			"title": "Micro Service - Mega Cost: Architectural Styles and Their Hidden Price Tags",
+			"speaker": "Devora Roth Goldshmidt"
+		},
+		{
+			"year": 2025,
+			"id": "_yV5t-lLlmU",
+			"seconds": 1552,
+			"title": "Dali's DAL - Designing a Data Access Layer Like an Artist",
+			"speaker": "Inbal Levy"
+		},
+		{
+			"year": 2025,
+			"id": "YJRn2jr2hiY",
+			"seconds": 1298,
+			"title": "It Takes a Village to Build a Good Hebrew Speech-to-Text Model",
+			"speaker": "Yanir Marmor"
+		}
+	]
+}

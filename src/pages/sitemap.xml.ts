@@ -10,6 +10,10 @@ export async function GET({ site }: { site: URL }) {
 		{ loc: '/about.html' },
 		{ loc: '/archive.html' },
 		{ loc: '/episodes.html' },
+		{ loc: '/start-here.html' },
+		{ loc: '/guests.html' },
+		{ loc: '/companies.html' },
+		{ loc: '/summit-talks.html' },
 		...Array.from({ length: pageCount }, (_, i) => ({ loc: `/page/${i + 1}.html` })),
 		...posts.map((post) => ({
 			loc: getPostPermalink(post),

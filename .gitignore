@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # claude local settings
 .claude/settings.local.json
+
+# browser test output
+.playwright-mcp/

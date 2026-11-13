@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import IndexPage from '../components/IndexPage.astro';
+import { getAllPosts } from '../lib/posts';
+import { attachSummitTalks, buildGuestIndex, catalog } from '../lib/catalog';
+import summit from '../data/summit-talks.json';
+
+const ids = new Set((await getAllPosts()).map((p) => p.id));
+const groups = attachSummitTalks(buildGuestIndex(catalog, ids), summit.talks);
+---
+
+<BaseLayout title="אורחים | רברס עם פלטפורמה" description={`כל ${groups.length} האורחות והאורחים של רברס עם פלטפורמה, והפרקים שבהם התארחו.`}>
+	<h1 class="section-title">אורחות ואורחים ({groups.length})</h1>
+	<p class="index-note">הרשימה נוצרה אוטומטית מדפי הפרקים. מצאתם טעות? <a href="/about.html">כתבו לנו</a>.</p>
+	<IndexPage groups={groups} />
+</BaseLayout>

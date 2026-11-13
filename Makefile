@@ -8,6 +8,8 @@ TAGS        ?=
 COVER_IMAGE ?=
 NOTES       ?=
 TRANSCRIPT  ?=
+# Cold open: ask (default, shows the quotes and asks) | auto | off
+COLD_OPEN   ?=
 WORKDIR  ?= /tmp/reversim-$(EPISODE)
 # Source recording — provide ONE of:
 #   INPUT=/path/to/file.{mp3,wav}   for a pre-mixed file (e.g. from Riverside)
@@ -25,7 +27,8 @@ MP3_NAME  = reversim$(EPISODE)-$(shell echo $(SLUG) | tr '-' '_').mp3
 AUDIO_URL = https://m2.reversim.com/$(MP3_NAME)
 
 .PHONY: help install dev build build-pages preview migrate validate audit rss-compare verify clean \
-        produce produce-mix produce-audio produce-transcribe produce-post produce-upload produce-social
+        produce produce-mix produce-audio produce-transcribe produce-post produce-upload produce-social \
+        audio-meta transcribe-backfill
 
 help:
 	@echo "Site targets:"
@@ -42,13 +45,18 @@ help:
 	@echo "  clean        Remove build artifacts"
 	@echo ""
 	@echo "Post-production targets (require EPISODE=NNN TITLE='...' SLUG=slug):"
-	@echo "  produce            Full pipeline: mix → audio → transcribe → post → upload"
+	@echo "  produce            Full pipeline: mix → audio → transcribe → cold open → post → upload"
+	@echo "                     COLD_OPEN=ask|auto|off controls the teaser before the intro"
 	@echo "  produce-mix        Mix GarageBand WAV tracks into a single MP3"
 	@echo "  produce-audio      Add intro/outro, normalize"
 	@echo "  produce-transcribe Transcribe with Gemini, save transcript"
 	@echo "  produce-post       Generate Hebrew blog post from transcript"
 	@echo "  produce-upload     Upload processed MP3 to R2 (m2.reversim.com) + S3 backup"
 	@echo "  produce-social     Generate Twitter/LinkedIn/Facebook posts"
+	@echo ""
+	@echo "Catalog targets:"
+	@echo "  audio-meta           Measure size and duration of new audio files (for the feed)"
+	@echo "  transcribe-backfill  Transcribe old episodes that have no transcript (LIMIT=5)"
 	@echo ""
 	@echo "Example:"
 	@echo "  make produce EPISODE=514 TITLE='כותרת פרק' SLUG=my-episode TAGS=tag1 COVER_IMAGE=/images/ep514.jpg \\"
@@ -110,7 +118,8 @@ _post-production-args = \
 	$(if $(TAGS),--tags "$(TAGS)") \
 	$(if $(COVER_IMAGE),--cover-image "$(COVER_IMAGE)") \
 	$(if $(NOTES),--notes "$(NOTES)") \
-	$(if $(TRANSCRIPT),--transcript "$(TRANSCRIPT)")
+	$(if $(TRANSCRIPT),--transcript "$(TRANSCRIPT)") \
+	$(if $(COLD_OPEN),--cold-open $(COLD_OPEN))
 
 produce-mix: _check-episode
 	@set -a && . ./.env && set +a && \
@@ -152,3 +161,14 @@ produce: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
 		$(_source-args)
+
+# ── Catalog data ─────────────────────────────────────────────────────────────
+
+LIMIT ?= 5
+
+audio-meta:
+	node scripts/audio-meta.mjs
+
+transcribe-backfill:
+	@set -a && . ./.env && set +a && \
+	node scripts/transcribe-backfill.mjs --limit $(LIMIT)

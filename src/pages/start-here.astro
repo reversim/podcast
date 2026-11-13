@@ -1,0 +1,51 @@
+---
+// "Where do I start?" — picks for new listeners, by topic. Data: src/data/start-here.json (scripts/start-here.mjs).
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllPosts, getPostPermalink } from '../lib/posts';
+import { catalog, TOPIC_LABELS } from '../lib/catalog';
+import picks from '../data/start-here.json';
+
+const data = picks as { overall?: string[]; topics?: Record<string, string[]> };
+const posts = new Map((await getAllPosts()).map((p) => [p.id, p]));
+const resolveIds = (ids: string[] = []) => ids.map((id) => ({ post: posts.get(id), entry: catalog[id] })).filter((x) => x.post);
+const overall = resolveIds(data.overall);
+const topics = Object.entries(data.topics ?? {})
+	.map(([key, ids]) => ({ key, label: TOPIC_LABELS[key] ?? key, items: resolveIds(ids) }))
+	.filter((t) => t.items.length > 0);
+---
+
+<BaseLayout title="מאיפה מתחילים? | רברס עם פלטפורמה" description="יותר מ-500 פרקים מאז 2009. הנה הפרקים שכדאי להתחיל מהם, לפי נושא.">
+	<h1 class="section-title">מאיפה מתחילים?</h1>
+	<p>יותר מ-500 פרקים מאז 2009 — זה הרבה. בחרנו כמה פרקים טובים להתחיל מהם, ואחריהם פרקים מומלצים לפי נושא.</p>
+	<nav class="start-topics-nav" aria-label="נושאים">
+		{topics.map((t) => <a href={`#${t.key}`}>{t.label}</a>)}
+	</nav>
+	{overall.length > 0 && (
+		<section class="start-topic">
+			<h2 class="section-title">שישה פרקים להתחיל מהם</h2>
+			<ul class="start-list">
+				{overall.map(({ post, entry }) => (
+					<li>
+						<a href={getPostPermalink(post!)} dir="auto">{post!.data.title}</a>
+						<span class="index-meta">{post!.data.date.getFullYear()}</span>
+						{entry?.hook && <p class="start-hook">{entry.hook}</p>}
+					</li>
+				))}
+			</ul>
+		</section>
+	)}
+	{topics.map((t) => (
+		<section class="start-topic" id={t.key}>
+			<h2 class="section-title">{t.label}</h2>
+			<ul class="start-list">
+				{t.items.map(({ post, entry }) => (
+					<li>
+						<a href={getPostPermalink(post!)} dir="auto">{post!.data.title}</a>
+						<span class="index-meta">{post!.data.date.getFullYear()}</span>
+						{entry?.hook && <p class="start-hook">{entry.hook}</p>}
+					</li>
+				))}
+			</ul>
+		</section>
+	))}
+</BaseLayout>

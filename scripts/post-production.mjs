@@ -6,6 +6,7 @@
  *   0. (Optional) Mix raw WAV tracks from GarageBand project into a single MP3
  *   1. Add intro/outro with fade-in/out and normalize loudness via ffmpeg
  *   2. Transcribe via Gemini File API (handles 30–90 min files)
+ *   2b. Cold open: an LLM picks 2–3 strong quotes, ffmpeg puts them before the intro
  *   3. Generate Hebrew blog post from transcript
  *   4. Upload processed MP3 to Cloudflare R2 (served by m2.reversim.com) and S3 (backup)
  *   5. Generate social media posts (Twitter, LinkedIn, Facebook)
@@ -36,6 +37,9 @@
  *   --notes            Episode notes: Google Doc URL (must be publicly shared)
  *                      or local file path. All links from the notes will be
  *                      embedded inline in the blog post at the matching topic.
+ *   --cold-open MODE   ask (default in a terminal): show the quotes and ask for approval
+ *                      auto: use the selected quotes without a question
+ *                      off (default without a terminal): no cold open
  *   --skip-mix         Skip WAV mixing step
  *   --skip-audio       Skip intro/outro/normalize step
  *   --skip-transcribe  Skip Gemini transcription step
@@ -53,9 +57,11 @@
  */
 
 import { execSync } from 'child_process';
-import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync, copyFileSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync, copyFileSync, statSync } from 'fs';
 import { resolve, dirname, join, basename, extname } from 'path';
 import { fileURLToPath } from 'url';
+
+import { loadMeta, saveMeta } from './audio-meta.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, '..');
@@ -80,6 +86,7 @@ function parseArgs() {
     notes: null,
     transcript: null,
     transcriber: 'gemini',  // 'gemini' or 'ivrit' (ivrit requires RunPod)
+    coldOpen: process.stdin.isTTY ? 'ask' : 'off',  // 'ask' | 'auto' | 'off'
     skipMix: false,
     skipAudio: false,
     skipTranscribe: false,
@@ -105,6 +112,7 @@ function parseArgs() {
       case '--notes':                     opts.notes = args[++i]; break;
       case '--transcript':                opts.transcript = resolve(args[++i]); break;
       case '--transcriber':               opts.transcriber = args[++i]; break;
+      case '--cold-open':                 opts.coldOpen = args[++i]; break;
       case '--skip-mix':                  opts.skipMix = true; break;
       case '--skip-audio':                opts.skipAudio = true; break;
       case '--skip-transcribe':           opts.skipTranscribe = true; break;
@@ -121,6 +129,7 @@ function parseArgs() {
     console.error('Either --input or --mix-wavs is required');
     process.exit(1);
   }
+  if (!['ask', 'auto', 'off'].includes(opts.coldOpen)) { console.error('--cold-open must be ask, auto or off'); process.exit(1); }
   if (!opts.episode) { console.error('--episode is required'); process.exit(1); }
   if (!opts.title)   { console.error('--title is required');   process.exit(1); }
 
@@ -176,7 +185,7 @@ function reportUsage(label, usageMeta, modelName) {
   );
 }
 
-function printCostSummary() {
+export function printCostSummary() {
   if (_costAccumulator.totalUsd === 0) return;
   console.log(
     `\n  💰 Total Gemini cost: $${_costAccumulator.totalUsd.toFixed(4)}` +
@@ -355,8 +364,8 @@ function processAudio(opts, inputMp3, outputMp3) {
   const INTRO_PEAK_DUR  = 2;      // s — hold at peak volume
   const INTRO_DUCK_DUR  = 3;      // s — smooth duck from peak down to bed
   const INTRO_BED_VOL   = 0.040;  // -28 dB  — settled bed under speech
-  const INTRO_BED_DUR   = 15;     // s — start fade-out at this point
-  const INTRO_FADE_OUT  = 32;     // s — long gradual fade out
+  const INTRO_BED_DUR   = 8;      // s — start fade-out at this point
+  const INTRO_FADE_OUT  = 12;     // s — gradual fade out (the music ends 20 s into the episode)
 
   const OUTRO_PRE_VOL   = 0.100;  // -20 dB  — barely audible under speech
   const OUTRO_POST_VOL  = 0.316;  // -10 dB  — noticeable after speech ends
@@ -591,7 +600,16 @@ function formatIvritTranscript(output) {
 
 // ─── Step 2b: Transcription via Gemini ───────────────────────────────────────
 
-async function transcribe(opts, audioFile, transcriptFile) {
+const MAX_TRANSCRIPT_DRIFT = 90; // s — the outro music after the last word is about 10 to 35 s
+
+// Seconds between the last transcript timestamp and the end of the audio.
+export function transcriptDrift(transcript, audioDur) {
+  const stamps = [...transcript.matchAll(/^\[(\d{1,3}(?::\d{2}){1,2})\]/gm)].map(m => m[1].split(':').reduce((acc, p) => acc * 60 + Number(p), 0));
+  if (!stamps.length || !Number.isFinite(audioDur)) return Infinity;
+  return audioDur - Math.max(...stamps);
+}
+
+export async function transcribe(opts, audioFile, transcriptFile) {
   console.log('\n▶ Step 2: Transcription via Gemini 3 Pro');
 
   let GoogleGenerativeAI, GoogleAIFileManager, FileState;
@@ -645,14 +663,23 @@ Rules:
 Format each line as:
 [MM:SS] **Speaker name**: text`;
 
-  console.log('  Requesting transcription (streaming)...');
-  const result = await generateWithRetry(model, [
-    { fileData: { mimeType: file.mimeType, fileUri: file.uri } },
-    { text: prompt },
-  ], 'Transcription', { stream: true });
-
-  const transcript = result.response.text();
-  reportUsage('Transcription', result.response.usageMetadata, GEMINI_MODEL);
+  // Gemini timestamps sometimes drift on long audio (the transcript "ends" minutes before the audio).
+  // A drifted transcript gives wrong chapter links and wrong cold open cuts, so check it and try again.
+  const audioDur = getAudioDuration(audioFile);
+  let transcript = '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    console.log(`  Requesting transcription (streaming)${attempt > 1 ? `, attempt ${attempt}` : ''}...`);
+    const result = await generateWithRetry(model, [
+      { fileData: { mimeType: file.mimeType, fileUri: file.uri } },
+      { text: prompt },
+    ], 'Transcription', { stream: true });
+    transcript = result.response.text();
+    reportUsage('Transcription', result.response.usageMetadata, GEMINI_MODEL);
+    const drift = transcriptDrift(transcript, audioDur);
+    if (Math.abs(drift) <= MAX_TRANSCRIPT_DRIFT) break;
+    console.warn(`  ⚠ Transcript timestamps do not match the audio: last line is ${Math.round(drift)} s before the end.`);
+    if (attempt === 3) console.warn('  ⚠ Kept the last attempt. Check the timestamps before you publish.');
+  }
   writeFileSync(transcriptFile, transcript, 'utf8');
   console.log(`  ✓ Transcript (${transcript.length.toLocaleString()} chars) → ${transcriptFile}`);
 
@@ -679,6 +706,229 @@ function normalizeCoverImage(opts) {
   copyFileSync(src, dest);
   opts.coverImage = `/images/${filename}`;
   console.log(`  Copied cover image → public/images/${filename}`);
+}
+
+// ─── Step 2b: Cold open ──────────────────────────────────────────────────────
+// A cold open is 20–45 s of the strongest quotes of the episode, played before the intro.
+//   1. Gemini reads the transcript and proposes quotes (text + approximate time).
+//   2. For each quote, Gemini listens to a 90 s window and gives the exact start and end.
+//   3. ffmpeg silencedetect moves each cut to the nearest pause, so no word is cut.
+//   4. The clips go before the episode body. All later timestamps move by the same offset.
+
+const COLD_OPEN = {
+  MAX_TOTAL: 45,      // s — maximum length of all clips together
+  CLIP_MIN: 4,        // s
+  CLIP_MAX: 22,       // s
+  MAX_CLIPS: 3,
+  GAP: 0.35,          // s — silence between clips
+  TAIL_GAP: 0.9,      // s — silence between the last clip and the intro
+  FADE: 0.08,         // s — fade at each clip edge
+  WINDOW: 90,         // s — audio window sent to Gemini to locate a quote
+  WINDOW_LEAD: 25,    // s — window starts this long before the approximate time
+  SNAP: 1.5,          // s — maximum move of a cut to reach a pause
+  EDGE_GUARD: 120,    // s — no quotes from the first and last 2 minutes (music beds, greetings)
+};
+
+export function parseStamp(stamp) {
+  const parts = String(stamp).trim().split(':').map(Number);
+  if (parts.length < 2 || parts.length > 3 || parts.some(n => !Number.isFinite(n))) return NaN;
+  return parts.reduce((acc, n) => acc * 60 + n, 0);
+}
+
+// Moves every "[MM:SS]" at the start of a transcript line by `offset` seconds.
+export function shiftTranscript(transcript, offset) {
+  const shift = Math.round(offset);
+  if (!shift) return transcript;
+  return transcript.replace(/^\[(\d{1,3}(?::\d{2}){1,2})\]/gm, (whole, stamp) => {
+    const t = parseStamp(stamp);
+    if (!Number.isFinite(t)) return whole;
+    const s = Math.max(0, t + shift);
+    const pad = n => String(n).padStart(2, '0');
+    const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60);
+    return h > 0 ? `[${h}:${pad(m)}:${pad(s % 60)}]` : `[${pad(m)}:${pad(s % 60)}]`;
+  });
+}
+
+// Silent intervals of a window of the file, as [{start, end}] in absolute seconds.
+function detectSilences(file, from, length) {
+  let out = '';
+  try {
+    out = execSync(
+      `ffmpeg -hide_banner -nostats -ss ${from} -t ${length} -i "${file}" -af silencedetect=noise=-32dB:d=0.18 -f null - 2>&1`,
+      { encoding: 'utf8', stdio: 'pipe' }
+    );
+  } catch (e) { out = String(e.stdout || ''); }
+  const silences = [];
+  let start = null;
+  for (const line of out.split('\n')) {
+    const a = /silence_start: (-?[\d.]+)/.exec(line);
+    const b = /silence_end: (-?[\d.]+)/.exec(line);
+    if (a) start = Math.max(0, parseFloat(a[1]));
+    if (b && start !== null) { silences.push({ start: from + start, end: from + parseFloat(b[1]) }); start = null; }
+  }
+  return silences;
+}
+
+// Moves a cut point to the nearest pause. A clip starts just before the end of a pause
+// and ends just after the start of a pause.
+export function snapToSilence(time, silences, edge, maxMove) {
+  let best = null;
+  for (const s of silences) {
+    const target = edge === 'start' ? Math.max(s.start, s.end - 0.2) : Math.min(s.end, s.start + 0.15);
+    const move = Math.abs(target - time);
+    if (move <= maxMove && (!best || move < best.move)) best = { target, move };
+  }
+  return best ? best.target : time;
+}
+
+// Picks clips in ranked order while the total stays below the limit.
+export function pickClips(candidates, maxTotal = COLD_OPEN.MAX_TOTAL, maxClips = COLD_OPEN.MAX_CLIPS) {
+  const picked = [];
+  let total = 0;
+  for (const c of candidates) {
+    const dur = c.end - c.start;
+    if (picked.length >= maxClips || total + dur > maxTotal) continue;
+    if (picked.some(p => c.start < p.end && p.start < c.end)) continue; // overlap
+    picked.push(c);
+    total += dur;
+  }
+  return picked;
+}
+
+async function proposeColdOpenQuotes(genAI, opts, transcript, bodyDur) {
+  const model = genAI.getGenerativeModel({ model: GEMINI_MODEL, generationConfig: { responseMimeType: 'application/json' } });
+  const prompt = `This is the transcript of episode ${opts.episode} ("${opts.title}") of the Hebrew tech podcast "רברס עם פלטפורמה".
+
+Select 6 candidate quotes for a "cold open": a short teaser that plays before the intro and makes a software engineer want to hear the full episode.
+
+Rules for each quote:
+- One continuous passage by ONE speaker. Prefer the guest. No back-and-forth.
+- 5 to 18 seconds of speech (about 15 to 45 Hebrew words).
+- It must make sense with no context: a surprising number, a strong opinion, a concrete failure or lesson, a vivid sentence. No greetings, no introductions of people, no "as I said".
+- It starts at the start of a sentence and ends at the end of a sentence.
+- Not from the first 2 minutes and not from the last 2 minutes of the episode.
+- The quotes must come from different parts of the episode.
+- Copy the words exactly as they are in the transcript.
+
+Order the list from the strongest quote to the weakest.
+
+Return a JSON array. Each element: {"time": "MM:SS of the transcript line that holds the quote", "speaker": "name", "text": "the exact words", "why": "one short sentence in English"}.
+
+TRANSCRIPT:
+${transcript}`;
+  const result = await generateWithRetry(model, prompt, 'Cold open quotes');
+  reportUsage('Cold open quotes', result.response.usageMetadata, GEMINI_MODEL);
+  let list;
+  try { list = JSON.parse(result.response.text()); } catch { return []; }
+  if (!Array.isArray(list)) return [];
+  return list
+    .map(q => ({ approx: parseStamp(q.time), speaker: String(q.speaker || ''), text: String(q.text || '').trim(), why: String(q.why || '') }))
+    .filter(q => Number.isFinite(q.approx) && q.text && q.approx >= COLD_OPEN.EDGE_GUARD && q.approx <= bodyDur - COLD_OPEN.EDGE_GUARD);
+}
+
+// Finds the exact start and end of a quote. Returns {start, end} in seconds of the body file, or null.
+async function locateQuote(genAI, bodyMp3, quote, workdir, index) {
+  const from = Math.max(0, quote.approx - COLD_OPEN.WINDOW_LEAD);
+  const windowFile = join(workdir, `_coldopen_window_${index}.mp3`);
+  run(`ffmpeg -y -v error -ss ${from} -t ${COLD_OPEN.WINDOW} -i "${bodyMp3}" -ac 1 -b:a 64k "${windowFile}"`, { silent: true });
+  const model = genAI.getGenerativeModel({ model: GEMINI_MODEL, generationConfig: { responseMimeType: 'application/json' } });
+  const prompt = `This audio clip is ${COLD_OPEN.WINDOW} seconds from a Hebrew podcast. Find the passage below in the audio.
+
+PASSAGE:
+${quote.text}
+
+Return JSON: {"found": true or false, "start": seconds from the start of the clip where the first word of the passage begins, "end": seconds where the last word of the passage ends}. Use one decimal place. If the passage is not fully inside the clip, return {"found": false}.`;
+  const result = await generateWithRetry(model, [
+    { inlineData: { mimeType: 'audio/mp3', data: readFileSync(windowFile).toString('base64') } },
+    { text: prompt },
+  ], 'Cold open locate');
+  reportUsage('Cold open locate', result.response.usageMetadata, GEMINI_MODEL);
+  try { run(`rm -f "${windowFile}"`, { silent: true }); } catch {}
+  let pos;
+  try { pos = JSON.parse(result.response.text()); } catch { return null; }
+  if (!pos || !pos.found || !Number.isFinite(pos.start) || !Number.isFinite(pos.end) || pos.end <= pos.start) return null;
+  const silences = detectSilences(bodyMp3, from, COLD_OPEN.WINDOW);
+  const start = snapToSilence(from + pos.start, silences, 'start', COLD_OPEN.SNAP);
+  const end = snapToSilence(from + pos.end, silences, 'end', COLD_OPEN.SNAP);
+  const dur = end - start;
+  if (dur < COLD_OPEN.CLIP_MIN || dur > COLD_OPEN.CLIP_MAX) return null;
+  return { start, end };
+}
+
+// Writes clips (+ the body, when given) to one MP3.
+function renderColdOpen(bodyMp3, clips, outFile, withBody) {
+  const filters = clips.map((c, i) => {
+    const dur = c.end - c.start;
+    const pad = i === clips.length - 1 ? COLD_OPEN.TAIL_GAP : COLD_OPEN.GAP;
+    return `[0:a]atrim=start=${c.start.toFixed(3)}:end=${c.end.toFixed(3)},asetpts=PTS-STARTPTS,` +
+      `afade=t=in:d=${COLD_OPEN.FADE},afade=t=out:st=${(dur - COLD_OPEN.FADE).toFixed(3)}:d=${COLD_OPEN.FADE},` +
+      `apad=pad_dur=${pad}[c${i}]`;
+  });
+  const labels = clips.map((_, i) => `[c${i}]`).join('') + (withBody ? '[0:a]' : '');
+  filters.push(`${labels}concat=n=${clips.length + (withBody ? 1 : 0)}:v=0:a=1[out]`);
+  run(`ffmpeg -y -v error -i "${bodyMp3}" -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${outFile}"`, { silent: true });
+}
+
+async function askLine(question) {
+  const { createInterface } = await import('readline');
+  const rl = createInterface({ input: process.stdin, output: process.stdout });
+  return new Promise(resolve => rl.question(question, answer => { rl.close(); resolve(answer.trim()); }));
+}
+
+// Builds outputMp3 = cold open + body. Returns the offset in seconds (0 when there is no cold open).
+async function addColdOpen(opts, bodyMp3, outputMp3, transcript, infoFile) {
+  console.log('\n▶ Step 2b: Cold open');
+  const noColdOpen = (reason) => {
+    console.log(`  ${reason} — the episode starts with the intro`);
+    copyFileSync(bodyMp3, outputMp3);
+    writeFileSync(infoFile, JSON.stringify({ offset: 0, clips: [] }, null, 2));
+    return 0;
+  };
+  if (opts.coldOpen === 'off') return noColdOpen('Cold open is off');
+  if (!transcript) return noColdOpen('No transcript');
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) return noColdOpen('GEMINI_API_KEY is not set');
+
+  const { GoogleGenerativeAI } = await import('@google/generative-ai');
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const bodyDur = getAudioDuration(bodyMp3);
+
+  console.log('  Asking Gemini for quotes...');
+  const quotes = await proposeColdOpenQuotes(genAI, opts, transcript, bodyDur);
+  const located = [];
+  for (const [i, q] of quotes.entries()) {
+    const pos = await locateQuote(genAI, bodyMp3, q, opts.workdir, i);
+    if (pos) located.push({ ...q, ...pos });
+    else console.log(`  (quote at ${formatTimestamp(q.approx)} not located exactly — dropped)`);
+  }
+  if (!located.length) return noColdOpen('No usable quotes');
+
+  located.forEach((c, i) => {
+    console.log(`\n  ${i + 1}. [${formatTimestamp(c.start)}, ${(c.end - c.start).toFixed(1)} s] ${c.speaker}: ${c.text}`);
+    if (c.why) console.log(`     (${c.why})`);
+  });
+
+  let clips = pickClips(located);
+  const previewFile = join(opts.workdir, `_coldopen_preview_${opts.episode}.mp3`);
+  if (opts.coldOpen === 'ask') {
+    for (;;) {
+      renderColdOpen(bodyMp3, clips, previewFile, false);
+      const total = clips.reduce((sum, c) => sum + c.end - c.start, 0);
+      console.log(`\n  Selection: ${clips.map(c => located.indexOf(c) + 1).join(', ')} (${total.toFixed(0)} s). Preview: ${previewFile}`);
+      const answer = (await askLine('  Use it? [y = yes, n = no cold open, p = play, or numbers in order, e.g. "2 4"]: ')).toLowerCase();
+      if (answer === 'y' || answer === '') break;
+      if (answer === 'n') return noColdOpen('Cold open rejected');
+      if (answer === 'p') { try { run(`afplay "${previewFile}"`, { silent: true }); } catch {} continue; }
+      const chosen = answer.split(/[\s,]+/).map(n => located[parseInt(n, 10) - 1]).filter(Boolean);
+      if (chosen.length) clips = chosen; else console.log('  Not understood.');
+    }
+  }
+
+  renderColdOpen(bodyMp3, clips, outputMp3, true);
+  const offset = getAudioDuration(outputMp3) - bodyDur;
+  writeFileSync(infoFile, JSON.stringify({ offset, clips }, null, 2));
+  console.log(`  ✓ Cold open: ${clips.length} clips, ${offset.toFixed(1)} s → ${outputMp3}`);
+  return offset;
 }
 
 // ─── Step 3: Generate blog post ───────────────────────────────────────────────
@@ -781,6 +1031,23 @@ ${transcript}`;
   writeFileSync(postPath, postContent, 'utf8');
   console.log(`  ✓ Blog post → ${postPath}`);
   return postPath;
+}
+
+// Saves what the site needs next to the post: the transcript (episode page, VTT in the feed)
+// and the size and duration of the MP3 (feed enclosure length and itunes:duration).
+function publishEpisodeData(opts, transcript, outputMp3, audioUrl) {
+  const [year, month] = opts.date.split('-');
+  const postId = `${year}-${month}-${opts.episode}-${opts.slug}`.toLowerCase();
+  const dir = join(REPO_ROOT, 'transcripts');
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, `${postId}.md`), transcript.trim() + '\n', 'utf8');
+  console.log(`  ✓ Transcript → transcripts/${postId}.md`);
+  if (existsSync(outputMp3)) {
+    const meta = loadMeta();
+    meta[audioUrl] = { bytes: statSync(outputMp3).size, seconds: Math.round(getAudioDuration(outputMp3)) };
+    saveMeta(meta);
+    console.log(`  ✓ Audio size and duration → src/data/audio-meta.json`);
+  }
 }
 
 // ─── Step 5: Generate social media posts ─────────────────────────────────────
@@ -888,7 +1155,9 @@ async function main() {
   const fileSlug = opts.slug.replace(/-/g, '_');
   const mp3Name   = `reversim${opts.episode}-${fileSlug}.mp3`;
   const mixedMp3  = join(opts.workdir, `_mixed_${opts.episode}.mp3`);
-  const outputMp3 = join(opts.workdir, mp3Name);
+  const bodyMp3   = join(opts.workdir, `_body_${opts.episode}.mp3`);   // intro/outro + normalize, no cold open
+  const outputMp3 = join(opts.workdir, mp3Name);                       // final file: cold open + body
+  const coldOpenInfo = join(opts.workdir, `_coldopen_${opts.episode}.json`);
   const transcriptFile = join(opts.workdir, `reversim${opts.episode}-${fileSlug}.transcript.md`);
   const audioUrl = `https://m2.reversim.com/${mp3Name}`;
 
@@ -924,10 +1193,10 @@ async function main() {
 
   // Step 1: Intro/outro + normalize
   if (!opts.skipAudio) {
-    if (existsSync(outputMp3)) {
-      console.log(`\n▶ Step 1: Skipping (output already exists: ${outputMp3})`);
+    if (existsSync(outputMp3) || existsSync(bodyMp3)) {
+      console.log(`\n▶ Step 1: Skipping (output already exists: ${existsSync(outputMp3) ? outputMp3 : bodyMp3})`);
     } else {
-      processAudio(opts, rawInput, outputMp3);
+      processAudio(opts, rawInput, bodyMp3);
     }
   } else {
     console.log('\n▶ Step 1: Skipped (--skip-audio)');
@@ -948,7 +1217,8 @@ async function main() {
       console.log(`\n▶ Step 2: Loading existing transcript (${basename(transcriptFile)})`);
       transcript = readFileSync(transcriptFile, 'utf8');
     } else {
-      const audioForTranscription = existsSync(outputMp3) ? outputMp3 : rawInput;
+      // The transcript is always relative to the body (no cold open). The offset is added later.
+      const audioForTranscription = existsSync(bodyMp3) ? bodyMp3 : existsSync(outputMp3) ? outputMp3 : rawInput;
       if (opts.transcriber === 'ivrit') {
         transcript = await transcribeIvrit(opts, audioForTranscription, audioUrl, transcriptFile);
       } else {
@@ -959,6 +1229,20 @@ async function main() {
     console.log('\n▶ Step 2: Skipped (--skip-transcribe)');
     if (existsSync(transcriptFile)) transcript = readFileSync(transcriptFile, 'utf8');
   }
+
+  // Step 2b: Cold open. Makes the final MP3 from the body.
+  if (!existsSync(outputMp3) && existsSync(bodyMp3)) {
+    if (transcript || opts.coldOpen === 'off') {
+      await addColdOpen(opts, bodyMp3, outputMp3, transcript, coldOpenInfo);
+    } else {
+      // A partial run (for example produce-audio) has no transcript yet. Do not make the final MP3 now,
+      // or the cold open would be skipped for good.
+      console.log('\n▶ Step 2b: Waiting for the transcript (the final MP3 is made after transcription)');
+    }
+  }
+  // All published timestamps (post chapters, transcript) must match the final MP3.
+  const coldOpenOffset = existsSync(coldOpenInfo) ? JSON.parse(readFileSync(coldOpenInfo, 'utf8')).offset || 0 : 0;
+  if (transcript && coldOpenOffset) transcript = shiftTranscript(transcript, coldOpenOffset);
 
   // Step 3: Blog post
   if (!opts.skipPost) {
@@ -979,6 +1263,7 @@ async function main() {
         }
       }
       await generatePost(opts, transcript, audioUrl);
+      publishEpisodeData(opts, transcript, outputMp3, audioUrl);
     }
   } else {
     console.log('\n▶ Step 3: Skipped (--skip-post)');
@@ -1026,7 +1311,9 @@ async function main() {
   console.log(`   Workdir:    ${opts.workdir}`);
 }
 
-main().catch(err => {
-  console.error('\n✗', err.message || err);
-  process.exit(1);
-});
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch(err => {
+    console.error('\n✗', err.message || err);
+    process.exit(1);
+  });
+}
