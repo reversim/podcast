@@ -5,8 +5,8 @@ account_id = "bddcd14d3bb33ee6bdb8cfff3cab9b37"
 workers_dev = false
 preview_urls = false
 
-# Public, read-only MCP server over the episode archive. Enable the route at the first deploy.
-# routes = [{ pattern = "mcp.reversim.com", custom_domain = true }]
+# Public, read-only MCP server over the episode archive.
+routes = [{ pattern = "mcp.reversim.com", custom_domain = true }]
 
 [vars]
 SITE = "https://www.reversim.com"
@@ -14,5 +14,4 @@ SITE = "https://www.reversim.com"
 [[d1_databases]]
 binding = "ARCHIVE"
 database_name = "reversim-archive"
-# Create it one time with `npx wrangler d1 create reversim-archive`, then put the id here.
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "f168da36-cac8-4c67-9325-5290bc6dcf57"

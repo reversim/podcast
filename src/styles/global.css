@@ -1040,3 +1040,17 @@ img {
 	background: var(--surface-muted);
 	padding: 0.5rem;
 }
+
+/* Code samples are left-to-right inside the right-to-left page. */
+.code-block {
+	direction: ltr;
+	text-align: left;
+	background: var(--ink);
+	color: #e6edf7;
+	padding: 0.9rem 1.1rem;
+	border-radius: 12px;
+	overflow-x: auto;
+	font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+	font-size: 0.9rem;
+	line-height: 1.5;
+}

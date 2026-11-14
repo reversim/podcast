@@ -1,0 +1,62 @@
+---
+// How to connect an AI assistant to the podcast archive (MCP server in mcp/).
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const MCP_URL = 'https://mcp.reversim.com/mcp';
+const tools = [
+	['search_episodes', 'חיפוש פרקים לפי נושא, אורח או חברה'],
+	['search_transcripts', 'חיפוש במה שנאמר בפרקים, עם קישור לדקה המדויקת'],
+	['get_episode', 'פרטי פרק: תקציר, אורחים, נושאים וקישורים'],
+	['get_transcript', 'תמלול של פרק, כולו או קטע לפי זמנים'],
+	['list_recent_episodes', 'הפרקים האחרונים'],
+];
+---
+
+<BaseLayout title="חיבור עוזר AI לארכיון הפודקאסט (MCP) | רברס עם פלטפורמה" description="שרת MCP ציבורי וחינמי של רברס עם פלטפורמה: חברו את Claude, Cursor או כל עוזר AI לארכיון הפרקים, וחפשו מה נאמר ובאיזה פרק.">
+	<h1 class="section-title">רברס עם פלטפורמה בתוך עוזר ה-AI שלכם</h1>
+	<p>
+		לפודקאסט יש שרת <a href="https://modelcontextprotocol.io" target="_blank" rel="noreferrer noopener">MCP</a> ציבורי.
+		מחברים אותו פעם אחת ל-Claude, ל-Cursor או לכל עוזר AI שתומך ב-MCP, ואז אפשר לשאול אותו על כל הפרקים שבארכיון
+		ולקבל תשובה עם קישור לפרק ולדקה המתאימה. השירות חינמי, לקריאה בלבד, ולא דורש הרשמה.
+	</p>
+
+	<section class="start-topic">
+		<h2 class="section-title">הכתובת</h2>
+		<pre class="code-block"><code>{MCP_URL}</code></pre>
+	</section>
+
+	<section class="start-topic">
+		<h2 class="section-title">איך מתחברים</h2>
+		<h3>Claude (אתר ואפליקציה)</h3>
+		<p>בוחרים <bdi dir="ltr">Settings → Connectors → Add custom connector</bdi> ומדביקים את הכתובת.</p>
+		<h3>Claude Code</h3>
+		<pre class="code-block"><code>claude mcp add --transport http reversim {MCP_URL}</code></pre>
+		<h3>Cursor וכלים אחרים עם קובץ הגדרות</h3>
+		<pre class="code-block"><code>{`{
+  "mcpServers": {
+    "reversim": { "url": "${MCP_URL}" }
+  }
+}`}</code></pre>
+	</section>
+
+	<section class="start-topic">
+		<h2 class="section-title">מה אפשר לשאול</h2>
+		<ul>
+			<li>״באילו פרקים של רברס עם פלטפורמה דיברו על Kafka?״</li>
+			<li>״מה אמרו בפודקאסט על Vendor Lock-in? תן לי קישור לדקה.״</li>
+			<li>״תמליץ לי על שלושה פרקים על ניהול צוותי פיתוח.״</li>
+			<li>״סכם לי את הפרק האחרון.״</li>
+		</ul>
+	</section>
+
+	<section class="start-topic">
+		<h2 class="section-title">הכלים שהשרת מציע</h2>
+		<ul>
+			{tools.map(([name, text]) => <li><code>{name}</code> — {text}</li>)}
+		</ul>
+		<p>
+			חיפוש הפרקים מכסה את כל הארכיון (כותרות, תקצירים, אורחים וחברות).
+			תמלולים מלאים זמינים מפרק 512 והלאה.
+		</p>
+	</section>
+</BaseLayout>

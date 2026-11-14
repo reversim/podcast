@@ -7,9 +7,7 @@ Last update: 2026-11-14.
 
 | # | Item | Status |
 |---|------|--------|
-| D5 | MCP server deploy. Ran: "yes, soon" (2026-11-14). Say when. It needs a D1 database `reversim-archive`, the route `mcp.reversim.com` and a rate-limit rule. | Waiting for the go |
-| D6 | 99 dead audio URLs in the feed. Proposal: remove these items from the podcast feed and show "audio not available" on their pages. Ran can live with the current state. | Waiting |
-| D9 | Listen to the final opening preview from the real pipeline (522). | Waiting |
+| D10 | Rate-limit rule for `mcp.reversim.com` in the Cloudflare dashboard (Security → WAF → Rate limiting rules). Wrangler cannot make it. | Waiting |
 
 ## Tasks for Claude (after the decisions)
 
@@ -27,6 +25,9 @@ Last update: 2026-11-14.
 
 ## Done
 
+- MCP server live at `https://mcp.reversim.com/mcp` (2026-11-14), with a usage page at `/mcp.html`. After each new episode: `node scripts/mcp-export.mjs && (cd mcp && npm run seed:remote)`.
+- Opening preview from the real pipeline: Ran said LGTM (2026-11-14).
+- 99 dead audio URLs: Ran decided to leave them (2026-11-14).
 - Pushed 2026-11-14: site redesign, feed tags, transcripts 512-522, cold open, welcome line.
 - Guest and company lists: Ran checked them (2026-11-14).
 - Home page: "לכל הפרקים" without the number.

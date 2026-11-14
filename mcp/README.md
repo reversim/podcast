@@ -18,12 +18,11 @@ curl -s -X POST localhost:8799/mcp -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"search_transcripts","arguments":{"query":"Vendor Lock-in"}}}'
 ```
 
-## First deploy
+## Deploy
 
-1. `npx wrangler d1 create reversim-archive`, then put the id in `wrangler.toml`.
-2. Enable the `routes` line in `wrangler.toml` (`mcp.reversim.com`).
-3. `npm run seed:remote && npm run deploy`.
-4. Add a Cloudflare rate-limit rule for `mcp.reversim.com`. The free plan limit of 100,000 Worker requests each day is for the full account, and the audio Worker uses the same limit.
+Live at `https://mcp.reversim.com/mcp` since 2026-11-14 (D1 database `reversim-archive`). Deploy a code change with `npm run deploy`.
+
+The free plan limit of 100,000 Worker requests each day is for the full account, and the audio Worker uses the same limit. Keep a Cloudflare rate-limit rule on `mcp.reversim.com`.
 
 After each new episode: `node scripts/mcp-export.mjs && (cd mcp && npm run seed:remote)`. The seed drops and fills all tables.
 
