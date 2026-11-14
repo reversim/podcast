@@ -29,6 +29,8 @@
  *   --date, -d         Date YYYY-MM-DD (default: today)
  *   --slug, -s         URL slug (auto-derived from episode number if not provided)
  *   --intro            Intro MP3 (default: $REVERSIM_INTRO or assets/intro.mp3)
+ *   --welcome          Recorded welcome line that plays over the intro music, before the hosts
+ *                      (default: $REVERSIM_WELCOME or assets/welcome.wav; no file = no welcome)
  *   --outro            Outro MP3 (default: $REVERSIM_OUTRO or assets/outro.mp3)
  *   --bucket, -b       Bucket name, used for both R2 and S3 (default: reversim)
  *   --workdir          Working directory for intermediate files (default: cwd)
@@ -79,6 +81,7 @@ function parseArgs() {
     slug: null,
     intro: process.env.REVERSIM_INTRO || join(REPO_ROOT, 'assets/intro.mp3'),
     outro: process.env.REVERSIM_OUTRO || join(REPO_ROOT, 'assets/outro.mp3'),
+    welcome: process.env.REVERSIM_WELCOME || join(REPO_ROOT, 'assets/welcome.wav'),
     bucket: 'reversim',
     workdir: process.cwd(),
     tags: [],
@@ -103,6 +106,7 @@ function parseArgs() {
       case '--title':          case '-t': opts.title = args[++i]; break;
       case '--date':           case '-d': opts.date = args[++i]; break;
       case '--slug':           case '-s': opts.slug = args[++i]; break;
+      case '--welcome':                   opts.welcome = resolve(args[++i]); break;
       case '--intro':                     opts.intro = resolve(args[++i]); break;
       case '--outro':                     opts.outro = resolve(args[++i]); break;
       case '--bucket':         case '-b': opts.bucket = args[++i]; break;
@@ -170,7 +174,9 @@ const _costAccumulator = { inputTokens: 0, outputTokens: 0, totalUsd: 0 };
 
 function reportUsage(label, usageMeta, modelName) {
   if (!usageMeta) return;
-  const { promptTokenCount = 0, candidatesTokenCount = 0 } = usageMeta;
+  // Thinking tokens cost the same as output tokens.
+  const { promptTokenCount = 0 } = usageMeta;
+  const candidatesTokenCount = (usageMeta.candidatesTokenCount ?? 0) + (usageMeta.thoughtsTokenCount ?? 0);
   const pricing = GEMINI_PRICING[modelName] ?? { inputPerM: 1.25, outputPerM: 10.00 };
   const costUsd = (promptTokenCount / 1e6) * pricing.inputPerM +
                   (candidatesTokenCount / 1e6) * pricing.outputPerM;
@@ -357,6 +363,35 @@ function mixWavTracks(bandDir, outputMp3) {
 //   different read rates was occasionally producing truncated output where amix
 //   stopped at the second branch's delay boundary.
 
+// Piecewise-linear volume expression for the ffmpeg volume filter. points = [[seconds, volume], ...] in time order.
+// Before the first point the volume is the first value; after the last point it is the last value.
+export function envelopeExpr(points) {
+  let expr = String(points[points.length - 1][1]);
+  for (let i = points.length - 1; i >= 1; i--) {
+    const [t0, v0] = points[i - 1];
+    const [t1, v1] = points[i];
+    const seg = t1 > t0 ? `${v0}+(${v1 - v0})*(t-${t0})/${t1 - t0}` : String(v1);
+    expr = `if(lt(t,${t1}),${seg},${expr})`;
+  }
+  return `if(lt(t,${points[0][0]}),${points[0][1]},${expr})`;
+}
+
+// Timeline of the opening when there is a recorded welcome line (all times in seconds of the episode):
+// music sting → welcome voice over ducked music → short music rise → the hosts start while the music ducks to a bed.
+export function welcomeTimeline(welcomeDur) {
+  const HIT = 0.60, UNDER_VOICE = 0.14, RISE = 0.70, BED = 0.06; // the music file is approximately -15 dB RMS
+  const voiceStart = 0.9;
+  const voiceEnd = voiceStart + welcomeDur;
+  const hostsStart = voiceEnd + 0.8;
+  const points = [
+    [0, 0], [0.15, HIT], [voiceStart - 0.35, HIT], [voiceStart, UNDER_VOICE],
+    [voiceEnd - 0.15, UNDER_VOICE], [voiceEnd + 0.3, RISE],   // rise as the voice ends
+    [hostsStart - 0.3, RISE], [hostsStart + 1.3, BED],        // the duck starts before the first word of the hosts
+    [hostsStart + 7, BED], [hostsStart + 17, 0],
+  ].map(([t, v]) => [Number(t.toFixed(3)), v]);
+  return { voiceStart, hostsStart: Number(hostsStart.toFixed(3)), points, end: points[points.length - 1][0] };
+}
+
 function processAudio(opts, inputMp3, outputMp3) {
   // ── Tuning ──────────────────────────────────────────────────────────────────
   const INTRO_PEAK_VOL  = 0.10;   // -20 dB  — brief opening hit
@@ -385,12 +420,16 @@ function processAudio(opts, inputMp3, outputMp3) {
   const speechDur = getAudioDuration(inputMp3);
   const introDur  = hasIntro ? getAudioDuration(opts.intro) : 0;
   const outroDur  = hasOutro ? getAudioDuration(opts.outro) : 0;
+  // The welcome line needs the intro music. With a welcome line, the hosts start after it.
+  const hasWelcome = hasIntro && opts.welcome && existsSync(opts.welcome);
+  const welcome = hasWelcome ? welcomeTimeline(getAudioDuration(opts.welcome)) : null;
+  const lead = welcome ? welcome.hostsStart : 0;
 
   // Normalize speech FIRST so dynaudnorm never sees the quiet music-only sections.
   // Music beds are then mixed in at fixed levels on top of the normalized speech.
   const normalizedSpeech = outputMp3 + '.normspeech.mp3';
   console.log('  Normalizing speech (dynaudnorm, mono)...');
-  run(`ffmpeg -y -i "${inputMp3}" -ac 1 -af "dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" -q:a 2 "${normalizedSpeech}"`);
+  run(`ffmpeg -y -i "${inputMp3}" -ac 1 -af "silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.1,dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" -q:a 2 "${normalizedSpeech}"`);
 
   // Fast path: no music at all
   if (!hasIntro && !hasOutro) {
@@ -399,7 +438,7 @@ function processAudio(opts, inputMp3, outputMp3) {
   }
 
   const inputs  = [`-i "${normalizedSpeech}"`];
-  const filters = [`[0:a]acopy[speech]`];
+  const filters = [lead ? `[0:a]adelay=${Math.round(lead * 1000)}:all=1[speech]` : `[0:a]acopy[speech]`];
   const streams = ['[speech]'];
   let idx = 1;
 
@@ -414,7 +453,7 @@ function processAudio(opts, inputMp3, outputMp3) {
     const t3 = t2 + INTRO_DUCK_DUR;                    // bed level reached
     const t4 = INTRO_BED_DUR;                          // fade-out starts
     const t5 = t4 + INTRO_FADE_OUT;                    // silence
-    const trimEnd = Math.min(introDur, t5 + 0.5);
+    const trimEnd = Math.min(introDur, (welcome ? welcome.end : t5) + 0.5);
 
     // Piecewise volume expression (t is stream time in seconds):
     //   [0,  t1]: ramp 0 → PEAK_VOL  (fade in)
@@ -433,12 +472,19 @@ function processAudio(opts, inputMp3, outputMp3) {
 
     filters.push(
       `[${idx}:a]` +
-      `volume=eval=frame:volume='${volExpr}',` +
+      `volume=eval=frame:volume='${welcome ? envelopeExpr(welcome.points) : volExpr}',` +
       `atrim=0:${trimEnd},asetpts=PTS-STARTPTS` +
       `[intro_bed]`
     );
     streams.push('[intro_bed]');
     idx++;
+    if (welcome) {
+      inputs.push(`-i "${opts.welcome}"`);
+      filters.push(`[${idx}:a]aresample=44100,adelay=${Math.round(welcome.voiceStart * 1000)}:all=1[welcome]`);
+      streams.push('[welcome]');
+      idx++;
+      console.log(`  Welcome line: voice at ${welcome.voiceStart}s, hosts start at ${lead}s`);
+    }
     console.log(`  Intro: peak ${INTRO_PEAK_DUR}s @ -${Math.round(-20*Math.log10(INTRO_PEAK_VOL))} dB → duck to -${Math.round(-20*Math.log10(INTRO_BED_VOL))} dB bed → fade out at ${t4}s`);
   }
 
@@ -461,7 +507,7 @@ function processAudio(opts, inputMp3, outputMp3) {
     const xfEnd        = Math.min(outroDur, seAt + OUTRO_XFADE);   // ramp ends
     const fadeOutStart = Math.max(xfEnd, outroDur - OUTRO_FADE_OUT);
     const fadeInEnd    = Math.min(OUTRO_FADE_IN, xfStart);         // initial fade-in cap
-    const delayMs      = Math.round(outroDelay * 1000);
+    const delayMs      = Math.round((outroDelay + lead) * 1000);
     const dPostPre     = OUTRO_POST_VOL - OUTRO_PRE_VOL;
     const xfDur        = Math.max(0.001, xfEnd - xfStart);
     const fOutDur      = Math.max(0.001, outroDur - fadeOutStart);
@@ -496,7 +542,7 @@ function processAudio(opts, inputMp3, outputMp3) {
 
   // ── MIX ────────────────────────────────────────────────────────────────────
   const n = streams.length;
-  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0[out]`);
+  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0,alimiter=limit=0.84:level=false[out]`);
 
   run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${outputMp3}"`);
 
@@ -716,12 +762,14 @@ function normalizeCoverImage(opts) {
 //   4. The clips go before the episode body. All later timestamps move by the same offset.
 
 const COLD_OPEN = {
-  MAX_TOTAL: 45,      // s — maximum length of all clips together
-  CLIP_MIN: 4,        // s
-  CLIP_MAX: 22,       // s
-  MAX_CLIPS: 3,
+  MAX_TOTAL: 20,      // s — maximum length of all clips together
+  CLIP_MIN: 3,        // s
+  CLIP_MAX: 12,       // s
+  MAX_CLIPS: 2,
+  EXTEND: 3,          // s — maximum move of a cut to the next pause when the check finds a cut-off sentence
+  CHECKS: 3,          // attempts to get a clean cut
   GAP: 0.35,          // s — silence between clips
-  TAIL_GAP: 0.9,      // s — silence between the last clip and the intro
+  TAIL_GAP: 0.05,     // s — silence between the last clip and the intro music (short: the music answers the quote)
   FADE: 0.08,         // s — fade at each clip edge
   WINDOW: 90,         // s — audio window sent to Gemini to locate a quote
   WINDOW_LEAD: 25,    // s — window starts this long before the approximate time
@@ -750,11 +798,11 @@ export function shiftTranscript(transcript, offset) {
 }
 
 // Silent intervals of a window of the file, as [{start, end}] in absolute seconds.
-function detectSilences(file, from, length) {
+export function detectSilences(file, from, length, noise = '-32dB', minDur = 0.18) {
   let out = '';
   try {
     out = execSync(
-      `ffmpeg -hide_banner -nostats -ss ${from} -t ${length} -i "${file}" -af silencedetect=noise=-32dB:d=0.18 -f null - 2>&1`,
+      `ffmpeg -hide_banner -nostats -ss ${from} -t ${length} -i "${file}" -af silencedetect=noise=${noise}:d=${minDur} -f null - 2>&1`,
       { encoding: 'utf8', stdio: 'pipe' }
     );
   } catch (e) { out = String(e.stdout || ''); }
@@ -799,13 +847,13 @@ async function proposeColdOpenQuotes(genAI, opts, transcript, bodyDur) {
   const model = genAI.getGenerativeModel({ model: GEMINI_MODEL, generationConfig: { responseMimeType: 'application/json' } });
   const prompt = `This is the transcript of episode ${opts.episode} ("${opts.title}") of the Hebrew tech podcast "רברס עם פלטפורמה".
 
-Select 6 candidate quotes for a "cold open": a short teaser that plays before the intro and makes a software engineer want to hear the full episode.
+Select 8 candidate quotes for a "cold open": a short teaser that plays before the intro and makes a software engineer want to hear the full episode.
 
 Rules for each quote:
 - One continuous passage by ONE speaker. Prefer the guest. No back-and-forth.
-- 5 to 18 seconds of speech (about 15 to 45 Hebrew words).
+- Short: 4 to 10 seconds of speech (about 10 to 25 Hebrew words). One or two complete sentences.
 - It must make sense with no context: a surprising number, a strong opinion, a concrete failure or lesson, a vivid sentence. No greetings, no introductions of people, no "as I said".
-- It starts at the start of a sentence and ends at the end of a sentence.
+- It starts at the start of a sentence and ends at the end of a sentence, where the speaker stops for a moment. Do not stop in the middle of a thought or before the point of the sentence.
 - Not from the first 2 minutes and not from the last 2 minutes of the episode.
 - The quotes must come from different parts of the episode.
 - Copy the words exactly as they are in the transcript.
@@ -850,9 +898,52 @@ Return JSON: {"found": true or false, "start": seconds from the start of the cli
   const silences = detectSilences(bodyMp3, from, COLD_OPEN.WINDOW);
   const start = snapToSilence(from + pos.start, silences, 'start', COLD_OPEN.SNAP);
   const end = snapToSilence(from + pos.end, silences, 'end', COLD_OPEN.SNAP);
-  const dur = end - start;
+  const clip = await checkCut(genAI, bodyMp3, { start, end }, silences, workdir, index);
+  if (!clip) return null;
+  const dur = clip.end - clip.start;
   if (dur < COLD_OPEN.CLIP_MIN || dur > COLD_OPEN.CLIP_MAX) return null;
-  return { start, end };
+  return clip;
+}
+
+// Moves one edge of a clip out to the adjacent pause. Returns the new clip, or null when there is no pause in range.
+export function extendToPause(clip, silences, edge, maxMove = COLD_OPEN.EXTEND) {
+  if (edge === 'end') {
+    const next = silences.filter(s => s.start > clip.end + 0.05 && s.start - clip.end <= maxMove).sort((a, b) => a.start - b.start)[0];
+    return next ? { ...clip, end: Math.min(next.end, next.start + 0.15) } : null;
+  }
+  const prev = silences.filter(s => s.end < clip.start - 0.05 && clip.start - s.end <= maxMove).sort((a, b) => b.end - a.end)[0];
+  return prev ? { ...clip, start: Math.max(prev.start, prev.end - 0.2) } : null;
+}
+
+// Gemini hears the cut clip and says if it starts and ends on a full sentence. A bad edge moves to the adjacent pause.
+// Returns the clean clip, or null.
+async function checkCut(genAI, bodyMp3, clip, silences, workdir, index) {
+  const model = genAI.getGenerativeModel({ model: GEMINI_MODEL, generationConfig: { responseMimeType: 'application/json' } });
+  const file = join(workdir, `_coldopen_check_${index}.mp3`);
+  try {
+    for (let attempt = 0; attempt < COLD_OPEN.CHECKS; attempt++) {
+      run(`ffmpeg -y -v error -ss ${clip.start.toFixed(3)} -t ${(clip.end - clip.start).toFixed(3)} -i "${bodyMp3}" -ac 1 -b:a 64k "${file}"`, { silent: true });
+      const result = await generateWithRetry(model, [
+        { inlineData: { mimeType: 'audio/mp3', data: readFileSync(file).toString('base64') } },
+        { text: `This short Hebrew audio clip will play alone as a teaser. Listen to its first and last second with care.
+Return JSON: {"text": "the exact words you hear", "starts_clean": true if the clip starts at the start of a sentence and the first word is complete, "ends_clean": true if the clip ends at the end of a sentence or a complete thought and the last word is complete}.
+A clip that stops in the middle of a word, in the middle of a sentence, or on a connecting word (such as "ו", "אבל", "ש", "כי", "אז") does not end clean.` },
+      ], 'Cold open check');
+      reportUsage('Cold open check', result.response.usageMetadata, GEMINI_MODEL);
+      let verdict;
+      try { verdict = JSON.parse(result.response.text()); } catch { return null; }
+      console.log(`    check ${attempt + 1}: start ${verdict.starts_clean ? 'ok' : 'BAD'}, end ${verdict.ends_clean ? 'ok' : 'BAD'}`);
+      if (verdict.starts_clean && verdict.ends_clean) return clip;
+      let next = clip;
+      if (!verdict.ends_clean) next = next && extendToPause(next, silences, 'end');
+      if (!verdict.starts_clean) next = next && extendToPause(next, silences, 'start');
+      if (!next) return null;
+      clip = next;
+    }
+    return null;
+  } finally {
+    try { run(`rm -f "${file}"`, { silent: true }); } catch {}
+  }
 }
 
 // Writes clips (+ the body, when given) to one MP3.
