@@ -29,3 +29,14 @@ After each new episode: `node scripts/mcp-export.mjs && (cd mcp && npm run seed:
 ## Use it
 
 Claude Code: `claude mcp add --transport http reversim https://mcp.reversim.com/mcp`
+
+## Access count
+
+Each `initialize` request and each tool call adds to table `mcp_hits` in the analytics database (`reversim-analytics`, binding `STATS`).
+The hourly cron of the analytics Worker builds `mcp_daily`, and stats.reversim.com shows it in the section "AI assistants (MCP)".
+A client is a salted hash of the IP address and the user agent. The salt is the secret `HASH_SALT` of this Worker. Without the secret, the Worker counts nothing.
+
+## Rate limit
+
+A Cloudflare rate limiting rule on the zone blocks an IP address for 10 seconds after 50 requests in 10 seconds to `mcp.reversim.com`.
+The rule is in the dashboard (Security, WAF, Rate limiting rules). A limit in the Worker code is not reliable, because each Worker instance counts separately.

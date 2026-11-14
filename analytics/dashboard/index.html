@@ -272,6 +272,18 @@ footer.dq b { color: var(--ink); font-weight: 600; }
     </div><p class="empty" hidden></p>
   </section>
 
+  <section class="card" id="s-mcp" style="margin-bottom:16px" aria-labelledby="h-mcp">
+    <header><h2 id="h-mcp">AI assistants (MCP)</h2><span class="sub">Access to the MCP server at mcp.reversim.com</span></header>
+    <div data-body class="split">
+      <div><h3>Clients and tool calls per day</h3><div class="legend" id="lg-mcp"></div><div class="chart sm"><canvas id="c-mcp" role="img" aria-label="Line chart of unique MCP clients and tool calls per day"></canvas></div></div>
+      <div>
+        <h3>Tool calls by tool</h3><ul class="bars" id="b-mcptools"></ul>
+        <h3 style="margin-top:16px">Client programs</h3><ul class="bars" id="b-mcpapps"></ul>
+        <p class="count" style="margin-top:10px">A client is one IP address and user agent on one day. The count started on 2026-11-14.</p>
+      </div>
+    </div><p class="empty" hidden></p>
+  </section>
+
   <section class="card" id="s-ps" style="margin-bottom:16px" aria-labelledby="h-ps">
     <header><h2 id="h-ps">Apple and Spotify</h2><span class="sub">Apple numbers you add by hand, Spotify numbers that can update by themselves</span></header>
     <p class="count ps-note">Find the numbers in Apple Podcasts Connect, under Analytics, and in Spotify for Creators, under Analytics, then export. Apple has no API, so add its numbers here. Spotify can update by itself when the Worker has the Spotify cookies (see the README). Spotify plays are mostly not visible in download counts, so compare streams here.</p>
@@ -629,6 +641,7 @@ function sliceMock(raw, N) {
   out.episodes = arr(raw.episodes).map(function (e) { return Object.assign({}, e, { in_range: tot[e.file] || 0 }); });
   out.audience = Object.assign({}, raw.audience, { history: arr(raw.audience && raw.audience.history).filter(inR) });
   out.feed = Object.assign({}, raw.feed, { daily: arr(raw.feed && raw.feed.daily).filter(inR) });
+  if (raw.mcp) out.mcp = Object.assign({}, raw.mcp, { daily: arr(raw.mcp.daily).filter(inR) });
   if (raw.web) {
     var wd = arr(raw.web.daily), wIn = wd.filter(inR), vAll = sum(wd.map(function (r) { return r.views; })) || 1;
     var ratio = sum(wIn.map(function (r) { return r.views; })) / vAll;
@@ -702,6 +715,10 @@ function norm(raw, N) {
   D.fetch = zero(); D.hasFeed = false;
   arr(fd.daily).forEach(function (r) { var k = ix(r.day); if (k < 0) return; D.fetch[k] = num(r.fetchers); D.hasFeed = true; });
   D.feedApps = keyed(fd.apps, 'fetchers'); D.reported = keyed(fd.reported_subscribers, 'subscribers');
+  var mc = raw.mcp || {};
+  D.mcpClients = zero(); D.mcpCalls = zero(); D.hasMcp = false;
+  arr(mc.daily).forEach(function (r) { var k = ix(r.day); if (k < 0) return; D.mcpClients[k] = num(r.clients); D.mcpCalls[k] = num(r.calls); D.hasMcp = true; });
+  D.mcpTools = keyed(mc.tools, 'calls'); D.mcpApps = keyed(mc.apps, 'clients');
   var wb = raw.web || {};
   D.wv = zero(); D.wu = zero(); D.wp = zero();
   arr(wb.daily).forEach(function (r) { var k = ix(r.day); if (k < 0) return; D.wv[k] = num(r.views); D.wu[k] = num(r.visitors); D.wp[k] = num(r.plays); });
@@ -1113,6 +1130,19 @@ function renderSubs(D) {
   if (D.reported.length) barList(rp, D.reported.map(function (r) { return { label: r.key, v: r.v }; }), { noPct: true }); else rp.append(el('li', { class: 'count', text: 'None reported' }));
 }
 
+function renderMcp(D) {
+  var c = $('#s-mcp');
+  if (setEmpty(c, D.hasMcp || D.mcpTools.length || D.mcpApps.length ? '' : 'No MCP data yet. Numbers appear after the first request to mcp.reversim.com.')) { killChart('c-mcp'); return; }
+  var T = themeInfo();
+  var o = baseOpts(T, { xLabels: function (l) { return fmtDay(l); }, tooltip: { callbacks: { title: function (it) { return fmtDay(it[0].label, true); }, label: function (c) { return c.dataset.label + ': ' + nf.format(c.parsed.y); } } } });
+  makeChart('c-mcp', { type: 'line', data: { labels: D.days, datasets: [lineDs('Unique clients', D.mcpClients, T.c[0]), lineDs('Tool calls', D.mcpCalls, T.c[1])] }, options: o });
+  legend($('#lg-mcp'), [{ label: 'Unique clients', color: T.c[0] }, { label: 'Tool calls', color: T.c[1] }]);
+  var mt = $('#b-mcptools'), ma = $('#b-mcpapps');
+  clear(mt); clear(ma);
+  if (D.mcpTools.length) barList(mt, topWithOther(D.mcpTools, 8), { noPct: false }); else mt.append(el('li', { class: 'count', text: 'No tool calls' }));
+  if (D.mcpApps.length) barList(ma, topWithOther(D.mcpApps, 8), { noPct: false }); else ma.append(el('li', { class: 'count', text: 'No data' }));
+}
+
 function csvDownload(prefix, head, rows) {
   var safe = function (v) { var s = str(v); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   var out = [head.join(',')];
@@ -1226,7 +1256,7 @@ function renderHeader(D) {
 
 function renderAll() {
   var D = state.D;
-  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderPS(D); renderSP(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
+  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderMcp(D); renderPS(D); renderSP(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
 }
 
 /* ---------- Apple and Spotify (hand-imported numbers) ---------- */

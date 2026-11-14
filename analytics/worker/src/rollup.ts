@@ -24,7 +24,20 @@ export async function rollup(env: Env, opts: { now?: number; heavy?: boolean; ba
   const webStmts: D1PreparedStatement[] = [];
   const w = (sql: string, ...args: unknown[]) => webStmts.push(db.prepare(sql).bind(...args));
 
+  // MCP tables: their own batch too, for the same reason.
+  const mcpStmts: D1PreparedStatement[] = [];
+  const m = (sql: string, ...args: unknown[]) => mcpStmts.push(db.prepare(sql).bind(...args));
+
   for (const d of days) {
+    m(`DELETE FROM mcp_daily WHERE day = ?1`, d);
+    m(`INSERT INTO mcp_daily SELECT ?1, 'total', 'all', count(DISTINCT client),
+         coalesce(sum(CASE WHEN method != 'connect' THEN reqs END), 0)
+       FROM mcp_hits WHERE day = ?1 HAVING count(*) > 0`, d);
+    m(`INSERT INTO mcp_daily SELECT day, 'tool', method, count(*), sum(reqs) FROM mcp_hits
+       WHERE day = ?1 GROUP BY method`, d);
+    m(`INSERT INTO mcp_daily SELECT day, 'app', coalesce(app, 'Unknown'), count(DISTINCT client),
+         coalesce(sum(CASE WHEN method != 'connect' THEN reqs END), 0)
+       FROM mcp_hits WHERE day = ?1 GROUP BY 3`, d);
     for (const t of ['ep_daily', 'dim_daily', 'totals_daily', 'feed_daily']) q(`DELETE FROM ${t} WHERE day = ?1`, d);
     q(`INSERT INTO ep_daily SELECT day, file, count(*), count(DISTINCT listener) FROM hits
        WHERE day = ?1 AND ${VALID} GROUP BY file`, d, minBytes);
@@ -82,6 +95,8 @@ export async function rollup(env: Env, opts: { now?: number; heavy?: boolean; ba
   w(`DELETE FROM page_hits WHERE day < ?1`, cutoff);
   await db.batch(stmts);
   try { await db.batch(webStmts); } catch (e) { console.error('web rollup failed', e); }
+  m(`DELETE FROM mcp_hits WHERE day < ?1`, cutoff);
+  try { await db.batch(mcpStmts); } catch (e) { console.error('mcp rollup failed', e); }
 }
 
 const FRESH_MS = 5 * 60 * 1000;

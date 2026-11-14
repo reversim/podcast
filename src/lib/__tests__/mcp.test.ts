@@ -36,3 +36,26 @@ describe('transcript passages', () => {
 		expect(p[1].start).toBe(120);
 	});
 });
+
+describe('access count helpers', () => {
+	it('counts a connect and each tool call, and nothing else', async () => {
+		const { statKeys } = await import('../../../mcp/src/index');
+		expect(statKeys({ jsonrpc: '2.0', id: 1, method: 'initialize' })).toEqual(['connect']);
+		expect(statKeys({ jsonrpc: '2.0', id: 1, method: 'tools/list' })).toEqual([]);
+		expect(statKeys([
+			{ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name: 'search_episodes' } },
+			{ jsonrpc: '2.0', id: 2, method: 'tools/call', params: { name: 'x'.repeat(500) } },
+			{ jsonrpc: '2.0', method: 'notifications/initialized' },
+			null,
+		])).toEqual(['search_episodes', 'unknown tool']);
+		expect(statKeys('junk')).toEqual([]);
+	});
+	it('makes a short client name from the user agent', async () => {
+		const { clientApp } = await import('../../../mcp/src/index');
+		expect(clientApp('claude-code/2.1.0 (cli)')).toBe('claude-code');
+		expect(clientApp('Mozilla/5.0 (Macintosh)')).toBe('Browser');
+		expect(clientApp('python-httpx/0.27')).toBe('python-httpx');
+		expect(clientApp(null)).toBe('Unknown');
+		expect(clientApp('')).toBe('Unknown');
+	});
+});

@@ -15,3 +15,10 @@ SITE = "https://www.reversim.com"
 binding = "ARCHIVE"
 database_name = "reversim-archive"
 database_id = "f168da36-cac8-4c67-9325-5290bc6dcf57"
+
+# The analytics database. The Worker writes one row for each client, day and tool (table mcp_hits).
+# It also needs the secret HASH_SALT (wrangler secret put HASH_SALT). Without it, nothing is counted.
+[[d1_databases]]
+binding = "STATS"
+database_name = "reversim-analytics"
+database_id = "b4116abf-07f9-4f09-bda2-c120c477af8f"

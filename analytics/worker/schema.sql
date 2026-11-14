@@ -102,3 +102,20 @@ CREATE TABLE IF NOT EXISTS sp_episodes (
   starts INTEGER, streams INTEGER, listeners INTEGER, updated_day TEXT
 ) WITHOUT ROWID;
 
+
+-- MCP server (mcp.reversim.com). The MCP Worker writes mcp_hits; the hourly cron builds mcp_daily.
+-- method = "connect" (an initialize request) or a tool name. Raw rows are pruned after 100 days.
+CREATE TABLE IF NOT EXISTS mcp_hits (
+  day TEXT NOT NULL,
+  client TEXT NOT NULL,       -- 32 hex chars, salted hash of IP + user agent (own salt)
+  method TEXT NOT NULL,
+  app TEXT,
+  reqs INTEGER NOT NULL,
+  PRIMARY KEY (day, client, method)
+) WITHOUT ROWID;
+
+-- dim = total (key "all": unique clients, tool calls) | tool (key = tool name or "connect") | app.
+CREATE TABLE IF NOT EXISTS mcp_daily (
+  day TEXT NOT NULL, dim TEXT NOT NULL, key TEXT NOT NULL, clients INTEGER NOT NULL, reqs INTEGER NOT NULL,
+  PRIMARY KEY (day, dim, key)
+) WITHOUT ROWID;

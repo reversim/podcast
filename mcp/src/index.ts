@@ -3,6 +3,8 @@
 export interface Env {
 	ARCHIVE: D1Database;
 	SITE: string;
+	STATS?: D1Database; // the analytics database (stats.reversim.com), for the access count
+	HASH_SALT?: string; // secret; without it the access count is off
 }
 
 const PROTOCOL = '2025-06-18';
@@ -197,6 +199,51 @@ export async function handleRpc(env: Env, msg: Rpc): Promise<unknown | null> {
 	}
 }
 
+// ── Access count for stats.reversim.com ──────────────────────────────────────
+
+/** What to count for a request body: "connect" for each initialize, the tool name for each tool call. */
+export function statKeys(body: unknown): string[] {
+	const keys: string[] = [];
+	for (const m of (Array.isArray(body) ? body : [body]) as Rpc[]) {
+		if (!m || typeof m.method !== 'string') continue;
+		if (m.method === 'initialize') keys.push('connect');
+		else if (m.method === 'tools/call') {
+			const name = String(m.params?.name ?? '');
+			keys.push(TOOLS.some((t) => t.name === name) ? name : 'unknown tool');
+		}
+	}
+	return keys;
+}
+
+/** Short client name from the User-Agent: the product before the first "/" or "(". */
+export function clientApp(ua: string | null): string {
+	const m = /^[\w .-]{1,40}/.exec((ua ?? '').trim());
+	const name = m ? m[0].trim() : '';
+	if (!name) return 'Unknown';
+	return name === 'Mozilla' ? 'Browser' : name;
+}
+
+async function logHits(request: Request, env: Env, keys: string[]): Promise<void> {
+	try {
+		if (!env.STATS || !env.HASH_SALT || keys.length === 0) return;
+		const ua = request.headers.get('user-agent');
+		const ip = request.headers.get('cf-connecting-ip') ?? '';
+		// IPv6: keep the /64 prefix, so one device with changing addresses is one client.
+		const net = ip.includes(':') ? ip.split(':').slice(0, 4).join(':') : ip;
+		const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${env.HASH_SALT}|${net}|${ua ?? ''}`));
+		const client = [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('').slice(0, 32);
+		const day = new Date().toISOString().slice(0, 10);
+		const stmt = env.STATS.prepare(
+			`INSERT INTO mcp_hits (day, client, method, app, reqs) VALUES (?1, ?2, ?3, ?4, 1)
+			 ON CONFLICT (day, client, method) DO UPDATE SET reqs = reqs + 1`,
+		);
+		const app = clientApp(ua);
+		await env.STATS.batch(keys.map((k) => stmt.bind(day, client, k, app)));
+	} catch (e) {
+		console.error('access count failed', e);
+	}
+}
+
 const CORS = {
 	'access-control-allow-origin': '*',
 	'access-control-allow-methods': 'POST, GET, OPTIONS',
@@ -205,7 +252,7 @@ const CORS = {
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', ...CORS } });
 
 export default {
-	async fetch(request: Request, env: Env): Promise<Response> {
+	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
 		const url = new URL(request.url);
 		if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
 		if (url.pathname === '/' && request.method === 'GET') {
@@ -226,6 +273,7 @@ export default {
 		} catch {
 			return json(fail(null, -32700, 'Parse error'), 400);
 		}
+		ctx.waitUntil(logHits(request, env, statKeys(body).slice(0, 20)));
 		if (Array.isArray(body)) {
 			if (body.length === 0 || body.length > 20) return json(fail(null, -32600, 'Invalid batch'), 400);
 			const replies = (await Promise.all(body.map((m) => handleRpc(env, m as Rpc)))).filter((r) => r !== null);

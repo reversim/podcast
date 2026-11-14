@@ -53,6 +53,17 @@ export async function buildStats(env: Env, days: number, now = Date.now()) {
   ]).then(([d, pages, referrers]) => ({ daily: d, pages, referrers }))
     .catch((e) => { console.error('web stats failed', e); return { daily: [], pages: [], referrers: [] }; });
 
+  // MCP server access. Isolated like `web`: a missing table gives empty arrays.
+  const mcp = await Promise.all([
+    all(`SELECT day, clients, reqs AS calls FROM mcp_daily WHERE dim = 'total' AND day BETWEEN ?1 AND ?2 ORDER BY day`, from, to),
+    all(`SELECT key, sum(reqs) AS calls FROM mcp_daily WHERE dim = 'tool' AND key != 'connect' AND day BETWEEN ?1 AND ?2
+         GROUP BY key ORDER BY calls DESC, key`, from, to),
+    // clients = sum of daily unique clients, so a returning client counts once per day.
+    all(`SELECT key, sum(clients) AS clients FROM mcp_daily WHERE dim = 'app' AND day BETWEEN ?1 AND ?2
+         GROUP BY key ORDER BY clients DESC, key LIMIT 20`, from, to),
+  ]).then(([d, tools, apps]) => ({ daily: d, tools, apps }))
+    .catch((e) => { console.error('mcp stats failed', e); return { daily: [], tools: [], apps: [] }; });
+
   return {
     generated_at: new Date(now).toISOString(),
     range: { from, to },
@@ -64,6 +75,7 @@ export async function buildStats(env: Env, days: number, now = Date.now()) {
     },
     feed: { daily: feedDaily, apps: feedApps, reported_subscribers: feedSubs },
     web,
+    mcp,
     // Hand-imported Apple/Spotify numbers. Isolated like `web`: a missing table gives empty arrays.
     platforms: await platformStats(env),
     // Spotify for Creators (unofficial daily fetch). Isolated: never throws.
