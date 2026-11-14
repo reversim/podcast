@@ -7,7 +7,7 @@ Last update: 2026-11-14.
 
 | # | Item | Status |
 |---|------|--------|
-| D10 | Rate-limit rule for `mcp.reversim.com` in the Cloudflare dashboard (Security → WAF → Rate limiting rules). Wrangler cannot make it. | Waiting |
+| D10 | Rate-limit rule for `mcp.reversim.com` in the Cloudflare dashboard (Security → WAF → Rate limiting rules). Wrangler cannot make it (its login has no WAF permission). A limit in the Worker code does not work: tested 2026-11-14, each Worker instance counts separately. Rule: hostname equals `mcp.reversim.com`, same IP, 50 requests in 10 seconds, block. | Ran must do it in the dashboard |
 
 ## Tasks for Claude (after the decisions)
 
@@ -25,6 +25,7 @@ Last update: 2026-11-14.
 
 ## Done
 
+- `make produce` now updates the MCP server at the end (`make mcp-update`).
 - MCP server live at `https://mcp.reversim.com/mcp` (2026-11-14), with a usage page at `/mcp.html`. After each new episode: `node scripts/mcp-export.mjs && (cd mcp && npm run seed:remote)`.
 - Opening preview from the real pipeline: Ran said LGTM (2026-11-14).
 - 99 dead audio URLs: Ran decided to leave them (2026-11-14).

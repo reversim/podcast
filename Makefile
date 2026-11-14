@@ -28,7 +28,7 @@ AUDIO_URL = https://m2.reversim.com/$(MP3_NAME)
 
 .PHONY: help install dev build build-pages preview migrate validate audit rss-compare verify clean \
         produce produce-mix produce-audio produce-transcribe produce-post produce-upload produce-social \
-        audio-meta transcribe-backfill
+        audio-meta transcribe-backfill mcp-update
 
 help:
 	@echo "Site targets:"
@@ -45,7 +45,7 @@ help:
 	@echo "  clean        Remove build artifacts"
 	@echo ""
 	@echo "Post-production targets (require EPISODE=NNN TITLE='...' SLUG=slug):"
-	@echo "  produce            Full pipeline: mix → audio → transcribe → cold open → post → upload"
+	@echo "  produce            Full pipeline: mix → audio → transcribe → cold open → post → upload → MCP update"
 	@echo "                     COLD_OPEN=ask|auto|off controls the teaser before the intro"
 	@echo "  produce-mix        Mix GarageBand WAV tracks into a single MP3"
 	@echo "  produce-audio      Add intro/outro, normalize"
@@ -56,6 +56,7 @@ help:
 	@echo ""
 	@echo "Catalog targets:"
 	@echo "  audio-meta           Measure size and duration of new audio files (for the feed)"
+	@echo "  mcp-update           Send all episodes and transcripts to the MCP server (runs at the end of produce)"
 	@echo "  transcribe-backfill  Transcribe old episodes that have no transcript (LIMIT=5)"
 	@echo ""
 	@echo "Example:"
@@ -161,6 +162,7 @@ produce: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
 		$(_source-args)
+	@$(MAKE) --no-print-directory mcp-update || echo "WARNING: the MCP update failed. The episode is complete. Run 'make mcp-update' again."
 
 # ── Catalog data ─────────────────────────────────────────────────────────────
 
@@ -168,6 +170,11 @@ LIMIT ?= 5
 
 audio-meta:
 	node scripts/audio-meta.mjs
+
+# Sends all episodes and transcripts to the MCP server database (mcp.reversim.com).
+mcp-update:
+	node scripts/mcp-export.mjs
+	cd mcp && npm run --silent seed:remote
 
 transcribe-backfill:
 	@set -a && . ./.env && set +a && \
