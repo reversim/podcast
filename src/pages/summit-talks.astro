@@ -25,7 +25,7 @@ const isTalk = (t: { title: string; speaker: string }) => t.speaker !== '' || !/
 			<h2 class="section-title">
 				{y}
 				<a class="index-alt" href={`https://www.youtube.com/playlist?list=${playlists[String(y)]}`} target="_blank" rel="noreferrer noopener">כל הפלייליסט</a>
-				<a class="index-alt" href={`https://summit.reversim.com/${y}/`} target="_blank" rel="noreferrer noopener">אתר הכנס</a>
+				<a class="index-alt" href={`https://summit.reversim.com/${y}`} target="_blank" rel="noreferrer noopener">אתר הכנס</a>
 			</h2>
 			<ul class="summit-list">
 				{data.talks.filter((t) => t.year === y && isTalk(t)).map((t) => (

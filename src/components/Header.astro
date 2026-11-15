@@ -10,6 +10,7 @@ const nav = [
 	{ href: withBase('/guests.html'), label: 'אורחים' },
 	{ href: withBase('/companies.html'), label: 'חברות' },
 	{ href: withBase('/summit-talks.html'), label: 'הרצאות Summit' },
+	{ href: withBase('/mcp.html'), label: 'חיבור ל-AI' },
 	{ href: withBase('/about.html'), label: 'אודות' },
 ];
 
@@ -37,7 +38,7 @@ const enableSearch = import.meta.env.PROD;
 			<link href={withBase('/pagefind/pagefind-ui.css')} rel="stylesheet" />
 			<script is:inline define:vars={{ base: withBase('/') }}>
 				window.addEventListener('DOMContentLoaded', () => {
-					new PagefindUI({
+					const ui = new PagefindUI({
 						element: '#search',
 						showSubResults: true,
 						bundlePath: base + 'pagefind/',
@@ -46,6 +47,9 @@ const enableSearch = import.meta.env.PROD;
 							zero_results: 'לא נמצאו תוצאות עבור [SEARCH_TERM]',
 						},
 					});
+					// "?q=term" in the URL starts a search. Old Blogger search links point here.
+					const q = new URLSearchParams(location.search).get('q');
+					if (q) ui.triggerSearch(q);
 				});
 			</script>
 			<script src={withBase('/pagefind/pagefind-ui.js')} is:inline />
