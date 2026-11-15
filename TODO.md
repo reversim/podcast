@@ -15,6 +15,8 @@ Last update: 2026-11-15.
 |---|------|------------|
 ## Reminders with dates
 
+- 2026-11-16 or later: check that Apple Podcasts, Spotify and Deezer show the new episode art and the title "רברס עם פלטפורמה (Reversim)". On 2026-11-15 they still had the old data (they read the feed on their own schedule).
+- When Amazon Music approves the show: add the link to `src/lib/links.ts`.
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
 ## Audit findings (2026-11-15), not started
