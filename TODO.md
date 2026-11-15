@@ -15,6 +15,7 @@ Last update: 2026-11-15.
 |---|------|------------|
 ## Reminders with dates
 
+- 2026-11-16: remind the user to add the podcast to YouTube (their task). Open points: a second channel or a podcast playlist in the Summit channel; the handle `@reversim` shows as taken, `@ReversimPodcast` had no public channel on 2026-11-15. After that: add the YouTube link to the site.
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
 ## Audit findings (2026-11-15), not started
