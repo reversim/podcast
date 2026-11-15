@@ -1,7 +1,7 @@
 # Open tasks, decisions and ideas
 
 Claude keeps this list. Claude shows the open items at the end of each work session until the list is empty.
-Last update: 2026-11-14.
+Last update: 2026-11-15.
 
 ## Decisions for Ran
 
@@ -15,8 +15,6 @@ Last update: 2026-11-14.
 |---|------|------------|
 ## Reminders with dates
 
-- The API token `reversim-setup` in `.env` expires on 2026-11-14 at 21:59:59 UTC. After that, remove the line `CLOUDFLARE_API_TOKEN` from `.env`. A new WAF change needs a new token.
-- 2026-11-15: check that the first automatic weekly stats email arrived.
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
 ## Ideas (not started)
@@ -26,6 +24,7 @@ Last update: 2026-11-14.
 
 ## Done
 
+- Weekly stats email arrived (2026-11-15). The top number tiles are smaller for mobile.
 - Rate limit for `mcp.reversim.com` (2026-11-14): Cloudflare rate limiting rule, 50 requests in 10 seconds for each IP address, block for 10 seconds. Made through the API with the token `reversim-setup`. Tested: 54 of 300 fast requests passed, 246 got HTTP 429.
 - Stats page shows MCP access (2026-11-14): section "AI assistants (MCP)" on stats.reversim.com. The MCP Worker writes to table `mcp_hits` in the analytics database.
 - Home page: the episode count is removed from the hero text.

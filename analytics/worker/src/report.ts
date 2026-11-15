@@ -167,10 +167,10 @@ function toHtml(tiles: Line[], sections: Section[], warnings: string[], from: st
     h += `<table role="presentation" style="border-collapse:separate;border-spacing:0;width:100%;table-layout:fixed;margin:0 0 16px"><tr>`;
     tiles.forEach((t, i) => {
       const d = delta(t.value, t.prev);
-      h += `<td width="${w}%" style="width:${w}%;padding:0 ${i < tiles.length - 1 ? 8 : 0}px 0 0;vertical-align:top"><div style="background:#e2f1f4;border-radius:6px;padding:12px 14px">`
-        + `<div style="font-size:12px;color:#3d5560">${esc(t.label)}</div>`
-        + `<div style="font-size:28px;font-weight:700;line-height:1.2;color:#0b7285">${fmt(t.value)}</div>`
-        + `<div style="font-size:12px;color:#5a6b73">${esc(d || t.note || ' ')}</div></div></td>`;
+      h += `<td width="${w}%" style="width:${w}%;padding:0 ${i < tiles.length - 1 ? 5 : 0}px 0 0;vertical-align:top"><div style="background:#e2f1f4;border-radius:6px;padding:8px 8px">`
+        + `<div style="font-size:11px;color:#3d5560">${esc(t.label)}</div>`
+        + `<div style="font-size:20px;font-weight:700;line-height:1.2;white-space:nowrap;color:#0b7285">${fmt(t.value)}</div>`
+        + `<div style="font-size:11px;color:#5a6b73">${esc(d || t.note || ' ')}</div></div></td>`;
     });
     h += '</tr></table>';
   }

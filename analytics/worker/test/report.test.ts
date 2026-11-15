@@ -94,8 +94,8 @@ describe('buildReport', () => {
     const { sql, DB } = makeDb(); seed(sql);
     const r = await buildReport(envOf(DB), NOW);
     expect(r.html).toContain('Followers, Spotify + Apple');
-    expect(r.html).toMatch(/font-size:28px[^>]*>700</);
-    expect(r.html).toMatch(/font-size:28px[^>]*>2,973</);
+    expect(r.html).toMatch(/font-size:20px[^>]*>700</);
+    expect(r.html).toMatch(/font-size:20px[^>]*>2,973</);
     expect(r.html.match(/<colgroup>/g)).toHaveLength(5);
   });
   it('works on an empty database and does not count days without requests', async () => {
