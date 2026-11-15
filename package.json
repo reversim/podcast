@@ -29,6 +29,7 @@
     "p-limit": "^6.2.0",
     "pagefind": "^1.4.0",
     "sanitize-html": "^2.17.3",
+    "sharp": "^0.34.5",
     "yaml": "^2.6.0"
   },
   "overrides": {

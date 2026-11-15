@@ -61,6 +61,6 @@ legacy_path: /2015/10/279-digital-ocean
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
-<iframe allowfullscreen="" height="30" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" scrolling="no" src="//html5-player.libsyn.com/embed/episode/id/3950622/height/30/width/300/theme/standard-mini/direction/no/autoplay/no/autonext/no/thumbnail/no/preload/no/no_addthis/no/" style="border: none;" webkitallowfullscreen="" width="300"></iframe></div>
+</div>
 <div style="clear: both;"></div>
 </div>

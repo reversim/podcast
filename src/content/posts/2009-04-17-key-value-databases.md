@@ -39,6 +39,6 @@ legacy_path: /2009/04/17-key-value-databases
 <a href="http://m2.reversim.com/reversim17.mp3">הנה הקובץ</a><br>
 צ'או</div>
 <br>
-<iframe allowfullscreen="" height="30" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" scrolling="no" src="//html5-player.libsyn.com/embed/episode/id/4066016/height/30/width/400/theme/standard-mini/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/no-cache/true/" style="border: none;" webkitallowfullscreen="" width="400"></iframe></div>
+</div>
 <div style="clear: both;"></div>
 </div>

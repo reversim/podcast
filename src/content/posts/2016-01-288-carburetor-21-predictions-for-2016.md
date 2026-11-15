@@ -61,6 +61,6 @@ legacy_path: /2016/01/288-carburetor-21-predictions-for-2016
 <div>
 <span style="background-color: #fefdfa; color: black; font-family: Arial; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span></div>
 </div>
-<iframe allowfullscreen="" height="30" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" scrolling="no" src="//html5-player.libsyn.com/embed/episode/id/4048595/height/30/width/400/theme/standard-mini/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/no-cache/true/" style="border: none;" webkitallowfullscreen="" width="400"></iframe></div>
+</div>
 <div style="clear: both;"></div>
 </div>

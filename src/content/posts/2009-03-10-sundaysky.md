@@ -35,6 +35,6 @@ legacy_path: /2009/03/10-sundaysky
 תודה ליניב ותודה לכל מי שתומך ומגיב על הפוסטים.<br>
 הקובץ <a href="http://m2.reversim.com/reversim10.3.mp3">כאן</a></div>
 </div>
-<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/4065994/height/30/width/400/theme/standard-mini/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/no-cache/true/" height="30" width="400" scrolling="no" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe>
+
 <div style="clear: both;"></div>
 </div>

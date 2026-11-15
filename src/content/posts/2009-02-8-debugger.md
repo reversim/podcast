@@ -43,6 +43,6 @@ legacy_path: /2009/02/8-debugger
 הקובץ של הפרק הזה <a href="http://m2.reversim.com/reversim8.mp3">כאן</a><br>
 להשתמע.</div>
 <br></div>
-<iframe allowfullscreen="" height="30" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" scrolling="no" src="//html5-player.libsyn.com/embed/episode/id/4005454/height/30/width/400/theme/standard-mini/direction/no/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/" style="border: none;" webkitallowfullscreen="" width="400"></iframe></div>
+</div>
 <div style="clear: both;"></div>
 </div>

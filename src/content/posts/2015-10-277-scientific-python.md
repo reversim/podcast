@@ -112,6 +112,6 @@ legacy_path: /2015/10/277-scientific-python
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">תודה </span><a href="http://roishlomi.com/" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">לרועי שלומי</span></a><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 14.666666666666666px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> על התקציר של הפרק. ו</span>הקובץ נמצא <a href="http://m2.reversim.com/reversim277_scientific-python.mp3">כאן</a>, האזנה נעימה.</div>
 </div>
-<iframe allowfullscreen="" height="30" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" scrolling="no" src="//html5-player.libsyn.com/embed/episode/id/3950696/height/30/width/400/theme/standard-mini/direction/no/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/" style="border: none;" webkitallowfullscreen="" width="400"></iframe></div>
+</div>
 <div style="clear: both;"></div>
 </div>

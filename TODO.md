@@ -20,17 +20,15 @@ Last update: 2026-11-15.
 ## Audit findings (2026-11-15), not started
 
 Site defects:
-- Old episodes: 417 images without alt text, 378 iframes without a title, about 1,000 links without text. Lighthouse accessibility is 80 on old episodes and 94-96 on new pages.
 - 718 list pages (year, month, page N, about, episodes, archive) have the same generic description.
 - Home page: 1.6 MB, largest paint 5.0 s on mobile.
 
 Feed:
-- No per-episode image.
 - The feed is 12 MB.
-- The channel title is Hebrew only, so a search for "reversim" fails in Pocket Casts, Player FM, iHeart.
 
 Directories:
-- Not listed: YouTube Music, Amazon Music / Audible, Deezer, TuneIn, fyyd, gpodder. Probably not listed: Podchaser, Listen Notes.
+- Deezer: listed 2026-11-15 (`https://www.deezer.com/show/1003759371`). Amazon Music: Ran submitted 2026-11-15; add the show link to `src/lib/links.ts` when it is live.
+- Not listed: YouTube Music, TuneIn, fyyd, gpodder. Probably not listed: Podchaser, Listen Notes.
 - Podcast Republic is stale (stops at episode 513).
 
 Reach:
@@ -48,6 +46,10 @@ Reach:
 
 ## Done
 
+- Episode art (2026-11-15): the build makes a 1400x1400 JPEG for each episode with a local cover image (`/episode-art/<id>.jpg`: hero image on a card, blurred background, episode number, logo watermark). The feed has `itunes:image` on each of these episodes. No manual step: a new episode gets its art from `cover_image` at the next build.
+- Deezer link on the site; standard RSS `<image>` tag in the feed (2026-11-15).
+- Old episodes accessibility (2026-11-15): a build plugin (`src/lib/rehypeA11y.mjs`) gives each image without alt a generic alt from the post title, gives each iframe a title, and removes links with no content. 76 dead Libsyn player embeds are removed from the posts. Note: after a change to this plugin, delete `node_modules/.astro/data-store.json` before a local build (the content cache does not see plugin changes).
+- Feed title is now "רברס עם פלטפורמה (Reversim)" (2026-11-15).
 - Bare domain redirect (2026-11-15): the Cloudflare redirect rule "reversim.com to www.reversim.com" now covers all paths and keeps the query string. Before, only `/` had a redirect and other paths returned error 522.
 - Feed tags (2026-11-15): `atom:link rel=self`, `podcast:guid`, `podcast:locked`, `podcast:medium`, `itunes:type`, `podcast:person` (hosts and guests), `itunes:episodeType`. Subscribe button colours now pass WCAG AA contrast.
 - Agent access (2026-11-15): `/llms.txt`, `/llms-full.txt`, a `.md` copy of each episode, `Content-Signal` in `robots.txt`, `/.well-known/` files (MCP server card at two paths, `tdmrep.json`, `poppy.json`), MCP server card on the Worker, link to `/mcp.html` in the top navigation.

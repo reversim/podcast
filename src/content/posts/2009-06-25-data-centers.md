@@ -29,7 +29,7 @@ legacy_path: /2009/06/25-data-centers
 <br>
 <a href="http://m2.reversim.com/reversim25_dc.mp3">הקובץ נמצא כאן</a>. האזנה נעימה ושוב תודה לשי.<br>
 <br>
-<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/4066038/height/30/width/400/theme/standard-mini/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/no-cache/true/" height="30" width="400" scrolling="no" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe></div>
+</div>
 </div>
 <div style="clear: both;"></div>
 </div>

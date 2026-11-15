@@ -35,6 +35,6 @@ legacy_path: /2009/04/14-ruby-ob-rails
 חג פסח שמח - הקובץ <a href="http://m2.reversim.com/reversim14.mp3">כאן</a><br>
 <br></div>
 <br>
-<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/4066008/height/30/width/400/theme/standard-mini/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/no-cache/true/" height="30" width="400" scrolling="no" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe></div>
+</div>
 <div style="clear: both;"></div>
 </div>

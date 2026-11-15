@@ -50,6 +50,6 @@ legacy_path: /2009/12/47-scalability
 <div id="refHTML">
 </div>
 </div>
-<iframe allowfullscreen="" height="30" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" scrolling="no" src="//html5-player.libsyn.com/embed/episode/id/4258448/height/30/width/400/theme/standard-mini/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/no-cache/true/" style="border: none;" webkitallowfullscreen="" width="400"></iframe></div>
+</div>
 <div style="clear: both;"></div>
 </div>

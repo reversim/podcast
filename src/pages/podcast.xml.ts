@@ -6,10 +6,13 @@ import { formatDuration, parseChapters, xmlEscape } from '../lib/episode';
 import { getAudioMeta } from '../lib/audioMeta';
 import { getTranscript } from '../lib/transcripts';
 import { catalog } from '../lib/catalog';
+import { localCoverFile } from '../lib/episodeArt';
 
-// The address that the directories hold for this feed. podcast:guid is the UUIDv5 of this address without the scheme
-// (namespace ead4c236-bf58-58c6-a2c6-a6b28d128cb6, see the Podcasting 2.0 specification). Do not change it.
-const FEED_URL = 'https://www.reversim.com/podcast.xml';
+// The public address of the feed. It is a redirect to /podcast.xml, so the feed can move to another host
+// and the directories keep the same address.
+const FEED_URL = 'https://feed.reversim.com';
+// podcast:guid is the UUIDv5 of "www.reversim.com/podcast.xml" (namespace ead4c236-bf58-58c6-a2c6-a6b28d128cb6,
+// see the Podcasting 2.0 specification). It is permanent: do not change it, also if the feed address changes.
 const PODCAST_GUID = '148e4d86-db7c-535e-9265-130a55474cc2';
 const HOSTS = ['Ran Tavory', 'Ori Lahav'];
 
@@ -27,7 +30,8 @@ export async function GET(context: { site: URL }) {
 	const posts = (await getAllPosts()).filter((post) => post.data.audio_url);
 
 	return rss({
-		title: 'רברס עם פלטפורמה',
+		// The Latin name is in the title so that a search for "reversim" finds the show in the podcast apps.
+		title: 'רברס עם פלטפורמה (Reversim)',
 		description: 'פודקאסט על תוכנה, מוצר, ותשתיות — בעברית.',
 		site: import.meta.env.SITE,
 		trailingSlash: false,
@@ -45,6 +49,7 @@ export async function GET(context: { site: URL }) {
 			if (meta) extras.push(`<itunes:duration>${formatDuration(meta.seconds)}</itunes:duration>`);
 			if (post.data.episode) extras.push(`<itunes:episode>${post.data.episode}</itunes:episode>`);
 			extras.push('<itunes:episodeType>full</itunes:episodeType>');
+			if (localCoverFile(post.data.cover_image)) extras.push(`<itunes:image href="${site}/episode-art/${post.id}.jpg" />`);
 			for (const guest of catalog[post.id]?.guests ?? []) {
 				const name = guest.name_en || guest.name_he;
 				if (name) extras.push(`<podcast:person role="guest">${xmlEscape(name)}</podcast:person>`);
@@ -81,6 +86,7 @@ export async function GET(context: { site: URL }) {
 			</itunes:owner>
 			<itunes:explicit>false</itunes:explicit>
 			<itunes:image href="${import.meta.env.SITE}/podcast-cover.png" />
+			<image><url>${import.meta.env.SITE}/podcast-cover.png</url><title>רברס עם פלטפורמה (Reversim)</title><link>${import.meta.env.SITE}</link></image>
 			<itunes:category text="Technology" />
 		`,
 	});
