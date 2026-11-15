@@ -2,10 +2,11 @@
 import { getPostPermalink } from '../lib/posts';
 import type { PostEntry } from '../lib/posts';
 import { catalog } from '../lib/catalog';
+import { coverThumbUrl } from '../lib/episodeArt';
 
 const { post } = Astro.props as { post: PostEntry };
 const permalink = getPostPermalink(post);
-const coverImageUrl = post.data.cover_image;
+const coverImageUrl = coverThumbUrl(post.id, post.data.cover_image);
 const blurb = post.data.summary ?? catalog[post.id]?.hook;
 const dateLabel = post.data.date.toLocaleDateString('he-IL', {
 	year: 'numeric',

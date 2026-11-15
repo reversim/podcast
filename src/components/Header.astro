@@ -52,7 +52,7 @@ const enableSearch = import.meta.env.PROD;
 					if (q) ui.triggerSearch(q);
 				});
 			</script>
-			<script src={withBase('/pagefind/pagefind-ui.js')} is:inline />
+			<script src={withBase('/pagefind/pagefind-ui.js')} is:inline defer />
 		</>
 	)}
 	<SubscribeButtons />

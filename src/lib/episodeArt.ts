@@ -64,3 +64,21 @@ export async function episodeArt(coverFile: string, episode?: number): Promise<B
 		.jpeg({ quality: 82, mozjpeg: true })
 		.toBuffer();
 }
+
+export const THUMB_WIDTH = 640; // Cards are about 320 px wide. This is enough for screens with double density.
+
+/** True when the cover image can get a small WebP copy (a local raster image). */
+export function hasThumb(cover: string | undefined): boolean {
+	const file = localCoverFile(cover);
+	return !!file && !/\.svg$/i.test(file);
+}
+
+/** The address to show for a cover image in a list: the small copy when there is one, else the image. */
+export function coverThumbUrl(postId: string, cover: string | undefined): string | undefined {
+	return hasThumb(cover) ? `/thumbs/${postId}.webp` : cover;
+}
+
+/** A small WebP copy of a cover image. Never larger than the source. */
+export function coverThumb(coverFile: string): Promise<Buffer> {
+	return sharp(coverFile).resize({ width: THUMB_WIDTH, withoutEnlargement: true }).webp({ quality: 78 }).toBuffer();
+}

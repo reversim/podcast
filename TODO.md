@@ -16,20 +16,18 @@ Last update: 2026-11-15.
 ## Reminders with dates
 
 - 2026-11-16 or later: check that Apple Podcasts, Spotify and Deezer show the new episode art and the title "רברס עם פלטפורמה (Reversim)". On 2026-11-15 they still had the old data (they read the feed on their own schedule).
-- When Amazon Music approves the show: add the link to `src/lib/links.ts`.
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
 ## Audit findings (2026-11-15), not started
 
 Site defects:
 - 718 list pages (year, month, page N, about, episodes, archive) have the same generic description.
-- Home page: 1.6 MB, largest paint 5.0 s on mobile.
 
 Feed:
 - The feed is 12 MB.
 
 Directories:
-- Deezer: listed 2026-11-15 (`https://www.deezer.com/show/1003759371`). Amazon Music: Ran submitted 2026-11-15; add the show link to `src/lib/links.ts` when it is live.
+- Deezer: listed 2026-11-15 (`https://www.deezer.com/show/1003759371`). Amazon Music: listed 2026-11-15 (`https://music.amazon.com/podcasts/c8ba795c-011b-4aba-9438-c838216078c5`).
 - Not listed: YouTube Music, TuneIn, fyyd, gpodder. Probably not listed: Podchaser, Listen Notes.
 - Podcast Republic is stale (stops at episode 513).
 
@@ -48,6 +46,7 @@ Reach:
 
 ## Done
 
+- Home page load (2026-11-15): cards and the home hero use small WebP copies of the cover images (`/thumbs/<id>.webp`, made at build time), the font stylesheet does not block the first paint, the search script is deferred.
 - Episode art (2026-11-15): the build makes a 1400x1400 JPEG for each episode with a local cover image (`/episode-art/<id>.jpg`: hero image on a card, blurred background, episode number, logo watermark). The feed has `itunes:image` on each of these episodes. No manual step: a new episode gets its art from `cover_image` at the next build.
 - Deezer link on the site; standard RSS `<image>` tag in the feed (2026-11-15).
 - Old episodes accessibility (2026-11-15): a build plugin (`src/lib/rehypeA11y.mjs`) gives each image without alt a generic alt from the post title, gives each iframe a title, and removes links with no content. 76 dead Libsyn player embeds are removed from the posts. Note: after a change to this plugin, delete `node_modules/.astro/data-store.json` before a local build (the content cache does not see plugin changes).
