@@ -15,7 +15,7 @@ Last update: 2026-11-14.
 |---|------|------------|
 ## Reminders with dates
 
-- The API token `reversim-setup` (Zone Edit + Zone WAF Edit, no expiration) is in `.env`. Delete it in the Cloudflare dashboard when no more WAF changes are necessary.
+- The API token `reversim-setup` in `.env` expires on 2026-11-14 at 21:59:59 UTC. After that, remove the line `CLOUDFLARE_API_TOKEN` from `.env`. A new WAF change needs a new token.
 - 2026-11-15: check that the first automatic weekly stats email arrived.
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
