@@ -224,23 +224,23 @@ img {
 }
 
 .subscribe-spotify {
-	color: #15883e;
+	color: #117536; /* dark enough for WCAG AA contrast (4.5:1) on the strip background */
 }
 
 .subscribe-apple {
-	color: #a332f4;
+	color: #9a25ee; /* dark enough for WCAG AA contrast (4.5:1) on the strip background */
 }
 
 .subscribe-overcast {
-	color: #fc7b2a;
+	color: #b9500a; /* dark enough for WCAG AA contrast (4.5:1) on the strip background */
 }
 
 .subscribe-pocketcasts {
-	color: #f43f5e;
+	color: #d11a3d; /* dark enough for WCAG AA contrast (4.5:1) on the strip background */
 }
 
 .subscribe-antennapod {
-	color: #3b82f6;
+	color: #2563eb;
 }
 
 .subscribe-app {

@@ -7,7 +7,6 @@ Last update: 2026-11-15.
 
 | # | Item | Status |
 |---|------|--------|
-| D2 | Bare domain defect: `reversim.com/<path>` returns error 522 (only `/` redirects). Needs a Cloudflare redirect rule: Ran makes it in the dashboard, or gives a new API token with "Single Redirect: Edit". | Found 2026-11-15. Blocked: the token expired. |
 | D3 | Which items from the 2026-11-15 distribution audit to do (see "Audit findings"). | Waiting for Ran. |
 
 ## Tasks for Claude (after the decisions)
@@ -22,12 +21,11 @@ Last update: 2026-11-15.
 
 Site defects:
 - Old episodes: 417 images without alt text, 378 iframes without a title, about 1,000 links without text. Lighthouse accessibility is 80 on old episodes and 94-96 on new pages.
-- Spotify subscribe button: colour contrast is too low (all pages).
 - 718 list pages (year, month, page N, about, episodes, archive) have the same generic description.
 - Home page: 1.6 MB, largest paint 5.0 s on mobile.
 
 Feed:
-- No `atom:link rel=self`, `podcast:guid`, `podcast:locked`, `itunes:type`, `podcast:person`, sub-category, per-episode image.
+- No per-episode image.
 - The feed is 12 MB.
 - The channel title is Hebrew only, so a search for "reversim" fails in Pocket Casts, Player FM, iHeart.
 
@@ -50,6 +48,8 @@ Reach:
 
 ## Done
 
+- Bare domain redirect (2026-11-15): the Cloudflare redirect rule "reversim.com to www.reversim.com" now covers all paths and keeps the query string. Before, only `/` had a redirect and other paths returned error 522.
+- Feed tags (2026-11-15): `atom:link rel=self`, `podcast:guid`, `podcast:locked`, `podcast:medium`, `itunes:type`, `podcast:person` (hosts and guests), `itunes:episodeType`. Subscribe button colours now pass WCAG AA contrast.
 - Agent access (2026-11-15): `/llms.txt`, `/llms-full.txt`, a `.md` copy of each episode, `Content-Signal` in `robots.txt`, `/.well-known/` files (MCP server card at two paths, `tdmrep.json`, `poppy.json`), MCP server card on the Worker, link to `/mcp.html` in the top navigation.
 - Broken links corrected (2026-11-15): 491 image references in 457 old posts, 15 old Blogger search links (the site search now reads `?q=`), 9 Summit year links.
 - Weekly stats email arrived (2026-11-15). The top number tiles are smaller for mobile.
