@@ -28,7 +28,7 @@ Go user group (very helpful):<br>
 <a href="https://groups.google.com/forum/#!forum/golang-nuts">https://groups.google.com/forum/#!forum/golang-nuts</a><br>
 <br>
 Selenium: <a href="http://seleniumhq.org/">http://seleniumhq.org/</a><br>
-Selenum Go Driver: <a href="https://bitbucket.org/tebeka/selenium">https://bitbucket.org/tebeka/selenium</a> ;)<br>
+Selenum Go Driver: <a href="https://web.archive.org/web/20140619133143/https://bitbucket.org/tebeka/selenium">https://bitbucket.org/tebeka/selenium</a> ;)<br>
 SauceLabs: <a href="http://saucelabs.com/">http://saucelabs.com</a><br>
 <br>
 About Me: <a href="http://web.mikitebeka.com/">http://web.mikitebeka.com/</a><br>

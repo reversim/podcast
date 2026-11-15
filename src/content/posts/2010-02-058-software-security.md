@@ -20,6 +20,6 @@ legacy_path: /2010/02/058-software-security
 <div dir="rtl" style="text-align: right;">הקובץ נמצא <a href="http://m.reversim.com/reversim58_sec.mp3">כאן</a></div><div dir="rtl" style="text-align: right;">האזנה נעימה<br>
 קישורים:<br>
 <a href="http://www.appsec.co.il/">http://www.appsec.co.il/ </a><br>
-<a href="http://www.applicationsecurity.co.il/">http://www.applicationsecurity.co.il/</a></div></div>
+<a href="https://web.archive.org/web/20100410132236/http://www.applicationsecurity.co.il/">http://www.applicationsecurity.co.il/</a></div></div>
 <div style="clear: both;"></div>
 </div>

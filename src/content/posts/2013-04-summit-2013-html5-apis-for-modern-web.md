@@ -22,6 +22,6 @@ Modern web apps are rich and interactive applications. This talk will cover new 
 * Some powerful tips on Chrome DevTools<br>
 * Tools for building cutting edge APIs using Google App Engine power.<br>
 <br>
-<a href="http://ido-green.appspot.com/html5-cle-devcon/index.html">Presentation</a></div>
+<a href="https://web.archive.org/web/20130315035708/http://ido-green.appspot.com/html5-cle-devcon/index.html">Presentation</a></div>
 <div style="clear: both;"></div>
 </div>

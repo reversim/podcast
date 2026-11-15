@@ -35,7 +35,7 @@ legacy_path: /2016/06/304-reversim-summit-2016
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">
-אם תרצו לעיין בשנים עברו אז יש את <a href="http://summit2013.reversim.com/">2013</a>, <a href="http://summit2014.reversim.com/">2014</a> ו <a href="http://summit2015.reversim.com/">2015</a></div>
+אם תרצו לעיין בשנים עברו אז יש את <a href="https://web.archive.org/web/20121211205903/http://summit2013.reversim.com/">2013</a>, <a href="https://web.archive.org/web/20131014080906/http://summit2014.reversim.com/">2014</a> ו <a href="https://web.archive.org/web/20150207025101/http://summit2015.reversim.com/">2015</a></div>
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">

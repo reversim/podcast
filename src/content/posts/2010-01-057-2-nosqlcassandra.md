@@ -17,7 +17,7 @@ legacy_path: /2010/01/057-2-nosqlcassandra
 <li>ה- Data Model של Cassandra (תשכחו את מה שאתם יודעים על בסיסי נתונים)</li>
 <li>איך מדברים עם Cassandra ופרוטוקול&nbsp;<a href="http://incubator.apache.org/thrift/" target="_blank">Thrift</a></li>
 <li>קצת Cassandra internals, על&nbsp;<a href="http://en.wikipedia.org/wiki/Gossip_protocol" target="_blank">Gossip</a>,&nbsp;<a href="http://en.wikipedia.org/wiki/Consistent_hashing" target="_blank">Consistence hashing</a>&nbsp;ו-&nbsp;<a href="http://en.wikipedia.org/wiki/Bloom_filter" target="_blank">Bloom filter</a></li>
-</ul>חומר נוסף מתוך הבלוג של רן:&nbsp;<a href="http://prettyprint.me/2010/01/09/introduction-to-nosql-and-cassandra-part-1/" target="_blank">חלק ראשון (רקע תיאורטי)</a>,&nbsp;<a href="http://prettyprint.me/2010/01/20/introduction-to-nosql-and-cassandra-part-2/" target="_blank">חלק שני (Cassandra)</a></div><br>
+</ul>חומר נוסף מתוך הבלוג של רן:&nbsp;<a href="https://web.archive.org/web/20100123030424/http://prettyprint.me/2010/01/09/introduction-to-nosql-and-cassandra-part-1/" target="_blank">חלק ראשון (רקע תיאורטי)</a>,&nbsp;<a href="https://web.archive.org/web/20100125030013/http://prettyprint.me/2010/01/20/introduction-to-nosql-and-cassandra-part-2/" target="_blank">חלק שני (Cassandra)</a></div><br>
 <div dir="rtl" style="text-align: right;"><br>
 </div><div dir="rtl" style="text-align: right;">הקובץ נמצא <a href="http://m.reversim.com/reversim57_nosql2.mp3">כאן</a></div><div dir="rtl" style="text-align: right;">האזנה נעימה ותודה ל<a href="http://twitter.com/guymeron">גיא</a> על התקצור</div></div>
 <div style="clear: both;"></div>

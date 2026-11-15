@@ -62,7 +62,7 @@ References:<br>
 <li><a href="https://www.youtube.com/watch?v=jJ-IwnnjBy0">https://www.youtube.com/watch?v=jJ-IwnnjBy0</a></li>
 <li>Related talk: <a href="http://www.slideshare.net/imryki/handson-deep-learning-in-python">Imry Kissos deep learning in python</a></li>
 <li><a href="https://research.facebook.com/publications/480567225376225/deepface-closing-the-gap-to-human-level-performance-in-face-verification/">https://research.facebook.com/publications/480567225376225/deepface-closing-the-gap-to-human-level-performance-in-face-verification/</a></li>
-<li><a href="http://www.thetalkingmachines.com/blog/2015/6/4/the-economic-impact-of-machine-learning-and-using-the-kernel-trick-to-dig-in-to-big-data">http://www.thetalkingmachines.com/blog/2015/6/4/the-economic-impact-of-machine-learning-and-using-the-kernel-trick-to-dig-in-to-big-data</a></li>
+<li><a href="https://web.archive.org/web/20160311190944/http://www.thetalkingmachines.com/blog/2015/6/4/the-economic-impact-of-machine-learning-and-using-the-kernel-trick-to-dig-in-to-big-data">http://www.thetalkingmachines.com/blog/2015/6/4/the-economic-impact-of-machine-learning-and-using-the-kernel-trick-to-dig-in-to-big-data</a></li>
 <li><a href="http://www.wired.com/2009/09/how-the-netflix-prize-was-won/">http://www.wired.com/2009/09/how-the-netflix-prize-was-won/</a></li>
 </ul>
 </div>

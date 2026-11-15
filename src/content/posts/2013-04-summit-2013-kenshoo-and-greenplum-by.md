@@ -26,6 +26,6 @@ and most importantly.... why go anyways?<br>
 <br>
 In this talk I will describe the experience we had with scaling our click tracking system using a no-sql solution (cassandra) and consoloditing our reporting data using GreenPlum DWH.<br>
 <br>
-<a href="https://googledrive.com/host/0B0r5lGCXKZbAaWgxSXRzeDNDTFU/index.html">Presentation</a></div>
+Presentation</div>
 <div style="clear: both;"></div>
 </div>

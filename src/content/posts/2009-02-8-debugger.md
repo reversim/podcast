@@ -39,7 +39,7 @@ legacy_path: /2009/02/8-debugger
 גלשנו בזמן כי היה לנו מאוד מעניין - אז קבלו את התנצלותנו על כך.<br>
 ועוד התנצלות - אנחנו מאוד משתדלים לדבר בעברית תקנית אבל חוטאים בזה לעיתים קרובות ומשרבבים יותר מדי מילים באנגלית. נשתדל להמעיט.<br>
 <br>
-תודה על התגובות - ותודה <a href="http://www.arikfr.com/wpheb/">לאריק</a> על <a href="http://www.arikfr.com/wpheb/hebrew-developers-podcast.html">הפוסט</a>.<br>
+תודה על התגובות - ותודה <a href="https://web.archive.org/web/20130512005543/http://www.arikfr.com/wpheb/">לאריק</a> על <a href="https://web.archive.org/web/20090430150445/http://www.arikfr.com/wpheb/hebrew-developers-podcast.html">הפוסט</a>.<br>
 הקובץ של הפרק הזה <a href="http://m2.reversim.com/reversim8.mp3">כאן</a><br>
 להשתמע.</div>
 <br></div>

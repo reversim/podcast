@@ -66,7 +66,7 @@ legacy_path: /2012/05/138-final-class-18-past-present-future
 <span style="vertical-align: baseline; white-space: pre-wrap;">XML כבר יצא מכל החורים - תנו לנו defaults וקונפיגורציה בתוך הקוד ואנחנו מרוצים.</span></div>
 </li>
 <li style="font-family: Arial; font-size: 15px; font-weight: normal; list-style-type: disc; vertical-align: baseline;"><div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
-<a href="http://www.springsource.org/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">Spring</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">. </span><a href="//www.youtube.com/watch?v=32uR2-qktxE"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">עוד לא תמו צרותינו</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">.</span></div>
+<a href="https://web.archive.org/web/20120520013244/http://www.springsource.org/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">Spring</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">. </span><a href="//www.youtube.com/watch?v=32uR2-qktxE"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">עוד לא תמו צרותינו</span></a><span style="vertical-align: baseline; white-space: pre-wrap;">.</span></div>
 </li>
 <li style="font-family: Arial; font-size: 15px; font-weight: normal; list-style-type: disc; vertical-align: baseline;"><div dir="rtl" style="margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="vertical-align: baseline; white-space: pre-wrap;">האם שינוי משמעותי בכלי הפיתוח בשנים הקרובות יגרור שינויים משמעותיים בתרבות הארגונית של חברות ? </span></div>

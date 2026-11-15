@@ -22,7 +22,7 @@ legacy_path: /2009/12/47-scalability
 <br></div>
 <ul dir="rtl" style="text-align: right;">
 <li>ישי הציג את עצמו ומה הוא עושה.</li>
-<li>ישי סיפר את סיפורה של החברה שבה עו עובד - <a href="http://www.kaching.com/">KaChing</a></li>
+<li>ישי סיפר את סיפורה של החברה שבה עו עובד - <a href="https://web.archive.org/web/20091027042151/http://www.kaching.com/">KaChing</a></li>
 <li>למה בכלל צריך Scalability? למה להשקיע בזה? מתי כדאי להשקיע בזה?</li>
 <li>איך ומתי נתקלים בקירות.</li>
 <li>מדרגות המחיר של "גידול לגובה".</li>
@@ -35,7 +35,7 @@ legacy_path: /2009/12/47-scalability
 <li>למה reliability ו- scalability הולכים ביחד?</li>
 <li>"אני נורמאלי להיות נורמאלי?" (בחסות מאיר אריאל)</li>
 <li>פיספסתי עדכון של נתון אחת למליון... אז מה קרה???</li>
-<li>רן הזכיר מאמר של <a href="http://bret.appspot.com/entry/how-friendfeed-uses-mysql">FriendFeed</a>.</li>
+<li>רן הזכיר מאמר של <a href="https://web.archive.org/web/20100106070832/http://bret.appspot.com/entry/how-friendfeed-uses-mysql">FriendFeed</a>.</li>
 </ul>
 <div dir="rtl" style="text-align: right;">
 ניסינו לפרסם את ה-WAVE אבל לא ממש אפשר אז אם מישהו רוצה להצטרף אליו תשאירו לנו הערה כאן.</div>

@@ -29,13 +29,13 @@ legacy_path: /2014/10/234-fogcast-14-my-bug
 <ul>
 <li>Related presentation&nbsp;<a href="https://speakerdeck.com/rantav/dropwizard">https://speakerdeck.com/rantav/dropwizard</a></li>
 <li>Related meetup group&nbsp;<a href="http://www.meetup.com/JavaIL/events/209047222/">http://www.meetup.com/JavaIL/events/209047222/</a></li>
-<li>The bug report&nbsp;<a href="https://java.net/jira/browse/JERSEY-2683">https://java.net/jira/browse/JERSEY-2683</a></li>
-<li>And a related bug report&nbsp;<a href="https://java.net/jira/browse/JERSEY-2684">https://java.net/jira/browse/JERSEY-2684</a></li>
+<li>The bug report&nbsp;<a href="https://web.archive.org/web/20160801070012/https://java.net/jira/browse/JERSEY-2683">https://java.net/jira/browse/JERSEY-2683</a></li>
+<li>And a related bug report&nbsp;<a href="https://web.archive.org/web/20160801070049/https://java.net/jira/browse/JERSEY-2684">https://java.net/jira/browse/JERSEY-2684</a></li>
 </ul>
 Picks:<br>
 <div>
 <ul>
-<li>Lior:&nbsp;<a href="http://bootsnipp.com/">http://bootsnipp.com/</a></li>
+<li>Lior:&nbsp;<a href="https://web.archive.org/web/20141024060723/http://bootsnipp.com/">http://bootsnipp.com/</a></li>
 <li>Anti-pick by Lior: <a href="http://ionicframework.com/">http://ionicframework.com/</a>&nbsp;</li>
 </ul>
 <div dir="rtl">

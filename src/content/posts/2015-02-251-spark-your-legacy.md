@@ -13,7 +13,7 @@ legacy_path: /2015/02/251-spark-your-legacy
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">
 <span style="background-color: transparent; color: black; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">כנס רברסים בפתח - הרשימה כבר מלאה - 11,12 במרץ בטכניון בחיפה.</span></div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="//4.bp.blogspot.com/-QvFll2LCJWQ/VO-RstN0MFI/AAAAAAABgHI/q7-HOrnMM74/s1600/spark-logo.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="106" src="//4.bp.blogspot.com/-QvFll2LCJWQ/VO-RstN0MFI/AAAAAAABgHI/q7-HOrnMM74/s1600/spark-logo.png" width="200"></a></div>
+<img border="0" height="106" src="//4.bp.blogspot.com/-QvFll2LCJWQ/VO-RstN0MFI/AAAAAAABgHI/q7-HOrnMM74/s1600/spark-logo.png" width="200"></div>
 <div dir="rtl" style="text-align: right;">
 <b id="docs-internal-guid-5fadc833-c7cf-9986-a7be-2861f40dd4ef" style="font-weight: normal;"><br></b></div>
 <div dir="rtl" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: right;">

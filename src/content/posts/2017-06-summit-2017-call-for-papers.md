@@ -20,7 +20,7 @@ legacy_path: /2017/06/summit-2017-call-for-papers
 <div dir="rtl" style="text-align: right;">
 </div>
 <ul dir="rtl" style="text-align: right;">
-<li>תגישו&nbsp;<a href="https://summit2017.reversim.com/submit">https://summit2017.reversim.com/submit</a></li>
+<li>תגישו&nbsp;https://summit2017.reversim.com/submit</li>
 <li>אם יש שאלות:&nbsp;<a href="mailto:rs17team@googlegroups.com">rs17team@googlegroups.com</a></li>
 </ul>
 <div dir="rtl" style="text-align: right;">

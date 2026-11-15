@@ -16,7 +16,7 @@ legacy_path: /2011/10/111-html5-with-ido-green
 <li>ChromeOS קצת, למרות שאנחנו מתכננים עוד הרבה יותר מזה בעתיד</li>
 </ul><div style="text-align: right;">הנה מספר לינקים מהנושאים הרבים שעליהם דיברנו</div><div><br>
 <br>
-</div><div dir="ltr" style="text-align: left;"><a href="http://pipes.yahoo.com/">http://pipes.yahoo.com/</a></div><a href="http://touch.facebook.com/">http://touch.facebook.com/</a><br>
+</div><div dir="ltr" style="text-align: left;"><a href="https://web.archive.org/web/20090304163246/http://pipes.yahoo.com/">http://pipes.yahoo.com/</a></div><a href="http://touch.facebook.com/">http://touch.facebook.com/</a><br>
 <a href="http://www.modernizr.com/">http://www.modernizr.com/</a><br>
 <a href="http://caniuse.com/">http://caniuse.com/</a><br>
 <a href="https://chrome.google.com/webstore/detail/gbchcmhmhahfdphkhkmpfmihenigjmpp">https://chrome.google.com/webstore/detail/gbchcmhmhahfdphkhkmpfmihenigjmpp</a><br>

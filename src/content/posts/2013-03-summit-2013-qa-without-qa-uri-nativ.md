@@ -22,7 +22,7 @@ legacy_path: /2013/03/summit-2013-qa-without-qa-uri-nativ
 <div class="separator" style="clear: both; text-align: center;">
 <br></div>
 <h2>
-<a href="http://summit2013.reversim.com/#/sessions/QA without QA">QA without QA</a></h2>
+<a href="https://web.archive.org/web/20130501210707/http://summit2013.reversim.com/#/sessions/QA without QA">QA without QA</a></h2>
 <br>
 I believe that the best way to improve the quality of your software is not to have a QA organization. It's not about not testing, on the contrary, it is about treating quality as a mindset, a way of working and a good set of tools. Not as a process or a gatekeeper. I'll talk about fixing bugs before writing new features, BDD, TDD, Unit tests, CI, CD, testing in production, the value of fast tests and more. I'll talk about tools and the methodology we use and the challenges we're facing with our no-QA approach. <br>
 <br>

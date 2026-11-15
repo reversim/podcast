@@ -12,7 +12,7 @@ legacy_path: /2015/04/summit-2015-magneto-taking-our
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="ltr" style="text-align: left;" trbidi="on">
-Committing to Continuous Delivery at <a href="http://everything.me/">EverythingMe</a> meant that we had step our game up when it comes to version quality visibility.<br>
+Committing to Continuous Delivery at <a href="https://web.archive.org/web/20140717005057/http://everything.me/">EverythingMe</a> meant that we had step our game up when it comes to version quality visibility.<br>
 <br>
 Our existing solution simply didn't cut it, so we created MAGNETO - "Command your Droids - an open source Android Test Automation framework focusing on speed, ease and visibility.<br>
 <br>

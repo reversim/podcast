@@ -72,7 +72,7 @@ legacy_path: /2013/03/169-carburetor-6-opsworks
 <span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><span style="vertical-align: baseline; white-space: pre-wrap;">מפתח יכול לחזור ולעשות את אותה טעות פעם אחר פעם, תוכנה שטועה פעם אחת, תתוקן, ולא תחזור עליה שוב.</span></span></div>
 </li>
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">
-<span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><a href="http://gigaom.com/2013/02/16/devops-complexity-and-anti-fragility-in-it-context-and-composition/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">שירותים מבוססי הקשר או הרכבה</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> (ירושה לעומת אנקפסולציה). </span></span></div>
+<span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><a href="https://web.archive.org/web/20130315112347/http://gigaom.com/2013/02/16/devops-complexity-and-anti-fragility-in-it-context-and-composition/"><span style="color: #1155cc; vertical-align: baseline; white-space: pre-wrap;">שירותים מבוססי הקשר או הרכבה</span></a><span style="vertical-align: baseline; white-space: pre-wrap;"> (ירושה לעומת אנקפסולציה). </span></span></div>
 </li>
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">
 <span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><span style="vertical-align: baseline; white-space: pre-wrap;">שירותים מבוססי הקשר (e.g Heroku) &nbsp;תוחמים אותך מצד אחד אך נותנים בוסט אדיר מבחינת פרודקטיביות.</span></span></div>
@@ -86,7 +86,7 @@ legacy_path: /2013/03/169-carburetor-6-opsworks
 <li style="font-family: Arial; font-size: 15px; list-style-type: disc; vertical-align: baseline;"><div style="margin-bottom: 0pt; margin-top: 0pt;">
 <span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><span style="vertical-align: baseline; white-space: pre-wrap;">שלוש משרות פתוחות, מי שמעוניין שיצור קשר עם אורי, נתי, רן או רון</span></span></div>
 <div style="margin-bottom: 0pt; margin-top: 0pt;">
-<span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><span style="white-space: pre-wrap;">המשרה של פיפל (רון) <a href="https://pipl.com/jobs/full_stack_web_engineer/">בקישור הבא</a></span></span></div>
+<span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><span style="white-space: pre-wrap;">המשרה של פיפל (רון) <a href="https://web.archive.org/web/20200825195023/https://pipl.com/jobs/full_stack_web_engineer/">בקישור הבא</a></span></span></div>
 <div style="margin-bottom: 0pt; margin-top: 0pt;">
 <span id="internal-source-marker_0.8423844831995666" style="font-weight: normal; text-align: start;"><span style="vertical-align: baseline; white-space: pre-wrap;"><br></span></span></div>
 <div>

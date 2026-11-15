@@ -13,7 +13,7 @@ legacy_path: /2015/05/summit-2015-accord-sane-validation
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <br>
 <br>
-Accord is a validation library written in and for Scala. Compared to <a href="http://jcp.org/en/jsr/detail?id=303">JSR 303</a> and <a href="https://github.com/scalaz/scalaz/blob/scalaz-seven/core/src/main/scala/scalaz/Validation.scala">Scalaz validation</a> it aims to provide the following:<br>
+Accord is a validation library written in and for Scala. Compared to <a href="http://jcp.org/en/jsr/detail?id=303">JSR 303</a> and Scalaz validation it aims to provide the following:<br>
 <ul style="text-align: left;">
 <li>Composable: Because JSR 303 is annotation based, validation rules cannot be composed (annotations cannot receive other annotations as parameters). This is a real problem with some Scala features, for example Options or collections. Accord's validation rules are trivially composable.</li>
 <li>Simple: Accord provides a dead-simple story for validation rule definition by leveraging macros, as well as the validation call site (see example below).</li>

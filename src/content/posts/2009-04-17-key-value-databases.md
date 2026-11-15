@@ -26,10 +26,10 @@ legacy_path: /2009/04/17-key-value-databases
 <li>למי הם טובים ולמי לא.</li>
 <li>ארוע מכונן - פירסום ה BigTable של גוגל.</li>
 <li>דיברנו על בסיסי נתונים בענן: <a href="http://aws.amazon.com/simpledb/">Amazon SimpleDB</a>, Google AppEngine, <a href="http://www.microsoft.com/azure/data.mspx">Microsoft Azure</a></li>
-<li>דיברנו על בסיסי נתונים למסמכים: <a href="http://hadoop.apache.org/hbase/">Hbase</a>, <a href="http://couchdb.apache.org/">CouchDB</a>, <a href="http://code.google.com/p/thrudb/">ThruDB</a>,<a href="http://project-voldemort.com/">Voldermort</a></li>
+<li>דיברנו על בסיסי נתונים למסמכים: <a href="https://web.archive.org/web/20090422065719/http://hadoop.apache.org/hbase/">Hbase</a>, <a href="http://couchdb.apache.org/">CouchDB</a>, <a href="http://code.google.com/p/thrudb/">ThruDB</a>,<a href="https://web.archive.org/web/20090227171724/http://project-voldemort.com/">Voldermort</a></li>
 <li>קצת על השפות שעוטפות קבצים שמאוכסנים ב- <a href="http://hadoop.apache.org/">Hadoop</a></li>
 <li>בסיסי הנתונים שהם בתוך התהליכים: <a href="http://www.oracle.com/technology/products/berkeley-db/index.html">BerkeleyDB</a>, <a href="http://www.sqlite.org/">SQLite</a></li>
-<li> <a href="http://memcachedb.org/">memcacheDB</a></li>
+<li> <a href="https://web.archive.org/web/20090420153719/http://memcachedb.org/">memcacheDB</a></li>
 <li>מה הם האתגרים שגרמו להתפתחות בסיסי הנתונים האלו.</li>
 <li>דיברנו קצת על ביזור הנתונים (Sharding).</li>
 <li>איפה אפשר לקרוא על בעיות ביזור נתונים: <a href="http://www.oreillynet.com/databases/blog/2006/04/database_war_stories.html">DB-war stories</a>, <a href="http://highscalability.com/">HighScalability blog</a></li>

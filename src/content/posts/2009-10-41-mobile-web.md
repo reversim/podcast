@@ -14,12 +14,12 @@ legacy_path: /2009/10/41-mobile-web
 <a href="/images/blogger/d0d8f89dd16ea20657af.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5397614579802828402" src="/images/blogger/445f5ebd047472b65d84.jpg" style="cursor: hand; cursor: pointer; float: left; height: 377px; margin: 0 10px 10px 0; width: 400px;"></a><br>
 <div dir="rtl" style="text-align: right;">
 <br>
-האורחים של רן הפעם (ללא אורי) היו <a href="http://bmobi.net/">איתן בהיר</a> ו<a href="http://ww3.co.il/">ניל</a> הזכור לנו מ<a href="http://www.reversim.com/2009/08/34.html">פרק 34 על נגישות אתרים</a> הנושא הפעם היה הווב של מכשירים ניידים, mobile web, כדוגמת טלפונים.<br>
+האורחים של רן הפעם (ללא אורי) היו <a href="https://web.archive.org/web/20090921135728/http://bmobi.net/">איתן בהיר</a> ו<a href="https://web.archive.org/web/20211027200908/http://ww3.co.il/">ניל</a> הזכור לנו מ<a href="http://www.reversim.com/2009/08/34.html">פרק 34 על נגישות אתרים</a> הנושא הפעם היה הווב של מכשירים ניידים, mobile web, כדוגמת טלפונים.<br>
 את הפרק חילקנו לשניים כי יצא ארוך, אז החלק הראשון מתמקד בצד העסקי והחלק השני בצד ההנדסי.<br>
 <br>
 להלן הנקודות החשובות..<br>
 <br>
-- איתן הציג את עצמו והחברה שלו <a href="http://bmobi.net/">http://bmobi.net</a><br>
+- איתן הציג את עצמו והחברה שלו <a href="https://web.archive.org/web/20090921135728/http://bmobi.net/">http://bmobi.net</a><br>
 - אני שאלתי שאלת טיזיג על iPhone<br>
 - הפוטנציאל של טלפונים ניידים והאתגרים העסקיים<br>
 - השוק עוד לא מוכן... מי גולש בטלפון יותר מהמחשב?<br>

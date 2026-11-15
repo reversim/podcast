@@ -8,7 +8,7 @@ legacy_path: /2011/04/098-ruby-with-reuven-lerner
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;">התקבצנו לשיחה אביבית במשרד של אורי באאוטבריין כדי לדבר עם <a href="http://www.lerner.co.il/">ראובן לרנר</a> בעיקר על <a href="http://ruby-lang.org/">רובי</a> וגם קצת על שפות דינמיות אחרות.</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>היכרות עם רובי והפיצ'רים הבולטים כמו closures, מנגנון שליחת ההודעות, כל דבר הוא אובייקט ועוד. כאן אפשר <a href="http://tryruby.org/">לנסות אותם אונליין</a></li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;">התקבצנו לשיחה אביבית במשרד של אורי באאוטבריין כדי לדבר עם <a href="http://www.lerner.co.il/">ראובן לרנר</a> בעיקר על <a href="http://ruby-lang.org/">רובי</a> וגם קצת על שפות דינמיות אחרות.</div><div dir="rtl" style="text-align: right;"></div><ul dir="rtl" style="text-align: right;"><li>היכרות עם רובי והפיצ'רים הבולטים כמו closures, מנגנון שליחת ההודעות, כל דבר הוא אובייקט ועוד. כאן אפשר <a href="https://web.archive.org/web/20110408200905/http://tryruby.org/">לנסות אותם אונליין</a></li>
 <li>ידעתם שב MIT למדו Lisp (בזמן שבטכניון למדו c)? היום לומדים שם python</li>
 <li>מצב שוק העבודה ברובי (צריך. והרבה)</li>
 <li>גם קצת על פייתון והשוואה על קצה המזלג בין <a href="http://rubyonrails.org/">ריילס</a> ל<a href="http://www.djangoproject.com/">דג'אנגו</a></li>
@@ -21,7 +21,7 @@ legacy_path: /2011/04/098-ruby-with-reuven-lerner
 <br>
 The israel.rb e-mail list, for Israelis interested in Ruby, is at <a href="http://groups.google.com/group/israelrb">http://groups.google.com/group/israelrb</a>.  Rubyists of all levels are welcome to participate.<br>
 <br>
-If you're into podcasts -- and anyone listening to our podcast presumably is -- then you can check out Ruby5 (<a href="http://ruby5.envylabs.com/">http://ruby5.envylabs.com/</a>) and the Ruby Show (<a href="http://rubyshow.com/">http://rubyshow.com/</a>), both of which are excellent (and entertaining) sources of information about Ruby.<br>
+If you're into podcasts -- and anyone listening to our podcast presumably is -- then you can check out Ruby5 (<a href="https://web.archive.org/web/20110430172709/http://ruby5.envylabs.com/">http://ruby5.envylabs.com/</a>) and the Ruby Show (<a href="https://web.archive.org/web/20110418091552/http://rubyshow.com/">http://rubyshow.com/</a>), both of which are excellent (and entertaining) sources of information about Ruby.<br>
 <br>
 Finally, one of my favorite talks about dynamic languages is from Steve Yegge, from Google.  I highly recommend his talk, <a href="http://steve-yegge.blogspot.com/2008/05/dynamic-languages-strike-back.html">http://steve-yegge.blogspot.com/2008/05/dynamic-languages-strike-back.html</a>.  He doesn't talk specifically about Ruby, but he does explain why people are all ga-ga about such languages nowadays, and how we can make them even better.</div></div>
 <div style="clear: both;"></div>

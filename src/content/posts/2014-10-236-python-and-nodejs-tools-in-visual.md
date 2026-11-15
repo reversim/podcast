@@ -17,7 +17,7 @@ legacy_path: /2014/10/236-python-and-nodejs-tools-in-visual
 <div dir="rtl" style="text-align: right;">
 <br></div>
 <div dir="rtl" style="text-align: right;">
-VS הוא סביבת פיתוח אינטגרטיבית (IDE) ולכן הוא מספק תכונות כמו יכולת ניפוי שגיאות (<a href="http://nodejstools.codeplex.com/wikipage?title=NodeJSOnLinuxOnAzure">debug</a>), השלמה אינטיליגנטית (<a href="http://nodejstools.codeplex.com/wikipage?title=Editor">Intellisense</a>), <a href="http://nodejstools.codeplex.com/wikipage?title=TestExplorer">בדיקות יחידה</a>, <a href="http://nodejstools.codeplex.com/wikipage?title=Profiling">פרופיילינג</a> ועוד.&nbsp;</div>
+VS הוא סביבת פיתוח אינטגרטיבית (IDE) ולכן הוא מספק תכונות כמו יכולת ניפוי שגיאות (<a href="https://web.archive.org/web/20140920193901/http://nodejstools.codeplex.com/wikipage?title=NodeJSOnLinuxOnAzure">debug</a>), השלמה אינטיליגנטית (<a href="https://web.archive.org/web/20141006204527/http://nodejstools.codeplex.com/wikipage?title=Editor">Intellisense</a>), <a href="https://web.archive.org/web/20141006215626/http://nodejstools.codeplex.com/wikipage?title=TestExplorer">בדיקות יחידה</a>, <a href="https://web.archive.org/web/20141006204538/http://nodejstools.codeplex.com/wikipage?title=Profiling">פרופיילינג</a> ועוד.&nbsp;</div>
 <div dir="rtl" style="text-align: right;">
 הגירסה החינמית מכסה את רוב התכונות הנדרשות.</div>
 <div dir="rtl" style="text-align: right;">
@@ -43,21 +43,21 @@ VS הוא סביבת פיתוח אינטגרטיבית (IDE) ולכן הוא מ�
 <br>
 <br>
 <ul style="text-align: left;">
-<li>Visual Studio as editor - <a href="http://nodejstools.codeplex.com/wikipage?title=Editor">IntelliSence</a></li>
-<li><a href="http://nodejstools.codeplex.com/wikipage?title=TestExplorer">Unit Test integration</a> - allow to see unit and run them using VS testing tools</li>
+<li>Visual Studio as editor - <a href="https://web.archive.org/web/20141006204527/http://nodejstools.codeplex.com/wikipage?title=Editor">IntelliSence</a></li>
+<li><a href="https://web.archive.org/web/20141006215626/http://nodejstools.codeplex.com/wikipage?title=TestExplorer">Unit Test integration</a> - allow to see unit and run them using VS testing tools</li>
 <li>Debug - breakpoint and watch</li>
-<li><a href="http://nodejstools.codeplex.com/wikipage?title=Npm">NPM UI</a> - see references tree</li>
-<li><a href="http://nodejstools.codeplex.com/wikipage?title=Profiling">Profiling</a> - take advantage of V8 profiling API and VS reporting tools</li>
-<li><a href="http://nodejstools.codeplex.com/wikipage?title=NodeJSOnLinuxOnAzure">Remote debug node</a> instance on another machine</li>
+<li><a href="https://web.archive.org/web/20150324065543/http://nodejstools.codeplex.com/wikipage?title=Npm">NPM UI</a> - see references tree</li>
+<li><a href="https://web.archive.org/web/20141006204538/http://nodejstools.codeplex.com/wikipage?title=Profiling">Profiling</a> - take advantage of V8 profiling API and VS reporting tools</li>
+<li><a href="https://web.archive.org/web/20140920193901/http://nodejstools.codeplex.com/wikipage?title=NodeJSOnLinuxOnAzure">Remote debug node</a> instance on another machine</li>
 <li><a href="http://www.typescriptlang.org/">TypeScript</a> and JavaScript</li>
-<li>Support for difference <a href="http://pytools.codeplex.com/wikipage?title=Python%20Environments">Python environments</a> such as CPython, Jython and IronPython.</li>
-<li><a href="http://pytools.codeplex.com/wikipage?title=Features%20Editor#intellisense">IntelliSence</a> - even double underscore are completed</li>
-<li><a href="http://pytools.codeplex.com/wikipage?title=Features%20Refactoring">Refactoring</a> - rename, exact method, add import, remove unused imports</li>
-<li><a href="http://pytools.codeplex.com/wikipage?title=Features%20Interactive%20REPL">Interactive REPL</a> - REPL inside VS</li>
-<li><a href="http://pytools.codeplex.com/wikipage?title=Features%20Debugging#basic-debugging">Debugging</a> - breakpoints with conditions, stepping, inspecting values, stop on exceptions, you can debug standalone files without project</li>
-<li><a href="http://pytools.codeplex.com/wikipage?title=Features%20Profiling">Profiling</a> - available for CPython</li>
-<li><a href="http://pytools.codeplex.com/wikipage?title=Features%20Projects">Support for project types</a> - basic, Django, Azure projects</li>
-<li><a href="http://pytools.codeplex.com/wikipage?title=Unit%20Tests">Unit Test</a> - uses unittest pacakge, see them in Test Explorer, debug tests</li>
+<li>Support for difference <a href="https://web.archive.org/web/20141028011749/http://pytools.codeplex.com/wikipage?title=Python%20Environments">Python environments</a> such as CPython, Jython and IronPython.</li>
+<li><a href="https://web.archive.org/web/20141027180935/http://pytools.codeplex.com/wikipage?title=Features%20Editor#intellisense">IntelliSence</a> - even double underscore are completed</li>
+<li><a href="https://web.archive.org/web/20141123093246/http://pytools.codeplex.com/wikipage?title=Features%20Refactoring">Refactoring</a> - rename, exact method, add import, remove unused imports</li>
+<li><a href="https://web.archive.org/web/20141126005433/http://pytools.codeplex.com/wikipage?title=Features%20Interactive%20REPL">Interactive REPL</a> - REPL inside VS</li>
+<li><a href="https://web.archive.org/web/20141123093219/http://pytools.codeplex.com/wikipage?title=Features%20Debugging#basic-debugging">Debugging</a> - breakpoints with conditions, stepping, inspecting values, stop on exceptions, you can debug standalone files without project</li>
+<li><a href="https://web.archive.org/web/20141015043210/http://pytools.codeplex.com/wikipage?title=Features%20Profiling">Profiling</a> - available for CPython</li>
+<li><a href="https://web.archive.org/web/20140923092944/http://pytools.codeplex.com/wikipage?title=Features%20Projects">Support for project types</a> - basic, Django, Azure projects</li>
+<li><a href="https://web.archive.org/web/20140901004603/http://pytools.codeplex.com/wikipage?title=Unit%20Tests">Unit Test</a> - uses unittest pacakge, see them in Test Explorer, debug tests</li>
 </ul>
 </div>
 <div style="clear: both;"></div>

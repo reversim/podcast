@@ -46,6 +46,7 @@ Reach:
 
 ## Done
 
+- Dead external links in old show notes (2026-11-15): 1,331 links now point to a Wayback Machine copy near the episode date, 6 images too. 151 links with no archived copy were removed (the text stays). 376 posts changed. Not changed: 41 twitter.com links (cannot be checked), about 80 links where two clients disagree, 17 links with a failed archive lookup or Libsyn audio.
 - Home page load (2026-11-15): cards and the home hero use small WebP copies of the cover images (`/thumbs/<id>.webp`, made at build time), the font stylesheet does not block the first paint, the search script is deferred.
 - Episode art (2026-11-15): the build makes a 1400x1400 JPEG for each episode with a local cover image (`/episode-art/<id>.jpg`: hero image on a card, blurred background, episode number, logo watermark). The feed has `itunes:image` on each of these episodes. No manual step: a new episode gets its art from `cover_image` at the next build.
 - Deezer link on the site; standard RSS `<image>` tag in the feed (2026-11-15).

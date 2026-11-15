@@ -9,15 +9,15 @@ legacy_path: /2011/02/092-continuous-deployment-at-outbrain
 ---
 
 <div class="post-body">
-<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/4dba8989d0cdde0e83b8.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="126" src="/images/blogger/893c2c5bbe33b56c086f.png" width="200"></a></div><div dir="rtl" style="text-align: right;">ממשיכים להקליט שיחות סולו ולעבוד על הזוגיות, פרק זה הוא המשך ל<a href="http://www.reversim.com/2010/08/075-continuous-deployment.html" target="_blank">פרק 75 - Continuous Deployment</a>&nbsp;שהוקלט עם&nbsp;<a href="http://www.eishay.com/" target="_blank">ישי סמית</a></div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>רן תיקצר את הפודקאסט עם ישי ואורי המליץ על&nbsp;<a href="http://devopscafe.org/" target="_blank">devopscafe.org</a></li>
+<div dir="ltr" style="text-align: left;" trbidi="on"><div dir="rtl" style="text-align: right;"></div><div class="separator" style="clear: both; text-align: center;"><a href="/images/blogger/4dba8989d0cdde0e83b8.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="126" src="/images/blogger/893c2c5bbe33b56c086f.png" width="200"></a></div><div dir="rtl" style="text-align: right;">ממשיכים להקליט שיחות סולו ולעבוד על הזוגיות, פרק זה הוא המשך ל<a href="http://www.reversim.com/2010/08/075-continuous-deployment.html" target="_blank">פרק 75 - Continuous Deployment</a>&nbsp;שהוקלט עם&nbsp;<a href="https://web.archive.org/web/20090409235553/http://www.eishay.com/" target="_blank">ישי סמית</a></div><div dir="rtl" style="text-align: right;"><ul style="text-align: right;"><li>רן תיקצר את הפודקאסט עם ישי ואורי המליץ על&nbsp;<a href="http://devopscafe.org/" target="_blank">devopscafe.org</a></li>
 <li>"צינור של פיצ'רים ולא דלי של פיצ'רים" (<a href="http://en.wikipedia.org/wiki/Kent_Beck" target="_blank">קנט בק</a>)</li>
 <li>בעיות נפוצות, מה קורה כשמגיעים לדד ליין אבל הפיצ'רים לא מספיק יציבים</li>
 <li>היום שבו צוות הבדיקות (QA) הפך מצוואר בקבוק לגוף מסייע</li>
-<li>אוטומציה באמצעות&nbsp;<a href="https://github.com/linkedin/glu/wiki/Overview" target="_blank">GLU</a>&nbsp;לנהול גירסאות המוצר בשרתים</li>
+<li>אוטומציה באמצעות&nbsp;GLU&nbsp;לנהול גירסאות המוצר בשרתים</li>
 <li>חם מהתנור: chef ובניית "ספר מתכונים" לפי סוג המכונה</li>
 <li>Servicization/Componentization ניהול המוצר בחלקים קטנים בכדי לאפשר הפצה לשרתים בחבילות קטנות</li>
 <li>להעצים את המפתח - השינוי התרבותי בהעברת הארגון ל- Continuous Deployment</li>
-<li>הסברים נוספים ותרשימים מופיעים ב<a href="http://prettyprint.me/2011/01/24/continuous-deployment-at-outbrain/" target="_blank">בלוג של רן</a></li>
+<li>הסברים נוספים ותרשימים מופיעים ב<a href="https://web.archive.org/web/20110227180243/http://prettyprint.me/2011/01/24/continuous-deployment-at-outbrain/" target="_blank">בלוג של רן</a></li>
 </ul></div><br>
 <div dir="rtl" style="text-align: right;">הקובץ נמצא <a href="http://m.reversim.com/reversim92_outbrain_cd.mp3">כאן</a> האזנה נעימה</div><div dir="rtl" style="text-align: right;"><br>
 </div><div dir="rtl" style="text-align: right;">... ושוב תודה ל<a href="http://twitter.com/guymeron">גיא</a> שעושה עבודתו נאמנה בתיקצור הפרקים</div></div>

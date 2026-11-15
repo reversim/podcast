@@ -21,7 +21,7 @@ The project core uses Ember.js - the leading front end framework for building la
 The example dashboard uses Twitter's streaming data and includes maps, charts, and drill-down features - using Ember's components ("roughly equivalent to an E restricted, transcluded, isolate-scoped directive in Angular").<br>
 <br>
 Don't forget to star and fork one for your own!<br>
-<a href="https://ember-admin-dashboards.herokuapp.com/">https://ember-admin-dashboards.herokuapp.com/</a><br>
+<a href="https://web.archive.org/web/20211205171707/https://ember-admin-dashboards.herokuapp.com/">https://ember-admin-dashboards.herokuapp.com/</a><br>
 <br></div>
 <iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/lNk-Kz_WqdY?rel=0&amp;showinfo=0" width="560"></iframe><br>
 <br>

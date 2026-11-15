@@ -13,9 +13,9 @@ legacy_path: /2009/04/14-ruby-ob-rails
 <div class="post-body">
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div dir="rtl" style="text-align: right;">
-היום אירחנו את <a href="http://blog.astrails.com/">ויטלי ובוריס</a> <a href="http://astrails.com/">מחברת אסטריילס</a>.<br>
+היום אירחנו את <a href="https://web.archive.org/web/20090303152822/http://blog.astrails.com/">ויטלי ובוריס</a> <a href="http://astrails.com/">מחברת אסטריילס</a>.<br>
 <ul>
-<li>פתחנו בהכרזה על <a href="http://jobs.reversim.com/Home">לוח המשרות</a> החדש שפתחנו השבוע! - תודה ענקית לאדם מתן שעוזר לנו עם זה.</li>
+<li>פתחנו בהכרזה על <a href="https://web.archive.org/web/20090415072523/http://jobs.reversim.com/Home">לוח המשרות</a> החדש שפתחנו השבוע! - תודה ענקית לאדם מתן שעוזר לנו עם זה.</li>
 <li>בוריס סיפר קצת על רובי ומאיפה נולדה.</li>
 <li>למה רובי דומה ובמה היא מיוחדת.</li>
 <li>ריילס - מה היא ואיך היא נולדה. עוד אחד הדברים הטובים של <a href="http://www.37signals.com/">37signals</a></li>

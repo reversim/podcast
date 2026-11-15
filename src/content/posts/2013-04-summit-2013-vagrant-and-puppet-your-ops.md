@@ -48,7 +48,7 @@ In this talk we would cover:</div>
 <div style="text-align: left;">
 <br></div>
 <div style="text-align: left;">
-<a href="http://narkisr.github.com/vagrant-sketching-board/index.html#/">Presentation</a></div>
+<a href="https://web.archive.org/web/20130223011930/http://narkisr.github.com/vagrant-sketching-board/index.html#/">Presentation</a></div>
 </div>
 <div style="clear: both;"></div>
 </div>

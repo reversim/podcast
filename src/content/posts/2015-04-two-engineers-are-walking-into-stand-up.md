@@ -14,7 +14,7 @@ I equally love computer engineering and stand-up comedy. So in this lecture I'm 
 <div>
 <br></div>
 <div>
-<a href="http://summit2015.reversim.com/proposal/oRQqYRHnWpe5qWhoD">http://summit2015.reversim.com/proposal/oRQqYRHnWpe5qWhoD</a></div>
+<a href="https://web.archive.org/web/20150326023804/http://summit2015.reversim.com/proposal/oRQqYRHnWpe5qWhoD">http://summit2015.reversim.com/proposal/oRQqYRHnWpe5qWhoD</a></div>
 <div>
 <br>
 <div class="separator" style="clear: both; text-align: center;">
