@@ -59,4 +59,15 @@ const tools = [
 			תמלולים מלאים זמינים מפרק 512 והלאה.
 		</p>
 	</section>
+	<section class="start-topic">
+		<h2 class="section-title">גישה לסוכנים בלי MCP</h2>
+		<p>האתר נגיש גם לסוכני AI שקוראים דפים רגילים:</p>
+		<ul>
+			<li><a href="/llms.txt"><code>/llms.txt</code></a> — נקודת הכניסה: מה יש באתר ואיפה.</li>
+			<li><a href="/llms-full.txt"><code>/llms-full.txt</code></a> — כל הפרקים, שורה לכל פרק.</li>
+			<li>לכל פרק יש עותק Markdown: מחליפים <code>.html</code> ב-<code>.md</code> בכתובת הפרק.</li>
+			<li><a href="/episodes.json"><code>/episodes.json</code></a> — רשימת הפרקים כ-JSON.</li>
+			<li><a href="/.well-known/mcp/server-card.json"><code>/.well-known/mcp/server-card.json</code></a> — תיאור שרת ה-MCP לגילוי אוטומטי.</li>
+		</ul>
+	</section>
 </BaseLayout>

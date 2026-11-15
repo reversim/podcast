@@ -41,6 +41,8 @@ const gaId = import.meta.env.PUBLIC_GA_ID ?? 'G-Y4CQKFBQGR';
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@reversim" />
 		<link rel="alternate" type="application/rss+xml" title="רברס עם פלטפורמה" href="https://feed.reversim.com" />
+		<link rel="alternate" type="text/plain" title="llms.txt" href={withBase('/llms.txt')} />
+		<link rel="mcp" title="MCP server" href="https://mcp.reversim.com/mcp" />
 		<slot name="head" />
 		<link rel="icon" href={withBase('/favicon.ico')} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />

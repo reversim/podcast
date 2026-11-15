@@ -1,0 +1,53 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
+  "name": "com.reversim/podcast",
+  "title": "Reversim Podcast archive (רברס עם פלטפורמה)",
+  "version": "1.0.0",
+  "description": "Search the episodes and transcripts of the Hebrew software engineering podcast Reversim (since 2009). Read-only, free, no login.",
+  "websiteUrl": "https://www.reversim.com/mcp.html",
+  "serverInfo": {
+    "name": "reversim-podcast",
+    "title": "רברס עם פלטפורמה — ארכיון הפרקים",
+    "version": "1.0.0"
+  },
+  "protocolVersion": "2025-06-18",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://mcp.reversim.com/mcp"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.reversim.com/mcp"
+    }
+  ],
+  "authentication": {
+    "required": false,
+    "schemes": []
+  },
+  "capabilities": {
+    "tools": {}
+  },
+  "tools": [
+    {
+      "name": "search_episodes",
+      "description": "Search the episodes of the Hebrew tech podcast \"רברס עם פלטפורמה\" (Reversim, since 2009) by title, guest, company and show notes. Query in Hebrew or English. Returns episode ids, titles, dates, guests and a one-line summary."
+    },
+    {
+      "name": "search_transcripts",
+      "description": "Search inside what was said in the episodes (full transcripts, Hebrew with English technical terms). Returns passages of about one minute with the episode, the time, and a link that plays from that time. Not all old episodes have a transcript."
+    },
+    {
+      "name": "get_episode",
+      "description": "Get one episode: title, date, guests, companies, topics, links and the full show notes. Use an episode id from a search, or the episode number."
+    },
+    {
+      "name": "get_transcript",
+      "description": "Get the transcript of one episode, or a part of it by time. A full transcript is long (about 10,000 words for an hour); ask for a time range when you can."
+    },
+    {
+      "name": "list_recent_episodes",
+      "description": "List the newest episodes, newest first."
+    }
+  ]
+}

@@ -1,4 +1,12 @@
+# Reversim Podcast (רברס עם פלטפורמה) — https://www.reversim.com
+# AI agents: start at https://www.reversim.com/llms.txt
+# Each episode page has a Markdown copy: replace ".html" with ".md".
+# MCP server (search of episodes and transcripts): https://mcp.reversim.com/mcp
+
 User-agent: *
+# Content Signals (https://contentsignals.org): search, AI answers and AI training are all permitted.
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
 Disallow: /admin/
 
 Sitemap: https://www.reversim.com/sitemap.xml

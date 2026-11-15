@@ -1,0 +1,16 @@
+{
+  "protocol_version": "1.0",
+  "organization": {
+    "name": "Reversim Podcast (רברס עם פלטפורמה)",
+    "domain": "www.reversim.com",
+    "logo_uri": "https://www.reversim.com/podcast-cover.png"
+  },
+  "apis": [
+    {
+      "type": "mcp",
+      "url": "https://mcp.reversim.com/mcp",
+      "description": "Search the episodes and transcripts of the Hebrew software engineering podcast Reversim. Read-only, no sign-in."
+    }
+  ],
+  "web": {}
+}

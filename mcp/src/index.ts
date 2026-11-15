@@ -247,9 +247,28 @@ async function logHits(request: Request, env: Env, keys: string[]): Promise<void
 const CORS = {
 	'access-control-allow-origin': '*',
 	'access-control-allow-methods': 'POST, GET, OPTIONS',
-	'access-control-allow-headers': 'content-type, accept, mcp-protocol-version, mcp-session-id, authorization',
+	'access-control-allow-headers': 'content-type, accept, mcp-protocol-version, mcp-session-id, authorization, poppy-session',
 };
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', ...CORS } });
+
+/** The MCP server card: what a client needs to know before it connects. */
+export function serverCard(origin: string, site: string) {
+	return {
+		$schema: 'https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json',
+		name: 'com.reversim/podcast',
+		title: 'Reversim Podcast archive (רברס עם פלטפורמה)',
+		version: SERVER.version,
+		description: 'Search the episodes and transcripts of the Hebrew software engineering podcast Reversim (since 2009). Read-only, free, no login.',
+		websiteUrl: `${site.replace(/\/$/, '')}/mcp.html`,
+		serverInfo: SERVER,
+		protocolVersion: PROTOCOL,
+		transport: { type: 'streamable-http', endpoint: `${origin}/mcp` },
+		remotes: [{ type: 'streamable-http', url: `${origin}/mcp` }],
+		authentication: { required: false, schemes: [] },
+		capabilities: { tools: {} },
+		tools: TOOLS.map((t) => ({ name: t.name, description: t.description })),
+	};
+}
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
@@ -260,6 +279,10 @@ export default {
 				`Reversim podcast MCP server.\nEndpoint: ${url.origin}/mcp (Streamable HTTP).\nTools: ${TOOLS.map((t) => t.name).join(', ')}.\nSite: ${env.SITE}\n`,
 				{ headers: { 'content-type': 'text/plain; charset=utf-8', ...CORS } },
 			);
+		}
+		// Discovery document for MCP clients. The path is not yet a final standard, so the two common paths get the same card.
+		if (request.method === 'GET' && (url.pathname === '/.well-known/mcp/server-card.json' || url.pathname === '/.well-known/mcp.json')) {
+			return json(serverCard(url.origin, env.SITE));
 		}
 		if (url.pathname !== '/mcp') return json({ error: 'not found' }, 404);
 		// This server has no server-to-client stream and no sessions.

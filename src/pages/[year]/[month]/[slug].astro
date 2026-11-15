@@ -93,6 +93,7 @@ const breadcrumbs = {
 	image={post.data.cover_image}
 	ogType="article"
 >
+	<link slot="head" rel="alternate" type="text/markdown" title="Markdown" href={permalink.replace(/\.html$/, '.md')} />
 	{post.data.audio_url && <meta slot="head" property="og:audio" content={post.data.audio_url} />}
 	{jsonLd && <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}
 	<script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbs).replace(/</g, '\\u003c')} />
