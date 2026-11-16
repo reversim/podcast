@@ -44,6 +44,7 @@ Reach:
 
 ## Done
 
+- Deezer fan count (2026-11-16): the analytics Worker stores the public fan count each day as `('deezer', 'followers')` (`analytics/worker/src/deezer.ts`). Deezer has no API for stream counts.
 - Amazon Music numbers (2026-11-16): the analytics Worker pulls starts, plays, listeners and followers each day from the internal API of podcasters.amazon.com (`analytics/worker/src/amazon.ts`, secret `AMAZON_COOKIE`, README section "Amazon Music"). The dashboard shows them in the platform section.
 - Feed size (2026-11-16): the podcast feed is 3.1 MB (was 12 MB). Show notes in the feed stop at 4,000 characters (the Apple limit) with a link to the full notes; 227 episodes changed. All 824 episodes stay in the feed. `rss.xml` (42 MB) and `atom.xml` (35 MB) are the blog feeds and are not changed.
 - Dead external links in old show notes (2026-11-15): 1,331 links now point to a Wayback Machine copy near the episode date, 6 images too. 151 links with no archived copy were removed (the text stays). 376 posts changed. Not changed: 41 twitter.com links (cannot be checked), about 80 links where two clients disagree, 17 links with a failed archive lookup or Libsyn audio.

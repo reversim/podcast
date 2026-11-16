@@ -6,6 +6,7 @@ import { refreshIfStale, rollup } from './rollup';
 import { buildStats } from './stats';
 import { handleSpotifyRefresh, runDailySpotify } from './spotify';
 import { handleAmazonRefresh, runDailyAmazon } from './amazon';
+import { runDailyDeezer } from './deezer';
 import { handleReportSend, runWeeklyReport } from './report';
 import type { Env } from './env';
 
@@ -42,6 +43,7 @@ export default {
     ctx.waitUntil(runDailySpotify(env, event.scheduledTime).catch((e) => console.error('spotify job failed', e)));
     // Amazon Music numbers. Own waitUntil for the same reason. runDailyAmazon never throws.
     ctx.waitUntil(runDailyAmazon(env, event.scheduledTime).catch((e) => console.error('amazon job failed', e)));
+    ctx.waitUntil(runDailyDeezer(env, event.scheduledTime).catch((e) => console.error('deezer job failed', e)));
     // Weekly email. Own waitUntil for the same reason. runWeeklyReport never throws.
     ctx.waitUntil(runWeeklyReport(env, event.scheduledTime).catch((e) => console.error('weekly report failed', e)));
   },

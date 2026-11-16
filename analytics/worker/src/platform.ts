@@ -2,7 +2,7 @@
 import { addDays, utcDay } from './lib';
 import type { Env } from './env';
 
-export const PLATFORMS = ['apple', 'spotify', 'youtube', 'amazon', 'other'] as const;
+export const PLATFORMS = ['apple', 'spotify', 'youtube', 'amazon', 'deezer', 'other'] as const;
 export const MAX_ROWS = 5000;
 export const MAX_BYTES = 512 * 1024;
 export const CHUNK = 50;

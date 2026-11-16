@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS ref_daily (
 -- Numbers imported by hand from Apple Podcasts Connect, Spotify for Creators and similar consoles.
 -- One value per (platform, metric, day). A new import of the same key replaces the old value.
 CREATE TABLE IF NOT EXISTS platform_stats (
-  platform TEXT NOT NULL,     -- apple | spotify | youtube | amazon | other
+  platform TEXT NOT NULL,     -- apple | spotify | youtube | amazon | deezer | other
   metric TEXT NOT NULL,       -- e.g. followers, listeners, streams
   day TEXT NOT NULL,          -- YYYY-MM-DD
   value REAL NOT NULL,

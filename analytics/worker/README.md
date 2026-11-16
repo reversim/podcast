@@ -157,3 +157,7 @@ How it works:
 - `POST /api/amazon/refresh` (same Origin rule as `/api/platform`) runs it now.
 - Not known: how long the cookies stay valid, and whether `followsTotals.total` is the full follower count (the show had 0 followers when this was written). Episode numbers are not fetched.
 - Turn it off: `npx wrangler secret delete AMAZON_COOKIE`. Stored numbers stay.
+
+## Deezer (automatic, daily)
+
+`src/deezer.ts` reads the fan count of the show from the public Deezer API (`https://api.deezer.com/podcast/<id>`, no login). It stores it as `('deezer', 'followers', today)` in `platform_stats`, once per UTC day from 05:00. Configuration: `DEEZER_SHOW_ID` in `[vars]`. Deezer has no API for stream counts. An error is in `meta.deezer_last_error`.

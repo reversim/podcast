@@ -1264,9 +1264,9 @@ function renderAll() {
 }
 
 /* ---------- Apple and Spotify (hand-imported numbers) ---------- */
-var PLATS = ['apple', 'spotify', 'youtube', 'amazon', 'other'];
-var PLAT_LABEL = { apple: 'Apple Podcasts', spotify: 'Spotify', youtube: 'YouTube', amazon: 'Amazon', other: 'Other' };
-var PLAT_COLOR = { spotify: 2, apple: 6, youtube: 7, amazon: 3, other: 0 };
+var PLATS = ['apple', 'spotify', 'youtube', 'amazon', 'deezer', 'other'];
+var PLAT_LABEL = { apple: 'Apple Podcasts', spotify: 'Spotify', youtube: 'YouTube', amazon: 'Amazon', deezer: 'Deezer', other: 'Other' };
+var PLAT_COLOR = { spotify: 2, apple: 6, youtube: 7, amazon: 3, deezer: 5, other: 0 };
 var ps = { metric: null, confirm: null, csv: null, map: {} };
 var metricLabel = function (m) { return str(m).replace(/_/g, ' '); };
 var platLabel = function (p) { return PLAT_LABEL[p] || p; };
