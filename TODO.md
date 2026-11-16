@@ -15,7 +15,7 @@ Last update: 2026-11-15.
 |---|------|------------|
 ## Reminders with dates
 
-- YouTube: the podcast playlist is `https://www.youtube.com/playlist?list=PLGEjVtVqTmNs` (in the Summit channel). It had 0 episodes on 2026-11-16. When it has episodes: add the link to the site (`src/lib/links.ts`, footer, `sameAs`) and remove "YouTube Music" from the not-listed directories.
+- YouTube numbers: waiting for `YOUTUBE_API_KEY` in `.env` (YouTube Data API v3 key). Then: a daily job in the analytics Worker that stores the total views of the playlist videos.
 - Amazon Music numbers: the first values are 0 (listed 2026-11-15). When real numbers come, check that `followers` is the full count and that the cookies still work (lifetime not known).
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
@@ -23,7 +23,8 @@ Last update: 2026-11-15.
 
 Directories:
 - Deezer: listed 2026-11-15 (`https://www.deezer.com/show/1003759371`). Amazon Music: listed 2026-11-15 (`https://music.amazon.com/podcasts/c8ba795c-011b-4aba-9438-c838216078c5`).
-- Not listed: YouTube Music, TuneIn, fyyd, gpodder. Probably not listed: Podchaser, Listen Notes.
+- General directories: Ran said "that's enough" on 2026-11-16 (no TuneIn, fyyd, gpodder, Podchaser, Listen Notes). YouTube: listed 2026-11-16 (`https://www.youtube.com/playlist?list=PLGEjVtVqTmNs`, 59 episodes, in the Summit channel).
+- Israeli directories (checked 2026-11-16). Listed: podcastim.org.il, israeltips.net, webmaster.org.il (links to `http://www.reversim.com/`), pod-il.co.il. Not listed: פודקאסט.ישראל (the site with the Hebrew domain), `lirantal/awesome-opensource-israel` on GitHub (section Podcasts), the Geektime article of company podcasts. Ran decides which to request.
 - Podcast Republic is stale (stops at episode 513).
 
 Reach:
@@ -41,6 +42,7 @@ Reach:
 
 ## Done
 
+- YouTube link (2026-11-16): the playlist is in `SHOW_LINKS.youtube`, the footer and `sameAs`.
 - List page descriptions (2026-11-16): year, month and "page N" pages get a description with the count and the first titles (`listDescription` in `src/lib/episode.ts`); about, archive and episodes have their own text. No built page has the generic description.
 - Deezer fan count (2026-11-16): the analytics Worker stores the public fan count each day as `('deezer', 'followers')` (`analytics/worker/src/deezer.ts`). Deezer has no API for stream counts.
 - Amazon Music numbers (2026-11-16): the analytics Worker pulls starts, plays, listeners and followers each day from the internal API of podcasters.amazon.com (`analytics/worker/src/amazon.ts`, secret `AMAZON_COOKIE`, README section "Amazon Music"). The dashboard shows them in the platform section.
