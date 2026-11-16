@@ -99,6 +99,11 @@ export async function buildReport(env: Env, now = Date.now()): Promise<Report> {
     if (m.get('spotify_last_error')) warnings.push('Spotify job error: ' + m.get('spotify_last_error')!.slice(0, 200));
     else if (!Number.isFinite(ok) || now - ok > 3 * 86400000) warnings.push('The Spotify job did not succeed in the last 3 days. The cookies are possibly expired.');
   }
+  if (env.AMAZON_PODCAST_ID && env.AMAZON_COOKIE) {
+    const ok = Date.parse(m.get('amazon_last_ok') ?? '');
+    if (m.get('amazon_last_error')) warnings.push('Amazon job error: ' + m.get('amazon_last_error')!.slice(0, 200));
+    else if (!Number.isFinite(ok) || now - ok > 3 * 86400000) warnings.push('The Amazon job did not succeed in the last 3 days. The cookies are possibly expired.');
+  }
   if (apF && Date.parse(to) - Date.parse(apF.day) > 35 * 86400000) warnings.push(`The Apple numbers are from ${apF.day}. Add new numbers on the dashboard.`);
 
   const sections: Section[] = [

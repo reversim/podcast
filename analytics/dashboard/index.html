@@ -174,7 +174,7 @@ footer.dq b { color: var(--ink); font-weight: 600; }
 #tbl-sp th:nth-child(-n+2), #tbl-sp td:nth-child(-n+2) { text-align: left; }
 #tbl-sp thead th:nth-child(n+3) button { justify-content: flex-end; }
 #tbl-sp td.ttl { max-width: 420px; overflow: hidden; text-overflow: ellipsis; }
-#sp-warn { margin: 0 0 8px; }
+#sp-warn, #amz-warn { margin: 0 0 8px; }
 </style>
 </head>
 <body>
@@ -296,6 +296,8 @@ footer.dq b { color: var(--ink); font-weight: 600; }
       <div class="chart sm"><canvas id="c-ps" role="img" aria-label="Line chart of the selected metric over time, one line per platform"></canvas></div>
       <details class="tv"><summary>View as table</summary><div id="tv-ps"></div><p class="status" id="ps-tv-status" role="status"></p></details>
     </div>
+    <p class="count ps-note" id="amz-line" hidden></p>
+    <p class="banner" id="amz-warn" role="alert" hidden></p>
     <div id="sp-block" style="margin-top:16px" hidden>
       <div class="tools" style="justify-content:space-between;margin-bottom:8px"><h3 style="margin:0">Spotify episodes</h3><button type="button" class="btn" id="sp-refresh">Refresh from Spotify now</button></div>
       <p class="count ps-note" id="sp-line"></p>
@@ -732,6 +734,8 @@ function norm(raw, N) {
     return { platform: str(r.platform), metric: str(r.metric), day: str(r.day).slice(0, 10), value: num(r.value), prev_day: validDay(r.prev_day) ? str(r.prev_day).slice(0, 10) : null, prev_value: r.prev_value == null ? null : num(r.prev_value) };
   }) : deriveLatest(D.psSeries);
   var sp = raw.spotify;
+  var amz = raw.amazon;
+  D.amz = { configured: !!(amz && amz.configured), lastOk: str(amz && amz.last_ok), lastError: str(amz && amz.last_error) };
   D.sp = { present: !!(sp && typeof sp === 'object'), configured: !!(sp && sp.configured), lastOk: str(sp && sp.last_ok), lastError: str(sp && sp.last_error),
     episodes: arr(sp && sp.episodes).filter(function (e) { return e && str(e.id); }).map(function (e) {
       return { id: str(e.id), name: str(e.name), published: validDay(e.published) ? str(e.published).slice(0, 10) : '', starts: e.starts == null ? null : num(e.starts), streams: e.streams == null ? null : num(e.streams), listeners: e.listeners == null ? null : num(e.listeners) };
@@ -1256,7 +1260,7 @@ function renderHeader(D) {
 
 function renderAll() {
   var D = state.D;
-  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderMcp(D); renderPS(D); renderSP(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
+  renderHeader(D); renderKpis(D); renderDaily(D); renderEpisodes(D); renderPlatforms(D); renderAudience(D); renderSubs(D); renderMcp(D); renderPS(D); renderAmz(D); renderSP(D); renderWeb(D); renderGeo(D); renderBack(D); renderQuality(D);
 }
 
 /* ---------- Apple and Spotify (hand-imported numbers) ---------- */
@@ -1350,6 +1354,13 @@ function spRows(D) {
     if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
     return (x < y ? -1 : x > y ? 1 : 0) * dir;
   });
+}
+function renderAmz(D) {
+  var line = $('#amz-line'), warn = $('#amz-warn'), a = D.amz;
+  line.hidden = !a.configured; warn.hidden = !(a.configured && a.lastError);
+  if (!a.configured) return;
+  line.textContent = 'Amazon Music: updated automatically (starts, plays, listeners, followers), last success ' + (a.lastOk ? a.lastOk.replace('T', ' ').replace(/:\d\d(\.\d+)?Z?$/, ' UTC') : 'none yet');
+  warn.textContent = a.lastError ? 'Amazon problem: ' + a.lastError : '';
 }
 function renderSP(D) {
   var block = $('#sp-block'), th = $('#th-sps');

@@ -5,6 +5,7 @@ import { handlePlatform, originOk } from './platform';
 import { refreshIfStale, rollup } from './rollup';
 import { buildStats } from './stats';
 import { handleSpotifyRefresh, runDailySpotify } from './spotify';
+import { handleAmazonRefresh, runDailyAmazon } from './amazon';
 import { handleReportSend, runWeeklyReport } from './report';
 import type { Env } from './env';
 
@@ -39,6 +40,8 @@ export default {
     ctx.waitUntil(rollup(env, { now: event.scheduledTime, heavy }));
     // Own waitUntil: a Spotify failure must never touch the rollup. runDailySpotify never throws.
     ctx.waitUntil(runDailySpotify(env, event.scheduledTime).catch((e) => console.error('spotify job failed', e)));
+    // Amazon Music numbers. Own waitUntil for the same reason. runDailyAmazon never throws.
+    ctx.waitUntil(runDailyAmazon(env, event.scheduledTime).catch((e) => console.error('amazon job failed', e)));
     // Weekly email. Own waitUntil for the same reason. runWeeklyReport never throws.
     ctx.waitUntil(runWeeklyReport(env, event.scheduledTime).catch((e) => console.error('weekly report failed', e)));
   },
@@ -72,6 +75,11 @@ async function statsInner(req: Request, env: Env): Promise<Response> {
     if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });
     if (!originOk(req, env)) return Response.json({ ok: false, error: 'bad origin' }, { status: 403, headers: { 'cache-control': 'no-store' } });
     return handleSpotifyRefresh(env);
+  }
+  if (url.pathname === '/api/amazon/refresh') {
+    if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });
+    if (!originOk(req, env)) return Response.json({ ok: false, error: 'bad origin' }, { status: 403, headers: { 'cache-control': 'no-store' } });
+    return handleAmazonRefresh(env);
   }
   if (url.pathname === '/api/report/send') {
     if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: { allow: 'POST' } });

@@ -2,6 +2,7 @@
 import { addDays, utcDay } from './lib';
 import { platformStats } from './platform';
 import { spotifyStats } from './spotify';
+import { amazonStats } from './amazon';
 import type { Env } from './env';
 
 export async function buildStats(env: Env, days: number, now = Date.now()) {
@@ -80,5 +81,6 @@ export async function buildStats(env: Env, days: number, now = Date.now()) {
     platforms: await platformStats(env),
     // Spotify for Creators (unofficial daily fetch). Isolated: never throws.
     spotify: await spotifyStats(env),
+    amazon: await amazonStats(env),
   };
 }

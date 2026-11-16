@@ -133,3 +133,27 @@ The probe runs the login flow and calls each endpoint once. It prints the status
   `POST /api/rollup` rebuilds everything now.
 - `bytes` is the size the response declared, not what the client received. An aborted download still counts.
 - Free plan limit is 10 ms CPU per request. The first classification in a fresh isolate compiles regexes lazily (about 10 ms worst case in Node).
+
+## Amazon Music (automatic, daily, unofficial)
+
+`src/amazon.ts` reads the private API behind https://podcasters.amazon.com. Amazon has no public API for this. Amazon can change or block it at any time.
+
+Configuration:
+- `AMAZON_PODCAST_ID` in `[vars]` (the id in `https://podcasters.amazon.com/podcasts/<id>`).
+- Secret `AMAZON_COOKIE`: one Cookie header value with these five cookies: `at-main`, `sess-at-main`, `session-id`, `ubid-main`, `x-main`. Fewer cookies do not work (tested 2026-11-16).
+
+How to get the cookies:
+1. Log in at https://podcasters.amazon.com in a desktop browser.
+2. Open DevTools, Network. Reload. Select a request to `podcasters.amazon.com/api/...`. Copy the value of the `cookie` request header.
+3. Put it in the repository `.env` as `AMAZON_PODCASTERS_COOKIE=...` (the file is not in git). The full value is permitted: step 4 keeps only the five cookies.
+4. From `analytics/worker`, run:
+   `python3 -c "import re;v=[l.split('=',1)[1].strip().strip('\"\'') for l in open('../../.env') if l.startswith('AMAZON_PODCASTERS_COOKIE=')][0];k=('at-main','sess-at-main','session-id','ubid-main','x-main');print('; '.join(p.strip() for p in v.split(';') if p.strip().split('=')[0] in k),end='')" | npx wrangler secret put AMAZON_COOKIE`
+
+How it works:
+- Three requests per run: `GET /auth/csrf?path=...` (the redirect address holds a CSRF token), then two `POST /api/metrics/podcast` (daily series for 30 days; follower total).
+- The hourly cron runs it from 05:00 UTC, once per day (marker `meta.amazon_day`). After a failure it tries again the next hour, at most 4 times a day. Expired cookies do not retry the same day.
+- Stored in `platform_stats` as `('amazon', starts|plays|listeners|engaged_listeners, day)` and `('amazon', 'followers', today)`. The last 30 days are written again each day. A series with only zeros is not stored.
+- Status: `meta.amazon_last_ok` and `meta.amazon_last_error`. `GET /api/stats` adds `amazon: {configured, last_ok, last_error}`.
+- `POST /api/amazon/refresh` (same Origin rule as `/api/platform`) runs it now.
+- Not known: how long the cookies stay valid, and whether `followsTotals.total` is the full follower count (the show had 0 followers when this was written). Episode numbers are not fetched.
+- Turn it off: `npx wrangler secret delete AMAZON_COOKIE`. Stored numbers stay.
