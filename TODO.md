@@ -15,7 +15,8 @@ Last update: 2026-11-15.
 |---|------|------------|
 ## Reminders with dates
 
-- 2026-11-16: remind the user to add the podcast to YouTube (their task). Open points: a second channel or a podcast playlist in the Summit channel; the handle `@reversim` shows as taken, `@ReversimPodcast` had no public channel on 2026-11-15. After that: add the YouTube link to the site.
+- YouTube: the podcast playlist is `https://www.youtube.com/playlist?list=PLGEjVtVqTmNs` (in the Summit channel). It had 0 episodes on 2026-11-16. When it has episodes: add the link to the site (`src/lib/links.ts`, footer, `sameAs`) and remove "YouTube Music" from the not-listed directories.
+- Amazon Music numbers: the first values are 0 (listed 2026-11-15). When real numbers come, check that `followers` is the full count and that the cookies still work (lifetime not known).
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
 ## Audit findings (2026-11-15), not started
@@ -43,6 +44,7 @@ Reach:
 
 ## Done
 
+- Amazon Music numbers (2026-11-16): the analytics Worker pulls starts, plays, listeners and followers each day from the internal API of podcasters.amazon.com (`analytics/worker/src/amazon.ts`, secret `AMAZON_COOKIE`, README section "Amazon Music"). The dashboard shows them in the platform section.
 - Feed size (2026-11-16): the podcast feed is 3.1 MB (was 12 MB). Show notes in the feed stop at 4,000 characters (the Apple limit) with a link to the full notes; 227 episodes changed. All 824 episodes stay in the feed. `rss.xml` (42 MB) and `atom.xml` (35 MB) are the blog feeds and are not changed.
 - Dead external links in old show notes (2026-11-15): 1,331 links now point to a Wayback Machine copy near the episode date, 6 images too. 151 links with no archived copy were removed (the text stays). 376 posts changed. Not changed: 41 twitter.com links (cannot be checked), about 80 links where two clients disagree, 17 links with a failed archive lookup or Libsyn audio.
 - Home page load (2026-11-15): cards and the home hero use small WebP copies of the cover images (`/thumbs/<id>.webp`, made at build time), the font stylesheet does not block the first paint, the search script is deferred.
