@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { formatDuration, formatTime, parseChapters, parseTime, parseTranscript, plainDescription, transcriptToVtt } from '../episode';
+import { cutHtml, formatDuration, formatTime, parseChapters, parseTime, parseTranscript, plainDescription, transcriptToVtt } from '../episode';
 
 describe('time helpers', () => {
   it('parses MM:SS and H:MM:SS', () => {
@@ -55,4 +55,19 @@ describe('plainDescription', () => {
     expect(d.length).toBeLessThanOrEqual(61);
     expect(d.endsWith('…')).toBe(true);
   });
+});
+
+describe('cutHtml', () => {
+	it('keeps short HTML', () => {
+		expect(cutHtml('<p>abc</p>', 100)).toBe('<p>abc</p>');
+	});
+	it('stops at a word boundary', () => {
+		expect(cutHtml('<p>one two three four</p>', 14)).toBe('<p>one two');
+	});
+	it('does not stop in a tag', () => {
+		expect(cutHtml('<p>one</p><a href="https://example.com/long">x</a>', 20)).toBe('<p>one</p>');
+	});
+	it('does not stop in an entity', () => {
+		expect(cutHtml('<p>ab&amp;cd</p>', 8)).toBe('<p>ab');
+	});
 });

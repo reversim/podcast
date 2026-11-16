@@ -129,3 +129,17 @@ export function plainDescription(body: string, max = 200): string {
 export function xmlEscape(value: string): string {
 	return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
+
+/** Cuts HTML at `max` characters or less: not in a tag, not in an entity, and at a word boundary when possible. */
+export function cutHtml(html: string, max: number): string {
+	if (html.length <= max) return html;
+	let cut = html.slice(0, max);
+	// Do not stop in the middle of a tag or an entity.
+	if (cut.lastIndexOf('<') > cut.lastIndexOf('>')) cut = cut.slice(0, cut.lastIndexOf('<'));
+	const amp = cut.lastIndexOf('&');
+	if (amp > cut.length - 10 && !cut.slice(amp).includes(';')) cut = cut.slice(0, amp);
+	// Go back to the last space, if the text after the last tag has one.
+	const space = cut.lastIndexOf(' ');
+	if (space > cut.lastIndexOf('>')) cut = cut.slice(0, space);
+	return cut.trimEnd();
+}

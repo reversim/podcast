@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
 import { marked } from 'marked';
 import { getAllPosts, getPostPermalink } from '../lib/posts';
-import { formatDuration, parseChapters, xmlEscape } from '../lib/episode';
+import { cutHtml, formatDuration, parseChapters, xmlEscape } from '../lib/episode';
 import { getAudioMeta } from '../lib/audioMeta';
 import { getTranscript } from '../lib/transcripts';
 import { catalog } from '../lib/catalog';
@@ -18,12 +18,20 @@ const HOSTS = ['Ran Tavory', 'Ori Lahav'];
 
 const ALLOWED_TAGS = ['p', 'a', 'strong', 'em', 'ul', 'ol', 'li', 'br', 'h1', 'h2', 'h3', 'h4'];
 
-async function bodyToHtml(body: string): Promise<string> {
-	const html = await marked(body);
-	return sanitizeHtml(html, {
+// Apple Podcasts permits 4,000 characters in a description. Long show notes made the feed 12 MB.
+const MAX_DESCRIPTION = 4000;
+const sanitize = (html: string) =>
+	sanitizeHtml(html, {
 		allowedTags: ALLOWED_TAGS,
 		allowedAttributes: { a: ['href'] },
 	});
+
+/** Show notes as feed HTML. Long notes stop at MAX_DESCRIPTION, with a link to the full notes on the site. */
+async function bodyToHtml(body: string, permalink: string): Promise<string> {
+	const html = sanitize(await marked(body));
+	if (html.length <= MAX_DESCRIPTION) return html;
+	// The second sanitize closes the tags that the cut left open.
+	return `${sanitize(cutHtml(html, MAX_DESCRIPTION))}… <p><a href="${new URL(permalink, import.meta.env.SITE).href}">להמשך הערות הפרק באתר</a></p>`;
 }
 
 export async function GET(context: { site: URL }) {
@@ -62,7 +70,7 @@ export async function GET(context: { site: URL }) {
 			}
 			const description = post.data.summary
 				? post.data.summary
-				: await bodyToHtml(post.body ?? '');
+				: await bodyToHtml(post.body ?? '', getPostPermalink(post));
 			return {
 				title: post.data.title,
 				pubDate: post.data.date,
