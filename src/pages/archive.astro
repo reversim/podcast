@@ -14,7 +14,7 @@ for (const post of posts) {
 }
 ---
 
-<BaseLayout title="ארכיון | רברס עם פלטפורמה">
+<BaseLayout title="ארכיון | רברס עם פלטפורמה" description={`כל ${posts.length} הפרקים והפוסטים של רברס עם פלטפורמה מאז 2009, מסודרים לפי שנה.`}>
 	<h1 class="section-title">ארכיון</h1>
 	{Array.from(byYear.entries()).map(([year, yearPosts]) => (
 		<section>

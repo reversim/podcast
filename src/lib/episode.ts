@@ -143,3 +143,14 @@ export function cutHtml(html: string, max: number): string {
 	if (space > cut.lastIndexOf('>')) cut = cut.slice(0, space);
 	return cut.trimEnd();
 }
+
+/** Description for a list page: the lead sentence, then as many titles as fit in `max` characters. */
+export function listDescription(lead: string, titles: string[], max = 155): string {
+	let out = lead;
+	for (const [i, title] of titles.entries()) {
+		const next = `${out}${i === 0 ? ' ' : ' · '}${title.replace(/\s+/g, ' ').trim()}`;
+		if (next.length > max) break;
+		out = next;
+	}
+	return out;
+}

@@ -21,9 +21,6 @@ Last update: 2026-11-15.
 
 ## Audit findings (2026-11-15), not started
 
-Site defects:
-- 718 list pages (year, month, page N, about, episodes, archive) have the same generic description.
-
 Directories:
 - Deezer: listed 2026-11-15 (`https://www.deezer.com/show/1003759371`). Amazon Music: listed 2026-11-15 (`https://music.amazon.com/podcasts/c8ba795c-011b-4aba-9438-c838216078c5`).
 - Not listed: YouTube Music, TuneIn, fyyd, gpodder. Probably not listed: Podchaser, Listen Notes.
@@ -44,6 +41,7 @@ Reach:
 
 ## Done
 
+- List page descriptions (2026-11-16): year, month and "page N" pages get a description with the count and the first titles (`listDescription` in `src/lib/episode.ts`); about, archive and episodes have their own text. No built page has the generic description.
 - Deezer fan count (2026-11-16): the analytics Worker stores the public fan count each day as `('deezer', 'followers')` (`analytics/worker/src/deezer.ts`). Deezer has no API for stream counts.
 - Amazon Music numbers (2026-11-16): the analytics Worker pulls starts, plays, listeners and followers each day from the internal API of podcasters.amazon.com (`analytics/worker/src/amazon.ts`, secret `AMAZON_COOKIE`, README section "Amazon Music"). The dashboard shows them in the platform section.
 - Feed size (2026-11-16): the podcast feed is 3.1 MB (was 12 MB). Show notes in the feed stop at 4,000 characters (the Apple limit) with a link to the full notes; 227 episodes changed. All 824 episodes stay in the feed. `rss.xml` (42 MB) and `atom.xml` (35 MB) are the blog feeds and are not changed.

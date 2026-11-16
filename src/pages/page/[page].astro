@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import Pagination from '../../components/Pagination.astro';
 import { getAllPosts } from '../../lib/posts';
+import { listDescription } from '../../lib/episode';
 
 export async function getStaticPaths({ paginate }) {
 	const posts = await getAllPosts();
@@ -10,9 +11,13 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
+const description = listDescription(
+	`עמוד ${page.currentPage} מתוך ${page.lastPage} ברשימת הפרקים של רברס עם פלטפורמה:`,
+	page.data.map((post) => post.data.title),
+);
 ---
 
-<BaseLayout title={`עמוד ${page.currentPage} | רברס עם פלטפורמה`}>
+<BaseLayout title={`עמוד ${page.currentPage} | רברס עם פלטפורמה`} description={description}>
 	<h2 class="section-title">עוד פרקים</h2>
 	<div class="posts-grid">
 		{page.data.map((post) => (

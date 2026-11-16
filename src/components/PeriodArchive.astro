@@ -2,11 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getPostPermalink } from '../lib/posts';
 import type { PostEntry } from '../lib/posts';
+import { listDescription } from '../lib/episode';
 
-const { heading, canonical, posts } = Astro.props as { heading: string; canonical: string; posts: PostEntry[] };
+const { heading, period, canonical, posts } = Astro.props as { heading: string; period: string; canonical: string; posts: PostEntry[] };
+const count = posts.length === 1 ? 'פרק אחד' : `${posts.length} פרקים`;
+const description = listDescription(`${count} של רברס עם פלטפורמה ${period}:`, posts.map((post) => post.data.title));
 ---
 
-<BaseLayout title={`${heading} | רברס עם פלטפורמה`} canonical={canonical}>
+<BaseLayout title={`${heading} | רברס עם פלטפורמה`} description={description} canonical={canonical}>
 	<h1 class="section-title">{heading}</h1>
 	<ul class="archive-list" data-pagefind-ignore>
 		{posts.map((post) => (

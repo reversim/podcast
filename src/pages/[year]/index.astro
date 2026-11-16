@@ -17,4 +17,4 @@ const { year } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<PeriodArchive heading={`ארכיון ${year}`} canonical={`/${year}/`} posts={posts} />
+<PeriodArchive heading={`ארכיון ${year}`} period={`משנת ${year}`} canonical={`/${year}/`} posts={posts} />

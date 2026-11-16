@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { cutHtml, formatDuration, formatTime, parseChapters, parseTime, parseTranscript, plainDescription, transcriptToVtt } from '../episode';
+import { cutHtml, listDescription, formatDuration, formatTime, parseChapters, parseTime, parseTranscript, plainDescription, transcriptToVtt } from '../episode';
 
 describe('time helpers', () => {
   it('parses MM:SS and H:MM:SS', () => {
@@ -69,5 +69,14 @@ describe('cutHtml', () => {
 	});
 	it('does not stop in an entity', () => {
 		expect(cutHtml('<p>ab&amp;cd</p>', 8)).toBe('<p>ab');
+	});
+});
+
+describe('listDescription', () => {
+	it('adds the titles that fit', () => {
+		expect(listDescription('Lead:', ['One', 'Two', 'Three'], 16)).toBe('Lead: One · Two');
+	});
+	it('keeps the lead when no title fits', () => {
+		expect(listDescription('Lead:', ['A very long title'], 10)).toBe('Lead:');
 	});
 });

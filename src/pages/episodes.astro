@@ -14,7 +14,7 @@ const deferredPosts = posts.slice(initialCount).map((post) => ({
 }));
 ---
 
-<BaseLayout title="פרקים | רברס עם פלטפורמה">
+<BaseLayout title="פרקים | רברס עם פלטפורמה" description={`רשימת כל ${posts.length} פרקי הפודקאסט רברס עם פלטפורמה, מהחדש לישן, עם נגן להאזנה לכל פרק.`}>
 	<h1 class="section-title">פרקים עם אודיו</h1>
 	<div id="episodes-grid" class="episodes-grid">
 		{initialPosts.map((post) => (
