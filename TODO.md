@@ -16,6 +16,7 @@ Last update: 2026-11-15.
 ## Reminders with dates
 
 - YouTube numbers: waiting for `YOUTUBE_API_KEY` in `.env` (YouTube Data API v3 key). Then: a daily job in the analytics Worker that stores the total views of the playlist videos.
+- YouTube playlist (checked 2026-11-17): 64 of 824 episodes are in the playlist. Only 4 are public (episodes 100 to 103). 60 are private. Ran must publish the private videos in YouTube Studio; the import continues.
 - Amazon Music numbers: the first values are 0 (listed 2026-11-15). When real numbers come, check that `followers` is the full count and that the cookies still work (lifetime not known).
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
