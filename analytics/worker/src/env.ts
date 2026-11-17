@@ -22,6 +22,8 @@ export interface Env {
   DEEZER_SHOW_ID?: string;    // var: the id in https://www.deezer.com/show/<id>
   AMAZON_PODCAST_ID?: string; // var: the id in the podcasters.amazon.com address
   AMAZON_COOKIE?: string;     // secret: at-main, sess-at-main, session-id, ubid-main, x-main as one Cookie header value
+  YOUTUBE_PLAYLIST_ID?: string; // var: the value of list= in the playlist address
+  YOUTUBE_API_KEY?: string;   // secret: YouTube Data API v3 key
   RESEND_API_KEY?: string; // secret: weekly email through resend.com
   REPORT_TO?: string;      // secret: comma list of addresses that receive the weekly email
   REPORT_FROM?: string;    // var: sender on a domain verified in Resend

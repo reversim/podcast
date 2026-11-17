@@ -161,3 +161,7 @@ How it works:
 ## Deezer (automatic, daily)
 
 `src/deezer.ts` reads the fan count of the show from the public Deezer API (`https://api.deezer.com/podcast/<id>`, no login). It stores it as `('deezer', 'followers', today)` in `platform_stats`, once per UTC day from 05:00. Configuration: `DEEZER_SHOW_ID` in `[vars]`. Deezer has no API for stream counts. An error is in `meta.deezer_last_error`.
+
+## YouTube (automatic, daily)
+
+`src/youtube.ts` reads the podcast playlist with the YouTube Data API v3. Once per UTC day from 06:00 it stores, in `platform_stats` for today: `('youtube', 'views_total')` (the sum of the all-time views of the public videos), `('youtube', 'videos_public')` and `('youtube', 'videos_private')`. Configuration: `YOUTUBE_PLAYLIST_ID` in `[vars]` and the secret `YOUTUBE_API_KEY` (a Google Cloud API key limited to "YouTube Data API v3"). Set the secret from `.env` without printing it: `(set -a; . ../../.env; printf %s "$YOUTUBE_API_KEY" | npx wrangler secret put YOUTUBE_API_KEY)`. The key gives public numbers only; watch time and audience data need OAuth. An error is in `meta.youtube_last_error`.

@@ -99,6 +99,7 @@ export async function buildReport(env: Env, now = Date.now()): Promise<Report> {
     if (m.get('spotify_last_error')) warnings.push('Spotify job error: ' + m.get('spotify_last_error')!.slice(0, 200));
     else if (!Number.isFinite(ok) || now - ok > 3 * 86400000) warnings.push('The Spotify job did not succeed in the last 3 days. The cookies are possibly expired.');
   }
+  if (env.YOUTUBE_PLAYLIST_ID && env.YOUTUBE_API_KEY && m.get('youtube_last_error')) warnings.push('YouTube job error: ' + m.get('youtube_last_error')!.slice(0, 200));
   if (env.AMAZON_PODCAST_ID && env.AMAZON_COOKIE) {
     const ok = Date.parse(m.get('amazon_last_ok') ?? '');
     if (m.get('amazon_last_error')) warnings.push('Amazon job error: ' + m.get('amazon_last_error')!.slice(0, 200));
