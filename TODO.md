@@ -15,7 +15,6 @@ Last update: 2026-11-15.
 |---|------|------------|
 ## Reminders with dates
 
-- YouTube numbers: waiting for `YOUTUBE_API_KEY` in `.env` (YouTube Data API v3 key). Then: a daily job in the analytics Worker that stores the total views of the playlist videos.
 - YouTube playlist (checked 2026-11-17): 64 of 824 episodes are in the playlist. Only 4 are public (episodes 100 to 103). 60 are private. Ran must publish the private videos in YouTube Studio; the import continues.
 - Amazon Music numbers: the first values are 0 (listed 2026-11-15). When real numbers come, check that `followers` is the full count and that the cookies still work (lifetime not known).
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
@@ -43,6 +42,7 @@ Reach:
 
 ## Done
 
+- YouTube numbers (2026-11-17): the analytics Worker reads the playlist each day with the YouTube Data API (`analytics/worker/src/youtube.ts`, secret `YOUTUBE_API_KEY`). It stores `views_total`, `videos_public` and `videos_private` for platform `youtube`. Note: `wrangler` fails when `CLOUDFLARE_API_TOKEN` from `.env` is in the environment (IP limit); use `env -u CLOUDFLARE_API_TOKEN npx wrangler ...`.
 - YouTube link (2026-11-16): the playlist is in `SHOW_LINKS.youtube`, the footer and `sameAs`.
 - List page descriptions (2026-11-16): year, month and "page N" pages get a description with the count and the first titles (`listDescription` in `src/lib/episode.ts`); about, archive and episodes have their own text. No built page has the generic description.
 - Deezer fan count (2026-11-16): the analytics Worker stores the public fan count each day as `('deezer', 'followers')` (`analytics/worker/src/deezer.ts`). Deezer has no API for stream counts.
