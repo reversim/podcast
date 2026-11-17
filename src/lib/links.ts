@@ -4,7 +4,7 @@ export const SHOW_LINKS = {
 	apple: 'https://podcasts.apple.com/podcast/id307256322',
 	deezer: 'https://www.deezer.com/show/1003759371',
 	amazon: 'https://music.amazon.com/podcasts/c8ba795c-011b-4aba-9438-c838216078c5',
-	youtube: 'https://www.youtube.com/playlist?list=PLGEjVtVqTmNs',
+	youtube: 'https://www.youtube.com/playlist?list=PLPrpPQF5fJrM',
 	feed: 'https://feed.reversim.com',
 	summit: 'https://summit.reversim.com/',
 	x: 'https://twitter.com/reversim',

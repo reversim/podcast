@@ -18,7 +18,7 @@ function makeDb() {
   });
   return { sql, DB: { prepare: (q) => stmt(q), batch: async (s) => { for (const x of s) sql.prepare(x.q).run(...x.args); return []; } } };
 }
-const envOf = (DB, o = {}) => ({ DB, YOUTUBE_PLAYLIST_ID: 'PLGEjVtVqTmNs', YOUTUBE_API_KEY: KEY, ...o });
+const envOf = (DB, o = {}) => ({ DB, YOUTUBE_PLAYLIST_ID: 'PLPrpPQF5fJrM', YOUTUBE_API_KEY: KEY, ...o });
 const rows = (sql) => sql.prepare(`SELECT metric, day, value FROM platform_stats WHERE platform = 'youtube' ORDER BY metric`).all();
 const item = (id, privacy) => ({ contentDetails: { videoId: id }, status: { privacyStatus: privacy } });
 /** Two playlist pages (2 public + 1 private, then 1 public), and view counts 1, 3 and 10. */

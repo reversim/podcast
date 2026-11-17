@@ -15,7 +15,7 @@ Last update: 2026-11-15.
 |---|------|------------|
 ## Reminders with dates
 
-- YouTube playlist (checked 2026-11-17): 64 of 824 episodes are in the playlist. Only 4 are public (episodes 100 to 103). 60 are private. Ran must publish the private videos in YouTube Studio; the import continues.
+- YouTube playlist `PLPrpPQF5fJrM` (checked 2026-11-17): the RSS import is in progress and the videos are private. Ran must publish them in YouTube Studio. The site and the daily job point to this playlist.
 - Amazon Music numbers: the first values are 0 (listed 2026-11-15). When real numbers come, check that `followers` is the full count and that the cookies still work (lifetime not known).
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
@@ -23,7 +23,7 @@ Last update: 2026-11-15.
 
 Directories:
 - Deezer: listed 2026-11-15 (`https://www.deezer.com/show/1003759371`). Amazon Music: listed 2026-11-15 (`https://music.amazon.com/podcasts/c8ba795c-011b-4aba-9438-c838216078c5`).
-- General directories: Ran said "that's enough" on 2026-11-16 (no TuneIn, fyyd, gpodder, Podchaser, Listen Notes). YouTube: listed 2026-11-16 (`https://www.youtube.com/playlist?list=PLGEjVtVqTmNs`, 59 episodes, in the Summit channel).
+- General directories: Ran said "that's enough" on 2026-11-16 (no TuneIn, fyyd, gpodder, Podchaser, Listen Notes). YouTube: playlist `https://www.youtube.com/playlist?list=PLPrpPQF5fJrM` in the channel `@reversim-podcast` (chosen 2026-11-17). The first playlist `PLGEjVtVqTmNs` in the Summit channel (64 videos) is not used; Ran can delete it.
 - Israeli directories (checked 2026-11-16). Listed: podcastim.org.il, israeltips.net, webmaster.org.il (links to `http://www.reversim.com/`), pod-il.co.il. Not listed: פודקאסט.ישראל (the site with the Hebrew domain), `lirantal/awesome-opensource-israel` on GitHub (section Podcasts), the Geektime article of company podcasts. Ran decides which to request.
 - Podcast Republic is stale (stops at episode 513).
 
