@@ -3,8 +3,9 @@
  * Podcast post-production automation for Reversim Podcast
  *
  * Steps:
- *   0. (Optional) Mix raw WAV tracks from GarageBand project into a single MP3
- *   1. Add intro/outro with fade-in/out and normalize loudness via ffmpeg
+ *   0. (Optional) Process the raw WAV tracks of a GarageBand project with the GarageBand patch of each speaker
+ *      (EQ, compressors, de-esser) and mix them
+ *   1. Level the speech to -16 LUFS and add intro/outro with fade-in/out via ffmpeg
  *   2. Transcribe via Gemini File API (handles 30–90 min files)
  *   2b. Cold open: an LLM picks 2–3 strong quotes, ffmpeg puts them before the intro
  *   3. Generate Hebrew blog post from transcript
@@ -32,6 +33,8 @@
  *   --welcome          Recorded welcome line that plays over the intro music, before the hosts
  *                      (default: $REVERSIM_WELCOME or assets/welcome.wav; no file = no welcome)
  *   --outro            Outro MP3 (default: $REVERSIM_OUTRO or assets/outro.mp3)
+ *   --patches DIR      GarageBand patches for --mix-wavs (default: $REVERSIM_PATCHES or assets/patches).
+ *                      <Speaker>.patch for the track <Speaker>#01.wav, default.patch for other speakers.
  *   --bucket, -b       Bucket name, used for both R2 and S3 (default: reversim)
  *   --workdir          Working directory for intermediate files (default: cwd)
  *   --tags             Comma-separated tags
@@ -81,6 +84,7 @@ function parseArgs() {
     slug: null,
     intro: process.env.REVERSIM_INTRO || join(REPO_ROOT, 'assets/intro.mp3'),
     outro: process.env.REVERSIM_OUTRO || join(REPO_ROOT, 'assets/outro.mp3'),
+    patches: process.env.REVERSIM_PATCHES || join(REPO_ROOT, 'assets/patches'),
     welcome: process.env.REVERSIM_WELCOME || join(REPO_ROOT, 'assets/welcome.wav'),
     bucket: 'reversim',
     workdir: process.cwd(),
@@ -109,6 +113,7 @@ function parseArgs() {
       case '--welcome':                   opts.welcome = resolve(args[++i]); break;
       case '--intro':                     opts.intro = resolve(args[++i]); break;
       case '--outro':                     opts.outro = resolve(args[++i]); break;
+      case '--patches':                   opts.patches = resolve(args[++i]); break;
       case '--bucket':         case '-b': opts.bucket = args[++i]; break;
       case '--workdir':                   opts.workdir = resolve(args[++i]); break;
       case '--tags':                      opts.tags = args[++i].split(',').map(t => t.trim()); break;
@@ -308,8 +313,112 @@ async function promptCoverImage() {
 
 // ─── Step 0: Mix WAV tracks ──────────────────────────────────────────────────
 
-function mixWavTracks(bandDir, outputMp3) {
-  console.log('\n▶ Step 0: Mixing WAV tracks from GarageBand project');
+// Voice processing. GarageBand track effects are not in the raw WAV files, so the script applies its own chain.
+const VOICE = {
+  TRACK_LUFS:  -23,     // each track gets a fixed gain to this speech loudness before the chain
+  TARGET_LUFS: -16,     // loudness of the finished speech (Apple and Spotify target)
+  PEAK:        0.84,    // -1.5 dBFS limiter ceiling
+  HIGHPASS:    100,     // Hz — removes rumble and plosive energy
+  // Downward expander. Speech of the track owner is at about -22 dB RMS after the gain; speech of the other
+  // persons in the room is 15 dB or more below that. The gate decreases this bleed, which causes a hollow sound.
+  GATE: 'agate=threshold=0.03:ratio=3:range=0.125:attack=10:release=300:detection=rms',
+  // Fitted to the GarageBand export of episode 522 (Ran's presets): warmth at 250 Hz, presence, air.
+  EQ: 'equalizer=f=250:t=q:w=1:g=2.5,equalizer=f=4000:t=q:w=0.8:g=1.5,highshelf=f=7000:g=3',
+  COMPRESSOR: 'acompressor=threshold=0.125:ratio=2:attack=15:release=250:knee=6',
+  DEESSER: 'deesser=i=0.4',
+  MAX_LRA: 8,           // a pre-mixed input with a larger loudness range gets a slow leveler
+  LEVELER: 'dynaudnorm=f=500:g=31:m=6:p=0.7',
+};
+
+// ─── GarageBand patches ──────────────────────────────────────────────────────
+// A .patch folder (GarageBand: Library → Save) holds the Channel EQ, Compressor and DeEsser settings of a track.
+// The values were checked against a GarageBand export of episode 522: the spectrum agrees within about 1 dB.
+// Not reproduced: the two reverb sends and the exact DeEsser values.
+
+// Reads the plug-in settings from a GarageBand .patch (Logic channel strip) and returns ffmpeg filter-graph text.
+export function readPatch(dir) {
+  const d = readFileSync(join(dir, '#Root.cst'));
+  const plugins = [];
+  let i = -1;
+  while ((i = d.indexOf('GAMETSPP', i + 1)) !== -1) {
+    // The first field is the size of the parameter block; each plug-in type has its own size.
+    const type = { 0xec: 'Channel EQ', 0x9a: 'Compressor', 0xa0: 'DeEsser' }[d.readUInt32LE(i + 8)];
+    if (!type) continue;
+    const p = Array.from({ length: 40 }, (_, k) => d.readFloatLE(i + 16 + 4 * k));
+    plugins.push({ type, p });
+  }
+  return plugins;
+}
+const dbToLinear = (x) => Math.pow(10, x / 20);
+const round4 = (x) => +x.toFixed(4);
+function patchEq(p) {
+  const f = [];
+  const band = (k) => ({ on: p[4 * k] === 1, freq: p[4 * k + 1], gain: p[4 * k + 2], q: p[4 * k + 3] });
+  const hp = band(0); if (hp.on) f.push(`highpass=f=${round4(hp.freq)}:t=q:w=${round4(hp.q)}`, `highpass=f=${round4(hp.freq * 0.8)}:t=q:w=0.71`);
+  const ls = band(1); if (ls.on && ls.gain) f.push(`lowshelf=f=${round4(ls.freq)}:g=${round4(ls.gain)}:t=q:w=${round4(Math.min(ls.q, 1))}`);
+  for (let k = 2; k <= 5; k++) { const b = band(k); if (b.on && b.gain) f.push(`equalizer=f=${round4(b.freq)}:t=q:w=${round4(b.q)}:g=${round4(b.gain)}`); }
+  const hs = band(6); if (hs.on && hs.gain) f.push(`highshelf=f=${round4(hs.freq)}:g=${round4(hs.gain)}:t=q:w=${round4(Math.min(hs.q, 1))}`);
+  const lp = band(7); if (lp.on) f.push(`lowpass=f=${round4(lp.freq)}`);
+  return f;
+}
+// Returns graph statements that take [in] to [out]; labels get the prefix.
+export function patchGraph(plugins, inLabel, outLabel, prefix, { deesser = true } = {}) {
+  const order = [];
+  const eqs = plugins.filter(x => x.type === 'Channel EQ'), comps = plugins.filter(x => x.type === 'Compressor');
+  if (eqs[0]) order.push(eqs[0]); if (comps[0]) order.push(comps[0]);
+  if (deesser && plugins.some(x => x.type === 'DeEsser')) order.push({ type: 'DeEsser' });
+  if (eqs[1]) order.push(eqs[1]); if (comps[1]) order.push(comps[1]); if (eqs[2]) order.push(eqs[2]);
+  const stmts = []; let cur = inLabel, chain = [], n = 0;
+  const flushChain = (to) => { stmts.push(`[${cur}]${chain.length ? chain.join(',') : 'anull'}[${to}]`); cur = to; chain = []; };
+  for (const pl of order) {
+    if (pl.type === 'Channel EQ') chain.push(...patchEq(pl.p));
+    else if (pl.type === 'DeEsser') chain.push('deesser=i=0.3');
+    else {
+      const [thr, ratio, attack, release, gain] = pl.p; const mix = pl.p[24] / 100;
+      const comp = `acompressor=threshold=${round4(Math.max(dbToLinear(thr), 0.001))}:ratio=${round4(Math.min(ratio, 20))}:attack=${round4(attack)}:release=${round4(release)}:knee=2${gain > 0 ? `:makeup=${round4(dbToLinear(gain))}` : ''}` + (gain < 0 ? `,volume=${round4(gain)}dB` : '');
+      if (mix >= 0.999) chain.push(comp);
+      else {
+        const a = `${prefix}s${n++}`; flushChain(a);
+        stmts.push(`[${a}]asplit[${a}d][${a}w]`, `[${a}w]${comp}[${a}c]`, `[${a}d][${a}c]amix=inputs=2:weights='${round4(1 - mix)} ${round4(mix)}':normalize=0[${a}m]`);
+        cur = `${a}m`;
+      }
+    }
+  }
+  flushChain(outLabel);
+  return stmts;
+}
+
+// EBU R128 measurement of a file (optionally after a filter chain).
+export function measureLoudness(file, pre = '') {
+  const out = runCapture(`ffmpeg -hide_banner -nostats -i "${file}" -af "${pre ? pre + ',' : ''}ebur128=peak=true:framelog=verbose" -f null - 2>&1`);
+  const summary = out.slice(out.lastIndexOf('Summary:'));
+  const num = (re) => { const m = summary.match(re); return m ? parseFloat(m[1]) : NaN; };
+  return { i: num(/I:\s+(-?[\d.]+) LUFS/), lra: num(/LRA:\s+(-?[\d.]+) LU/), peak: num(/Peak:\s+(-?[\d.]+) dBFS/) };
+}
+
+export function voiceChain(gainDb) {
+  return [`highpass=f=${VOICE.HIGHPASS}`, `volume=${gainDb.toFixed(2)}dB`, VOICE.GATE, VOICE.EQ, VOICE.COMPRESSOR, VOICE.DEESSER].join(',');
+}
+
+// Writes the speech at TARGET_LUFS with a limiter. A fixed gain: no pumping, pauses stay quiet.
+function levelSpeech(input, output, pre = '') {
+  const before = measureLoudness(input, pre);
+  let gain = VOICE.TARGET_LUFS - before.i;
+  const render = () => run(`ffmpeg -y -v error -i "${input}" -ac 1 -af "${pre ? pre + ',' : ''}volume=${gain.toFixed(2)}dB,alimiter=limit=${VOICE.PEAK}:level=false" "${output}"`, { silent: true });
+  render();
+  let after = measureLoudness(output);
+  // The limiter removes a little loudness. Correct one time.
+  if (Math.abs(after.i - VOICE.TARGET_LUFS) > 0.4) {
+    gain += VOICE.TARGET_LUFS - after.i;
+    render();
+    after = measureLoudness(output);
+  }
+  console.log(`  Loudness: ${before.i} → ${after.i} LUFS (range ${after.lra} LU, peak ${after.peak} dBFS)`);
+  return after;
+}
+
+function mixWavTracks(bandDir, output, patchesDir) {
+  console.log('\n▶ Step 0: Processing and mixing WAV tracks from GarageBand project');
 
   const audioFilesDir = join(bandDir, 'Media', 'Audio Files');
   if (!existsSync(audioFilesDir)) {
@@ -328,19 +437,31 @@ function mixWavTracks(bandDir, outputMp3) {
   }
 
   console.log(`  Found ${wavFiles.length} track(s):`);
-  wavFiles.forEach(f => console.log(`    - ${basename(f)}`));
-
+  const defaultPatch = join(patchesDir || '', 'default.patch');
+  const chains = wavFiles.flatMap((f, i) => {
+    const { i: lufs, peak } = measureLoudness(f);
+    const clipNote = peak >= -0.1 ? '  ⚠ the recording clips, decrease the input gain' : '';
+    // "Ran#01.wav" → speaker "Ran" → assets/patches/Ran.patch, or default.patch for a guest.
+    const speaker = basename(f).replace(/[#.].*$/, '');
+    const own = join(patchesDir || '', `${speaker}.patch`);
+    const patch = patchesDir && existsSync(own) ? own : patchesDir && existsSync(defaultPatch) ? defaultPatch : null;
+    if (patch) {
+      console.log(`    - ${basename(f)}: ${lufs} LUFS, patch ${basename(patch)}${clipNote}`);
+      return patchGraph(readPatch(patch), `${i}:a`, `t${i}`, `p${i}`);
+    }
+    // No patch: generic chain. Fixed gain to the same speech loudness, then gate, EQ, compressor, de-esser.
+    const gain = VOICE.TRACK_LUFS - lufs;
+    console.log(`    - ${basename(f)}: ${lufs} LUFS, generic chain, gain ${gain >= 0 ? '+' : ''}${gain.toFixed(1)} dB${clipNote}`);
+    return [`[${i}:a]${voiceChain(gain)}[t${i}]`];
+  });
   const inputs = wavFiles.map(f => `-i "${f}"`).join(' ');
   const n = wavFiles.length;
+  const filter = `${chains.join('; ')}; ${wavFiles.map((_, i) => `[t${i}]`).join('')}amix=inputs=${n}:duration=longest:normalize=0[out]`;
 
-  // amix: mix all tracks with equal volume, normalize to prevent clipping
-  const filter = n === 1
-    ? '[0:a]acopy[out]'
-    : `[${wavFiles.map((_, i) => `${i}:a`).join('][')}]amix=inputs=${n}:duration=longest:normalize=1[out]`;
-
-  run(`ffmpeg -y ${inputs} -filter_complex "${filter}" -map "[out]" -q:a 2 "${outputMp3}"`);
-  console.log(`  ✓ Mixed to ${outputMp3}`);
-  return outputMp3;
+  // FLAC: no quality loss before the final MP3.
+  run(`ffmpeg -y -v error ${inputs} -filter_complex "${filter}" -map "[out]" "${output}"`);
+  console.log(`  ✓ Mixed to ${output}`);
+  return output;
 }
 
 // ─── Step 1: Audio processing (ducked intro/outro beds + normalize) ──────────
@@ -410,7 +531,7 @@ function processAudio(opts, inputMp3, outputMp3) {
   const OUTRO_FADE_OUT  = 5;      // s — final fade to silence
   // ────────────────────────────────────────────────────────────────────────────
 
-  console.log('\n▶ Step 1: Audio processing (ducked beds + dynaudnorm)');
+  console.log('\n▶ Step 1: Audio processing (leveling + ducked beds)');
 
   const hasIntro = existsSync(opts.intro);
   const hasOutro = existsSync(opts.outro);
@@ -425,15 +546,19 @@ function processAudio(opts, inputMp3, outputMp3) {
   const welcome = hasWelcome ? welcomeTimeline(getAudioDuration(opts.welcome)) : null;
   const lead = welcome ? welcome.hostsStart : 0;
 
-  // Normalize speech FIRST so dynaudnorm never sees the quiet music-only sections.
+  // Level the speech FIRST so the measurement never sees the music-only sections.
   // Music beds are then mixed in at fixed levels on top of the normalized speech.
-  const normalizedSpeech = outputMp3 + '.normspeech.mp3';
-  console.log('  Normalizing speech (dynaudnorm, mono)...');
-  run(`ffmpeg -y -i "${inputMp3}" -ac 1 -af "silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.1,dynaudnorm=p=1/sqrt(2):m=100:s=12:g=3" -q:a 2 "${normalizedSpeech}"`);
+  const normalizedSpeech = outputMp3 + '.normspeech.flac';
+  console.log(`  Leveling speech to ${VOICE.TARGET_LUFS} LUFS (mono)...`);
+  let pre = 'silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.1';
+  // A pre-mixed file with no compression (for example a raw Riverside download) gets a slow leveler.
+  if (measureLoudness(inputMp3).lra > VOICE.MAX_LRA) pre += `,${VOICE.LEVELER}`;
+  levelSpeech(inputMp3, normalizedSpeech, pre);
 
   // Fast path: no music at all
   if (!hasIntro && !hasOutro) {
-    run(`mv "${normalizedSpeech}" "${outputMp3}"`);
+    run(`ffmpeg -y -v error -i "${normalizedSpeech}" -q:a 2 "${outputMp3}"`);
+    run(`rm -f "${normalizedSpeech}"`, { silent: true });
     return;
   }
 
@@ -542,7 +667,7 @@ function processAudio(opts, inputMp3, outputMp3) {
 
   // ── MIX ────────────────────────────────────────────────────────────────────
   const n = streams.length;
-  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0,alimiter=limit=0.84:level=false[out]`);
+  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0,alimiter=limit=0.79:level=false[out]`);
 
   run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${outputMp3}"`);
 
@@ -1245,7 +1370,7 @@ async function main() {
 
   const fileSlug = opts.slug.replace(/-/g, '_');
   const mp3Name   = `reversim${opts.episode}-${fileSlug}.mp3`;
-  const mixedMp3  = join(opts.workdir, `_mixed_${opts.episode}.mp3`);
+  const mixedMp3  = join(opts.workdir, `_mixed_${opts.episode}.flac`);  // processed voice tracks, lossless
   const bodyMp3   = join(opts.workdir, `_body_${opts.episode}.mp3`);   // intro/outro + normalize, no cold open
   const outputMp3 = join(opts.workdir, mp3Name);                       // final file: cold open + body
   const coldOpenInfo = join(opts.workdir, `_coldopen_${opts.episode}.json`);
@@ -1268,7 +1393,7 @@ async function main() {
       if (existsSync(mixedMp3)) {
         console.log(`\n▶ Step 0: Using existing mix (${mixedMp3})`);
       } else {
-        mixWavTracks(opts.mixWavs, mixedMp3);
+        mixWavTracks(opts.mixWavs, mixedMp3, opts.patches);
       }
       rawInput = mixedMp3;
     } else {

@@ -1,7 +1,7 @@
 # Open tasks, decisions and ideas
 
 Claude keeps this list. Claude shows the open items at the end of each work session until the list is empty.
-Last update: 2026-11-15.
+Last update: 2026-11-17.
 
 ## Decisions for Ran
 
@@ -42,6 +42,7 @@ Reach:
 
 ## Done
 
+- Sound quality (2026-11-17): the production script used the raw GarageBand tracks with no track effects and an aggressive normalizer. Now `scripts/post-production.mjs` reads the GarageBand patches in `assets/patches/` (`Ran.patch`, `Ori.patch`, `default.patch` for guests; EQ and compressors) and applies them to each track, then sets the speech to -16 LUFS with a fixed gain. To change a sound: save the patch in GarageBand and replace the file. Not reproduced: reverb sends, exact de-esser values. Episode 522 was made again and replaced on R2 and S3 (same timeline, no welcome line, no cold open). The old file is at `~/Downloads/reversim522-published-before-2026-11-17.mp3`. No raw tracks exist for episodes before 522.
 - YouTube numbers (2026-11-17): the analytics Worker reads the playlist each day with the YouTube Data API (`analytics/worker/src/youtube.ts`, secret `YOUTUBE_API_KEY`). It stores `views_total`, `videos_public` and `videos_private` for platform `youtube`. Note: `wrangler` fails when `CLOUDFLARE_API_TOKEN` from `.env` is in the environment (IP limit); use `env -u CLOUDFLARE_API_TOKEN npx wrangler ...`.
 - YouTube link (2026-11-16): the playlist is in `SHOW_LINKS.youtube`, the footer and `sameAs`.
 - List page descriptions (2026-11-16): year, month and "page N" pages get a description with the count and the first titles (`listDescription` in `src/lib/episode.ts`); about, archive and episodes have their own text. No built page has the generic description.
