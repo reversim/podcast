@@ -945,6 +945,47 @@ img {
 	font-weight: 600;
 }
 
+.share-row {
+	margin-top: 0.6rem;
+}
+
+.share-copy {
+	font: inherit;
+	font-weight: 600;
+	color: var(--accent);
+	background: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.listen-on .share-guide-link {
+	font-weight: 400;
+	margin-inline-start: auto;
+}
+
+.topic-all {
+	margin: -0.4rem 0 0.8rem;
+	font-size: 0.92rem;
+}
+
+.topic-year {
+	margin: 1.6rem 0 0.6rem;
+	font-size: 1.05rem;
+	color: var(--muted);
+}
+
+.start-topics-nav a[aria-current='page'] {
+	border-color: var(--accent);
+	font-weight: 600;
+}
+
+.guide-steps li {
+	margin-bottom: 0.7rem;
+	line-height: 1.6;
+}
+
 .related {
 	margin-bottom: 1.2rem;
 }

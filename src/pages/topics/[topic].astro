@@ -1,0 +1,79 @@
+---
+// One page for each topic, with all its episodes. Topics come from src/data/catalog.json (scripts/catalog.mjs).
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllPosts, getPostPermalink } from '../../lib/posts';
+import { catalog, TOPIC_LABELS } from '../../lib/catalog';
+import picks from '../../data/start-here.json';
+
+export function getStaticPaths() {
+	return Object.keys(TOPIC_LABELS).map((topic) => ({ params: { topic } }));
+}
+
+const { topic } = Astro.params as { topic: string };
+const label = TOPIC_LABELS[topic];
+const posts = (await getAllPosts()).filter((p) => p.data.audio_url && catalog[p.id]?.topics.includes(topic)); // newest first
+const byId = new Map(posts.map((p) => [p.id, p]));
+const recommended = ((picks as { topics?: Record<string, string[]> }).topics?.[topic] ?? []).map((id) => byId.get(id)).filter((p) => !!p);
+const years: { year: number; posts: typeof posts }[] = [];
+for (const post of posts) {
+	const year = post.data.date.getFullYear();
+	if (years.at(-1)?.year !== year) years.push({ year, posts: [] });
+	years.at(-1)!.posts.push(post);
+}
+const firstYear = years.at(-1)?.year;
+const pageUrl = new URL(`/topics/${topic}.html`, Astro.site).href;
+const description = `${posts.length} פרקים של רברס עם פלטפורמה בנושא ${label}${firstYear ? `, מ-${firstYear} ועד היום` : ''}. שיחות בעברית עם מהנדסות ומהנדסים מהתעשייה.`;
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	url: pageUrl,
+	name: `${label} | רברס עם פלטפורמה`,
+	description,
+	inLanguage: 'he',
+	isPartOf: { '@type': 'PodcastSeries', name: 'רברס עם פלטפורמה', url: new URL('/', Astro.site).href },
+	mainEntity: {
+		'@type': 'ItemList',
+		numberOfItems: posts.length,
+		itemListElement: posts.slice(0, 50).map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(getPostPermalink(p), Astro.site).href, name: p.data.title })),
+	},
+};
+---
+
+<BaseLayout title={`${label} | רברס עם פלטפורמה`} description={description}>
+	<script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
+	<h1 class="section-title" dir="auto">{label}</h1>
+	<p>{posts.length} פרקים בנושא, מהחדש לישן.</p>
+	<nav class="start-topics-nav" aria-label="נושאים">
+		{Object.entries(TOPIC_LABELS).map(([key, name]) => <a href={`/topics/${key}.html`} aria-current={key === topic ? 'page' : undefined}>{name}</a>)}
+	</nav>
+	{recommended.length > 0 && (
+		<section class="start-topic">
+			<h2 class="section-title">מומלץ להתחיל מכאן</h2>
+			<ul class="start-list">
+				{recommended.map((post) => (
+					<li>
+						<a href={getPostPermalink(post!)} dir="auto">{post!.data.title}</a>
+						<span class="index-meta">{post!.data.date.getFullYear()}</span>
+						{catalog[post!.id]?.hook && <p class="start-hook">{catalog[post!.id].hook}</p>}
+					</li>
+				))}
+			</ul>
+		</section>
+	)}
+	<section class="start-topic">
+		<h2 class="section-title">כל הפרקים</h2>
+		{years.map(({ year, posts: list }) => (
+			<>
+				<h3 class="topic-year">{year}</h3>
+				<ul class="start-list">
+					{list.map((post) => (
+						<li>
+							<a href={getPostPermalink(post)} dir="auto">{post.data.title}</a>
+							{catalog[post.id]?.hook && <p class="start-hook">{catalog[post.id].hook}</p>}
+						</li>
+					))}
+				</ul>
+			</>
+		))}
+	</section>
+</BaseLayout>

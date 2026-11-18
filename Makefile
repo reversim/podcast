@@ -162,6 +162,7 @@ produce: _check-episode
 	@set -a && . ./.env && set +a && \
 	node scripts/post-production.mjs $(_post-production-args) \
 		$(_source-args)
+	@set -a && . ./.env && set +a && node scripts/catalog.mjs || echo "WARNING: the catalog update failed. The new episode has no guest and topic links. Run 'node scripts/catalog.mjs' again."
 	@$(MAKE) --no-print-directory mcp-update || echo "WARNING: the MCP update failed. The episode is complete. Run 'make mcp-update' again."
 
 # ── Catalog data ─────────────────────────────────────────────────────────────

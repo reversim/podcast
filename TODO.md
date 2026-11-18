@@ -7,7 +7,6 @@ Last update: 2026-11-18.
 
 | # | Item | Status |
 |---|------|--------|
-| D3 | Which items from the 2026-11-15 distribution audit to do (see "Audit findings"). | Waiting for Ran. |
 
 ## Tasks for Claude (after the decisions)
 
@@ -30,9 +29,6 @@ Directories:
 Reach:
 - Email newsletter for each episode.
 - LinkedIn page for the podcast.
-- Large share image for each episode (`summary_large_image`).
-- Topic pages.
-- Share buttons on the episode page; guide for guests.
 - Hebrew Wikipedia article and Wikidata item.
 
 ## Ideas (not started)
@@ -42,6 +38,7 @@ Reach:
 
 ## Done
 
+- Reach items from the audit (2026-11-18): large share image for each episode (`/share/<post id>.jpg`, 1200 x 630, `summary_large_image`); topic pages (`/topics/<topic>.html`, 14 topics from the catalog, in the sitemap); share buttons on the episode page (X, LinkedIn, Facebook, WhatsApp, copy link with the `#t=` position); guide for guests (`/share-guide.html`). `make produce` now runs `scripts/catalog.mjs`, so a new episode gets its guest and topic links.
 - MP3 format (2026-11-18): new episodes are 128 kbps constant bit rate, with ID3 tags (Hebrew title, show name, episode number, year) and the episode cover in the file (`COVER_IMAGE`; the show cover when there is none). Old episodes are not changed.
 - Episode 523 published (2026-11-18): cold open with two quotes of the guest (offset 20.4 s), OpenSearch logo, MP3 on R2 and S3. Cold open fault corrected in the script: the model answer in a list was dropped, and fast speech gave too few pauses for a clean cut. Note: `CLOUDFLARE_API_TOKEN` is locked to an IP address, so Claude cannot purge the CDN cache; a replaced MP3 can stay cached for up to 4 hours. For 523 the MP3 has a new name for this reason (`…_v2.mp3`). When an MP3 is replaced, give it a new name. `make mcp-update` must run without `CLOUDFLARE_API_TOKEN` in the environment (`env -u CLOUDFLARE_API_TOKEN make mcp-update`).
 - Production routine (2026-11-18): Hebrew blog title (`523: <Hebrew title>`; an English `TITLE` is translated, the slug stays English), Word notes (`NOTES=file.docx`), speaker balance (each speaker gets the same level, measured while that speaker talks), true-peak limiter (final peak below -1 dBFS).
@@ -78,6 +75,8 @@ Reach:
 - Cold open: shorter (maximum 2 quotes, 20 s) with a sentence check. Ran: "much better" (2026-11-14).
 
 ## Declined
+
+- The other items of the 2026-11-15 distribution audit (Ran, 2026-11-18: "stop, that's enough"): the Israeli directory requests, Podcast Republic, email newsletter, LinkedIn page, Wikipedia and Wikidata.
 
 - Noise reduction and patch reverb in the audio chain (2026-11-18, Ran let Claude decide; decision: add neither). Measurements: the quietest moments of 523 are 41 to 51 dB below the speech level, the same as the GarageBand export of 522, so a noise filter gives no audible gain and can add artifacts. The decay after speech in the GarageBand export of 522 and in our mix is equal within 0.5 dB at 50 to 300 ms, so the reverb sends of the patches add no measurable reverb. Examine again only if a recording has audible hiss or hum.
 

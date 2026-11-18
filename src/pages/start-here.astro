@@ -37,6 +37,7 @@ const topics = Object.entries(data.topics ?? {})
 	{topics.map((t) => (
 		<section class="start-topic" id={t.key}>
 			<h2 class="section-title">{t.label}</h2>
+			<p class="topic-all"><a href={`/topics/${t.key}.html`}>כל הפרקים בנושא ←</a></p>
 			<ul class="start-list">
 				{t.items.map(({ post, entry }) => (
 					<li>

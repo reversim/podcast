@@ -8,6 +8,7 @@ import { SHOW_LINKS } from '../../../lib/links';
 import { formatTime, plainDescription } from '../../../lib/episode';
 import { getAudioMeta } from '../../../lib/audioMeta';
 import { getTranscript } from '../../../lib/transcripts';
+import { SHARE_HEIGHT, SHARE_WIDTH, shareImageUrl } from '../../../lib/shareImage';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('posts', ({ data }) => !data.draft);
@@ -51,6 +52,14 @@ const durationLabel = (s: number) => (s >= 3600 ? `${Math.floor(s / 3600)} שע�
 const transcript = post.data.audio_url ? getTranscript(post.id) : [];
 const audioMeta = getAudioMeta(post.data.audio_url);
 const pageUrl = new URL(permalink, Astro.site).href;
+const shareText = post.data.title;
+const enc = encodeURIComponent;
+const shareLinks = [
+	{ label: 'X', href: `https://twitter.com/intent/tweet?text=${enc(shareText)}&url=${enc(pageUrl)}&via=reversim` },
+	{ label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${enc(pageUrl)}` },
+	{ label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${enc(pageUrl)}` },
+	{ label: 'WhatsApp', href: `https://wa.me/?text=${enc(`${shareText} ${pageUrl}`)}` },
+];
 const isoDuration = (s: number) => `PT${Math.floor(s / 3600)}H${Math.floor((s % 3600) / 60)}M${s % 60}S`;
 const jsonLd = post.data.audio_url
 	? {
@@ -90,7 +99,8 @@ const breadcrumbs = {
 	title={`${post.data.title} | רברס עם פלטפורמה`}
 	canonical={permalink}
 	description={description}
-	image={post.data.cover_image}
+	image={post.data.audio_url ? shareImageUrl(post.id) : post.data.cover_image}
+	largeImage={post.data.audio_url ? { width: SHARE_WIDTH, height: SHARE_HEIGHT } : undefined}
 	ogType="article"
 >
 	<link slot="head" rel="alternate" type="text/markdown" title="Markdown" href={permalink.replace(/\.html$/, '.md')} />
@@ -124,7 +134,7 @@ const breadcrumbs = {
 					</a>
 				))}
 				{entry.topics.map((t) => (
-					<a class="fact-chip" href={`/start-here.html#${t}`}>{TOPIC_LABELS[t] ?? t}</a>
+					<a class="fact-chip" href={`/topics/${t}.html`}>{TOPIC_LABELS[t] ?? t}</a>
 				))}
 			</div>
 		)}
@@ -152,6 +162,14 @@ const breadcrumbs = {
 				<a href={SHOW_LINKS.apple} target="_blank" rel="noreferrer noopener">Apple Podcasts</a>
 				<a href={SHOW_LINKS.feed}>RSS</a>
 				<a href={post.data.audio_url} download>הורדת MP3</a>
+			</aside>
+		)}
+		{post.data.audio_url && (
+			<aside class="listen-on share-row">
+				<span>לשתף את הפרק:</span>
+				{shareLinks.map((s) => <a href={s.href} target="_blank" rel="noreferrer noopener">{s.label}</a>)}
+				<button type="button" class="share-copy" data-url={pageUrl}>העתקת קישור</button>
+				<a class="share-guide-link" href="/share-guide.html">מדריך שיתוף לאורחים</a>
 			</aside>
 		)}
 		{post.data.legacy_url && (
@@ -183,6 +201,21 @@ const breadcrumbs = {
 		</nav>
 	)}
 </BaseLayout>
+
+<script is:inline>
+	// "Copy link" in the share row. The link keeps the current "#t=" position, so a guest can share a moment.
+	(function () {
+		var button = document.querySelector('.share-copy');
+		if (!button) return;
+		var label = button.textContent;
+		button.addEventListener('click', function () {
+			var url = button.dataset.url + (/^#t=\d+$/.test(location.hash) ? location.hash : '');
+			var done = function () { button.textContent = 'הקישור הועתק'; setTimeout(function () { button.textContent = label; }, 2000); };
+			if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { window.prompt('', url); });
+			else window.prompt('', url);
+		});
+	})();
+</script>
 
 <script is:inline>
 	// Timestamps: "[MM:SS]" chapter headings and transcript lines seek the audio player. "#t=75" in the URL does the same.

@@ -1,0 +1,54 @@
+---
+// Guide for guests: how to share their episode.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllPosts, getPostPermalink } from '../lib/posts';
+import { SHOW_LINKS } from '../lib/links';
+
+const latest = (await getAllPosts()).find((p) => p.data.audio_url);
+const example = latest ? new URL(getPostPermalink(latest), Astro.site).href : 'https://www.reversim.com';
+---
+
+<BaseLayout title="מדריך שיתוף לאורחים | רברס עם פלטפורמה" description="התארחתם ברברס עם פלטפורמה? כך משתפים את הפרק ב-LinkedIn, ב-X, ב-Facebook וב-WhatsApp: איזה קישור לשתף, איך לקשר לרגע מסוים בפרק ואת מי לתייג.">
+	<section class="article">
+		<h1>מדריך שיתוף לאורחים</h1>
+		<div class="content">
+			<p>התארחתם בפרק? תודה! שיתוף שלכם הוא הדרך הטובה ביותר להביא את הפרק לאנשים שמכירים אתכם. הנה איך עושים את זה בכמה דקות.</p>
+
+			<h2>1. משתפים את הקישור לעמוד הפרק</h2>
+			<ul class="guide-steps">
+				<li>הקישור הנכון הוא העמוד של הפרק באתר, לדוגמה: <a href={example} dir="ltr">{example}</a></li>
+				<li>בעמוד יש נגן, סיכום הפרק, קישורים לכל אפליקציות הפודקאסטים ותמלול מלא. מי שמקבל את הקישור יכול להאזין מיד, בלי להתקין שום דבר.</li>
+				<li>כשמדביקים את הקישור ב-LinkedIn, ב-X, ב-Facebook או ב-WhatsApp, מופיעה אוטומטית תמונה גדולה של הפרק. אין צורך לצרף תמונה.</li>
+			</ul>
+
+			<h2>2. כפתורי השיתוף</h2>
+			<ul class="guide-steps">
+				<li>בתחתית כל עמוד פרק יש שורה "לשתף את הפרק" עם כפתורים ל-X, ל-LinkedIn, ל-Facebook ול-WhatsApp, וכפתור "העתקת קישור".</li>
+				<li>לחיצה על כפתור פותחת פוסט חדש עם הקישור. מוסיפים כמה מילים משלכם ומפרסמים.</li>
+			</ul>
+
+			<h2>3. קישור לרגע מסוים בפרק</h2>
+			<ul class="guide-steps">
+				<li>לחיצה על חותמת זמן בעמוד הפרק (בכותרות הפרקים או בתמלול) מנגנת מאותה נקודה ומעדכנת את הכתובת, לדוגמה <code dir="ltr">#t=754</code>.</li>
+				<li>לחיצה על "העתקת קישור" אחרי כן מעתיקה קישור שנפתח בדיוק ברגע הזה. זה שימושי כשרוצים לשתף ציטוט או נקודה אחת מהשיחה.</li>
+			</ul>
+
+			<h2>4. מה לכתוב</h2>
+			<ul class="guide-steps">
+				<li>פוסט אישי וקצר עובד הכי טוב: על מה דיברנו, דבר אחד מעניין שנאמר בפרק, ולמי כדאי להאזין.</li>
+				<li>ב-LinkedIn כדאי לשים את הקישור בגוף הפוסט ולתייג את המנחים, רן תבורי ואורי להב, ואת החברה שלכם.</li>
+				<li>ב-X אפשר לתייג את <a href={SHOW_LINKS.x} target="_blank" rel="noreferrer noopener" dir="ltr">@reversim</a>. נשמח לשתף הלאה.</li>
+				<li>ערוצים פנימיים עובדים מצוין: Slack של החברה, קבוצות WhatsApp מקצועיות וניוזלטר של הצוות.</li>
+			</ul>
+
+			<h2>5. עוד מקומות לקישור</h2>
+			<ul class="guide-steps">
+				<li>עמוד ה-LinkedIn האישי: אפשר להוסיף את הפרק תחת "Featured".</li>
+				<li>הבלוג או אתר החברה: אפשר לקשר לעמוד הפרק, או לשבץ את קובץ ה-MP3 שמופיע בעמוד ("הורדת MP3").</li>
+				<li>מי שמעדיף להאזין באפליקציה ימצא את הפרק ב-<a href={SHOW_LINKS.spotify} target="_blank" rel="noreferrer noopener">Spotify</a>, ב-<a href={SHOW_LINKS.apple} target="_blank" rel="noreferrer noopener">Apple Podcasts</a> וב-<a href={SHOW_LINKS.youtube} target="_blank" rel="noreferrer noopener">YouTube</a>.</li>
+			</ul>
+
+			<p>מצאתם טעות בעמוד הפרק או בתמלול? כתבו לנו (הפרטים בעמוד <a href="/about.html">אודות</a>) ונתקן.</p>
+		</div>
+	</section>
+</BaseLayout>

@@ -15513,5 +15513,27 @@
 		],
 		"hook": "איך Lusha בנתה בעצמה מוח ארגוני עבור סוכני AI, שילבה אונטולוגיה ו-PGVector וניהלה הרשאות ידע.",
 		"evergreen": 4
+	},
+	"2026-11-523-opensearch-with-dotan-from-aws": {
+		"kind": "interview",
+		"guests": [
+			{
+				"name_he": "דותן הורוביץ",
+				"name_en": "Dotan Horovits",
+				"company": "AWS",
+				"role": "מוביל תחום ה-Open Source גלובלית"
+			}
+		],
+		"companies": [
+			"AWS",
+			"OpenSearch"
+		],
+		"topics": [
+			"databases",
+			"opensource",
+			"ai"
+		],
+		"hook": "ההבדלים בין חיפוש לקסיקלי לסמנטי, עקרונות חיפוש היברידי, והתאמת OpenSearch לעידן ה-RAG וה-Agents.",
+		"evergreen": 4
 	}
 }

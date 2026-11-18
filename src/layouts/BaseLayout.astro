@@ -10,6 +10,7 @@ const {
 	canonical,
 	image = '/podcast-cover.png',
 	ogType = 'website',
+	largeImage, // { width, height } when the image is a wide share image
 } = Astro.props;
 // GitHub Pages serves every page at both /x and /x.html. Point Google at the .html form,
 // which matches the legacy Blogger URLs and the internal links.
@@ -38,7 +39,10 @@ const gaId = import.meta.env.PUBLIC_GA_ID ?? 'G-Y4CQKFBQGR';
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
 		<meta property="og:image" content={imageUrl} />
-		<meta name="twitter:card" content="summary" />
+		{largeImage && <meta property="og:image:width" content={String(largeImage.width)} />}
+		{largeImage && <meta property="og:image:height" content={String(largeImage.height)} />}
+		<meta name="twitter:card" content={largeImage ? 'summary_large_image' : 'summary'} />
+		{largeImage && <meta name="twitter:image" content={imageUrl} />}
 		<meta name="twitter:site" content="@reversim" />
 		<link rel="alternate" type="application/rss+xml" title="רברס עם פלטפורמה" href="https://feed.reversim.com" />
 		<link rel="alternate" type="text/plain" title="llms.txt" href={withBase('/llms.txt')} />

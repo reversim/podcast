@@ -1,4 +1,5 @@
 import { getAllPosts, getPostPermalink } from '../lib/posts';
+import { TOPIC_LABELS } from '../lib/catalog';
 
 const PAGE_SIZE = 12; // keep in sync with src/pages/page/[page].astro
 
@@ -15,6 +16,8 @@ export async function GET({ site }: { site: URL }) {
 		{ loc: '/companies.html' },
 		{ loc: '/summit-talks.html' },
 		{ loc: '/mcp.html' },
+		{ loc: '/share-guide.html' },
+		...Object.keys(TOPIC_LABELS).map((topic) => ({ loc: `/topics/${topic}.html` })),
 		...Array.from({ length: pageCount }, (_, i) => ({ loc: `/page/${i + 1}.html` })),
 		...posts.map((post) => ({
 			loc: getPostPermalink(post),
