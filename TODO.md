@@ -1,13 +1,14 @@
 # Open tasks, decisions and ideas
 
 Claude keeps this list. Claude shows the open items at the end of each work session until the list is empty.
-Last update: 2026-11-17.
+Last update: 2026-11-18.
 
 ## Decisions for Ran
 
 | # | Item | Status |
 |---|------|--------|
 | D3 | Which items from the 2026-11-15 distribution audit to do (see "Audit findings"). | Waiting for Ran. |
+| D6 | Audio best-practice options (2026-11-18): (a) constant bit rate MP3 (128 kbps mono) in place of VBR, for seek and duration in all apps; (b) ID3 tags and cover art in the MP3; (c) a light noise reduction; (d) the reverb of the GarageBand patches. | Waiting for Ran. |
 
 ## Tasks for Claude (after the decisions)
 
@@ -42,6 +43,8 @@ Reach:
 
 ## Done
 
+- Episode 523 published (2026-11-18): cold open with two quotes of the guest (offset 20.4 s), OpenSearch logo, MP3 on R2 and S3. Cold open fault corrected in the script: the model answer in a list was dropped, and fast speech gave too few pauses for a clean cut. Note: `CLOUDFLARE_API_TOKEN` is locked to an IP address, so Claude cannot purge the CDN cache; a replaced MP3 can stay cached for up to 4 hours.
+- Production routine (2026-11-18): Hebrew blog title (`523: <Hebrew title>`; an English `TITLE` is translated, the slug stays English), Word notes (`NOTES=file.docx`), speaker balance (each speaker gets the same level, measured while that speaker talks), true-peak limiter (final peak below -1 dBFS).
 - Sound quality (2026-11-17): the production script used the raw GarageBand tracks with no track effects and an aggressive normalizer. Now `scripts/post-production.mjs` reads the GarageBand patches in `assets/patches/` (`Ran.patch`, `Ori.patch`, `default.patch` for guests; EQ and compressors) and applies them to each track, then sets the speech to -16 LUFS with a fixed gain. To change a sound: save the patch in GarageBand and replace the file. Not reproduced: reverb sends, exact de-esser values. Episode 522 was made again and replaced on R2 and S3 (same timeline, no welcome line, no cold open). The old file is at `~/Downloads/reversim522-published-before-2026-11-17.mp3`. No raw tracks exist for episodes before 522.
 - YouTube numbers (2026-11-17): the analytics Worker reads the playlist each day with the YouTube Data API (`analytics/worker/src/youtube.ts`, secret `YOUTUBE_API_KEY`). It stores `views_total`, `videos_public` and `videos_private` for platform `youtube`. Note: `wrangler` fails when `CLOUDFLARE_API_TOKEN` from `.env` is in the environment (IP limit); use `env -u CLOUDFLARE_API_TOKEN npx wrangler ...`.
 - YouTube link (2026-11-16): the playlist is in `SHOW_LINKS.youtube`, the footer and `sameAs`.

@@ -26,7 +26,8 @@
  *   --input, -i        Input MP3/WAV file (required unless --mix-wavs)
  *   --mix-wavs DIR     GarageBand .band dir; mixes all WAV files in Media/Audio Files/
  *   --episode, -e      Episode number (required)
- *   --title, -t        Episode title in Hebrew (required)
+ *   --title, -t        Episode title (required). The blog title is Hebrew: an English title is translated,
+ *                      a Hebrew title is used as it is. The post title is "<episode>: <Hebrew title>".
  *   --date, -d         Date YYYY-MM-DD (default: today)
  *   --slug, -s         URL slug (auto-derived from episode number if not provided)
  *   --intro            Intro MP3 (default: $REVERSIM_INTRO or assets/intro.mp3)
@@ -40,7 +41,7 @@
  *   --tags             Comma-separated tags
  *   --transcript PATH  Use this transcript file instead of running Gemini transcription
  *   --notes            Episode notes: Google Doc URL (must be publicly shared)
- *                      or local file path. All links from the notes will be
+ *                      or local file path (text, Markdown or Word .docx). All links from the notes will be
  *                      embedded inline in the blog post at the matching topic.
  *   --cold-open MODE   ask (default in a terminal): show the quotes and ask for approval
  *                      auto: use the selected quotes without a question
@@ -291,7 +292,18 @@ async function loadNotes(notesArg) {
   }
 
   if (existsSync(notesArg)) {
-    const text = readFileSync(notesArg, 'utf8');
+    let text;
+    if (/\.(docx?|rtf)$/i.test(notesArg)) {
+      // Word file: macOS textutil converts it to HTML; keep the links as Markdown links.
+      const html = runCapture(`textutil -convert html -stdout "${notesArg}"`).replace(/<head>[\s\S]*?<\/head>/, '');
+      text = html
+        .replace(/<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, (_, url, label) => `[${label.replace(/<[^>]+>/g, '')}](${url})`)
+        .replace(/<li[^>]*>/g, '* ').replace(/<\/(p|li|h\d|div)>/g, '\n').replace(/<[^>]+>/g, '')
+        .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;|&rsquo;/g, "'").replace(/&nbsp;/g, ' ')
+        .replace(/\n\s*\n+/g, '\n').trim();
+    } else {
+      text = readFileSync(notesArg, 'utf8');
+    }
     console.log(`  ✓ Notes loaded from ${notesArg} (${text.length.toLocaleString()} chars)`);
     return text;
   }
@@ -301,6 +313,7 @@ async function loadNotes(notesArg) {
 }
 
 async function promptCoverImage() {
+  if (!process.stdin.isTTY) return null;  // no terminal: no question
   const { createInterface } = await import('readline');
   const rl = createInterface({ input: process.stdin, output: process.stdout });
   return new Promise(resolve => {
@@ -326,6 +339,7 @@ const VOICE = {
   EQ: 'equalizer=f=250:t=q:w=1:g=2.5,equalizer=f=4000:t=q:w=0.8:g=1.5,highshelf=f=7000:g=3',
   COMPRESSOR: 'acompressor=threshold=0.125:ratio=2:attack=15:release=250:knee=6',
   DEESSER: 'deesser=i=0.4',
+  MAX_TRIM: 6,          // dB — limit of the speaker balance correction
   MAX_LRA: 8,           // a pre-mixed input with a larger loudness range gets a slow leveler
   LEVELER: 'dynaudnorm=f=500:g=31:m=6:p=0.7',
 };
@@ -396,15 +410,28 @@ export function measureLoudness(file, pre = '') {
   return { i: num(/I:\s+(-?[\d.]+) LUFS/), lra: num(/LRA:\s+(-?[\d.]+) LU/), peak: num(/Peak:\s+(-?[\d.]+) dBFS/) };
 }
 
+// RMS level (dB) of each half-second frame of one stream. graph = filter statements that make the label.
+function frameLevels(inputArgs, label, graph = []) {
+  const stmts = [...graph, `${label}asetnsamples=22050,astats=metadata=1:reset=1,ametadata=print:key=lavfi.astats.Overall.RMS_level:file=-[m]`];
+  const out = execSync(`ffmpeg -hide_banner -nostats -v error ${inputArgs} -filter_complex "${stmts.join('; ')}" -map "[m]" -f null -`, { encoding: 'utf8', stdio: 'pipe', maxBuffer: 256 * 1024 * 1024 });
+  return [...out.matchAll(/RMS_level=(\S+)/g)].map(m => (m[1] === '-inf' ? -120 : Math.max(-120, parseFloat(m[1]))));
+}
+
 export function voiceChain(gainDb) {
   return [`highpass=f=${VOICE.HIGHPASS}`, `volume=${gainDb.toFixed(2)}dB`, VOICE.GATE, VOICE.EQ, VOICE.COMPRESSOR, VOICE.DEESSER].join(',');
+}
+
+// A limiter that works on the true peak: it runs at 4x the sample rate, so peaks between samples are limited too.
+// The Apple limit is -1 dBFS true peak; the MP3 encode adds about 0.5 dB.
+function truePeakLimiter(limit) {
+  return `aresample=176400,alimiter=limit=${limit}:level=false,aresample=44100`;
 }
 
 // Writes the speech at TARGET_LUFS with a limiter. A fixed gain: no pumping, pauses stay quiet.
 function levelSpeech(input, output, pre = '') {
   const before = measureLoudness(input, pre);
   let gain = VOICE.TARGET_LUFS - before.i;
-  const render = () => run(`ffmpeg -y -v error -i "${input}" -ac 1 -af "${pre ? pre + ',' : ''}volume=${gain.toFixed(2)}dB,alimiter=limit=${VOICE.PEAK}:level=false" "${output}"`, { silent: true });
+  const render = () => run(`ffmpeg -y -v error -i "${input}" -ac 1 -af "${pre ? pre + ',' : ''}volume=${gain.toFixed(2)}dB,${truePeakLimiter(VOICE.PEAK)}" "${output}"`, { silent: true });
   render();
   let after = measureLoudness(output);
   // The limiter removes a little loudness. Correct one time.
@@ -456,7 +483,34 @@ function mixWavTracks(bandDir, output, patchesDir) {
   });
   const inputs = wavFiles.map(f => `-i "${f}"`).join(' ');
   const n = wavFiles.length;
-  const filter = `${chains.join('; ')}; ${wavFiles.map((_, i) => `[t${i}]`).join('')}amix=inputs=${n}:duration=longest:normalize=0[out]`;
+
+  // Speaker balance. The patches do not make the speakers equally loud (a compressor depends on the input level).
+  // Measure the speech loudness of each processed track and trim each track to the mean.
+  // The level of a speaker = the mean level of the processed track in the half-second frames where the raw track
+  // of that speaker is clearly the loudest. (The loudness of the full track is wrong for a speaker who talks little:
+  // it then measures the other voices that the microphone hears.)
+  const rawLevels = wavFiles.map(f => frameLevels(`-i "${f}"`, '[0:a]'));
+  const processedLevels = wavFiles.map((f, i) => {
+    const own = chains.filter(c => c.startsWith(`[${i}:a]`) || c.startsWith(`[p${i}s`)).map(c => c.replaceAll(`[${i}:a]`, '[0:a]'));
+    return frameLevels(`-i "${f}"`, `[t${i}]`, own);
+  });
+  const frames = Math.min(...rawLevels.map(l => l.length), ...processedLevels.map(l => l.length));
+  const sum = wavFiles.map(() => 0), count = wavFiles.map(() => 0);
+  for (let k = 0; k < frames; k++) {
+    const lv = rawLevels.map(l => l[k]);
+    const top = lv.indexOf(Math.max(...lv));
+    const second = Math.max(...lv.filter((_, i) => i !== top), -200);
+    if (lv[top] > -32 && lv[top] - second > 8) { sum[top] += processedLevels[top][k]; count[top]++; }
+  }
+  // A speaker with less than 20 s of clear speech gets no correction.
+  const processed = sum.map((x, i) => count[i] >= 40 ? x / count[i] : NaN);
+  const valid = processed.filter(Number.isFinite);
+  const mean = valid.reduce((a, b) => a + b, 0) / (valid.length || 1);
+  const trims = processed.map(x => Number.isFinite(x) ? Math.max(-VOICE.MAX_TRIM, Math.min(VOICE.MAX_TRIM, mean - x)) : 0);
+  console.log(`  Speaker balance: ${wavFiles.map((f, i) => `${basename(f).replace(/[#.].*$/, '')} ${trims[i] >= 0 ? '+' : ''}${trims[i].toFixed(1)} dB`).join(', ')}`);
+  trims.forEach((t, i) => chains.push(`[t${i}]volume=${t.toFixed(2)}dB[b${i}]`));
+
+  const filter = `${chains.join('; ')}; ${wavFiles.map((_, i) => `[b${i}]`).join('')}amix=inputs=${n}:duration=longest:normalize=0[out]`;
 
   // FLAC: no quality loss before the final MP3.
   run(`ffmpeg -y -v error ${inputs} -filter_complex "${filter}" -map "[out]" "${output}"`);
@@ -667,7 +721,7 @@ function processAudio(opts, inputMp3, outputMp3) {
 
   // ── MIX ────────────────────────────────────────────────────────────────────
   const n = streams.length;
-  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0,alimiter=limit=0.79:level=false[out]`);
+  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0,${truePeakLimiter(0.79)}[out]`);
 
   run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${outputMp3}"`);
 
@@ -891,7 +945,9 @@ const COLD_OPEN = {
   CLIP_MIN: 3,        // s
   CLIP_MAX: 12,       // s
   MAX_CLIPS: 2,
-  EXTEND: 3,          // s — maximum move of a cut to the next pause when the check finds a cut-off sentence
+  EXTEND: 5,          // s — maximum move of a cut to the adjacent pause when the check finds a cut-off sentence
+  SILENCE_NOISE: '-28dB', // processed speech has a high floor between words, so the pause threshold is high
+  SILENCE_MIN: 0.12,  // s — fast speakers make short pauses
   CHECKS: 3,          // attempts to get a clean cut
   GAP: 0.35,          // s — silence between clips
   TAIL_GAP: 0.05,     // s — silence between the last clip and the intro music (short: the music answers the quote)
@@ -1018,9 +1074,14 @@ Return JSON: {"found": true or false, "start": seconds from the start of the cli
   reportUsage('Cold open locate', result.response.usageMetadata, GEMINI_MODEL);
   try { run(`rm -f "${windowFile}"`, { silent: true }); } catch {}
   let pos;
-  try { pos = JSON.parse(result.response.text()); } catch { return null; }
-  if (!pos || !pos.found || !Number.isFinite(pos.start) || !Number.isFinite(pos.end) || pos.end <= pos.start) return null;
-  const silences = detectSilences(bodyMp3, from, COLD_OPEN.WINDOW);
+  try { pos = unwrapJson(JSON.parse(result.response.text())); } catch { pos = null; }
+  if (pos) { pos.start = Number(pos.start); pos.end = Number(pos.end); }
+  if (!pos || !pos.found || !Number.isFinite(pos.start) || !Number.isFinite(pos.end) || pos.end <= pos.start) {
+    if (process.env.COLD_OPEN_DEBUG) console.log(`    locate: ${result.response.text().replace(/\s+/g, ' ')}`);
+    return null;
+  }
+  if (process.env.COLD_OPEN_DEBUG) console.log(`    locate: ${JSON.stringify(pos)} (window starts at ${from} s)`);
+  const silences = detectSilences(bodyMp3, from, COLD_OPEN.WINDOW, COLD_OPEN.SILENCE_NOISE, COLD_OPEN.SILENCE_MIN);
   const start = snapToSilence(from + pos.start, silences, 'start', COLD_OPEN.SNAP);
   const end = snapToSilence(from + pos.end, silences, 'end', COLD_OPEN.SNAP);
   const clip = await checkCut(genAI, bodyMp3, { start, end }, silences, workdir, index);
@@ -1040,6 +1101,21 @@ export function extendToPause(clip, silences, edge, maxMove = COLD_OPEN.EXTEND) 
   return prev ? { ...clip, start: Math.max(prev.start, prev.end - 0.2) } : null;
 }
 
+// Moves one edge of a clip in to the nearest pause inside the clip. Returns the new clip, or null.
+export function trimToPause(clip, silences, edge, maxMove = COLD_OPEN.EXTEND) {
+  if (edge === 'end') {
+    const prev = silences.filter(s => s.start < clip.end - 0.3 && clip.end - s.start <= maxMove && s.start > clip.start).sort((a, b) => b.start - a.start)[0];
+    return prev ? { ...clip, end: Math.min(prev.end, prev.start + 0.15) } : null;
+  }
+  const next = silences.filter(s => s.end > clip.start + 0.3 && s.end - clip.start <= maxMove && s.end < clip.end).sort((a, b) => a.end - b.end)[0];
+  return next ? { ...clip, start: Math.max(next.start, next.end - 0.2) } : null;
+}
+
+// The model sometimes puts the JSON object in an array.
+function unwrapJson(value) {
+  return Array.isArray(value) ? value[0] : value;
+}
+
 // Gemini hears the cut clip and says if it starts and ends on a full sentence. A bad edge moves to the adjacent pause.
 // Returns the clean clip, or null.
 async function checkCut(genAI, bodyMp3, clip, silences, workdir, index) {
@@ -1056,13 +1132,19 @@ A clip that stops in the middle of a word, in the middle of a sentence, or on a 
       ], 'Cold open check');
       reportUsage('Cold open check', result.response.usageMetadata, GEMINI_MODEL);
       let verdict;
-      try { verdict = JSON.parse(result.response.text()); } catch { return null; }
+      try { verdict = unwrapJson(JSON.parse(result.response.text())); } catch { return null; }
+      if (!verdict) return null;
       console.log(`    check ${attempt + 1}: start ${verdict.starts_clean ? 'ok' : 'BAD'}, end ${verdict.ends_clean ? 'ok' : 'BAD'}`);
+      if (process.env.COLD_OPEN_DEBUG) console.log(`      ${clip.start.toFixed(1)}–${clip.end.toFixed(1)} s: ${result.response.text().replace(/\s+/g, ' ')}`);
       if (verdict.starts_clean && verdict.ends_clean) return clip;
       let next = clip;
-      if (!verdict.ends_clean) next = next && extendToPause(next, silences, 'end');
-      if (!verdict.starts_clean) next = next && extendToPause(next, silences, 'start');
-      if (!next) return null;
+      // A bad edge moves out to the adjacent pause. When there is no pause, or the clip becomes too long, it moves in.
+      for (const [edge, clean] of [['end', verdict.ends_clean], ['start', verdict.starts_clean]]) {
+        if (clean || !next) continue;
+        const out = extendToPause(next, silences, edge);
+        next = out && out.end - out.start <= COLD_OPEN.CLIP_MAX ? out : trimToPause(next, silences, edge);
+      }
+      if (!next || next.end - next.start < COLD_OPEN.CLIP_MIN) return null;
       clip = next;
     }
     return null;
@@ -1149,6 +1231,29 @@ async function addColdOpen(opts, bodyMp3, outputMp3, transcript, infoFile) {
 
 // ─── Step 3: Generate blog post ───────────────────────────────────────────────
 
+// The blog title is in Hebrew ("523: OpenSearch עם דותן מ-AWS"). The slug stays English for the permalink.
+// A title that already has Hebrew letters is used as it is; an English title is translated.
+async function hebrewTitle(model, opts) {
+  if (/[\u0590-\u05FF]/.test(opts.title)) return opts.title;
+  const prompt = `Translate this podcast episode title to Hebrew for the Hebrew tech podcast "רברס עם פלטפורמה".
+Keep names of products, companies and technologies in Latin letters (for example OpenSearch, AWS, Kubernetes).
+Write names of persons in Hebrew letters. Common Hebrew phrasing: "X with Dana from Acme" → "X עם דנה מ-Acme" (a well-known Israeli company name can be in Hebrew letters).
+Examples: "Company brain with Shmulik from Lusha" → "מוח חברה עם שמוליק מלושה"; "Bumpers 92" → "באמפרס 92"; "Carburetor 42" → "קרבורטור 42".
+Output only the Hebrew title on one line, no quotes, no episode number.
+
+Title: ${opts.title}`;
+  try {
+    const result = await generateWithRetry(model, prompt, 'Hebrew title');
+    reportUsage('Hebrew title', result.response.usageMetadata, GEMINI_MODEL);
+    const title = result.response.text().trim().split('\n')[0].replace(/^["'״]+|["'״]+$/g, '').replace(/"/g, '״');
+    if (/[\u0590-\u05FF]/.test(title)) { console.log(`  Hebrew title: ${title}`); return title; }
+  } catch (err) {
+    console.warn(`  ⚠ Hebrew title failed (${err.message || err})`);
+  }
+  console.warn('  ⚠ No Hebrew title; the post uses the title as given. Edit the title in the post.');
+  return opts.title;
+}
+
 async function generatePost(opts, transcript, audioUrl) {
   console.log('\n▶ Step 3: Generating Hebrew blog post');
   normalizeCoverImage(opts);
@@ -1220,6 +1325,7 @@ ${transcript}`;
   reportUsage('Blog post', result.response.usageMetadata, GEMINI_MODEL);
 
   // Build frontmatter
+  const postTitle = await hebrewTitle(model, opts);
   const [year, month] = opts.date.split('-');
   const tagsYaml = opts.tags.length
     ? '\ntags:\n' + opts.tags.map(t => `  - ${t}`).join('\n')
@@ -1229,7 +1335,7 @@ ${transcript}`;
 
   const frontmatter =
     `---\n` +
-    `title: "${opts.episode} - ${opts.title}"\n` +
+    `title: "${opts.episode}: ${postTitle}"\n` +
     `date: ${opts.date}T00:00:00.000Z\n` +
     `episode: ${opts.episode}\n` +
     `audio_url: ${audioUrl}${tagsYaml}${coverImage}\n` +
