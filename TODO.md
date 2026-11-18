@@ -16,7 +16,7 @@ Last update: 2026-11-18.
 |---|------|------------|
 ## Reminders with dates
 
-- YouTube playlist `PLPrpPQF5fJrM` (checked 2026-11-17): the RSS import is in progress and the videos are private. Ran must publish them in YouTube Studio. The site and the daily job point to this playlist.
+- YouTube playlist `PLPrpPQF5fJrM` (checked 2026-11-18): 72 of 824 episodes are uploaded (523 down to 450), all public. The RSS import continues. Check later that new uploads are public too.
 - Amazon Music numbers: the first values are 0 (listed 2026-11-15). When real numbers come, check that `followers` is the full count and that the cookies still work (lifetime not known).
 - 2026-11-19 or later: one-week CPU check of the analytics Worker.
 

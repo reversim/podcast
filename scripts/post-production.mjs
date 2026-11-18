@@ -169,6 +169,11 @@ function parseArgs() {
 // Audio input: 25 tokens/second (e.g. 90-min episode = 135k tokens = ~$0.27)
 // Long context (>200k tokens): $4.00 in / $18.00 out
 const GEMINI_MODEL = 'gemini-3.1-pro-preview';
+
+// Constant bit rate: players calculate the duration and the seek position exactly (VBR files can show both wrong).
+const MP3_ENCODE = '-c:a libmp3lame -b:a 128k';
+const SHOW_NAME = 'רברס עם פלטפורמה';
+const SHOW_COVER = join(REPO_ROOT, 'public/podcast-cover.png');
 const GEMINI_PRICING = {
   'gemini-3.1-pro-preview': { inputPerM: 2.00, outputPerM: 12.00 },
   'gemini-3-pro-preview':  { inputPerM: 2.00, outputPerM: 12.00 },
@@ -611,7 +616,7 @@ function processAudio(opts, inputMp3, outputMp3) {
 
   // Fast path: no music at all
   if (!hasIntro && !hasOutro) {
-    run(`ffmpeg -y -v error -i "${normalizedSpeech}" -q:a 2 "${outputMp3}"`);
+    run(`ffmpeg -y -v error -i "${normalizedSpeech}" ${MP3_ENCODE} "${outputMp3}"`);
     run(`rm -f "${normalizedSpeech}"`, { silent: true });
     return;
   }
@@ -723,7 +728,7 @@ function processAudio(opts, inputMp3, outputMp3) {
   const n = streams.length;
   filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0,${truePeakLimiter(0.79)}[out]`);
 
-  run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${outputMp3}"`);
+  run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" ${MP3_ENCODE} "${outputMp3}"`);
 
   try { run(`rm -f "${normalizedSpeech}"`, { silent: true }); } catch {}
   console.log(`  ✓ Processed audio → ${outputMp3}`);
@@ -1164,7 +1169,7 @@ function renderColdOpen(bodyMp3, clips, outFile, withBody) {
   });
   const labels = clips.map((_, i) => `[c${i}]`).join('') + (withBody ? '[0:a]' : '');
   filters.push(`${labels}concat=n=${clips.length + (withBody ? 1 : 0)}:v=0:a=1[out]`);
-  run(`ffmpeg -y -v error -i "${bodyMp3}" -filter_complex "${filters.join('; ')}" -map "[out]" -q:a 2 "${outFile}"`, { silent: true });
+  run(`ffmpeg -y -v error -i "${bodyMp3}" -filter_complex "${filters.join('; ')}" -map "[out]" ${MP3_ENCODE} "${outFile}"`, { silent: true });
 }
 
 async function askLine(question) {
@@ -1235,6 +1240,12 @@ async function addColdOpen(opts, bodyMp3, outputMp3, transcript, infoFile) {
 // A title that already has Hebrew letters is used as it is; an English title is translated.
 async function hebrewTitle(model, opts) {
   if (/[\u0590-\u05FF]/.test(opts.title)) return opts.title;
+  // The MP3 tags and the post must have the same title, so the translation is kept in the workdir.
+  const cacheFile = join(opts.workdir, `_title_${opts.episode}.json`);
+  try {
+    const cached = JSON.parse(readFileSync(cacheFile, 'utf8'));
+    if (cached.source === opts.title && cached.title) return cached.title;
+  } catch {}
   const prompt = `Translate this podcast episode title to Hebrew for the Hebrew tech podcast "רברס עם פלטפורמה".
 Keep names of products, companies and technologies in Latin letters (for example OpenSearch, AWS, Kubernetes).
 Write names of persons in Hebrew letters. Common Hebrew phrasing: "X with Dana from Acme" → "X עם דנה מ-Acme" (a well-known Israeli company name can be in Hebrew letters).
@@ -1246,12 +1257,45 @@ Title: ${opts.title}`;
     const result = await generateWithRetry(model, prompt, 'Hebrew title');
     reportUsage('Hebrew title', result.response.usageMetadata, GEMINI_MODEL);
     const title = result.response.text().trim().split('\n')[0].replace(/^["'״]+|["'״]+$/g, '').replace(/"/g, '״');
-    if (/[\u0590-\u05FF]/.test(title)) { console.log(`  Hebrew title: ${title}`); return title; }
+    if (/[\u0590-\u05FF]/.test(title)) {
+      console.log(`  Hebrew title: ${title}`);
+      writeFileSync(cacheFile, JSON.stringify({ source: opts.title, title }));
+      return title;
+    }
   } catch (err) {
     console.warn(`  ⚠ Hebrew title failed (${err.message || err})`);
   }
   console.warn('  ⚠ No Hebrew title; the post uses the title as given. Edit the title in the post.');
   return opts.title;
+}
+
+// Writes ID3 tags and the show cover into the final MP3. Players that do not read the feed
+// (music players, cars) show these in place of the file name. The audio is not encoded again.
+async function tagMp3(file, opts) {
+  let title = opts.title;
+  if (process.env.GEMINI_API_KEY) {
+    const { GoogleGenerativeAI } = await import('@google/generative-ai');
+    const model = new GoogleGenerativeAI(process.env.GEMINI_API_KEY).getGenerativeModel({ model: GEMINI_MODEL });
+    title = await hebrewTitle(model, opts);
+  }
+  const quote = v => `"${String(v).replace(/(["\\$`])/g, '\\$1')}"`;
+  const tags = {
+    title: `${opts.episode}: ${title}`,
+    artist: SHOW_NAME,
+    album: SHOW_NAME,
+    album_artist: SHOW_NAME,
+    track: opts.episode,
+    date: opts.date.slice(0, 4),
+    genre: 'Podcast',
+    comment: 'https://www.reversim.com',
+  };
+  const meta = Object.entries(tags).map(([k, v]) => `-metadata ${k}=${quote(v)}`).join(' ');
+  const cover = existsSync(SHOW_COVER);
+  const tmp = `${file}.tagged.mp3`;
+  run(`ffmpeg -y -v error -i "${file}" ${cover ? `-i "${SHOW_COVER}" -map 0:a -map 1:v -c:v copy -disposition:v attached_pic -metadata:s:v title="Cover" -metadata:s:v comment="Cover (front)"` : '-map 0:a'} ` +
+    `-c:a copy -map_metadata -1 -id3v2_version 3 ${meta} "${tmp}"`, { silent: true });
+  renameSync(tmp, file);
+  console.log(`  ✓ ID3 tags${cover ? ' and cover' : ''}: ${tags.title}`);
 }
 
 async function generatePost(opts, transcript, audioUrl) {
@@ -1556,6 +1600,7 @@ async function main() {
   if (!existsSync(outputMp3) && existsSync(bodyMp3)) {
     if (transcript || opts.coldOpen === 'off') {
       await addColdOpen(opts, bodyMp3, outputMp3, transcript, coldOpenInfo);
+      await tagMp3(outputMp3, opts);
     } else {
       // A partial run (for example produce-audio) has no transcript yet. Do not make the final MP3 now,
       // or the cold open would be skipped for good.
