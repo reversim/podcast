@@ -8,7 +8,6 @@ Last update: 2026-11-18.
 | # | Item | Status |
 |---|------|--------|
 | D3 | Which items from the 2026-11-15 distribution audit to do (see "Audit findings"). | Waiting for Ran. |
-| D6 | Audio options that stay open (2026-11-18): (c) a light noise reduction; (d) the reverb of the GarageBand patches. | Waiting for Ran. |
 
 ## Tasks for Claude (after the decisions)
 
@@ -79,6 +78,8 @@ Reach:
 - Cold open: shorter (maximum 2 quotes, 20 s) with a sentence check. Ran: "much better" (2026-11-14).
 
 ## Declined
+
+- Noise reduction and patch reverb in the audio chain (2026-11-18, Ran let Claude decide; decision: add neither). Measurements: the quietest moments of 523 are 41 to 51 dB below the speech level, the same as the GarageBand export of 522, so a noise filter gives no audible gain and can add artifacts. The decay after speech in the GarageBand export of 522 and in our mix is equal within 0.5 dB at 50 to 300 ms, so the reverb sends of the patches add no measurable reverb. Examine again only if a recording has audible hiss or hum.
 
 - Social clips (2026-11-14: "don't like it, get rid of it"). The script is deleted.
 
