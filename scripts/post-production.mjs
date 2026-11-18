@@ -63,7 +63,7 @@
  */
 
 import { execSync } from 'child_process';
-import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync, copyFileSync, statSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync, copyFileSync, statSync, renameSync } from 'fs';
 import { resolve, dirname, join, basename, extname } from 'path';
 import { fileURLToPath } from 'url';
 
