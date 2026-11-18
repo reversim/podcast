@@ -2,7 +2,7 @@
 title: "523: OpenSearch עם דותן מ-AWS"
 date: 2026-11-18T00:00:00.000Z
 episode: 523
-audio_url: https://m2.reversim.com/reversim523-opensearch_with_dotan_from_aws.mp3
+audio_url: https://m2.reversim.com/reversim523-opensearch_with_dotan_from_aws_v2.mp3
 cover_image: /images/OpenSearch-Logo.png
 ---
 
