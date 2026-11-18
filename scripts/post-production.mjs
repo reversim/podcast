@@ -1269,7 +1269,29 @@ Title: ${opts.title}`;
   return opts.title;
 }
 
-// Writes ID3 tags and the show cover into the final MP3. Players that do not read the feed
+// The picture for the MP3: the episode cover when there is one, else the show cover.
+// The episode cover is made a PNG or JPEG of 1400 px or less. Returns a file path, or null.
+function mp3CoverFile(opts) {
+  const img = opts.coverImage;
+  if (img) {
+    const tmp = join(opts.workdir, `_cover_${opts.episode}`);
+    try {
+      let src = img.startsWith('/images/') ? join(REPO_ROOT, 'public', img) : resolve(img);
+      if (/^https?:/.test(img)) {
+        src = `${tmp}.download`;
+        run(`curl -sfL --max-time 30 -o "${src}" "${img}"`, { silent: true });
+      }
+      const out = `${tmp}${/\.png$/i.test(img) ? '.png' : '.jpg'}`;
+      run(`ffmpeg -y -v error -i "${src}" -vf "scale='min(1400,iw)':-2" -frames:v 1 -update 1 "${out}"`, { silent: true });
+      return out;
+    } catch {
+      console.warn(`  ⚠ The episode cover (${img}) is not usable for the MP3; the show cover is used.`);
+    }
+  }
+  return existsSync(SHOW_COVER) ? SHOW_COVER : null;
+}
+
+// Writes ID3 tags and the cover into the final MP3. Players that do not read the feed
 // (music players, cars) show these in place of the file name. The audio is not encoded again.
 async function tagMp3(file, opts) {
   let title = opts.title;
@@ -1290,12 +1312,13 @@ async function tagMp3(file, opts) {
     comment: 'https://www.reversim.com',
   };
   const meta = Object.entries(tags).map(([k, v]) => `-metadata ${k}=${quote(v)}`).join(' ');
-  const cover = existsSync(SHOW_COVER);
+  const coverFile = mp3CoverFile(opts);
+  const cover = Boolean(coverFile);
   const tmp = `${file}.tagged.mp3`;
-  run(`ffmpeg -y -v error -i "${file}" ${cover ? `-i "${SHOW_COVER}" -map 0:a -map 1:v -c:v copy -disposition:v attached_pic -metadata:s:v title="Cover" -metadata:s:v comment="Cover (front)"` : '-map 0:a'} ` +
+  run(`ffmpeg -y -v error -i "${file}" ${cover ? `-i "${coverFile}" -map 0:a -map 1:v -c:v copy -disposition:v attached_pic -metadata:s:v title="Cover" -metadata:s:v comment="Cover (front)"` : '-map 0:a'} ` +
     `-c:a copy -map_metadata -1 -id3v2_version 3 ${meta} "${tmp}"`, { silent: true });
   renameSync(tmp, file);
-  console.log(`  ✓ ID3 tags${cover ? ' and cover' : ''}: ${tags.title}`);
+  console.log(`  ✓ ID3 tags${cover ? ` and cover (${coverFile === SHOW_COVER ? 'show' : 'episode'})` : ''}: ${tags.title}`);
 }
 
 async function generatePost(opts, transcript, audioUrl) {
