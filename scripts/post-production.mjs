@@ -172,6 +172,9 @@ const GEMINI_MODEL = 'gemini-3.1-pro-preview';
 
 // Constant bit rate: players calculate the duration and the seek position exactly (VBR files can show both wrong).
 const MP3_ENCODE = '-c:a libmp3lame -b:a 128k';
+// LAME at 128 kbps constant bit rate scales the signal by 0.95 (-0.45 dB) on each encode. This filter goes last
+// in the chain before each encode and cancels that, so the loudness and the peak stay as the limiter set them.
+const MP3_SCALE_FIX = 'volume=1.0526';
 const SHOW_NAME = 'רברס עם פלטפורמה';
 const SHOW_COVER = join(REPO_ROOT, 'public/podcast-cover.png');
 const GEMINI_PRICING = {
@@ -346,6 +349,11 @@ const VOICE = {
   DEESSER: 'deesser=i=0.4',
   // Rebuilds peaks that the recorder cut off. Used only for a track that clips. Ran selected it from samples (2026-11-24).
   DECLIP: 'adeclip=window=55:overlap=75:arorder=8:threshold=10:hsize=1000:method=add',
+  // The GarageBand patches have fixed compressor thresholds, so their effect depends on the recording level.
+  // Each track gets a fixed gain to this loudness before its patch. -24 LUFS is the level of the recordings
+  // (episodes 522 and 523) on which Ran selected the sound.
+  PATCH_INPUT_LUFS: -24,
+  MAX_INPUT_GAIN: 18,   // dB — limit of that gain
   MAX_TRIM: 6,          // dB — limit of the speaker balance correction
   MAX_LRA: 8,           // a pre-mixed input with a larger loudness range gets a slow leveler
   LEVELER: 'dynaudnorm=f=500:g=31:m=6:p=0.7',
@@ -480,15 +488,18 @@ function mixWavTracks(bandDir, output, patchesDir) {
     const clips = peak >= -0.1;
     const clipNote = clips ? '  ⚠ the recording clips (peaks repaired), decrease the input gain' : '';
     const declip = (stmts) => { if (clips) stmts[0] = stmts[0].replace(`[${i}:a]`, `[${i}:a]${VOICE.DECLIP},`); return stmts; };
+    const inputGain = Number.isFinite(lufs) ? Math.max(-VOICE.MAX_INPUT_GAIN, Math.min(VOICE.MAX_INPUT_GAIN, VOICE.PATCH_INPUT_LUFS - lufs)) : 0;
+    // Gain to the reference level, after the peak repair and before the patch.
+    const patchInput = (stmts) => { declip(stmts); stmts[0] = stmts[0].replace(/^(\[\d+:a\](?:adeclip[^,]*,)?)/, `$1volume=${inputGain.toFixed(2)}dB,`); return stmts; };
     // "Ran#01.wav" → speaker "Ran" → assets/patches/Ran.patch, or default.patch for a guest.
     const speaker = basename(f).replace(/[#.].*$/, '');
     const own = join(patchesDir || '', `${speaker}.patch`);
     const patch = patchesDir && existsSync(own) ? own : patchesDir && existsSync(defaultPatch) ? defaultPatch : null;
     if (patch) {
       const voice = existsSync(own) ? voices[speaker] : null; // only for the speaker's own patch, not for the guest patch
-      console.log(`    - ${basename(f)}: ${lufs} LUFS, patch ${basename(patch)}${voice ? ' + voices.json' : ''}${clipNote}`);
-      if (!voice) return declip(patchGraph(readPatch(patch), `${i}:a`, `t${i}`, `p${i}`));
-      const stmts = declip(patchGraph(readPatch(patch), `${i}:a`, `q${i}`, `p${i}`));
+      console.log(`    - ${basename(f)}: ${lufs} LUFS, gain ${inputGain >= 0 ? '+' : ''}${inputGain.toFixed(1)} dB, patch ${basename(patch)}${voice ? ' + voices.json' : ''}${clipNote}`);
+      if (!voice) return patchInput(patchGraph(readPatch(patch), `${i}:a`, `t${i}`, `p${i}`));
+      const stmts = patchInput(patchGraph(readPatch(patch), `${i}:a`, `q${i}`, `p${i}`));
       if (voice.highpass) {
         // The patch low cut is two filters (f and 0.8 f). Both move to the new frequency.
         let k = 0;
@@ -631,7 +642,7 @@ function processAudio(opts, inputMp3, outputMp3) {
 
   // Fast path: no music at all
   if (!hasIntro && !hasOutro) {
-    run(`ffmpeg -y -v error -i "${normalizedSpeech}" ${MP3_ENCODE} "${outputMp3}"`);
+    run(`ffmpeg -y -v error -i "${normalizedSpeech}" -af ${MP3_SCALE_FIX} ${MP3_ENCODE} "${outputMp3}"`);
     run(`rm -f "${normalizedSpeech}"`, { silent: true });
     return;
   }
@@ -741,7 +752,7 @@ function processAudio(opts, inputMp3, outputMp3) {
 
   // ── MIX ────────────────────────────────────────────────────────────────────
   const n = streams.length;
-  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0,${truePeakLimiter(0.79)}[out]`);
+  filters.push(`${streams.join('')}amix=inputs=${n}:duration=longest:normalize=0,${truePeakLimiter(0.79)},${MP3_SCALE_FIX}[out]`);
 
   run(`ffmpeg -y ${inputs.join(' ')} -filter_complex "${filters.join('; ')}" -map "[out]" ${MP3_ENCODE} "${outputMp3}"`);
 
@@ -1183,7 +1194,7 @@ function renderColdOpen(bodyMp3, clips, outFile, withBody) {
       `apad=pad_dur=${pad}[c${i}]`;
   });
   const labels = clips.map((_, i) => `[c${i}]`).join('') + (withBody ? '[0:a]' : '');
-  filters.push(`${labels}concat=n=${clips.length + (withBody ? 1 : 0)}:v=0:a=1[out]`);
+  filters.push(`${labels}concat=n=${clips.length + (withBody ? 1 : 0)}:v=0:a=1,${MP3_SCALE_FIX}[out]`);
   run(`ffmpeg -y -v error -i "${bodyMp3}" -filter_complex "${filters.join('; ')}" -map "[out]" ${MP3_ENCODE} "${outFile}"`, { silent: true });
 }
 
@@ -1203,6 +1214,17 @@ async function addColdOpen(opts, bodyMp3, outputMp3, transcript, infoFile) {
     return 0;
   };
   if (opts.coldOpen === 'off') return noColdOpen('Cold open is off');
+  // The audio was made again after a cold open was selected: use the same clips, so the published times stay correct.
+  try {
+    const saved = JSON.parse(readFileSync(infoFile, 'utf8'));
+    if (saved.clips?.length) {
+      renderColdOpen(bodyMp3, saved.clips, outputMp3, true);
+      const offset = getAudioDuration(outputMp3) - getAudioDuration(bodyMp3);
+      writeFileSync(infoFile, JSON.stringify({ offset, clips: saved.clips }, null, 2));
+      console.log(`  ✓ Cold open: the ${saved.clips.length} saved clips, ${offset.toFixed(1)} s → ${outputMp3}`);
+      return offset;
+    }
+  } catch {}
   if (!transcript) return noColdOpen('No transcript');
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return noColdOpen('GEMINI_API_KEY is not set');

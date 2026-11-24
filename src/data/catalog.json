@@ -15535,5 +15535,26 @@
 		],
 		"hook": "ההבדלים בין חיפוש לקסיקלי לסמנטי, עקרונות חיפוש היברידי, והתאמת OpenSearch לעידן ה-RAG וה-Agents.",
 		"evergreen": 4
+	},
+	"2026-11-524-databases-speed-at-scale-with-zohar-from-aerospike": {
+		"kind": "interview",
+		"guests": [
+			{
+				"name_he": "זוהר אלקיים",
+				"name_en": "",
+				"company": "Aerospike",
+				"role": "Principal Forward Deployed Engineer"
+			}
+		],
+		"companies": [
+			"Aerospike"
+		],
+		"topics": [
+			"databases",
+			"architecture",
+			"infra"
+		],
+		"hook": "תכנון מערכות זמן אמת למיליוני פעולות בשנייה ב-latency נמוך של P99 בעזרת שילוב RAM ו-NVMe.",
+		"evergreen": 5
 	}
 }
