@@ -344,6 +344,8 @@ const VOICE = {
   EQ: 'equalizer=f=250:t=q:w=1:g=2.5,equalizer=f=4000:t=q:w=0.8:g=1.5,highshelf=f=7000:g=3',
   COMPRESSOR: 'acompressor=threshold=0.125:ratio=2:attack=15:release=250:knee=6',
   DEESSER: 'deesser=i=0.4',
+  // Rebuilds peaks that the recorder cut off. Used only for a track that clips. Ran selected it from samples (2026-11-24).
+  DECLIP: 'adeclip=window=55:overlap=75:arorder=8:threshold=10:hsize=1000:method=add',
   MAX_TRIM: 6,          // dB — limit of the speaker balance correction
   MAX_LRA: 8,           // a pre-mixed input with a larger loudness range gets a slow leveler
   LEVELER: 'dynaudnorm=f=500:g=31:m=6:p=0.7',
@@ -475,7 +477,9 @@ function mixWavTracks(bandDir, output, patchesDir) {
   try { voices = JSON.parse(readFileSync(join(patchesDir || '', 'voices.json'), 'utf8')); } catch {}
   const chains = wavFiles.flatMap((f, i) => {
     const { i: lufs, peak } = measureLoudness(f);
-    const clipNote = peak >= -0.1 ? '  ⚠ the recording clips, decrease the input gain' : '';
+    const clips = peak >= -0.1;
+    const clipNote = clips ? '  ⚠ the recording clips (peaks repaired), decrease the input gain' : '';
+    const declip = (stmts) => { if (clips) stmts[0] = stmts[0].replace(`[${i}:a]`, `[${i}:a]${VOICE.DECLIP},`); return stmts; };
     // "Ran#01.wav" → speaker "Ran" → assets/patches/Ran.patch, or default.patch for a guest.
     const speaker = basename(f).replace(/[#.].*$/, '');
     const own = join(patchesDir || '', `${speaker}.patch`);
@@ -483,8 +487,8 @@ function mixWavTracks(bandDir, output, patchesDir) {
     if (patch) {
       const voice = existsSync(own) ? voices[speaker] : null; // only for the speaker's own patch, not for the guest patch
       console.log(`    - ${basename(f)}: ${lufs} LUFS, patch ${basename(patch)}${voice ? ' + voices.json' : ''}${clipNote}`);
-      if (!voice) return patchGraph(readPatch(patch), `${i}:a`, `t${i}`, `p${i}`);
-      const stmts = patchGraph(readPatch(patch), `${i}:a`, `q${i}`, `p${i}`);
+      if (!voice) return declip(patchGraph(readPatch(patch), `${i}:a`, `t${i}`, `p${i}`));
+      const stmts = declip(patchGraph(readPatch(patch), `${i}:a`, `q${i}`, `p${i}`));
       if (voice.highpass) {
         // The patch low cut is two filters (f and 0.8 f). Both move to the new frequency.
         let k = 0;
@@ -495,7 +499,7 @@ function mixWavTracks(bandDir, output, patchesDir) {
     // No patch: generic chain. Fixed gain to the same speech loudness, then gate, EQ, compressor, de-esser.
     const gain = VOICE.TRACK_LUFS - lufs;
     console.log(`    - ${basename(f)}: ${lufs} LUFS, generic chain, gain ${gain >= 0 ? '+' : ''}${gain.toFixed(1)} dB${clipNote}`);
-    return [`[${i}:a]${voiceChain(gain)}[t${i}]`];
+    return declip([`[${i}:a]${voiceChain(gain)}[t${i}]`]);
   });
   const inputs = wavFiles.map(f => `-i "${f}"`).join(' ');
   const n = wavFiles.length;
@@ -507,7 +511,7 @@ function mixWavTracks(bandDir, output, patchesDir) {
   // it then measures the other voices that the microphone hears.)
   const rawLevels = wavFiles.map(f => frameLevels(`-i "${f}"`, '[0:a]'));
   const processedLevels = wavFiles.map((f, i) => {
-    const own = chains.filter(c => c.startsWith(`[${i}:a]`) || c.startsWith(`[p${i}s`) || c.startsWith(`[q${i}]`)).map(c => c.replaceAll(`[${i}:a]`, '[0:a]'));
+    const own = chains.filter(c => c.startsWith(`[${i}:a]`) || c.startsWith(`[p${i}s`) || c.startsWith(`[q${i}]`)).map(c => c.replaceAll(`[${i}:a]`, '[0:a]').replace(`${VOICE.DECLIP},`, '')); // no peak repair here: it is slow and does not change the level
     return frameLevels(`-i "${f}"`, `[t${i}]`, own);
   });
   const frames = Math.min(...rawLevels.map(l => l.length), ...processedLevels.map(l => l.length));

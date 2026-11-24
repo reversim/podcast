@@ -7,7 +7,6 @@ Last update: 2026-11-18.
 
 | # | Item | Status |
 |---|------|--------|
-| D8 | More audio options that Claude proposed (2026-11-24): (a) repair of clipped peaks (`adeclip`) before the patch; (b) a light expander on each track against microphone bleed; (c) a livelier filter for guests (`default.patch`). Claude makes samples for each on request. | Waiting for Ran. |
 
 ## Tasks for Claude (after the decisions)
 
@@ -40,6 +39,7 @@ Reach:
 ## Done
 
 - Reach items from the audit (2026-11-18): large share image for each episode (`/share/<post id>.jpg`, 1200 x 630, `summary_large_image`); topic pages (`/topics/<topic>.html`, 14 topics from the catalog, in the sitemap); share buttons on the episode page (X, LinkedIn, Facebook, WhatsApp, copy link with the `#t=` position); guide for guests (`/share-guide.html`). `make produce` now runs `scripts/catalog.mjs`, so a new episode gets its guest and topic links.
+- Clipped-peak repair (2026-11-24): Ran selected "Repair" from samples. `VOICE.DECLIP` in `scripts/post-production.mjs` rebuilds cut peaks before the patch, only for a track that clips. The mix step takes about 6.5 minutes with it (50-minute episode, three clipped tracks). Applies from episode 524.
 - Voice filter (2026-11-24): Ran selected option E ("Radio, vivid") for his voice from six samples; Ori keeps the patch. The settings are in `assets/patches/voices.json` (low cut 80 Hz, bass, presence, air, exciter, light compressor after the patch). Applies from episode 524.
 - MP3 format (2026-11-18): new episodes are 128 kbps constant bit rate, with ID3 tags (Hebrew title, show name, episode number, year) and the episode cover in the file (`COVER_IMAGE`; the show cover when there is none). Old episodes are not changed.
 - Episode 523 published (2026-11-18): cold open with two quotes of the guest (offset 20.4 s), OpenSearch logo, MP3 on R2 and S3. Cold open fault corrected in the script: the model answer in a list was dropped, and fast speech gave too few pauses for a clean cut. Note: `CLOUDFLARE_API_TOKEN` is locked to an IP address, so Claude cannot purge the CDN cache; a replaced MP3 can stay cached for up to 4 hours. For 523 the MP3 has a new name for this reason (`…_v2.mp3`). When an MP3 is replaced, give it a new name. `make mcp-update` must run without `CLOUDFLARE_API_TOKEN` in the environment (`env -u CLOUDFLARE_API_TOKEN make mcp-update`).
@@ -77,6 +77,8 @@ Reach:
 - Cold open: shorter (maximum 2 quotes, 20 s) with a sentence check. Ran: "much better" (2026-11-14).
 
 ## Declined
+
+- Guest voice filter and bleed expander (2026-11-24): Ran selected "Current" for guests. For the expander Ran heard no difference and let Claude decide; decision: no expander (it removes a signal 31 dB below the mix, and it can cut the start of quiet words).
 
 - The other items of the 2026-11-15 distribution audit (Ran, 2026-11-18: "stop, that's enough"): the Israeli directory requests, Podcast Republic, email newsletter, LinkedIn page, Wikipedia and Wikidata.
 
