@@ -470,6 +470,9 @@ function mixWavTracks(bandDir, output, patchesDir) {
 
   console.log(`  Found ${wavFiles.length} track(s):`);
   const defaultPatch = join(patchesDir || '', 'default.patch');
+  // voices.json: changes that are added to the patch of a speaker (a lower low cut, filters after the patch).
+  let voices = {};
+  try { voices = JSON.parse(readFileSync(join(patchesDir || '', 'voices.json'), 'utf8')); } catch {}
   const chains = wavFiles.flatMap((f, i) => {
     const { i: lufs, peak } = measureLoudness(f);
     const clipNote = peak >= -0.1 ? '  ⚠ the recording clips, decrease the input gain' : '';
@@ -478,8 +481,16 @@ function mixWavTracks(bandDir, output, patchesDir) {
     const own = join(patchesDir || '', `${speaker}.patch`);
     const patch = patchesDir && existsSync(own) ? own : patchesDir && existsSync(defaultPatch) ? defaultPatch : null;
     if (patch) {
-      console.log(`    - ${basename(f)}: ${lufs} LUFS, patch ${basename(patch)}${clipNote}`);
-      return patchGraph(readPatch(patch), `${i}:a`, `t${i}`, `p${i}`);
+      const voice = existsSync(own) ? voices[speaker] : null; // only for the speaker's own patch, not for the guest patch
+      console.log(`    - ${basename(f)}: ${lufs} LUFS, patch ${basename(patch)}${voice ? ' + voices.json' : ''}${clipNote}`);
+      if (!voice) return patchGraph(readPatch(patch), `${i}:a`, `t${i}`, `p${i}`);
+      const stmts = patchGraph(readPatch(patch), `${i}:a`, `q${i}`, `p${i}`);
+      if (voice.highpass) {
+        // The patch low cut is two filters (f and 0.8 f). Both move to the new frequency.
+        let k = 0;
+        stmts[0] = stmts[0].replace(/highpass=f=[\d.]+/g, () => `highpass=f=${k++ === 0 ? voice.highpass : Math.round(voice.highpass * 0.8)}`);
+      }
+      return [...stmts, `[q${i}]${voice.post || 'anull'}[t${i}]`];
     }
     // No patch: generic chain. Fixed gain to the same speech loudness, then gate, EQ, compressor, de-esser.
     const gain = VOICE.TRACK_LUFS - lufs;
@@ -496,7 +507,7 @@ function mixWavTracks(bandDir, output, patchesDir) {
   // it then measures the other voices that the microphone hears.)
   const rawLevels = wavFiles.map(f => frameLevels(`-i "${f}"`, '[0:a]'));
   const processedLevels = wavFiles.map((f, i) => {
-    const own = chains.filter(c => c.startsWith(`[${i}:a]`) || c.startsWith(`[p${i}s`)).map(c => c.replaceAll(`[${i}:a]`, '[0:a]'));
+    const own = chains.filter(c => c.startsWith(`[${i}:a]`) || c.startsWith(`[p${i}s`) || c.startsWith(`[q${i}]`)).map(c => c.replaceAll(`[${i}:a]`, '[0:a]'));
     return frameLevels(`-i "${f}"`, `[t${i}]`, own);
   });
   const frames = Math.min(...rawLevels.map(l => l.length), ...processedLevels.map(l => l.length));

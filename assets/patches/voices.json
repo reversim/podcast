@@ -1,0 +1,7 @@
+{
+  "_comment": "Changes that the pipeline adds to the GarageBand patch of a speaker. Key = the name of the track file (Ran#01.wav = Ran). highpass = new low-cut frequency in Hz, in place of the one in the patch. post = ffmpeg filters after the patch. Selected by Ran on 2026-11-24 from six samples (option E, 'Radio, vivid'). Ori keeps the patch with no change.",
+  "Ran": {
+    "highpass": 80,
+    "post": "equalizer=f=115:t=q:w=0.9:g=4,equalizer=f=400:t=q:w=1.2:g=-2,equalizer=f=4000:t=q:w=0.9:g=2.5,highshelf=f=10000:g=3:t=q:w=0.7,aexciter=level_in=1:level_out=1:amount=2.5:drive=6:blend=0:freq=6000:ceil=16000:listen=0,acompressor=threshold=0.18:ratio=2.5:attack=10:release=120:knee=4:makeup=1.3"
+  }
+}
