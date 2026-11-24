@@ -16,7 +16,6 @@ Last update: 2026-11-18.
 
 - YouTube playlist `PLPrpPQF5fJrM` (checked 2026-11-18): 72 of 824 episodes are uploaded (523 down to 450), all public. The RSS import continues. Check later that new uploads are public too.
 - Amazon Music numbers: the first values are 0 (listed 2026-11-15). When real numbers come, check that `followers` is the full count and that the cookies still work (lifetime not known).
-- 2026-11-19 or later: one-week CPU check of the analytics Worker.
 
 ## Audit findings (2026-11-15), not started
 
@@ -39,6 +38,7 @@ Reach:
 ## Done
 
 - Reach items from the audit (2026-11-18): large share image for each episode (`/share/<post id>.jpg`, 1200 x 630, `summary_large_image`); topic pages (`/topics/<topic>.html`, 14 topics from the catalog, in the sitemap); share buttons on the episode page (X, LinkedIn, Facebook, WhatsApp, copy link with the `#t=` position); guide for guests (`/share-guide.html`). `make produce` now runs `scripts/catalog.mjs`, so a new episode gets its guest and topic links.
+- One-week CPU check of the analytics Worker (2026-11-24): good. 7 days to 2026-11-24: 53,015 requests, 0 errors, 0 `exceededCpu`; CPU p50 1.3 ms, p99 7.4 ms, p99.9 12.2 ms for successful requests (free-plan limit 10 ms). Source: Cloudflare GraphQL `workersInvocationsAdaptive`, script `reversim-analytics`.
 - Clipped-peak repair (2026-11-24): Ran selected "Repair" from samples. `VOICE.DECLIP` in `scripts/post-production.mjs` rebuilds cut peaks before the patch, only for a track that clips. The mix step takes about 6.5 minutes with it (50-minute episode, three clipped tracks). Applies from episode 524.
 - Voice filter (2026-11-24): Ran selected option E ("Radio, vivid") for his voice from six samples; Ori keeps the patch. The settings are in `assets/patches/voices.json` (low cut 80 Hz, bass, presence, air, exciter, light compressor after the patch). Applies from episode 524.
 - MP3 format (2026-11-18): new episodes are 128 kbps constant bit rate, with ID3 tags (Hebrew title, show name, episode number, year) and the episode cover in the file (`COVER_IMAGE`; the show cover when there is none). Old episodes are not changed.
