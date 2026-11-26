@@ -92,7 +92,6 @@ rss-compare:
 
 verify:
 	npm test
-	$(MAKE) validate
 	$(MAKE) audit
 	$(MAKE) build-pages
 	$(MAKE) rss-compare

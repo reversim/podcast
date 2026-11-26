@@ -14,7 +14,7 @@ npm run dev              # Local dev server
 npm run build            # Production build (includes Pagefind indexing)
 npm run preview          # Preview production build locally
 
-make verify              # Full verification: validate + audit + build-pages + rss-compare
+make verify              # Full verification: npm test + audit + build-pages + rss-compare
 make build-pages         # Build for GitHub Pages (www.reversim.com)
 ```
 
@@ -26,11 +26,11 @@ npm run migrate:audit          # Sample audit of migration quality
 npm run rss:compare            # Compare source RSS vs generated feeds
 ```
 
-There is no test framework — `make verify` is the validation suite.
+Unit tests use Vitest (`npm test`). `make verify` is the full validation suite. `make validate` compares with the old Blogger sitemap, which is gone since the move to GitHub Pages, so it is not part of `verify`.
 
 ## Architecture
 
-**Framework:** Astro 5 (static site generator), TypeScript, no backend/database.
+**Framework:** Astro 7 (static site generator), TypeScript, no backend/database.
 
 **Content:** Markdown files with YAML frontmatter in `src/content/posts/`. Schema defined in `src/content/config.ts` using Zod. Posts have optional fields: `episode`, `audio_url`, `tags`, `cover_image`, `summary`, `draft`. Most post bodies contain raw HTML (migrated from Blogger).
 

@@ -7,7 +7,6 @@ Last update: 2026-11-26.
 
 | # | Item | Status |
 |---|------|--------|
-| D8 | Two dependency updates with breaking changes: `astro` 6.4.8 → 7.4.13 (1 critical XSS advisory) and `sharp` 0.34.5 → 0.35.5 (1 high, libvips). Risk for this static site is low: all content is ours. Claude recommends: update both, then do a full build check. | Waits for Ran |
 
 ## Tasks for Claude (after the decisions)
 
@@ -38,6 +37,8 @@ Reach:
 - A page for each guest and each company (now there is one index page for each).
 
 ## Done
+
+- Dependency updates (2026-11-26, D8): `astro` 6.4.8 → 7.4.13, `sharp` 0.34.5 → 0.35.5, new `@astrojs/markdown-remark`. `npm audit`: 0 issues. `astro.config.mjs`: `compressHTML: true` (the Astro 7 default removes spaces between menu links) and `markdown.processor: unified(...)`. Check: all 2,058 output files equal to the Astro 6 build except white space; screenshots of 10 pages at 1280 and 390 px are equal; search works. `make verify` no longer runs `validate` (the Blogger sitemap is gone).
 
 - Pipeline guards (2026-11-26): (1) the episode-number guard stops the run when another post has the same number, or when the number is not the last number + 1; (2) the quality gate measures the final MP3 before the upload (-17 to -15 LUFS, true peak ≤ -1 dBFS, 10 to 150 min, ID3 title and artist, 44.1 kHz, cover). `--skip-checks` continues after a failure. Tested: 523 and 526 stop, 525 passes; the first render of 524 (-17.3 LUFS) fails, the final 524 passes.
 - Dependency fixes (2026-11-26): `npm audit fix` in the site package (17 → 2 issues). The `mcp` and `analytics/worker` packages have 0 issues. The build passes (1,591 pages, 826 feed items, 826 share images, 14 topic pages).
