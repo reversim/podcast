@@ -1,7 +1,7 @@
 # Open tasks, decisions and ideas
 
 Claude keeps this list. Claude shows the open items at the end of each work session until the list is empty.
-Last update: 2026-11-18.
+Last update: 2026-11-26.
 
 ## Decisions for Ran
 
@@ -14,6 +14,7 @@ Last update: 2026-11-18.
 |---|------|------------|
 ## Reminders with dates
 
+- Sign-off line (2026-11-26): `assets/signoff.wav` is text A in a Gemini computer voice (Charon). The pipeline mixes it over the outro music from episode 525. Ran can replace the file with an own recording at any time. No file = no sign-off.
 - YouTube playlist `PLPrpPQF5fJrM` (checked 2026-11-18): 72 of 824 episodes are uploaded (523 down to 450), all public. The RSS import continues. Check later that new uploads are public too.
 - Amazon Music numbers: the first values are 0 (listed 2026-11-15). When real numbers come, check that `followers` is the full count and that the cookies still work (lifetime not known).
 

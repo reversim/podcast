@@ -34,6 +34,8 @@
  *   --welcome          Recorded welcome line that plays over the intro music, before the hosts
  *                      (default: $REVERSIM_WELCOME or assets/welcome.wav; no file = no welcome)
  *   --outro            Outro MP3 (default: $REVERSIM_OUTRO or assets/outro.mp3)
+ *   --signoff          Recorded sign-off line (share, follow, rate) that plays over the outro music,
+ *                      after the goodbyes (default: $REVERSIM_SIGNOFF or assets/signoff.wav; no file = no sign-off)
  *   --patches DIR      GarageBand patches for --mix-wavs (default: $REVERSIM_PATCHES or assets/patches).
  *                      <Speaker>.patch for the track <Speaker>#01.wav, default.patch for other speakers.
  *   --bucket, -b       Bucket name, used for both R2 and S3 (default: reversim)
@@ -87,6 +89,7 @@ function parseArgs() {
     outro: process.env.REVERSIM_OUTRO || join(REPO_ROOT, 'assets/outro.mp3'),
     patches: process.env.REVERSIM_PATCHES || join(REPO_ROOT, 'assets/patches'),
     welcome: process.env.REVERSIM_WELCOME || join(REPO_ROOT, 'assets/welcome.wav'),
+    signoff: process.env.REVERSIM_SIGNOFF || join(REPO_ROOT, 'assets/signoff.wav'),
     bucket: 'reversim',
     workdir: process.cwd(),
     tags: [],
@@ -113,6 +116,7 @@ function parseArgs() {
       case '--slug':           case '-s': opts.slug = args[++i]; break;
       case '--welcome':                   opts.welcome = resolve(args[++i]); break;
       case '--intro':                     opts.intro = resolve(args[++i]); break;
+      case '--signoff':                   opts.signoff = resolve(args[++i]); break;
       case '--outro':                     opts.outro = resolve(args[++i]); break;
       case '--patches':                   opts.patches = resolve(args[++i]); break;
       case '--bucket':         case '-b': opts.bucket = args[++i]; break;
@@ -598,7 +602,33 @@ export function welcomeTimeline(welcomeDur) {
   return { voiceStart, hostsStart: Number(hostsStart.toFixed(3)), points, end: points[points.length - 1][0] };
 }
 
-function processAudio(opts, inputMp3, outputMp3) {
+// Timeline of the end when there is a recorded sign-off line. Times are on the clock of the outro music file.
+// music bed under the goodbyes → sign-off voice over ducked music → music rise → fade out.
+export function signoffTimeline(signoffDur, outroDur) {
+  const BED = 0.10, UNDER_VOICE = 0.14, RISE = 0.316;
+  const GAP = 1.0, TAIL = 6, FADE_IN = 5;
+  const speechEnd = Math.max(0, outroDur - GAP - signoffDur - TAIL); // seconds of music before the last word
+  const voiceEnd = Math.min(outroDur, speechEnd + GAP + signoffDur);
+  const points = [
+    [0, 0], [Math.min(FADE_IN, speechEnd), BED], [speechEnd, BED], [speechEnd + GAP, UNDER_VOICE],
+    [voiceEnd, UNDER_VOICE], [Math.min(outroDur, voiceEnd + 1.5), RISE], [outroDur, 0],
+  ].map(([t, v]) => [Number(t.toFixed(3)), v]);
+  return { speechEnd, gap: GAP, points };
+}
+
+// Silence at the end of an audio file, in seconds (0 when the file ends with sound).
+function trailingSilence(file, dur) {
+  const win = Math.min(30, dur);
+  const out = run(`ffmpeg -hide_banner -sseof -${win} -i "${file}" -af silencedetect=n=-40dB:d=0.3 -f null - 2>&1 || true`, { silent: true }) || '';
+  const starts = [...out.matchAll(/silence_start: ([\d.]+)/g)].map(m => Number(m[1]));
+  const ends = [...out.matchAll(/silence_end: ([\d.]+)/g)].map(m => Number(m[1]));
+  if (!starts.length) return 0;
+  const lastStart = starts[starts.length - 1];
+  const open = ends.length < starts.length || ends[ends.length - 1] >= win - 0.05;
+  return open ? Math.max(0, win - lastStart) : 0;
+}
+
+export function processAudio(opts, inputMp3, outputMp3) {
   // ── Tuning ──────────────────────────────────────────────────────────────────
   const INTRO_PEAK_VOL  = 0.10;   // -20 dB  — brief opening hit
   const INTRO_FADE_IN   = 2;      // s — fade in to peak
@@ -702,7 +732,24 @@ function processAudio(opts, inputMp3, outputMp3) {
   // Single-stream envelope: PRE_VOL (under speech) → linear ramp across XFADE
   // region centered on speech-end → POST_VOL (after speech) → fade to silence.
   // Delayed so it ends POST_ROLL seconds after speech.
-  if (hasOutro) {
+  const hasSignoff = hasOutro && opts.signoff && existsSync(opts.signoff);
+  if (hasSignoff) {
+    // The sign-off line starts a moment after the last word, so the silence at the end of the recording does not count.
+    const leveledDur = getAudioDuration(normalizedSpeech);
+    const spokenEnd = leveledDur - Math.max(0, trailingSilence(normalizedSpeech, leveledDur) - 0.4);
+    const so = signoffTimeline(getAudioDuration(opts.signoff), outroDur);
+    const outroDelay = Math.max(0, spokenEnd - so.speechEnd);
+    const voiceAt = spokenEnd + so.gap + lead;
+    inputs.push(`-i "${opts.outro}"`, `-i "${opts.signoff}"`);
+    filters.push(
+      `[${idx}:a]volume=eval=frame:volume='${envelopeExpr(so.points)}',atrim=0:${outroDur},asetpts=PTS-STARTPTS,` +
+      `adelay=${Math.round((outroDelay + lead) * 1000)}:all=1[outro_bed]`,
+      `[${idx + 1}:a]aresample=44100,adelay=${Math.round(voiceAt * 1000)}:all=1[signoff]`
+    );
+    streams.push('[outro_bed]', '[signoff]');
+    idx += 2;
+    console.log(`  Outro with sign-off line: music enters ${so.speechEnd.toFixed(1)}s before the last word, voice at ${formatTimestamp(voiceAt)}`);
+  } else if (hasOutro) {
     inputs.push(`-i "${opts.outro}"`);
 
     // Seconds of outro that play *before* speech ends
