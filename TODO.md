@@ -7,6 +7,7 @@ Last update: 2026-11-26.
 
 | # | Item | Status |
 |---|------|--------|
+| D8 | Two dependency updates with breaking changes: `astro` 6.4.8 → 7.4.13 (1 critical XSS advisory) and `sharp` 0.34.5 → 0.35.5 (1 high, libvips). Risk for this static site is low: all content is ours. Claude recommends: update both, then do a full build check. | Waits for Ran |
 
 ## Tasks for Claude (after the decisions)
 
@@ -37,6 +38,9 @@ Reach:
 - A page for each guest and each company (now there is one index page for each).
 
 ## Done
+
+- Pipeline guards (2026-11-26): (1) the episode-number guard stops the run when another post has the same number, or when the number is not the last number + 1; (2) the quality gate measures the final MP3 before the upload (-17 to -15 LUFS, true peak ≤ -1 dBFS, 10 to 150 min, ID3 title and artist, 44.1 kHz, cover). `--skip-checks` continues after a failure. Tested: 523 and 526 stop, 525 passes; the first render of 524 (-17.3 LUFS) fails, the final 524 passes.
+- Dependency fixes (2026-11-26): `npm audit fix` in the site package (17 → 2 issues). The `mcp` and `analytics/worker` packages have 0 issues. The build passes (1,591 pages, 826 feed items, 826 share images, 14 topic pages).
 
 - Reach items from the audit (2026-11-18): large share image for each episode (`/share/<post id>.jpg`, 1200 x 630, `summary_large_image`); topic pages (`/topics/<topic>.html`, 14 topics from the catalog, in the sitemap); share buttons on the episode page (X, LinkedIn, Facebook, WhatsApp, copy link with the `#t=` position); guide for guests (`/share-guide.html`). `make produce` now runs `scripts/catalog.mjs`, so a new episode gets its guest and topic links.
 - One-week CPU check of the analytics Worker (2026-11-24): good. 7 days to 2026-11-24: 53,015 requests, 0 errors, 0 `exceededCpu`; CPU p50 1.3 ms, p99 7.4 ms, p99.9 12.2 ms for successful requests (free-plan limit 10 ms). Source: Cloudflare GraphQL `workersInvocationsAdaptive`, script `reversim-analytics`.

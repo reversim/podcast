@@ -53,6 +53,7 @@
  *   --skip-transcribe  Skip Gemini transcription step
  *   --skip-post        Skip blog post generation step
  *   --skip-upload      Skip the R2 + S3 upload step
+ *   --skip-checks      Do not stop on a failed episode-number guard or quality gate (the result is still shown)
  *
  * Environment variables:
  *   GEMINI_API_KEY        Google Gemini API key (required for transcription/post steps)
@@ -132,6 +133,7 @@ function parseArgs() {
       case '--skip-transcribe':           opts.skipTranscribe = true; break;
       case '--skip-post':                 opts.skipPost = true; break;
       case '--skip-upload':               opts.skipUpload = true; break;
+      case '--skip-checks':               opts.skipChecks = true; break;
       case '--skip-social':               opts.skipSocial = true; break;
       default:
         console.error(`Unknown argument: ${args[i]}`);
@@ -1619,6 +1621,74 @@ function uploadAudio(localFile, bucket, s3Key) {
   return audioUrl;
 }
 
+// ─── Guards ───────────────────────────────────────────────────────────────────
+
+const QUALITY = {
+  LUFS_MIN: -17, LUFS_MAX: -15,    // Apple and Spotify target -16 LUFS
+  PEAK_MAX: -1,                    // true peak, dBFS
+  MIN_MINUTES: 10, MAX_MINUTES: 150,
+};
+
+// Posts in the repository that have this episode number, other than ownPath.
+export function postsWithEpisode(episode, ownPath, postsDir = join(REPO_ROOT, 'src/content/posts')) {
+  return readdirSync(postsDir)
+    .filter(f => f.endsWith('.md') && join(postsDir, f) !== ownPath)
+    .filter(f => new RegExp(`^episode:\\s*${episode}\\s*$`, 'm').test(readFileSync(join(postsDir, f), 'utf8').split(/^---\s*$/m)[1] || ''));
+}
+
+// The highest episode number in the repository.
+function lastEpisode(postsDir = join(REPO_ROOT, 'src/content/posts')) {
+  let max = 0;
+  for (const f of readdirSync(postsDir)) {
+    const m = f.match(/^\d{4}-\d{2}-(\d+)-/);
+    if (m) max = Math.max(max, Number(m[1]));
+  }
+  return max;
+}
+
+// Stops the run when the episode number is already used by another post, or is not the next number.
+function checkEpisodeNumber(opts, ownPath) {
+  const problems = [];
+  const others = postsWithEpisode(opts.episode, ownPath);
+  if (others.length) problems.push(`episode ${opts.episode} is already in ${others.join(', ')}`);
+  const last = lastEpisode();
+  if (!existsSync(ownPath) && opts.episode !== last + 1) problems.push(`the last episode is ${last}, so the next number is ${last + 1}, not ${opts.episode}`);
+  if (!problems.length) return;
+  for (const p of problems) console.error(`  ✗ Episode number: ${p}`);
+  if (opts.skipChecks) { console.warn('  ⚠ --skip-checks: continuing'); return; }
+  console.error('  Correct --episode, or add --skip-checks if the number is correct.');
+  process.exit(1);
+}
+
+// Measures the final MP3 and returns the list of problems (empty = good).
+export function qualityProblems(file, { expectCover = true } = {}) {
+  const problems = [];
+  const { i, peak } = measureLoudness(file);
+  const minutes = getAudioDuration(file) / 60;
+  if (!(i >= QUALITY.LUFS_MIN && i <= QUALITY.LUFS_MAX)) problems.push(`loudness ${i} LUFS (limits ${QUALITY.LUFS_MIN} to ${QUALITY.LUFS_MAX})`);
+  if (!(peak <= QUALITY.PEAK_MAX)) problems.push(`true peak ${peak} dBFS (limit ${QUALITY.PEAK_MAX})`);
+  if (!(minutes >= QUALITY.MIN_MINUTES && minutes <= QUALITY.MAX_MINUTES)) problems.push(`length ${minutes.toFixed(1)} min (limits ${QUALITY.MIN_MINUTES} to ${QUALITY.MAX_MINUTES})`);
+  const probe = JSON.parse(runCapture(`ffprobe -v error -show_entries format_tags=title,artist:stream=codec_type,bit_rate,sample_rate -of json "${file}"`));
+  const tags = probe.format?.tags || {};
+  if (!tags.title) problems.push('no ID3 title');
+  if (!tags.artist) problems.push('no ID3 artist');
+  const audio = (probe.streams || []).find(st => st.codec_type === 'audio');
+  if (!audio || Number(audio.sample_rate) !== 44100) problems.push(`sample rate ${audio?.sample_rate} (expected 44100)`);
+  if (expectCover && !(probe.streams || []).some(st => st.codec_type === 'video')) problems.push('no cover picture');
+  console.log(`  Quality: ${i} LUFS, true peak ${peak} dBFS, ${minutes.toFixed(1)} min, title "${tags.title || ''}"`);
+  return problems;
+}
+
+function qualityGate(file, opts) {
+  console.log('\n▶ Quality gate');
+  const problems = qualityProblems(file, { expectCover: Boolean(mp3CoverFile(opts)) });
+  if (!problems.length) { console.log('  ✓ All checks pass'); return; }
+  for (const p of problems) console.error(`  ✗ ${p}`);
+  if (opts.skipChecks) { console.warn('  ⚠ --skip-checks: continuing'); return; }
+  console.error(`  The upload is stopped. Correct the audio, or add --skip-checks to upload this file.`);
+  process.exit(1);
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -1640,6 +1710,8 @@ async function main() {
   console.log(`    URL:   ${audioUrl}`);
   if (opts.intro) console.log(`    Intro: ${existsSync(opts.intro) ? '✓' : '✗ not found'} ${opts.intro}`);
   if (opts.outro) console.log(`    Outro: ${existsSync(opts.outro) ? '✓' : '✗ not found'} ${opts.outro}`);
+  const [postYear, postMonth] = opts.date.split('-');
+  checkEpisodeNumber(opts, join(REPO_ROOT, 'src/content/posts', `${postYear}-${postMonth}-${opts.episode}-${opts.slug}.md`));
 
   // Determine the raw recording to use
   let rawInput = opts.input;
@@ -1749,6 +1821,7 @@ async function main() {
       console.error(`\n✗ Processed MP3 not found: ${outputMp3}`);
       process.exit(1);
     }
+    qualityGate(outputMp3, opts);
     uploadAudio(outputMp3, opts.bucket, mp3Name);
   } else {
     console.log('\n▶ Step 4: Skipped (--skip-upload)');
